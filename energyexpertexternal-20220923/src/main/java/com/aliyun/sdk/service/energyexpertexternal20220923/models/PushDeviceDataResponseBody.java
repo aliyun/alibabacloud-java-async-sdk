@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushDeviceDataResponseBody} extends {@link TeaModel}
  *
  * <p>PushDeviceDataResponseBody</p>
@@ -49,7 +50,10 @@ public class PushDeviceDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Whether the data is pushed successfully. Success is returned.
+         * <p>Whether the data is pushed successfully. Success is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class PushDeviceDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

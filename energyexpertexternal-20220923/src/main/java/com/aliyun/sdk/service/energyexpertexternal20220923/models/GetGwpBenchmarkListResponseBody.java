@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGwpBenchmarkListResponseBody} extends {@link TeaModel}
  *
  * <p>GetGwpBenchmarkListResponseBody</p>
@@ -49,7 +50,7 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A8AEC6D9-A359-5169-BD1A-BD848BA60D65</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGwpBenchmarkListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGwpBenchmarkListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("activeReduction")
         private Double activeReduction;
@@ -157,7 +167,10 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
             private String percent; 
 
             /**
-             * `activeReduction=benchmarkEmission-carbonEmission` Generally, baseline emissions are greater than inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.
+             * <p><code>activeReduction=benchmarkEmission-carbonEmission</code> Generally, baseline emissions are greater than inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2169</p>
              */
             public Builder activeReduction(Double activeReduction) {
                 this.activeReduction = activeReduction;
@@ -165,7 +178,10 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
             }
 
             /**
-             * Benchmark emissions. Maintain four decimal places. Unit pertains to a higher-level unit.
+             * <p>Benchmark emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0108</p>
              */
             public Builder benchmarkEmission(Double benchmarkEmission) {
                 this.benchmarkEmission = benchmarkEmission;
@@ -173,7 +189,10 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
             }
 
             /**
-             * Benchmark name
+             * <p>Benchmark name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>old-energy</p>
              */
             public Builder benchmarkName(String benchmarkName) {
                 this.benchmarkName = benchmarkName;
@@ -181,7 +200,10 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
             }
 
             /**
-             * Inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.
+             * <p>Inventory emissions. Maintain four decimal places. Unit pertains to a higher-level unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-0.2061</p>
              */
             public Builder carbonEmission(Double carbonEmission) {
                 this.carbonEmission = carbonEmission;
@@ -189,7 +211,10 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
             }
 
             /**
-             * name
+             * <p>name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>new-energy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -197,7 +222,10 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
             }
 
             /**
-             * Unused temporarily.
+             * <p>Unused temporarily.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -211,6 +239,12 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGwpBenchmarkListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGwpBenchmarkListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
@@ -250,7 +284,7 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * Active carbon reduction ranking list.
+             * <p>Active carbon reduction ranking list.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -258,9 +292,11 @@ public class GetGwpBenchmarkListResponseBody extends TeaModel {
             }
 
             /**
-             * unit of emissions. The default value is `kgCO₂e/productUnit`. 
-             * <p>
-             * The `productUnit` is the unit selected for the product. The unit value is changed to `tCO₂e/productUnit` or `gCO₂e/productUnit`. For more information, see the remarks in the quantity column.
+             * <p>unit of emissions. The default value is <code>kgCO₂e/productUnit</code>. 
+             * The <code>productUnit</code> is the unit selected for the product. The unit value is changed to <code>tCO₂e/productUnit</code> or <code>gCO₂e/productUnit</code>. For more information, see the remarks in the quantity column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kgCO₂e/kg</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

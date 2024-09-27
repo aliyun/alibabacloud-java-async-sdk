@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushDeviceDataRequest} extends {@link RequestModel}
  *
  * <p>PushDeviceDataRequest</p>
@@ -69,7 +70,10 @@ public class PushDeviceDataRequest extends Request {
         } 
 
         /**
-         * The type of the device. [View device type definitions](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/Deviceappendixes-en.pdf)
+         * <p>The type of the device. <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/Deviceappendixes-en.pdf">View device type definitions</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder deviceType(String deviceType) {
             this.putBodyParameter("deviceType", deviceType);
@@ -78,7 +82,7 @@ public class PushDeviceDataRequest extends Request {
         }
 
         /**
-         * List of devices to which data is pushed.
+         * <p>List of devices to which data is pushed.</p>
          */
         public Builder devices(java.util.List < Devices> devices) {
             this.putBodyParameter("devices", devices);
@@ -93,6 +97,12 @@ public class PushDeviceDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PushDeviceDataRequest} extends {@link TeaModel}
+     *
+     * <p>PushDeviceDataRequest</p>
+     */
     public static class Devices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -147,9 +157,33 @@ public class PushDeviceDataRequest extends Request {
             private String recordTime; 
 
             /**
-             * Measuring point information To avoid accuracy problems, the measurement point data is uniformly transmitted to the string. The function of missing required fields cannot be used normally. Some functions may be affected due to the lack of recommend fields. For details, please refer to the notes of equipment measuring points in the appendix. [Reference Point Definition](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/Deviceappendixes-en.pdf
-             * <p>
-             * )
+             * <p>Measuring point information To avoid accuracy problems, the measurement point data is uniformly transmitted to the string. The function of missing required fields cannot be used normally. Some functions may be affected due to the lack of recommend fields. For details, please refer to the notes of equipment measuring points in the appendix. <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/Deviceappendixes-en.pdf">Reference Point Definition</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *             &quot;dp_imp&quot;: &quot;329.0&quot;,
+             *             &quot;F&quot;: &quot;148.0&quot;,
+             *             &quot;eq_imp&quot;: &quot;363.0&quot;,
+             *             &quot;Ep_imp_1&quot;: &quot;128.0&quot;,
+             *             &quot;Ep_imp_2&quot;: &quot;157.0&quot;,
+             *             &quot;Ua&quot;: &quot;226.0&quot;,
+             *             &quot;Ub&quot;: &quot;285.0&quot;,
+             *             &quot;Ep_imp&quot;: &quot;325.0&quot;,
+             *             &quot;Uc&quot;: &quot;342.0&quot;,
+             *             &quot;Ep_imp_3&quot;: &quot;109.0&quot;,
+             *             &quot;Ep_imp_4&quot;: &quot;94.0&quot;,
+             *             &quot;P&quot;: &quot;514.0&quot;,
+             *             &quot;Pa&quot;: &quot;443.0&quot;,
+             *             &quot;Q&quot;: &quot;265.0&quot;,
+             *             &quot;dp_exp&quot;: &quot;261.0&quot;,
+             *             &quot;eq_exp&quot;: &quot;399.0&quot;,
+             *             &quot;COSQ&quot;: &quot;223.0&quot;,
+             *             &quot;Ia&quot;: &quot;240.0&quot;,
+             *             &quot;Ib&quot;: &quot;216.0&quot;,
+             *             &quot;Ic&quot;: &quot;229.0&quot;,
+             *             &quot;Ep_exp&quot;: &quot;115.0&quot;,
+             *             &quot;VdisPer&quot;: &quot;120.0&quot;
+             *         }</p>
              */
             public Builder data(java.util.Map < String, ? > data) {
                 this.data = data;
@@ -157,7 +191,10 @@ public class PushDeviceDataRequest extends Request {
             }
 
             /**
-             * If the deviceType parameter is set to 12, 13, or 17, you must set the system_id parameter. The field name is still device_id. If the deviceType parameter is set to 15 or 16, no Other situations will be transmitted.
+             * <p>If the deviceType parameter is set to 12, 13, or 17, you must set the system_id parameter. The field name is still device_id. If the deviceType parameter is set to 15 or 16, no Other situations will be transmitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device_code_xxx</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -165,7 +202,10 @@ public class PushDeviceDataRequest extends Request {
             }
 
             /**
-             * Data generation time of measuring point.
+             * <p>Data generation time of measuring point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-09-08 18:40:00</p>
              */
             public Builder recordTime(String recordTime) {
                 this.recordTime = recordTime;

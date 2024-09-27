@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataItemListRequest} extends {@link RequestModel}
  *
  * <p>GetDataItemListRequest</p>
@@ -54,7 +55,10 @@ public class GetDataItemListRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-202302-01</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);

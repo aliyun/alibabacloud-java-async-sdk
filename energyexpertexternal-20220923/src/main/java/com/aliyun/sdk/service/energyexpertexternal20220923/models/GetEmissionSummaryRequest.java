@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEmissionSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetEmissionSummaryRequest</p>
@@ -97,7 +98,10 @@ public class GetEmissionSummaryRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-20240119-1</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -106,7 +110,10 @@ public class GetEmissionSummaryRequest extends Request {
         }
 
         /**
-         * Module code.
+         * <p>Module code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.scope_1_direct_ghg_emissions</p>
          */
         public Builder moduleCode(String moduleCode) {
             this.putBodyParameter("moduleCode", moduleCode);
@@ -115,7 +122,10 @@ public class GetEmissionSummaryRequest extends Request {
         }
 
         /**
-         * Module type.
+         * <p>Module type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder moduleType(Integer moduleType) {
             this.putBodyParameter("moduleType", moduleType);
@@ -124,7 +134,10 @@ public class GetEmissionSummaryRequest extends Request {
         }
 
         /**
-         * Year of inventory.
+         * <p>Year of inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         public Builder year(Integer year) {
             this.putBodyParameter("year", year);

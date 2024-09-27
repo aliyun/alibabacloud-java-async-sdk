@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCarbonEmissionTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetCarbonEmissionTrendResponseBody</p>
@@ -49,7 +50,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request.
+         * <p>Id of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9bc20a5a-b26b-4c28-922a-7cd10b61f96f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCarbonEmissionTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCarbonEmissionTrendResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -121,7 +131,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Carbon emissions.
+             * <p>Carbon emissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.22</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -129,7 +142,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The month.
+             * <p>The month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -137,7 +153,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The year.
+             * <p>The year.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -151,6 +170,12 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCarbonEmissionTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCarbonEmissionTrendResponseBody</p>
+     */
     public static class ActualEmissionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
@@ -190,7 +215,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Data item list.
+             * <p>Data item list.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -198,7 +223,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The year.
+             * <p>The year.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -212,6 +240,12 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCarbonEmissionTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCarbonEmissionTrendResponseBody</p>
+     */
     public static class TargetEmissionListItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -263,7 +297,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Carbon emissions.
+             * <p>Carbon emissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.22</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -271,7 +308,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The month.
+             * <p>The month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -279,7 +319,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The year.
+             * <p>The year.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -293,6 +336,12 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCarbonEmissionTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCarbonEmissionTrendResponseBody</p>
+     */
     public static class TargetEmissionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < TargetEmissionListItems> items;
@@ -332,7 +381,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Data item list.
+             * <p>Data item list.</p>
              */
             public Builder items(java.util.List < TargetEmissionListItems> items) {
                 this.items = items;
@@ -340,7 +389,10 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The year.
+             * <p>The year.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -354,6 +406,12 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCarbonEmissionTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCarbonEmissionTrendResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actualEmissionList")
         private java.util.List < ActualEmissionList> actualEmissionList;
@@ -393,7 +451,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             private java.util.List < TargetEmissionList> targetEmissionList; 
 
             /**
-             * Actual emission list.
+             * <p>Actual emission list.</p>
              */
             public Builder actualEmissionList(java.util.List < ActualEmissionList> actualEmissionList) {
                 this.actualEmissionList = actualEmissionList;
@@ -401,7 +459,7 @@ public class GetCarbonEmissionTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Target Emission List.
+             * <p>Target Emission List.</p>
              */
             public Builder targetEmissionList(java.util.List < TargetEmissionList> targetEmissionList) {
                 this.targetEmissionList = targetEmissionList;

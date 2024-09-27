@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataQualityAnalysisRequest} extends {@link RequestModel}
  *
  * <p>GetDataQualityAnalysisRequest</p>
@@ -99,7 +100,10 @@ public class GetDataQualityAnalysisRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-20080808-1</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -108,7 +112,10 @@ public class GetDataQualityAnalysisRequest extends Request {
         }
 
         /**
-         * Data quality assessment type: 1 is DQI and 2 is DQR.
+         * <p>Data quality assessment type: 1 is DQI and 2 is DQR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataQualityEvaluationType(Long dataQualityEvaluationType) {
             this.putBodyParameter("dataQualityEvaluationType", dataQualityEvaluationType);
@@ -117,7 +124,10 @@ public class GetDataQualityAnalysisRequest extends Request {
         }
 
         /**
-         * The product id.
+         * <p>The product id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder productId(Long productId) {
             this.putBodyParameter("productId", productId);
@@ -126,7 +136,10 @@ public class GetDataQualityAnalysisRequest extends Request {
         }
 
         /**
-         * Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.
+         * <p>Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productType(Long productType) {
             this.putBodyParameter("productType", productType);

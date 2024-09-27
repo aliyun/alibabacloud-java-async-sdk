@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPcrInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetPcrInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class GetPcrInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetPcrInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A0AEC56-5C9A-5D47-93DF-7227836FFF82</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetPcrInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPcrInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPcrInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
@@ -121,7 +131,10 @@ public class GetPcrInfoResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The timestamp when the report was created. The timestamp is in milliseconds.
+             * <p>The timestamp when the report was created. The timestamp is in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709109790532</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -129,7 +142,10 @@ public class GetPcrInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Report name
+             * <p>Report name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>report name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -137,7 +153,10 @@ public class GetPcrInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Download url link.
+             * <p>Download url link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://energy.alibabacloud.com">https://energy.alibabacloud.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

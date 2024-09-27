@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IsCompletedResponseBody} extends {@link TeaModel}
  *
  * <p>IsCompletedResponseBody</p>
@@ -49,7 +50,7 @@ public class IsCompletedResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class IsCompletedResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class IsCompletedResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link IsCompletedResponseBody} extends {@link TeaModel}
+     *
+     * <p>IsCompletedResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("modifiedTime")
         private Long modifiedTime;
@@ -133,7 +143,10 @@ public class IsCompletedResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * Modified time in milliseconds, e.g. 1711438780000.
+             * <p>Modified time in milliseconds, e.g. 1711438780000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1711438780000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -141,7 +154,10 @@ public class IsCompletedResponseBody extends TeaModel {
             }
 
             /**
-             * The unique key of this generation task.
+             * <p>The unique key of this generation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>550c2b7b-f2e0-4176-ab0a-53ea4b355721</p>
              */
             public Builder taskKey(String taskKey) {
                 this.taskKey = taskKey;
@@ -149,7 +165,10 @@ public class IsCompletedResponseBody extends TeaModel {
             }
 
             /**
-             * Unused temporarily.
+             * <p>Unused temporarily.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder taskShortResult(String taskShortResult) {
                 this.taskShortResult = taskShortResult;
@@ -157,7 +176,10 @@ public class IsCompletedResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the report generation task. The possible values are `running`, `success`, and `error`, which mean generating, generating succeeded, and generating failed, respectively. If you encounter a result generation failure, check the model, correct the model, and then generate the result again.
+             * <p>The status of the report generation task. The possible values are <code>running</code>, <code>success</code>, and <code>error</code>, which mean generating, generating succeeded, and generating failed, respectively. If you encounter a result generation failure, check the model, correct the model, and then generate the result again.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

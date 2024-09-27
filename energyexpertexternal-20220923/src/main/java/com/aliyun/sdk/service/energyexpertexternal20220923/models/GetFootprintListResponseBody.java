@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFootprintListResponseBody} extends {@link TeaModel}
  *
  * <p>GetFootprintListResponseBody</p>
@@ -49,7 +50,7 @@ public class GetFootprintListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetFootprintListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06DA2909-7736-5738-AA31-ACD617D828F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetFootprintListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFootprintListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFootprintListResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("amount")
         private Double amount;
@@ -241,7 +251,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The amount of the product.
+             * <p>The amount of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0000000000000000000000000</p>
              */
             public Builder amount(Double amount) {
                 this.amount = amount;
@@ -249,7 +262,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * Authentication status enumeration value, please refer to [link](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf).
+             * <p>Authentication status enumeration value, please refer to <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf">link</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder authStatus(Long authStatus) {
                 this.authStatus = authStatus;
@@ -257,7 +273,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * Calculation end time.
+             * <p>Calculation end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024/01/31</p>
              */
             public Builder checkEndTime(String checkEndTime) {
                 this.checkEndTime = checkEndTime;
@@ -265,7 +284,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * Calculation start time.
+             * <p>Calculation start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024/01/01</p>
              */
             public Builder checkStartTime(String checkStartTime) {
                 this.checkStartTime = checkStartTime;
@@ -273,7 +295,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * The enterprise code.
+             * <p>The enterprise code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C-20080808-1</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -281,7 +306,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * The user who created it.
+             * <p>The user who created it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Energy Expert</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -289,7 +317,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * The product ID.
+             * <p>The product ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -297,7 +328,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the demo model is a built-in model. A value of 1 indicates a true value and a value of 0 indicates a false value.
+             * <p>Indicates whether the demo model is a built-in model. A value of 1 indicates a true value and a value of 0 indicates a false value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isDemoModel(Long isDemoModel) {
                 this.isDemoModel = isDemoModel;
@@ -305,7 +339,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * The literal expression corresponding to lifeCycleType, `From Cradle to Gate` and `From Cradle to Grave`.
+             * <p>The literal expression corresponding to lifeCycleType, <code>From Cradle to Gate</code> and <code>From Cradle to Grave</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>From Cradle to Gate</p>
              */
             public Builder lifeCycle(String lifeCycle) {
                 this.lifeCycle = lifeCycle;
@@ -313,7 +350,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * 1 is `From Cradle to Gate`, and 2 is `From Cradle to Grave`.
+             * <p>1 is <code>From Cradle to Gate</code>, and 2 is <code>From Cradle to Grave</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lifeCycleType(Long lifeCycleType) {
                 this.lifeCycleType = lifeCycleType;
@@ -321,7 +361,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * The product name.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Carbon-footprint-demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +372,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * Product category enumeration value, please refer to [Carbon Footprint Appendices](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf).
+             * <p>Product category enumeration value, please refer to <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf">Carbon Footprint Appendices</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>158-159</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -337,7 +383,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * Unit enumeration value. Please refer to [Carbon Footprint Appendices](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf).
+             * <p>Unit enumeration value. Please refer to <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf">Carbon Footprint Appendices</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1-4</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -351,6 +400,12 @@ public class GetFootprintListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFootprintListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFootprintListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("currentPage")
         private Long currentPage;
@@ -426,7 +481,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             private Long totalPage; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -434,7 +492,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -442,7 +503,7 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * Product Detail List.
+             * <p>Product Detail List.</p>
              */
             public Builder records(java.util.List < Records> records) {
                 this.records = records;
@@ -450,7 +511,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -458,7 +522,10 @@ public class GetFootprintListResponseBody extends TeaModel {
             }
 
             /**
-             * Total Pages
+             * <p>Total Pages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalPage(Long totalPage) {
                 this.totalPage = totalPage;

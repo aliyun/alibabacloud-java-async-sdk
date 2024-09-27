@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCarbonEmissionTrendRequest} extends {@link RequestModel}
  *
  * <p>GetCarbonEmissionTrendRequest</p>
@@ -112,7 +113,10 @@ public class GetCarbonEmissionTrendRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-20240119-1</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -121,7 +125,10 @@ public class GetCarbonEmissionTrendRequest extends Request {
         }
 
         /**
-         * Module code.
+         * <p>Module code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.scope_1_direct_ghg_emissions</p>
          */
         public Builder moduleCode(String moduleCode) {
             this.putBodyParameter("moduleCode", moduleCode);
@@ -130,7 +137,10 @@ public class GetCarbonEmissionTrendRequest extends Request {
         }
 
         /**
-         * Module type.
+         * <p>Module type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder moduleType(Integer moduleType) {
             this.putBodyParameter("moduleType", moduleType);
@@ -139,7 +149,10 @@ public class GetCarbonEmissionTrendRequest extends Request {
         }
 
         /**
-         * Trend Type.
+         * <p>Trend Type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder trendType(Integer trendType) {
             this.putBodyParameter("trendType", trendType);
@@ -148,7 +161,7 @@ public class GetCarbonEmissionTrendRequest extends Request {
         }
 
         /**
-         * The list of inventory year.
+         * <p>The list of inventory year.</p>
          */
         public Builder yearList(java.util.List < Integer > yearList) {
             this.putBodyParameter("yearList", yearList);

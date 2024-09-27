@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecalculateCarbonEmissionRequest} extends {@link RequestModel}
  *
  * <p>RecalculateCarbonEmissionRequest</p>
@@ -69,7 +70,10 @@ public class RecalculateCarbonEmissionRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-20240202-01</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -78,7 +82,10 @@ public class RecalculateCarbonEmissionRequest extends Request {
         }
 
         /**
-         * Year of inventory.
+         * <p>Year of inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         public Builder year(String year) {
             this.putBodyParameter("year", year);

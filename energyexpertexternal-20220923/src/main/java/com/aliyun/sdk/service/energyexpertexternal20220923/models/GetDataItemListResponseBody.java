@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataItemListResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataItemListResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDataItemListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Response parameters.
+         * <p>Response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetDataItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDataItemListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataItemListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataItemListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -133,7 +143,10 @@ public class GetDataItemListResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The identifier of the data item.
+             * <p>The identifier of the data item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_api_code</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -141,7 +154,10 @@ public class GetDataItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data item.
+             * <p>The name of the data item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name_bbb</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,7 +165,10 @@ public class GetDataItemListResponseBody extends TeaModel {
             }
 
             /**
-             * Data filling method, 1: monthly value 2: annual value.
+             * <p>Data filling method, 1: monthly value 2: annual value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -157,7 +176,10 @@ public class GetDataItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The data item unit.
+             * <p>The data item unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kg</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

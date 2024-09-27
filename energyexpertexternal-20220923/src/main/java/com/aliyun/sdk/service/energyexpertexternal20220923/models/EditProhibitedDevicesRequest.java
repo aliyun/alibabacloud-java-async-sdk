@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditProhibitedDevicesRequest} extends {@link RequestModel}
  *
  * <p>EditProhibitedDevicesRequest</p>
@@ -114,6 +115,12 @@ public class EditProhibitedDevicesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link EditProhibitedDevicesRequest} extends {@link TeaModel}
+     *
+     * <p>EditProhibitedDevicesRequest</p>
+     */
     public static class HvacDeviceConfigVOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("buildingId")
         private String buildingId;

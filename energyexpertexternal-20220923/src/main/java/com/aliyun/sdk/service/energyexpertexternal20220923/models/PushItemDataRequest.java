@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PushItemDataRequest} extends {@link RequestModel}
  *
  * <p>PushItemDataRequest</p>
@@ -84,7 +85,10 @@ public class PushItemDataRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-20210223-01</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -93,7 +97,7 @@ public class PushItemDataRequest extends Request {
         }
 
         /**
-         * List of data to be pushed.
+         * <p>List of data to be pushed.</p>
          */
         public Builder items(Items items) {
             this.putBodyParameter("items", items);
@@ -102,7 +106,10 @@ public class PushItemDataRequest extends Request {
         }
 
         /**
-         * The year of the data created.
+         * <p>The year of the data created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         public Builder year(String year) {
             this.putBodyParameter("year", year);
@@ -117,6 +124,12 @@ public class PushItemDataRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PushItemDataRequest} extends {@link TeaModel}
+     *
+     * <p>PushItemDataRequest</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -171,7 +184,10 @@ public class PushItemDataRequest extends Request {
             private Double value; 
 
             /**
-             * API data identification.<props="intl">For details: [GetDataItemList ](https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist)</props>
+             * <p>API data identification.&lt;props=&quot;intl&quot;&gt;For details: <a href="https://www.alibabacloud.com/help/en/energy-expert/developer-reference/api-energyexpertexternal-2022-09-23-getdataitemlist">GetDataItemList </a></props></p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_api_code</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -179,7 +195,10 @@ public class PushItemDataRequest extends Request {
             }
 
             /**
-             * The month.
+             * <p>The month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder month(String month) {
                 this.month = month;
@@ -187,7 +206,10 @@ public class PushItemDataRequest extends Request {
             }
 
             /**
-             * The value of the data item.
+             * <p>The value of the data item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.11</p>
              */
             public Builder value(Double value) {
                 this.value = value;

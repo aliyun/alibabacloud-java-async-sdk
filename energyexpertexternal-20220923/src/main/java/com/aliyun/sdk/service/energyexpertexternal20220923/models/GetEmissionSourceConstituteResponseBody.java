@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEmissionSourceConstituteResponseBody} extends {@link TeaModel}
  *
  * <p>GetEmissionSourceConstituteResponseBody</p>
@@ -49,7 +50,7 @@ public class GetEmissionSourceConstituteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Response parameters
+         * <p>Response parameters</p>
          */
         public Builder data(java.util.List < ConstituteItem > data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetEmissionSourceConstituteResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9bc20a5a-b26b-4c28-922a-7cd10b61f96f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

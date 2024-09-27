@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConstituteItem} extends {@link TeaModel}
  *
  * <p>ConstituteItem</p>
@@ -250,6 +251,12 @@ public class ConstituteItem extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ConstituteItem} extends {@link TeaModel}
+     *
+     * <p>ConstituteItem</p>
+     */
     public static class EnvGasEmissions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;

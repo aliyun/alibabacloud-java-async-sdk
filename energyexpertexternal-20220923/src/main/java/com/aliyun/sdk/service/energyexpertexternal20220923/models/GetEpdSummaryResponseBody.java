@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEpdSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetEpdSummaryResponseBody</p>
@@ -49,7 +50,7 @@ public class GetEpdSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Response parameters
+         * <p>Response parameters</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B91B5559-065A-55C3-8D75-DA218EBFD1DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetEpdSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEpdSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEpdSummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmission")
         private Double carbonEmission;
@@ -181,7 +191,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
             private Long state; 
 
             /**
-             * Emissions. The result is maintained up to 31 decimal places for precise intermediate calculation and subsequently truncated for display. It is advised to pair the emissions figure with the unit of the environmental impact result for a comprehensive understanding.
+             * <p>Emissions. The result is maintained up to 31 decimal places for precise intermediate calculation and subsequently truncated for display. It is advised to pair the emissions figure with the unit of the environmental impact result for a comprehensive understanding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1009.976265540000000000000000000000</p>
              */
             public Builder carbonEmission(Double carbonEmission) {
                 this.carbonEmission = carbonEmission;
@@ -189,7 +202,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The evaluation index adopted for the environmental impact
+             * <p>The evaluation index adopted for the environmental impact</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GWP100a</p>
              */
             public Builder indicator(String indicator) {
                 this.indicator = indicator;
@@ -197,7 +213,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The category key. The environmental impact category. Currently, a maximum of 19 categories are supported. Enumeration refers to [Carbon Footprint Appendices](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf).
+             * <p>The category key. The environmental impact category. Currently, a maximum of 19 categories are supported. Enumeration refers to <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf">Carbon Footprint Appendices</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gwp</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -205,7 +224,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Calculation method standard
+             * <p>Calculation method standard</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CML v4.8 2016</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -213,7 +235,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the category.
+             * <p>The name of the category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>climate change</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -221,7 +246,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Category num: the unique serial number of the environmental impact category. A maximum of 19 categories are supported. Enumeration refers to [Carbon Footprint Appendices](https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf).
+             * <p>Category num: the unique serial number of the environmental impact category. A maximum of 19 categories are supported. Enumeration refers to <a href="https://carbon-doc.oss-cn-hangzhou.aliyuncs.com/CarbonFootprintAppendices-en.pdf">Carbon Footprint Appendices</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -229,7 +257,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Environmental impact result Value Unit.
+             * <p>Environmental impact result Value Unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kg CO2-Eq</p>
              */
             public Builder preUnit(String preUnit) {
                 this.preUnit = preUnit;
@@ -237,7 +268,10 @@ public class GetEpdSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The data status. 1 indicates that the calculation is accurate, 2 indicates that the default data is used, and 3 indicates that the missing factor uses the value of 0.
+             * <p>The data status. 1 indicates that the calculation is accurate, 2 indicates that the default data is used, and 3 indicates that the missing factor uses the value of 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder state(Long state) {
                 this.state = state;

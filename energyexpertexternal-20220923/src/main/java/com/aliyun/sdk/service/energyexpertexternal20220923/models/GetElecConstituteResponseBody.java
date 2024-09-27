@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetElecConstituteResponseBody} extends {@link TeaModel}
  *
  * <p>GetElecConstituteResponseBody</p>
@@ -49,7 +50,7 @@ public class GetElecConstituteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request.
+         * <p>Id of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetElecConstituteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetElecConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecConstituteResponseBody</p>
+     */
     public static class Light extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -157,7 +167,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double rawData; 
 
             /**
-             * Carbon emission.
+             * <p>Carbon emission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -165,7 +178,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -173,7 +189,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>light</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -181,7 +200,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of name.
+             * <p>The unique identifier of name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.light_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -189,7 +211,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -197,7 +222,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -211,6 +239,12 @@ public class GetElecConstituteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecConstituteResponseBody</p>
+     */
     public static class Nuclear extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -298,7 +332,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double rawData; 
 
             /**
-             * Carbon emission.
+             * <p>Carbon emission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.3</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -306,7 +343,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -314,7 +354,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nuclear</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -322,7 +365,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of name.
+             * <p>The unique identifier of name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.nuclear_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -330,7 +376,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -338,7 +387,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -352,6 +404,12 @@ public class GetElecConstituteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecConstituteResponseBody</p>
+     */
     public static class Renewing extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -439,7 +497,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double rawData; 
 
             /**
-             * Carbon emission.
+             * <p>Carbon emission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.3</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -447,7 +508,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -455,7 +519,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>renewing</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -463,7 +530,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of name.
+             * <p>The unique identifier of name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.carbonEmissionAnalysis.components.CarbonDetail.keZaiShengZiYuan</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -471,7 +541,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.44</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -479,7 +552,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.3</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -493,6 +569,12 @@ public class GetElecConstituteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecConstituteResponseBody</p>
+     */
     public static class Urban extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -580,7 +662,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double rawData; 
 
             /**
-             * Carbon emission.
+             * <p>Carbon emission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -588,7 +673,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -596,7 +684,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urban</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -604,7 +695,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of name.
+             * <p>The unique identifier of name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.urban_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -612,7 +706,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.4</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -620,7 +717,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -634,6 +734,12 @@ public class GetElecConstituteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecConstituteResponseBody</p>
+     */
     public static class Water extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -721,7 +827,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double rawData; 
 
             /**
-             * Carbon emission.
+             * <p>Carbon emission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.1</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -729,7 +838,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -737,7 +849,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>water</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -745,7 +860,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of name.
+             * <p>The unique identifier of name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.water_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -753,7 +871,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.4</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -761,7 +882,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -775,6 +899,12 @@ public class GetElecConstituteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecConstituteResponseBody</p>
+     */
     public static class Wind extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -862,7 +992,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double rawData; 
 
             /**
-             * Carbon emission.
+             * <p>Carbon emission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -870,7 +1003,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -878,7 +1014,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wind</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -886,7 +1025,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of name.
+             * <p>The unique identifier of name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.wind_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -894,7 +1036,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -902,7 +1047,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -916,6 +1064,12 @@ public class GetElecConstituteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecConstituteResponseBody</p>
+     */
     public static class Zero extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -1003,7 +1157,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Double rawData; 
 
             /**
-             * Carbon emission.
+             * <p>Carbon emission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -1011,7 +1168,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -1019,7 +1179,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zero</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1027,7 +1190,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of name.
+             * <p>The unique identifier of name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.carbonEmissionAnalysis.components.CarbonDetail.lingTanDianLi</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -1035,7 +1201,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.33</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -1043,7 +1212,10 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>444.3</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -1057,6 +1229,12 @@ public class GetElecConstituteResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecConstituteResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("light")
         private Light light;
@@ -1156,7 +1334,7 @@ public class GetElecConstituteResponseBody extends TeaModel {
             private Zero zero; 
 
             /**
-             * Photoelectric power consumption and carbon emission data of each enterprise.
+             * <p>Photoelectric power consumption and carbon emission data of each enterprise.</p>
              */
             public Builder light(Light light) {
                 this.light = light;
@@ -1164,7 +1342,7 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Data on nuclear power consumption and carbon emissions at each enterprise.
+             * <p>Data on nuclear power consumption and carbon emissions at each enterprise.</p>
              */
             public Builder nuclear(Nuclear nuclear) {
                 this.nuclear = nuclear;
@@ -1172,7 +1350,7 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Data on renewable electricity consumption and carbon emissions at each enterprise.
+             * <p>Data on renewable electricity consumption and carbon emissions at each enterprise.</p>
              */
             public Builder renewing(Renewing renewing) {
                 this.renewing = renewing;
@@ -1180,7 +1358,7 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Data on mains power electricity consumption and carbon emission of each enterprise.
+             * <p>Data on mains power electricity consumption and carbon emission of each enterprise.</p>
              */
             public Builder urban(Urban urban) {
                 this.urban = urban;
@@ -1188,7 +1366,7 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Hydropower consumption and carbon emission data of each enterprise.
+             * <p>Hydropower consumption and carbon emission data of each enterprise.</p>
              */
             public Builder water(Water water) {
                 this.water = water;
@@ -1196,7 +1374,7 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Wind power consumption and carbon emission data of each enterprise.
+             * <p>Wind power consumption and carbon emission data of each enterprise.</p>
              */
             public Builder wind(Wind wind) {
                 this.wind = wind;
@@ -1204,7 +1382,7 @@ public class GetElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Data of zero electricity consumption and carbon emission of each enterprise.
+             * <p>Data of zero electricity consumption and carbon emission of each enterprise.</p>
              */
             public Builder zero(Zero zero) {
                 this.zero = zero;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceListResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceListResponseBody</p>
@@ -85,7 +86,10 @@ public class GetDeviceListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -109,7 +116,10 @@ public class GetDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetDeviceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetDeviceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceListResponseBody</p>
+     */
     public static class Info extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("constKva")
         private Integer constKva;
@@ -205,9 +224,11 @@ public class GetDeviceListResponseBody extends TeaModel {
             private Integer pt; 
 
             /**
-             * The rated capacity.
-             * <p>
-             * Unit is kVA.
+             * <p>The rated capacity.
+             * Unit is kVA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder constKva(Integer constKva) {
                 this.constKva = constKva;
@@ -215,7 +236,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The transformation ratio of current.
+             * <p>The transformation ratio of current.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ct(Integer ct) {
                 this.ct = ct;
@@ -223,7 +247,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The magnification ratio.
+             * <p>The magnification ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder magnification(Integer magnification) {
                 this.magnification = magnification;
@@ -231,7 +258,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The high and low voltage.
+             * <p>The high and low voltage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pressure(Integer pressure) {
                 this.pressure = pressure;
@@ -239,7 +269,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The transformation ratio of voltage.
+             * <p>The transformation ratio of voltage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder pt(Integer pt) {
                 this.pt = pt;
@@ -253,6 +286,12 @@ public class GetDeviceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceListResponseBody</p>
+     */
     public static class DeviceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("deviceId")
         private String deviceId;
@@ -340,7 +379,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             private String secondTypeName; 
 
             /**
-             * The device ID.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pn_69873</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -348,7 +390,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The device name.
+             * <p>The device name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Main transformer 4#</p>
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -356,7 +401,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The level 1 meter type.
+             * <p>The level 1 meter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Electric meter</p>
              */
             public Builder firstTypeName(String firstTypeName) {
                 this.firstTypeName = firstTypeName;
@@ -364,7 +412,7 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The device information.
+             * <p>The device information.</p>
              */
             public Builder info(Info info) {
                 this.info = info;
@@ -372,7 +420,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent device.
+             * <p>The ID of the parent device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pn_6987</p>
              */
             public Builder parentDevice(String parentDevice) {
                 this.parentDevice = parentDevice;
@@ -380,7 +431,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The level 2 meter type.
+             * <p>The level 2 meter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Gateway meter</p>
              */
             public Builder secondTypeName(String secondTypeName) {
                 this.secondTypeName = secondTypeName;
@@ -394,6 +448,12 @@ public class GetDeviceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeviceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("code")
         private String code;
@@ -469,7 +529,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The code returned for the request.
+             * <p>The code returned for the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -477,7 +540,7 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The devices.
+             * <p>The devices.</p>
              */
             public Builder deviceList(java.util.List < DeviceList> deviceList) {
                 this.deviceList = deviceList;
@@ -485,7 +548,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the site.
+             * <p>The ID of the site.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pn_95</p>
              */
             public Builder factoryId(String factoryId) {
                 this.factoryId = factoryId;
@@ -493,7 +559,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder httpCode(Integer httpCode) {
                 this.httpCode = httpCode;
@@ -501,7 +570,10 @@ public class GetDeviceListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful.
+             * <p>Indicates whether the request was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

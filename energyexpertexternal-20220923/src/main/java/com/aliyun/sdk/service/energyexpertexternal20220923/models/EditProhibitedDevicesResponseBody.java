@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditProhibitedDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>EditProhibitedDevicesResponseBody</p>
@@ -57,7 +58,10 @@ public class EditProhibitedDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9bc20a5a-b26b-4c28-922a-7cd10b61f96f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetElecTrendRequest} extends {@link RequestModel}
  *
  * <p>GetElecTrendRequest</p>
@@ -69,7 +70,10 @@ public class GetElecTrendRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-20240115-3</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -78,7 +82,7 @@ public class GetElecTrendRequest extends Request {
         }
 
         /**
-         * List of years.
+         * <p>List of years.</p>
          */
         public Builder yearList(java.util.List < Integer > yearList) {
             this.putBodyParameter("yearList", yearList);

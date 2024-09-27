@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInventoryListResponseBody} extends {@link TeaModel}
  *
  * <p>GetInventoryListResponseBody</p>
@@ -49,7 +50,7 @@ public class GetInventoryListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetInventoryListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetInventoryListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInventoryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInventoryListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmission")
         private Double carbonEmission;
@@ -133,7 +143,10 @@ public class GetInventoryListResponseBody extends TeaModel {
             private String processName; 
 
             /**
-             * Emission quantity: may be positive, negative, or 0. To ensure the calculation accuracy, 24 decimal places are reserved for the calculation process. We recommend that you intercept data based on your business requirements.
+             * <p>Emission quantity: may be positive, negative, or 0. To ensure the calculation accuracy, 24 decimal places are reserved for the calculation process. We recommend that you intercept data based on your business requirements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000.000000000000000000000000000000</p>
              */
             public Builder carbonEmission(Double carbonEmission) {
                 this.carbonEmission = carbonEmission;
@@ -141,10 +154,13 @@ public class GetInventoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Name 
-             * <p>
+             * <p>Name </p>
+             * <blockquote>
+             * <p>The name is related to the request parameters group. Request parameters: resource, return name parameter meaning: list name; request parameters: process, return name parameter meaning: process name; request parameters: resourceType, return name parameter meaning: inventory resource type name; request parameters: processType, return name parameter meaning: flow name.</p>
+             * </blockquote>
              * 
-             * > The name is related to the request parameters group. Request parameters: resource, return name parameter meaning: list name; request parameters: process, return name parameter meaning: process name; request parameters: resourceType, return name parameter meaning: inventory resource type name; request parameters: processType, return name parameter meaning: flow name.
+             * <strong>example:</strong>
+             * <p>Energy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -152,7 +168,10 @@ public class GetInventoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage
+             * <p>Percentage</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.01</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -160,7 +179,10 @@ public class GetInventoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Process Name: It is only meaningful when the request parameters group is resource.
+             * <p>Process Name: It is only meaningful when the request parameters group is resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Process-1</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -174,6 +196,12 @@ public class GetInventoryListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetInventoryListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInventoryListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
@@ -225,7 +253,7 @@ public class GetInventoryListResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * Inventory detail.
+             * <p>Inventory detail.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -233,7 +261,10 @@ public class GetInventoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Unit of product.
+             * <p>Unit of product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kg</p>
              */
             public Builder productUnit(String productUnit) {
                 this.productUnit = productUnit;
@@ -241,7 +272,10 @@ public class GetInventoryListResponseBody extends TeaModel {
             }
 
             /**
-             * Emission Unit: The default value is kgCO₂ /productUnit. productUnit is the unit selected for the product. The unit value is changed to tCO₂ e/productUnit or gCO₂ e/productUnit based on the emission quantity. For more information, see the quantity column.
+             * <p>Emission Unit: The default value is kgCO₂ /productUnit. productUnit is the unit selected for the product. The unit value is changed to tCO₂ e/productUnit or gCO₂ e/productUnit based on the emission quantity. For more information, see the quantity column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kgCO₂e/kg</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

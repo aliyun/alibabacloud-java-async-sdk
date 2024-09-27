@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateResultResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateResultResponseBody</p>
@@ -49,7 +50,10 @@ public class GenerateResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data. `true` indicates that the request is successful, `false` indicates that the request fails.
+         * <p>The returned data. <code>true</code> indicates that the request is successful, <code>false</code> indicates that the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class GenerateResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAreaElecConstituteResponseBody} extends {@link TeaModel}
  *
  * <p>GetAreaElecConstituteResponseBody</p>
@@ -61,7 +62,10 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.
+         * <p>The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -77,7 +81,10 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAreaElecConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAreaElecConstituteResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("light")
         private java.util.List < CarbonEmissionElecSummaryItem > light;
@@ -189,7 +202,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             private java.util.List < CarbonEmissionElecSummaryItem > zero; 
 
             /**
-             * Photoelectric power consumption and carbon emission data of each enterprise.
+             * <p>Photoelectric power consumption and carbon emission data of each enterprise.</p>
              */
             public Builder light(java.util.List < CarbonEmissionElecSummaryItem > light) {
                 this.light = light;
@@ -197,7 +210,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Data on nuclear power consumption and carbon emissions at each enterprise.
+             * <p>Data on nuclear power consumption and carbon emissions at each enterprise.</p>
              */
             public Builder nuclear(java.util.List < CarbonEmissionElecSummaryItem > nuclear) {
                 this.nuclear = nuclear;
@@ -205,7 +218,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Data on renewable electricity consumption and carbon emissions at each enterprise.
+             * <p>Data on renewable electricity consumption and carbon emissions at each enterprise.</p>
              */
             public Builder renewing(java.util.List < CarbonEmissionElecSummaryItem > renewing) {
                 this.renewing = renewing;
@@ -213,7 +226,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Data on mains electricity consumption and carbon emission of each enterprise.
+             * <p>Data on mains electricity consumption and carbon emission of each enterprise.</p>
              */
             public Builder urban(java.util.List < CarbonEmissionElecSummaryItem > urban) {
                 this.urban = urban;
@@ -221,7 +234,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Hydropower consumption and carbon emission data of each enterprise.
+             * <p>Hydropower consumption and carbon emission data of each enterprise.</p>
              */
             public Builder water(java.util.List < CarbonEmissionElecSummaryItem > water) {
                 this.water = water;
@@ -229,7 +242,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Wind power consumption and carbon emission data of each enterprise.
+             * <p>Wind power consumption and carbon emission data of each enterprise.</p>
              */
             public Builder wind(java.util.List < CarbonEmissionElecSummaryItem > wind) {
                 this.wind = wind;
@@ -237,7 +250,7 @@ public class GetAreaElecConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Data of zero electricity consumption and carbon emission of each enterprise.
+             * <p>Data of zero electricity consumption and carbon emission of each enterprise.</p>
              */
             public Builder zero(java.util.List < CarbonEmissionElecSummaryItem > zero) {
                 this.zero = zero;

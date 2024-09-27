@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFootprintListRequest} extends {@link RequestModel}
  *
  * <p>GetFootprintListRequest</p>
@@ -99,7 +100,10 @@ public class GetFootprintListRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-20080808-1</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -108,7 +112,10 @@ public class GetFootprintListRequest extends Request {
         }
 
         /**
-         * The pagination parameter. The number of the page that starts from 1.
+         * <p>The pagination parameter. The number of the page that starts from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putBodyParameter("currentPage", currentPage);
@@ -117,7 +124,10 @@ public class GetFootprintListRequest extends Request {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -126,7 +136,10 @@ public class GetFootprintListRequest extends Request {
         }
 
         /**
-         * Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.
+         * <p>Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productType(Long productType) {
             this.putBodyParameter("productType", productType);

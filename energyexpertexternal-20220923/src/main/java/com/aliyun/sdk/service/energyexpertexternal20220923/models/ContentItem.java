@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ContentItem} extends {@link TeaModel}
  *
  * <p>ContentItem</p>
@@ -110,6 +111,12 @@ public class ContentItem extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ContentItem} extends {@link TeaModel}
+     *
+     * <p>ContentItem</p>
+     */
     public static class Pos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("x")
         private Long x;
@@ -171,6 +178,12 @@ public class ContentItem extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ContentItem} extends {@link TeaModel}
+     *
+     * <p>ContentItem</p>
+     */
     public static class ExtInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alignment")
         private String alignment;

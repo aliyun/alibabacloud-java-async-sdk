@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInventoryListRequest} extends {@link RequestModel}
  *
  * <p>GetInventoryListRequest</p>
@@ -129,7 +130,10 @@ public class GetInventoryListRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C-20080808-1</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -138,10 +142,13 @@ public class GetInventoryListRequest extends Request {
         }
 
         /**
-         * Type of emission
-         * <p>
+         * <p>Type of emission</p>
+         * <blockquote>
+         * <p> Valid values: footprint | emission. Meaning: footprint: all inventories are involved in the calculation; emission: only inventories with positive and zero emissions are involved in the calculation, and negative numbers are not involved in the calculation.</p>
+         * </blockquote>
          * 
-         * >  Valid values: footprint | emission. Meaning: footprint: all inventories are involved in the calculation; emission: only inventories with positive and zero emissions are involved in the calculation, and negative numbers are not involved in the calculation.
+         * <strong>example:</strong>
+         * <p>footprint</p>
          */
         public Builder emissionType(String emissionType) {
             this.putBodyParameter("emissionType", emissionType);
@@ -150,10 +157,13 @@ public class GetInventoryListRequest extends Request {
         }
 
         /**
-         * Group by
-         * <p>
+         * <p>Group by</p>
+         * <blockquote>
+         * <p> Valid values: resource | process | resourceType | processType. Meaning: resource: aggregation by inventory group, process: aggregation by operation group, resourceType: aggregation by inventory type, processType: aggregation by phase group</p>
+         * </blockquote>
          * 
-         * >  Valid values: resource | process | resourceType | processType. Meaning: resource: aggregation by inventory group, process: aggregation by operation group, resourceType: aggregation by inventory type, processType: aggregation by phase group
+         * <strong>example:</strong>
+         * <p>resource</p>
          */
         public Builder group(String group) {
             this.putBodyParameter("group", group);
@@ -162,9 +172,11 @@ public class GetInventoryListRequest extends Request {
         }
 
         /**
-         * The type of the obtained environmental impact: gwp indicates the carbon footprint of climate change. 
-         * <p>
-         * <props="intl">[For more information, see the environment impact category enumeration.](https://www.alibabacloud.com/help/en/energy-expert/developer-reference/enumerated-values-of-energy-expert#RhGn7)</props>
+         * <p>The type of the obtained environmental impact: gwp indicates the carbon footprint of climate change. 
+         * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/energy-expert/developer-reference/enumerated-values-of-energy-expert#RhGn7">For more information, see the environment impact category enumeration.</a></props></p>
+         * 
+         * <strong>example:</strong>
+         * <p>gwp</p>
          */
         public Builder methodType(String methodType) {
             this.putBodyParameter("methodType", methodType);
@@ -173,7 +185,10 @@ public class GetInventoryListRequest extends Request {
         }
 
         /**
-         * The product id.
+         * <p>The product id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder productId(Long productId) {
             this.putBodyParameter("productId", productId);
@@ -182,7 +197,10 @@ public class GetInventoryListRequest extends Request {
         }
 
         /**
-         * Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.
+         * <p>Product type: 1 indicates that the carbon footprint of the product is requested, and 5 indicates that the carbon footprint of the supply chain is requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder productType(Long productType) {
             this.putBodyParameter("productType", productType);

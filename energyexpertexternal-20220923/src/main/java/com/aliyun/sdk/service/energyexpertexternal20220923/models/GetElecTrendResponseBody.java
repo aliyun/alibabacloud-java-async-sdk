@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetElecTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetElecTrendResponseBody</p>
@@ -61,7 +62,10 @@ public class GetElecTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.
+         * <p>The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +73,7 @@ public class GetElecTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -77,7 +81,10 @@ public class GetElecTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class GetElecTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetElecTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecTrendResponseBody</p>
+     */
     public static class Light extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -201,7 +214,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Carbon emissions
+             * <p>Carbon emissions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -209,7 +225,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -217,7 +236,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Month
+             * <p>Month</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -225,7 +247,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power type name.
+             * <p>Power type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Solar Power</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +258,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Code
+             * <p>Power Type Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.light_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -241,7 +269,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e. 50%).
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e. 50%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -249,7 +280,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -257,7 +291,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Year
+             * <p>Year</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -271,6 +308,12 @@ public class GetElecTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecTrendResponseBody</p>
+     */
     public static class Nuclear extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -382,7 +425,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Carbon emissions
+             * <p>Carbon emissions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -390,7 +436,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The price unit.
+             * <p>The price unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -398,7 +447,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Month
+             * <p>Month</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -406,7 +458,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Name
+             * <p>Power Type Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nuclear power</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -414,7 +469,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Code
+             * <p>Power Type Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.nuclear_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -422,7 +480,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -430,7 +491,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -438,7 +502,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Year
+             * <p>Year</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -452,6 +519,12 @@ public class GetElecTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecTrendResponseBody</p>
+     */
     public static class Renewing extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -563,7 +636,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Carbon emissions
+             * <p>Carbon emissions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -571,7 +647,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The price unit.
+             * <p>The price unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -579,7 +658,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Month
+             * <p>Month</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -587,7 +669,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Name
+             * <p>Power Type Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Renewable electricity</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -595,7 +680,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Code
+             * <p>Power Type Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.carbonEmissionAnalysis.components.CarbonDetail.lingTanDianLi</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -603,7 +691,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -611,7 +702,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -619,7 +713,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Year
+             * <p>Year</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -633,6 +730,12 @@ public class GetElecTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecTrendResponseBody</p>
+     */
     public static class Urban extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -744,7 +847,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Carbon emissions
+             * <p>Carbon emissions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -752,7 +858,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The price unit.
+             * <p>The price unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -760,7 +869,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Month
+             * <p>Month</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -768,7 +880,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Name
+             * <p>Power Type Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Grid power</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -776,7 +891,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Code
+             * <p>Power Type Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.urban_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -784,7 +902,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e. 50%).
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e. 50%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -792,7 +913,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -800,7 +924,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Year
+             * <p>Year</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -814,6 +941,12 @@ public class GetElecTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecTrendResponseBody</p>
+     */
     public static class Water extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -925,7 +1058,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Carbon emissions
+             * <p>Carbon emissions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -933,7 +1069,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -941,7 +1080,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Month
+             * <p>Month</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -949,7 +1091,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Name
+             * <p>Power Type Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hydro power</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -957,7 +1102,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Code
+             * <p>Power Type Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.water_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -965,7 +1113,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e. 50%).
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e. 50%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -973,7 +1124,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -981,7 +1135,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Year
+             * <p>Year</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -995,6 +1152,12 @@ public class GetElecTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecTrendResponseBody</p>
+     */
     public static class Wind extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -1106,7 +1269,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Carbon emissions
+             * <p>Carbon emissions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -1114,7 +1280,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The price unit.
+             * <p>The price unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -1122,7 +1291,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Month
+             * <p>Month</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -1130,7 +1302,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Name
+             * <p>Power Type Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Wind power</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1138,7 +1313,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Code
+             * <p>Power Type Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.check.wind_electricity</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -1146,7 +1324,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -1154,7 +1335,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -1162,7 +1346,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Year
+             * <p>Year</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -1176,6 +1363,12 @@ public class GetElecTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecTrendResponseBody</p>
+     */
     public static class Zero extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -1287,7 +1480,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             private String year; 
 
             /**
-             * Carbon emissions
+             * <p>Carbon emissions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -1295,7 +1491,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The price unit.
+             * <p>The price unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kWh</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -1303,7 +1502,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Month
+             * <p>Month</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder month(Integer month) {
                 this.month = month;
@@ -1311,7 +1513,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Name
+             * <p>Power Type Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zero carbon electricity</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1319,7 +1524,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Power Type Code
+             * <p>Power Type Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>carbonInventory.carbonEmissionAnalysis.components.CarbonDetail.lingTanDianLi</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -1327,7 +1535,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)
+             * <p>Proportion of electricity consumption to all electricity consumption in the month: example value: 0.5 (i. e., 50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -1335,7 +1546,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Electricity consumption
+             * <p>Electricity consumption</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder rawData(Double rawData) {
                 this.rawData = rawData;
@@ -1343,7 +1557,10 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Year
+             * <p>Year</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024</p>
              */
             public Builder year(String year) {
                 this.year = year;
@@ -1357,6 +1574,12 @@ public class GetElecTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetElecTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetElecTrendResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("light")
         private java.util.List < Light> light;
@@ -1456,7 +1679,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             private java.util.List < Zero> zero; 
 
             /**
-             * Photoelectricity monthly electricity consumption and carbon emissions and other data.
+             * <p>Photoelectricity monthly electricity consumption and carbon emissions and other data.</p>
              */
             public Builder light(java.util.List < Light> light) {
                 this.light = light;
@@ -1464,7 +1687,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Monthly electricity consumption and carbon emissions data for nuclear power
+             * <p>Monthly electricity consumption and carbon emissions data for nuclear power</p>
              */
             public Builder nuclear(java.util.List < Nuclear> nuclear) {
                 this.nuclear = nuclear;
@@ -1472,7 +1695,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Monthly data on renewable electricity consumption and carbon emissions
+             * <p>Monthly data on renewable electricity consumption and carbon emissions</p>
              */
             public Builder renewing(java.util.List < Renewing> renewing) {
                 this.renewing = renewing;
@@ -1480,7 +1703,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Data such as monthly electricity consumption and carbon emissions from the mains.
+             * <p>Data such as monthly electricity consumption and carbon emissions from the mains.</p>
              */
             public Builder urban(java.util.List < Urban> urban) {
                 this.urban = urban;
@@ -1488,7 +1711,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Monthly data on electricity consumption and carbon emissions for hydropower.
+             * <p>Monthly data on electricity consumption and carbon emissions for hydropower.</p>
              */
             public Builder water(java.util.List < Water> water) {
                 this.water = water;
@@ -1496,7 +1719,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Monthly wind power consumption and carbon emission data
+             * <p>Monthly wind power consumption and carbon emission data</p>
              */
             public Builder wind(java.util.List < Wind> wind) {
                 this.wind = wind;
@@ -1504,7 +1727,7 @@ public class GetElecTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Zero electricity monthly electricity consumption and carbon emissions and other data.
+             * <p>Zero electricity monthly electricity consumption and carbon emissions and other data.</p>
              */
             public Builder zero(java.util.List < Zero> zero) {
                 this.zero = zero;

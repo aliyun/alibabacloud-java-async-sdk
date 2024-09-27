@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrgAndFactoryResponseBody} extends {@link TeaModel}
  *
  * <p>GetOrgAndFactoryResponseBody</p>
@@ -85,7 +86,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The code returned for the request.
+         * <p>The code returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * <p>data</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -109,7 +116,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,6 +143,12 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOrgAndFactoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrgAndFactoryResponseBody</p>
+     */
     public static class FactoryList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("factoryId")
         private String factoryId;
@@ -169,7 +188,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             private String factoryName; 
 
             /**
-             * The site ID.
+             * <p>The site ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pn_95</p>
              */
             public Builder factoryId(String factoryId) {
                 this.factoryId = factoryId;
@@ -177,7 +199,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * The site name.
+             * <p>The site name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ledi Industrial Park 1</p>
              */
             public Builder factoryName(String factoryName) {
                 this.factoryName = factoryName;
@@ -191,6 +216,12 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOrgAndFactoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOrgAndFactoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
@@ -254,7 +285,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             private String organizationName; 
 
             /**
-             * The Alibaba Cloud account ID.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1319617584664960</p>
              */
             public Builder aliyunPk(String aliyunPk) {
                 this.aliyunPk = aliyunPk;
@@ -262,7 +296,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * The sites.
+             * <p>The sites.</p>
              */
             public Builder factoryList(java.util.List < FactoryList> factoryList) {
                 this.factoryList = factoryList;
@@ -270,7 +304,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * The enterprise ID.
+             * <p>The enterprise ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6265f42XXXX2fec150</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -278,7 +315,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * The enterprise name.
+             * <p>The enterprise name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ledi Industrial Park</p>
              */
             public Builder organizationName(String organizationName) {
                 this.organizationName = organizationName;

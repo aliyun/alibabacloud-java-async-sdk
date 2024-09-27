@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEpdInventoryConstituteResponseBody} extends {@link TeaModel}
  *
  * <p>GetEpdInventoryConstituteResponseBody</p>
@@ -49,7 +50,7 @@ public class GetEpdInventoryConstituteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * List of environmental impact results.
+         * <p>List of environmental impact results.</p>
          */
         public Builder data(java.util.List < EpdInventoryConstituteItem > data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetEpdInventoryConstituteResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

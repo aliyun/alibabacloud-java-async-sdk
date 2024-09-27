@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGwpInventoryConstituteResponseBody} extends {@link TeaModel}
  *
  * <p>GetGwpInventoryConstituteResponseBody</p>
@@ -49,7 +50,7 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06DA2909-7736-5738-AA31-ACD617D828F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGwpInventoryConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGwpInventoryConstituteResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("byResourceType")
         private java.util.List < GwpInventoryConstitute > byResourceType;
@@ -145,7 +155,7 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * Aggregated by resource type of an inventory.
+             * <p>Aggregated by resource type of an inventory.</p>
              */
             public Builder byResourceType(java.util.List < GwpInventoryConstitute > byResourceType) {
                 this.byResourceType = byResourceType;
@@ -153,7 +163,10 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Emission quantity: may be positive, negative, or 0. To ensure the calculation accuracy, 24 decimal places are reserved for the calculation process. We recommend that you intercept data based on your business requirements.
+             * <p>Emission quantity: may be positive, negative, or 0. To ensure the calculation accuracy, 24 decimal places are reserved for the calculation process. We recommend that you intercept data based on your business requirements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1009.976265540000000000000000000000</p>
              */
             public Builder carbonEmission(Double carbonEmission) {
                 this.carbonEmission = carbonEmission;
@@ -161,7 +174,7 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Organized by hierarchy from high to low, according to the flow-> process-> inventory hierarchy.
+             * <p>Organized by hierarchy from high to low, according to the flow-&gt; process-&gt; inventory hierarchy.</p>
              */
             public Builder items(java.util.List < GwpInventoryConstitute > items) {
                 this.items = items;
@@ -169,7 +182,10 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is not used for displaying</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -177,7 +193,10 @@ public class GetGwpInventoryConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Emission Unit.
+             * <p>Emission Unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kgCO₂e/t</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetReductionProposalResponseBody} extends {@link TeaModel}
  *
  * <p>GetReductionProposalResponseBody</p>
@@ -49,7 +50,7 @@ public class GetReductionProposalResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetReductionProposalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetReductionProposalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetReductionProposalResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetReductionProposalResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("reduction")
         private String reduction;
@@ -109,7 +119,10 @@ public class GetReductionProposalResponseBody extends TeaModel {
             private String reductionEvaluation; 
 
             /**
-             * Proactive carbon reduction recommendations and advice.
+             * <p>Proactive carbon reduction recommendations and advice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reduce one-drop usage</p>
              */
             public Builder reduction(String reduction) {
                 this.reduction = reduction;
@@ -117,7 +130,10 @@ public class GetReductionProposalResponseBody extends TeaModel {
             }
 
             /**
-             * Active carbon reduction assessment.
+             * <p>Active carbon reduction assessment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trying Energy Expert for a more detailed assessment.</p>
              */
             public Builder reductionEvaluation(String reductionEvaluation) {
                 this.reductionEvaluation = reductionEvaluation;

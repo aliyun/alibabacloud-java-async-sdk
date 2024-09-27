@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentAnalyzeResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocumentAnalyzeResultResponseBody</p>
@@ -70,6 +71,12 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentAnalyzeResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentAnalyzeResultResponseBody</p>
+     */
     public static class Confidence extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("keyConfidence")
         private Double keyConfidence;
@@ -131,6 +138,12 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentAnalyzeResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentAnalyzeResultResponseBody</p>
+     */
     public static class Context extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("confidence")
         private Confidence confidence;
@@ -212,6 +225,12 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentAnalyzeResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentAnalyzeResultResponseBody</p>
+     */
     public static class KvListInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("context")
         private Context context;
@@ -293,6 +312,12 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentAnalyzeResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentAnalyzeResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("kvListInfo")
         private java.util.List < KvListInfo> kvListInfo;

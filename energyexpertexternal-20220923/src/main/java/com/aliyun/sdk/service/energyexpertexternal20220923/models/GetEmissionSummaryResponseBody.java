@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEmissionSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetEmissionSummaryResponseBody</p>
@@ -49,7 +50,7 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of summarized data
+         * <p>Details of summarized data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request.
+         * <p>Id of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEmissionSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEmissionSummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("actualEmissionRatio")
         private Double actualEmissionRatio;
@@ -205,7 +215,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             private Double weightingRatio; 
 
             /**
-             * Percentage of scheduled.
+             * <p>Percentage of scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.7657</p>
              */
             public Builder actualEmissionRatio(Double actualEmissionRatio) {
                 this.actualEmissionRatio = actualEmissionRatio;
@@ -213,7 +226,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Carbon emissions reduction.
+             * <p>Carbon emissions reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder carbonSaveConversion(Double carbonSaveConversion) {
                 this.carbonSaveConversion = carbonSaveConversion;
@@ -221,7 +237,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Statistical indicators for this cycle.
+             * <p>Statistical indicators for this cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>276.4</p>
              */
             public Builder currentPeriodCarbonEmissionData(Double currentPeriodCarbonEmissionData) {
                 this.currentPeriodCarbonEmissionData = currentPeriodCarbonEmissionData;
@@ -229,7 +248,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to show the weighting ratio carbon emission.
+             * <p>Whether to show the weighting ratio carbon emission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isWeighting(Boolean isWeighting) {
                 this.isWeighting = isWeighting;
@@ -237,7 +259,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Last period statistical indicators.
+             * <p>Last period statistical indicators.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9.40100</p>
              */
             public Builder lastPeriodCarbonEmissionData(Double lastPeriodCarbonEmissionData) {
                 this.lastPeriodCarbonEmissionData = lastPeriodCarbonEmissionData;
@@ -245,7 +270,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Calculation of carbon emissions based on shareholding ratio in the last cycle.
+             * <p>Calculation of carbon emissions based on shareholding ratio in the last cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.4609</p>
              */
             public Builder lastPeriodWeightingCarbonEmissionData(Double lastPeriodWeightingCarbonEmissionData) {
                 this.lastPeriodWeightingCarbonEmissionData = lastPeriodWeightingCarbonEmissionData;
@@ -253,7 +281,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Year-on-year.
+             * <p>Year-on-year.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28.410</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -261,7 +292,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Total carbon emissions.
+             * <p>Total carbon emissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>276.46</p>
              */
             public Builder totalCarbonEmissionData(Double totalCarbonEmissionData) {
                 this.totalCarbonEmissionData = totalCarbonEmissionData;
@@ -269,7 +303,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Calculate carbon emissions by share ratio
+             * <p>Calculate carbon emissions by share ratio</p>
+             * 
+             * <strong>example:</strong>
+             * <p>248.81400</p>
              */
             public Builder weightingCarbonEmissionData(Double weightingCarbonEmissionData) {
                 this.weightingCarbonEmissionData = weightingCarbonEmissionData;
@@ -277,7 +314,10 @@ public class GetEmissionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Year-on-year of weighting ratio carbon emissions.
+             * <p>Year-on-year of weighting ratio carbon emissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28.4102</p>
              */
             public Builder weightingRatio(Double weightingRatio) {
                 this.weightingRatio = weightingRatio;

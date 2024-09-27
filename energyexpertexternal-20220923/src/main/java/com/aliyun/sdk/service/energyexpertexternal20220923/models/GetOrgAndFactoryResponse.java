@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrgAndFactoryResponse} extends {@link TeaModel}
  *
  * <p>GetOrgAndFactoryResponse</p>

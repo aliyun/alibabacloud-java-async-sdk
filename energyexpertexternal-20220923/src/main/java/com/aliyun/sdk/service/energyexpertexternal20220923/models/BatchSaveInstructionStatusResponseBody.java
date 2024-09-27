@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchSaveInstructionStatusResponseBody} extends {@link TeaModel}
  *
  * <p>BatchSaveInstructionStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class BatchSaveInstructionStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class BatchSaveInstructionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

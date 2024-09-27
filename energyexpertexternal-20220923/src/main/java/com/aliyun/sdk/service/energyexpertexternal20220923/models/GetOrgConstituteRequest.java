@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOrgConstituteRequest} extends {@link RequestModel}
  *
  * <p>GetOrgConstituteRequest</p>
@@ -98,7 +99,10 @@ public class GetOrgConstituteRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Z-20240115-2</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -107,7 +111,10 @@ public class GetOrgConstituteRequest extends Request {
         }
 
         /**
-         * Module code.
+         * <p>Module code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carbonInventory.check.scope_1_direct_ghg_emissions</p>
          */
         public Builder moduleCode(String moduleCode) {
             this.putBodyParameter("moduleCode", moduleCode);
@@ -116,7 +123,10 @@ public class GetOrgConstituteRequest extends Request {
         }
 
         /**
-         * Module type.
+         * <p>Module type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder moduleType(Integer moduleType) {
             this.putBodyParameter("moduleType", moduleType);
@@ -125,7 +135,10 @@ public class GetOrgConstituteRequest extends Request {
         }
 
         /**
-         * Year.
+         * <p>Year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         public Builder year(Integer year) {
             this.putBodyParameter("year", year);

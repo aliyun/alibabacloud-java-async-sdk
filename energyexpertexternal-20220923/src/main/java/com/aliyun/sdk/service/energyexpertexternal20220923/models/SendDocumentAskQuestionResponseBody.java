@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendDocumentAskQuestionResponseBody} extends {@link TeaModel}
  *
  * <p>SendDocumentAskQuestionResponseBody</p>
@@ -70,6 +71,12 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SendDocumentAskQuestionResponseBody} extends {@link TeaModel}
+     *
+     * <p>SendDocumentAskQuestionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("answer")
         private String answer;

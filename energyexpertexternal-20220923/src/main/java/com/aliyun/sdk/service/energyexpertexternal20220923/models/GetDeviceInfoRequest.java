@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceInfoRequest} extends {@link RequestModel}
  *
  * <p>GetDeviceInfoRequest</p>
@@ -84,7 +85,10 @@ public class GetDeviceInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the device.
+         * <p>The ID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn_69873</p>
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("deviceId", deviceId);
@@ -93,7 +97,10 @@ public class GetDeviceInfoRequest extends Request {
         }
 
         /**
-         * The time string in the YYYY-mm-dd format.
+         * <p>The time string in the YYYY-mm-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-26</p>
          */
         public Builder ds(String ds) {
             this.putQueryParameter("ds", ds);
@@ -102,7 +109,10 @@ public class GetDeviceInfoRequest extends Request {
         }
 
         /**
-         * The ID of the site.
+         * <p>The ID of the site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn_95</p>
          */
         public Builder factoryId(String factoryId) {
             this.putQueryParameter("factoryId", factoryId);

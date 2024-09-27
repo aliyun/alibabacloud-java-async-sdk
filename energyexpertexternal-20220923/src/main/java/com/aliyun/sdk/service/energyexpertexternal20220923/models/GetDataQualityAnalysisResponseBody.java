@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataQualityAnalysisResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataQualityAnalysisResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A0AEC56-5C9A-5D47-93DF-7227836FFF82</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataQualityAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataQualityAnalysisResponseBody</p>
+     */
     public static class Score extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("g1")
         private Double g1;
@@ -133,7 +143,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private Double g4; 
 
             /**
-             * Data quality evaluation indicator 1: activity data credibility.
+             * <p>Data quality evaluation indicator 1: activity data credibility.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder g1(Double g1) {
                 this.g1 = g1;
@@ -141,7 +154,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Data quality evaluation indicator 2: data factor reliability.
+             * <p>Data quality evaluation indicator 2: data factor reliability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder g2(Double g2) {
                 this.g2 = g2;
@@ -149,7 +165,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Data quality evaluation indicator 3: time representativeness.
+             * <p>Data quality evaluation indicator 3: time representativeness.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder g3(Double g3) {
                 this.g3 = g3;
@@ -157,7 +176,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Data quality evaluation indicator 4: geographic representativeness.
+             * <p>Data quality evaluation indicator 4: geographic representativeness.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder g4(Double g4) {
                 this.g4 = g4;
@@ -171,6 +193,12 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataQualityAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataQualityAnalysisResponseBody</p>
+     */
     public static class DataQuality extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inventory")
         private String inventory;
@@ -210,7 +238,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private Score score; 
 
             /**
-             * Inventory name
+             * <p>Inventory name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>energy</p>
              */
             public Builder inventory(String inventory) {
                 this.inventory = inventory;
@@ -218,7 +249,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Score. The distribution ranges from 1 to 5. A value closer to 1 indicates better data quality.
+             * <p>Score. The distribution ranges from 1 to 5. A value closer to 1 indicates better data quality.</p>
              */
             public Builder score(Score score) {
                 this.score = score;
@@ -232,6 +263,12 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataQualityAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataQualityAnalysisResponseBody</p>
+     */
     public static class DataQualityResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data_quality_score")
         private Double dataQualityScore;
@@ -307,7 +344,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private Double g4; 
 
             /**
-             * The score. This parameter is applicable to DQR results. The distribution ranges from 1 to 5. A value closer to 1 indicates better data quality. The number of valid digits is kept to four decimal places.
+             * <p>The score. This parameter is applicable to DQR results. The distribution ranges from 1 to 5. A value closer to 1 indicates better data quality. The number of valid digits is kept to four decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2345</p>
              */
             public Builder dataQualityScore(Double dataQualityScore) {
                 this.dataQualityScore = dataQualityScore;
@@ -315,7 +355,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Data quality evaluation indicator 1: activity data credibility.
+             * <p>Data quality evaluation indicator 1: activity data credibility.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2345</p>
              */
             public Builder g1(Double g1) {
                 this.g1 = g1;
@@ -323,7 +366,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Data quality evaluation indicator 2: data factor reliability.
+             * <p>Data quality evaluation indicator 2: data factor reliability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2345</p>
              */
             public Builder g2(Double g2) {
                 this.g2 = g2;
@@ -331,7 +377,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Data quality evaluation indicator 3: time representativeness.
+             * <p>Data quality evaluation indicator 3: time representativeness.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2345</p>
              */
             public Builder g3(Double g3) {
                 this.g3 = g3;
@@ -339,7 +388,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Data quality evaluation indicator 4: geographic representativeness.
+             * <p>Data quality evaluation indicator 4: geographic representativeness.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2345</p>
              */
             public Builder g4(Double g4) {
                 this.g4 = g4;
@@ -353,6 +405,12 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataQualityAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataQualityAnalysisResponseBody</p>
+     */
     public static class SensitivityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
@@ -416,7 +474,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private Double sensitivity; 
 
             /**
-             * Inventory id
+             * <p>Inventory id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -424,7 +485,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Name of the inventory item.
+             * <p>Name of the inventory item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>energy</p>
              */
             public Builder inventory(String inventory) {
                 this.inventory = inventory;
@@ -432,7 +496,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * List of emission reduction measures.
+             * <p>List of emission reduction measures.</p>
              */
             public Builder reductionList(java.util.List < String > reductionList) {
                 this.reductionList = reductionList;
@@ -440,7 +504,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitivity percentage.
+             * <p>Sensitivity percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91.7</p>
              */
             public Builder sensitivity(Double sensitivity) {
                 this.sensitivity = sensitivity;
@@ -454,6 +521,12 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataQualityAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataQualityAnalysisResponseBody</p>
+     */
     public static class UncertaintyValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("inventory")
         private String inventory;
@@ -493,7 +566,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private String uncertaintyContribution; 
 
             /**
-             * The name of the inventory. Format: process name / inventory name.
+             * <p>The name of the inventory. Format: process name / inventory name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>process-1/inventory-1</p>
              */
             public Builder inventory(String inventory) {
                 this.inventory = inventory;
@@ -501,7 +577,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Inventory uncertainty absolute contribution size. The impact of the quality of each inventory data on the carbon footprint results in the modeling process, when the uncertain contribution of a list is large, please improve its data quality as much as possible to improve the accuracy of carbon footprint analysis. The meaning of "1.4964" is not determined to contribute 1.4964 kgCO₂ e/unit, where unit is the unit of the product.
+             * <p>Inventory uncertainty absolute contribution size. The impact of the quality of each inventory data on the carbon footprint results in the modeling process, when the uncertain contribution of a list is large, please improve its data quality as much as possible to improve the accuracy of carbon footprint analysis. The meaning of &quot;1.4964&quot; is not determined to contribute 1.4964 kgCO₂ e/unit, where unit is the unit of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.4964</p>
              */
             public Builder uncertaintyContribution(String uncertaintyContribution) {
                 this.uncertaintyContribution = uncertaintyContribution;
@@ -515,6 +594,12 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataQualityAnalysisResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataQualityAnalysisResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataQuality")
         private java.util.List < DataQuality> dataQuality;
@@ -590,7 +675,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             private java.util.List < UncertaintyValues> uncertaintyValues; 
 
             /**
-             * Score of each inventory.
+             * <p>Score of each inventory.</p>
              */
             public Builder dataQuality(java.util.List < DataQuality> dataQuality) {
                 this.dataQuality = dataQuality;
@@ -598,7 +683,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Data quality result.
+             * <p>Data quality result.</p>
              */
             public Builder dataQualityResult(DataQualityResult dataQualityResult) {
                 this.dataQualityResult = dataQualityResult;
@@ -606,7 +691,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Sensitivity analysis list
+             * <p>Sensitivity analysis list</p>
              */
             public Builder sensitivityList(java.util.List < SensitivityList> sensitivityList) {
                 this.sensitivityList = sensitivityList;
@@ -614,7 +699,10 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Uncertainty value. The model\"s overall percentage uncertainty results. "10.00%" symbolizes a 10.00% uncertainty, indicating that the carbon footprint lies within ±10.00%. This is derived from a weighted aggregation of individual inventory uncertainties.
+             * <p>Uncertainty value. The model&quot;s overall percentage uncertainty results. &quot;10.00%&quot; symbolizes a 10.00% uncertainty, indicating that the carbon footprint lies within ±10.00%. This is derived from a weighted aggregation of individual inventory uncertainties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.00</p>
              */
             public Builder uncertainty(String uncertainty) {
                 this.uncertainty = uncertainty;
@@ -622,7 +710,7 @@ public class GetDataQualityAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * Uncertainty list
+             * <p>Uncertainty list</p>
              */
             public Builder uncertaintyValues(java.util.List < UncertaintyValues> uncertaintyValues) {
                 this.uncertaintyValues = uncertaintyValues;

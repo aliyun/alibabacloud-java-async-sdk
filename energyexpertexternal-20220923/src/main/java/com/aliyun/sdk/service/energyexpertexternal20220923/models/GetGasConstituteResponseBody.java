@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGasConstituteResponseBody} extends {@link TeaModel}
  *
  * <p>GetGasConstituteResponseBody</p>
@@ -49,7 +50,7 @@ public class GetGasConstituteResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetGasConstituteResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetGasConstituteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGasConstituteResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGasConstituteResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("carbonEmissionData")
         private Double carbonEmissionData;
@@ -145,7 +155,10 @@ public class GetGasConstituteResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * Carbon emissions
+             * <p>Carbon emissions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder carbonEmissionData(Double carbonEmissionData) {
                 this.carbonEmissionData = carbonEmissionData;
@@ -153,7 +166,10 @@ public class GetGasConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Gas emissions
+             * <p>Gas emissions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.14</p>
              */
             public Builder gasEmissionData(Double gasEmissionData) {
                 this.gasEmissionData = gasEmissionData;
@@ -161,7 +177,10 @@ public class GetGasConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Name of gas
+             * <p>Name of gas</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CO₂</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -169,7 +188,10 @@ public class GetGasConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion of carbon emissions. Example value: 0.5 (50%)
+             * <p>Proportion of carbon emissions. Example value: 0.5 (50%)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder ratio(Double ratio) {
                 this.ratio = ratio;
@@ -177,7 +199,10 @@ public class GetGasConstituteResponseBody extends TeaModel {
             }
 
             /**
-             * Gas Type
+             * <p>Gas Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

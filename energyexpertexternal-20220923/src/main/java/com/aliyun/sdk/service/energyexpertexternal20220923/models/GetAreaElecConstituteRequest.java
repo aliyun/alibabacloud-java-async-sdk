@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAreaElecConstituteRequest} extends {@link RequestModel}
  *
  * <p>GetAreaElecConstituteRequest</p>
@@ -69,7 +70,10 @@ public class GetAreaElecConstituteRequest extends Request {
         } 
 
         /**
-         * The enterprise code.
+         * <p>The enterprise code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Z-20240115-2</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -78,7 +82,10 @@ public class GetAreaElecConstituteRequest extends Request {
         }
 
         /**
-         * Year.
+         * <p>Year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024</p>
          */
         public Builder year(Integer year) {
             this.putBodyParameter("year", year);

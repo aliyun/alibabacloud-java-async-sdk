@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceListRequest} extends {@link RequestModel}
  *
  * <p>GetDeviceListRequest</p>
@@ -54,7 +55,10 @@ public class GetDeviceListRequest extends Request {
         } 
 
         /**
-         * The ID of the site.
+         * <p>The ID of the site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pn_95</p>
          */
         public Builder factoryId(String factoryId) {
             this.putQueryParameter("factoryId", factoryId);

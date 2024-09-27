@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetGwpInventorySummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetGwpInventorySummaryResponseBody</p>
@@ -49,7 +50,7 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.
+         * <p>The ID of the request. The value is unique for each request. This facilitates subsequent troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetGwpInventorySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGwpInventorySummaryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -133,7 +143,10 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * Inventory resource type name.
+             * <p>Inventory resource type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Energy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -141,7 +154,10 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * <p>Percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.01</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -149,7 +165,10 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Quantity.
+             * <p>Quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9.9763</p>
              */
             public Builder quantity(Double quantity) {
                 this.quantity = quantity;
@@ -157,7 +176,10 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kgCO₂e/Piece(s)</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -171,6 +193,12 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetGwpInventorySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetGwpInventorySummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("items")
         private java.util.List < Items> items;
@@ -234,7 +262,7 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * Top 4 types of carbon footprint contribution.
+             * <p>Top 4 types of carbon footprint contribution.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -242,7 +270,10 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The emission quantity.
+             * <p>The emission quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0100</p>
              */
             public Builder quantity(Double quantity) {
                 this.quantity = quantity;
@@ -250,7 +281,10 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the result was generated, in the millisecond timestamp format.
+             * <p>The time when the result was generated, in the millisecond timestamp format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1709108026000</p>
              */
             public Builder resultGenerateTime(Long resultGenerateTime) {
                 this.resultGenerateTime = resultGenerateTime;
@@ -258,7 +292,10 @@ public class GetGwpInventorySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Emission Unit.
+             * <p>Emission Unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tCO₂e/Piece(s)</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
