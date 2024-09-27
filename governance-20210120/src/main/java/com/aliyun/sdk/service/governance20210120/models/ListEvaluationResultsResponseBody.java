@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEvaluationResultsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEvaluationResultsResponseBody</p>
@@ -61,7 +62,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         private Results results; 
 
         /**
-         * AccountId.
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176618589410****</p>
          */
         public Builder accountId(Long accountId) {
             this.accountId = accountId;
@@ -69,7 +73,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BD57329E-131A-59F4-8746-E1CD8D7B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The check results, including the status of the overall check and the results of check items.</p>
          */
         public Builder results(Results results) {
             this.results = results;
@@ -90,6 +97,12 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationResultsResponseBody</p>
+     */
     public static class ErrorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -129,7 +142,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsInsightEnableFailed</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -137,7 +153,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unable to enable ECS Insight due to a server error.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -151,6 +170,12 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationResultsResponseBody</p>
+     */
     public static class ResourcesSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NonCompliant")
         private Integer nonCompliant;
@@ -178,7 +203,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             private Integer nonCompliant; 
 
             /**
-             * NonCompliant.
+             * <p>The number of non-compliant resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nonCompliant(Integer nonCompliant) {
                 this.nonCompliant = nonCompliant;
@@ -192,6 +220,12 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationResultsResponseBody</p>
+     */
     public static class MetricResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private ErrorInfo errorInfo;
@@ -291,7 +325,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorInfo.
+             * <p>The error information.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the value of <code>Status</code> is <code>Failed</code>.</p>
+             * </blockquote>
              */
             public Builder errorInfo(ErrorInfo errorInfo) {
                 this.errorInfo = errorInfo;
@@ -299,7 +336,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationTime.
+             * <p>The end time of the check item. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-13T03:34:02Z</p>
              */
             public Builder evaluationTime(String evaluationTime) {
                 this.evaluationTime = evaluationTime;
@@ -307,7 +347,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r7xdcu****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -315,7 +358,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourcesSummary.
+             * <p>The checked resources.</p>
              */
             public Builder resourcesSummary(ResourcesSummary resourcesSummary) {
                 this.resourcesSummary = resourcesSummary;
@@ -323,7 +366,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The rate of the non-compliant resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.67</p>
              */
             public Builder result(Double result) {
                 this.result = result;
@@ -331,7 +377,15 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Risk.
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li>Error: high risk</li>
+             * <li>Warning: medium risk</li>
+             * <li>None: no risk</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Error</p>
              */
             public Builder risk(String risk) {
                 this.risk = risk;
@@ -339,7 +393,15 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the check item. Valid values:</p>
+             * <ul>
+             * <li>Running: The check is in progress.</li>
+             * <li>Finished: The check is complete.</li>
+             * <li>failed: The check fails.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -353,6 +415,12 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationResultsResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EvaluationTime")
         private String evaluationTime;
@@ -416,7 +484,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             private Double totalScore; 
 
             /**
-             * EvaluationTime.
+             * <p>The end time of the overall check. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-12-13T03:35:00Z</p>
              */
             public Builder evaluationTime(String evaluationTime) {
                 this.evaluationTime = evaluationTime;
@@ -424,7 +495,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricResults.
+             * <p>The check results.</p>
              */
             public Builder metricResults(java.util.List < MetricResults> metricResults) {
                 this.metricResults = metricResults;
@@ -432,7 +503,15 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the overall check. Valid values:</p>
+             * <ul>
+             * <li>Running: The check is in progress.</li>
+             * <li>Finished: The check is complete.</li>
+             * <li>failed: The check fails.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -440,7 +519,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalScore.
+             * <p>The overall score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.6453</p>
              */
             public Builder totalScore(Double totalScore) {
                 this.totalScore = totalScore;

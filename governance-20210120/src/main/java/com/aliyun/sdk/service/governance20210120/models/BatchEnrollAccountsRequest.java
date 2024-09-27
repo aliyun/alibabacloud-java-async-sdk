@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchEnrollAccountsRequest} extends {@link RequestModel}
  *
  * <p>BatchEnrollAccountsRequest</p>
@@ -137,6 +138,12 @@ public class BatchEnrollAccountsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchEnrollAccountsRequest} extends {@link TeaModel}
+     *
+     * <p>BatchEnrollAccountsRequest</p>
+     */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountUid")
         private Long accountUid;
@@ -178,6 +185,12 @@ public class BatchEnrollAccountsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchEnrollAccountsRequest} extends {@link TeaModel}
+     *
+     * <p>BatchEnrollAccountsRequest</p>
+     */
     public static class BaselineItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;

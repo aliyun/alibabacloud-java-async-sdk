@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEnrolledAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEnrolledAccountsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The accounts.
+         * <p>The accounts.</p>
          */
         public Builder enrolledAccounts(java.util.List < EnrolledAccounts> enrolledAccounts) {
             this.enrolledAccounts = enrolledAccounts;
@@ -69,7 +70,10 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +81,10 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEnrolledAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEnrolledAccountsResponseBody</p>
+     */
     public static class EnrolledAccounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountUid")
         private Long accountUid;
@@ -201,7 +214,10 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The account ID.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19534534552*****</p>
              */
             public Builder accountUid(Long accountUid) {
                 this.accountUid = accountUid;
@@ -209,7 +225,10 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline ID.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>afb-bp1durvn3lgqe28v****</p>
              */
             public Builder baselineId(String baselineId) {
                 this.baselineId = baselineId;
@@ -217,7 +236,10 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the account was created.
+             * <p>The time at which the account was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T02:38:27Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -225,7 +247,10 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the account.
+             * <p>The display name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestAccount</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -233,7 +258,10 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent folder.
+             * <p>The ID of the parent folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-5ESoku****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -241,7 +269,10 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the billing account.
+             * <p>The ID of the billing account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13161210500*****</p>
              */
             public Builder payerAccountUid(Long payerAccountUid) {
                 this.payerAccountUid = payerAccountUid;
@@ -249,15 +280,18 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The creation status of the account. Valid values:
-             * <p>
+             * <p>The creation status of the account. Valid values:</p>
+             * <ul>
+             * <li>Pending: The account is waiting to be created.</li>
+             * <li>Running: The account is being created.</li>
+             * <li>Finished: The account is created.</li>
+             * <li>Failed: The account failed to be created.</li>
+             * <li>Scheduling: The account is being scheduled.</li>
+             * <li>ScheduleFailed: The account failed to be scheduled.</li>
+             * </ul>
              * 
-             * *   Pending: The account is waiting to be created.
-             * *   Running: The account is being created.
-             * *   Finished: The account is created.
-             * *   Failed: The account failed to be created.
-             * *   Scheduling: The account is being scheduled.
-             * *   ScheduleFailed: The account failed to be scheduled.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -265,7 +299,10 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the account was updated.
+             * <p>The time when the information about the account was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-01T02:38:27Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

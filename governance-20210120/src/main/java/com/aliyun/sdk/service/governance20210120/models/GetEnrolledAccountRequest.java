@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEnrolledAccountRequest} extends {@link RequestModel}
  *
  * <p>GetEnrolledAccountRequest</p>
@@ -68,7 +69,10 @@ public class GetEnrolledAccountRequest extends Request {
         } 
 
         /**
-         * The account ID.
+         * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19534534552****</p>
          */
         public Builder accountUid(Long accountUid) {
             this.putQueryParameter("AccountUid", accountUid);
@@ -77,7 +81,10 @@ public class GetEnrolledAccountRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

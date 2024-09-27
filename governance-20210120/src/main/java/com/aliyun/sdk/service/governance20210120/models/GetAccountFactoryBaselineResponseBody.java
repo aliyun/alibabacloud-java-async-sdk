@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountFactoryBaselineResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountFactoryBaselineResponseBody</p>
@@ -121,7 +122,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * The baseline ID.
+         * <p>The baseline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afb-bp16ae2k8a3yo3d*****</p>
          */
         public Builder baselineId(String baselineId) {
             this.baselineId = baselineId;
@@ -129,7 +133,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The baseline items.
+         * <p>The baseline items.</p>
          */
         public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
             this.baselineItems = baselineItems;
@@ -137,7 +141,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the baseline.
+         * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder baselineName(String baselineName) {
             this.baselineName = baselineName;
@@ -145,7 +152,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the baseline was created.
+         * <p>The time when the baseline was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-28T00:46:34Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -153,7 +163,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the baseline.
+         * <p>The description of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default baseline</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -161,7 +174,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60D54503-F1F6-51B6-B6FA-A70CBDA2A68C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,11 +185,14 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the baseline. Valid values:
-         * <p>
+         * <p>The type of the baseline. Valid values:</p>
+         * <ul>
+         * <li>System: default baseline.</li>
+         * <li>Custom: custom baseline.</li>
+         * </ul>
          * 
-         * *   System: default baseline.
-         * *   Custom: custom baseline.
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -181,7 +200,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the baseline was updated.
+         * <p>The time when the baseline was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-02T01:00:07Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -194,6 +216,12 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountFactoryBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountFactoryBaselineResponseBody</p>
+     */
     public static class BaselineItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -245,10 +273,11 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The configuration of the baseline item.
-             * <p>
+             * <p>The configuration of the baseline item.</p>
+             * <p>The value is a JSON string.</p>
              * 
-             * The value is a JSON string.
+             * <strong>example:</strong>
+             * <p>{&quot;Notifications&quot;:[{&quot;GroupKey&quot;:&quot;account_msg&quot;,&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;aa&quot;}],&quot;PmsgStatus&quot;:1,&quot;EmailStatus&quot;:1,&quot;SmsStatus&quot;:1}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -256,7 +285,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline item.
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1097526274671790</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -264,7 +296,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the baseline item.
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

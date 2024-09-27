@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccountFactoryBaselinesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccountFactoryBaselinesResponseBody</p>
@@ -61,7 +62,7 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of baselines.
+         * <p>An array that consists of baselines.</p>
          */
         public Builder baselines(java.util.List < Baselines> baselines) {
             this.baselines = baselines;
@@ -69,7 +70,10 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
+         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +81,10 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3245E413-7CDD-5287-8988-6A94DE8A8369</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccountFactoryBaselinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountFactoryBaselinesResponseBody</p>
+     */
     public static class Baselines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineId")
         private String baselineId;
@@ -177,7 +190,10 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The baseline ID.
+             * <p>The baseline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>afb-bp1durvn3lgqe28v****</p>
              */
             public Builder baselineId(String baselineId) {
                 this.baselineId = baselineId;
@@ -185,7 +201,10 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -193,7 +212,10 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the baseline was created.
+             * <p>The time at which the baseline was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-11-30T09:09:28Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -201,7 +223,10 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the baseline.
+             * <p>The description of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default baseline</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -209,11 +234,14 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the baseline. Valid values:
-             * <p>
+             * <p>The type of the baseline. Valid values:</p>
+             * <ul>
+             * <li>System: default baseline</li>
+             * <li>Custom: custom baseline</li>
+             * </ul>
              * 
-             * *   System: default baseline
-             * *   Custom: custom baseline
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -221,7 +249,10 @@ public class ListAccountFactoryBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the baseline was updated.
+             * <p>The time when the baseline was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-29T07:08:40Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

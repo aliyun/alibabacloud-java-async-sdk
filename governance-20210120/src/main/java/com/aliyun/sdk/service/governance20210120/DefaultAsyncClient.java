@@ -82,9 +82,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-      * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the [GetEnrolledAccount API](~~GetEnrolledAccount~~) operation to view the details about the account to obtain the result of applying the account baseline to the account.
-      *
+     * <b>description</b> :
+     * <p>You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
+     * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the <a href="~~GetEnrolledAccount~~">GetEnrolledAccount API</a> operation to view the details about the account to obtain the result of applying the account baseline to the account.</p>
      */
     @Override
     public CompletableFuture<EnrollAccountResponse> enrollAccount(EnrollAccountRequest request) {

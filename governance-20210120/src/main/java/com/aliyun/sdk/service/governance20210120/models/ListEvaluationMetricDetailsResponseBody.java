@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEvaluationMetricDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>ListEvaluationMetricDetailsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEvaluationMetricDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetricDetailsResponseBody</p>
+     */
     public static class ResourceProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropertyName")
         private String propertyName;
@@ -151,7 +158,16 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationMetricDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetricDetailsResponseBody</p>
+     */
     public static class Resources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
+        private String complianceType;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -174,6 +190,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         private String resourceType;
 
         private Resources(Builder builder) {
+            this.complianceType = builder.complianceType;
             this.regionId = builder.regionId;
             this.resourceClassification = builder.resourceClassification;
             this.resourceId = builder.resourceId;
@@ -189,6 +206,13 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
         public static Resources create() {
             return builder().build();
+        }
+
+        /**
+         * @return complianceType
+         */
+        public String getComplianceType() {
+            return this.complianceType;
         }
 
         /**
@@ -241,6 +265,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String complianceType; 
             private String regionId; 
             private String resourceClassification; 
             private String resourceId; 
@@ -248,6 +273,14 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             private Long resourceOwnerId; 
             private java.util.List < ResourceProperties> resourceProperties; 
             private String resourceType; 
+
+            /**
+             * ComplianceType.
+             */
+            public Builder complianceType(String complianceType) {
+                this.complianceType = complianceType;
+                return this;
+            }
 
             /**
              * RegionId.

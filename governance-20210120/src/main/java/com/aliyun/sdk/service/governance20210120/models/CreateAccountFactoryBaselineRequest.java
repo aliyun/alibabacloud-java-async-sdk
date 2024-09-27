@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountFactoryBaselineRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountFactoryBaselineRequest</p>
@@ -122,7 +123,10 @@ public class CreateAccountFactoryBaselineRequest extends Request {
         }
 
         /**
-         * RegionId
+         * <p>RegionId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -137,6 +141,12 @@ public class CreateAccountFactoryBaselineRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccountFactoryBaselineRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAccountFactoryBaselineRequest</p>
+     */
     public static class BaselineItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;

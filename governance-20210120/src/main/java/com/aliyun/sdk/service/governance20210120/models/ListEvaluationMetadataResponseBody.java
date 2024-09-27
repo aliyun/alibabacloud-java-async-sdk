@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEvaluationMetadataResponseBody} extends {@link TeaModel}
  *
  * <p>ListEvaluationMetadataResponseBody</p>
@@ -70,6 +71,12 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEvaluationMetadataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetadataResponseBody</p>
+     */
     public static class Guidance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ButtonName")
         private String buttonName;
@@ -171,6 +178,12 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationMetadataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetadataResponseBody</p>
+     */
     public static class Actions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Classification")
         private String classification;
@@ -312,6 +325,12 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationMetadataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetadataResponseBody</p>
+     */
     public static class Remediation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Actions")
         private java.util.List < Actions> actions;
@@ -373,6 +392,12 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationMetadataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetadataResponseBody</p>
+     */
     public static class RemediationMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remediation")
         private java.util.List < Remediation> remediation;
@@ -414,6 +439,12 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationMetadataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetadataResponseBody</p>
+     */
     public static class ResourcePropertyMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -495,6 +526,12 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationMetadataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetadataResponseBody</p>
+     */
     public static class ResourceMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourcePropertyMetadata")
         private java.util.List < ResourcePropertyMetadata> resourcePropertyMetadata;
@@ -536,6 +573,12 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationMetadataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetadataResponseBody</p>
+     */
     public static class Metadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -737,6 +780,12 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationMetadataResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationMetadataResponseBody</p>
+     */
     public static class EvaluationMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.List < Metadata> metadata;

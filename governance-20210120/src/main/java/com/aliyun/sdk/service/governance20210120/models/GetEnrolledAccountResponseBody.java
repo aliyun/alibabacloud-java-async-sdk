@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
  *
  * <p>GetEnrolledAccountResponseBody</p>
@@ -205,7 +206,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * The account ID.
+         * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12868156179*****</p>
          */
         public Builder accountUid(Long accountUid) {
             this.accountUid = accountUid;
@@ -213,7 +217,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the baseline that is implemented.
+         * <p>The ID of the baseline that is implemented.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afb-bp1adadfadsf***</p>
          */
         public Builder baselineId(String baselineId) {
             this.baselineId = baselineId;
@@ -221,7 +228,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * An array that contains baseline items.
+         * <p>An array that contains baseline items.</p>
          */
         public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
             this.baselineItems = baselineItems;
@@ -229,7 +236,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the account was created.
+         * <p>The time when the account was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -237,7 +247,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The display name of the account.
+         * <p>The display name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-account</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -245,10 +258,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
-         * <p>
-         * 
-         * >  This parameter is returned if the value of `Status` is `Failed` or `ScheduleFailed`.
+         * <p>The error message.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the value of <code>Status</code> is <code>Failed</code> or <code>ScheduleFailed</code>.</p>
+         * </blockquote>
          */
         public Builder errorInfo(ErrorInfo errorInfo) {
             this.errorInfo = errorInfo;
@@ -256,7 +269,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the parent folder.
+         * <p>The ID of the parent folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-5ESoku****</p>
          */
         public Builder folderId(String folderId) {
             this.folderId = folderId;
@@ -264,11 +280,14 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the initialization is complete. Valid values:
-         * <p>
+         * <p>Indicates whether the initialization is complete. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
          * 
-         * *   false
-         * *   true
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder initialized(Boolean initialized) {
             this.initialized = initialized;
@@ -276,7 +295,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The input parameters that are used when the account was registered.
+         * <p>The input parameters that are used when the account was registered.</p>
          */
         public Builder inputs(Inputs inputs) {
             this.inputs = inputs;
@@ -284,7 +303,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the management account of the resource directory to which the account belongs.
+         * <p>The ID of the management account of the resource directory to which the account belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19534534552*****</p>
          */
         public Builder masterAccountUid(Long masterAccountUid) {
             this.masterAccountUid = masterAccountUid;
@@ -292,7 +314,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the settlement account.
+         * <p>The ID of the settlement account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19534534552*****</p>
          */
         public Builder payerAccountUid(Long payerAccountUid) {
             this.payerAccountUid = payerAccountUid;
@@ -300,7 +325,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The progress of the applying the baseline to the account.
+         * <p>The progress of the applying the baseline to the account.</p>
          */
         public Builder progress(java.util.List < Progress> progress) {
             this.progress = progress;
@@ -308,7 +333,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -316,15 +344,18 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the account. Valid values:
-         * <p>
+         * <p>The status of the account. Valid values:</p>
+         * <ul>
+         * <li>Pending: The account is pending to be created.</li>
+         * <li>Running: The account is being created.</li>
+         * <li>Finished: The account is created.</li>
+         * <li>Failed: The account fails to be created.</li>
+         * <li>Scheduling: The account is being scheduled.</li>
+         * <li>ScheduleFailed: The account fails to be scheduled.</li>
+         * </ul>
          * 
-         * *   Pending: The account is pending to be created.
-         * *   Running: The account is being created.
-         * *   Finished: The account is created.
-         * *   Failed: The account fails to be created.
-         * *   Scheduling: The account is being scheduled.
-         * *   ScheduleFailed: The account fails to be scheduled.
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -332,7 +363,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the information about the account was updated.
+         * <p>The time when the information about the account was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -345,6 +379,12 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
     public static class BaselineItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -408,7 +448,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The configurations of the baseline item.
+             * <p>The configurations of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Notifications&quot;:[{&quot;GroupKey&quot;:&quot;account_msg&quot;,&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;aa&quot;}],&quot;PmsgStatus&quot;:1,&quot;EmailStatus&quot;:1,&quot;SmsStatus&quot;:1}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -416,7 +459,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline item.
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -424,11 +470,14 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether baseline item is skipped. Valid values:
-             * <p>
+             * <p>Indicates whether baseline item is skipped. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
              * 
-             * *   false
-             * *   true
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -436,7 +485,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the baseline item.
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -450,6 +502,12 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
     public static class ErrorInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -513,7 +571,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String requestId; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CompliancePackExists</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -521,7 +582,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The compliance pack already exists.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -529,7 +593,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The recommended solution.
+             * <p>The recommended solution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists%5C%5Cu0026product=Config">https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists\\u0026product=Config</a></p>
              */
             public Builder recommend(String recommend) {
                 this.recommend = recommend;
@@ -537,7 +604,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The request ID.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6D5EAA86-2D41-5CB7-8DA7-B60093ACAA4E</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -551,6 +621,12 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
     public static class InputsBaselineItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -614,7 +690,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The configurations of the baseline item.
+             * <p>The configurations of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;governance&quot;,&quot;Email&quot;:&quot;wibud****@gmail.com&quot;,&quot;Mobile&quot;:&quot;1234&quot;,&quot;Position&quot;:&quot;Other&quot;}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -622,7 +701,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline item.
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -630,11 +712,14 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether baseline item is skipped. Valid values:
-             * <p>
+             * <p>Indicates whether baseline item is skipped. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true</li>
+             * </ul>
              * 
-             * *   false
-             * *   true
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -642,7 +727,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the baseline item.
+             * <p>The version of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -656,6 +744,12 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
     public static class Inputs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountNamePrefix")
         private String accountNamePrefix;
@@ -743,7 +837,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private Long payerAccountUid; 
 
             /**
-             * The prefix of the account name.
+             * <p>The prefix of the account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-account</p>
              */
             public Builder accountNamePrefix(String accountNamePrefix) {
                 this.accountNamePrefix = accountNamePrefix;
@@ -751,7 +848,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The account ID.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12868156179*****</p>
              */
             public Builder accountUid(Long accountUid) {
                 this.accountUid = accountUid;
@@ -759,7 +859,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline items.
+             * <p>The baseline items.</p>
              */
             public Builder baselineItems(java.util.List < InputsBaselineItems> baselineItems) {
                 this.baselineItems = baselineItems;
@@ -767,7 +867,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the account.
+             * <p>The display name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-account</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -775,7 +878,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent folder.
+             * <p>The ID of the parent folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-5ESoku****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -783,7 +889,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the settlement account.
+             * <p>The ID of the settlement account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19534534552*****</p>
              */
             public Builder payerAccountUid(Long payerAccountUid) {
                 this.payerAccountUid = payerAccountUid;
@@ -797,6 +906,12 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetEnrolledAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetEnrolledAccountResponseBody</p>
+     */
     public static class Progress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -836,7 +951,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the baseline item.
+             * <p>The name of the baseline item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -844,13 +962,16 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of applying the baseline to the account. Valid values:
-             * <p>
+             * <p>The status of applying the baseline to the account. Valid values:</p>
+             * <ul>
+             * <li>Pending: The baseline is pending to be applied to the account.</li>
+             * <li>Running: The baseline is being applied to the account.</li>
+             * <li>Finished: : The baseline is applied to the account.</li>
+             * <li>Failed: : The baseline fails to be applied to the account.</li>
+             * </ul>
              * 
-             * *   Pending: The baseline is pending to be applied to the account.
-             * *   Running: The baseline is being applied to the account.
-             * *   Finished: : The baseline is applied to the account.
-             * *   Failed: : The baseline fails to be applied to the account.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

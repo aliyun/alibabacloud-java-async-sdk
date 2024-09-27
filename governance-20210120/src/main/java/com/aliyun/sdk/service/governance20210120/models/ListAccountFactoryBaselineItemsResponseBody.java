@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccountFactoryBaselineItemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccountFactoryBaselineItemsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccountFactoryBaselineItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountFactoryBaselineItemsResponseBody</p>
+     */
     public static class DependsOn extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -171,6 +178,12 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAccountFactoryBaselineItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountFactoryBaselineItemsResponseBody</p>
+     */
     public static class BaselineItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DependsOn")
         private java.util.List < DependsOn> dependsOn;

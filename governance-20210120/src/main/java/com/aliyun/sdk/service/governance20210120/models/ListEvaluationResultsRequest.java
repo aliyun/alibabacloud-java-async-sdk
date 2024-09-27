@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEvaluationResultsRequest} extends {@link RequestModel}
  *
  * <p>ListEvaluationResultsRequest</p>
@@ -67,7 +68,10 @@ public class ListEvaluationResultsRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176618589410****</p>
          */
         public Builder accountId(Long accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -76,7 +80,10 @@ public class ListEvaluationResultsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

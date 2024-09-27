@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEvaluationScoreHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListEvaluationScoreHistoryResponseBody</p>
@@ -70,6 +71,12 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEvaluationScoreHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationScoreHistoryResponseBody</p>
+     */
     public static class TotalScoreHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EvaluationTime")
         private String evaluationTime;
@@ -131,6 +138,12 @@ public class ListEvaluationScoreHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListEvaluationScoreHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEvaluationScoreHistoryResponseBody</p>
+     */
     public static class ScoreHistory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalScoreHistory")
         private java.util.List < TotalScoreHistory> totalScoreHistory;
