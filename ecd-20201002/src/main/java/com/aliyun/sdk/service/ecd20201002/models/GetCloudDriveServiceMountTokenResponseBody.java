@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCloudDriveServiceMountTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetCloudDriveServiceMountTokenResponseBody</p>
@@ -70,6 +71,12 @@ public class GetCloudDriveServiceMountTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCloudDriveServiceMountTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCloudDriveServiceMountTokenResponseBody</p>
+     */
     public static class Token extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;

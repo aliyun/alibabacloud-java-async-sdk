@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDirectoriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDirectoriesResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDirectoriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDirectoriesResponseBody</p>
+     */
     public static class Directories extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
         private String desktopAccessType;

@@ -376,8 +376,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.</p>
      */
     @Override
     public CompletableFuture<StartDesktopsResponse> startDesktops(StartDesktopsRequest request) {
@@ -408,8 +408,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</p>
      */
     @Override
     public CompletableFuture<StopDesktopsResponse> stopDesktops(StopDesktopsRequest request) {

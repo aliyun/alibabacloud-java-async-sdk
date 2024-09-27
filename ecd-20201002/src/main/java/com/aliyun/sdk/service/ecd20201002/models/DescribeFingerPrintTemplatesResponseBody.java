@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFingerPrintTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFingerPrintTemplatesResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFingerPrintTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFingerPrintTemplatesResponseBody</p>
+     */
     public static class FingerPrintTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;

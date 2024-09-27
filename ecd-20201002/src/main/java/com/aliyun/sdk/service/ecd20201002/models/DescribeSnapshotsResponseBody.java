@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotsResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalDesktopsRequest} extends {@link RequestModel}
  *
  * <p>DescribeGlobalDesktopsRequest</p>
@@ -361,7 +362,10 @@ public class DescribeGlobalDesktopsRequest extends Request {
         }
 
         /**
-         * 关键字。支持模糊搜索桌面ID、云桌面名称和终端用户自定义的桌面名称。
+         * <p>关键字。支持模糊搜索桌面ID、云桌面名称和终端用户自定义的桌面名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

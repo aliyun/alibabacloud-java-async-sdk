@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOfficeSitesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOfficeSitesResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOfficeSitesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOfficeSitesResponseBody</p>
+     */
     public static class OfficeSites extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
         private String desktopAccessType;

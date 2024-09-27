@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGlobalDesktopsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGlobalDesktopsResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGlobalDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalDesktopsResponseBody</p>
+     */
     public static class Clients extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
@@ -129,15 +136,18 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 客户端类型，取值：
-             * <p>
+             * <p>客户端类型，取值：</p>
+             * <ul>
+             * <li>macos：Mac客户端</li>
+             * <li>ios：IOS客户端</li>
+             * <li>android：Android客户端</li>
+             * <li>html5：Web客户端</li>
+             * <li>windows：Windows客户端</li>
+             * <li>linux：Linux客户端</li>
+             * </ul>
              * 
-             * - macos：Mac客户端
-             * - ios：IOS客户端
-             * - android：Android客户端
-             * - html5：Web客户端
-             * - windows：Windows客户端
-             * - linux：Linux客户端
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -145,11 +155,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * 客户端状态，取值：
-             * <p>
+             * <p>客户端状态，取值：</p>
+             * <ul>
+             * <li>ON：允许登录</li>
+             * <li>OFF：不允许登录</li>
+             * </ul>
              * 
-             * - ON：允许登录
-             * - OFF：不允许登录
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -163,6 +176,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalDesktopsResponseBody</p>
+     */
     public static class DesktopTimers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowClientSetting")
         private Boolean allowClientSetting;
@@ -344,6 +363,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalDesktopsResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
@@ -425,6 +450,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalDesktopsResponseBody</p>
+     */
     public static class FotaUpdate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
@@ -437,6 +468,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NewAppVersion")
         private String newAppVersion;
+
+        @com.aliyun.core.annotation.NameInMap("NewDcdVersion")
+        private String newDcdVersion;
 
         @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
@@ -458,6 +492,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             this.currentAppVersion = builder.currentAppVersion;
             this.force = builder.force;
             this.newAppVersion = builder.newAppVersion;
+            this.newDcdVersion = builder.newDcdVersion;
             this.project = builder.project;
             this.releaseNote = builder.releaseNote;
             this.releaseNoteEn = builder.releaseNoteEn;
@@ -502,6 +537,13 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return newDcdVersion
+         */
+        public String getNewDcdVersion() {
+            return this.newDcdVersion;
+        }
+
+        /**
          * @return project
          */
         public String getProject() {
@@ -541,6 +583,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String currentAppVersion; 
             private Boolean force; 
             private String newAppVersion; 
+            private String newDcdVersion; 
             private String project; 
             private String releaseNote; 
             private String releaseNoteEn; 
@@ -576,6 +619,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
              */
             public Builder newAppVersion(String newAppVersion) {
                 this.newAppVersion = newAppVersion;
+                return this;
+            }
+
+            /**
+             * NewDcdVersion.
+             */
+            public Builder newDcdVersion(String newDcdVersion) {
+                this.newDcdVersion = newDcdVersion;
                 return this;
             }
 
@@ -626,6 +677,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalDesktopsResponseBody</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
@@ -687,6 +744,12 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGlobalDesktopsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGlobalDesktopsResponseBody</p>
+     */
     public static class Desktops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -1178,7 +1241,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * 支持的客户端信息
+             * <p>支持的客户端信息</p>
              */
             public Builder clients(java.util.List < Clients> clients) {
                 this.clients = clients;

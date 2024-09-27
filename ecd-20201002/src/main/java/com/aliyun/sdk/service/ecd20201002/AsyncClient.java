@@ -68,16 +68,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetFingerPrintTemplateDescriptionResponse> setFingerPrintTemplateDescription(SetFingerPrintTemplateDescriptionRequest request);
 
     /**
-      * The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to start must be in the Stopped state. After you call this operation, the cloud computers enter the Running state.</p>
      */
     CompletableFuture<StartDesktopsResponse> startDesktops(StartDesktopsRequest request);
 
     CompletableFuture<StartRecordContentResponse> startRecordContent(StartRecordContentRequest request);
 
     /**
-      * The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.
-      *
+     * <b>description</b> :
+     * <p>The cloud computers that you want to stop must be in the Running state. After you call this operation, the cloud computers enter the Stopped state.</p>
      */
     CompletableFuture<StopDesktopsResponse> stopDesktops(StopDesktopsRequest request);
 

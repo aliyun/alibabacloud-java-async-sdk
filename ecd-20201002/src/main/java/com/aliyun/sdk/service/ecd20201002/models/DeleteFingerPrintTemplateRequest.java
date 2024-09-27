@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFingerPrintTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteFingerPrintTemplateRequest</p>

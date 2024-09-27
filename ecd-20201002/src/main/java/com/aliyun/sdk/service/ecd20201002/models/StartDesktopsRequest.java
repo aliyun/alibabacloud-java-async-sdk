@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartDesktopsRequest} extends {@link RequestModel}
  *
  * <p>StartDesktopsRequest</p>
@@ -169,7 +170,10 @@ public class StartDesktopsRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client). The system generates a unique ID for each client.
+         * <p>The ID of the Alibaba Cloud Workspace client (hereinafter referred to as WUYING client). The system generates a unique ID for each client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f4a0dc8e-1702-4728-9a60-95b27a35****</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -178,7 +182,10 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The operating system (OS) of the device that run the client.
+         * <p>The operating system (OS) of the device that run the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows_NT 10.0.18363 x64</p>
          */
         public Builder clientOS(String clientOS) {
             this.putQueryParameter("ClientOS", clientOS);
@@ -187,7 +194,10 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21e7be12-aa4f-4389-b3e1-82f4a1b5****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -196,7 +206,10 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The client version. If you use a WUYING client, you can click **About** on the client logon page to view the version of the client.
+         * <p>The client version. If you use a WUYING client, you can click <strong>About</strong> on the client logon page to view the version of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.1.0-R-20210731.151756</p>
          */
         public Builder clientVersion(String clientVersion) {
             this.putQueryParameter("ClientVersion", clientVersion);
@@ -205,7 +218,10 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.
+         * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 20 cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-cg27ufmapab08****</p>
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -214,7 +230,10 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The logon token.
+         * <p>The logon token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v18101ac6a9e69c66b04a163031680463660b4b216cd758f34b60b9ad6a7c7f7334b83dd8f75eef4209c68f9f1080b****</p>
          */
         public Builder loginToken(String loginToken) {
             this.putQueryParameter("LoginToken", loginToken);
@@ -223,7 +242,10 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
+         * <p>The region ID. You can call the <a href="~~196646~~">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,7 +254,10 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The session ID.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd45e873-650d-4d70-acb9-f996187a****</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -241,7 +266,10 @@ public class StartDesktopsRequest extends Request {
         }
 
         /**
-         * The UUID of the client.
+         * <p>The UUID of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71F6A700735E74A61161A53F0C47****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
