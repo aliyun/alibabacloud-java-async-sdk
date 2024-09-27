@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUploadDocumentJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetUploadDocumentJobResponseBody</p>
@@ -97,7 +98,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         private Usage usage; 
 
         /**
-         * The chunking result.
+         * <p>The chunking result.</p>
          */
         public Builder chunkResult(ChunkResult chunkResult) {
             this.chunkResult = chunkResult;
@@ -105,7 +106,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the document upload job.
+         * <p>The information about the document upload job.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -113,7 +114,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +125,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +136,14 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -141,7 +151,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * The number of tokens that are used for document understanding or embedding.
+         * <p>The number of tokens that are used for document understanding or embedding.</p>
          */
         public Builder usage(Usage usage) {
             this.usage = usage;
@@ -154,6 +164,12 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUploadDocumentJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUploadDocumentJobResponseBody</p>
+     */
     public static class ChunkResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChunkFileUrl")
         private String chunkFileUrl;
@@ -193,7 +209,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             private String plainChunkFileUrl; 
 
             /**
-             * The URL of the file after chunking. The validity period of the URL is 2 hours. The file is in the JSONL format. Each line is in the `{"page_content":"*****", "metadata": {"**":"***","**":"***"}` format.
+             * <p>The URL of the file after chunking. The validity period of the URL is 2 hours. The file is in the JSONL format. Each line is in the <code>{&quot;page_content&quot;:&quot;*****&quot;, &quot;metadata&quot;: {&quot;**&quot;:&quot;***&quot;,&quot;**&quot;:&quot;***&quot;}</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx/test.jsonl">http://xxx/test.jsonl</a></p>
              */
             public Builder chunkFileUrl(String chunkFileUrl) {
                 this.chunkFileUrl = chunkFileUrl;
@@ -201,7 +220,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the file that does not contain metadata after chunking. The validity period of the URL is 2 hours. The file is in the TXT format. Each line is a chunk. The file can be easily used for embedding.
+             * <p>The URL of the file that does not contain metadata after chunking. The validity period of the URL is 2 hours. The file is in the TXT format. Each line is a chunk. The file can be easily used for embedding.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx/test.txt">http://xxx/test.txt</a></p>
              */
             public Builder plainChunkFileUrl(String plainChunkFileUrl) {
                 this.plainChunkFileUrl = plainChunkFileUrl;
@@ -215,6 +237,12 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUploadDocumentJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUploadDocumentJobResponseBody</p>
+     */
     public static class Job extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Completed")
         private Boolean completed;
@@ -314,7 +342,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Indicates whether the operation is complete.
+             * <p>Indicates whether the operation is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -322,7 +353,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was created.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-08 16:52:04.864664</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -330,7 +364,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed to connect database.</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -338,7 +375,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -346,7 +386,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the document upload job. Unit: %. A value of 100 indicates that the job is complete.
+             * <p>The progress of the document upload job. Unit: %. A value of 100 indicates that the job is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -354,16 +397,19 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values: Valid values:
-             * <p>
+             * <p>The status of the job. Valid values: Valid values:</p>
+             * <ul>
+             * <li>Success</li>
+             * <li>Failed (See the Error parameter for failure reasons.)</li>
+             * <li>Cancelling</li>
+             * <li>Cancelled</li>
+             * <li>Start</li>
+             * <li>Running</li>
+             * <li>Pending</li>
+             * </ul>
              * 
-             * *   Success
-             * *   Failed (See the Error parameter for failure reasons.)
-             * *   Cancelling
-             * *   Cancelled
-             * *   Start
-             * *   Running
-             * *   Pending
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -371,7 +417,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was updated.
+             * <p>The time when the job was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-08 16:53:04.864664</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -385,6 +434,12 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetUploadDocumentJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUploadDocumentJobResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EmbeddingEntries")
         private Integer embeddingEntries;
@@ -432,10 +487,13 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * The number of tokens that are used for vectorization.
-             * <p>
+             * <p>The number of tokens that are used for vectorization.</p>
+             * <blockquote>
+             * <p> A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</p>
+             * </blockquote>
              * 
-             * >  A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.
+             * <strong>example:</strong>
+             * <p>475</p>
              */
             public Builder embeddingTokens(Integer embeddingTokens) {
                 this.embeddingTokens = embeddingTokens;

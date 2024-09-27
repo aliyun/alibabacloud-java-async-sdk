@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceIPArrayListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceIPArrayListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried IP address whitelists.
+         * <p>The queried IP address whitelists.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -57,7 +58,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB7AA0BF-BE41-480E-A3DC-C97BF85A391B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceIPArrayListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceIPArrayListResponseBody</p>
+     */
     public static class DBInstanceIPArray extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceIPArrayAttribute")
         private String DBInstanceIPArrayAttribute;
@@ -121,7 +131,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute is not displayed in the console.
+             * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the <code>hidden</code> attribute is not displayed in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hidden</p>
              */
             public Builder DBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
                 this.DBInstanceIPArrayAttribute = DBInstanceIPArrayAttribute;
@@ -129,7 +142,10 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IP address whitelist.
+             * <p>The name of the IP address whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
                 this.DBInstanceIPArrayName = DBInstanceIPArrayName;
@@ -137,12 +153,15 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses listed in the whitelist. Up to 1,000 IP addresses are contained in a whitelist and separated by commas (,). The IP addresses must use one of the following formats:
-             * <p>
+             * <p>The IP addresses listed in the whitelist. Up to 1,000 IP addresses are contained in a whitelist and separated by commas (,). The IP addresses must use one of the following formats:</p>
+             * <ul>
+             * <li>0.0.0.0/0</li>
+             * <li>10.23.12.24. This is a standard IP address.</li>
+             * <li>10.23.12.24/24. This is a CIDR block. The value <code>/24</code> indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of <code>1 to 32</code>.</li>
+             * </ul>
              * 
-             * *   0.0.0.0/0
-             * *   10.23.12.24. This is a standard IP address.
-             * *   10.23.12.24/24. This is a CIDR block. The value `/24` indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of `1 to 32`.
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -156,6 +175,12 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceIPArrayListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceIPArrayListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceIPArray")
         private java.util.List < DBInstanceIPArray> DBInstanceIPArray;

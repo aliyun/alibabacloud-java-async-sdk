@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyStreamingDataSourceRequest} extends {@link RequestModel}
  *
  * <p>ModifyStreamingDataSourceRequest</p>
@@ -111,10 +112,13 @@ public class ModifyStreamingDataSourceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~196830~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~196830~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-k2j36a3172b102593</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -123,7 +127,10 @@ public class ModifyStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * The configurations of the data source.
+         * <p>The configurations of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;brokers&quot;:&quot;broker0:9091,broker1:9091&quot;,&quot;topic&quot;:&quot;topic&quot;}</p>
          */
         public Builder dataSourceConfig(String dataSourceConfig) {
             this.putQueryParameter("DataSourceConfig", dataSourceConfig);
@@ -132,7 +139,10 @@ public class ModifyStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * The description of the data source.
+         * <p>The description of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-kafka</p>
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.putQueryParameter("DataSourceDescription", dataSourceDescription);
@@ -141,7 +151,10 @@ public class ModifyStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * The data source ID.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -150,10 +163,13 @@ public class ModifyStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourcesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAvailableResourcesRequest</p>
@@ -83,11 +84,14 @@ public class DescribeAvailableResourcesRequest extends Request {
         } 
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
          * 
-         * *   **Postpaid**: pay-as-you-go.
-         * *   **Prepaid**: subscription.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -96,10 +100,13 @@ public class DescribeAvailableResourcesRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -108,10 +115,13 @@ public class DescribeAvailableResourcesRequest extends Request {
         }
 
         /**
-         * The zone ID.
-         * <p>
+         * <p>The zone ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDocumentsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDocumentsResponseBody</p>
@@ -97,7 +98,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -105,7 +109,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried documents.
+         * <p>The queried documents.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -121,7 +125,10 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -137,11 +144,14 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -154,6 +164,12 @@ public class ListDocumentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDocumentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDocumentsResponseBody</p>
+     */
     public static class DocumentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
@@ -193,7 +209,10 @@ public class ListDocumentsResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * The name of the document.
+             * <p>The name of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>music.txt</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -201,7 +220,10 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the document.
+             * <p>The source of the document.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss.xxx/music.txt">http://oss.xxx/music.txt</a></p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -215,6 +237,12 @@ public class ListDocumentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDocumentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDocumentsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocumentList")
         private java.util.List < DocumentList> documentList;

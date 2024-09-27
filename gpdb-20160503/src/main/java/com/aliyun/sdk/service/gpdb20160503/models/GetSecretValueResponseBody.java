@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecretValueResponseBody} extends {@link TeaModel}
  *
  * <p>GetSecretValueResponseBody</p>
@@ -145,7 +146,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         private String username; 
 
         /**
-         * The error code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Secret.NotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +157,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -161,7 +168,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the access credential.
+         * <p>The description of the access credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test secret</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -169,7 +179,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +190,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * The password of the database account.
+         * <p>The password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pwd123</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -185,7 +201,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +212,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the access credential for the created Data API account. Format: `acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}`.
+         * <p>The ARN of the access credential for the created Data API account. Format: <code>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
          */
         public Builder secretArn(String secretArn) {
             this.secretArn = secretArn;
@@ -201,7 +223,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the access credential.
+         * <p>The name of the access credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testsecret</p>
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;
@@ -209,11 +234,14 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -221,7 +249,10 @@ public class GetSecretValueResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         public Builder username(String username) {
             this.username = username;

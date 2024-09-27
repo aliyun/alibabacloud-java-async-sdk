@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisMonitorPerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosisMonitorPerformanceRequest</p>
@@ -125,10 +126,13 @@ public class DescribeDiagnosisMonitorPerformanceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -137,7 +141,10 @@ public class DescribeDiagnosisMonitorPerformanceRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -146,7 +153,10 @@ public class DescribeDiagnosisMonitorPerformanceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-07T07:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -155,20 +165,25 @@ public class DescribeDiagnosisMonitorPerformanceRequest extends Request {
         }
 
         /**
-         * The filter condition on queries. Specify the value in the JSON format. Valid values:
-         * <p>
+         * <p>The filter condition on queries. Specify the value in the JSON format. Valid values:</p>
+         * <ul>
+         * <li><p><code>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</code>: filters the top 100 queries that are the most time-consuming.</p>
+         * </li>
+         * <li><p><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;finished&quot;}</code>: filters completed queries.</p>
+         * </li>
+         * <li><p><code>{&quot;Type&quot;:&quot;status&quot;,&quot;Value&quot;:&quot;running&quot;}</code>: filters running queries.</p>
+         * </li>
+         * <li><p><code>{&quot;Type&quot;:&quot;cost&quot;,&quot;Min&quot;:&quot;30&quot;,&quot;Max&quot;:&quot;50&quot;}</code>: filters the queries that consume 30 milliseconds or more and less than 50 milliseconds. You can customize a filter condition by setting <strong>Min</strong> and <strong>Max</strong>.</p>
+         * <ul>
+         * <li>If only <strong>Min</strong> is specified, the queries that consume a period of time that is greater than or equal to the Min value are filtered.</li>
+         * <li>If only <strong>Max</strong> is specified, the queries that consume a period of time that is less than the Max value are filtered.</li>
+         * <li>If both <strong>Min</strong> and <strong>Max</strong> are specified, the queries that consume a period of time that is greater than or equal to the <strong>Min</strong> value and less than the <strong>Max</strong> value are filtered.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   `{"Type":"maxCost", "Value":"100"}`: filters the top 100 queries that are the most time-consuming.
-         * 
-         * *   `{"Type":"status","Value":"finished"}`: filters completed queries.
-         * 
-         * *   `{"Type":"status","Value":"running"}`: filters running queries.
-         * 
-         * *   `{"Type":"cost","Min":"30","Max":"50"}`: filters the queries that consume 30 milliseconds or more and less than 50 milliseconds. You can customize a filter condition by setting **Min** and **Max**.
-         * 
-         *     *   If only **Min** is specified, the queries that consume a period of time that is greater than or equal to the Min value are filtered.
-         *     *   If only **Max** is specified, the queries that consume a period of time that is less than the Max value are filtered.
-         *     *   If both **Min** and **Max** are specified, the queries that consume a period of time that is greater than or equal to the **Min** value and less than the **Max** value are filtered.
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;:&quot;maxCost&quot;, &quot;Value&quot;:&quot;100&quot;}</p>
          */
         public Builder queryCondition(String queryCondition) {
             this.putQueryParameter("QueryCondition", queryCondition);
@@ -177,7 +192,10 @@ public class DescribeDiagnosisMonitorPerformanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-07T06:59Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -186,7 +204,10 @@ public class DescribeDiagnosisMonitorPerformanceRequest extends Request {
         }
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpguser</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

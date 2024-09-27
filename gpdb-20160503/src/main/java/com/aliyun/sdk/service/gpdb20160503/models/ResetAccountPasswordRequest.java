@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetAccountPasswordRequest} extends {@link RequestModel}
  *
  * <p>ResetAccountPasswordRequest</p>
@@ -84,7 +85,10 @@ public class ResetAccountPasswordRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testaccount_1</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -93,7 +97,10 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * The name of the account.
+         * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Testaccount_1</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -102,11 +109,14 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * Before you call this operation, make sure that the following requirements are met:
-         * <p>
+         * <p>Before you call this operation, make sure that the following requirements are met:</p>
+         * <ul>
+         * <li>The instance is in the running state.</li>
+         * <li>The instance is not locked.</li>
+         * </ul>
          * 
-         * *   The instance is in the running state.
-         * *   The instance is not locked.
+         * <strong>example:</strong>
+         * <p>gp-t4nf48vf15713****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

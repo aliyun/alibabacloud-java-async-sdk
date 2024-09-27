@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLLogsResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried SQL execution logs.
+         * <p>The queried SQL execution logs.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -81,7 +82,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -89,7 +93,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -97,7 +104,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7941C94-B92F-46A0-BD3E-2D**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
@@ -293,7 +309,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             private Integer sourcePort; 
 
             /**
-             * The database account that executes the SQL statement.
+             * <p>The database account that executes the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testadmin</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -301,7 +320,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpgadmin</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -309,7 +331,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the database.
+             * <p>The role of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder DBRole(String DBRole) {
                 this.DBRole = DBRole;
@@ -317,7 +342,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the SQL statement.
+             * <p>The execution duration of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder executeCost(Float executeCost) {
                 this.executeCost = executeCost;
@@ -325,11 +353,14 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution status of the SQL statement. Valid values:
-             * <p>
+             * <p>The execution status of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>fail</strong></li>
+             * </ul>
              * 
-             * *   **success**
-             * *   **fail**
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder executeState(String executeState) {
                 this.executeState = executeState;
@@ -337,7 +368,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the query language.
+             * <p>The type of the query language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DQL</p>
              */
             public Builder operationClass(String operationClass) {
                 this.operationClass = operationClass;
@@ -345,7 +379,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the SQL statement was executed.
+             * <p>The time when the SQL statement was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15T17:02:32Z</p>
              */
             public Builder operationExecuteTime(String operationExecuteTime) {
                 this.operationExecuteTime = operationExecuteTime;
@@ -353,7 +390,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SQL statement.
+             * <p>The type of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -361,7 +401,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -369,7 +412,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL execution plan.
+             * <p>The SQL execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder SQLPlan(String SQLPlan) {
                 this.SQLPlan = SQLPlan;
@@ -377,7 +423,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 1</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -385,7 +434,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries scanned.
+             * <p>The number of entries scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scanRowCounts(Long scanRowCounts) {
                 this.scanRowCounts = scanRowCounts;
@@ -393,7 +445,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.<strong>.</strong>.90</p>
              */
             public Builder sourceIP(String sourceIP) {
                 this.sourceIP = sourceIP;
@@ -401,7 +456,10 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the source port.
+             * <p>The number of the source port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50514</p>
              */
             public Builder sourcePort(Integer sourcePort) {
                 this.sourcePort = sourcePort;

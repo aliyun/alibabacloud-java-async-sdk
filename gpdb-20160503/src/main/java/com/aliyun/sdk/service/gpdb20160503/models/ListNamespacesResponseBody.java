@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNamespacesResponseBody} extends {@link TeaModel}
  *
  * <p>ListNamespacesResponseBody</p>
@@ -109,7 +110,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -117,7 +121,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -125,7 +132,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,7 +143,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried namespaces.
+         * <p>The queried namespaces.</p>
          */
         public Builder namespaces(Namespaces namespaces) {
             this.namespaces = namespaces;
@@ -141,7 +151,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -149,7 +162,10 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +173,14 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -174,6 +193,12 @@ public class ListNamespacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNamespacesResponseBody</p>
+     */
     public static class Namespaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private java.util.List < String > namespace;

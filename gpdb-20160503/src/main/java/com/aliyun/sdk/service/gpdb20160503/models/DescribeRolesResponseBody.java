@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRolesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRolesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRolesResponseBody extends TeaModel {
         private RoleList roleList; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The roles.
+         * <p>The roles.</p>
          */
         public Builder roleList(RoleList roleList) {
             this.roleList = roleList;
@@ -70,6 +74,12 @@ public class DescribeRolesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRolesResponseBody</p>
+     */
     public static class RoleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Role")
         private java.util.List < String > role;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExternalDataServiceRequest} extends {@link RequestModel}
  *
  * <p>CreateExternalDataServiceRequest</p>
@@ -121,7 +122,10 @@ public class CreateExternalDataServiceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +134,10 @@ public class CreateExternalDataServiceRequest extends Request {
         }
 
         /**
-         * The description of the service.
+         * <p>The description of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-adbpgss</p>
          */
         public Builder serviceDescription(String serviceDescription) {
             this.putQueryParameter("ServiceDescription", serviceDescription);
@@ -148,10 +155,13 @@ public class CreateExternalDataServiceRequest extends Request {
         }
 
         /**
-         * The specifications of the service. Unit: compute units (CUs). Valid values:
-         * <p>
+         * <p>The specifications of the service. Unit: compute units (CUs). Valid values:</p>
+         * <ul>
+         * <li>8</li>
+         * </ul>
          * 
-         * *   8
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder serviceSpec(String serviceSpec) {
             this.putQueryParameter("ServiceSpec", serviceSpec);

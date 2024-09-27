@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceConnectionStringRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceConnectionStringRequest</p>
@@ -99,7 +100,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         } 
 
         /**
-         * The endpoint prefix of the instance.
+         * <p>The endpoint prefix of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-test</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -108,7 +112,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The current endpoint of the instance.
+         * <p>The current endpoint of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-t4n2qg19bnn98****-master.gpdb.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -117,7 +124,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-t4n2qg19bnn98****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -126,7 +136,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * The port number. Example: 5432.
+         * <p>The port number. Example: 5432.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateExtensionsResponseBody} extends {@link TeaModel}
  *
  * <p>CreateExtensionsResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateExtensionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the extension that you want to install. Multiple extension names are separated with commas (,).
+         * <p>The name of the extension that you want to install. Multiple extension names are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>citext, dblink</p>
          */
         public Builder extensions(String extensions) {
             this.extensions = extensions;
@@ -57,7 +61,10 @@ public class CreateExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdsVpcsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRdsVpcsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         private Vpcs vpcs; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53924AF0-1628-5AA2-9C95-D4**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried VPCs.
+         * <p>The queried VPCs.</p>
          */
         public Builder vpcs(Vpcs vpcs) {
             this.vpcs = vpcs;
@@ -70,6 +74,12 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRdsVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsVpcsResponseBody</p>
+     */
     public static class VSwitchs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -181,7 +191,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private String vSwitchName; 
 
             /**
-             * The CIDR block of the vSwitch.
+             * <p>The CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.<strong>.</strong>.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -189,7 +202,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -197,7 +213,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -205,11 +224,14 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vSwitch is the default vSwitch. Valid values:
-             * <p>
+             * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -217,7 +239,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone to which the vSwitch belongs.
+             * <p>The ID of the zone to which the vSwitch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -225,7 +250,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the vSwitch. If **Available** is returned, the vSwitch is available.
+             * <p>The state of the vSwitch. If <strong>Available</strong> is returned, the vSwitch is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -233,7 +261,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp*******************</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -241,7 +272,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vSwitch.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-name</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -255,6 +289,12 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRdsVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsVpcsResponseBody</p>
+     */
     public static class Vpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
@@ -402,7 +442,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -410,7 +453,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -418,7 +464,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block of the VPC.
+             * <p>The CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.<strong>.</strong>.0/8</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -426,7 +475,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -434,7 +486,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * An invalid parameter. It is no longer returned when you call this operation.
+             * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -442,11 +497,14 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the VPC is the default VPC. Valid values:
-             * <p>
+             * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -454,7 +512,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -462,7 +523,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the VPC. If **Available** is returned, the VPC is available.
+             * <p>The state of the VPC. If <strong>Available</strong> is returned, the VPC is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -470,7 +534,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The queried vSwitches.
+             * <p>The queried vSwitches.</p>
              */
             public Builder vSwitchs(java.util.List < VSwitchs> vSwitchs) {
                 this.vSwitchs = vSwitchs;
@@ -478,7 +542,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp*******************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -486,7 +553,10 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-name</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -500,6 +570,12 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRdsVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRdsVpcsResponseBody</p>
+     */
     public static class Vpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vpc")
         private java.util.List < Vpc> vpc;
@@ -527,7 +603,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private java.util.List < Vpc> vpc; 
 
             /**
-             * The queried VPC.
+             * <p>The queried VPC.</p>
              */
             public Builder vpc(java.util.List < Vpc> vpc) {
                 this.vpc = vpc;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSQLLogCountResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -93,7 +97,10 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * The end time of the query.
+         * <p>The end time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-14T11:22Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -101,7 +108,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -109,7 +116,10 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7565770E-7C45-462D-BA4A-8A**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query.
+         * <p>The start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-12T11:22Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -130,6 +143,12 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSQLLogCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogCountResponseBody</p>
+     */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Point")
         private java.util.List < String > point;
@@ -157,7 +176,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             private java.util.List < String > point; 
 
             /**
-             * The time when the audit logs were generated and the number of the audit logs.
+             * <p>The time when the audit logs were generated and the number of the audit logs.</p>
              */
             public Builder point(java.util.List < String > point) {
                 this.point = point;
@@ -171,6 +190,12 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogCountResponseBody</p>
+     */
     public static class Series extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < Values> values;
@@ -198,7 +223,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * Details of the audit logs.
+             * <p>Details of the audit logs.</p>
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;
@@ -212,6 +237,12 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSQLLogCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSQLLogCountResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -251,7 +282,10 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             private java.util.List < Series> series; 
 
             /**
-             * The name of the table.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gp-xxxxxxxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +293,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the audit logs.
+             * <p>Details of the audit logs.</p>
              */
             public Builder series(java.util.List < Series> series) {
                 this.series = series;

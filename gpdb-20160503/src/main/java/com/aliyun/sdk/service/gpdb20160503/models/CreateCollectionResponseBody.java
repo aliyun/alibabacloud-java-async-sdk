@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCollectionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCollectionResponseBody</p>
@@ -77,11 +78,14 @@ public class CreateCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

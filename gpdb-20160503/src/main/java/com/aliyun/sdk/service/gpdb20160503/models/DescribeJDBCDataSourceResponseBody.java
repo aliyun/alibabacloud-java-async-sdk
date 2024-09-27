@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJDBCDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeJDBCDataSourceResponseBody</p>
@@ -189,7 +190,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the service. The description can be up to 256 characters in length.
+         * <p>The description of the service. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql data source config</p>
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.dataSourceDescription = dataSourceDescription;
@@ -213,12 +217,15 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the service. Valid values:
-         * <p>
+         * <p>The status of the service. Valid values:</p>
+         * <ul>
+         * <li>Init</li>
+         * <li>Running</li>
+         * <li>Exception</li>
+         * </ul>
          * 
-         * *   Init
-         * *   Running
-         * *   Exception
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder dataSourceStatus(String dataSourceStatus) {
             this.dataSourceStatus = dataSourceStatus;
@@ -226,7 +233,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the data source.
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -242,7 +252,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The JDBC connection string.
+         * <p>The JDBC connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder JDBCConnectionString(String JDBCConnectionString) {
             this.JDBCConnectionString = JDBCConnectionString;
@@ -250,7 +263,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The password of the database account.
+         * <p>The password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder JDBCPassword(String JDBCPassword) {
             this.JDBCPassword = JDBCPassword;
@@ -258,7 +274,10 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder JDBCUserName(String JDBCUserName) {
             this.JDBCUserName = JDBCUserName;

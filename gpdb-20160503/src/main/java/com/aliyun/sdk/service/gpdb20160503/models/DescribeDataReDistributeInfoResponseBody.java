@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataReDistributeInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataReDistributeInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data redistribution information.
+         * <p>The data redistribution information.</p>
          */
         public Builder dataReDistributeInfo(DataReDistributeInfo dataReDistributeInfo) {
             this.dataReDistributeInfo = dataReDistributeInfo;
@@ -57,7 +58,10 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04836A02-ADC9-1AA7-AC36-DE5E048BF505</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataReDistributeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataReDistributeInfoResponseBody</p>
+     */
     public static class DataReDistributeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -157,7 +167,10 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The execution information. If an error occurs, the error message is returned.
+             * <p>The execution information. If an error occurs, the error message is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redistributing</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -165,7 +178,10 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of data redistribution. Unit: %.
+             * <p>The progress of data redistribution. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -173,7 +189,10 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated remaining time for data redistribution.
+             * <p>The estimated remaining time for data redistribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:01:28</p>
              */
             public Builder remainTime(String remainTime) {
                 this.remainTime = remainTime;
@@ -181,7 +200,10 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is not supported.
+             * <p>This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -189,7 +211,10 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of data redistribution.
+             * <p>The status of data redistribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -197,7 +222,10 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The execution type. The value **immediate** is returned, indicating immediate execution.
+             * <p>The execution type. The value <strong>immediate</strong> is returned, indicating immediate execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>immediate</p>
              */
             public Builder type(String type) {
                 this.type = type;

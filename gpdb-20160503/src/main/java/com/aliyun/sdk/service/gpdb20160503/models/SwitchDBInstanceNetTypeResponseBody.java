@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchDBInstanceNetTypeResponseBody} extends {@link TeaModel}
  *
  * <p>SwitchDBInstanceNetTypeResponseBody</p>
@@ -37,7 +38,10 @@ public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA67B751-2A2D-470C-850B-D6B93699D35C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

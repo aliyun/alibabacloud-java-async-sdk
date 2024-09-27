@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyStreamingJobRequest} extends {@link RequestModel}
  *
  * <p>ModifyStreamingJobRequest</p>
@@ -321,7 +322,10 @@ public class ModifyStreamingJobRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-account</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -330,13 +334,15 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The delivery guarantee setting.
-         * <p>
+         * <p>The delivery guarantee setting.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ATLEAST</li>
+         * <li>EXACTLY</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   ATLEAST
-         * *   EXACTLY
+         * <strong>example:</strong>
+         * <p>ATLEAST / EXACTLY</p>
          */
         public Builder consistency(String consistency) {
             this.putQueryParameter("Consistency", consistency);
@@ -345,7 +351,10 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModifyStreamingJob</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -354,7 +363,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The destination fields.
+         * <p>The destination fields.</p>
          */
         public Builder destColumns(java.util.List < String > destColumns) {
             String destColumnsShrink = shrink(destColumns, "DestColumns", "json");
@@ -364,7 +373,10 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The name of the destination database.
+         * <p>The name of the destination database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest-db</p>
          */
         public Builder destDatabase(String destDatabase) {
             this.putQueryParameter("DestDatabase", destDatabase);
@@ -382,7 +394,10 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The name of the destination table.
+         * <p>The name of the destination table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest-table</p>
          */
         public Builder destTable(String destTable) {
             this.putQueryParameter("DestTable", destTable);
@@ -418,7 +433,129 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The YAML configuration file of the job. This parameter must be specified when Mode is set to professional.
+         * <p>The YAML configuration file of the job. This parameter must be specified when Mode is set to professional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATABASE: adbpgss_test
+         * USER: adbpgss_test
+         * PASSWORD: adbpgssTest
+         * HOST: gp-xxx-master.gpdb.rds-aliyun-pre.rds.aliyuncs.com
+         * PORT: 5432
+         * KAFKA:
+         *   INPUT:
+         *     SOURCE:
+         *       BROKERS: broker1:9092,broker2:9092,broker3:9092
+         *       TOPIC: testtopic
+         *       FALLBACK_OFFSET: earliest
+         *     KEY:
+         *       COLUMNS:
+         *       - NAME: customer_id
+         *         TYPE: int
+         *       FORMAT: delimited
+         *       DELIMITED_OPTION:
+         *         DELIMITER: &quot;|&quot;
+         *     VALUE:
+         *       COLUMNS:
+         *       - TYPE: integer
+         *         NAME: l_orderkey
+         *       - TYPE: integer
+         *         NAME: l_partkey
+         *       - TYPE: integer
+         *         NAME: l_suppkey
+         *       - TYPE: integer
+         *         NAME: l_linenumber
+         *       - TYPE: decimal
+         *         NAME: l_quantity
+         *       - TYPE: decimal
+         *         NAME: l_extendedprice
+         *       - TYPE: decimal
+         *         NAME: l_discount
+         *       - TYPE: decimal
+         *         NAME: l_tax
+         *       - TYPE: char
+         *         NAME: l_returnflag
+         *       - TYPE: char
+         *         NAME: l_linestatus
+         *       - TYPE: date
+         *         NAME: l_shipdate
+         *       - TYPE: date
+         *         NAME: l_commitdate
+         *       - TYPE: date
+         *         NAME: l_receiptdate
+         *       - TYPE: text
+         *         NAME: l_shipinstruct
+         *       - TYPE: text
+         *         NAME: l_shipmode
+         *       - TYPE: text
+         *         NAME: l_comment
+         *       FORMAT: delimited
+         *       DELIMITED_OPTION:
+         *         DELIMITER: &quot;|&quot;
+         *     ERROR_LIMIT: 10
+         *   OUTPUT:
+         *     SCHEMA: adbpgss_test
+         *     TABLE: write_with_insert_plaintext
+         *     MODE: MERGE
+         *     MATCH_COLUMNS:
+         *     - l_orderkey
+         *     - l_partkey
+         *     - l_suppkey
+         *     UPDATE_COLUMNS:
+         *     - l_linenumber
+         *     - l_quantity
+         *     - l_extendedprice
+         *     - l_discount
+         *     - l_tax
+         *     - l_returnflag
+         *     - l_linestatus
+         *     - l_shipdate
+         *     - l_commitdate
+         *     - l_receiptdate
+         *     - l_shipinstruct
+         *     - l_shipmode
+         *     - l_comment
+         *     MAPPING:
+         *     - EXPRESSION: l_orderkey
+         *       NAME: l_orderkey
+         *     - EXPRESSION: l_partkey
+         *       NAME: l_partkey
+         *     - EXPRESSION: l_suppkey
+         *       NAME: l_suppkey
+         *     - EXPRESSION: l_linenumber
+         *       NAME: l_linenumber
+         *     - EXPRESSION: l_quantity
+         *       NAME: l_quantity
+         *     - EXPRESSION: l_extendedprice
+         *       NAME: l_extendedprice
+         *     - EXPRESSION: l_discount
+         *       NAME: l_discount
+         *     - EXPRESSION: l_tax
+         *       NAME: l_tax
+         *     - EXPRESSION: l_returnflag
+         *       NAME: l_returnflag
+         *     - EXPRESSION: l_linestatus
+         *       NAME: l_linestatus
+         *     - EXPRESSION: l_shipdate
+         *       NAME: l_shipdate
+         *     - EXPRESSION: l_commitdate
+         *       NAME: l_commitdate
+         *     - EXPRESSION: l_receiptdate
+         *       NAME: l_receiptdate
+         *     - EXPRESSION: l_shipinstruct
+         *       NAME: l_shipinstruct
+         *     - EXPRESSION: l_shipmode
+         *       NAME: l_shipmode
+         *     - EXPRESSION: l_comment
+         *       NAME: l_comment
+         *   COMMIT:
+         *     MAX_ROW: 1000
+         *     MINIMAL_INTERVAL: 1000
+         *     CONSISTENCY: ATLEAST
+         *   POLL:
+         *     BATCHSIZE: 1000
+         *     TIMEOUT: 1000
+         *   PROPERTIES:
+         *     group.id: testgroup</p>
          */
         public Builder jobConfig(String jobConfig) {
             this.putQueryParameter("JobConfig", jobConfig);
@@ -427,7 +564,10 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The description of the job.
+         * <p>The description of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-job</p>
          */
         public Builder jobDescription(String jobDescription) {
             this.putQueryParameter("JobDescription", jobDescription);
@@ -436,7 +576,10 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -455,7 +598,10 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The password of the database account.
+         * <p>The password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pwd123</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -473,7 +619,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The source fields.
+         * <p>The source fields.</p>
          */
         public Builder srcColumns(java.util.List < String > srcColumns) {
             String srcColumnsShrink = shrink(srcColumns, "SrcColumns", "json");
@@ -483,13 +629,15 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to test the real-time job. Valid values:
-         * <p>
+         * <p>Specifies whether to test the real-time job. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder tryRun(Boolean tryRun) {
             this.putQueryParameter("TryRun", tryRun);
@@ -508,14 +656,16 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * The write mode.
-         * <p>
+         * <p>The write mode.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>insert</li>
+         * <li>update</li>
+         * <li>merge</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   insert
-         * *   update
-         * *   merge
+         * <strong>example:</strong>
+         * <p>INSERT/UPDATE/MERGE</p>
          */
         public Builder writeMode(String writeMode) {
             this.putQueryParameter("WriteMode", writeMode);

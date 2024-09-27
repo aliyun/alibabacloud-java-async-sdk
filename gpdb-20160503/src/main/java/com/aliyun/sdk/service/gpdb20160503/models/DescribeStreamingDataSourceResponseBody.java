@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStreamingDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStreamingDataSourceResponseBody</p>
@@ -217,12 +218,15 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the service. Valid values:
-         * <p>
+         * <p>The status of the service. Valid values:</p>
+         * <ul>
+         * <li>init</li>
+         * <li>running</li>
+         * <li>exception</li>
+         * </ul>
          * 
-         * *   init
-         * *   running
-         * *   exception
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder status(String status) {
             this.status = status;

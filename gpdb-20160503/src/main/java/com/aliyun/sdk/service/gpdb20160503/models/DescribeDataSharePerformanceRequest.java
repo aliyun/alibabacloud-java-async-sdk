@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataSharePerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDataSharePerformanceRequest</p>
@@ -111,7 +112,10 @@ public class DescribeDataSharePerformanceRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-03T15:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -120,11 +124,14 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * The name of the performance metric. Separate multiple values with commas (,). Valid values:
-         * <p>
+         * <p>The name of the performance metric. Separate multiple values with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>adbpg_datashare_topic_count</strong>: the number of shared topics.</li>
+         * <li><strong>adbpg_datashare_data_size_mb</strong>: the amount of data shared.</li>
+         * </ul>
          * 
-         * *   **adbpg_datashare_topic_count**: the number of shared topics.
-         * *   **adbpg_datashare_data_size_mb**: the amount of data shared.
+         * <strong>example:</strong>
+         * <p>adbpg_datashare_topic_count</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -133,10 +140,13 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,7 +155,10 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -154,7 +167,10 @@ public class DescribeDataSharePerformanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-03T15:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

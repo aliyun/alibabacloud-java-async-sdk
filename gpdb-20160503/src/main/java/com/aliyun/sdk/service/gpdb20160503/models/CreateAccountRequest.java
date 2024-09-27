@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccountRequest} extends {@link RequestModel}
  *
  * <p>CreateAccountRequest</p>
@@ -42,10 +43,6 @@ public class CreateAccountRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
     private CreateAccountRequest(Builder builder) {
         super(builder);
         this.accountDescription = builder.accountDescription;
@@ -55,7 +52,6 @@ public class CreateAccountRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.databaseName = builder.databaseName;
         this.ownerId = builder.ownerId;
-        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -120,13 +116,6 @@ public class CreateAccountRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public static final class Builder extends Request.Builder<CreateAccountRequest, Builder> {
         private String accountDescription; 
         private String accountName; 
@@ -135,7 +124,6 @@ public class CreateAccountRequest extends Request {
         private String DBInstanceId; 
         private String databaseName; 
         private Long ownerId; 
-        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -150,11 +138,13 @@ public class CreateAccountRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.databaseName = request.databaseName;
             this.ownerId = request.ownerId;
-            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * The description of the initial account.
+         * <p>The description of the initial account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc02</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -163,13 +153,16 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the initial account.
-         * <p>
+         * <p>The name of the initial account.</p>
+         * <ul>
+         * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+         * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+         * <li>The name cannot start with gp.</li>
+         * <li>The name must be 2 to 16 characters in length.</li>
+         * </ul>
          * 
-         * *   The name can contain lowercase letters, digits, and underscores (\_).
-         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
-         * *   The name cannot start with gp.
-         * *   The name must be 2 to 16 characters in length.
+         * <strong>example:</strong>
+         * <p>testacc02</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -178,11 +171,15 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The password of the initial account.
-         * <p>
-         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
-         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
-         * *   The password must be 8 to 32 characters in length.
+         * <p>The password of the initial account.</p>
+         * <ul>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * <li>The password must be 8 to 32 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pw123456</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -191,7 +188,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The type of the initial account. Default value: Super, which specifies a privileged account. To create a standard account, set the value to Normal.
+         * <p>The type of the initial account. Default value: Super, which specifies a privileged account. To create a standard account, set the value to Normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Super</p>
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -200,10 +200,13 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -212,7 +215,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -226,15 +232,6 @@ public class CreateAccountRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * This parameter is no longer used.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

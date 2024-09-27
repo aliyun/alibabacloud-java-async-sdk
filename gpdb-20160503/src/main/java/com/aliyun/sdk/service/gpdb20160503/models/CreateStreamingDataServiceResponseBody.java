@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateStreamingDataServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateStreamingDataServiceResponseBody</p>
@@ -57,7 +58,10 @@ public class CreateStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The real-time data service ID.
+         * <p>The real-time data service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceId(Integer serviceId) {
             this.serviceId = serviceId;

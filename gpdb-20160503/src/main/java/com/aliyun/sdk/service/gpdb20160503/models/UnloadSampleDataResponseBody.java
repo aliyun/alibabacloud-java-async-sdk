@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnloadSampleDataResponseBody} extends {@link TeaModel}
  *
  * <p>UnloadSampleDataResponseBody</p>
@@ -73,7 +74,10 @@ public class UnloadSampleDataResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,10 @@ public class UnloadSampleDataResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if an error occurs. This message does not affect the execution of the operation.
+         * <p>The error message returned if an error occurs. This message does not affect the execution of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -89,7 +96,10 @@ public class UnloadSampleDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E42ABC3-4DBD-5343-9BCA-66B7D091311F_6914</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class UnloadSampleDataResponseBody extends TeaModel {
         }
 
         /**
-         * The execution state of the operation. Valid values:
-         * <p>
+         * <p>The execution state of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: The operation fails.</li>
+         * <li><strong>true</strong>: The operation is successful.</li>
+         * </ul>
          * 
-         * *   **false**: The operation fails.
-         * *   **true**: The operation is successful.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

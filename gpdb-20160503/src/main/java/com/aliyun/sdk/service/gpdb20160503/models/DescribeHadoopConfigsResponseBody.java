@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHadoopConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHadoopConfigsResponseBody</p>
@@ -61,14 +62,17 @@ public class DescribeHadoopConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the configuration file. Valid values:
-         * <p>
+         * <p>The name of the configuration file. Valid values:</p>
+         * <ul>
+         * <li>hdfs-site</li>
+         * <li>core-site</li>
+         * <li>yarn-site</li>
+         * <li>mapred-site</li>
+         * <li>hive-site</li>
+         * </ul>
          * 
-         * *   hdfs-site
-         * *   core-site
-         * *   yarn-site
-         * *   mapred-site
-         * *   hive-site
+         * <strong>example:</strong>
+         * <p>hdfs-site</p>
          */
         public Builder configName(String configName) {
             this.configName = configName;
@@ -84,7 +88,10 @@ public class DescribeHadoopConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

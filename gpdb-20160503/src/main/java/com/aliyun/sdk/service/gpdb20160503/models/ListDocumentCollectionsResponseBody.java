@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDocumentCollectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDocumentCollectionsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -93,7 +97,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried document collections.
+         * <p>The queried document collections.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -101,7 +105,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -134,6 +147,12 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDocumentCollectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDocumentCollectionsResponseBody</p>
+     */
     public static class CollectionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CollectionName")
         private String collectionName;
@@ -233,7 +252,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             private String parser; 
 
             /**
-             * The name of the document collection.
+             * <p>The name of the document collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>document</p>
              */
             public Builder collectionName(String collectionName) {
                 this.collectionName = collectionName;
@@ -241,7 +263,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vector dimensions.
+             * <p>The number of vector dimensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536</p>
              */
             public Builder dimension(Integer dimension) {
                 this.dimension = dimension;
@@ -249,7 +274,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vector algorithm.
+             * <p>The name of the vector algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text-embeddding-v1</p>
              */
             public Builder embeddingModel(String embeddingModel) {
                 this.embeddingModel = embeddingModel;
@@ -257,7 +285,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The fields that are used for full-text search. Multiple fields are separated by commas (,).
+             * <p>The fields that are used for full-text search. Multiple fields are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>title</p>
              */
             public Builder fullTextRetrievalFields(String fullTextRetrievalFields) {
                 this.fullTextRetrievalFields = fullTextRetrievalFields;
@@ -265,7 +296,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;page&quot;: &quot;int&quot;, &quot;title&quot;: &quot;text&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -273,7 +307,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The vector similarity algorithm.
+             * <p>The vector similarity algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cosine</p>
              */
             public Builder metrics(String metrics) {
                 this.metrics = metrics;
@@ -281,7 +318,10 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The analyzer that is used for full-text search.
+             * <p>The analyzer that is used for full-text search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh_cn</p>
              */
             public Builder parser(String parser) {
                 this.parser = parser;
@@ -295,6 +335,12 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDocumentCollectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDocumentCollectionsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CollectionList")
         private java.util.List < CollectionList> collectionList;

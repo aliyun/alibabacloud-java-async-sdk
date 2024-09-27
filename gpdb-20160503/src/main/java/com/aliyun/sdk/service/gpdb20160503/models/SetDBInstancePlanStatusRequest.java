@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDBInstancePlanStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDBInstancePlanStatusRequest</p>
@@ -98,10 +99,13 @@ public class SetDBInstancePlanStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -119,10 +123,13 @@ public class SetDBInstancePlanStatusRequest extends Request {
         }
 
         /**
-         * The ID of the plan.
-         * <p>
+         * <p>The ID of the plan.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~449398~~">DescribeDBInstancePlans</a> operation to query the details of plans, including plan IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstancePlans](~~449398~~) operation to query the details of plans, including plan IDs.
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -131,11 +138,14 @@ public class SetDBInstancePlanStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable the plan. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable the plan. Valid values:</p>
+         * <ul>
+         * <li><strong>disable</strong>: disables the plan.</li>
+         * <li><strong>enable</strong>: enables the plan.</li>
+         * </ul>
          * 
-         * *   **disable**: disables the plan.
-         * *   **enable**: enables the plan.
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder planStatus(String planStatus) {
             this.putQueryParameter("PlanStatus", planStatus);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HandleActiveSQLRecordResponseBody} extends {@link TeaModel}
  *
  * <p>HandleActiveSQLRecordResponseBody</p>
@@ -73,7 +74,10 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,10 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The processing result of the active query.
+         * <p>The processing result of the active query.</p>
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -97,11 +104,14 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -114,6 +124,12 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link HandleActiveSQLRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>HandleActiveSQLRecordResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
@@ -153,7 +169,10 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The process ID, which is a unique identifier of the query.
+             * <p>The process ID, which is a unique identifier of the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3003925</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -161,11 +180,14 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the processing was successful. Valid values:
-             * <p>
+             * <p>Indicates whether the processing was successful. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(String status) {
                 this.status = status;

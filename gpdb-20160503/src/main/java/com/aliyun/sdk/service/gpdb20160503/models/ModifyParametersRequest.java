@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyParametersRequest} extends {@link RequestModel}
  *
  * <p>ModifyParametersRequest</p>
@@ -83,10 +84,13 @@ public class ModifyParametersRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -95,11 +99,14 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly restart the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to forcibly restart the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceRestartInstance(Boolean forceRestartInstance) {
             this.putQueryParameter("ForceRestartInstance", forceRestartInstance);
@@ -108,10 +115,11 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The name and value of the parameter to be modified. Specify the parameter in the `<Parameter name>:<Parameter value>` format.
-         * <p>
+         * <p>The name and value of the parameter to be modified. Specify the parameter in the <code>&lt;Parameter name&gt;:&lt;Parameter value&gt;</code> format.</p>
+         * <p>You can call the <a href="~~208310~~">DescribeParameters</a> operation to query the parameters that can be modified.</p>
          * 
-         * You can call the [DescribeParameters](~~208310~~) operation to query the parameters that can be modified.
+         * <strong>example:</strong>
+         * <p>{&quot;statement_timeout&quot;:&quot;11800010&quot;}</p>
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);

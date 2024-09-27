@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecretValueRequest} extends {@link RequestModel}
  *
  * <p>GetSecretValueRequest</p>
@@ -111,10 +112,13 @@ public class GetSecretValueRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -132,7 +136,10 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,10 +148,13 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: `acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}`.
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: <code>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</code>.</p>
+         * <blockquote>
+         * <p> You must specify one of the SecretArn and SecretName parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify one of the SecretArn and SecretName parameters.
+         * <strong>example:</strong>
+         * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
          */
         public Builder secretArn(String secretArn) {
             this.putQueryParameter("SecretArn", secretArn);
@@ -153,10 +163,13 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * The name of the access credential.
-         * <p>
+         * <p>The name of the access credential.</p>
+         * <blockquote>
+         * <p> You must specify one of the SecretArn and SecretName parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify one of the SecretArn and SecretName parameters.
+         * <strong>example:</strong>
+         * <p>testsecret</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

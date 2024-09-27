@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeExtensionsRequest} extends {@link RequestModel}
  *
  * <p>UpgradeExtensionsRequest</p>
@@ -15,6 +16,10 @@ public class UpgradeExtensionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
+    private String databaseName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Extensions")
@@ -28,6 +33,7 @@ public class UpgradeExtensionsRequest extends Request {
     private UpgradeExtensionsRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.databaseName = builder.databaseName;
         this.extensions = builder.extensions;
         this.regionId = builder.regionId;
     }
@@ -53,6 +59,13 @@ public class UpgradeExtensionsRequest extends Request {
     }
 
     /**
+     * @return databaseName
+     */
+    public String getDatabaseName() {
+        return this.databaseName;
+    }
+
+    /**
      * @return extensions
      */
     public String getExtensions() {
@@ -68,6 +81,7 @@ public class UpgradeExtensionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeExtensionsRequest, Builder> {
         private String DBInstanceId; 
+        private String databaseName; 
         private String extensions; 
         private String regionId; 
 
@@ -78,15 +92,19 @@ public class UpgradeExtensionsRequest extends Request {
         private Builder(UpgradeExtensionsRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.databaseName = request.databaseName;
             this.extensions = request.extensions;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -95,7 +113,19 @@ public class UpgradeExtensionsRequest extends Request {
         }
 
         /**
-         * The extensions that you want to update. Separate multiple extensions with commas (,).
+         * DatabaseName.
+         */
+        public Builder databaseName(String databaseName) {
+            this.putQueryParameter("DatabaseName", databaseName);
+            this.databaseName = databaseName;
+            return this;
+        }
+
+        /**
+         * <p>The extensions that you want to update. Separate multiple extensions with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>citext,dblink</p>
          */
         public Builder extensions(String extensions) {
             this.putQueryParameter("Extensions", extensions);
@@ -104,7 +134,10 @@ public class UpgradeExtensionsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

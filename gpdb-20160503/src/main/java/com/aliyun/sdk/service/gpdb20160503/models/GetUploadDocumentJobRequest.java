@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUploadDocumentJobRequest} extends {@link RequestModel}
  *
  * <p>GetUploadDocumentJobRequest</p>
@@ -142,10 +143,13 @@ public class GetUploadDocumentJobRequest extends Request {
         } 
 
         /**
-         * The name of the document collection.
-         * <p>
+         * <p>The name of the document collection.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2618448~~">CreateDocumentCollection</a> operation to create a document collection and call the <a href="~~2618452~~">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateDocumentCollection](~~2618448~~) operation to create a document collection and call the [ListDocumentCollections](~~2618452~~) operation to query a list of document collections.
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putBodyParameter("Collection", collection);
@@ -154,10 +158,13 @@ public class GetUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * The ID of the instance for which vector engine optimization is enabled.
-         * <p>
+         * <p>The ID of the instance for which vector engine optimization is enabled.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -166,7 +173,10 @@ public class GetUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * The ID of the document upload job. You can call the `UploadDocumentAsync` operation to query the job ID.
+         * <p>The ID of the document upload job. You can call the <code>UploadDocumentAsync</code> operation to query the job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bf8f7bc4-9276-44f7-9c22-1d06edc8dfd1</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -175,10 +185,13 @@ public class GetUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * The name of the namespace. Default value: public.
-         * <p>
+         * <p>The name of the namespace. Default value: public.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2401495~~">CreateNamespace</a> operation to create a namespace and call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateNamespace](~~2401495~~) operation to create a namespace and call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -187,10 +200,13 @@ public class GetUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * The password of the namespace.
-         * <p>
+         * <p>The password of the namespace.</p>
+         * <blockquote>
+         * <p> The value of this parameter is specified when you call the CreateNamespace operation.</p>
+         * </blockquote>
          * 
-         * >  The value of this parameter is specified when you call the CreateNamespace operation.
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putBodyParameter("NamespacePassword", namespacePassword);
@@ -208,7 +224,10 @@ public class GetUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

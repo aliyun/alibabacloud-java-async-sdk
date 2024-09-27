@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceExtensionsRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceExtensionsRequest</p>
@@ -124,10 +125,13 @@ public class ListInstanceExtensionsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -136,7 +140,10 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * The name of the extension.
+         * <p>The name of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>citext</p>
          */
         public Builder extension(String extension) {
             this.putQueryParameter("Extension", extension);
@@ -145,12 +152,15 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * The installation status of the extension. Valid values:
-         * <p>
+         * <p>The installation status of the extension. Valid values:</p>
+         * <ul>
+         * <li>installed</li>
+         * <li>installing</li>
+         * <li>uninstalled</li>
+         * </ul>
          * 
-         * *   installed
-         * *   installing
-         * *   uninstalled
+         * <strong>example:</strong>
+         * <p>installed</p>
          */
         public Builder installStatus(String installStatus) {
             this.putQueryParameter("InstallStatus", installStatus);
@@ -159,7 +169,10 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -168,14 +181,16 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +199,10 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

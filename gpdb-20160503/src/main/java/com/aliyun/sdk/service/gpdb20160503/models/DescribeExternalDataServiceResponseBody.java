@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExternalDataServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExternalDataServiceResponseBody</p>
@@ -145,7 +146,10 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the service.
+         * <p>The description of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-adbpgss</p>
          */
         public Builder serviceDescription(String serviceDescription) {
             this.serviceDescription = serviceDescription;
@@ -161,7 +165,10 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the service.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-adbpgss</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -169,7 +176,10 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The specifications of the service. Unit: compute units (CUs).
+         * <p>The specifications of the service. Unit: compute units (CUs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder serviceSpec(String serviceSpec) {
             this.serviceSpec = serviceSpec;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckJDBCSourceNetConnectionRequest} extends {@link RequestModel}
  *
  * <p>CheckJDBCSourceNetConnectionRequest</p>
@@ -96,7 +97,10 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -114,7 +118,10 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * The JDBC connection string.
+         * <p>The JDBC connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder jdbcConnectionString(String jdbcConnectionString) {
             this.putQueryParameter("JdbcConnectionString", jdbcConnectionString);
@@ -123,7 +130,10 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

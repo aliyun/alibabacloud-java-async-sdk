@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckHadoopNetConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CheckHadoopNetConnectionResponseBody</p>
@@ -61,7 +62,10 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned message. If the connection failed, an error message is returned. Otherwise, a pair of double quotation marks ("") is returned.
+         * <p>The returned message. If the connection failed, an error message is returned. Otherwise, a pair of double quotation marks (&quot;&quot;) is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder connectionMessage(String connectionMessage) {
             this.connectionMessage = connectionMessage;
@@ -69,7 +73,10 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The connection status. Valid values: Success and Failed.
+         * <p>The connection status. Valid values: Success and Failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = connectionStatus;
@@ -77,7 +84,10 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

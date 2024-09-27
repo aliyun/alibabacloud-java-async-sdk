@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHadoopClustersInSameNetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHadoopClustersInSameNetResponseBody</p>
@@ -57,7 +58,10 @@ public class DescribeHadoopClustersInSameNetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

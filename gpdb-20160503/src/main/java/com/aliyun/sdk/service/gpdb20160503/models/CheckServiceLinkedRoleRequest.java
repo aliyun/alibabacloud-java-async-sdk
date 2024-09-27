@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckServiceLinkedRoleRequest} extends {@link RequestModel}
  *
  * <p>CheckServiceLinkedRoleRequest</p>
@@ -53,7 +54,10 @@ public class CheckServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <p>The ID of the region. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

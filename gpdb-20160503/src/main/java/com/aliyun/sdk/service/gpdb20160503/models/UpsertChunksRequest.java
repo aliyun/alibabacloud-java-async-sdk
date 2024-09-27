@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpsertChunksRequest} extends {@link RequestModel}
  *
  * <p>UpsertChunksRequest</p>
@@ -155,10 +156,13 @@ public class UpsertChunksRequest extends Request {
         } 
 
         /**
-         * The name of the document collection.
-         * <p>
+         * <p>The name of the document collection.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2618448~~">CreateDocumentCollection</a> operation to create a document collection and call the <a href="~~2618452~~">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateDocumentCollection](~~2618448~~) operation to create a document collection and call the [ListDocumentCollections](~~2618452~~) operation to query a list of document collections.
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -185,10 +189,13 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * The name of the namespace. Default value: public.
-         * <p>
+         * <p>The name of the namespace. Default value: public.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2401495~~">CreateNamespace</a> operation to create a namespace and call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateNamespace](~~2401495~~) operation to create a namespace and call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -197,10 +204,13 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
-         * The password of the namespace.
-         * <p>
+         * <p>The password of the namespace.</p>
+         * <blockquote>
+         * <p> This value is specified when you call the <a href="~~2401495~~">CreateNamespace</a> operation.</p>
+         * </blockquote>
          * 
-         * >  This value is specified when you call the [CreateNamespace](~~2401495~~) operation.
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -243,6 +253,12 @@ public class UpsertChunksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpsertChunksRequest} extends {@link TeaModel}
+     *
+     * <p>UpsertChunksRequest</p>
+     */
     public static class TextChunks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true)

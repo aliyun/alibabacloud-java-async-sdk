@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckJDBCSourceNetConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>CheckJDBCSourceNetConnectionResponseBody</p>
@@ -61,7 +62,10 @@ public class CheckJDBCSourceNetConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned message. If the connection failed, an error message is returned. Otherwise, a pair of double quotation marks ("") is returned.
+         * <p>The returned message. If the connection failed, an error message is returned. Otherwise, a pair of double quotation marks (&quot;&quot;) is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder connectionMessage(String connectionMessage) {
             this.connectionMessage = connectionMessage;
@@ -69,11 +73,14 @@ public class CheckJDBCSourceNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The connection status. Valid values:
-         * <p>
+         * <p>The connection status. Valid values:</p>
+         * <ul>
+         * <li>Success</li>
+         * <li>Failed</li>
+         * </ul>
          * 
-         * *   Success
-         * *   Failed
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = connectionStatus;
@@ -81,7 +88,10 @@ public class CheckJDBCSourceNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -168,13 +169,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to unbind all tags from an instance. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:
-         * <p>
+         * <p>Specifies whether to unbind all tags from an instance. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -201,7 +204,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -237,11 +243,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The storage mode of the instance. Valid values:
-         * <p>
+         * <p>The storage mode of the instance. Valid values:</p>
+         * <ul>
+         * <li><code>instance</code>: reserved storage mode</li>
+         * <li><code>ALIYUN::GPDB::INSTANCE</code>: elastic storage mode</li>
+         * </ul>
          * 
-         * *   `instance`: reserved storage mode
-         * *   `ALIYUN::GPDB::INSTANCE`: elastic storage mode
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

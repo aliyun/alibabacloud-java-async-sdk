@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBResourceGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         private ResourceGroupItems resourceGroupItems; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The queried resource group information.
+         * <p>The queried resource group information.</p>
          */
         public Builder resourceGroupItems(ResourceGroupItems resourceGroupItems) {
             this.resourceGroupItems = resourceGroupItems;
@@ -70,6 +74,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBResourceGroupResponseBody</p>
+     */
     public static class RoleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Role")
         private java.util.List < String > role;
@@ -111,6 +121,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBResourceGroupResponseBody</p>
+     */
     public static class ResourceGroupItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupConfig")
         private String resourceGroupConfig;
@@ -162,20 +178,24 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private RoleList roleList; 
 
             /**
-             * The configurations of the resource group.
-             * <p>
+             * <p>The configurations of the resource group.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>CpuRateLimit: the percentage of CPU resources that are available for the resource group. Unit: %.</p>
+             * </li>
+             * <li><p>MemoryLimit: the percentage of memory resources that are available for the resource group. Unit: %.</p>
+             * </li>
+             * <li><p>MemorySharedQuota: the percentage of memory resources shared among transactions that are submitted to the resource group. Unit: %. Default value: 80.</p>
+             * </li>
+             * <li><p>MemorySpillRatio: the memory spill ratio for memory-intensive transactions. When the memory that is used by memory-intensive transactions reaches this value, data is spilled to disks. Unit: %. Default value: 0.</p>
+             * </li>
+             * <li><p>Concurrency: the maximum number of concurrent transactions or parallel queries that are allowed for a resource group. Default value: 20.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   CpuRateLimit: the percentage of CPU resources that are available for the resource group. Unit: %.
-             * 
-             * *   MemoryLimit: the percentage of memory resources that are available for the resource group. Unit: %.
-             * 
-             * *   MemorySharedQuota: the percentage of memory resources shared among transactions that are submitted to the resource group. Unit: %. Default value: 80.
-             * 
-             * *   MemorySpillRatio: the memory spill ratio for memory-intensive transactions. When the memory that is used by memory-intensive transactions reaches this value, data is spilled to disks. Unit: %. Default value: 0.
-             * 
-             * *   Concurrency: the maximum number of concurrent transactions or parallel queries that are allowed for a resource group. Default value: 20.
+             * <strong>example:</strong>
+             * <p>{&quot;CpuRateLimit&quot;:&quot;10&quot;,&quot;MemoryLimit&quot;:&quot;12&quot;,&quot;MemorySharedQuota&quot;:&quot;20&quot;,&quot;MemorySpillRatio&quot;:&quot;75&quot;,&quot;Concurrency&quot;:&quot;3&quot;}</p>
              */
             public Builder resourceGroupConfig(String resourceGroupConfig) {
                 this.resourceGroupConfig = resourceGroupConfig;
@@ -183,7 +203,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource group.
+             * <p>The name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testgroup</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -191,7 +214,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The roles.
+             * <p>The roles.</p>
              */
             public Builder roleList(RoleList roleList) {
                 this.roleList = roleList;
@@ -205,6 +228,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBResourceGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBResourceGroupResponseBody</p>
+     */
     public static class ResourceGroupItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupItem")
         private java.util.List < ResourceGroupItem> resourceGroupItem;

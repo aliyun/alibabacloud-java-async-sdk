@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePlansResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstancePlansResponseBody</p>
@@ -109,10 +110,11 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The error message.
-         * <p>
+         * <p>The error message.</p>
+         * <p>This parameter is returned only if the request fails.</p>
          * 
-         * This parameter is returned only if the request fails.
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -120,7 +122,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The queried plans.
+         * <p>The queried plans.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -128,7 +130,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -136,7 +141,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -144,7 +152,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34b32a0a-08ef-4a87-b6be-cdd988888888</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -152,10 +163,11 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
+         * <p>Indicates whether the request was successful.</p>
+         * <p>If the request was successful, <strong>success</strong> is returned. If the request failed, this parameter is not returned.</p>
          * 
-         * If the request was successful, **success** is returned. If the request failed, this parameter is not returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -163,7 +175,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -176,6 +191,12 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancePlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePlansResponseBody</p>
+     */
     public static class PlanList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
@@ -311,7 +332,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             private String planType; 
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gp-bp12ga6v69h86****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -319,7 +343,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The execution information of the plan.
+             * <p>The execution information of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;pause&quot;:{&quot;planCronTime&quot;:&quot;0 22 * * 5&quot;},&quot;resume&quot;:{&quot;planCronTime&quot;:&quot;0 23 * * 5&quot;}}</p>
              */
             public Builder planConfig(String planConfig) {
                 this.planConfig = planConfig;
@@ -327,7 +354,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the plan.
+             * <p>The description of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a test plan</p>
              */
             public Builder planDesc(String planDesc) {
                 this.planDesc = planDesc;
@@ -335,14 +365,18 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             * <p>
+             * <p>The end time of the plan. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>This parameter is returned only for the plans that are periodically executed.</p>
+             * </li>
+             * <li><p>If you did not specify the end time when you created the plan, this parameter is not returned.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   This parameter is returned only for the plans that are periodically executed.
-             * 
-             * *   If you did not specify the end time when you created the plan, this parameter is not returned.
+             * <strong>example:</strong>
+             * <p>2023-04-17T23:00Z</p>
              */
             public Builder planEndDate(String planEndDate) {
                 this.planEndDate = planEndDate;
@@ -350,7 +384,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The plan ID.
+             * <p>The plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -358,7 +395,10 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the plan.
+             * <p>The name of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-plan</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -366,11 +406,14 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode of the plan. Valid values:
-             * <p>
+             * <p>The execution mode of the plan. Valid values:</p>
+             * <ul>
+             * <li><strong>Postpone</strong>: The plan is executed later.</li>
+             * <li><strong>Regular</strong>: The plan is executed periodically.</li>
+             * </ul>
              * 
-             * *   **Postpone**: The plan is executed later.
-             * *   **Regular**: The plan is executed periodically.
+             * <strong>example:</strong>
+             * <p>Regular</p>
              */
             public Builder planScheduleType(String planScheduleType) {
                 this.planScheduleType = planScheduleType;
@@ -378,14 +421,18 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
-             * <p>
+             * <p>The start time of the plan. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>This parameter is returned only for the plans that are periodically executed.</p>
+             * </li>
+             * <li><p>If you did not specify the start time when you created the plan, the current time is returned.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   This parameter is returned only for the plans that are periodically executed.
-             * 
-             * *   If you did not specify the start time when you created the plan, the current time is returned.
+             * <strong>example:</strong>
+             * <p>2022-04-17T23:00Z</p>
              */
             public Builder planStartDate(String planStartDate) {
                 this.planStartDate = planStartDate;
@@ -393,13 +440,16 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the plan. Valid values:
-             * <p>
+             * <p>The status of the plan. Valid values:</p>
+             * <ul>
+             * <li><strong>active</strong></li>
+             * <li><strong>cancel</strong></li>
+             * <li><strong>deleted</strong></li>
+             * <li><strong>finished</strong></li>
+             * </ul>
              * 
-             * *   **active**
-             * *   **cancel**
-             * *   **deleted**
-             * *   **finished**
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder planStatus(String planStatus) {
                 this.planStatus = planStatus;
@@ -407,11 +457,14 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the plan. Valid values:
-             * <p>
+             * <p>The type of the plan. Valid values:</p>
+             * <ul>
+             * <li><strong>PauseResume</strong>: pauses and resumes an instance.</li>
+             * <li><strong>Resize</strong>: scales an instance.</li>
+             * </ul>
              * 
-             * *   **PauseResume**: pauses and resumes an instance.
-             * *   **Resize**: scales an instance.
+             * <strong>example:</strong>
+             * <p>PauseResume</p>
              */
             public Builder planType(String planType) {
                 this.planType = planType;
@@ -425,6 +478,12 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstancePlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancePlansResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlanList")
         private java.util.List < PlanList> planList;

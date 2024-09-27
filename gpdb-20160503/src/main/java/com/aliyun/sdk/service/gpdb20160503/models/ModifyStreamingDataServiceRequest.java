@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyStreamingDataServiceRequest} extends {@link RequestModel}
  *
  * <p>ModifyStreamingDataServiceRequest</p>
@@ -112,10 +113,13 @@ public class ModifyStreamingDataServiceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~196830~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~196830~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp10g78o9807yv9h3</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -133,7 +137,10 @@ public class ModifyStreamingDataServiceRequest extends Request {
         }
 
         /**
-         * The description of the service.
+         * <p>The description of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-adbpgss</p>
          */
         public Builder serviceDescription(String serviceDescription) {
             this.putQueryParameter("ServiceDescription", serviceDescription);
@@ -142,7 +149,10 @@ public class ModifyStreamingDataServiceRequest extends Request {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -151,13 +161,16 @@ public class ModifyStreamingDataServiceRequest extends Request {
         }
 
         /**
-         * The specifications of the service. Unit: capacity units (CUs). Valid values:
-         * <p>
+         * <p>The specifications of the service. Unit: capacity units (CUs). Valid values:</p>
+         * <ul>
+         * <li>2</li>
+         * <li>4</li>
+         * <li>8</li>
+         * <li>16</li>
+         * </ul>
          * 
-         * *   2
-         * *   4
-         * *   8
-         * *   16
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder serviceSpec(String serviceSpec) {
             this.putQueryParameter("ServiceSpec", serviceSpec);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadSQLLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDownloadSQLLogsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The URL that is used to download the file.
+         * <p>The URL that is used to download the file.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -57,7 +58,10 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDE9942A-D919-527B-B559-5D0F6F20CCEC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDownloadSQLLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadSQLLogsResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadId")
         private Long downloadId;

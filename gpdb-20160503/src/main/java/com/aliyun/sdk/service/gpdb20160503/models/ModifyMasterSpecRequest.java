@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyMasterSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyMasterSpecRequest</p>
@@ -97,7 +98,10 @@ public class ModifyMasterSpecRequest extends Request {
         } 
 
         /**
-         * The description of the instance.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -106,10 +110,13 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -118,16 +125,20 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
-         * The specifications of coordinator node resources. Valid values:
-         * <p>
+         * <p>The specifications of coordinator node resources. Valid values:</p>
+         * <ul>
+         * <li>2 CU</li>
+         * <li>4 CU</li>
+         * <li>8 CU</li>
+         * <li>16 CU</li>
+         * <li>32 CU</li>
+         * </ul>
+         * <blockquote>
+         * <p> You are charged for coordinator node resources of more than 8 compute units (CUs).</p>
+         * </blockquote>
          * 
-         * *   2 CU
-         * *   4 CU
-         * *   8 CU
-         * *   16 CU
-         * *   32 CU
-         * 
-         * >  You are charged for coordinator node resources of more than 8 compute units (CUs).
+         * <strong>example:</strong>
+         * <p>8 CU</p>
          */
         public Builder masterCU(Integer masterCU) {
             this.putQueryParameter("MasterCU", masterCU);
@@ -136,7 +147,10 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="~~151181~~">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

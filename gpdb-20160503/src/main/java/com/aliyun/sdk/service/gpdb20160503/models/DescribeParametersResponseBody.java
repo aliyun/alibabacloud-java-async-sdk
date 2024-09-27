@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeParametersResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried configuration parameters.
+         * <p>The queried configuration parameters.</p>
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -57,7 +58,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62506167-D284-562A-B7C2-0A**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeParametersResponseBody</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentValue")
         private String currentValue;
@@ -169,7 +179,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The current value of the configuration parameter.
+             * <p>The current value of the configuration parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10800000</p>
              */
             public Builder currentValue(String currentValue) {
                 this.currentValue = currentValue;
@@ -177,11 +190,14 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a restart is required for parameter modifications to take effect. Valid values:
-             * <p>
+             * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder forceRestartInstance(String forceRestartInstance) {
                 this.forceRestartInstance = forceRestartInstance;
@@ -189,11 +205,14 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the configuration parameter can be modified. Valid values:
-             * <p>
+             * <p>Indicates whether the configuration parameter can be modified. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isChangeableConfig(String isChangeableConfig) {
                 this.isChangeableConfig = isChangeableConfig;
@@ -201,7 +220,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The valid values of the configuration parameter.
+             * <p>The valid values of the configuration parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0-2147483647]</p>
              */
             public Builder optionalRange(String optionalRange) {
                 this.optionalRange = optionalRange;
@@ -209,7 +231,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the configuration parameter.
+             * <p>The description of the configuration parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sets the maximum allowed duration of any statement, A value of 0 turns off the timeout.</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -217,7 +242,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the configuration parameter.
+             * <p>The name of the configuration parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>statement_timeout</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -225,7 +253,10 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the configuration parameter.
+             * <p>The default value of the configuration parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10800000</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVectorIndexRequest} extends {@link RequestModel}
  *
  * <p>DeleteVectorIndexRequest</p>
@@ -142,10 +143,13 @@ public class DeleteVectorIndexRequest extends Request {
         } 
 
         /**
-         * The name of the collection.
-         * <p>
+         * <p>The name of the collection.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2401503~~">ListCollections</a> operation to query a list of collections.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListCollections](~~2401503~~) operation to query a list of collections.
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -154,10 +158,13 @@ public class DeleteVectorIndexRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -166,10 +173,13 @@ public class DeleteVectorIndexRequest extends Request {
         }
 
         /**
-         * The name of the manager account that has the rds_superuser permission.
-         * <p>
+         * <p>The name of the manager account that has the rds_superuser permission.</p>
+         * <blockquote>
+         * <p> You can create an account on the <strong>Account Management</strong> page of the AnalyticDB for PostgreSQL console or by calling the <a href="~~2361789~~">CreateAccount</a> operation.</p>
+         * </blockquote>
          * 
-         * >  You can create an account on the **Account Management** page of the AnalyticDB for PostgreSQL console or by calling the [CreateAccount](~~2361789~~) operation.
+         * <strong>example:</strong>
+         * <p>testaccount</p>
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -178,7 +188,10 @@ public class DeleteVectorIndexRequest extends Request {
         }
 
         /**
-         * The password of the manager account.
+         * <p>The password of the manager account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder managerAccountPassword(String managerAccountPassword) {
             this.putQueryParameter("ManagerAccountPassword", managerAccountPassword);
@@ -187,10 +200,13 @@ public class DeleteVectorIndexRequest extends Request {
         }
 
         /**
-         * The name of the namespace. Default value: public.
-         * <p>
+         * <p>The name of the namespace. Default value: public.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -208,7 +224,10 @@ public class DeleteVectorIndexRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

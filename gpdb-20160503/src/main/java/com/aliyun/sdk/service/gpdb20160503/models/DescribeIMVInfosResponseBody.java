@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIMVInfosResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIMVInfosResponseBody</p>
@@ -69,7 +70,7 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
         }
 
         /**
-         * The queried materialized views.
+         * <p>The queried materialized views.</p>
          */
         public Builder imvInfos(java.util.List < ImvInfos> imvInfos) {
             this.imvInfos = imvInfos;
@@ -90,6 +91,12 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIMVInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIMVInfosResponseBody</p>
+     */
     public static class ImvInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Base")
         private String base;
@@ -141,7 +148,10 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
             private String mv; 
 
             /**
-             * The name of the table based on which the materialized view is created.
+             * <p>The name of the table based on which the materialized view is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;public.&quot;t2&quot;</p>
              */
             public Builder base(String base) {
                 this.base = base;
@@ -149,7 +159,10 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The dependency between the materialized view and the base table and all metric values, which can be used to build a lineage graph.
+             * <p>The dependency between the materialized view and the base table and all metric values, which can be used to build a lineage graph.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;maintenance_calls&quot; : 1, &quot;avg_apply_time&quot; : 2, &quot;avg_calc_rows&quot; : 1, &quot;avg_calc_time&quot; : 11, &quot;avg_delta_rows&quot; : 1, &quot;avg_maintenance_total_time&quot; : 14, &quot;avg_maintenance_total_time_total&quot; : 14, &quot;max_apply_time&quot; : 2, &quot;max_calc_rows&quot; : 1, &quot;max_calc_time&quot; : 11, &quot;max_delta_rows&quot; : 1, &quot;max_maintenance_total_time&quot; : 14, &quot;max_maintenance_total_time_total&quot; : 14, &quot;min_apply_time&quot; : 2, &quot;min_calc_rows&quot; : 1, &quot;min_calc_time&quot; : 11, &quot;min_delta_rows&quot; : 1, &quot;min_maintenance_total_time&quot; : 14, &quot;min_maintenance_total_time_total&quot; : 14, &quot;max_outerjoin_apply_time&quot; : null, &quot;max_outerjoin_calc_rows&quot; : null, &quot;max_outerjoin_calc_time&quot; : null, &quot;max_outerjoin_delta_rows&quot; : null, &quot;avg_outerjoin_apply_time&quot; : null, &quot;avg_outerjoin_calc_rows&quot; : null, &quot;avg_outerjoin_calc_time&quot; : null, &quot;avg_outerjoin_delta_rows&quot; : null, &quot;min_outerjoin_apply_time&quot; : null, &quot;min_outerjoin_calc_rows&quot; : null, &quot;min_outerjoin_calc_time&quot; : null, &quot;min_outerjoin_delta_rows&quot; : null, &quot;create_rows&quot; : null, &quot;create_time&quot; : null, &quot;direct_visited&quot; : null, &quot;indirect_visited&quot; : null, &quot;max_refresh_rows&quot; : null, &quot;max_refresh_time&quot; : null, &quot;avg_refresh_rows&quot; : null, &quot;avg_refresh_time&quot; : null, &quot;min_refresh_rows&quot; : null, &quot;min_refresh_time&quot; : null, &quot;refresh_calls&quot; : null, &quot;avg_wait_lock_time&quot; : null, &quot;max_wait_lock_time&quot; : null, &quot;min_wait_lock_time&quot; : null, &quot;latest_maintenance_time&quot; : &quot;2023-08-09T07:39:14.753252+00:00&quot;}</p>
              */
             public Builder detailInfo(String detailInfo) {
                 this.detailInfo = detailInfo;
@@ -157,7 +170,10 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the materialized view.
+             * <p>The name of the materialized view.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public.&quot;mv1&quot;</p>
              */
             public Builder mv(String mv) {
                 this.mv = mv;

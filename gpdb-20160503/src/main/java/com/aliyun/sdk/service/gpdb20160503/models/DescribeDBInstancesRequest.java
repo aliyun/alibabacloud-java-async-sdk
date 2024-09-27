@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancesRequest</p>
@@ -236,7 +237,7 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * The edition of the instance. Separate multiple values with commas (,).
+         * <p>The edition of the instance. Separate multiple values with commas (,).</p>
          */
         public Builder DBInstanceCategories(java.util.List < String > DBInstanceCategories) {
             String DBInstanceCategoriesShrink = shrink(DBInstanceCategories, "DBInstanceCategories", "simple");
@@ -246,7 +247,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The description of the instance.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -255,7 +259,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID. Separate multiple values with commas (,).
+         * <p>The instance ID. Separate multiple values with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceIds(String DBInstanceIds) {
             this.putQueryParameter("DBInstanceIds", DBInstanceIds);
@@ -264,7 +271,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The resource type of the instance. Separate multiple values with commas (,).
+         * <p>The resource type of the instance. Separate multiple values with commas (,).</p>
          */
         public Builder DBInstanceModes(java.util.List < String > DBInstanceModes) {
             String DBInstanceModesShrink = shrink(DBInstanceModes, "DBInstanceModes", "simple");
@@ -274,7 +281,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The state of the instance.
+         * <p>The state of the instance.</p>
          */
         public Builder DBInstanceStatuses(java.util.List < String > DBInstanceStatuses) {
             String DBInstanceStatusesShrink = shrink(DBInstanceStatuses, "DBInstanceStatuses", "simple");
@@ -284,7 +291,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
          */
         public Builder instanceDeployTypes(java.util.List < String > instanceDeployTypes) {
             String instanceDeployTypesShrink = shrink(instanceDeployTypes, "InstanceDeployTypes", "simple");
@@ -294,13 +301,17 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+         * <li><strong>Classic</strong>: classic network.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, instances of all network types are returned.</p>
+         * </blockquote>
          * 
-         * *   **VPC**: virtual private cloud (VPC).
-         * *   **Classic**: classic network.
-         * 
-         * > If you do not specify this parameter, instances of all network types are returned.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -318,7 +329,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -327,14 +341,16 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -343,10 +359,13 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -355,7 +374,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -364,7 +386,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -373,7 +395,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The VPC ID. You can use this parameter to filter instances that reside in the specified VPC.
+         * <p>The VPC ID. You can use this parameter to filter instances that reside in the specified VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t4nqyp3tc5mx7vy6****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -388,6 +413,12 @@ public class DescribeDBInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -427,7 +458,10 @@ public class DescribeDBInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -435,7 +469,10 @@ public class DescribeDBInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

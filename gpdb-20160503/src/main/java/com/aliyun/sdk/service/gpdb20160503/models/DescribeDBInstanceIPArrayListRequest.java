@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceIPArrayListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceIPArrayListRequest</p>
@@ -82,10 +83,13 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         } 
 
         /**
-         * The name of the IP address whitelist. If you do not specify this parameter, the default whitelist is queried.
-         * <p>
+         * <p>The name of the IP address whitelist. If you do not specify this parameter, the default whitelist is queried.</p>
+         * <blockquote>
+         * <p> Each instance supports up to 50 IP address whitelists.</p>
+         * </blockquote>
          * 
-         * >  Each instance supports up to 50 IP address whitelists.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
             this.putQueryParameter("DBInstanceIPArrayName", DBInstanceIPArrayName);
@@ -94,10 +98,13 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -106,7 +113,10 @@ public class DescribeDBInstanceIPArrayListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="~~151181~~">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

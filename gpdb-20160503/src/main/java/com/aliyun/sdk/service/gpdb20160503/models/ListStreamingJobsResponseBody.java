@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStreamingJobsResponseBody} extends {@link TeaModel}
  *
  * <p>ListStreamingJobsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The queried jobs.
+         * <p>The queried jobs.</p>
          */
         public Builder jobItems(java.util.List < JobItems> jobItems) {
             this.jobItems = jobItems;
@@ -130,6 +131,12 @@ public class ListStreamingJobsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListStreamingJobsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStreamingJobsResponseBody</p>
+     */
     public static class JobItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
@@ -409,7 +416,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             private String writeMode; 
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-account</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -417,7 +427,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The delivery guarantee setting.
+             * <p>The delivery guarantee setting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ATLEAST / EXACTLY</p>
              */
             public Builder consistency(String consistency) {
                 this.consistency = consistency;
@@ -425,7 +438,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was created.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -433,7 +449,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The data source ID.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -441,7 +460,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-kafka</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -449,7 +471,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The mapped fields in the destination table.
+             * <p>The mapped fields in the destination table.</p>
              */
             public Builder destColumns(java.util.List < String > destColumns) {
                 this.destColumns = destColumns;
@@ -457,7 +479,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination database.
+             * <p>The name of the destination database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dest-db</p>
              */
             public Builder destDatabase(String destDatabase) {
                 this.destDatabase = destDatabase;
@@ -465,7 +490,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination namespace.
+             * <p>The name of the destination namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dest-schema</p>
              */
             public Builder destSchema(String destSchema) {
                 this.destSchema = destSchema;
@@ -473,7 +501,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination table.
+             * <p>The name of the destination table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dest-table</p>
              */
             public Builder destTable(String destTable) {
                 this.destTable = destTable;
@@ -481,10 +512,11 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
-             * <p>
+             * <p>The error message returned.</p>
+             * <p>This parameter is returned only when the return value of <strong>Status</strong> is <strong>false</strong>.</p>
              * 
-             * This parameter is returned only when the return value of **Status** is **false**.
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -492,10 +524,13 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The fallback offset for data consumption.
-             * <p>
+             * <p>The fallback offset for data consumption.</p>
+             * <ul>
+             * <li>This parameter indicates the starting offset from which data consumption resumes when a consumer does not request a consumption offset or requests a consumption offset that is beyond the range of the offset information recorded in the current Kafka cluster. Valid values: EARLIEST and LATEST.</li>
+             * </ul>
              * 
-             * *   This parameter indicates the starting offset from which data consumption resumes when a consumer does not request a consumption offset or requests a consumption offset that is beyond the range of the offset information recorded in the current Kafka cluster. Valid values: EARLIEST and LATEST.
+             * <strong>example:</strong>
+             * <p>EARLIEST /  LATEST</p>
              */
             public Builder fallbackOffset(String fallbackOffset) {
                 this.fallbackOffset = fallbackOffset;
@@ -503,7 +538,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the job.
+             * <p>The description of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test job</p>
              */
             public Builder jobDescription(String jobDescription) {
                 this.jobDescription = jobDescription;
@@ -511,7 +549,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -519,7 +560,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the job.
+             * <p>The name of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-job</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -527,7 +571,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The update condition columns that are used to join the source data and the destination table. Typically, the columns are all the primary key columns of the destination table. If the values of all columns specified by this parameter in different rows are the same, the rows are considered duplicates.
+             * <p>The update condition columns that are used to join the source data and the destination table. Typically, the columns are all the primary key columns of the destination table. If the values of all columns specified by this parameter in different rows are the same, the rows are considered duplicates.</p>
              */
             public Builder matchColumns(java.util.List < String > matchColumns) {
                 this.matchColumns = matchColumns;
@@ -535,11 +579,14 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration mode. Valid values:
-             * <p>
+             * <p>The configuration mode. Valid values:</p>
+             * <ol>
+             * <li>basic: In basic mode, you must configure the configuration parameters.</li>
+             * <li>professional: In professional mode, you can submit a YAML configuration file.</li>
+             * </ol>
              * 
-             * 1.  basic: In basic mode, you must configure the configuration parameters.
-             * 2.  professional: In professional mode, you can submit a YAML configuration file.
+             * <strong>example:</strong>
+             * <p>Basic / Professional</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -547,7 +594,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was last modified.
+             * <p>The time when the job was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T17:00:00Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -555,7 +605,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The password of the database account.
+             * <p>The password of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pwd123</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -563,7 +616,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The source fields.
+             * <p>The source fields.</p>
              */
             public Builder srcColumns(java.util.List < String > srcColumns) {
                 this.srcColumns = srcColumns;
@@ -571,13 +624,16 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
-             * <p>
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li>Init</li>
+             * <li>Running</li>
+             * <li>Exception</li>
+             * <li>Paused</li>
+             * </ul>
              * 
-             * *   Init
-             * *   Running
-             * *   Exception
-             * *   Paused
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -585,7 +641,7 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The columns to be updated if a row of data meets the update condition. Typically, the columns are all non-primary key columns of the destination table. When the columns specified by the MatchColumns parameter are used as conditions to join the source data and the destination table, data in columns of the UpdateColumns type is updated if data is matched.
+             * <p>The columns to be updated if a row of data meets the update condition. Typically, the columns are all non-primary key columns of the destination table. When the columns specified by the MatchColumns parameter are used as conditions to join the source data and the destination table, data in columns of the UpdateColumns type is updated if data is matched.</p>
              */
             public Builder updateColumns(java.util.List < String > updateColumns) {
                 this.updateColumns = updateColumns;
@@ -593,7 +649,10 @@ public class ListStreamingJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The write mode.
+             * <p>The write mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSERT/UPDATE/MERGE</p>
              */
             public Builder writeMode(String writeMode) {
                 this.writeMode = writeMode;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDBInstanceResponseBody</p>
@@ -85,10 +86,11 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An invalid parameter. It is no longer returned when you call this operation.
-         * <p>
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         * <p>You can call the <a href="~~86910~~">DescribeDBInstanceAttribute</a> operation to query the endpoint that is used to connect to the instance.</p>
          * 
-         * You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the endpoint that is used to connect to the instance.
+         * <strong>example:</strong>
+         * <p>gp-bp***************.gpdb.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -96,7 +98,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -104,7 +109,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111111</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -112,10 +120,11 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * An invalid parameter. It is no longer returned when you call this operation.
-         * <p>
+         * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         * <p>You can call the <a href="~~86910~~">DescribeDBInstanceAttribute</a> operation to query the port number that is used to connect to the instance.</p>
          * 
-         * You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the port number that is used to connect to the instance.
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder port(String port) {
             this.port = port;
@@ -123,7 +132,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5414A4E5-4C36-4461-95FC-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

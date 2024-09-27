@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckHadoopDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>CheckHadoopDataSourceResponseBody</p>
@@ -61,7 +62,10 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The returned message. If the service failed, an error message is returned. Otherwise, a pair of double quotation marks ("") is returned.
+         * <p>The returned message. If the service failed, an error message is returned. Otherwise, a pair of double quotation marks (&quot;&quot;) is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>serivce unavaliable</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -69,7 +73,10 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +84,14 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the service. Valid values:
-         * <p>
+         * <p>The status of the service. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Failed</li>
+         * </ul>
          * 
-         * *   Running
-         * *   Failed
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;

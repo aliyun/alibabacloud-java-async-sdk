@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecretsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListSecretsResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The number of access credentials.
+         * <p>The number of access credentials.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -93,7 +97,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried access credentials.
+         * <p>The queried access credentials.</p>
          */
         public Builder secrets(Secrets secrets) {
             this.secrets = secrets;
@@ -117,11 +127,14 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -134,6 +147,12 @@ public class ListSecretsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretsResponseBody</p>
+     */
     public static class SecretsSecrets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -233,7 +252,10 @@ public class ListSecretsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1033***</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -241,7 +263,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gp-bp14****</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -249,7 +274,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the access credential.
+             * <p>The description of the access credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -257,7 +285,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -265,7 +296,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: `acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}`.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. Format: <code>acs:gpdb:{{region}}:{{accountId}}:secret/{{secretName}}-{{32 digits random string}</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
              */
             public Builder secretArn(String secretArn) {
                 this.secretArn = secretArn;
@@ -273,7 +307,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the access credential.
+             * <p>The name of the access credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testsecret</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -281,7 +318,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testacc</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -295,6 +335,12 @@ public class ListSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretsResponseBody</p>
+     */
     public static class Secrets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Secrets")
         private java.util.List < SecretsSecrets> secrets;
@@ -322,7 +368,7 @@ public class ListSecretsResponseBody extends TeaModel {
             private java.util.List < SecretsSecrets> secrets; 
 
             /**
-             * The queried access credentials.
+             * <p>The queried access credentials.</p>
              */
             public Builder secrets(java.util.List < SecretsSecrets> secrets) {
                 this.secrets = secrets;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogBackupsResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         private Long totalLogSize; 
 
         /**
-         * Details of the backup sets.
+         * <p>Details of the backup sets.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -105,7 +106,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of backup sets on the current page.
+         * <p>The number of backup sets on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24B9FCAF-2CBC-51C3-B563-F1C70D750187</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,7 +150,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total size of logs in the time range. Unit: bytes.
+         * <p>The total size of logs in the time range. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>386748</p>
          */
         public Builder totalLogSize(Long totalLogSize) {
             this.totalLogSize = totalLogSize;
@@ -150,6 +166,12 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogBackupsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
@@ -237,7 +259,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             private String segmentName; 
 
             /**
-             * The ID of the backup set.
+             * <p>The ID of the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12413721782</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -245,7 +270,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the coordinator node.
+             * <p>The ID of the coordinator node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gp-bp12ga6v69h86****-master</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -253,7 +281,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the log backup set that is stored in Object Storage Service (OSS).
+             * <p>The name of the log backup set that is stored in Object Storage Service (OSS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000000010000000400000012</p>
              */
             public Builder logFileName(String logFileName) {
                 this.logFileName = logFileName;
@@ -261,7 +292,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the log backup set. Unit: bytes.
+             * <p>The size of the log backup set. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77350</p>
              */
             public Builder logFileSize(Long logFileSize) {
                 this.logFileSize = logFileSize;
@@ -269,7 +303,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the log.
+             * <p>The timestamp of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-12T02:14:26Z</p>
              */
             public Builder logTime(String logTime) {
                 this.logTime = logTime;
@@ -277,7 +314,10 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute node.
+             * <p>The name of the compute node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>segment-0</p>
              */
             public Builder segmentName(String segmentName) {
                 this.segmentName = segmentName;

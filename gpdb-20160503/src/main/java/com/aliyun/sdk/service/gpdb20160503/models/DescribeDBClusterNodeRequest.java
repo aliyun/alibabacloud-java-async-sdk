@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterNodeRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBClusterNodeRequest</p>
@@ -68,10 +69,13 @@ public class DescribeDBClusterNodeRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -80,13 +84,17 @@ public class DescribeDBClusterNodeRequest extends Request {
         }
 
         /**
-         * The node type. Valid values:
-         * <p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li><strong>master</strong>: coordinator node.</li>
+         * <li><strong>segment</strong>: compute node.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the information about all nodes is returned.</p>
+         * </blockquote>
          * 
-         * *   **master**: coordinator node.
-         * *   **segment**: compute node.
-         * 
-         * > If you do not specify this parameter, the information about all nodes is returned.
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);

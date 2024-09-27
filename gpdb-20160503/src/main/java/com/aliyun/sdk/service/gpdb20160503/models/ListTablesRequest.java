@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablesRequest} extends {@link RequestModel}
  *
  * <p>ListTablesRequest</p>
@@ -170,10 +171,13 @@ public class ListTablesRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~196830~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~196830~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -182,7 +186,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -191,7 +198,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Valid values: 1 to 100.
+         * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -200,7 +210,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -218,7 +231,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -227,7 +243,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The name of the schema to which the table belongs.
+         * <p>The name of the schema to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -236,10 +255,13 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.</p>
+         * <blockquote>
+         * <p> To call the ListTables operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.</p>
+         * </blockquote>
          * 
-         * >  To call the ListTables operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.
+         * <strong>example:</strong>
+         * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
          */
         public Builder secretArn(String secretArn) {
             this.putQueryParameter("SecretArn", secretArn);
@@ -248,7 +270,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * The table name pattern for matching. For example, `ab%` specifies to match table names that start with ab.
+         * <p>The table name pattern for matching. For example, <code>ab%</code> specifies to match table names that start with ab.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab%</p>
          */
         public Builder tablePattern(String tablePattern) {
             this.putQueryParameter("TablePattern", tablePattern);

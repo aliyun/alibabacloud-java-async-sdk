@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -167,7 +168,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token used to perform the next query.
+         * <p>The token used to perform the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -194,7 +198,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +210,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of instance N. Valid values of N: 1 to 50.
+         * <p>The ID of instance N. Valid values of N: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxxx</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -230,7 +240,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to instance.
+         * <p>The resource type. Set the value to instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -239,10 +252,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags that are added to instances.
-         * <p>
-         * 
-         * >  You must specify at least one of the ResourceId and Tag parameters.
+         * <p>The tags that are added to instances.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the ResourceId and Tag parameters.</p>
+         * </blockquote>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -257,6 +270,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -296,16 +315,17 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. The key must be 1 to 64 characters in length.
-             * <p>
+             * <p>The key of tag N. The key must be 1 to 64 characters in length.</p>
+             * <p>You can use <code>Tag.N</code> to query AnalyticDB for PostgreSQL instances that have specific tags added. Tag.N consists of Tag.N.Key and Tag.N.Value.</p>
+             * <p>Valid values of N: 1 to 20.</p>
+             * <ul>
+             * <li>If you specify only <code>Tag.N.Key</code>, all instances that have the tag key added are returned.</li>
+             * <li>If you specify only <code>Tag.N.Value</code>, the <code>InvalidParameter.TagValue</code> error message is returned.</li>
+             * <li>If you specify multiple tag key-value pairs at a time, the instances that match all the specified tag key-value pairs are returned.</li>
+             * </ul>
              * 
-             * You can use `Tag.N` to query AnalyticDB for PostgreSQL instances that have specific tags added. Tag.N consists of Tag.N.Key and Tag.N.Value.
-             * 
-             * Valid values of N: 1 to 20.
-             * 
-             * *   If you specify only `Tag.N.Key`, all instances that have the tag key added are returned.
-             * *   If you specify only `Tag.N.Value`, the `InvalidParameter.TagValue` error message is returned.
-             * *   If you specify multiple tag key-value pairs at a time, the instances that match all the specified tag key-value pairs are returned.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -313,10 +333,11 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N. The value must be 1 to 128 characters in length.
-             * <p>
+             * <p>The value of tag N. The value must be 1 to 128 characters in length.</p>
+             * <p>Valid values of N: 1 to 20.</p>
              * 
-             * Valid values of N: 1 to 20.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

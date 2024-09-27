@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeModifyParameterLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeModifyParameterLogResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried parameter modification logs.
+         * <p>The queried parameter modification logs.</p>
          */
         public Builder changelogs(java.util.List < Changelogs> changelogs) {
             this.changelogs = changelogs;
@@ -57,7 +58,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeModifyParameterLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModifyParameterLogResponseBody</p>
+     */
     public static class Changelogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EffectTime")
         private String effectTime;
@@ -145,7 +155,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             private String parameterValueBefore; 
 
             /**
-             * The effective time.
+             * <p>The effective time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-05T11:22:22Z</p>
              */
             public Builder effectTime(String effectTime) {
                 this.effectTime = effectTime;
@@ -153,7 +166,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -161,7 +177,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the modification takes effect.
+             * <p>Indicates whether the modification takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder parameterValid(String parameterValid) {
                 this.parameterValid = parameterValid;
@@ -169,7 +188,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * The original value of the parameter.
+             * <p>The original value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder parameterValueAfter(String parameterValueAfter) {
                 this.parameterValueAfter = parameterValueAfter;
@@ -177,7 +199,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * The new value of the parameter.
+             * <p>The new value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder parameterValueBefore(String parameterValueBefore) {
                 this.parameterValueBefore = parameterValueBefore;

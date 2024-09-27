@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSchemasResponseBody} extends {@link TeaModel}
  *
  * <p>ListSchemasResponseBody</p>
@@ -85,7 +86,10 @@ public class ListSchemasResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +97,10 @@ public class ListSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The queried schemas.
+         * <p>The queried schemas.</p>
          */
         public Builder schemas(Schemas schemas) {
             this.schemas = schemas;
@@ -117,11 +127,14 @@ public class ListSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -134,6 +147,12 @@ public class ListSchemasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSchemasResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSchemasResponseBody</p>
+     */
     public static class Schemas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Schemas")
         private java.util.List < String > schemas;
@@ -161,7 +180,7 @@ public class ListSchemasResponseBody extends TeaModel {
             private java.util.List < String > schemas; 
 
             /**
-             * The queried schemas.
+             * <p>The queried schemas.</p>
              */
             public Builder schemas(java.util.List < String > schemas) {
                 this.schemas = schemas;

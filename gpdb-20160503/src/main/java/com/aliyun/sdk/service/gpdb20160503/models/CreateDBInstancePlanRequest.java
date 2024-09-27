@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstancePlanRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstancePlanRequest</p>
@@ -170,10 +171,13 @@ public class CreateDBInstancePlanRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -191,7 +195,10 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of **PlanType** and **PlanScheduleType**. The following section describes the PlanConfig parameter.
+         * <p>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of <strong>PlanType</strong> and <strong>PlanScheduleType</strong>. The following section describes the PlanConfig parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pause&quot;:{&quot;planCronTime&quot;:&quot;0 0 12 1/1 * ? &quot;},&quot;resume&quot;:{&quot;planCronTime&quot;:&quot;0 0 0 1/1 * ? &quot;}}</p>
          */
         public Builder planConfig(String planConfig) {
             this.putQueryParameter("PlanConfig", planConfig);
@@ -200,7 +207,10 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The description of the plan.
+         * <p>The description of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test plan</p>
          */
         public Builder planDesc(String planDesc) {
             this.putQueryParameter("PlanDesc", planDesc);
@@ -209,14 +219,18 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. The end time must be later than the start time.
-         * <p>
+         * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the plan stops until the plan is deleted.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
-         * 
-         * *   If you do not specify this parameter, the plan stops until the plan is deleted.
+         * <strong>example:</strong>
+         * <p>2023-04-17T23:00Z</p>
          */
         public Builder planEndDate(String planEndDate) {
             this.putQueryParameter("PlanEndDate", planEndDate);
@@ -225,7 +239,10 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The name of the plan.
+         * <p>The name of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-plan</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("PlanName", planName);
@@ -234,11 +251,14 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The execution mode of the plan. Valid values:
-         * <p>
+         * <p>The execution mode of the plan. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpone</strong>: The plan is executed later.</li>
+         * <li><strong>Regular</strong>: The plan is executed periodically.</li>
+         * </ul>
          * 
-         * *   **Postpone**: The plan is executed later.
-         * *   **Regular**: The plan is executed periodically.
+         * <strong>example:</strong>
+         * <p>Regular</p>
          */
         public Builder planScheduleType(String planScheduleType) {
             this.putQueryParameter("PlanScheduleType", planScheduleType);
@@ -247,14 +267,18 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The start time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified only when <strong>PlanScheduleType</strong> is set to <strong>Regular</strong>.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the current time is used.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
-         * 
-         * *   If you do not specify this parameter, the current time is used.
+         * <strong>example:</strong>
+         * <p>2022-04-17T23:00Z</p>
          */
         public Builder planStartDate(String planStartDate) {
             this.putQueryParameter("PlanStartDate", planStartDate);
@@ -263,15 +287,21 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The type of the plan. Valid values:
-         * <p>
+         * <p>The type of the plan. Valid values:</p>
+         * <ul>
+         * <li><strong>PauseResume</strong>: pauses and resumes an instance.</li>
+         * <li><strong>Resize</strong>: changes the number of compute nodes.</li>
+         * <li><strong>ModifySpec</strong>: changes compute node specifications.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>You can specify the value to ModifySpec only for instances in elastic storage mode.</li>
+         * <li>You can specify the value to ModifySpec only for instances in elastic storage mode.</li>
+         * </ul>
+         * </blockquote>
          * 
-         * *   **PauseResume**: pauses and resumes an instance.
-         * *   **Resize**: changes the number of compute nodes.
-         * *   **ModifySpec**: changes compute node specifications.
-         * 
-         * > - You can specify the value to ModifySpec only for instances in elastic storage mode.
-         * >- You can specify the value to ModifySpec only for instances in elastic storage mode.
+         * <strong>example:</strong>
+         * <p>PauseResume</p>
          */
         public Builder planType(String planType) {
             this.putQueryParameter("PlanType", planType);

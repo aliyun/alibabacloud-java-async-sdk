@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisDimensionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisDimensionsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         private java.util.List < String > userNames; 
 
         /**
-         * The names of the databases.
+         * <p>The names of the databases.</p>
          */
         public Builder databases(java.util.List < String > databases) {
             this.databases = databases;
@@ -69,7 +70,10 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ADCAACA-E0E8-5319-AE3B-E260E957BDF9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The names of the database accounts.
+         * <p>The names of the database accounts.</p>
          */
         public Builder userNames(java.util.List < String > userNames) {
             this.userNames = userNames;

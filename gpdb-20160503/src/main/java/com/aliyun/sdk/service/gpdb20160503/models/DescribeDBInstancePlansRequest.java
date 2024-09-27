@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstancePlansRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstancePlansRequest</p>
@@ -138,10 +139,13 @@ public class DescribeDBInstancePlansRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -159,7 +163,10 @@ public class DescribeDBInstancePlansRequest extends Request {
         }
 
         /**
-         * The time that is used to filter plans. If you specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format, the plans that are created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.
+         * <p>The time that is used to filter plans. If you specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format, the plans that are created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-17T23:00Z</p>
          */
         public Builder planCreateDate(String planCreateDate) {
             this.putQueryParameter("PlanCreateDate", planCreateDate);
@@ -168,7 +175,10 @@ public class DescribeDBInstancePlansRequest extends Request {
         }
 
         /**
-         * The description of the plan.
+         * <p>The description of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test plan</p>
          */
         public Builder planDesc(String planDesc) {
             this.putQueryParameter("PlanDesc", planDesc);
@@ -177,10 +187,13 @@ public class DescribeDBInstancePlansRequest extends Request {
         }
 
         /**
-         * The plan ID.
-         * <p>
+         * <p>The plan ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~449398~~">DescribeDBInstancePlans</a> operation to query the information about plans, including plan IDs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstancePlans](~~449398~~) operation to query the information about plans, including plan IDs.
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -189,11 +202,14 @@ public class DescribeDBInstancePlansRequest extends Request {
         }
 
         /**
-         * The execution mode of the plan. Valid values:
-         * <p>
+         * <p>The execution mode of the plan. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpone</strong>: The plan is executed later.</li>
+         * <li><strong>Regular</strong>: The plan is executed periodically.</li>
+         * </ul>
          * 
-         * *   **Postpone**: The plan is executed later.
-         * *   **Regular**: The plan is executed periodically.
+         * <strong>example:</strong>
+         * <p>Regular</p>
          */
         public Builder planScheduleType(String planScheduleType) {
             this.putQueryParameter("PlanScheduleType", planScheduleType);
@@ -202,12 +218,15 @@ public class DescribeDBInstancePlansRequest extends Request {
         }
 
         /**
-         * The type of the plan. Valid values:
-         * <p>
+         * <p>The type of the plan. Valid values:</p>
+         * <ul>
+         * <li><strong>PauseResume</strong>: pauses and resumes an instance.</li>
+         * <li><strong>Resize</strong>: scales an instance.</li>
+         * <li><strong>ModifySpec</strong>: changes compute node specifications.</li>
+         * </ul>
          * 
-         * *   **PauseResume**: pauses and resumes an instance.
-         * *   **Resize**: scales an instance.
-         * *   **ModifySpec**: changes compute node specifications.
+         * <strong>example:</strong>
+         * <p>PauseResume</p>
          */
         public Builder planType(String planType) {
             this.putQueryParameter("PlanType", planType);

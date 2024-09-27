@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateInstancePublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>AllocateInstancePublicConnectionRequest</p>
@@ -140,13 +141,17 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * The network type of the endpoint. Valid values:
-         * <p>
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><strong>primary</strong>: primary endpoint</li>
+         * <li><strong>cluster</strong>: instance endpoint. This value is supported only for an instance that contains multiple coordinator nodes.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is primary.</p>
+         * </blockquote>
          * 
-         * *   **primary**: primary endpoint
-         * *   **cluster**: instance endpoint. This value is supported only for an instance that contains multiple coordinator nodes.
-         * 
-         * >  The default value is primary.
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -155,10 +160,11 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The prefix of the endpoint.
-         * <p>
+         * <p>The prefix of the endpoint.</p>
+         * <p>Specify a prefix for the endpoint. Example: <code>gp-bp12ga6v69h86****</code>. In this example, the endpoint is <code>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</code>.</p>
          * 
-         * Specify a prefix for the endpoint. Example: `gp-bp12ga6v69h86****`. In this example, the endpoint is `gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com`.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -167,10 +173,13 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -188,7 +197,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The port number. Example: 5432.
+         * <p>The port number. Example: 5432.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

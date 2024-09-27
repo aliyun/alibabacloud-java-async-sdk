@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogCountResponse} extends {@link TeaModel}
  *
  * <p>DescribeSQLLogCountResponse</p>

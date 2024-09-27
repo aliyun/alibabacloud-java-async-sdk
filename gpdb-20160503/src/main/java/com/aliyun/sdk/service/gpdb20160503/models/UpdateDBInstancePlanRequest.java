@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDBInstancePlanRequest} extends {@link RequestModel}
  *
  * <p>UpdateDBInstancePlanRequest</p>
@@ -153,10 +154,13 @@ public class UpdateDBInstancePlanRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -174,7 +178,10 @@ public class UpdateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of **PlanType** and **PlanScheduleType**. The following section describes the PlanConfig parameter.
+         * <p>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of <strong>PlanType</strong> and <strong>PlanScheduleType</strong>. The following section describes the PlanConfig parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pause&quot;:{&quot;executeTime&quot;:&quot;2022-08-30T16:00:00Z&quot;}}</p>
          */
         public Builder planConfig(String planConfig) {
             this.putQueryParameter("PlanConfig", planConfig);
@@ -183,7 +190,10 @@ public class UpdateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The description of the plan.
+         * <p>The description of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test plan</p>
          */
         public Builder planDesc(String planDesc) {
             this.putQueryParameter("PlanDesc", planDesc);
@@ -192,14 +202,18 @@ public class UpdateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. The end time must be later than the start time.
-         * <p>
+         * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified only for <strong>periodically executed</strong> plans.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the plan stops until the plan is deleted.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter must be specified only for **periodically executed** plans.
-         * 
-         * *   If you do not specify this parameter, the plan stops until the plan is deleted.
+         * <strong>example:</strong>
+         * <p>2023-04-17T23:00Z</p>
          */
         public Builder planEndDate(String planEndDate) {
             this.putQueryParameter("PlanEndDate", planEndDate);
@@ -208,10 +222,13 @@ public class UpdateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The ID of the plan.
-         * <p>
+         * <p>The ID of the plan.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~449398~~">DescribeDBInstancePlans</a> operation to query the details of plans, including plan IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstancePlans](~~449398~~) operation to query the details of plans, including plan IDs.
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -220,7 +237,10 @@ public class UpdateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The name of the plan.
+         * <p>The name of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-plan</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("PlanName", planName);
@@ -229,14 +249,18 @@ public class UpdateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
+         * <p>The start time of the plan. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter must be specified only for <strong>periodically executed</strong> plans.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the current time is used.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   This parameter must be specified only for **periodically executed** plans.
-         * 
-         * *   If you do not specify this parameter, the current time is used.
+         * <strong>example:</strong>
+         * <p>2022-04-17T23:00Z</p>
          */
         public Builder planStartDate(String planStartDate) {
             this.putQueryParameter("PlanStartDate", planStartDate);

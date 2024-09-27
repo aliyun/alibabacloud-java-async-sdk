@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSQLLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSQLLogsRequest</p>
@@ -254,10 +255,13 @@ public class DescribeSQLLogsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -266,7 +270,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpgadmin</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -275,10 +282,13 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
+         * </blockquote>
          * 
-         * > The end time must be later than the start time. The maximum time range that can be specified is seven days.
+         * <strong>example:</strong>
+         * <p>2021-03-17T06:30Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -287,7 +297,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The execution duration of the SQL statement. Unit: seconds.
+         * <p>The execution duration of the SQL statement. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder executeCost(String executeCost) {
             this.putQueryParameter("ExecuteCost", executeCost);
@@ -296,11 +309,14 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The execution status of the SQL statement. Valid values:
-         * <p>
+         * <p>The execution status of the SQL statement. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: successful.</li>
+         * <li><strong>0</strong>: failed.</li>
+         * </ul>
          * 
-         * *   **1**: successful.
-         * *   **0**: failed.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder executeState(String executeState) {
             this.putQueryParameter("ExecuteState", executeState);
@@ -309,7 +325,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
+         * <p>The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxExecuteCost(String maxExecuteCost) {
             this.putQueryParameter("MaxExecuteCost", maxExecuteCost);
@@ -318,7 +337,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.
+         * <p>The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minExecuteCost(String minExecuteCost) {
             this.putQueryParameter("MinExecuteCost", minExecuteCost);
@@ -327,14 +349,17 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The type of the query language. Valid values:
-         * <p>
+         * <p>The type of the query language. Valid values:</p>
+         * <ul>
+         * <li><strong>DQL</strong></li>
+         * <li><strong>DML</strong></li>
+         * <li><strong>DDL</strong></li>
+         * <li><strong>DCL</strong></li>
+         * <li><strong>TCL</strong></li>
+         * </ul>
          * 
-         * *   **DQL**
-         * *   **DML**
-         * *   **DDL**
-         * *   **DCL**
-         * *   **TCL**
+         * <strong>example:</strong>
+         * <p>DQL</p>
          */
         public Builder operationClass(String operationClass) {
             this.putQueryParameter("OperationClass", operationClass);
@@ -343,15 +368,20 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The type of the SQL statement.
-         * <p>
+         * <p>The type of the SQL statement.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If <strong>OperationClass</strong> is specified, the value of <strong>OperationType</strong> must belong to the corresponding query language. For example, if <strong>OperationClass</strong> is set to <strong>DQL</strong>, the value of <strong>OperationType</strong> must be a <strong>DQL</strong> statement such as <strong>SELECT</strong>.</p>
+         * </li>
+         * <li><p>If <strong>OperationClass</strong> is not specified, the value of <strong>OperationType</strong> can be an SQL statement of any query language.</p>
+         * </li>
+         * <li><p>If <strong>OperationClass</strong> and <strong>OperationType</strong> are not specified, all types of SQL statements are returned.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   If **OperationClass** is specified, the value of **OperationType** must belong to the corresponding query language. For example, if **OperationClass** is set to **DQL**, the value of **OperationType** must be a **DQL** statement such as **SELECT**.
-         * 
-         * *   If **OperationClass** is not specified, the value of **OperationType** can be an SQL statement of any query language.
-         * *   If **OperationClass** and **OperationType** are not specified, all types of SQL statements are returned.
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -360,7 +390,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -369,14 +402,16 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
          * 
-         * *   **30**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **30**.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -385,7 +420,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The keywords of the SQL statement.
+         * <p>The keywords of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 1</p>
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -394,7 +432,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.<strong>.</strong>.90</p>
          */
         public Builder sourceIP(String sourceIP) {
             this.putQueryParameter("SourceIP", sourceIP);
@@ -403,7 +444,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-10T06:30Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -412,7 +456,10 @@ public class DescribeSQLLogsRequest extends Request {
         }
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testadmin</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

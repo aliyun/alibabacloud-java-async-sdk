@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseInstancePublicConnectionRequest} extends {@link RequestModel}
  *
  * <p>ReleaseInstancePublicConnectionRequest</p>
@@ -83,11 +84,14 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * The type of the endpoint. Default value: primary. Valid values:
-         * <p>
+         * <p>The type of the endpoint. Default value: primary. Valid values:</p>
+         * <ul>
+         * <li><strong>primary</strong>: primary endpoint.</li>
+         * <li><strong>cluster</strong>: cluster endpoint. This type of endpoints can be created only for instances that have multiple coordinator nodes.</li>
+         * </ul>
          * 
-         * *   **primary**: primary endpoint.
-         * *   **cluster**: cluster endpoint. This type of endpoints can be created only for instances that have multiple coordinator nodes.
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -96,10 +100,11 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The public endpoint of the instance.
-         * <p>
+         * <p>The public endpoint of the instance.</p>
+         * <p>You can log on to the AnalyticDB for PostgreSQL console and go to the <strong>Basic Information</strong> page of the instance to view the <strong>public endpoint</strong> in the <strong>Database Connection</strong> section.</p>
          * 
-         * You can log on to the AnalyticDB for PostgreSQL console and go to the **Basic Information** page of the instance to view the **public endpoint** in the **Database Connection** section.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -108,10 +113,13 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

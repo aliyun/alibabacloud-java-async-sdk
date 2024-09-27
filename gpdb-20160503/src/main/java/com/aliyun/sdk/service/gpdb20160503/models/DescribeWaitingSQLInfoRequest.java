@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWaitingSQLInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeWaitingSQLInfoRequest</p>
@@ -84,10 +85,13 @@ public class DescribeWaitingSQLInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -96,7 +100,10 @@ public class DescribeWaitingSQLInfoRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -105,10 +112,13 @@ public class DescribeWaitingSQLInfoRequest extends Request {
         }
 
         /**
-         * The ID of the process that uniquely identifies the query.
-         * <p>
+         * <p>The ID of the process that uniquely identifies the query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~461735~~">DescribeWaitingSQLRecords</a> operation to obtain the process IDs of lock-waiting queries.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeWaitingSQLRecords](~~461735~~) operation to obtain the process IDs of lock-waiting queries.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder PID(String PID) {
             this.putQueryParameter("PID", PID);

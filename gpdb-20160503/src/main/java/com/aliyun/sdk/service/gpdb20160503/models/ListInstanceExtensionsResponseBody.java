@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceExtensionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceExtensionsResponseBody</p>
@@ -93,7 +94,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +116,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -130,6 +143,12 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceExtensionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceExtensionsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentVersion")
         private String currentVersion;
@@ -241,7 +260,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The current version.
+             * <p>The current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -249,7 +271,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the extension.
+             * <p>The description of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>citext usage</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -257,7 +282,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The extension ID.
+             * <p>The extension ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder extensionId(String extensionId) {
                 this.extensionId = extensionId;
@@ -265,7 +293,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the databases in which the extension is installed.
+             * <p>The names of the databases in which the extension is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder installedDatabases(String installedDatabases) {
                 this.installedDatabases = installedDatabases;
@@ -273,7 +304,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an instance restart is required after you install the extension for the extension to take effect.
+             * <p>Indicates whether an instance restart is required after you install the extension for the extension to take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isInstallNeedRestart(Boolean isInstallNeedRestart) {
                 this.isInstallNeedRestart = isInstallNeedRestart;
@@ -281,7 +315,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version.
+             * <p>The latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -289,7 +326,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the extension.
+             * <p>The name of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>citext</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -297,7 +337,10 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the extension.
+             * <p>The status of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>installed</p>
              */
             public Builder status(String status) {
                 this.status = status;

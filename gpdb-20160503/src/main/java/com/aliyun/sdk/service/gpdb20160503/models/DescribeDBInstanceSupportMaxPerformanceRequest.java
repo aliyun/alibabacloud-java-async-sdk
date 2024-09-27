@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSupportMaxPerformanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceSupportMaxPerformanceRequest</p>
@@ -68,7 +69,10 @@ public class DescribeDBInstanceSupportMaxPerformanceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

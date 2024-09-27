@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUpsertCollectionDataJobRequest} extends {@link RequestModel}
  *
  * <p>GetUpsertCollectionDataJobRequest</p>
@@ -155,10 +156,13 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         } 
 
         /**
-         * The name of the collection.
-         * <p>
+         * <p>The name of the collection.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2401503~~">ListCollections</a> operation to query a list of collections.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListCollections](~~2401503~~) operation to query a list of collections.
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putBodyParameter("Collection", collection);
@@ -167,10 +171,13 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -179,7 +186,10 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * The ID of the vector data upload job. You can call the `UpsertCollectionDataAsync` operation to query the job ID.
+         * <p>The ID of the vector data upload job. You can call the <code>UpsertCollectionDataAsync</code> operation to query the job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -188,10 +198,13 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * The name of the namespace. Default value: public.
-         * <p>
+         * <p>The name of the namespace. Default value: public.</p>
+         * <blockquote>
+         * <p> You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.</p>
+         * </blockquote>
          * 
-         * >  You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -200,10 +213,13 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * The password of the namespace.
-         * <p>
+         * <p>The password of the namespace.</p>
+         * <blockquote>
+         * <p> The value of this parameter is specified when you call the CreateNamespace operation.</p>
+         * </blockquote>
          * 
-         * >  The value of this parameter is specified when you call the CreateNamespace operation.
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putBodyParameter("NamespacePassword", namespacePassword);
@@ -221,7 +237,10 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

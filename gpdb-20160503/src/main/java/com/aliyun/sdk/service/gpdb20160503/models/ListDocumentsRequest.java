@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDocumentsRequest} extends {@link RequestModel}
  *
  * <p>ListDocumentsRequest</p>
@@ -155,10 +156,13 @@ public class ListDocumentsRequest extends Request {
         } 
 
         /**
-         * The name of the document collection.
-         * <p>
+         * <p>The name of the document collection.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2618448~~">CreateDocumentCollection</a> operation to create a document collection and call the <a href="~~2618452~~">ListDocumentCollections</a> operation to query a list of document collections.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateDocumentCollection](~~2618448~~) operation to create a document collection and call the [ListDocumentCollections](~~2618452~~) operation to query a list of document collections.
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -176,7 +180,10 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Valid values: 1 to 100.
+         * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -185,10 +192,13 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * The name of the namespace. Default value: public.
-         * <p>
+         * <p>The name of the namespace. Default value: public.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2401495~~">CreateNamespace</a> operation to create a namespace and call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateNamespace](~~2401495~~) operation to create a namespace and call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -197,10 +207,13 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * The password of the namespace.
-         * <p>
+         * <p>The password of the namespace.</p>
+         * <blockquote>
+         * <p> This value is specified when you call the <a href="~~2401495~~">CreateNamespace</a> operation.</p>
+         * </blockquote>
          * 
-         * >  This value is specified when you call the [CreateNamespace](~~2401495~~) operation.
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -209,7 +222,10 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -227,7 +243,10 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

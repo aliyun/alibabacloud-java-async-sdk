@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStreamingJobResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStreamingJobResponseBody</p>
@@ -337,7 +338,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         private String writeMode; 
 
         /**
-         * The username of the account.
+         * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-account</p>
          */
         public Builder account(String account) {
             this.account = account;
@@ -353,7 +357,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the job was created.
+         * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T16:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -361,7 +368,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-kafka</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -377,7 +387,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The destination fields.
+         * <p>The destination fields.</p>
          */
         public Builder destColumns(java.util.List < String > destColumns) {
             this.destColumns = destColumns;
@@ -385,7 +395,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the destination database.
+         * <p>The name of the destination database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest-db</p>
          */
         public Builder destDatabase(String destDatabase) {
             this.destDatabase = destDatabase;
@@ -401,7 +414,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the destination table.
+         * <p>The name of the destination table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dest-table</p>
          */
         public Builder destTable(String destTable) {
             this.destTable = destTable;
@@ -417,7 +433,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the job status. For example, if the job is in the Exception state, the cause of the exception is displayed. If the job is in the Running state, this parameter is left empty.
+         * <p>The information about the job status. For example, if the job is in the Exception state, the cause of the exception is displayed. If the job is in the Running state, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -449,7 +468,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the job.
+         * <p>The description of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_job</p>
          */
         public Builder jobDescription(String jobDescription) {
             this.jobDescription = jobDescription;
@@ -457,7 +479,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -465,7 +490,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the job.
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-job</p>
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;
@@ -489,7 +517,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the job was last modified.
+         * <p>The time when the job was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T17:00:00Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -497,7 +528,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The password of the account.
+         * <p>The password of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pwd123</p>
          */
         public Builder password(String password) {
             this.password = password;
@@ -505,7 +539,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -513,7 +550,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The source fields.
+         * <p>The source fields.</p>
          */
         public Builder srcColumns(java.util.List < String > srcColumns) {
             this.srcColumns = srcColumns;
@@ -521,13 +558,16 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the job. Valid values:
-         * <p>
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li>Init: The job is being initialized.</li>
+         * <li>Running: The job is running.</li>
+         * <li>Exception: The job encounters an exception.</li>
+         * <li>Paused: The job is paused.</li>
+         * </ul>
          * 
-         * *   Init: The job is being initialized.
-         * *   Running: The job is running.
-         * *   Exception: The job encounters an exception.
-         * *   Paused: The job is paused.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -543,7 +583,10 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * The write mode.
+         * <p>The write mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERT/UPDATE/MERGE</p>
          */
         public Builder writeMode(String writeMode) {
             this.writeMode = writeMode;

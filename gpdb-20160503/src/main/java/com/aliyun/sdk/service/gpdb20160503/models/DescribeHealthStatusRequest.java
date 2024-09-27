@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHealthStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeHealthStatusRequest</p>
@@ -69,10 +70,13 @@ public class DescribeHealthStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
+         * <p>The ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -81,7 +85,10 @@ public class DescribeHealthStatusRequest extends Request {
         }
 
         /**
-         * The performance metric that you want to query. Separate multiple values with commas (,). For more information, see [Performance parameters](~~86943~~).
+         * <p>The performance metric that you want to query. Separate multiple values with commas (,). For more information, see <a href="~~86943~~">Performance parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node_master_status,node_master_connection_status,node_segment_connection_status,node_segment_disk_status</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);

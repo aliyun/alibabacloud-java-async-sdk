@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteStatementRequest} extends {@link RequestModel}
  *
  * <p>ExecuteStatementRequest</p>
@@ -183,10 +184,13 @@ public class ExecuteStatementRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -195,7 +199,10 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -213,7 +220,7 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * The configuration parameters.
+         * <p>The configuration parameters.</p>
          */
         public Builder parameters(java.util.List < ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -223,7 +230,10 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,11 +242,14 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * The execution type. Valid values:
-         * <p>
+         * <p>The execution type. Valid values:</p>
+         * <ul>
+         * <li>synchronous</li>
+         * <li>asynchronous (not supported)</li>
+         * </ul>
          * 
-         * *   synchronous
-         * *   asynchronous (not supported)
+         * <strong>example:</strong>
+         * <p>synchronous</p>
          */
         public Builder runType(String runType) {
             this.putQueryParameter("RunType", runType);
@@ -245,10 +258,13 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the access credential for the created Data API account. You can call the CreateSecret operation to create an access credential.</p>
+         * <blockquote>
+         * <p> To call the ExecuteStatement operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.</p>
+         * </blockquote>
          * 
-         * >  To call the ExecuteStatement operation as a Resource Access Management (RAM) user, the RAM user must have the permissions to call the UseSecret or GetSecretValue operation on the ARN of the access credential.
+         * <strong>example:</strong>
+         * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
          */
         public Builder secretArn(String secretArn) {
             this.putQueryParameter("SecretArn", secretArn);
@@ -257,7 +273,10 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * The SQL statements that you want to execute.
+         * <p>The SQL statements that you want to execute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from table1</p>
          */
         public Builder sql(String sql) {
             this.putBodyParameter("Sql", sql);
@@ -266,7 +285,7 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * The SQL statements.
+         * <p>The SQL statements.</p>
          */
         public Builder sqls(java.util.List < String > sqls) {
             String sqlsShrink = shrink(sqls, "Sqls", "json");
@@ -276,7 +295,10 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * The name of the set of SQL statements that you want to execute. This parameter takes effect when the RunType parameter is set to asynchronous.
+         * <p>The name of the set of SQL statements that you want to execute. This parameter takes effect when the RunType parameter is set to asynchronous.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder statementName(String statementName) {
             this.putQueryParameter("StatementName", statementName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVectorIndexRequest} extends {@link RequestModel}
  *
  * <p>CreateVectorIndexRequest</p>
@@ -241,12 +242,16 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.
-         * <p>
+         * <p>Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.</p>
+         * <ul>
+         * <li><p>0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.</p>
+         * </li>
+         * <li><p>1: uses the memory mapping technology to create indexes. This method does not support the delete or update operation.</p>
+         * </li>
+         * </ul>
          * 
-         * *   0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.
-         * 
-         * *   1: uses the memory mapping technology to create indexes. This method does not support the delete or update operation.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder externalStorage(Integer externalStorage) {
             this.putQueryParameter("ExternalStorage", externalStorage);
@@ -255,18 +260,23 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.
-         * <p>
+         * <p>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</p>
+         * <blockquote>
+         * <p> We recommend that you configure this parameter based on the value of the Dimension parameter.</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.</p>
+         * </li>
+         * <li><p>If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.</p>
+         * </li>
+         * <li><p>If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.</p>
+         * </li>
+         * <li><p>If you set Dimension to a value greater than 1024, set the value of HnswM to 128.</p>
+         * </li>
+         * </ul>
          * 
-         * >  We recommend that you configure this parameter based on the value of the Dimension parameter.
-         * 
-         * *   If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.
-         * 
-         * *   If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.
-         * 
-         * *   If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.
-         * 
-         * *   If you set Dimension to a value greater than 1024, set the value of HnswM to 128.
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder hnswM(Integer hnswM) {
             this.putQueryParameter("HnswM", hnswM);
@@ -293,14 +303,18 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * The method that is used to create vector indexes.Valid values:
-         * <p>
+         * <p>The method that is used to create vector indexes.Valid values:</p>
+         * <ul>
+         * <li><p>l2: Euclidean distance.</p>
+         * </li>
+         * <li><p>ip: inner product distance.</p>
+         * </li>
+         * <li><p>cosine: cosine similarity.</p>
+         * </li>
+         * </ul>
          * 
-         * - l2: Euclidean distance.
-         * 
-         * - ip: inner product distance.
-         * 
-         * - cosine: cosine similarity.
+         * <strong>example:</strong>
+         * <p>cosine</p>
          */
         public Builder metrics(String metrics) {
             this.putQueryParameter("Metrics", metrics);
@@ -327,11 +341,14 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the product quantization (PQ) feature for index acceleration. We recommend that you enable this feature for more than 500,000 rows of data. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the product quantization (PQ) feature for index acceleration. We recommend that you enable this feature for more than 500,000 rows of data. Valid values:</p>
+         * <ul>
+         * <li>0: no.</li>
+         * <li>1 (default): yes.</li>
+         * </ul>
          * 
-         * *   0: no.
-         * *   1 (default): yes.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pqEnable(Integer pqEnable) {
             this.putQueryParameter("PqEnable", pqEnable);

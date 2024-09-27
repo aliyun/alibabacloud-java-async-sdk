@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHadoopDataSourceRequest} extends {@link RequestModel}
  *
  * <p>CreateHadoopDataSourceRequest</p>
@@ -267,7 +268,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The string that specifies the content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
+         * <p>The string that specifies the content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder HDFSConf(String HDFSConf) {
             this.putQueryParameter("HDFSConf", HDFSConf);
@@ -276,7 +280,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The string that specifies the content of the Hadoop core-site.xml file.
+         * <p>The string that specifies the content of the Hadoop core-site.xml file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder hadoopCoreConf(String hadoopCoreConf) {
             this.putQueryParameter("HadoopCoreConf", hadoopCoreConf);
@@ -294,7 +301,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.
+         * <p>The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1 localhost</p>
          */
         public Builder hadoopHostsAddress(String hadoopHostsAddress) {
             this.putQueryParameter("HadoopHostsAddress", hadoopHostsAddress);
@@ -303,7 +313,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The string that specifies the content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.
+         * <p>The string that specifies the content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder hiveConf(String hiveConf) {
             this.putQueryParameter("HiveConf", hiveConf);
@@ -321,10 +334,13 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -333,7 +349,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The string that specifies the content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
+         * <p>The string that specifies the content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder yarnConf(String yarnConf) {
             this.putQueryParameter("YarnConf", yarnConf);

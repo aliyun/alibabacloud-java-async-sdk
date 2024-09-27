@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>CreateDBInstanceRequest</p>
@@ -604,10 +605,13 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set.
-         * <p>
+         * <p>The ID of the backup set.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~210093~~">DescribeDataBackups</a> operation to query the IDs of all backup sets in the instance.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDataBackups](~~210093~~) operation to query the IDs of all backup sets in the instance.
+         * <strong>example:</strong>
+         * <p>1111111111</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -616,7 +620,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](~~327176~~).
+         * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="~~327176~~">Ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -625,13 +632,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to load a sample dataset after the instance is created. Valid values:
-         * <p>
+         * <p>Specifies whether to load a sample dataset after the instance is created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, no sample dataset is loaded.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  If you do not specify this parameter, no sample dataset is loaded.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder createSampleData(Boolean createSampleData) {
             this.putQueryParameter("CreateSampleData", createSampleData);
@@ -640,13 +651,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The edition of the instance. Valid values:
-         * <p>
+         * <p>The edition of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
+         * <li><strong>Basic</strong>: Basic Edition.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when you create an instance in elastic storage mode.</p>
+         * </blockquote>
          * 
-         * - **HighAvailability**: High-availability Edition.
-         * - **Basic**: Basic Edition.
-         * 
-         * > This parameter must be specified when you create an instance in elastic storage mode.
+         * <strong>example:</strong>
+         * <p>HighAvailability</p>
          */
         public Builder DBInstanceCategory(String DBInstanceCategory) {
             this.putQueryParameter("DBInstanceCategory", DBInstanceCategory);
@@ -655,10 +670,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. For information, see [Instance types](~~86942~~).
-         * <p>
+         * <p>The instance type of the instance. For information, see <a href="~~86942~~">Instance types</a>.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when you create an instance in reserved storage mode.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified when you create an instance in reserved storage mode.
+         * <strong>example:</strong>
+         * <p>gpdb.group.segsdx1</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -667,7 +685,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The description of the instance.
+         * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -676,10 +697,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The number of compute groups. Valid values: 2, 4, 8, 12, 16, 24, 32, 64, 96, and 128.
-         * <p>
+         * <p>The number of compute groups. Valid values: 2, 4, 8, 12, 16, 24, 32, 64, 96, and 128.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when you create an instance in reserved storage mode.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified when you create an instance in reserved storage mode.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder DBInstanceGroupCount(String DBInstanceGroupCount) {
             this.putQueryParameter("DBInstanceGroupCount", DBInstanceGroupCount);
@@ -688,14 +712,18 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The resource type of the instance. Valid values:
-         * <p>
+         * <p>The resource type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>StorageElastic</strong>: elastic storage mode.</li>
+         * <li><strong>Serverless</strong>: Serverless mode.</li>
+         * <li><strong>Classic</strong>: reserved storage mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified.</p>
+         * </blockquote>
          * 
-         * - **StorageElastic**: elastic storage mode.
-         * - **Serverless**: Serverless mode.
-         * - **Classic**: reserved storage mode.
-         * 
-         * > This parameter must be specified.
+         * <strong>example:</strong>
+         * <p>StorageElastic</p>
          */
         public Builder DBInstanceMode(String DBInstanceMode) {
             this.putQueryParameter("DBInstanceMode", DBInstanceMode);
@@ -713,10 +741,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the encryption key.
-         * <p>
+         * <p>The ID of the encryption key.</p>
+         * <blockquote>
+         * <p>If EncryptionType is set to CloudDisk, you must specify an encryption key that resides in the same region as the cloud disk that is specified by EncryptionType. Otherwise, leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > If EncryptionType is set to CloudDisk, you must specify an encryption key that resides in the same region as the cloud disk that is specified by EncryptionType. Otherwise, leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>0d2470df-da7b-4786-b981-88888888****</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -725,13 +756,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The encryption type. Valid values:
-         * <p>
+         * <p>The encryption type. Valid values:</p>
+         * <ul>
+         * <li><strong>NULL</strong> (default): Encryption is disabled.</li>
+         * <li><strong>CloudDisk</strong>: Encryption is enabled on cloud disks, and EncryptionKey is used to specify an encryption key.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Disk encryption cannot be disabled after it is enabled.</p>
+         * </blockquote>
          * 
-         * - **NULL** (default): Encryption is disabled.
-         * - **CloudDisk**: Encryption is enabled on cloud disks, and EncryptionKey is used to specify an encryption key.
-         * 
-         * > Disk encryption cannot be disabled after it is enabled.
+         * <strong>example:</strong>
+         * <p>CloudDisk</p>
          */
         public Builder encryptionType(String encryptionType) {
             this.putQueryParameter("EncryptionType", encryptionType);
@@ -740,7 +775,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Set the value to gpdb.
+         * <p>The database engine of the instance. Set the value to gpdb.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gpdb</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -749,11 +787,14 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The version of the database engine. Valid values:
-         * <p>
+         * <p>The version of the database engine. Valid values:</p>
+         * <ul>
+         * <li>6.0</li>
+         * <li>7.0</li>
+         * </ul>
          * 
-         * - 6.0
-         * - 7.0
+         * <strong>example:</strong>
+         * <p>6.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -762,10 +803,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The wait time for the instance that has no traffic to become idle. Minimum value: 60. Default value: 600. Unit: seconds.
-         * <p>
+         * <p>The wait time for the instance that has no traffic to become idle. Minimum value: 60. Default value: 600. Unit: seconds.</p>
+         * <blockquote>
+         * <p>This parameter must be specified only when you create an instance in automatic Serverless mode.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified only when you create an instance in automatic Serverless mode.
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder idleTime(Integer idleTime) {
             this.putQueryParameter("IdleTime", idleTime);
@@ -774,14 +818,18 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Set the value to **VPC**.
-         * <p>
+         * <p>The network type of the instance. Set the value to <strong>VPC</strong>.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>Only the Virtual Private Cloud (VPC) type is supported in Alibaba Cloud public cloud.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, VPC is used.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   Only the Virtual Private Cloud (VPC) type is supported in Alibaba Cloud public cloud.
-         * 
-         * *   If you do not specify this parameter, VPC is used.
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -790,28 +838,31 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The specifications of compute nodes.
-         * <p>
+         * <p>The specifications of compute nodes.</p>
+         * <p>Valid values for High-availability Edition instances in elastic storage mode:</p>
+         * <ul>
+         * <li><strong>2C16G</strong></li>
+         * <li><strong>4C32G</strong></li>
+         * <li><strong>16C128G</strong></li>
+         * </ul>
+         * <p>Valid values for Basic Edition instances in elastic storage mode:</p>
+         * <ul>
+         * <li><strong>2C8G</strong></li>
+         * <li><strong>4C16G</strong></li>
+         * <li><strong>8C32G</strong></li>
+         * <li><strong>16C64G</strong></li>
+         * </ul>
+         * <p>Valid values for instances in Serverless mode:</p>
+         * <ul>
+         * <li><strong>4C16G</strong></li>
+         * <li><strong>8C32G</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.</p>
+         * </blockquote>
          * 
-         * Valid values for High-availability Edition instances in elastic storage mode:
-         * 
-         * - **2C16G**
-         * - **4C32G**
-         * - **16C128G**
-         * 
-         * Valid values for Basic Edition instances in elastic storage mode:
-         * 
-         * - **2C8G**
-         * - **4C16G**
-         * - **8C32G**
-         * - **16C64G**
-         * 
-         * Valid values for instances in Serverless mode:
-         * 
-         * - **4C16G**
-         * - **8C32G**
-         * 
-         * > This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.
+         * <strong>example:</strong>
+         * <p>2C16G</p>
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -820,16 +871,20 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The amount of coordinator node resources. Valid values:
-         * <p>
+         * <p>The amount of coordinator node resources. Valid values:</p>
+         * <ul>
+         * <li>2 CU</li>
+         * <li>4 CU</li>
+         * <li>8 CU</li>
+         * <li>16 CU</li>
+         * <li>32 CU</li>
+         * </ul>
+         * <blockquote>
+         * <p> You are charged for coordinator node resources of more than 8 CUs.</p>
+         * </blockquote>
          * 
-         * *   2 CU
-         * *   4 CU
-         * *   8 CU
-         * *   16 CU
-         * *   32 CU
-         * 
-         * >  You are charged for coordinator node resources of more than 8 CUs.
+         * <strong>example:</strong>
+         * <p>8 CU</p>
          */
         public Builder masterCU(Integer masterCU) {
             this.putQueryParameter("MasterCU", masterCU);
@@ -838,7 +893,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder masterNodeNum(String masterNodeNum) {
             this.putQueryParameter("MasterNodeNum", masterNodeNum);
@@ -856,17 +914,22 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you do not specify this parameter, Postpaid is used.</p>
+         * </li>
+         * <li><p>You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **Postpaid**: pay-as-you-go.
-         * *   **Prepaid**: subscription.
-         * 
-         * > 
-         * 
-         * *   If you do not specify this parameter, Postpaid is used.
-         * 
-         * *   You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -875,12 +938,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. Valid values:
-         * <p>
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong></li>
+         * <li><strong>Year</strong><blockquote>
+         * <p>This parameter must be specified when PayType is set to Prepaid.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
-         * - **Month**
-         * - **Year**
-         * > This parameter must be specified when PayType is set to Prepaid.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -889,7 +957,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.*</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -907,7 +978,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <p>The ID of the region. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -916,7 +990,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -925,10 +1002,11 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The IP address whitelist of the instance.
-         * <p>
+         * <p>The IP address whitelist of the instance.</p>
+         * <p>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="~~86928~~">ModifySecurityIps</a> operation to modify the IP address whitelist after you create an instance.</p>
          * 
-         * A value of 127.0.0.1 denies access from any external IP address. You can call the [ModifySecurityIps](~~86928~~) operation to modify the IP address whitelist after you create an instance.
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -937,18 +1015,23 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The performance level of ESSDs. Valid values:
-         * <p>
+         * <p>The performance level of ESSDs. Valid values:</p>
+         * <ul>
+         * <li><strong>pl0</strong></li>
+         * <li><strong>pl1</strong></li>
+         * <li><strong>pl2</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter takes effect only when SegStorageType is set to cloud_essd.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, pl1 is used.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **pl0**
-         * *   **pl1**
-         * *   **pl2**
-         * 
-         * > 
-         * 
-         * *   This parameter takes effect only when SegStorageType is set to cloud_essd.
-         * 
-         * *   If you do not specify this parameter, pl1 is used.
+         * <strong>example:</strong>
+         * <p>pl1</p>
          */
         public Builder segDiskPerformanceLevel(String segDiskPerformanceLevel) {
             this.putQueryParameter("SegDiskPerformanceLevel", segDiskPerformanceLevel);
@@ -957,14 +1040,18 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The number of compute nodes.
-         * <p>
+         * <p>The number of compute nodes.</p>
+         * <ul>
+         * <li>Valid values for High-availability Edition instances in elastic storage mode: multiples of 4 in the range of 4 to 512.</li>
+         * <li>Valid values for Basic Edition instances in elastic storage mode: multiples of 2 in the range of 2 to 512.</li>
+         * <li>Valid values for instances in Serverless mode: multiples of 2 in the range of 2 to 512.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.</p>
+         * </blockquote>
          * 
-         * - Valid values for High-availability Edition instances in elastic storage mode: multiples of 4 in the range of 4 to 512.
-         * - Valid values for Basic Edition instances in elastic storage mode: multiples of 2 in the range of 2 to 512.
-         * - Valid values for instances in Serverless mode: multiples of 2 in the range of 2 to 512.
-         * 
-         * > This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder segNodeNum(String segNodeNum) {
             this.putQueryParameter("SegNodeNum", segNodeNum);
@@ -973,10 +1060,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The disk storage type of the instance. Only enhanced SSDs (ESSDs) are supported. Set the value to cloud_essd.
-         * <p>
+         * <p>The disk storage type of the instance. Only enhanced SSDs (ESSDs) are supported. Set the value to cloud_essd.</p>
+         * <blockquote>
+         * <p>This parameter must be specified when you create an instance in elastic storage mode.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified when you create an instance in elastic storage mode.
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder segStorageType(String segStorageType) {
             this.putQueryParameter("SegStorageType", segStorageType);
@@ -985,13 +1075,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The type of the Serverless mode. Valid values:
-         * <p>
+         * <p>The type of the Serverless mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Manual</strong> (default): manual scheduling.</li>
+         * <li><strong>Auto</strong>: automatic scheduling.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter must be specified only when you create an instance in Serverless mode.</p>
+         * </blockquote>
          * 
-         * - **Manual** (default): manual scheduling.
-         * - **Auto**: automatic scheduling.
-         * 
-         * > This parameter must be specified only when you create an instance in Serverless mode.
+         * <strong>example:</strong>
+         * <p>Auto</p>
          */
         public Builder serverlessMode(String serverlessMode) {
             this.putQueryParameter("ServerlessMode", serverlessMode);
@@ -1000,10 +1094,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The threshold of computing resources. Unit: AnalyticDB compute unit (ACU). Valid values: 8 to 32. The value must be in increments of 8 ACUs. Default value: 32.
-         * <p>
+         * <p>The threshold of computing resources. Unit: AnalyticDB compute unit (ACU). Valid values: 8 to 32. The value must be in increments of 8 ACUs. Default value: 32.</p>
+         * <blockquote>
+         * <p>This parameter must be specified only when you create an instance in automatic Serverless mode.</p>
+         * </blockquote>
          * 
-         * > This parameter must be specified only when you create an instance in automatic Serverless mode.
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder serverlessResource(Integer serverlessResource) {
             this.putQueryParameter("ServerlessResource", serverlessResource);
@@ -1012,10 +1109,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the source instance.
-         * <p>
+         * <p>The ID of the source instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder srcDbInstanceName(String srcDbInstanceName) {
             this.putQueryParameter("SrcDbInstanceName", srcDbInstanceName);
@@ -1024,10 +1124,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the instance. Unit: GB. Valid values: 50 to 6000.
-         * <p>
+         * <p>The storage capacity of the instance. Unit: GB. Valid values: 50 to 6000.</p>
+         * <blockquote>
+         * <p> This parameter must be specified when you create an instance in elastic storage mode.</p>
+         * </blockquote>
          * 
-         * >  This parameter must be specified when you create an instance in elastic storage mode.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder storageSize(Long storageSize) {
             this.putQueryParameter("StorageSize", storageSize);
@@ -1036,7 +1139,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -1045,7 +1151,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1054,12 +1160,17 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The subscription duration.
-         * <p>
+         * <p>The subscription duration.</p>
+         * <ul>
+         * <li>Valid values when Period is set to Month: 1 to 9.</li>
+         * <li>Valid values when Period is set to Year: 1 to 3.<blockquote>
+         * <p>This parameter must be specified when PayType is set to Prepaid.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
-         * - Valid values when Period is set to Month: 1 to 9.
-         * - Valid values when Period is set to Year: 1 to 3.
-         * > This parameter must be specified when PayType is set to Prepaid.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -1068,14 +1179,18 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The VPC ID of the instance.
-         * <p>
+         * <p>The VPC ID of the instance.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>This parameter</strong> must be specified.</p>
+         * </li>
+         * <li><p>The region where the <strong>VPC</strong> resides must be the same as the region that is specified by <strong>RegionId</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   **This parameter** must be specified.
-         * 
-         * *   The region where the **VPC** resides must be the same as the region that is specified by **RegionId**.
+         * <strong>example:</strong>
+         * <p>vpc-bp*******************</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -1084,14 +1199,18 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the instance.
-         * <p>
+         * <p>The vSwitch ID of the instance.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>This parameter</strong> must be specified.</p>
+         * </li>
+         * <li><p>The zone where the <strong>vSwitch</strong> resides must be the same as the zone that is specified by <strong>ZoneId</strong>.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   **This parameter** must be specified.
-         * 
-         * *   The zone where the **vSwitch** resides must be the same as the zone that is specified by **ZoneId**.
+         * <strong>example:</strong>
+         * <p>vsw-bp*******************</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1100,17 +1219,22 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable vector search engine optimization. Valid values:
-         * <p>
+         * <p>Specifies whether to enable vector search engine optimization. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>We recommend that you <strong>do not enable</strong> vector search engine optimization in mainstream analysis, data warehousing, and real-time data warehousing scenarios.</p>
+         * </li>
+         * <li><p>We recommend that you <strong>enable</strong> vector search engine optimization in AI-generated content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **enabled**
-         * *   **disabled** (default)
-         * 
-         * > 
-         * 
-         * *   We recommend that you **do not enable** vector search engine optimization in mainstream analysis, data warehousing, and real-time data warehousing scenarios.
-         * 
-         * *   We recommend that you **enable** vector search engine optimization in AI-generated content (AIGC) and vector retrieval scenarios that require the vector analysis engine.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder vectorConfigurationStatus(String vectorConfigurationStatus) {
             this.putQueryParameter("VectorConfigurationStatus", vectorConfigurationStatus);
@@ -1119,7 +1243,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID of the read-only instance. You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.
+         * <p>The zone ID of the read-only instance. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1134,6 +1261,12 @@ public class CreateDBInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateDBInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateDBInstanceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1173,12 +1306,15 @@ public class CreateDBInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Take note of the following requirements:
-             * <p>
+             * <p>The key of tag N. Take note of the following requirements:</p>
+             * <ul>
+             * <li>The tag key cannot be an empty string.</li>
+             * <li>The tag key can be up to 128 characters in length.</li>
+             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
              * 
-             * - The tag key cannot be an empty string.
-             * - The tag key can be up to 128 characters in length.
-             * - The tag key cannot start with `aliyun` or `acs:`, and contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1186,12 +1322,15 @@ public class CreateDBInstanceRequest extends Request {
             }
 
             /**
-             * The value of tag N. Take note of the following requirements:
-             * <p>
+             * <p>The value of tag N. Take note of the following requirements:</p>
+             * <ul>
+             * <li>The tag key cannot be an empty string.</li>
+             * <li>The tag key can be up to 128 characters in length.</li>
+             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
              * 
-             * - The tag key cannot be an empty string.
-             * - The tag key can be up to 128 characters in length.
-             * - The tag key cannot start with `aliyun` or `acs:`, and contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

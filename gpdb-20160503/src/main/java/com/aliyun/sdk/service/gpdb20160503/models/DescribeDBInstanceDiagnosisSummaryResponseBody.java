@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceDiagnosisSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceDiagnosisSummaryResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The group ID.
+         * <p>The group ID.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -105,7 +106,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The state information about the coordinator node.
+         * <p>The state information about the coordinator node.</p>
          */
         public Builder masterStatusInfo(MasterStatusInfo masterStatusInfo) {
             this.masterStatusInfo = masterStatusInfo;
@@ -113,7 +114,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +125,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>070534EC-78D5-5519-83CC-E7B1A9213483</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +136,7 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The state information about compute nodes.
+         * <p>The state information about compute nodes.</p>
          */
         public Builder segmentStatusInfo(SegmentStatusInfo segmentStatusInfo) {
             this.segmentStatusInfo = segmentStatusInfo;
@@ -137,7 +144,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +160,12 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceDiagnosisSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceDiagnosisSummaryResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private String hostname;
@@ -297,7 +313,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gp-t4np568qe9710****-master-100984919</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -305,7 +324,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder nodeAddress(String nodeAddress) {
                 this.nodeAddress = nodeAddress;
@@ -313,7 +335,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The node group ID.
+             * <p>The node group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder nodeCID(String nodeCID) {
                 this.nodeCID = nodeCID;
@@ -321,7 +346,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeID(String nodeID) {
                 this.nodeID = nodeID;
@@ -329,7 +357,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host where the node resides.
+             * <p>The name of the host where the node resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1.i-t4n4c4ryr0yr441d****</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -337,7 +368,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the node.
+             * <p>The port number of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder nodePort(String nodePort) {
                 this.nodePort = nodePort;
@@ -345,13 +379,15 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The initial role of the node. Valid values:
-             * <p>
+             * <p>The initial role of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>primary</strong>: primary node.</li>
+             * <li><strong>mirror</strong>: secondary node.</li>
+             * </ul>
+             * <p>If the value of this parameter is the same as that of <strong>NodeRole</strong>, no primary/secondary switchover occurs. If the value of this parameter is different from that of <strong>NodeRole</strong>, a primary/secondary switchover occurs.</p>
              * 
-             * *   **primary**: primary node.
-             * *   **mirror**: secondary node.
-             * 
-             * If the value of this parameter is the same as that of **NodeRole**, no primary/secondary switchover occurs. If the value of this parameter is different from that of **NodeRole**, a primary/secondary switchover occurs.
+             * <strong>example:</strong>
+             * <p>primary</p>
              */
             public Builder nodePreferredRole(String nodePreferredRole) {
                 this.nodePreferredRole = nodePreferredRole;
@@ -359,12 +395,15 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The data synchronization state of the node. Valid values:
-             * <p>
+             * <p>The data synchronization state of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>Synced</strong>: The node data is synchronized.</li>
+             * <li><strong>Not Syncing</strong>: The node data is not synchronized.</li>
+             * <li><strong>No sync required</strong>: Data synchronization is not required. This value may be returned only for the coordinator node.</li>
+             * </ul>
              * 
-             * *   **Synced**: The node data is synchronized.
-             * *   **Not Syncing**: The node data is not synchronized.
-             * *   **No sync required**: Data synchronization is not required. This value may be returned only for the coordinator node.
+             * <strong>example:</strong>
+             * <p>Synced</p>
              */
             public Builder nodeReplicationMode(String nodeReplicationMode) {
                 this.nodeReplicationMode = nodeReplicationMode;
@@ -372,11 +411,14 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The current role of the node. Valid values:
-             * <p>
+             * <p>The current role of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>primary</strong>: primary node.</li>
+             * <li><strong>mirror</strong>: secondary node.</li>
+             * </ul>
              * 
-             * *   **primary**: primary node.
-             * *   **mirror**: secondary node.
+             * <strong>example:</strong>
+             * <p>primary</p>
              */
             public Builder nodeRole(String nodeRole) {
                 this.nodeRole = nodeRole;
@@ -384,11 +426,14 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The running state of the node. Valid values:
-             * <p>
+             * <p>The running state of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>UP</strong>: The node is running.</li>
+             * <li><strong>DOWN</strong>: The node is faulty.</li>
+             * </ul>
              * 
-             * *   **UP**: The node is running.
-             * *   **DOWN**: The node is faulty.
+             * <strong>example:</strong>
+             * <p>UP</p>
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -396,12 +441,15 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The type of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>master</strong>: primary coordinator node.</li>
+             * <li><strong>slave</strong>: standby coordinator node.</li>
+             * <li><strong>segment</strong>: compute node.</li>
+             * </ul>
              * 
-             * *   **master**: primary coordinator node.
-             * *   **slave**: standby coordinator node.
-             * *   **segment**: compute node.
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -415,6 +463,12 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceDiagnosisSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceDiagnosisSummaryResponseBody</p>
+     */
     public static class MasterStatusInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExceptionNodeNum")
         private Integer exceptionNodeNum;
@@ -502,7 +556,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             private Integer syncedNodeNum; 
 
             /**
-             * The number of abnormal nodes.
+             * <p>The number of abnormal nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exceptionNodeNum(Integer exceptionNodeNum) {
                 this.exceptionNodeNum = exceptionNodeNum;
@@ -510,7 +567,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of normal nodes.
+             * <p>The number of normal nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder normalNodeNum(Integer normalNodeNum) {
                 this.normalNodeNum = normalNodeNum;
@@ -518,7 +578,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes whose roles are reversed.
+             * <p>The number of nodes whose roles are reversed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder notPreferredNodeNum(Integer notPreferredNodeNum) {
                 this.notPreferredNodeNum = notPreferredNodeNum;
@@ -526,7 +589,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unsynchronized nodes.
+             * <p>The number of unsynchronized nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder notSyncingNodeNum(Integer notSyncingNodeNum) {
                 this.notSyncingNodeNum = notSyncingNodeNum;
@@ -534,7 +600,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes whose roles are normal.
+             * <p>The number of nodes whose roles are normal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder preferredNodeNum(Integer preferredNodeNum) {
                 this.preferredNodeNum = preferredNodeNum;
@@ -542,7 +611,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of synchronized nodes.
+             * <p>The number of synchronized nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder syncedNodeNum(Integer syncedNodeNum) {
                 this.syncedNodeNum = syncedNodeNum;
@@ -556,6 +628,12 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceDiagnosisSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceDiagnosisSummaryResponseBody</p>
+     */
     public static class SegmentStatusInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExceptionNodeNum")
         private Integer exceptionNodeNum;
@@ -643,7 +721,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             private Integer syncedNodeNum; 
 
             /**
-             * The number of abnormal nodes.
+             * <p>The number of abnormal nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exceptionNodeNum(Integer exceptionNodeNum) {
                 this.exceptionNodeNum = exceptionNodeNum;
@@ -651,7 +732,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of normal nodes.
+             * <p>The number of normal nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder normalNodeNum(Integer normalNodeNum) {
                 this.normalNodeNum = normalNodeNum;
@@ -659,7 +743,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes whose roles are reversed.
+             * <p>The number of nodes whose roles are reversed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder notPreferredNodeNum(Integer notPreferredNodeNum) {
                 this.notPreferredNodeNum = notPreferredNodeNum;
@@ -667,7 +754,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unsynchronized nodes.
+             * <p>The number of unsynchronized nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder notSyncingNodeNum(Integer notSyncingNodeNum) {
                 this.notSyncingNodeNum = notSyncingNodeNum;
@@ -675,7 +765,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes whose roles are normal.
+             * <p>The number of nodes whose roles are normal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder preferredNodeNum(Integer preferredNodeNum) {
                 this.preferredNodeNum = preferredNodeNum;
@@ -683,7 +776,10 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of synchronized nodes.
+             * <p>The number of synchronized nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder syncedNodeNum(Integer syncedNodeNum) {
                 this.syncedNodeNum = syncedNodeNum;

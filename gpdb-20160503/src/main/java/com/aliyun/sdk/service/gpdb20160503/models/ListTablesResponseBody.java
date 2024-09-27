@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTablesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTablesResponseBody</p>
@@ -85,7 +86,10 @@ public class ListTablesResponseBody extends TeaModel {
         private Tables tables; 
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -93,7 +97,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +108,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,11 +119,14 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -121,7 +134,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried tables.
+         * <p>The queried tables.</p>
          */
         public Builder tables(Tables tables) {
             this.tables = tables;
@@ -134,6 +147,12 @@ public class ListTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTablesResponseBody</p>
+     */
     public static class Tables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < String > tables;
@@ -161,7 +180,7 @@ public class ListTablesResponseBody extends TeaModel {
             private java.util.List < String > tables; 
 
             /**
-             * The queried tables.
+             * <p>The queried tables.</p>
              */
             public Builder tables(java.util.List < String > tables) {
                 this.tables = tables;

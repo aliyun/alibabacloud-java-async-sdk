@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCollectionDataRequest} extends {@link RequestModel}
  *
  * <p>DeleteCollectionDataRequest</p>
@@ -168,7 +169,10 @@ public class DeleteCollectionDataRequest extends Request {
         } 
 
         /**
-         * The name of the collection.
+         * <p>The name of the collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -177,7 +181,10 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * The data that you want to delete.
+         * <p>The data that you want to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;title&quot;:[&quot;a&quot;,&quot;b&quot;]}</p>
          */
         public Builder collectionData(String collectionData) {
             this.putQueryParameter("CollectionData", collectionData);
@@ -186,7 +193,10 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * The filter conditions for the data to be deleted.
+         * <p>The filter conditions for the data to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a &lt; 10</p>
          */
         public Builder collectionDataFilter(String collectionDataFilter) {
             this.putQueryParameter("CollectionDataFilter", collectionDataFilter);
@@ -195,10 +205,13 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -207,7 +220,10 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -216,7 +232,10 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * The password of the namespace.
+         * <p>The password of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -234,10 +253,13 @@ public class DeleteCollectionDataRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

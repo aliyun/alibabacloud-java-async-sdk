@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListStreamingDataServicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListStreamingDataServicesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListStreamingDataServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListStreamingDataServicesResponseBody</p>
+     */
     public static class ServiceItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCollectionDataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCollectionDataResponseBody</p>
@@ -85,7 +86,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The retrieved data.
+         * <p>The retrieved data.</p>
          */
         public Builder matches(Matches matches) {
             this.matches = matches;
@@ -117,7 +118,10 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries that match the search conditions. This parameter is returned only when the Offset parameter is not 0.
+         * <p>The total number of entries that match the search conditions. This parameter is returned only when the Offset parameter is not 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -130,6 +134,12 @@ public class QueryCollectionDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCollectionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCollectionDataResponseBody</p>
+     */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("value")
         private java.util.List < Double > value;
@@ -171,6 +181,12 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCollectionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCollectionDataResponseBody</p>
+     */
     public static class Match extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -234,7 +250,10 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             private Values values; 
 
             /**
-             * The unique ID of the vector data.
+             * <p>The unique ID of the vector data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doca-1234</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -242,7 +261,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata.
+             * <p>The metadata.</p>
              */
             public Builder metadata(java.util.Map < String, String > metadata) {
                 this.metadata = metadata;
@@ -250,7 +269,10 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The similarity score of the data. It is related to the `l2, ip, or cosine` algorithm that is specified when you create an index.
+             * <p>The similarity score of the data. It is related to the <code>l2, ip, or cosine</code> algorithm that is specified when you create an index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.12345</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -258,7 +280,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * The retrieved vector data.
+             * <p>The retrieved vector data.</p>
              */
             public Builder values(Values values) {
                 this.values = values;
@@ -272,6 +294,12 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCollectionDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCollectionDataResponseBody</p>
+     */
     public static class Matches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("match")
         private java.util.List < Match> match;

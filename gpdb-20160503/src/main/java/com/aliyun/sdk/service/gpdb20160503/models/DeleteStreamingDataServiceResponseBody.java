@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStreamingDataServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteStreamingDataServiceResponseBody</p>
@@ -61,10 +62,11 @@ public class DeleteStreamingDataServiceResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * The error message returned if the operation fails.
-         * <p>
+         * <p>The error message returned if the operation fails.</p>
+         * <p>This parameter is returned only when the return value of <strong>Status</strong> is <strong>false</strong>.</p>
          * 
-         * This parameter is returned only when the return value of **Status** is **false**.
+         * <strong>example:</strong>
+         * <p>This external service cannot be deleted because it is still used by other data source.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -72,7 +74,10 @@ public class DeleteStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,11 +85,14 @@ public class DeleteStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: The operation fails.</li>
+         * <li><strong>true</strong>: The operation is successful.</li>
+         * </ul>
          * 
-         * *   **false**: The operation fails.
-         * *   **true**: The operation is successful.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

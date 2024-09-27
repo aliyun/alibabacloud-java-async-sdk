@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBVersionRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBVersionRequest</p>
@@ -138,7 +139,10 @@ public class UpgradeDBVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-wz9kmr708m155j***</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -147,7 +151,10 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used and does not need to be specified.
+         * <p>This parameter is no longer used and does not need to be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder majorVersion(String majorVersion) {
             this.putQueryParameter("MajorVersion", majorVersion);
@@ -156,7 +163,10 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * The minor version of the instance.
+         * <p>The minor version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.3.6.1-202112012048</p>
          */
         public Builder minorVersion(String minorVersion) {
             this.putQueryParameter("MinorVersion", minorVersion);
@@ -174,7 +184,10 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +196,10 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used and does not need to be specified.
+         * <p>This parameter is no longer used and does not need to be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -192,7 +208,10 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used and does not need to be specified.
+         * <p>This parameter is no longer used and does not need to be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);

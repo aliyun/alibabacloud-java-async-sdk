@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDBInstanceSSLRequest} extends {@link RequestModel}
  *
  * <p>ModifyDBInstanceSSLRequest</p>
@@ -83,7 +84,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
         } 
 
         /**
-         * The encrypted endpoint. By default, the wildcards are used for instances that are hosted on ECS instances. This way, the endpoints that can be resolved to the same IP address are encrypted.
+         * <p>The encrypted endpoint. By default, the wildcards are used for instances that are hosted on ECS instances. This way, the endpoints that can be resolved to the same IP address are encrypted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxxxx-master.gpdbmaster.singapore.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -92,7 +96,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -101,12 +108,15 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The status of SSL encryption. Valid values:
-         * <p>
+         * <p>The status of SSL encryption. Valid values:</p>
+         * <ul>
+         * <li>0: disables SSL encryption.</li>
+         * <li>1: enables SSL encryption.</li>
+         * <li>2: updates SSL encryption.</li>
+         * </ul>
          * 
-         * *   0: disables SSL encryption.
-         * *   1: enables SSL encryption.
-         * *   2: updates SSL encryption.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder SSLEnabled(Integer SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);

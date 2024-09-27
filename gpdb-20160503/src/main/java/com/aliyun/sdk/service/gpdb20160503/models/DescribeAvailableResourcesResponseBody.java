@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableResourcesResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -69,7 +73,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61DC563C-F8E4-593A-8D27-CE**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -90,6 +97,12 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourcesResponseBody</p>
+     */
     public static class NodeCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCount")
         private String maxCount;
@@ -141,7 +154,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private String step; 
 
             /**
-             * The maximum number of compute nodes.
+             * <p>The maximum number of compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder maxCount(String maxCount) {
                 this.maxCount = maxCount;
@@ -149,7 +165,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of compute nodes.
+             * <p>The minimum number of compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder minCount(String minCount) {
                 this.minCount = minCount;
@@ -157,10 +176,11 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The step size for adding compute nodes.
-             * <p>
+             * <p>The step size for adding compute nodes.</p>
+             * <p>For example, if the value of this parameter is 4, compute nodes must be added by multiples of 4.</p>
              * 
-             * For example, if the value of this parameter is 4, compute nodes must be added by multiples of 4.
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder step(String step) {
                 this.step = step;
@@ -174,6 +194,12 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourcesResponseBody</p>
+     */
     public static class StorageSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCount")
         private String maxCount;
@@ -225,7 +251,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private String step; 
 
             /**
-             * The maximum storage capacity of each compute node.
+             * <p>The maximum storage capacity of each compute node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxCount(String maxCount) {
                 this.maxCount = maxCount;
@@ -233,7 +262,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum storage capacity of each compute node.
+             * <p>The minimum storage capacity of each compute node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder minCount(String minCount) {
                 this.minCount = minCount;
@@ -241,7 +273,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The step size for adding storage capacity for compute nodes.
+             * <p>The step size for adding storage capacity for compute nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder step(String step) {
                 this.step = step;
@@ -255,6 +290,12 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourcesResponseBody</p>
+     */
     public static class SupportedInstanceClasses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -354,11 +395,14 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * The instance edition. Valid values:
-             * <p>
+             * <p>The instance edition. Valid values:</p>
+             * <ul>
+             * <li><strong>HighAvailability</strong>: High-availability Edition</li>
+             * <li><strong>Basic</strong>: Basic Edition</li>
+             * </ul>
              * 
-             * *   **HighAvailability**: High-availability Edition
-             * *   **Basic**: Basic Edition
+             * <strong>example:</strong>
+             * <p>HighAvailability</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -366,7 +410,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of compute node specifications.
+             * <p>The description of compute node specifications.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -374,7 +418,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of each compute node.
+             * <p>The specifications of each compute node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2C16G</p>
              */
             public Builder displayClass(String displayClass) {
                 this.displayClass = displayClass;
@@ -382,7 +429,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of each compute node.
+             * <p>The specifications of each compute node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2C16G</p>
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -390,7 +440,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the compute nodes.
+             * <p>Details about the compute nodes.</p>
              */
             public Builder nodeCount(NodeCount nodeCount) {
                 this.nodeCount = nodeCount;
@@ -398,7 +448,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the storage capacity of compute nodes.
+             * <p>Details about the storage capacity of compute nodes.</p>
              */
             public Builder storageSize(StorageSize storageSize) {
                 this.storageSize = storageSize;
@@ -406,12 +456,15 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type. Valid values:
-             * <p>
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD)</li>
+             * <li><strong>cloud_efficiency</strong>: ultra disk</li>
+             * <li><strong>oss</strong>: Object Storage Service (OSS)</li>
+             * </ul>
              * 
-             * *   **cloud_essd**: enhanced SSD (ESSD)
-             * *   **cloud_efficiency**: ultra disk
-             * *   **oss**: Object Storage Service (OSS)
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -425,6 +478,12 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourcesResponseBody</p>
+     */
     public static class SupportedEngines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
@@ -476,11 +535,14 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private java.util.List < SupportedInstanceClasses> supportedInstanceClasses; 
 
             /**
-             * The instance resource type. Valid values:
-             * <p>
+             * <p>The instance resource type. Valid values:</p>
+             * <ul>
+             * <li><strong>ecs</strong>: elastic storage mode</li>
+             * <li><strong>serverless</strong>: Serverless mode</li>
+             * </ul>
              * 
-             * *   **ecs**: elastic storage mode
-             * *   **serverless**: Serverless mode
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -488,7 +550,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The available engine version.
+             * <p>The available engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.0</p>
              */
             public Builder supportedEngineVersion(String supportedEngineVersion) {
                 this.supportedEngineVersion = supportedEngineVersion;
@@ -496,7 +561,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The available specifications.
+             * <p>The available specifications.</p>
              */
             public Builder supportedInstanceClasses(java.util.List < SupportedInstanceClasses> supportedInstanceClasses) {
                 this.supportedInstanceClasses = supportedInstanceClasses;
@@ -510,6 +575,12 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedEngines")
         private java.util.List < SupportedEngines> supportedEngines;
@@ -549,7 +620,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The available engine version and specifications.
+             * <p>The available engine version and specifications.</p>
              */
             public Builder supportedEngines(java.util.List < SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -557,7 +628,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

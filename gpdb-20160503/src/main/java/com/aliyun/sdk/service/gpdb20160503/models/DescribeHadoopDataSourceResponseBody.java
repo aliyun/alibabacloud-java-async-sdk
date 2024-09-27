@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHadoopDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHadoopDataSourceResponseBody</p>
@@ -253,7 +254,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         private String yarnConf; 
 
         /**
-         * The time when the service was created.
+         * <p>The time when the service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T16:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -261,7 +265,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the service. The description can be up to 256 characters in length.
+         * <p>The description of the service. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxf for hdfs data source</p>
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.dataSourceDescription = dataSourceDescription;
@@ -269,7 +276,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The service directory in which Hadoop-related configuration files are stored.
+         * <p>The service directory in which Hadoop-related configuration files are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HadoopDir</p>
          */
         public Builder dataSourceDir(String dataSourceDir) {
             this.dataSourceDir = dataSourceDir;
@@ -277,7 +287,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The data source ID.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -285,7 +298,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the service.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs_pxf</p>
          */
         public Builder dataSourceName(String dataSourceName) {
             this.dataSourceName = dataSourceName;
@@ -293,12 +309,15 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the service. Valid values:
-         * <p>
+         * <p>The status of the service. Valid values:</p>
+         * <ul>
+         * <li>init</li>
+         * <li>running</li>
+         * <li>exception</li>
+         * </ul>
          * 
-         * *   init
-         * *   running
-         * *   exception
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder dataSourceStatus(String dataSourceStatus) {
             this.dataSourceStatus = dataSourceStatus;
@@ -314,7 +333,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The E-MapReduce (EMR) Hadoop cluster ID.
+         * <p>The E-MapReduce (EMR) Hadoop cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-1234567</p>
          */
         public Builder emrInstanceId(String emrInstanceId) {
             this.emrInstanceId = emrInstanceId;
@@ -330,7 +352,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the Hadoop hdfs-site.xml file.
+         * <p>The content of the Hadoop hdfs-site.xml file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder HDFSConf(String HDFSConf) {
             this.HDFSConf = HDFSConf;
@@ -338,7 +363,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the Hadoop core-site.xml file.
+         * <p>The content of the Hadoop core-site.xml file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder hadoopCoreConf(String hadoopCoreConf) {
             this.hadoopCoreConf = hadoopCoreConf;
@@ -346,11 +374,14 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the external service. Valid values:
-         * <p>
+         * <p>The type of the external service. Valid values:</p>
+         * <ul>
+         * <li>HDFS</li>
+         * <li>HIVE</li>
+         * </ul>
          * 
-         * *   HDFS
-         * *   HIVE
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         public Builder hadoopCreateType(String hadoopCreateType) {
             this.hadoopCreateType = hadoopCreateType;
@@ -358,9 +389,13 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * *   The address and hostname of the Hadoop cluster (data source) in the /etc/hosts directory.
-         * <p>
-         * *
+         * <ul>
+         * <li>The address and hostname of the Hadoop cluster (data source) in the /etc/hosts directory.</li>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1 localhost</p>
          */
         public Builder hadoopHostsAddress(String hadoopHostsAddress) {
             this.hadoopHostsAddress = hadoopHostsAddress;
@@ -368,7 +403,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the Hadoop hive-site.xml file.
+         * <p>The content of the Hadoop hive-site.xml file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder hiveConf(String hiveConf) {
             this.hiveConf = hiveConf;
@@ -376,7 +414,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the Hadoop MapReduceConf file.
+         * <p>The content of the Hadoop MapReduceConf file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder mapReduceConf(String mapReduceConf) {
             this.mapReduceConf = mapReduceConf;
@@ -392,7 +433,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -400,7 +444,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the service status. For example, if the service is in the exception state, the cause of the exception is displayed. If the service is in the running state, this parameter is left empty.
+         * <p>The information about the service status. For example, if the service is in the exception state, the cause of the exception is displayed. If the service is in the running state, this parameter is left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = statusMessage;
@@ -408,7 +455,10 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the Hadoop yarn-site.xml file.
+         * <p>The content of the Hadoop yarn-site.xml file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder yarnConf(String yarnConf) {
             this.yarnConf = yarnConf;

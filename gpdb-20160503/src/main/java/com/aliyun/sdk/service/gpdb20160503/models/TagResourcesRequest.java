@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -173,7 +174,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~86912~~) operation to query region IDs.
+         * <p>The ID of the region. You can call the <a href="~~86912~~">DescribeRegions</a> operation to query region IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +186,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of an instance. Valid values of N: 1 to 50.
+         * <p>The ID of an instance. Valid values of N: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxxx</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -209,11 +216,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The mode of the instance. Valid values:
-         * <p>
+         * <p>The mode of the instance. Valid values:</p>
+         * <ul>
+         * <li><code>instance</code>: reserved storage mode</li>
+         * <li><code>ALIYUN::GPDB::INSTANCE</code>: elastic storage mode</li>
+         * </ul>
          * 
-         * *   `instance`: reserved storage mode
-         * *   `ALIYUN::GPDB::INSTANCE`: elastic storage mode
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -222,7 +232,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -237,6 +247,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -278,7 +294,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of a tag. Valid values of N: 1 to 20. This parameter value cannot be an empty string. A tag key can contain a maximum of 128 characters. It cannot start with `aliyun` or`  acs: ` and cannot contain `http://` or`  https:// `.
+             * <p>The key of a tag. Valid values of N: 1 to 20. This parameter value cannot be an empty string. A tag key can contain a maximum of 128 characters. It cannot start with <code>aliyun</code> or<code> acs:</code> and cannot contain <code>http://</code> or<code> https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -286,7 +305,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of a tag. Valid values of N: 1 to 20. This parameter value can be an empty string. A tag value can contain a maximum of 128 characters. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+             * <p>The value of a tag. Valid values of N: 1 to 20. This parameter value can be an empty string. A tag value can contain a maximum of 128 characters. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

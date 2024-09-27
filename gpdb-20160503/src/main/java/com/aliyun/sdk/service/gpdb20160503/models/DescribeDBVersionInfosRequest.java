@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBVersionInfosRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBVersionInfosRequest</p>
@@ -110,11 +111,14 @@ public class DescribeDBVersionInfosRequest extends Request {
         } 
 
         /**
-         * The resource type of the instance. Valid values:
-         * <p>
+         * <p>The resource type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>StorageElastic</strong>: elastic storage mode.</li>
+         * <li><strong>Serverless</strong>: Serverless mode.</li>
+         * </ul>
          * 
-         * *   **StorageElastic**: elastic storage mode.
-         * *   **Serverless**: Serverless mode.
+         * <strong>example:</strong>
+         * <p>StorageElastic</p>
          */
         public Builder DBInstanceMode(String DBInstanceMode) {
             this.putQueryParameter("DBInstanceMode", DBInstanceMode);
@@ -123,7 +127,10 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * The minor version number that does not include the prefix.
+         * <p>The minor version number that does not include the prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.3.10.20</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -141,10 +148,13 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +163,10 @@ public class DescribeDBVersionInfosRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="~~151181~~">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

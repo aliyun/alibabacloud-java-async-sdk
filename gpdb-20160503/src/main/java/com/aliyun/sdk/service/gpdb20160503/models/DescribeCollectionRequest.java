@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCollectionRequest} extends {@link RequestModel}
  *
  * <p>DescribeCollectionRequest</p>
@@ -140,10 +141,13 @@ public class DescribeCollectionRequest extends Request {
         } 
 
         /**
-         * The name of the collection.
-         * <p>
+         * <p>The name of the collection.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2401503~~">ListCollections</a> operation to query a list of collections.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListCollections](~~2401503~~) operation to query a list of collections.
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -152,10 +156,13 @@ public class DescribeCollectionRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -164,10 +171,13 @@ public class DescribeCollectionRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -176,7 +186,10 @@ public class DescribeCollectionRequest extends Request {
         }
 
         /**
-         * The password of the namespace.
+         * <p>The password of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -194,7 +207,10 @@ public class DescribeCollectionRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

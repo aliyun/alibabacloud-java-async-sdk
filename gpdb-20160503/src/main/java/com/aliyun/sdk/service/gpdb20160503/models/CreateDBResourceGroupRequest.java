@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDBResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateDBResourceGroupRequest</p>
@@ -98,10 +99,13 @@ public class CreateDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -119,20 +123,24 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The configurations of the resource group.
-         * <p>
+         * <p>The configurations of the resource group.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>CpuRateLimit: the percentage of CPU resources that are available for the resource group. Unit: %.</p>
+         * </li>
+         * <li><p>MemoryLimit: the percentage of memory resources that are available for the resource group. Unit: %.</p>
+         * </li>
+         * <li><p>MemorySharedQuota: the percentage of memory resources shared among transactions that are submitted to the resource group. Unit: %. Default value: 80.</p>
+         * </li>
+         * <li><p>MemorySpillRatio: the memory spill ratio for memory-intensive transactions. When the memory that is used by memory-intensive transactions reaches this value, data is spilled to disks. Unit: %. Default value: 0.</p>
+         * </li>
+         * <li><p>Concurrency: the maximum number of concurrent transactions or parallel queries that are allowed for a resource group. Default value: 20.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   CpuRateLimit: the percentage of CPU resources that are available for the resource group. Unit: %.
-         * 
-         * *   MemoryLimit: the percentage of memory resources that are available for the resource group. Unit: %.
-         * 
-         * *   MemorySharedQuota: the percentage of memory resources shared among transactions that are submitted to the resource group. Unit: %. Default value: 80.
-         * 
-         * *   MemorySpillRatio: the memory spill ratio for memory-intensive transactions. When the memory that is used by memory-intensive transactions reaches this value, data is spilled to disks. Unit: %. Default value: 0.
-         * 
-         * *   Concurrency: the maximum number of concurrent transactions or parallel queries that are allowed for a resource group. Default value: 20.
+         * <strong>example:</strong>
+         * <p>{&quot;CpuRateLimit&quot;:&quot;10&quot;,&quot;MemoryLimit&quot;:&quot;12&quot;,&quot;MemorySharedQuota&quot;:&quot;20&quot;,&quot;MemorySpillRatio&quot;:&quot;75&quot;,&quot;Concurrency&quot;:&quot;3&quot;}</p>
          */
         public Builder resourceGroupConfig(String resourceGroupConfig) {
             this.putQueryParameter("ResourceGroupConfig", resourceGroupConfig);
@@ -141,7 +149,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testgroup</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

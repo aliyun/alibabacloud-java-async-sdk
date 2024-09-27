@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisRecordsResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.
+         * <p>The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -81,7 +82,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -89,7 +93,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +120,12 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosisRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisRecordsResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
@@ -245,7 +261,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbtest</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -253,7 +272,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the query. Unit: seconds.
+             * <p>The execution duration of the query. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -261,7 +283,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the query. It is a unique identifier of the query.
+             * <p>The ID of the query. It is a unique identifier of the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022042612465401000000012903151998970</p>
              */
             public Builder queryID(String queryID) {
                 this.queryID = queryID;
@@ -269,7 +294,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL statement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM t1,t2 WHERE t1.id=t2.id;</p>
              */
             public Builder SQLStmt(String SQLStmt) {
                 this.SQLStmt = SQLStmt;
@@ -277,11 +305,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SQL statement needs to be truncated. Valid values:
-             * <p>
+             * <p>Indicates whether the SQL statement needs to be truncated. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The SQL statement needs to be truncated.</li>
+             * <li><strong>false</strong>: The SQL statement does not need to be truncated.</li>
+             * </ul>
              * 
-             * *   **true**: The SQL statement needs to be truncated.
-             * *   **false**: The SQL statement does not need to be truncated.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder SQLTruncated(Boolean SQLTruncated) {
                 this.SQLTruncated = SQLTruncated;
@@ -289,7 +320,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold used to determine whether an SQL statement must be truncated. The value is the number of characters.
+             * <p>The threshold used to determine whether an SQL statement must be truncated. The value is the number of characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5120</p>
              */
             public Builder SQLTruncatedThreshold(Integer SQLTruncatedThreshold) {
                 this.SQLTruncatedThreshold = SQLTruncatedThreshold;
@@ -297,7 +331,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the session that contains the query.
+             * <p>The ID of the session that contains the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder sessionID(String sessionID) {
                 this.sessionID = sessionID;
@@ -305,7 +342,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1651877940000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -313,11 +353,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the query. Valid values:
-             * <p>
+             * <p>The execution state of the query. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong>: The query is being executed.</li>
+             * <li><strong>finished</strong>: The query is complete.</li>
+             * </ul>
              * 
-             * *   **running**: The query is being executed.
-             * *   **finished**: The query is complete.
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -325,7 +368,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpguser</p>
              */
             public Builder user(String user) {
                 this.user = user;

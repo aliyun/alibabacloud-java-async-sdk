@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckHadoopNetConnectionRequest} extends {@link RequestModel}
  *
  * <p>CheckHadoopNetConnectionRequest</p>
@@ -96,7 +97,10 @@ public class CheckHadoopNetConnectionRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CheckHadoopNetConnection</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -114,7 +118,10 @@ public class CheckHadoopNetConnectionRequest extends Request {
         }
 
         /**
-         * The E-MapReduce (EMR) Hadoop cluster ID.
+         * <p>The E-MapReduce (EMR) Hadoop cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-xxx</p>
          */
         public Builder emrInstanceId(String emrInstanceId) {
             this.putQueryParameter("EmrInstanceId", emrInstanceId);

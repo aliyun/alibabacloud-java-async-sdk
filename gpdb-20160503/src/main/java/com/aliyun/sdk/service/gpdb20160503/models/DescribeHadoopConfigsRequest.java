@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHadoopConfigsRequest} extends {@link RequestModel}
  *
  * <p>DescribeHadoopConfigsRequest</p>
@@ -98,14 +99,17 @@ public class DescribeHadoopConfigsRequest extends Request {
         } 
 
         /**
-         * The name of the configuration file. Valid values:
-         * <p>
+         * <p>The name of the configuration file. Valid values:</p>
+         * <ul>
+         * <li>hdfs-site</li>
+         * <li>core-site</li>
+         * <li>yarn-site</li>
+         * <li>mapred-site</li>
+         * <li>hive-site</li>
+         * </ul>
          * 
-         * *   hdfs-site
-         * *   core-site
-         * *   yarn-site
-         * *   mapred-site
-         * *   hive-site
+         * <strong>example:</strong>
+         * <p>hdfs-site</p>
          */
         public Builder configName(String configName) {
             this.putQueryParameter("ConfigName", configName);
@@ -114,7 +118,10 @@ public class DescribeHadoopConfigsRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -123,7 +130,10 @@ public class DescribeHadoopConfigsRequest extends Request {
         }
 
         /**
-         * The E-MapReduce (EMR) Hadoop cluster ID.
+         * <p>The E-MapReduce (EMR) Hadoop cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-xxx</p>
          */
         public Builder emrInstanceId(String emrInstanceId) {
             this.putQueryParameter("EmrInstanceId", emrInstanceId);

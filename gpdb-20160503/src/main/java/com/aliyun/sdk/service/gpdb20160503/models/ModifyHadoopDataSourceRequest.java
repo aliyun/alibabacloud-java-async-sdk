@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHadoopDataSourceRequest} extends {@link RequestModel}
  *
  * <p>ModifyHadoopDataSourceRequest</p>
@@ -240,7 +241,10 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The data source ID.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -249,16 +253,22 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>mysql</li>
+         * </ul>
+         * <ul>
+         * <li>postgresql</li>
+         * </ul>
+         * <ul>
+         * <li>hdfs</li>
+         * </ul>
+         * <ul>
+         * <li>hive</li>
+         * </ul>
          * 
-         * *   mysql
-         * 
-         * - postgresql
-         * 
-         * *   hdfs
-         * 
-         * - hive
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -276,7 +286,10 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
+         * <p>The content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder HDFSConf(String HDFSConf) {
             this.putQueryParameter("HDFSConf", HDFSConf);
@@ -285,7 +298,10 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The content of the Hadoop core-site.xml file.
+         * <p>The content of the Hadoop core-site.xml file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder hadoopCoreConf(String hadoopCoreConf) {
             this.putQueryParameter("HadoopCoreConf", hadoopCoreConf);
@@ -294,11 +310,14 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The type of the external service. Valid values:
-         * <p>
+         * <p>The type of the external service. Valid values:</p>
+         * <ul>
+         * <li>emr: E-MapReduce (EMR) Hadoop cluster.</li>
+         * <li>selfCreate: self-managed Hadoop cluster.</li>
+         * </ul>
          * 
-         * *   emr: E-MapReduce (EMR) Hadoop cluster.
-         * *   selfCreate: self-managed Hadoop cluster.
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         public Builder hadoopCreateType(String hadoopCreateType) {
             this.putQueryParameter("HadoopCreateType", hadoopCreateType);
@@ -307,7 +326,10 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.
+         * <p>The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1 localhost</p>
          */
         public Builder hadoopHostsAddress(String hadoopHostsAddress) {
             this.putQueryParameter("HadoopHostsAddress", hadoopHostsAddress);
@@ -316,7 +338,10 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.
+         * <p>The content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder hiveConf(String hiveConf) {
             this.putQueryParameter("HiveConf", hiveConf);
@@ -325,7 +350,21 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The content of the Hadoop mapred-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
+         * <p>The content of the Hadoop mapred-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+         * 
+         * <strong>example:</strong>
+         * <?xml version="1.0" ?>
+         * <!-- Created at 2023-08-15 13:53:28.962 -->
+         * <configuration>
+         *     <property>
+         *         <name>mapreduce.map.speculative</name>
+         *         <value>true</value>
+         *     </property>
+         *     <property>
+         *         <name>mapreduce.jobhistory.keytab</name>
+         *         <value></value>
+         *     </property>
+         * </configuration>
          */
         public Builder mapReduceConf(String mapReduceConf) {
             this.putQueryParameter("MapReduceConf", mapReduceConf);
@@ -334,10 +373,13 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -346,7 +388,10 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * The content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
+         * <p>The content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder yarnConf(String yarnConf) {
             this.putQueryParameter("YarnConf", yarnConf);

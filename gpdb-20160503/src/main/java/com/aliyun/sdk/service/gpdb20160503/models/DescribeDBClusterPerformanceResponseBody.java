@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterPerformanceResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -93,7 +97,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The end time of the query. The time follows the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format. The time is displayed in UTC.
+         * <p>The end time of the query. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-03T15:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -101,7 +108,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the performance metric. For more information, see [Performance parameters](~~86943~~).
+         * <p>The name of the performance metric. For more information, see <a href="~~86943~~">Performance parameters</a>.</p>
          */
         public Builder performanceKeys(java.util.List < PerformanceKeys> performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -109,7 +116,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8E8990F0-C81E-4C94-8F51-5F**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the query. The time follows the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format. The time is displayed in UTC.
+         * <p>The start time of the query. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-03T15:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -130,6 +143,12 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterPerformanceResponseBody</p>
+     */
     public static class Values extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Point")
         private java.util.List < String > point;
@@ -157,7 +176,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private java.util.List < String > point; 
 
             /**
-             * The value of the performance metric and the time when the metric value was collected.
+             * <p>The value of the performance metric and the time when the metric value was collected.</p>
              */
             public Builder point(java.util.List < String > point) {
                 this.point = point;
@@ -171,6 +190,12 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterPerformanceResponseBody</p>
+     */
     public static class Series extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -222,7 +247,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * The name of the compute node or compute group.
+             * <p>The name of the compute node or compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standby-********-cpu</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -230,12 +258,15 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the node. Valid values:
-             * <p>
+             * <p>The role of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>master</strong>: primary coordinator node</li>
+             * <li><strong>standby</strong>: standby coordinator node</li>
+             * <li><strong>segment</strong>: compute node</li>
+             * </ul>
              * 
-             * *   **master**: primary coordinator node
-             * *   **standby**: standby coordinator node
-             * *   **segment**: compute node
+             * <strong>example:</strong>
+             * <p>standby</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -243,7 +274,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the performance metric collected at a point in time.
+             * <p>The value of the performance metric collected at a point in time.</p>
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;
@@ -257,6 +288,12 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBClusterPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterPerformanceResponseBody</p>
+     */
     public static class PerformanceKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -308,7 +345,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The name of the performance metric. For more information, see [Performance parameters](~~86943~~).
+             * <p>The name of the performance metric. For more information, see <a href="~~86943~~">Performance parameters</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpg_group_cpu_used_percent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -316,7 +356,7 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the performance metric of a node.
+             * <p>Details of the performance metric of a node.</p>
              */
             public Builder series(java.util.List < Series> series) {
                 this.series = series;
@@ -324,7 +364,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the performance metric.
+             * <p>The unit of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

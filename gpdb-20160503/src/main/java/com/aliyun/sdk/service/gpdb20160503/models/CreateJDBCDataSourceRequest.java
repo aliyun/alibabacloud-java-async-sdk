@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJDBCDataSourceRequest} extends {@link RequestModel}
  *
  * <p>CreateJDBCDataSourceRequest</p>
@@ -188,7 +189,10 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * The JDBC connection string.
+         * <p>The JDBC connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder JDBCConnectionString(String JDBCConnectionString) {
             this.putQueryParameter("JDBCConnectionString", JDBCConnectionString);
@@ -197,7 +201,10 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * The password of the database account.
+         * <p>The password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder JDBCPassword(String JDBCPassword) {
             this.putQueryParameter("JDBCPassword", JDBCPassword);
@@ -206,7 +213,10 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder JDBCUserName(String JDBCUserName) {
             this.putQueryParameter("JDBCUserName", JDBCUserName);
@@ -215,7 +225,10 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBClusterNodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBClusterNodeResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -69,7 +73,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the node.
+         * <p>The name of the node.</p>
          */
         public Builder nodes(java.util.List < Nodes> nodes) {
             this.nodes = nodes;
@@ -77,7 +81,10 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87E44B48-B306-4AD3-A63B-C8**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBClusterNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBClusterNodeResponseBody</p>
+     */
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -117,7 +130,10 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master-10*******</p>
              */
             public Builder name(String name) {
                 this.name = name;

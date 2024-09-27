@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRdsVSwitchsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRdsVSwitchsRequest</p>
@@ -183,10 +184,13 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
+         * <p>The ID of the region.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list and zone list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list and zone list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +199,10 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -231,14 +238,18 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) ID of the instance.
-         * <p>
+         * <p>The virtual private cloud (VPC) ID of the instance.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can call the <a href="~~208327~~">DescribeRdsVpcs</a> operation to query the available VPC IDs.</p>
+         * </li>
+         * <li><p>This parameter must be specified.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   You can call the [DescribeRdsVpcs](~~208327~~) operation to query the available VPC IDs.
-         * 
-         * *   This parameter must be specified.
+         * <strong>example:</strong>
+         * <p>vpc-bp*******************</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -247,10 +258,13 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
-         * <p>
+         * <p>The ID of the zone.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list and zone list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list and zone list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteStatementResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteStatementResponseBody</p>
@@ -133,7 +134,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The time when the SQL statements were created.
+         * <p>The time when the SQL statements were created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-04T10:08:47+0800</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -141,7 +145,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -149,7 +156,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results of the synchronous call.
+         * <p>The returned results of the synchronous call.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +164,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         public Builder database(String database) {
             this.database = database;
@@ -165,7 +175,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the job for asynchronously executing the SQL statements.
+         * <p>The ID of the job for asynchronously executing the SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -173,7 +186,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -181,7 +197,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +208,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The ARN of the access credential for the created Data API account.
+         * <p>The ARN of the access credential for the created Data API account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:gpdb:cn-beijing:1033**:secret/testsecret-eG2AQGRIwQ0zFp4VA7mYL3uiCXTfDQbQ</p>
          */
         public Builder secretArn(String secretArn) {
             this.secretArn = secretArn;
@@ -197,11 +219,14 @@ public class ExecuteStatementResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -214,6 +239,12 @@ public class ExecuteStatementResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteStatementResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteStatementResponseBody</p>
+     */
     public static class ColumnMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnMetadata")
         private java.util.List < ColumnMetadata > columnMetadata;
@@ -255,6 +286,12 @@ public class ExecuteStatementResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ExecuteStatementResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteStatementResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Record")
         private java.util.List < Field > record;
@@ -296,6 +333,12 @@ public class ExecuteStatementResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ExecuteStatementResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteStatementResponseBody</p>
+     */
     public static class DataRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Records")
         private java.util.List < Records> records;
@@ -337,6 +380,12 @@ public class ExecuteStatementResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ExecuteStatementResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteStatementResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnMetadata")
         private ColumnMetadata columnMetadata;
@@ -388,7 +437,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             private Long totalNumRows; 
 
             /**
-             * The metadata of the columns.
+             * <p>The metadata of the columns.</p>
              */
             public Builder columnMetadata(ColumnMetadata columnMetadata) {
                 this.columnMetadata = columnMetadata;
@@ -396,7 +445,7 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * The rows of data.
+             * <p>The rows of data.</p>
              */
             public Builder records(DataRecords records) {
                 this.records = records;
@@ -404,7 +453,10 @@ public class ExecuteStatementResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalNumRows(Long totalNumRows) {
                 this.totalNumRows = totalNumRows;

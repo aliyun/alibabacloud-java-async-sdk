@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteStreamingDataSourceRequest} extends {@link RequestModel}
  *
  * <p>DeleteStreamingDataSourceRequest</p>
@@ -83,7 +84,10 @@ public class DeleteStreamingDataSourceRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp10g78o9807yv9h3</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +96,10 @@ public class DeleteStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * The data source ID.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dataSourceId(Integer dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);

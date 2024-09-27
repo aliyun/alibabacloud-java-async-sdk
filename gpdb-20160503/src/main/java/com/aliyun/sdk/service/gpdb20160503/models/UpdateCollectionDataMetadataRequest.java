@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCollectionDataMetadataRequest} extends {@link RequestModel}
  *
  * <p>UpdateCollectionDataMetadataRequest</p>
@@ -183,7 +184,10 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         } 
 
         /**
-         * The name of the collection.
+         * <p>The name of the collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -192,10 +196,13 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -204,7 +211,10 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause. You cannot leave both this parameter and Ids empty.
+         * <p>The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause. You cannot leave both this parameter and Ids empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>business_value = &quot;chat_file_1&quot;</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -213,7 +223,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The row IDs of the data to be updated. You cannot leave both this parameter and Filter empty.
+         * <p>The row IDs of the data to be updated. You cannot leave both this parameter and Filter empty.</p>
          */
         public Builder ids(java.util.List < String > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -223,7 +233,13 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The data to be updated, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.
+         * <p>The data to be updated, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;title&quot;: &quot;new title&quot;,
+         *       &quot;content&quot;: &quot;new content&quot;
+         * }</p>
          */
         public Builder metadata(java.util.Map < String, ? > metadata) {
             String metadataShrink = shrink(metadata, "Metadata", "json");
@@ -233,7 +249,10 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -242,7 +261,10 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The password of the namespace.
+         * <p>The password of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpassword</p>
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -260,10 +282,13 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

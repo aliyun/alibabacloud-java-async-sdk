@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStreamingDataServiceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStreamingDataServiceResponseBody</p>
@@ -169,7 +170,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The time when the service was created.
+         * <p>The time when the service was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T16:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -177,7 +181,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the service was last modified.
+         * <p>The time when the service was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-08T17:00:00Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -185,7 +192,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +203,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the service.
+         * <p>The description of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-adbpgss</p>
          */
         public Builder serviceDescription(String serviceDescription) {
             this.serviceDescription = serviceDescription;
@@ -201,7 +214,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -209,7 +225,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the service.
+         * <p>The IP address of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         public Builder serviceIp(String serviceIp) {
             this.serviceIp = serviceIp;
@@ -225,7 +244,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the service.
+         * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-adbpgss</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -241,7 +263,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The port number of the service.
+         * <p>The port number of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5432</p>
          */
         public Builder servicePort(Integer servicePort) {
             this.servicePort = servicePort;
@@ -249,7 +274,10 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The specifications of the service.
+         * <p>The specifications of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder serviceSpec(String serviceSpec) {
             this.serviceSpec = serviceSpec;
@@ -257,13 +285,16 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the service. Valid values:
-         * <p>
+         * <p>The status of the service. Valid values:</p>
+         * <ul>
+         * <li>Init</li>
+         * <li>Running</li>
+         * <li>Exception</li>
+         * <li>Paused</li>
+         * </ul>
          * 
-         * *   Init
-         * *   Running
-         * *   Exception
-         * *   Paused
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;

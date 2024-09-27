@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDBInstancePlanResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDBInstancePlanResponseBody</p>
@@ -85,7 +86,10 @@ public class DeleteDBInstancePlanResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -93,10 +97,11 @@ public class DeleteDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
-         * <p>
+         * <p>The error message returned.</p>
+         * <p>This parameter is returned only when the operation fails.</p>
          * 
-         * This parameter is returned only when the operation fails.
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -104,7 +109,10 @@ public class DeleteDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the plan.
+         * <p>The ID of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder planId(String planId) {
             this.planId = planId;
@@ -112,7 +120,10 @@ public class DeleteDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34b32a0a-08ef-4a87-b6be-cdd988888888</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,10 +131,11 @@ public class DeleteDBInstancePlanResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the operation.
-         * <p>
+         * <p>The state of the operation.</p>
+         * <p>If the operation is successful, <strong>success</strong> is returned. If the operation fails, this parameter is not returned.</p>
          * 
-         * If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

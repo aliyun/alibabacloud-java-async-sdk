@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpgradeDBInstanceRequest</p>
@@ -236,7 +237,10 @@ public class UpgradeDBInstanceRequest extends Request {
         } 
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -245,7 +249,10 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder DBInstanceGroupCount(String DBInstanceGroupCount) {
             this.putQueryParameter("DBInstanceGroupCount", DBInstanceGroupCount);
@@ -254,10 +261,13 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
+         * <strong>example:</strong>
+         * <p>gp-rj***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -266,10 +276,13 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The specifications of each compute node. For information about the supported specifications, see [Instance specifications](~~35406~~).
-         * <p>
+         * <p>The specifications of each compute node. For information about the supported specifications, see <a href="~~35406~~">Instance specifications</a>.</p>
+         * <blockquote>
+         * <p>This parameter is available only for instances in elastic storage mode.</p>
+         * </blockquote>
          * 
-         * > This parameter is available only for instances in elastic storage mode.
+         * <strong>example:</strong>
+         * <p>4C16G</p>
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -278,7 +291,10 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder masterNodeNum(String masterNodeNum) {
             this.putQueryParameter("MasterNodeNum", masterNodeNum);
@@ -296,7 +312,10 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is no longer used.
+         * <p>This parameter is no longer used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -305,10 +324,13 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
-         * <p>
+         * <p>The region ID of the instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -317,7 +339,10 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="~~151181~~">View basic information of a resource group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -326,12 +351,15 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The performance level of enhanced SSDs (ESSDs). Valid values:
-         * <p>
+         * <p>The performance level of Enterprise SSDs (ESSDs). Valid values:</p>
+         * <ul>
+         * <li><strong>pl0</strong></li>
+         * <li><strong>pl1</strong></li>
+         * <li><strong>pl2</strong></li>
+         * </ul>
          * 
-         * *   **pl0**
-         * *   **pl1**
-         * *   **pl2**
+         * <strong>example:</strong>
+         * <p>pl1</p>
          */
         public Builder segDiskPerformanceLevel(String segDiskPerformanceLevel) {
             this.putQueryParameter("SegDiskPerformanceLevel", segDiskPerformanceLevel);
@@ -340,12 +368,15 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The number of compute nodes. The number of compute nodes varies based on the instance resource type and edition.
-         * <p>
+         * <p>The number of compute nodes. The number of compute nodes varies based on the instance resource type and edition.</p>
+         * <ul>
+         * <li>Valid values for High-availability Edition instances in elastic storage mode: 4 to 512, in 4 increments.</li>
+         * <li>Valid values for High-performance Edition instances in elastic storage mode: 2 to 512, in 2 increments.</li>
+         * <li>Valid values for instances in manual Serverless mode: 2 to 512, in 2 increments.</li>
+         * </ul>
          * 
-         * *   Valid values for High-availability Edition instances in elastic storage mode: 4 to 512, in 4 increments.
-         * *   Valid values for High-performance Edition instances in elastic storage mode: 2 to 512, in 2 increments.
-         * *   Valid values for instances in manual Serverless mode: 2 to 512, in 2 increments.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder segNodeNum(String segNodeNum) {
             this.putQueryParameter("SegNodeNum", segNodeNum);
@@ -354,7 +385,10 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The disk storage type of the instance after the change. The disk storage type can be changed only to ESSD. Set the value to **cloud_essd**.
+         * <p>The disk storage type of the instance after the change. The disk storage type can be changed only to ESSD. Set the value to <strong>cloud_essd</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder segStorageType(String segStorageType) {
             this.putQueryParameter("SegStorageType", segStorageType);
@@ -363,10 +397,13 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.
-         * <p>
+         * <p>The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.</p>
+         * <blockquote>
+         * <p> This parameter is available only for instances in elastic storage mode.</p>
+         * </blockquote>
          * 
-         * >  This parameter is available only for instances in elastic storage mode.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder storageSize(String storageSize) {
             this.putQueryParameter("StorageSize", storageSize);
@@ -375,21 +412,28 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * The type of the instance configuration change. Valid values:
-         * <p>
+         * <p>The type of the instance configuration change. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): changes the number of compute nodes.</li>
+         * <li><strong>1</strong>: changes the specifications and storage capacity of each compute node.</li>
+         * <li><strong>2</strong>: changes the number of coordinator nodes.</li>
+         * <li><strong>3</strong>: changes the disk storage type and ESSD performance level of the instance.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The supported changes to compute node configurations vary based on the instance resource type. For more information, see the &quot;Usage notes&quot; section of the <a href="~~50956~~">Change compute node configurations</a> topic.</p>
+         * </li>
+         * <li><p>After you specify a change type, only the corresponding parameters take effect. For example, if you set <strong>UpgradeType</strong> to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.</p>
+         * </li>
+         * <li><p>The number of coordinator nodes can be changed only on the China site (aliyun.com).</p>
+         * </li>
+         * <li><p>The disk storage type can be changed only from ultra disks to ESSDs.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **0** (default): changes the number of compute nodes.
-         * *   **1**: changes the specifications and storage capacity of each compute node.
-         * *   **2**: changes the number of coordinator nodes.
-         * *   **3**: changes the disk storage type and ESSD performance level of the instance.
-         * 
-         * > 
-         * 
-         * *   The supported changes to compute node configurations vary based on the instance resource type. For more information, see the "[Usage notes](~~50956~~)" section of the Change compute node configurations topic.
-         * 
-         * *   After you specify a change type, only the corresponding parameters take effect. For example, if you set **UpgradeType** to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.
-         * *   The number of coordinator nodes can be changed only on the China site (aliyun.com).
-         * *   The disk storage type can be changed only from ultra disks to ESSDs.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder upgradeType(Long upgradeType) {
             this.putQueryParameter("UpgradeType", upgradeType);

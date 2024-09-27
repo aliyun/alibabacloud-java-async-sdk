@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HandleActiveSQLRecordRequest} extends {@link RequestModel}
  *
  * <p>HandleActiveSQLRecordRequest</p>
@@ -83,7 +84,10 @@ public class HandleActiveSQLRecordRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,12 +96,15 @@ public class HandleActiveSQLRecordRequest extends Request {
         }
 
         /**
-         * The type of the operation on the process ID. Valid values:
-         * <p>
+         * <p>The type of the operation on the process ID. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: cancel.</li>
+         * <li><strong>1</strong>: terminate.</li>
+         * <li><strong>2</strong>: forcefully terminate.</li>
+         * </ul>
          * 
-         * *   **0**: cancel.
-         * *   **1**: terminate.
-         * *   **2**: forcefully terminate.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder operateType(Integer operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -106,7 +113,10 @@ public class HandleActiveSQLRecordRequest extends Request {
         }
 
         /**
-         * The process IDs. A process ID is a unique identifier of a query.
+         * <p>The process IDs. A process ID is a unique identifier of a query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;3003925,3003928&quot;</p>
          */
         public Builder pids(String pids) {
             this.putQueryParameter("Pids", pids);

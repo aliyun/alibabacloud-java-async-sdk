@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceErrorLogRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceErrorLogRequest</p>
@@ -180,10 +181,13 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -192,7 +196,10 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -201,7 +208,10 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-25T06:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -210,7 +220,10 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * This parameter is not supported in Alibaba Cloud public cloud.
+         * <p>This parameter is not supported in Alibaba Cloud public cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -219,7 +232,10 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * One or more keywords that are used to query error logs.
+         * <p>One or more keywords that are used to query error logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
          */
         public Builder keywords(String keywords) {
             this.putQueryParameter("Keywords", keywords);
@@ -228,13 +244,16 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The level of the logs to query. Valid values:
-         * <p>
+         * <p>The level of the logs to query. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL</strong>: queries all error logs.</li>
+         * <li><strong>PANIC</strong>: queries only abnormal logs.</li>
+         * <li><strong>FATAL</strong>: queries only critical logs.</li>
+         * <li><strong>ERROR</strong>: queries only error logs.</li>
+         * </ul>
          * 
-         * *   **ALL**: queries all error logs.
-         * *   **PANIC**: queries only abnormal logs.
-         * *   **FATAL**: queries only critical logs.
-         * *   **ERROR**: queries only error logs.
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder logLevel(String logLevel) {
             this.putQueryParameter("LogLevel", logLevel);
@@ -243,7 +262,10 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: **1**.
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -252,14 +274,16 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>20</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>20</strong>.</p>
          * 
-         * *   **20**
-         * *   **50**
-         * *   **100**
-         * 
-         * Default value: **20**.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,7 +292,10 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-24T06:59Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -277,7 +304,10 @@ public class DescribeDBInstanceErrorLogRequest extends Request {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpguser</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

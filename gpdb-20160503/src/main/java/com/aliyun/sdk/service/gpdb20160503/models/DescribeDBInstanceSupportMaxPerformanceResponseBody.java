@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceSupportMaxPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBInstanceSupportMaxPerformanceResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -77,7 +81,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDBInstanceSupportMaxPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceSupportMaxPerformanceResponseBody</p>
+     */
     public static class Performance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bottleneck")
         private String bottleneck;
@@ -153,7 +166,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             private String value; 
 
             /**
-             * The performance bottleneck type.
+             * <p>The performance bottleneck type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs or disk</p>
              */
             public Builder bottleneck(String bottleneck) {
                 this.bottleneck = bottleneck;
@@ -161,7 +177,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * The name of the performance metric.
+             * <p>The name of the performance metric.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -169,7 +185,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * The unit of the performance metric.
+             * <p>The unit of the performance metric.</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -177,7 +193,10 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * The value of the performance metric.
+             * <p>The value of the performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +210,12 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDBInstanceSupportMaxPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDBInstanceSupportMaxPerformanceResponseBody</p>
+     */
     public static class Performances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Performance")
         private java.util.List < Performance> performance;

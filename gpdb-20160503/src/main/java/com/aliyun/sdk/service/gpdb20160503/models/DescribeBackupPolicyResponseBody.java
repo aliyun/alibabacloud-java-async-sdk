@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupPolicyResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of days for which data backup files are retained.
+         * <p>The number of days for which data backup files are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -105,11 +109,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether automatic point-in-time backup is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether automatic point-in-time backup is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Automatic point-in-time backup is enabled.</li>
+         * <li><strong>false</strong>: Automatic point-in-time backup is disabled.</li>
+         * </ul>
          * 
-         * *   **true**: Automatic point-in-time backup is enabled.
-         * *   **false**: Automatic point-in-time backup is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRecoveryPoint(Boolean enableRecoveryPoint) {
             this.enableRecoveryPoint = enableRecoveryPoint;
@@ -117,16 +124,19 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid values:
-         * <p>
+         * <p>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>Monday</strong></li>
+         * <li><strong>Tuesday</strong></li>
+         * <li><strong>Wednesday</strong></li>
+         * <li><strong>Thursday</strong></li>
+         * <li><strong>Friday</strong></li>
+         * <li><strong>Saturday</strong></li>
+         * <li><strong>Sunday</strong></li>
+         * </ul>
          * 
-         * *   **Monday**
-         * *   **Tuesday**
-         * *   **Wednesday**
-         * *   **Thursday**
-         * *   **Friday**
-         * *   **Saturday**
-         * *   **Sunday**
+         * <strong>example:</strong>
+         * <p>Wednesday,Friday</p>
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -134,7 +144,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The backup time. The time is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.
+         * <p>The backup time. The time is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12:00Z-13:00Z</p>
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -142,13 +155,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The frequency of the point-in-time backup. Valid values:
-         * <p>
+         * <p>The frequency of the point-in-time backup. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: per hour</li>
+         * <li><strong>2</strong>: per 2 hours</li>
+         * <li><strong>4</strong>: per 4 hours</li>
+         * <li><strong>8</strong>: per 8 hours</li>
+         * </ul>
          * 
-         * *   **1**: per hour
-         * *   **2**: per 2 hours
-         * *   **4**: per 4 hours
-         * *   **8**: per 8 hours
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recoveryPointPeriod(String recoveryPointPeriod) {
             this.recoveryPointPeriod = recoveryPointPeriod;
@@ -156,7 +172,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E6B3287-A3E2-5A87-B8D8-E9**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

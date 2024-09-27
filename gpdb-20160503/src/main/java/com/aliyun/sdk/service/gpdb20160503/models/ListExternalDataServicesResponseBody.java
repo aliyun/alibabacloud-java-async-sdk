@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExternalDataServicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListExternalDataServicesResponseBody</p>
@@ -89,7 +90,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried services.
+         * <p>The queried services.</p>
          */
         public Builder serviceItems(java.util.List < ServiceItems> serviceItems) {
             this.serviceItems = serviceItems;
@@ -110,6 +111,12 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExternalDataServicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExternalDataServicesResponseBody</p>
+     */
     public static class ServiceItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -221,7 +228,10 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The time when the service was created.
+             * <p>The time when the service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -229,7 +239,10 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was last modified.
+             * <p>The time when the service was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T17:00:00Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -237,7 +250,10 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the service.
+             * <p>The description of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-adbpgss</p>
              */
             public Builder serviceDescription(String serviceDescription) {
                 this.serviceDescription = serviceDescription;
@@ -245,7 +261,10 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -253,7 +272,10 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-adbpgss</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -261,7 +283,10 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the service. Unit: compute units (CUs).
+             * <p>The specifications of the service. Unit: compute units (CUs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder serviceSpec(String serviceSpec) {
                 this.serviceSpec = serviceSpec;
@@ -269,10 +294,13 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service. Valid values:
-             * <p>
+             * <p>The type of the service. Valid values:</p>
+             * <ul>
+             * <li>pxf</li>
+             * </ul>
              * 
-             * *   pxf
+             * <strong>example:</strong>
+             * <p>pxf</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -280,13 +308,16 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the service. Valid values:
-             * <p>
+             * <p>The status of the service. Valid values:</p>
+             * <ul>
+             * <li>Init</li>
+             * <li>Running</li>
+             * <li>Exception</li>
+             * <li>Paused</li>
+             * </ul>
              * 
-             * *   Init
-             * *   Running
-             * *   Exception
-             * *   Paused
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

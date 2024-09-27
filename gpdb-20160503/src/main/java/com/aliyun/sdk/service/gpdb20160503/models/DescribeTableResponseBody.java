@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTableResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTableResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeTableResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The columns of the table.
+         * <p>The columns of the table.</p>
          */
         public Builder columnList(ColumnList columnList) {
             this.columnList = columnList;
@@ -81,7 +82,10 @@ public class DescribeTableResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +93,10 @@ public class DescribeTableResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +104,14 @@ public class DescribeTableResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -114,6 +124,12 @@ public class DescribeTableResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTableResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTableResponseBody</p>
+     */
     public static class ColumnList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ColumnList")
         private java.util.List < ColumnMetadata > columnList;
@@ -141,7 +157,7 @@ public class DescribeTableResponseBody extends TeaModel {
             private java.util.List < ColumnMetadata > columnList; 
 
             /**
-             * The columns of the table.
+             * <p>The columns of the table.</p>
              */
             public Builder columnList(java.util.List < ColumnMetadata > columnList) {
                 this.columnList = columnList;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUpsertCollectionDataJobResponseBody} extends {@link TeaModel}
  *
  * <p>GetUpsertCollectionDataJobResponseBody</p>
@@ -73,7 +74,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The information about the vector data upload job.
+         * <p>The information about the vector data upload job.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -81,7 +82,10 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +93,10 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +104,14 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the operation. Valid values:
-         * <p>
+         * <p>The status of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
          * 
-         * *   **success**
-         * *   **fail**
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -114,6 +124,12 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetUpsertCollectionDataJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUpsertCollectionDataJobResponseBody</p>
+     */
     public static class Job extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Completed")
         private Boolean completed;
@@ -213,7 +229,10 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Indicates whether the operation is complete.
+             * <p>Indicates whether the operation is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -221,7 +240,10 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was created.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-08 16:52:04.864664</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -229,7 +251,10 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Failed to connect database.</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -237,7 +262,10 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231460f8-75dc-405e-a669-0c5204887e91</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -245,7 +273,10 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the vector data upload job. The value of this parameter indicates the number of data entries that have been uploaded.
+             * <p>The progress of the vector data upload job. The value of this parameter indicates the number of data entries that have been uploaded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1600</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -253,22 +284,27 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job.
-             * <p>
+             * <p>The status of the job.</p>
+             * <blockquote>
+             * <p> Valid values:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p>Success</p>
+             * </li>
+             * <li><p>Failed (See the Error parameter for failure reasons.)</p>
+             * </li>
+             * <li><p>Cancelling</p>
+             * </li>
+             * <li><p>Cancelled</p>
+             * </li>
+             * <li><p>Start</p>
+             * </li>
+             * <li><p>Running</p>
+             * </li>
+             * </ul>
              * 
-             * >  Valid values:
-             * 
-             * *   Success
-             * 
-             * *   Failed (See the Error parameter for failure reasons.)
-             * 
-             * *   Cancelling
-             * 
-             * *   Cancelled
-             * 
-             * *   Start
-             * 
-             * *   Running
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -276,7 +312,10 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was updated.
+             * <p>The time when the job was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-08 16:53:04.864664</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

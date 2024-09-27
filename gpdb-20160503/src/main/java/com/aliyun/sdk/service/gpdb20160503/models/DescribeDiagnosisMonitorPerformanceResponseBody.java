@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisMonitorPerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosisMonitorPerformanceResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of query execution.
+         * <p>Details of query execution.</p>
          */
         public Builder performances(java.util.List < Performances> performances) {
             this.performances = performances;
@@ -81,7 +82,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The threshold for the number of queries.
+         * <p>The threshold for the number of queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder performancesThreshold(Integer performancesThreshold) {
             this.performancesThreshold = performancesThreshold;
@@ -89,11 +93,14 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the queries are truncated when the number of queries exceeds the threshold. Valid values:
-         * <p>
+         * <p>Indicates whether the queries are truncated when the number of queries exceeds the threshold. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The queries are truncated.</li>
+         * <li><strong>false</strong>: The queries are not truncated.</li>
+         * </ul>
          * 
-         * *   **true**: The queries are truncated.
-         * *   **false**: The queries are not truncated.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder performancesTruncated(Boolean performancesTruncated) {
             this.performancesTruncated = performancesTruncated;
@@ -101,7 +108,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,6 +124,12 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosisMonitorPerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosisMonitorPerformanceResponseBody</p>
+     */
     public static class Performances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cost")
         private Integer cost;
@@ -201,7 +217,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The execution duration of the query. Unit: milliseconds.
+             * <p>The execution duration of the query. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cost(Integer cost) {
                 this.cost = cost;
@@ -209,7 +228,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbtest</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -217,7 +239,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the query. It is a unique identifier of the query.
+             * <p>The ID of the query. It is a unique identifier of the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022042612465401000000012903151998970</p>
              */
             public Builder queryID(String queryID) {
                 this.queryID = queryID;
@@ -225,7 +250,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1651877940000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -233,11 +261,14 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The execution state of the query. Valid values:
-             * <p>
+             * <p>The execution state of the query. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong>: The query is being executed.</li>
+             * <li><strong>finished</strong>: The query is complete.</li>
+             * </ul>
              * 
-             * *   **running**: The query is being executed.
-             * *   **finished**: The query is complete.
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -245,7 +276,10 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * <p>The name of the database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adbpguser</p>
              */
             public Builder user(String user) {
                 this.user = user;

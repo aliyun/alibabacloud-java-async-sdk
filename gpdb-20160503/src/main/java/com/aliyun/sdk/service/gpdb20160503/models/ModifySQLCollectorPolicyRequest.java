@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySQLCollectorPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifySQLCollectorPolicyRequest</p>
@@ -69,7 +70,10 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -78,11 +82,14 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable SQL collection.
-         * <p>
+         * <p>Specifies whether to enable or disable SQL collection.</p>
+         * <ul>
+         * <li>Enable: enables SQL collection.</li>
+         * <li>Disabled: disables SQL collection.</li>
+         * </ul>
          * 
-         * *   Enable: enables SQL collection.
-         * *   Disabled: disables SQL collection.
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder SQLCollectorStatus(String SQLCollectorStatus) {
             this.putQueryParameter("SQLCollectorStatus", SQLCollectorStatus);

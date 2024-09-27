@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExternalDataSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListExternalDataSourcesResponseBody</p>
@@ -73,7 +74,7 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The Hadoop external table services.
+         * <p>The Hadoop external table services.</p>
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -81,7 +82,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -89,7 +93,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBE00C04-A3E8-4114-881D-0480A72CB92E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -110,6 +120,12 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExternalDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExternalDataSourcesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -245,7 +261,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * The time when the service was created.
+             * <p>The time when the service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-08T16:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -253,7 +272,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the data source.
+             * <p>The description of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dataSourceDescription(String dataSourceDescription) {
                 this.dataSourceDescription = dataSourceDescription;
@@ -261,7 +283,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The service directory in which Hadoop-related configuration files are stored.
+             * <p>The service directory in which Hadoop-related configuration files are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HadoopDir</p>
              */
             public Builder dataSourceDir(String dataSourceDir) {
                 this.dataSourceDir = dataSourceDir;
@@ -269,7 +294,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The service ID.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder dataSourceId(Integer dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -277,7 +305,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs_pxf</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -285,12 +316,15 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the service. Valid values:
-             * <p>
+             * <p>The status of the service. Valid values:</p>
+             * <ul>
+             * <li>init</li>
+             * <li>running</li>
+             * <li>exception</li>
+             * </ul>
              * 
-             * *   init
-             * *   running
-             * *   exception
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder dataSourceStatus(String dataSourceStatus) {
                 this.dataSourceStatus = dataSourceStatus;
@@ -298,7 +332,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HDFS</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -314,7 +351,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was last modified.
+             * <p>The time when the service was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-08T16:00:00Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -322,7 +362,10 @@ public class ListExternalDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the service status. For example, if the service is in the exception state, the cause of the exception is displayed. If the service is in the running state, this parameter is left empty.
+             * <p>The information about the service status. For example, if the service is in the exception state, the cause of the exception is displayed. If the service is in the running state, this parameter is left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;

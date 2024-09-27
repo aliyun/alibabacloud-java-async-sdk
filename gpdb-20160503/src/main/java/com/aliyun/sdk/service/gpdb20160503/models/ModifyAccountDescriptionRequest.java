@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
  *
  * <p>ModifyAccountDescriptionRequest</p>
@@ -84,13 +85,16 @@ public class ModifyAccountDescriptionRequest extends Request {
         } 
 
         /**
-         * The new description of the database account.
-         * <p>
+         * <p>The new description of the database account.</p>
+         * <ul>
+         * <li>The description must start with a letter.</li>
+         * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain letters, underscores (_), hyphens (-), and digits.</li>
+         * <li>The description must be 2 to 256 characters in length.</li>
+         * </ul>
          * 
-         * *   The description must start with a letter.
-         * *   The description cannot start with `http://` or `https://`.
-         * *   The description can contain letters, underscores (\_), hyphens (-), and digits.
-         * *   The description must be 2 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>testAccoutdescribe</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -99,7 +103,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAccout</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -108,10 +115,13 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

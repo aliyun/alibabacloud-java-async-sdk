@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBInstanceNetInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDBInstanceNetInfoRequest</p>
@@ -68,10 +69,13 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         } 
 
         /**
-         * The endpoint that is used to connect to the instance.
-         * <p>
+         * <p>The endpoint that is used to connect to the instance.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the information about all endpoints of the instance is returned.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, the information about all endpoints of the instance is returned.
+         * <strong>example:</strong>
+         * <p>gp-0xin9q82c33xc****-master.gpdb.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -80,10 +84,13 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

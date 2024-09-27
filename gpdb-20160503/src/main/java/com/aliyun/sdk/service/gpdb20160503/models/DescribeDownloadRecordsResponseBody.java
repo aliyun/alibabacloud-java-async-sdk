@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDownloadRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDownloadRecordsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The URL that is used to download the file.
+         * <p>The URL that is used to download the file.</p>
          */
         public Builder records(java.util.List < Records> records) {
             this.records = records;
@@ -57,7 +58,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDownloadRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDownloadRecordsResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DownloadId")
         private Long downloadId;
@@ -145,7 +155,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the download record.
+             * <p>The ID of the download record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1150</p>
              */
             public Builder downloadId(Long downloadId) {
                 this.downloadId = downloadId;
@@ -153,7 +166,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that can be used to download the file.
+             * <p>The URL that can be used to download the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://perth-download-task.oss-cn-beijing.aliyuncs.com/">https://perth-download-task.oss-cn-beijing.aliyuncs.com/</a>*****</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -161,7 +177,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error message</p>
              */
             public Builder exceptionMsg(String exceptionMsg) {
                 this.exceptionMsg = exceptionMsg;
@@ -169,7 +188,10 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20220509113448-20220509173448.csv</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -177,12 +199,15 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the upload task. After you call the DownloadDiagnosisRecords operation, query diagnostic information is first uploaded to Object Storage Service (OSS). After the upload task is complete, the query diagnostic information can be downloaded. Valid values:
-             * <p>
+             * <p>The state of the upload task. After you call the DownloadDiagnosisRecords operation, query diagnostic information is first uploaded to Object Storage Service (OSS). After the upload task is complete, the query diagnostic information can be downloaded. Valid values:</p>
+             * <ul>
+             * <li><strong>running</strong>: uploading</li>
+             * <li><strong>finished</strong>: uploaded</li>
+             * <li><strong>failed</strong>: failed</li>
+             * </ul>
              * 
-             * *   **running**: uploading
-             * *   **finished**: uploaded
-             * *   **failed**: failed
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder status(String status) {
                 this.status = status;

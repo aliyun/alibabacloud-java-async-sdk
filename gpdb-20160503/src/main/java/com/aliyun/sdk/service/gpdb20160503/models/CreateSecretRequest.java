@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecretRequest} extends {@link RequestModel}
  *
  * <p>CreateSecretRequest</p>
@@ -155,10 +156,13 @@ public class CreateSecretRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -167,7 +171,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * The description of the access credential.
+         * <p>The description of the access credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -185,7 +192,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * The password of the database account that is used to access the instance.
+         * <p>The password of the database account that is used to access the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pwd123</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -194,7 +204,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +216,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * The name of the access credential. The name must be 1 to 16 characters in length and can contain letters, digits, and underscores (\_). If you leave this parameter empty, the value of the Username parameter is used.
+         * <p>The name of the access credential. The name must be 1 to 16 characters in length and can contain letters, digits, and underscores (_). If you leave this parameter empty, the value of the Username parameter is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testsecret</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -212,7 +228,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the connectivity to the instance by using the name and password of the database account.
+         * <p>Specifies whether to check the connectivity to the instance by using the name and password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder testConnection(Boolean testConnection) {
             this.putQueryParameter("TestConnection", testConnection);
@@ -221,7 +240,10 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * The name of the database account that is used to access the instance.
+         * <p>The name of the database account that is used to access the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

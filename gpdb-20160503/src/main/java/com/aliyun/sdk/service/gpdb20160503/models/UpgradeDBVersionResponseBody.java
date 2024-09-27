@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeDBVersionResponseBody} extends {@link TeaModel}
  *
  * <p>UpgradeDBVersionResponseBody</p>
@@ -73,7 +74,10 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * This parameter is no longer returned.
+         * <p>This parameter is no longer returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-wz9kmr708m155j***</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +85,10 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-wz9kmr708m155j***</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -89,7 +96,10 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25C11EE5-B7E8-481A-A07C-BD619971A570</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101450956</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

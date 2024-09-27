@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosisSQLInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosisSQLInfoRequest</p>
@@ -84,10 +85,13 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         } 
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -96,7 +100,10 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -105,10 +112,13 @@ public class DescribeDiagnosisSQLInfoRequest extends Request {
         }
 
         /**
-         * The query ID. It is a unique identifier of the query.
-         * <p>
+         * <p>The query ID. It is a unique identifier of the query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~450511~~">DescribeDiagnosisRecords</a> operation to obtain query IDs.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeDiagnosisRecords](~~450511~~) operation to obtain query IDs.
+         * <strong>example:</strong>
+         * <p>71403480878****</p>
          */
         public Builder queryID(String queryID) {
             this.putQueryParameter("QueryID", queryID);

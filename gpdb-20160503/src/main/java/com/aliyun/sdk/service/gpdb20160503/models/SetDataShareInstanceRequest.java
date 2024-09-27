@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDataShareInstanceRequest} extends {@link RequestModel}
  *
  * <p>SetDataShareInstanceRequest</p>
@@ -98,10 +99,10 @@ public class SetDataShareInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for PostgreSQL instance in Serverless mode.
-         * <p>
-         * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
+         * <p>The ID of the AnalyticDB for PostgreSQL instance in Serverless mode.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+         * </blockquote>
          */
         public Builder instanceList(java.util.List < String > instanceList) {
             String instanceListShrink = shrink(instanceList, "InstanceList", "json");
@@ -111,11 +112,14 @@ public class SetDataShareInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable data sharing. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable data sharing. Valid values:</p>
+         * <ul>
+         * <li><strong>add</strong>: enables data sharing.</li>
+         * <li><strong>remove</strong>: disables data sharing.</li>
+         * </ul>
          * 
-         * *   **add**: enables data sharing.
-         * *   **remove**: disables data sharing.
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -133,10 +137,13 @@ public class SetDataShareInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region.
-         * <p>
+         * <p>The ID of the region.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86912~~">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

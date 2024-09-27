@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDataShareInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>SetDataShareInstanceResponseBody</p>
@@ -61,7 +62,10 @@ public class SetDataShareInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The error message returned if the operation fails.
+         * <p>The error message returned if the operation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error message</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -69,7 +73,10 @@ public class SetDataShareInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4CAF581-2AC7-41AD-8940-D5**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +84,14 @@ public class SetDataShareInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the operation. Valid values:
-         * <p>
+         * <p>The state of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong>: The operation is successful.</li>
+         * <li><strong>failed</strong>: The operation fails.</li>
+         * </ul>
          * 
-         * *   **success**: The operation is successful.
-         * *   **failed**: The operation fails.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder status(String status) {
             this.status = status;

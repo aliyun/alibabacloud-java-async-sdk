@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDBResourceManagementModeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDBResourceManagementModeResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDBResourceManagementModeResponseBody extends TeaModel {
         private String resourceManagementMode; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class DescribeDBResourceManagementModeResponseBody extends TeaModel {
         }
 
         /**
-         * The resource management mode. Valid values:
-         * <p>
+         * <p>The resource management mode. Valid values:</p>
+         * <ul>
+         * <li>resourceGroup: resource group management.</li>
+         * <li>resourceQueue: resource queue management.</li>
+         * </ul>
          * 
-         * *   resourceGroup: resource group management.
-         * *   resourceQueue: resource queue management.
+         * <strong>example:</strong>
+         * <p>resourceGroup</p>
          */
         public Builder resourceManagementMode(String resourceManagementMode) {
             this.resourceManagementMode = resourceManagementMode;

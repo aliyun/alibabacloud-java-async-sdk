@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCollectionRequest} extends {@link RequestModel}
  *
  * <p>CreateCollectionRequest</p>
@@ -269,10 +270,13 @@ public class CreateCollectionRequest extends Request {
         } 
 
         /**
-         * The name of the collection that you want to create.
-         * <p>
+         * <p>The name of the collection that you want to create.</p>
+         * <blockquote>
+         * <p> The name must comply with the naming conventions of PostgreSQL objects.</p>
+         * </blockquote>
          * 
-         * >  The name must comply with the naming conventions of PostgreSQL objects.
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -281,10 +285,13 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * The instance ID.
-         * <p>
+         * <p>The instance ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~86911~~">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -293,10 +300,13 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * The number of vector dimensions.
-         * <p>
+         * <p>The number of vector dimensions.</p>
+         * <blockquote>
+         * <p> If you specify this parameter, an index is created. When you call the <a href="~~2401493~~">UpsertCollectionData</a> operation, make sure that the length of the Rows.Vector parameter is the same as the value of this parameter. If you do not specify this parameter, you can call the <a href="~~2401499~~">CreateVectorIndex</a> operation to create an index.</p>
+         * </blockquote>
          * 
-         * >  If you specify this parameter, an index is created. When you call the [UpsertCollectionData](~~2401493~~) operation, make sure that the length of the Rows.Vector parameter is the same as the value of this parameter. If you do not specify this parameter, you can call the [CreateVectorIndex](~~2401499~~) operation to create an index.
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder dimension(Long dimension) {
             this.putQueryParameter("Dimension", dimension);
@@ -305,14 +315,18 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.
-         * <p>
+         * <p>Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.</p>
+         * </li>
+         * <li><p>1: uses the memory mapping technology to create indexes. This method does not support the delete or update operation.</p>
+         * </li>
+         * </ul>
          * 
-         * > 
-         * 
-         * *   0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.
-         * 
-         * *   1: uses the memory mapping technology to create indexes. This method does not support the delete or update operation.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder externalStorage(Integer externalStorage) {
             this.putQueryParameter("ExternalStorage", externalStorage);
@@ -330,18 +344,17 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.
-         * <p>
+         * <p>The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.</p>
+         * <blockquote>
+         * <p> We recommend that you configure this parameter based on the value of the Dimension parameter.</p>
+         * </blockquote>
+         * <p>*If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.</p>
+         * <p>*If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.</p>
+         * <p>*If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.</p>
+         * <p>*If you set Dimension to a value greater than 1024, set the value of HnswM to 128.</p>
          * 
-         * >  We recommend that you configure this parameter based on the value of the Dimension parameter.
-         * 
-         * *If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.
-         * 
-         * *If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.
-         * 
-         * *If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.
-         * 
-         * *If you set Dimension to a value greater than 1024, set the value of HnswM to 128.
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder hnswM(Integer hnswM) {
             this.putQueryParameter("HnswM", hnswM);
@@ -368,19 +381,21 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.
-         * <p>
+         * <p>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>For information about the supported data types, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-postgresql/developer-reference/data-types?spm=a2c63.p38356.0.0.2b2c755axL2r4F">Data types</a>.</p>
+         * </li>
+         * <li><p>The money data type is not supported.</p>
+         * </li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Warning</strong>
+         * Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
          * 
-         * > 
-         * 
-         * *   For information about the supported data types, see [Data types](https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/data-types-1/?spm=a2c4g.11186623.0.0.43e567a1C35QRD).
-         * 
-         * *   The money data type is not supported.
-         * 
-         * **
-         * 
-         * **Warning**
-         * Reserved fields such as id, vector, to_tsvector, and source cannot be used.
+         * <strong>example:</strong>
+         * <p>{&quot;title&quot;:&quot;text&quot;,&quot;content&quot;:&quot;text&quot;,&quot;response&quot;:&quot;int&quot;}</p>
          */
         public Builder metadata(String metadata) {
             this.putQueryParameter("Metadata", metadata);
@@ -398,10 +413,13 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
-         * <p>
+         * <p>The name of the namespace.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~2401495~~">CreateNamespace</a> operation to create a namespace and call the <a href="~~2401502~~">ListNamespaces</a> operation to query a list of namespaces.</p>
+         * </blockquote>
          * 
-         * >  You can call the [CreateNamespace](~~2401495~~) operation to create a namespace and call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
+         * <strong>example:</strong>
+         * <p>mynamespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -428,11 +446,14 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the product quantization (PQ) feature for index acceleration. We recommend that you enable this feature for more than 500,000 rows of data. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the product quantization (PQ) feature for index acceleration. We recommend that you enable this feature for more than 500,000 rows of data. Valid values:</p>
+         * <ul>
+         * <li>0: no.</li>
+         * <li>1 (default): yes.</li>
+         * </ul>
          * 
-         * *   0: no.
-         * *   1 (default): yes.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pqEnable(Integer pqEnable) {
             this.putQueryParameter("PqEnable", pqEnable);
@@ -441,7 +462,10 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -450,7 +474,10 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-ws-*****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
