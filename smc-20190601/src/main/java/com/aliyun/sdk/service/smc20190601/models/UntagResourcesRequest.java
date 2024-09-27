@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -125,13 +126,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags that are added to the specified SMC resource. This parameter is valid only if you do not set `TagKey.N`. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags that are added to the specified SMC resource. This parameter is valid only if you do not set <code>TagKey.N</code>. Valid values:</p>
+         * <ul>
+         * <li>true: removes all tags that are added to the specified SMC resource. If no tags are added to the specified SMC resource, no operation is performed.</li>
+         * <li>false: does not remove tags that are added to the specified SMC resource.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: removes all tags that are added to the specified SMC resource. If no tags are added to the specified SMC resource, no operation is performed.
-         * *   false: does not remove tags that are added to the specified SMC resource.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -149,7 +152,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of N SMC resources. SMC resources include migration sources and jobs. Valid values of N: 1 to 50.
+         * <p>The IDs of N SMC resources. SMC resources include migration sources and jobs. Valid values of N: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bw526m1vi6x20c6g****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -167,11 +173,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the SMC resource. Valid values:
-         * <p>
+         * <p>The type of the SMC resource. Valid values:</p>
+         * <ul>
+         * <li>sourceserver: migration source.</li>
+         * <li>replicationjob: migration job.</li>
+         * </ul>
          * 
-         * *   sourceserver: migration source.
-         * *   replicationjob: migration job.
+         * <strong>example:</strong>
+         * <p>sourceserver</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -180,7 +189,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The key of tag N that is added to the SMC resource. Tag keys are case-sensitive. Valid values of N: 1 to 20.
+         * <p>The key of tag N that is added to the SMC resource. Tag keys are case-sensitive. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

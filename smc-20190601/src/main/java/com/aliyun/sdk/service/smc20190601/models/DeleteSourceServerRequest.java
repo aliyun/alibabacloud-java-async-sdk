@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSourceServerRequest} extends {@link RequestModel}
  *
  * <p>DeleteSourceServerRequest</p>
@@ -96,11 +97,14 @@ public class DeleteSourceServerRequest extends Request {
         } 
 
         /**
-         * Specifies whether to forcibly delete the migration source. Valid values:
-         * <p>
+         * <p>Specifies whether to forcibly delete the migration source. Valid values:</p>
+         * <ul>
+         * <li>true: forcibly deletes the migration source and the migration job created for the migration source, and releases the intermediate resources of the migration job.</li>
+         * <li>false: does not delete the migration source if a migration job is created for the migration source.</li>
+         * </ul>
          * 
-         * *   true: forcibly deletes the migration source and the migration job created for the migration source, and releases the intermediate resources of the migration job.
-         * *   false: does not delete the migration source if a migration job is created for the migration source.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -127,7 +131,10 @@ public class DeleteSourceServerRequest extends Request {
         }
 
         /**
-         * The migration source ID.
+         * <p>The migration source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp17m1vi6x20c6g6****</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);

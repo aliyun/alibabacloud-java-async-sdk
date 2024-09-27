@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReplicationJobsRequest} extends {@link RequestModel}
  *
  * <p>DescribeReplicationJobsRequest</p>
@@ -236,13 +237,16 @@ public class DescribeReplicationJobsRequest extends Request {
         } 
 
         /**
-         * The business status of the migration job. Valid values:
-         * <p>
+         * <p>The business status of the migration job. Valid values:</p>
+         * <ul>
+         * <li>Preparing: The migration is being prepared.</li>
+         * <li>Syncing: Data is being synchronized.</li>
+         * <li>Processing: The migration is in progress.</li>
+         * <li>Cleaning: Intermediate resources are being released.</li>
+         * </ul>
          * 
-         * *   Preparing: The migration is being prepared.
-         * *   Syncing: Data is being synchronized.
-         * *   Processing: The migration is in progress.
-         * *   Cleaning: Intermediate resources are being released.
+         * <strong>example:</strong>
+         * <p>Preparing</p>
          */
         public Builder businessStatus(String businessStatus) {
             this.putQueryParameter("BusinessStatus", businessStatus);
@@ -251,7 +255,7 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The IDs of the destination Elastic Compute Service (ECS) instances.
+         * <p>The IDs of the destination Elastic Compute Service (ECS) instances.</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -260,7 +264,10 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The IDs of the migration jobs. You can specify a maximum of 50 IDs.
+         * <p>The IDs of the migration jobs. You can specify a maximum of 50 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bp19vlwm0tyigbmj****</p>
          */
         public Builder jobId(java.util.List < String > jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -269,13 +276,16 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The type of the migration job. Valid values:
-         * <p>
+         * <p>The type of the migration job. Valid values:</p>
+         * <ul>
+         * <li>0: server migration.</li>
+         * <li>1: operating system migration.</li>
+         * <li>2: cross-zone migration.</li>
+         * <li>3: agentless migration for a VMware VM.</li>
+         * </ul>
          * 
-         * *   0: server migration.
-         * *   1: operating system migration.
-         * *   2: cross-zone migration.
-         * *   3: agentless migration for a VMware VM.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder jobType(Integer jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -284,7 +294,10 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The name of the migration job.
+         * <p>The name of the migration job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testMigrationTaskName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -302,10 +315,11 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -314,10 +328,11 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -326,10 +341,11 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud region to which you want to migrate the source server.
-         * <p>
+         * <p>The ID of the Alibaba Cloud region to which you want to migrate the source server.</p>
+         * <p>For example, if you want to migrate a source server to the China (Hangzhou) region, set this parameter to <code>cn-hangzhou</code>. You can call the <a href="~~25609~~">DescribeRegions</a> operation to query the latest regions.</p>
          * 
-         * For example, if you want to migrate a source server to the China (Hangzhou) region, set this parameter to `cn-hangzhou`. You can call the [DescribeRegions](~~25609~~) operation to query the latest regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -338,7 +354,10 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmw3ty5y7****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -356,7 +375,10 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The IDs of the source servers. You can specify a maximum of 50 IDs.
+         * <p>The IDs of the source servers. You can specify a maximum of 50 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1e2fsl57knvuug****</p>
          */
         public Builder sourceId(java.util.List < String > sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -365,17 +387,20 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The status of the migration job. Valid values:
-         * <p>
+         * <p>The status of the migration job. Valid values:</p>
+         * <ul>
+         * <li>Ready: The migration job is not started.</li>
+         * <li>Running: The migration job is running.</li>
+         * <li>Stopped: The migration job is paused.</li>
+         * <li>InError: An error occurs in the migration job.</li>
+         * <li>Finished: The migration job is complete.</li>
+         * <li>Waiting: The migration job is waiting to run.</li>
+         * <li>Expired: The migration job has expired.</li>
+         * <li>Deleting: The migration job is being deleted.</li>
+         * </ul>
          * 
-         * *   Ready: The migration job is not started.
-         * *   Running: The migration job is running.
-         * *   Stopped: The migration job is paused.
-         * *   InError: An error occurs in the migration job.
-         * *   Finished: The migration job is complete.
-         * *   Waiting: The migration job is waiting to run.
-         * *   Expired: The migration job has expired.
-         * *   Deleting: The migration job is being deleted.
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -384,7 +409,7 @@ public class DescribeReplicationJobsRequest extends Request {
         }
 
         /**
-         * The information about tags that are attached to the SMC resource.
+         * <p>The information about tags that are attached to the SMC resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -399,6 +424,12 @@ public class DescribeReplicationJobsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeReplicationJobsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeReplicationJobsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -438,10 +469,11 @@ public class DescribeReplicationJobsRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag N that is added to the SMC resource. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of the tag N that is added to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag key can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.</p>
              * 
-             * The tag key can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -449,10 +481,11 @@ public class DescribeReplicationJobsRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the SMC resource. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The value of tag N that is added to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.<a href="http://https://%E3%80%82"></a></p>
              * 
-             * The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.[](http://https://。)
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

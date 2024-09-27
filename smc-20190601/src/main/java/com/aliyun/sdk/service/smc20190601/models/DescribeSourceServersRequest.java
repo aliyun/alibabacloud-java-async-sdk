@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSourceServersRequest} extends {@link RequestModel}
  *
  * <p>DescribeSourceServersRequest</p>
@@ -56,6 +57,10 @@ public class DescribeSourceServersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkgroupId")
+    private String workgroupId;
+
     private DescribeSourceServersRequest(Builder builder) {
         super(builder);
         this.jobId = builder.jobId;
@@ -69,6 +74,7 @@ public class DescribeSourceServersRequest extends Request {
         this.sourceId = builder.sourceId;
         this.state = builder.state;
         this.tag = builder.tag;
+        this.workgroupId = builder.workgroupId;
     }
 
     public static Builder builder() {
@@ -161,6 +167,13 @@ public class DescribeSourceServersRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return workgroupId
+     */
+    public String getWorkgroupId() {
+        return this.workgroupId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSourceServersRequest, Builder> {
         private String jobId; 
         private String name; 
@@ -173,6 +186,7 @@ public class DescribeSourceServersRequest extends Request {
         private java.util.List < String > sourceId; 
         private String state; 
         private java.util.List < Tag> tag; 
+        private String workgroupId; 
 
         private Builder() {
             super();
@@ -191,10 +205,14 @@ public class DescribeSourceServersRequest extends Request {
             this.sourceId = request.sourceId;
             this.state = request.state;
             this.tag = request.tag;
+            this.workgroupId = request.workgroupId;
         } 
 
         /**
-         * The migration job ID.
+         * <p>The migration job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bp19vlwm0tyigbmj****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -203,10 +221,11 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * The name of the migration source. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain digits, colons (:), underscores (\_), and hyphens (-).
-         * <p>
+         * <p>The name of the migration source. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>Default value: null.</p>
          * 
-         * Default value: null.
+         * <strong>example:</strong>
+         * <p>testSourceServerName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -224,10 +243,11 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1</p>
          * 
-         * Default value: 1
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -236,10 +256,11 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 50.</p>
+         * <p>Default value: 10</p>
          * 
-         * Default value: 10
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +269,7 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * The types of migration jobs that are associated with migration sources.
+         * <p>The types of migration jobs that are associated with migration sources.</p>
          */
         public Builder relatedJobType(java.util.List < String > relatedJobType) {
             this.putQueryParameter("RelatedJobType", relatedJobType);
@@ -257,7 +278,10 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmw3ty5y7****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -275,7 +299,10 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * The migration source IDs. You can specify multiple IDs.
+         * <p>The migration source IDs. You can specify multiple IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1e2fsl57knvuug****</p>
          */
         public Builder sourceId(java.util.List < String > sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -284,13 +311,16 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * The state of the migration source. Valid Values:
-         * <p>
+         * <p>The state of the migration source. Valid Values:</p>
+         * <ul>
+         * <li>Unavailable: The migration source is inactive, or an error occurs in the migration source.</li>
+         * <li>Available: The migration source is active.</li>
+         * <li>InUse: The migration source is being migrated.</li>
+         * <li>Deleting: The migration source is being deleted from Server Migration Center (SMC).</li>
+         * </ul>
          * 
-         * *   Unavailable: The migration source is inactive, or an error occurs in the migration source.
-         * *   Available: The migration source is active.
-         * *   InUse: The migration source is being migrated.
-         * *   Deleting: The migration source is being deleted from Server Migration Center (SMC).
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -299,11 +329,20 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * The tag.
+         * <p>The tag.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * WorkgroupId.
+         */
+        public Builder workgroupId(String workgroupId) {
+            this.putQueryParameter("WorkgroupId", workgroupId);
+            this.workgroupId = workgroupId;
             return this;
         }
 
@@ -314,6 +353,12 @@ public class DescribeSourceServersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSourceServersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeSourceServersRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -353,10 +398,11 @@ public class DescribeSourceServersRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that is added to the SMC resource. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N that is added to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
              * 
-             * The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -364,10 +410,11 @@ public class DescribeSourceServersRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the SMC resource. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The value of tag N that is added to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.</p>
              * 
-             * The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

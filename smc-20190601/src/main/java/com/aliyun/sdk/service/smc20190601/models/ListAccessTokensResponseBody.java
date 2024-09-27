@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessTokensResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccessTokensResponseBody</p>
@@ -85,7 +86,7 @@ public class ListAccessTokensResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The activation codes returned.
+         * <p>The activation codes returned.</p>
          */
         public Builder accessTokens(AccessTokens accessTokens) {
             this.accessTokens = accessTokens;
@@ -93,14 +94,16 @@ public class ListAccessTokensResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values:
-         * <p>
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li>10</li>
+         * <li>20</li>
+         * <li>50</li>
+         * </ul>
+         * <p>Default value: 20.</p>
          * 
-         * *   10
-         * *   20
-         * *   50
-         * 
-         * Default value: 20.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -108,7 +111,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -116,7 +122,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2DA3097-79B9-53AE-B0DF-281DC54F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -124,7 +133,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of migration sources returned.
+         * <p>The total number of migration sources returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,6 +149,12 @@ public class ListAccessTokensResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccessTokensResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccessTokensResponseBody</p>
+     */
     public static class AccessToken extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessTokenId")
         private String accessTokenId;
@@ -248,7 +266,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
             private String timeToLiveInDays; 
 
             /**
-             * The ID of the activation code.
+             * <p>The ID of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>at-bp1akz2zp67r0k6r****</p>
              */
             public Builder accessTokenId(String accessTokenId) {
                 this.accessTokenId = accessTokenId;
@@ -256,10 +277,11 @@ public class ListAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of times that the activation code can be used. Valid values: 1 to 1000.
-             * <p>
+             * <p>The maximum number of times that the activation code can be used. Valid values: 1 to 1000.</p>
+             * <p>Default value: 100.</p>
              * 
-             * Default value: 100.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -267,7 +289,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the activation code was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the activation code was created. The time follows the <a href="~~25696~~">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-09T02:35:44Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -275,7 +300,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the activation code.
+             * <p>The description of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is an activation code</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -283,7 +311,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the activation code.
+             * <p>The name of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,7 +322,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * The number of migration sources whose information has been imported to Server Migration Center (SMC) by using the activation code.
+             * <p>The number of migration sources whose information has been imported to Server Migration Center (SMC) by using the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder registeredCount(String registeredCount) {
                 this.registeredCount = registeredCount;
@@ -299,12 +333,15 @@ public class ListAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the activation code. Valid values:
-             * <p>
+             * <p>The status of the activation code. Valid values:</p>
+             * <ul>
+             * <li>activated</li>
+             * <li>unactivated</li>
+             * <li>expired</li>
+             * </ul>
              * 
-             * *   activated
-             * *   unactivated
-             * *   expired
+             * <strong>example:</strong>
+             * <p>activated</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -312,7 +349,10 @@ public class ListAccessTokensResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the activation code. Unit: day. Valid values: 1 to 90. Default value: 30.
+             * <p>The validity period of the activation code. Unit: day. Valid values: 1 to 90. Default value: 30.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timeToLiveInDays(String timeToLiveInDays) {
                 this.timeToLiveInDays = timeToLiveInDays;
@@ -326,6 +366,12 @@ public class ListAccessTokensResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAccessTokensResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccessTokensResponseBody</p>
+     */
     public static class AccessTokens extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessToken")
         private java.util.List < AccessToken> accessToken;

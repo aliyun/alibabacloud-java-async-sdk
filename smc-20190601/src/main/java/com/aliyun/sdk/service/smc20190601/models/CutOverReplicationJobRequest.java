@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CutOverReplicationJobRequest} extends {@link RequestModel}
  *
  * <p>CutOverReplicationJobRequest</p>
@@ -96,7 +97,10 @@ public class CutOverReplicationJobRequest extends Request {
         } 
 
         /**
-         * The ID of the incremental migration job.
+         * <p>The ID of the incremental migration job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bp1fnx5y3djc4cop****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -123,13 +127,15 @@ public class CutOverReplicationJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to migrate full data for the last time. Valid Values:
-         * <p>
+         * <p>Specifies whether to migrate full data for the last time. Valid Values:</p>
+         * <ul>
+         * <li>true: migrates full data for the last time.</li>
+         * <li>false: does not migrate full data for the last time.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: migrates full data for the last time.
-         * *   false: does not migrate full data for the last time.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder syncData(Boolean syncData) {
             this.putQueryParameter("SyncData", syncData);

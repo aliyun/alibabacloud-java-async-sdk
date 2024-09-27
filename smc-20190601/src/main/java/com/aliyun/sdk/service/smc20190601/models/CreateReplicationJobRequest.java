@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReplicationJobRequest} extends {@link RequestModel}
  *
  * <p>CreateReplicationJobRequest</p>
@@ -34,6 +35,10 @@ public class CreateReplicationJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Disks")
+    private Disks disks;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Frequency")
@@ -153,6 +158,7 @@ public class CreateReplicationJobRequest extends Request {
         this.containerTag = builder.containerTag;
         this.dataDisk = builder.dataDisk;
         this.description = builder.description;
+        this.disks = builder.disks;
         this.frequency = builder.frequency;
         this.imageName = builder.imageName;
         this.instanceId = builder.instanceId;
@@ -235,6 +241,13 @@ public class CreateReplicationJobRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return disks
+     */
+    public Disks getDisks() {
+        return this.disks;
     }
 
     /**
@@ -433,6 +446,7 @@ public class CreateReplicationJobRequest extends Request {
         private String containerTag; 
         private java.util.List < DataDisk> dataDisk; 
         private String description; 
+        private Disks disks; 
         private Integer frequency; 
         private String imageName; 
         private String instanceId; 
@@ -473,6 +487,7 @@ public class CreateReplicationJobRequest extends Request {
             this.containerTag = request.containerTag;
             this.dataDisk = request.dataDisk;
             this.description = request.description;
+            this.disks = request.disks;
             this.frequency = request.frequency;
             this.imageName = request.imageName;
             this.instanceId = request.instanceId;
@@ -503,7 +518,10 @@ public class CreateReplicationJobRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -512,7 +530,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The namespace of the destination Docker container image. For more information about Docker container images, see [Terms](~~60744~~).
+         * <p>The namespace of the destination Docker container image. For more information about Docker container images, see <a href="~~60744~~">Terms</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNamespace</p>
          */
         public Builder containerNamespace(String containerNamespace) {
             this.putQueryParameter("ContainerNamespace", containerNamespace);
@@ -521,7 +542,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The repository that stores the destination Docker container image. For more information about Docker container images, see [Terms](~~60744~~).
+         * <p>The repository that stores the destination Docker container image. For more information about Docker container images, see <a href="~~60744~~">Terms</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRepository</p>
          */
         public Builder containerRepository(String containerRepository) {
             this.putQueryParameter("ContainerRepository", containerRepository);
@@ -530,7 +554,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The tag of the destination Docker container image. For more information about Docker container images, see [Terms](~~60744~~).
+         * <p>The tag of the destination Docker container image. For more information about Docker container images, see <a href="~~60744~~">Terms</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS:v1</p>
          */
         public Builder containerTag(String containerTag) {
             this.putQueryParameter("ContainerTag", containerTag);
@@ -539,7 +566,7 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The data disks.
+         * <p>The data disks.</p>
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
@@ -548,10 +575,11 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The description of the migration job.
-         * <p>
+         * <p>The description of the migration job.</p>
+         * <p>The description must be 2 to 128 characters in length, and can contain digits, colons (:), underscores (_), and hyphens (-). The description must start with a letter, but cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
-         * The description must be 2 to 128 characters in length, and can contain digits, colons (:), underscores (\_), and hyphens (-). The description must start with a letter, but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>This_is_a_migration_task</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -560,12 +588,21 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The interval at which SMC synchronizes incremental data to Alibaba Cloud. Unit: hour. Valid values: 1 to 168.
-         * <p>
+         * Disks.
+         */
+        public Builder disks(Disks disks) {
+            this.putQueryParameter("Disks", disks);
+            this.disks = disks;
+            return this;
+        }
+
+        /**
+         * <p>The interval at which SMC synchronizes incremental data to Alibaba Cloud. Unit: hour. Valid values: 1 to 168.</p>
+         * <p>This parameter is required if you set the <code>RunOnce</code> parameter to false.</p>
+         * <p>By default, this parameter is empty.</p>
          * 
-         * This parameter is required if you set the `RunOnce` parameter to false.
-         * 
-         * By default, this parameter is empty.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder frequency(Integer frequency) {
             this.putQueryParameter("Frequency", frequency);
@@ -574,13 +611,17 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The name of the destination image. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the destination image. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be unique within an Alibaba Cloud region.</li>
+         * <li>The name must be 2 to 128 characters in length, and can contain digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you specify an image name that already exists in the destination region, the migration job ID is appended to the image name as a suffix. Example: ImageName_j-2zexxxxxxxxxxxxx.</p>
+         * </blockquote>
          * 
-         * *   The name must be unique within an Alibaba Cloud region.
-         * *   The name must be 2 to 128 characters in length, and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter, but cannot start with `http://` or `https://`.
-         * 
-         * >  If you specify an image name that already exists in the destination region, the migration job ID is appended to the image name as a suffix. Example: ImageName_j-2zexxxxxxxxxxxxx.
+         * <strong>example:</strong>
+         * <p>testAliCloudImageName</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -589,7 +630,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The ID of the destination ECS instance.
+         * <p>The ID of the destination ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1f1dvfto1sigz5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -598,7 +642,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The name of the Resource Access Management (RAM) role that is assigned to the instance.
+         * <p>The name of the Resource Access Management (RAM) role that is assigned to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMCAdmin</p>
          */
         public Builder instanceRamRole(String instanceRamRole) {
             this.putQueryParameter("InstanceRamRole", instanceRamRole);
@@ -607,13 +654,15 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The type of the intermediate instance.
-         * <p>
+         * <p>The type of the intermediate instance.</p>
+         * <p>You can call the <a href="~~25620~~">DescribeInstanceTypes</a> operation to obtain the ECS instance types.</p>
+         * <ul>
+         * <li>If you specify this parameter, SMC creates an intermediate instance of the specified instance type. If the specified instance type is unavailable, you cannot create the migration job.</li>
+         * <li>If you do not specify this parameter, SMC selects an available instance type in a specific order to create an intermediate instance. For more information, see <a href="~~121707~~">SMC FAQ</a>.</li>
+         * </ul>
          * 
-         * You can call the [DescribeInstanceTypes](~~25620~~) operation to obtain the ECS instance types.
-         * 
-         * *   If you specify this parameter, SMC creates an intermediate instance of the specified instance type. If the specified instance type is unavailable, you cannot create the migration job.
-         * *   If you do not specify this parameter, SMC selects an available instance type in a specific order to create an intermediate instance. For more information, see [SMC FAQ](~~121707~~).
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -622,13 +671,16 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The type of the migration job. Valid values:
-         * <p>
+         * <p>The type of the migration job. Valid values:</p>
+         * <ul>
+         * <li>0: server migration.</li>
+         * <li>1: operating system migration.</li>
+         * <li>2: cross-zone migration.</li>
+         * <li>3: agentless migration for a VMware VM.</li>
+         * </ul>
          * 
-         * *   0: server migration.
-         * *   1: operating system migration.
-         * *   2: cross-zone migration.
-         * *   3: agentless migration for a VMware VM.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder jobType(Integer jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -637,7 +689,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The ID of the launch template.
+         * <p>The ID of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-bp16jovvln1cgaaq****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -646,7 +701,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The version number of the launch template.
+         * <p>The version number of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder launchTemplateVersion(String launchTemplateVersion) {
             this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
@@ -655,13 +713,15 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The license type. Valid values:
-         * <p>
+         * <p>The license type. Valid values:</p>
+         * <ul>
+         * <li>An empty value specifies no license.</li>
+         * <li>A value of BYOL specifies Bring Your Own License (BYOL).</li>
+         * </ul>
+         * <p>For more information, see <a href="~~121707~~">SMC FAQ</a>.</p>
          * 
-         * *   An empty value specifies no license.
-         * *   A value of BYOL specifies Bring Your Own License (BYOL).
-         * 
-         * For more information, see [SMC FAQ](~~121707~~).
+         * <strong>example:</strong>
+         * <p>BYOL</p>
          */
         public Builder licenseType(String licenseType) {
             this.putQueryParameter("LicenseType", licenseType);
@@ -670,12 +730,12 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The maximum number of images retained for the incremental migration job. Valid values: 1 to 10.
-         * <p>
+         * <p>The maximum number of images retained for the incremental migration job. Valid values: 1 to 10.</p>
+         * <p>This parameter is required if you set the <code>RunOnce</code> parameter to false.</p>
+         * <p>By default, this parameter is empty.</p>
          * 
-         * This parameter is required if you set the `RunOnce` parameter to false.
-         * 
-         * By default, this parameter is empty.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxNumberOfImageToKeep(Integer maxNumberOfImageToKeep) {
             this.putQueryParameter("MaxNumberOfImageToKeep", maxNumberOfImageToKeep);
@@ -684,11 +744,14 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The name of the migration job. The name must meet the following requirements:
-         * <p>
+         * <p>The name of the migration job. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be unique.</li>
+         * <li>The name must be 2 to 128 characters in length, and can contain digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
          * 
-         * *   The name must be unique.
-         * *   The name must be 2 to 128 characters in length, and can contain digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter, but cannot start with `http://` or `https://`.
+         * <strong>example:</strong>
+         * <p>testMigrationTaskName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -697,13 +760,15 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The network mode for data transmission. Valid values:
-         * <p>
+         * <p>The network mode for data transmission. Valid values:</p>
+         * <ul>
+         * <li>0: Data is transmitted over the Internet. Make sure that the source server can access the Internet.</li>
+         * <li>2: Data is transmitted over a VPC. If you specify this value, you must specify the VSwitchId parameter. You do not need to specify the VpcId parameter because the value of the VpcId parameter can be retrieved based on the value of the VSwitchId parameter.</li>
+         * </ul>
+         * <p>Default value: 0</p>
          * 
-         * *   0: Data is transmitted over the Internet. Make sure that the source server can access the Internet.
-         * *   2: Data is transmitted over a VPC. If you specify this value, you must specify the VSwitchId parameter. You do not need to specify the VpcId parameter because the value of the VpcId parameter can be retrieved based on the value of the VSwitchId parameter.
-         * 
-         * Default value: 0
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder netMode(Integer netMode) {
             this.putQueryParameter("NetMode", netMode);
@@ -721,10 +786,11 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud region to which you want to migrate the source server.
-         * <p>
+         * <p>The ID of the Alibaba Cloud region to which you want to migrate the source server.</p>
+         * <p>For example, if you want to migrate the source server to the China (Hangzhou) region, set this parameter to <code>cn-hangzhou</code>. You can call the <a href="~~25609~~">DescribeRegions</a> operation to query the latest regions.</p>
          * 
-         * For example, if you want to migrate the source server to the China (Hangzhou) region, set this parameter to `cn-hangzhou`. You can call the [DescribeRegions](~~25609~~) operation to query the latest regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -733,16 +799,17 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The parameters of the replication driver. The parameters must be specified as key-value pairs in the JSON format. The keys are fixed for each type of replication driver. The JSON string can be up to 2,048 characters in length.
-         * <p>
+         * <p>The parameters of the replication driver. The parameters must be specified as key-value pairs in the JSON format. The keys are fixed for each type of replication driver. The JSON string can be up to 2,048 characters in length.</p>
+         * <p>A replication driver is a tool that is used to migrate a source server to an intermediate instance. The parameters vary based on the replication driver type. If you use a Server Migration Tool (SMT) driver, you can specify the following parameters:</p>
+         * <ul>
+         * <li>bandwidth_limit: the maximum bandwidth for data transmission.</li>
+         * <li>compress_level: the compression ratio of data to be transmitted.</li>
+         * <li>checksum: specifies whether to enable checksum verification.</li>
+         * </ul>
+         * <p>For more information about replication drivers, see the response parameter <code>SourceServers.ReplicationDriver</code> of the <a href="~~121818~~">DescribeSourceServers</a> operation.</p>
          * 
-         * A replication driver is a tool that is used to migrate a source server to an intermediate instance. The parameters vary based on the replication driver type. If you use a Server Migration Tool (SMT) driver, you can specify the following parameters:
-         * 
-         * *   bandwidth_limit: the maximum bandwidth for data transmission.
-         * *   compress_level: the compression ratio of data to be transmitted.
-         * *   checksum: specifies whether to enable checksum verification.
-         * 
-         * For more information about replication drivers, see the response parameter `SourceServers.ReplicationDriver` of the [DescribeSourceServers](~~121818~~) operation.
+         * <strong>example:</strong>
+         * <p>{&quot;bandwidth_limit&quot;:0,&quot;compress_level&quot;:1,&quot;checksum&quot;:true}</p>
          */
         public Builder replicationParameters(String replicationParameters) {
             this.putQueryParameter("ReplicationParameters", replicationParameters);
@@ -751,7 +818,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmw3ty5y7****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -769,13 +839,17 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable incremental migration for the source server. Valid values:
-         * <p>
+         * <p>Specifies whether to disable incremental migration for the source server. Valid values:</p>
+         * <ul>
+         * <li>true: creates a migration job that runs only once. This is the default value. Incremental data of the source server is not synchronized.</li>
+         * <li>false: creates an incremental migration job. In this case, you must specify the <code>Frequency</code> parameter. SMC synchronizes incremental data of the source server to Alibaba Cloud at the specified frequency. You can use an incremental migration job to synchronize incremental data from the source server to Alibaba Cloud without the need to interrupt your business. A full data image is generated for the source server when the job is running.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can specify this parameter only when you create a migration job. The parameter value cannot be changed after the migration job is created.</p>
+         * </blockquote>
          * 
-         * *   true: creates a migration job that runs only once. This is the default value. Incremental data of the source server is not synchronized.
-         * *   false: creates an incremental migration job. In this case, you must specify the `Frequency` parameter. SMC synchronizes incremental data of the source server to Alibaba Cloud at the specified frequency. You can use an incremental migration job to synchronize incremental data from the source server to Alibaba Cloud without the need to interrupt your business. A full data image is generated for the source server when the job is running.
-         * 
-         * >  You can specify this parameter only when you create a migration job. The parameter value cannot be changed after the migration job is created.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder runOnce(Boolean runOnce) {
             this.putQueryParameter("RunOnce", runOnce);
@@ -784,13 +858,17 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The time when you want to run the migration job. The time must meet the following requirements:
-         * <p>
+         * <p>The time when you want to run the migration job. The time must meet the following requirements:</p>
+         * <ul>
+         * <li>The time must be specified in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2018-01-01T12:00:00Z specifies 20:00:00 on January 1, 2018 (UTC+8).</li>
+         * <li>The value must be within 30 days after the current time.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify this parameter, you must manually start the migration job after the job is created. You can call the <a href="~~121823~~">StartReplicationJob</a> operation to start the migration job.</p>
+         * </blockquote>
          * 
-         * *   The time must be specified in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2018-01-01T12:00:00Z specifies 20:00:00 on January 1, 2018 (UTC+8).
-         * *   The value must be within 30 days after the current time.
-         * 
-         * >  If you do not specify this parameter, you must manually start the migration job after the job is created. You can call the [StartReplicationJob](~~121823~~) operation to start the migration job.
+         * <strong>example:</strong>
+         * <p>2019-06-04T13:35:00Z</p>
          */
         public Builder scheduledStartTime(String scheduledStartTime) {
             this.putQueryParameter("ScheduledStartTime", scheduledStartTime);
@@ -799,7 +877,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The ID of the source server.
+         * <p>The ID of the source server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1e2fsl57knvuug****</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -808,7 +889,7 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The information about system disk partitions.
+         * <p>The information about system disk partitions.</p>
          */
         public Builder systemDiskPart(java.util.List < SystemDiskPart> systemDiskPart) {
             this.putQueryParameter("SystemDiskPart", systemDiskPart);
@@ -817,10 +898,13 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The system disk size of the destination ECS instance. Unit: GiB. Valid values: 20 to 2048.
-         * <p>
+         * <p>The system disk size of the destination ECS instance. Unit: GiB. Valid values: 20 to 2048.</p>
+         * <blockquote>
+         * <p> The value must be greater than the used space of the system disk on the source server. For example, if the total size of the source disk is 500 GiB and the used space is 100 GiB, the value of this parameter must be greater than 100 GiB.</p>
+         * </blockquote>
          * 
-         * >  The value must be greater than the used space of the system disk on the source server. For example, if the total size of the source disk is 500 GiB and the used space is 100 GiB, the value of this parameter must be greater than 100 GiB.
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);
@@ -829,7 +913,7 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -838,12 +922,15 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The type of destination to which you want to migrate the source server. Valid values:
-         * <p>
+         * <p>The type of destination to which you want to migrate the source server. Valid values:</p>
+         * <ul>
+         * <li>Image: After the migration job is complete, SMC generates an Elastic Compute Service (ECS) image for the source server.</li>
+         * <li>ContainerImage: After the migration job is complete, SMC generates a Docker container image for the source server.</li>
+         * <li>TargetInstance: After the migration job is completed, SMC migrates the source server to the destination instance. If you set this parameter to TargetInstance, you must set the <code>InstanceId</code> parameter.</li>
+         * </ul>
          * 
-         * *   Image: After the migration job is complete, SMC generates an Elastic Compute Service (ECS) image for the source server.
-         * *   ContainerImage: After the migration job is complete, SMC generates a Docker container image for the source server.
-         * *   TargetInstance: After the migration job is completed, SMC migrates the source server to the destination instance. If you set this parameter to TargetInstance, you must set the `InstanceId` parameter.
+         * <strong>example:</strong>
+         * <p>Image</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -852,10 +939,11 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch in the specified VPC.
-         * <p>
+         * <p>The ID of the vSwitch in the specified VPC.</p>
+         * <p>You must set this parameter if you use a VPC to migrate data.</p>
          * 
-         * You must set this parameter if you use a VPC to migrate data.
+         * <strong>example:</strong>
+         * <p>vsw-bp1ddbrxdlrcbim46****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -864,14 +952,16 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The time when the migration job expires. You can schedule the migration job to expire 7 to 90 days after the job is created.
-         * <p>
+         * <p>The time when the migration job expires. You can schedule the migration job to expire 7 to 90 days after the job is created.</p>
+         * <ul>
+         * <li>The time must be specified in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2018-01-01T12:00:00Z specifies 20:00:00 on January 1, 2018 (UTC+8).</li>
+         * <li>If you do not specify this parameter, the migration job does not expire.</li>
+         * <li>After a migration job expires, the job state changes to Expired. SMC retains the migration job for seven days after the job expires. After the job is retained for seven days, SMC deletes the migration job.</li>
+         * </ul>
+         * <p>By default, a migration job is valid for 30 days after it is created.</p>
          * 
-         * *   The time must be specified in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. For example, 2018-01-01T12:00:00Z specifies 20:00:00 on January 1, 2018 (UTC+8).
-         * *   If you do not specify this parameter, the migration job does not expire.
-         * *   After a migration job expires, the job state changes to Expired. SMC retains the migration job for seven days after the job expires. After the job is retained for seven days, SMC deletes the migration job.
-         * 
-         * By default, a migration job is valid for 30 days after it is created.
+         * <strong>example:</strong>
+         * <p>2019-06-04T13:35:00Z</p>
          */
         public Builder validTime(String validTime) {
             this.putQueryParameter("ValidTime", validTime);
@@ -880,7 +970,10 @@ public class CreateReplicationJobRequest extends Request {
         }
 
         /**
-         * The ID of a VPC for which you have configured an Express Connect circuit or a VPN gateway.
+         * <p>The ID of a VPC for which you have configured an Express Connect circuit or a VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1vwnn14rqpyiczj****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -895,6 +988,12 @@ public class CreateReplicationJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateReplicationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReplicationJobRequest</p>
+     */
     public static class Part extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Block")
         private Boolean block;
@@ -946,13 +1045,15 @@ public class CreateReplicationJobRequest extends Request {
             private Long sizeBytes; 
 
             /**
-             * Specifies whether to enable block replication for partition N in the destination data disk. Valid values:
-             * <p>
+             * <p>Specifies whether to enable block replication for partition N in the destination data disk. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: true
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder block(Boolean block) {
                 this.block = block;
@@ -960,10 +1061,13 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * The device ID of partition N in the destination data disk. The partitions in the destination data disk are arranged in the same sequential order as those in the source data disk.
-             * <p>
+             * <p>The device ID of partition N in the destination data disk. The partitions in the destination data disk are arranged in the same sequential order as those in the source data disk.</p>
+             * <blockquote>
+             * <p> You must set both the DataDisk.N.Part.N.Device and <code>DataDisk.N.Part.N.SizeBytes</code> parameters or leave both parameters empty.</p>
+             * </blockquote>
              * 
-             * >  You must set both the DataDisk.N.Part.N.Device and `DataDisk.N.Part.N.SizeBytes` parameters or leave both parameters empty.
+             * <strong>example:</strong>
+             * <p>0_1</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -971,14 +1075,18 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * The size of partition N in the destination data disk. Unit: bytes. The default value is equal to the corresponding partition size of the source data disk.
-             * <p>
+             * <p>The size of partition N in the destination data disk. Unit: bytes. The default value is equal to the corresponding partition size of the source data disk.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The total size of all partitions in a destination data disk cannot exceed the size of the destination data disk.</p>
+             * </li>
+             * <li><p>You must set both the <code>DataDisk.N.Part.N.Device</code> and DataDisk.N.Part.N.SizeBytes parameters or leave both parameters empty.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   The total size of all partitions in a destination data disk cannot exceed the size of the destination data disk.
-             * 
-             * *   You must set both the `DataDisk.N.Part.N.Device` and DataDisk.N.Part.N.SizeBytes parameters or leave both parameters empty.
+             * <strong>example:</strong>
+             * <p>254803968</p>
              */
             public Builder sizeBytes(Long sizeBytes) {
                 this.sizeBytes = sizeBytes;
@@ -992,6 +1100,12 @@ public class CreateReplicationJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateReplicationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReplicationJobRequest</p>
+     */
     public static class DataDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
@@ -1043,10 +1157,13 @@ public class CreateReplicationJobRequest extends Request {
             private Integer size; 
 
             /**
-             * The index of data disk N on the destination ECS instance. Data disks on a destination ECS instance are arranged in a sequential order that starts from 1. Valid values: 1 to 16.
-             * <p>
+             * <p>The index of data disk N on the destination ECS instance. Data disks on a destination ECS instance are arranged in a sequential order that starts from 1. Valid values: 1 to 16.</p>
+             * <blockquote>
+             * <p> To create a destination data disk for a source server, make sure that the source server has data disks.</p>
+             * </blockquote>
              * 
-             * >  To create a destination data disk for a source server, make sure that the source server has data disks.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -1054,7 +1171,7 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * The data disk partitions.
+             * <p>The data disk partitions.</p>
              */
             public Builder part(java.util.List < Part> part) {
                 this.part = part;
@@ -1062,10 +1179,13 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * The size of the data disk on the destination ECS instance. Unit: GiB. Valid values: 20 to 32768.
-             * <p>
+             * <p>The size of the data disk on the destination ECS instance. Unit: GiB. Valid values: 20 to 32768.</p>
+             * <blockquote>
+             * <p> The size of a destination data disk must be larger than the size of data in the source data disk. For example, if the size of the source data disk is 500 GiB and the used space is 100 GiB, you must set this parameter to a value greater than 100.</p>
+             * </blockquote>
              * 
-             * >  The size of a destination data disk must be larger than the size of data in the source data disk. For example, if the size of the source data disk is 500 GiB and the used space is 100 GiB, you must set this parameter to a value greater than 100.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1079,6 +1199,497 @@ public class CreateReplicationJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateReplicationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReplicationJobRequest</p>
+     */
+    public static class DataPart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Block")
+        private Boolean block;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("SizeBytes")
+        private Long sizeBytes;
+
+        private DataPart(Builder builder) {
+            this.block = builder.block;
+            this.path = builder.path;
+            this.sizeBytes = builder.sizeBytes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataPart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return block
+         */
+        public Boolean getBlock() {
+            return this.block;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return sizeBytes
+         */
+        public Long getSizeBytes() {
+            return this.sizeBytes;
+        }
+
+        public static final class Builder {
+            private Boolean block; 
+            private String path; 
+            private Long sizeBytes; 
+
+            /**
+             * <p>Specifies whether to enable block replication for partition N in the destination data disk. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder block(Boolean block) {
+                this.block = block;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * <p>The size of partition N in the destination data disk. Unit: bytes. The default value is equal to the corresponding partition size of the source data disk.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The total size of all partitions in a destination data disk cannot exceed the size of the destination data disk.</p>
+             * </li>
+             * <li><p>You must set both the <code>DataDisk.N.Part.N.Device</code> and DataDisk.N.Part.N.SizeBytes parameters or leave both parameters empty.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>254803968</p>
+             */
+            public Builder sizeBytes(Long sizeBytes) {
+                this.sizeBytes = sizeBytes;
+                return this;
+            }
+
+            public DataPart build() {
+                return new DataPart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateReplicationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReplicationJobRequest</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DiskId")
+        private String diskId;
+
+        @com.aliyun.core.annotation.NameInMap("LVM")
+        private Boolean LVM;
+
+        @com.aliyun.core.annotation.NameInMap("Part")
+        private java.util.List < DataPart> part;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        private Data(Builder builder) {
+            this.diskId = builder.diskId;
+            this.LVM = builder.LVM;
+            this.part = builder.part;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return diskId
+         */
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        /**
+         * @return LVM
+         */
+        public Boolean getLVM() {
+            return this.LVM;
+        }
+
+        /**
+         * @return part
+         */
+        public java.util.List < DataPart> getPart() {
+            return this.part;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private String diskId; 
+            private Boolean LVM; 
+            private java.util.List < DataPart> part; 
+            private Integer size; 
+
+            /**
+             * DiskId.
+             */
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
+                return this;
+            }
+
+            /**
+             * LVM.
+             */
+            public Builder LVM(Boolean LVM) {
+                this.LVM = LVM;
+                return this;
+            }
+
+            /**
+             * <p>The data disk partitions.</p>
+             */
+            public Builder part(java.util.List < DataPart> part) {
+                this.part = part;
+                return this;
+            }
+
+            /**
+             * <p>The size of the data disk on the destination ECS instance. Unit: GiB. Valid values: 20 to 32768.</p>
+             * <blockquote>
+             * <p> The size of a destination data disk must be larger than the size of data in the source data disk. For example, if the size of the source data disk is 500 GiB and the used space is 100 GiB, you must set this parameter to a value greater than 100.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateReplicationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReplicationJobRequest</p>
+     */
+    public static class SystemPart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Block")
+        private Boolean block;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("SizeBytes")
+        private Long sizeBytes;
+
+        private SystemPart(Builder builder) {
+            this.block = builder.block;
+            this.path = builder.path;
+            this.sizeBytes = builder.sizeBytes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemPart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return block
+         */
+        public Boolean getBlock() {
+            return this.block;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return sizeBytes
+         */
+        public Long getSizeBytes() {
+            return this.sizeBytes;
+        }
+
+        public static final class Builder {
+            private Boolean block; 
+            private String path; 
+            private Long sizeBytes; 
+
+            /**
+             * <p>Specifies whether to enable block replication for partition N in the destination data disk. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder block(Boolean block) {
+                this.block = block;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * <p>The size of partition N in the destination data disk. Unit: bytes. The default value is equal to the corresponding partition size of the source data disk.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The total size of all partitions in a destination data disk cannot exceed the size of the destination data disk.</p>
+             * </li>
+             * <li><p>You must set both the <code>DataDisk.N.Part.N.Device</code> and DataDisk.N.Part.N.SizeBytes parameters or leave both parameters empty.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>254803968</p>
+             */
+            public Builder sizeBytes(Long sizeBytes) {
+                this.sizeBytes = sizeBytes;
+                return this;
+            }
+
+            public SystemPart build() {
+                return new SystemPart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateReplicationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReplicationJobRequest</p>
+     */
+    public static class System extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LVM")
+        private Boolean LVM;
+
+        @com.aliyun.core.annotation.NameInMap("Part")
+        private java.util.List < SystemPart> part;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        private System(Builder builder) {
+            this.LVM = builder.LVM;
+            this.part = builder.part;
+            this.size = builder.size;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static System create() {
+            return builder().build();
+        }
+
+        /**
+         * @return LVM
+         */
+        public Boolean getLVM() {
+            return this.LVM;
+        }
+
+        /**
+         * @return part
+         */
+        public java.util.List < SystemPart> getPart() {
+            return this.part;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public static final class Builder {
+            private Boolean LVM; 
+            private java.util.List < SystemPart> part; 
+            private Integer size; 
+
+            /**
+             * LVM.
+             */
+            public Builder LVM(Boolean LVM) {
+                this.LVM = LVM;
+                return this;
+            }
+
+            /**
+             * <p>The data disk partitions.</p>
+             */
+            public Builder part(java.util.List < SystemPart> part) {
+                this.part = part;
+                return this;
+            }
+
+            /**
+             * <p>The size of the data disk on the destination ECS instance. Unit: GiB. Valid values: 20 to 32768.</p>
+             * <blockquote>
+             * <p> The size of a destination data disk must be larger than the size of data in the source data disk. For example, if the size of the source data disk is 500 GiB and the used space is 100 GiB, you must set this parameter to a value greater than 100.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            public System build() {
+                return new System(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateReplicationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReplicationJobRequest</p>
+     */
+    public static class Disks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List < Data> data;
+
+        @com.aliyun.core.annotation.NameInMap("System")
+        private System system;
+
+        private Disks(Builder builder) {
+            this.data = builder.data;
+            this.system = builder.system;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Disks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public java.util.List < Data> getData() {
+            return this.data;
+        }
+
+        /**
+         * @return system
+         */
+        public System getSystem() {
+            return this.system;
+        }
+
+        public static final class Builder {
+            private java.util.List < Data> data; 
+            private System system; 
+
+            /**
+             * Data.
+             */
+            public Builder data(java.util.List < Data> data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * System.
+             */
+            public Builder system(System system) {
+                this.system = system;
+                return this;
+            }
+
+            public Disks build() {
+                return new Disks(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateReplicationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReplicationJobRequest</p>
+     */
     public static class SystemDiskPart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Block")
         private Boolean block;
@@ -1130,13 +1741,15 @@ public class CreateReplicationJobRequest extends Request {
             private Long sizeBytes; 
 
             /**
-             * Specifies whether to enable block replication for partition N in the destination system disk. Valid values:
-             * <p>
+             * <p>Specifies whether to enable block replication for partition N in the destination system disk. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: true
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder block(Boolean block) {
                 this.block = block;
@@ -1144,10 +1757,13 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * The ID of partition N in the destination system disk. The partitions in the destination system disk are arranged in the same sequential order as those in the source system disk.
-             * <p>
+             * <p>The ID of partition N in the destination system disk. The partitions in the destination system disk are arranged in the same sequential order as those in the source system disk.</p>
+             * <blockquote>
+             * <p> You must set both the SystemDiskPart.N.Device and <code>SystemDiskPart.N.SizeBytes</code> parameters or leave both parameters empty.</p>
+             * </blockquote>
              * 
-             * >  You must set both the SystemDiskPart.N.Device and `SystemDiskPart.N.SizeBytes` parameters or leave both parameters empty.
+             * <strong>example:</strong>
+             * <p>0_1</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -1155,14 +1771,18 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * The size of the partition N in the destination system disk. Unit: bytes. The default value is equal to the partition size of the source system disk.
-             * <p>
+             * <p>The size of the partition N in the destination system disk. Unit: bytes. The default value is equal to the partition size of the source system disk.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>The total size of all partitions in the destination system disk cannot exceed the size of the destination system disk.</p>
+             * </li>
+             * <li><p>You must set both the <code>SystemDiskPart.N.Device</code> and SystemDiskPart.N.SizeBytes parameters or leave both parameters empty.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   The total size of all partitions in the destination system disk cannot exceed the size of the destination system disk.
-             * 
-             * *   You must set both the `SystemDiskPart.N.Device` and SystemDiskPart.N.SizeBytes parameters or leave both parameters empty.
+             * <strong>example:</strong>
+             * <p>254803968</p>
              */
             public Builder sizeBytes(Long sizeBytes) {
                 this.sizeBytes = sizeBytes;
@@ -1176,6 +1796,12 @@ public class CreateReplicationJobRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateReplicationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateReplicationJobRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1215,10 +1841,11 @@ public class CreateReplicationJobRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag for the migration job. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of the tag for the migration job. Valid values of N: 1 to 20.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1226,10 +1853,11 @@ public class CreateReplicationJobRequest extends Request {
             }
 
             /**
-             * The value of the tag for the migration job. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The value of the tag for the migration job. Valid values of N: 1 to 20.</p>
+             * <p>The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
              * 
-             * The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

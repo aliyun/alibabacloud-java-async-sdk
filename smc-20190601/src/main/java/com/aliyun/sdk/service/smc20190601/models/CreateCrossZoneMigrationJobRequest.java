@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCrossZoneMigrationJobRequest} extends {@link RequestModel}
  *
  * <p>CreateCrossZoneMigrationJobRequest</p>
@@ -299,6 +300,12 @@ public class CreateCrossZoneMigrationJobRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCrossZoneMigrationJobRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCrossZoneMigrationJobRequest</p>
+     */
     public static class Disk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;

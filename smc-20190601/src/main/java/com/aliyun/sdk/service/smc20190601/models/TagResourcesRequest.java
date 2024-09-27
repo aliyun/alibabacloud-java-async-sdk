@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -121,7 +122,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of N SMC resources. SMC resources include migration sources and jobs. Valid values of N: 1 to 50.
+         * <p>The IDs of N SMC resources. SMC resources include migration sources and jobs. Valid values of N: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bw526m1vi6x20c6g****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,11 +143,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the SMC resource. Valid values:
-         * <p>
+         * <p>The type of the SMC resource. Valid values:</p>
+         * <ul>
+         * <li>sourceserver: migration source.</li>
+         * <li>replicationjob: migration job.</li>
+         * </ul>
          * 
-         * *   sourceserver: migration source.
-         * *   replicationjob: migration job.
+         * <strong>example:</strong>
+         * <p>sourceserver</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -152,7 +159,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -167,6 +174,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -206,10 +219,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to be added to the SMC resource. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N to be added to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
              * 
-             * The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -217,10 +231,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N to be added to the SMC resource. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The value of tag N to be added to the SMC resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.</p>
              * 
-             * The tag value can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

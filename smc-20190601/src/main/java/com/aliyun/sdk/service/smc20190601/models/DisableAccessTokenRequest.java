@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableAccessTokenRequest} extends {@link RequestModel}
  *
  * <p>DisableAccessTokenRequest</p>
@@ -82,7 +83,10 @@ public class DisableAccessTokenRequest extends Request {
         } 
 
         /**
-         * The ID of the activation code.
+         * <p>The ID of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-bp12g5gwup0yzmce****</p>
          */
         public Builder accessTokenId(String accessTokenId) {
             this.putQueryParameter("AccessTokenId", accessTokenId);

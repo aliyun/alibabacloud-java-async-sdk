@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopReplicationJobRequest} extends {@link RequestModel}
  *
  * <p>StopReplicationJobRequest</p>
@@ -82,7 +83,10 @@ public class StopReplicationJobRequest extends Request {
         } 
 
         /**
-         * The migration job ID.
+         * <p>The migration job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bw526m1vi6x21qh****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

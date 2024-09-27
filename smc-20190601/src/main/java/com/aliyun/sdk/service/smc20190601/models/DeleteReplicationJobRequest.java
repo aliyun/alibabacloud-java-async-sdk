@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteReplicationJobRequest} extends {@link RequestModel}
  *
  * <p>DeleteReplicationJobRequest</p>
@@ -82,7 +83,10 @@ public class DeleteReplicationJobRequest extends Request {
         } 
 
         /**
-         * The migration job ID.
+         * <p>The migration job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>j-bp17m1vi6x21qhqk****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

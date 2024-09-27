@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccessTokensRequest} extends {@link RequestModel}
  *
  * <p>ListAccessTokensRequest</p>
@@ -109,7 +110,7 @@ public class ListAccessTokensRequest extends Request {
         } 
 
         /**
-         * The information about activation codes.
+         * <p>The information about activation codes.</p>
          */
         public Builder accessTokenId(java.util.List < String > accessTokenId) {
             this.putQueryParameter("AccessTokenId", accessTokenId);
@@ -118,7 +119,10 @@ public class ListAccessTokensRequest extends Request {
         }
 
         /**
-         * The name of the activation code.
+         * <p>The name of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -145,12 +149,15 @@ public class ListAccessTokensRequest extends Request {
         }
 
         /**
-         * The status of the activation code. Valid values:
-         * <p>
+         * <p>The status of the activation code. Valid values:</p>
+         * <ul>
+         * <li>activated</li>
+         * <li>unactivated</li>
+         * <li>expired</li>
+         * </ul>
          * 
-         * *   activated
-         * *   unactivated
-         * *   expired
+         * <strong>example:</strong>
+         * <p>activated</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

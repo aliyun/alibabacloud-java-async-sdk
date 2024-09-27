@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessTokenRequest} extends {@link RequestModel}
  *
  * <p>CreateAccessTokenRequest</p>
@@ -123,10 +124,11 @@ public class CreateAccessTokenRequest extends Request {
         } 
 
         /**
-         * The maximum number of times that the activation code can be used to import the information of migration sources. Valid values: 1 to 1000.
-         * <p>
+         * <p>The maximum number of times that the activation code can be used to import the information of migration sources. Valid values: 1 to 1000.</p>
+         * <p>Default value: 100.</p>
          * 
-         * Default value: 100.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(String count) {
             this.putQueryParameter("Count", count);
@@ -135,7 +137,10 @@ public class CreateAccessTokenRequest extends Request {
         }
 
         /**
-         * The description of the activation code.
+         * <p>The description of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the activation code.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -144,7 +149,10 @@ public class CreateAccessTokenRequest extends Request {
         }
 
         /**
-         * The name of the activation code. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the activation code. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -171,10 +179,11 @@ public class CreateAccessTokenRequest extends Request {
         }
 
         /**
-         * The validity period of the activation code. The activation code can no longer be used to import the information of migration sources after the code expires. Unit: day. Valid values: 1 to 90.
-         * <p>
+         * <p>The validity period of the activation code. The activation code can no longer be used to import the information of migration sources after the code expires. Unit: day. Valid values: 1 to 90.</p>
+         * <p>Default value: 30.</p>
          * 
-         * Default value: 30.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeToLiveInDays(String timeToLiveInDays) {
             this.putQueryParameter("TimeToLiveInDays", timeToLiveInDays);

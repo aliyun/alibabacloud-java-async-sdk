@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySourceServerAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifySourceServerAttributeRequest</p>
@@ -110,7 +111,10 @@ public class ModifySourceServerAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the migration source. The description can be up to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the migration source. The description can be up to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a source server.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -119,7 +123,10 @@ public class ModifySourceServerAttributeRequest extends Request {
         }
 
         /**
-         * The name of the migration source. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the migration source. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSourceServerName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -146,7 +153,10 @@ public class ModifySourceServerAttributeRequest extends Request {
         }
 
         /**
-         * The migration source ID.
+         * <p>The migration source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp17m1vi6x20c6g6****</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);

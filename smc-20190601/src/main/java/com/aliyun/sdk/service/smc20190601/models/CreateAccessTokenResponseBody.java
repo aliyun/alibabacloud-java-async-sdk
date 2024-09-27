@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAccessTokenResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAccessTokenResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateAccessTokenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The value of the activation code. The value is returned only once after the CreateAccessToken operation is called and cannot be subsequently queried. Make sure that you properly save the returned value.
+         * <p>The value of the activation code. The value is returned only once after the CreateAccessToken operation is called and cannot be subsequently queried. Make sure that you properly save the returned value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B57QoTXEA2Tytr0uZWoNY5Aju5Jt****</p>
          */
         public Builder accessTokenCode(String accessTokenCode) {
             this.accessTokenCode = accessTokenCode;
@@ -69,7 +73,10 @@ public class CreateAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the activation code.
+         * <p>The ID of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-bp1akz2zp67r0k6r****</p>
          */
         public Builder accessTokenId(String accessTokenId) {
             this.accessTokenId = accessTokenId;
@@ -77,7 +84,10 @@ public class CreateAccessTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB4A7EA2-6FDA-5655-B067-854532FB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
