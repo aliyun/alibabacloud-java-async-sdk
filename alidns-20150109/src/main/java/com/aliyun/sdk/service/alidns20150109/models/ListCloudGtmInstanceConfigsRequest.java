@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmInstanceConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListCloudGtmInstanceConfigsRequest</p>
@@ -165,7 +166,14 @@ public class ListCloudGtmInstanceConfigsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -174,7 +182,10 @@ public class ListCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -183,7 +194,14 @@ public class ListCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * EnableStatus.
+         * <p>The enabling state of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>enable: The access domain name is enabled and the intelligent scheduling policy of the GTM instance takes effect.</li>
+         * <li>disable: The access domain name is disabled and the intelligent scheduling policy of the GTM instance does not take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder enableStatus(String enableStatus) {
             this.putQueryParameter("EnableStatus", enableStatus);
@@ -192,7 +210,10 @@ public class ListCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the GTM 3.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-wwo3a3hbz**</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -201,7 +222,10 @@ public class ListCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting at <strong>1</strong>, default is <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -210,7 +234,10 @@ public class ListCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong>, and a default of <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -219,7 +246,10 @@ public class ListCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>Remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -228,7 +258,10 @@ public class ListCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * ScheduleDomainName.
+         * <p>The GTM access domain name. The value of this parameter is composed of the value of ScheduleHostname and the value of ScheduleZoneName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder scheduleDomainName(String scheduleDomainName) {
             this.putQueryParameter("ScheduleDomainName", scheduleDomainName);
@@ -237,7 +270,10 @@ public class ListCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * ScheduleZoneName.
+         * <p>The zone (such as example.com) or subzone (such as a.example.com) of the GTM access domain name. In most cases, the zone or subzone is hosted in Authoritative DNS Resolution of the Alibaba Cloud DNS console within the account to which the GTM instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder scheduleZoneName(String scheduleZoneName) {
             this.putQueryParameter("ScheduleZoneName", scheduleZoneName);

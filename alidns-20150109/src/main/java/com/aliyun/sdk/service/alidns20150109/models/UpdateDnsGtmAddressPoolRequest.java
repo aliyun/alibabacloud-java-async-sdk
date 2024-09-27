@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDnsGtmAddressPoolRequest} extends {@link RequestModel}
  *
  * <p>UpdateDnsGtmAddressPoolRequest</p>
@@ -112,7 +113,7 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * The address pools.
+         * <p>The address pools.</p>
          */
         public Builder addr(java.util.List < Addr> addr) {
             this.putQueryParameter("Addr", addr);
@@ -121,7 +122,10 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The ID of the address pool.
+         * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpool1</p>
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -130,7 +134,10 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -139,11 +146,14 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The load balancing policy of the address pool. Valid values:
-         * <p>
+         * <p>The load balancing policy of the address pool. Valid values:</p>
+         * <ul>
+         * <li>ALL_RR: returns all addresses.</li>
+         * <li>RATIO: returns addresses by weight.</li>
+         * </ul>
          * 
-         * *   ALL_RR: returns all addresses.
-         * *   RATIO: returns addresses by weight.
+         * <strong>example:</strong>
+         * <p>all_rr</p>
          */
         public Builder lbaStrategy(String lbaStrategy) {
             this.putQueryParameter("LbaStrategy", lbaStrategy);
@@ -152,7 +162,10 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The name of the address pool.
+         * <p>The name of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpoolname</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -167,6 +180,12 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDnsGtmAddressPoolRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDnsGtmAddressPoolRequest</p>
+     */
     public static class Addr extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -244,7 +263,10 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             private String remark; 
 
             /**
-             * The address in the address pool.
+             * <p>The address in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder addr(String addr) {
                 this.addr = addr;
@@ -252,18 +274,23 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The source region of the address, in JSON-formatted string.
-             * <p>
+             * <p>The information about the source region of the address. The value of the parameter is a string in the JSON format. Valid values:</p>
+             * <ul>
+             * <li><p>LineCode: the line code of the source region. This parameter is deprecated. Use lineCodes instead.</p>
+             * </li>
+             * <li><p>lineCodes: the line codes of the source region</p>
+             * </li>
+             * <li><p>lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:</p>
+             * <ul>
+             * <li>NO_NEED: no need for rectification</li>
+             * <li>RECTIFIED: rectified</li>
+             * <li>AUTO: automatic rectification</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   LineCode: the line code of the source region of the address. The LineCode field is deprecated, and the lineCodes field is used as a substitute.
-             * 
-             * *   LineCodes: the line code list of the source regions of addresses.
-             * 
-             * *   lineCodeRectifyType: the rectification type of the line codes. Default value: AUTO. Valid values:
-             * 
-             *     *   NO_NEED: no need for rectification.
-             *     *   RECTIFIED: rectified.
-             *     *   AUTO: automatic rectification.
+             * <strong>example:</strong>
+             * <p>Linecode:default,lineCodes:[&quot;default&quot;],lineCodeRectifyType:&quot;NO_NEED&quot;</p>
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -271,7 +298,10 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The weight of the address.
+             * <p>The weight of the address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -279,12 +309,15 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The response mode: Valid values:
-             * <p>
+             * <p>The return mode of the addresses. Valid values:</p>
+             * <ul>
+             * <li>SMART: smart return</li>
+             * <li>ONLINE: always online</li>
+             * <li>OFFLINE: always offline</li>
+             * </ul>
              * 
-             * *   SMART: smart return.
-             * *   ONLINE: always online.
-             * *   OFFLINE: always offline.
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -292,7 +325,10 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The additional information about the address.
+             * <p>The description of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;

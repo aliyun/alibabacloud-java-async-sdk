@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The list of GTM instances involved in the disaster recovery plan.
+         * <p>The instances.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -57,7 +58,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8F8EF50-8B7F-4702-B294-97170A423403</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
+     */
     public static class AddrPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddrPoolId")
         private String addrPoolId;
@@ -109,7 +119,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             private String name; 
 
             /**
-             * The ID of the address pool.
+             * <p>The address pool ID.</p>
              */
             public Builder addrPoolId(String addrPoolId) {
                 this.addrPoolId = addrPoolId;
@@ -117,7 +127,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hra0i9</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -131,6 +144,12 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
+     */
     public static class AddrPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddrPool")
         private java.util.List < AddrPool> addrPool;
@@ -172,6 +191,12 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddrPools")
         private AddrPools addrPools;
@@ -223,7 +248,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             private String instanceName; 
 
             /**
-             * The list of address pools for the GTM instance.
+             * <p>The address pools.</p>
              */
             public Builder addrPools(AddrPools addrPools) {
                 this.addrPools = addrPools;
@@ -231,7 +256,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             }
 
             /**
-             * The ID of the GTM instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance-example</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -239,7 +267,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
             }
 
             /**
-             * The name of the GTM instance.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance-name-example</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -253,6 +284,12 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;

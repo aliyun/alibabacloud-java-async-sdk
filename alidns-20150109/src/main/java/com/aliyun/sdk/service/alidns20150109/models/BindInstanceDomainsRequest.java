@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindInstanceDomainsRequest} extends {@link RequestModel}
  *
  * <p>BindInstanceDomainsRequest</p>
@@ -83,10 +84,13 @@ public class BindInstanceDomainsRequest extends Request {
         } 
 
         /**
-         * The domain names.
-         * <p>
+         * <p>The domain names.</p>
+         * <blockquote>
+         * <p> Separate multiple domain names with commas (,). Up to 100 domain names can be entered.</p>
+         * </blockquote>
          * 
-         * >  Separate multiple domain names with commas (,). Up to 100 domain names can be entered.
+         * <strong>example:</strong>
+         * <p>example.com,example.net</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -95,7 +99,10 @@ public class BindInstanceDomainsRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdfasdf</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -104,7 +111,10 @@ public class BindInstanceDomainsRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

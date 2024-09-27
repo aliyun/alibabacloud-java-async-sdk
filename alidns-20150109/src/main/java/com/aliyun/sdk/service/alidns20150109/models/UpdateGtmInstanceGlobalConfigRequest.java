@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGtmInstanceGlobalConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateGtmInstanceGlobalConfigRequest</p>
@@ -166,10 +167,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         } 
 
         /**
-         * The alert group. Only one alert group is supported.
-         * <p>
-         * 
-         * >  This parameter is required only for the first modification.
+         * <p>The alert group. Only one alert group is supported.</p>
+         * <blockquote>
+         * <p> This parameter is required only for the first modification.</p>
+         * </blockquote>
          */
         public Builder alertGroup(String alertGroup) {
             this.putQueryParameter("AlertGroup", alertGroup);
@@ -178,7 +179,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * If you set **CnameMode** to **CUSTOM**, you must specify the CnameCustomDomainName parameter, which must be set to a primary domain name.
+         * <p>If you set <strong>CnameMode</strong> to <strong>CUSTOM</strong>, you must specify the CnameCustomDomainName parameter, which must be set to a primary domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder cnameCustomDomainName(String cnameCustomDomainName) {
             this.putQueryParameter("CnameCustomDomainName", cnameCustomDomainName);
@@ -187,11 +191,14 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a system-assigned canonical name (CNAME) or a custom CNAME to access GTM. Valid values:
-         * <p>
+         * <p>Specifies whether to use a system-assigned canonical name (CNAME) or a custom CNAME to access GTM. Valid values:</p>
+         * <ul>
+         * <li><strong>SYSTEM_ASSIGN</strong>: system-assigned CNAME</li>
+         * <li><strong>CUSTOM</strong>: custom CNAME</li>
+         * </ul>
          * 
-         * *   **SYSTEM_ASSIGN**: system-assigned CNAME
-         * *   **CUSTOM**: custom CNAME
+         * <strong>example:</strong>
+         * <p>SYSTEM_ASSIGN</p>
          */
         public Builder cnameMode(String cnameMode) {
             this.putQueryParameter("CnameMode", cnameMode);
@@ -200,7 +207,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The ID of the GTM instance.
+         * <p>The ID of the GTM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -209,10 +219,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The name of the GTM instance.
-         * <p>
-         * 
-         * >  This parameter is required only for the first modification.
+         * <p>The name of the GTM instance.</p>
+         * <blockquote>
+         * <p> This parameter is required only for the first modification.</p>
+         * </blockquote>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -221,7 +231,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -230,13 +243,17 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The balancing policy. Valid values:
-         * <p>
+         * <p>The balancing policy. Valid values:</p>
+         * <ul>
+         * <li><strong>ALL_RR</strong>: load balancing</li>
+         * <li><strong>RATIO</strong>: weighted round-robin</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required only for the first modification.</p>
+         * </blockquote>
          * 
-         * *   **ALL_RR**: load balancing
-         * *   **RATIO**: weighted round-robin
-         * 
-         * >  This parameter is required only for the first modification.
+         * <strong>example:</strong>
+         * <p>RATIO</p>
          */
         public Builder lbaStrategy(String lbaStrategy) {
             this.putQueryParameter("LbaStrategy", lbaStrategy);
@@ -245,7 +262,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The global time-to-live (TTL).
+         * <p>The global time-to-live (TTL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -254,10 +274,13 @@ public class UpdateGtmInstanceGlobalConfigRequest extends Request {
         }
 
         /**
-         * The primary domain name.
-         * <p>
+         * <p>The primary domain name.</p>
+         * <blockquote>
+         * <p> This parameter is required only for the first modification.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required only for the first modification.
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder userDomainName(String userDomainName) {
             this.putQueryParameter("UserDomainName", userDomainName);

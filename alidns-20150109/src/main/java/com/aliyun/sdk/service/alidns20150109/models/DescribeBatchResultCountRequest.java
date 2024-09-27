@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBatchResultCountRequest} extends {@link RequestModel}
  *
  * <p>DescribeBatchResultCountRequest</p>
@@ -81,13 +82,16 @@ public class DescribeBatchResultCountRequest extends Request {
         } 
 
         /**
-         * The type of the batch operation. Valid values:
-         * <p>
+         * <p>The type of the batch operation. Valid values:</p>
+         * <ul>
+         * <li><strong>DOMAIN_ADD</strong>: adds domain names in batches.</li>
+         * <li><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</li>
+         * <li><strong>RR_ADD</strong>: adds Domain Name System (DNS) records in batches.</li>
+         * <li><strong>RR_DEL</strong>: deletes DNS records in batches.</li>
+         * </ul>
          * 
-         * *   **DOMAIN_ADD**: adds domain names in batches.
-         * *   **DOMAIN_DEL**: deletes domain names in batches.
-         * *   **RR_ADD**: adds DNS records in batches.
-         * *   **RR_DEL**: deletes DNS records in batches.
+         * <strong>example:</strong>
+         * <p>DOMAIN_ADD</p>
          */
         public Builder batchType(String batchType) {
             this.putQueryParameter("BatchType", batchType);
@@ -96,7 +100,10 @@ public class DescribeBatchResultCountRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,10 +112,11 @@ public class DescribeBatchResultCountRequest extends Request {
         }
 
         /**
-         * The ID of the task.
-         * <p>
+         * <p>The task ID.</p>
+         * <p>If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.</p>
          * 
-         * If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

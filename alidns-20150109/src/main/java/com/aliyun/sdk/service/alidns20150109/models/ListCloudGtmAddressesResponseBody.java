@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmAddressesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudGtmAddressesResponseBody</p>
@@ -97,7 +98,7 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * Addresses.
+         * <p>The addresses.</p>
          */
         public Builder addresses(Addresses addresses) {
             this.addresses = addresses;
@@ -105,7 +106,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>Get the total number of addresses in the address list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudGtmAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmAddressesResponseBody</p>
+     */
     public static class HealthTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorStatus")
         private String monitorStatus;
@@ -213,7 +235,15 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * MonitorStatus.
+             * <p>The state of the health check task. Valid values:</p>
+             * <ul>
+             * <li>ok: The task is normal.</li>
+             * <li>alert: An alert is triggered.</li>
+             * <li>no_data: No data is available. In most cases, the health check task is newly created and no data is collected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder monitorStatus(String monitorStatus) {
                 this.monitorStatus = monitorStatus;
@@ -221,7 +251,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The target service port for health check probes. When the health check protocol is set to Ping, configuration of the service port is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -229,7 +262,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the health check template associated with the address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mtp-89518052425100**80</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -237,7 +273,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>Health check template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ping-IPv4</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -251,6 +290,12 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmAddressesResponseBody</p>
+     */
     public static class HealthTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthTask")
         private java.util.List < HealthTask> healthTask;
@@ -292,6 +337,12 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmAddressesResponseBody</p>
+     */
     public static class Address extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -511,7 +562,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * Address.
+             * <p>IP address or domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223.5.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -519,7 +573,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * AddressId.
+             * <p>The address ID. This ID uniquely identifies the address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>addr-89518218114368**92</p>
              */
             public Builder addressId(String addressId) {
                 this.addressId = addressId;
@@ -527,7 +584,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeInfo.
+             * <p>Address ownership information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not supported in current version, this parameter should be none.</p>
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -535,7 +595,12 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableMode.
+             * <p>The failover method that is used if the address fails health checks. Valid values:</p>
+             * <p>auto: the automatic mode. The system determines whether to return an address based on the health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</p>
+             * <p>manual: the manual mode. If an address is in the unavailable state, the address is not returned for Domain Name System (DNS) requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder availableMode(String availableMode) {
                 this.availableMode = availableMode;
@@ -543,7 +608,14 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableStatus.
+             * <p>The availability state of the address. Valid values:</p>
+             * <ul>
+             * <li>available: The address is available.</li>
+             * <li>unavailable: The address is unavailable.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder availableStatus(String availableStatus) {
                 this.availableStatus = availableStatus;
@@ -551,7 +623,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Address creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-23T13:09Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -559,7 +634,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>Creation time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -567,7 +645,14 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableStatus.
+             * <p>Indicates the current availability of the address:</p>
+             * <ul>
+             * <li>enable: Enabled status </li>
+             * <li>disable: Disabled status</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;
@@ -575,7 +660,17 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthJudgement.
+             * <p>The condition for determining the health status of the address. Valid values:</p>
+             * <ul>
+             * <li>any_ok: The health check results of at least one health check template are normal.</li>
+             * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
+             * <li>p50_ok: The health check results of at least 50% of health check templates are normal.</li>
+             * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
+             * <li>all_ok: The health check results of all health check templates are normal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>p50_ok</p>
              */
             public Builder healthJudgement(String healthJudgement) {
                 this.healthJudgement = healthJudgement;
@@ -583,7 +678,16 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * <p>The health check state of the address. Valid values:</p>
+             * <ul>
+             * <li>ok: The address passes all health checks of the referenced health check templates.</li>
+             * <li>ok_alert: The address fails some health checks of the referenced health check templates but the address is deemed normal.</li>
+             * <li>ok_no_monitor: The address does not reference a health check template.</li>
+             * <li>exceptional: The address fails some or all health checks of the referenced health check templates and the address is deemed abnormal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -591,7 +695,7 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthTasks.
+             * <p>The health check tasks referenced by the address.</p>
              */
             public Builder healthTasks(HealthTasks healthTasks) {
                 this.healthTasks = healthTasks;
@@ -599,7 +703,12 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * ManualAvailableStatus.
+             * <p>The availability state of the address when AvailableMode is set to manual. Valid values:</p>
+             * <p>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</p>
+             * <p>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder manualAvailableStatus(String manualAvailableStatus) {
                 this.manualAvailableStatus = manualAvailableStatus;
@@ -607,7 +716,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Address name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Address-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -615,7 +727,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -623,7 +738,15 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Address type:</p>
+             * <ul>
+             * <li>IPv4</li>
+             * <li>IPv6</li>
+             * <li>domain</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -631,7 +754,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Address modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-29T13:20Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -639,7 +765,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>Update time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690824357</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -653,6 +782,12 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmAddressesResponseBody</p>
+     */
     public static class Addresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private java.util.List < Address> address;
@@ -680,7 +815,10 @@ public class ListCloudGtmAddressesResponseBody extends TeaModel {
             private java.util.List < Address> address; 
 
             /**
-             * Address.
+             * <p>IP address or domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223.5.XX.XX</p>
              */
             public Builder address(java.util.List < Address> address) {
                 this.address = address;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDomainRecordStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDomainRecordStatusRequest</p>
@@ -97,7 +98,10 @@ public class SetDomainRecordStatusRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +110,10 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -115,11 +122,14 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * The state of the DNS record. Valid values:
-         * <p>
+         * <p>The state of the DNS record. Valid values:</p>
+         * <ul>
+         * <li><strong>Enable</strong>: enables the DNS record.</li>
+         * <li><strong>Disable</strong>: disables the DNS record.</li>
+         * </ul>
          * 
-         * *   **Enable**: enables the DNS record.
-         * *   **Disable**: disables the DNS record.
+         * <strong>example:</strong>
+         * <p>Disable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -128,7 +138,10 @@ public class SetDomainRecordStatusRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

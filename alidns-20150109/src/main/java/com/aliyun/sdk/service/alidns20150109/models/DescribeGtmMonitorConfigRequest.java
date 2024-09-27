@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmMonitorConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmMonitorConfigRequest</p>
@@ -68,7 +69,10 @@ public class DescribeGtmMonitorConfigRequest extends Request {
         } 
 
         /**
-         * The language of the values of specific response parameters.
+         * <p>The language of the values of specific response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,10 @@ public class DescribeGtmMonitorConfigRequest extends Request {
         }
 
         /**
-         * The ID of the health check configuration.
+         * <p>The ID of the health check configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);

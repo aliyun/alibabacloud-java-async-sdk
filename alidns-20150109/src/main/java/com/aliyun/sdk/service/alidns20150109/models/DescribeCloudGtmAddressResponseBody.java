@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudGtmAddressResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudGtmAddressResponseBody</p>
@@ -241,7 +242,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * Address.
+         * <p>IP address or domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223.5.XX.XX</p>
          */
         public Builder address(String address) {
             this.address = address;
@@ -249,7 +253,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * AddressId.
+         * <p>The address ID. This ID uniquely identifies the address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>addr-89518218114368**92</p>
          */
         public Builder addressId(String addressId) {
             this.addressId = addressId;
@@ -257,7 +264,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * AttributeInfo.
+         * <p>Address ownership information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current version does not support passing this parameter, please do not input the parameter.</p>
          */
         public Builder attributeInfo(String attributeInfo) {
             this.attributeInfo = attributeInfo;
@@ -265,7 +275,14 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * AvailableMode.
+         * <p>The failover method that is used if the address fails health checks. Valid values:</p>
+         * <ul>
+         * <li>auto: the automatic mode. The system determines whether to return an address based on the health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</li>
+         * <li>manual: the manual mode. If an address is in the unavailable state, the address is not returned for Domain Name System (DNS) requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder availableMode(String availableMode) {
             this.availableMode = availableMode;
@@ -273,7 +290,14 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * AvailableStatus.
+         * <p>Address availability status:</p>
+         * <ul>
+         * <li>available: Available</li>
+         * <li>unavailable: Unavailable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         public Builder availableStatus(String availableStatus) {
             this.availableStatus = availableStatus;
@@ -281,7 +305,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Address creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-23T13:09Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -289,7 +316,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * <p>Creation time (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -297,7 +327,12 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * EnableStatus.
+         * <p>Indicates the current enabled status of the address:
+         * enabled: enabled state
+         * disabled: disabled state</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder enableStatus(String enableStatus) {
             this.enableStatus = enableStatus;
@@ -305,7 +340,17 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * HealthJudgement.
+         * <p>The condition for determining the health status of the address. Valid values:</p>
+         * <ul>
+         * <li>any_ok: The health check results of at least one health check template are normal.</li>
+         * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
+         * <li>p50_ok: The health check results of at least 50% of health check templates are normal.</li>
+         * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
+         * <li>all_ok: The health check results of all health check templates are normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>p50_ok</p>
          */
         public Builder healthJudgement(String healthJudgement) {
             this.healthJudgement = healthJudgement;
@@ -313,7 +358,16 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * HealthStatus.
+         * <p>The health check state of the address. Valid values:</p>
+         * <ul>
+         * <li>ok: The address passes all health checks of the referenced health check templates.</li>
+         * <li>ok_alert: The address fails some health checks of the referenced health check templates but the address is deemed normal.</li>
+         * <li>ok_no_monitor: The address does not reference a health check template.</li>
+         * <li>exceptional: The address fails some or all health checks of the referenced health check templates and the address is deemed abnormal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.healthStatus = healthStatus;
@@ -321,7 +375,7 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * HealthTasks.
+         * <p>The health check tasks referenced by the address.</p>
          */
         public Builder healthTasks(HealthTasks healthTasks) {
             this.healthTasks = healthTasks;
@@ -329,7 +383,14 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * ManualAvailableStatus.
+         * <p>The availability state of the address when AvailableMode is set to manual. Valid values:</p>
+         * <ul>
+         * <li>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
+         * <li>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         public Builder manualAvailableStatus(String manualAvailableStatus) {
             this.manualAvailableStatus = manualAvailableStatus;
@@ -337,7 +398,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>Address name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -345,7 +409,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Remark.
+         * <p>Remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -353,7 +420,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -361,7 +431,15 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>Address type:</p>
+         * <ul>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
+         * <li>domain</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -369,7 +447,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The last modification time of the address configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-29T13:20Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -377,7 +458,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTimestamp.
+         * <p>Modified time (timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1527690629357</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -390,6 +474,12 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudGtmAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudGtmAddressResponseBody</p>
+     */
     public static class HealthTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MonitorStatus")
         private String monitorStatus;
@@ -453,7 +543,15 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * MonitorStatus.
+             * <p>The state of the health check task. Valid values:</p>
+             * <ul>
+             * <li>ok: The task is normal.</li>
+             * <li>alert: An alert is triggered.</li>
+             * <li>no_data: No data is available. In most cases, the health check task is newly created and no data is collected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder monitorStatus(String monitorStatus) {
                 this.monitorStatus = monitorStatus;
@@ -461,7 +559,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The target service port for health checks. When the Ping protocol is selected for health checks, configuration of the service port is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -469,7 +570,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the health check template associated with the address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mtp-89518052425100**80</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -477,7 +581,10 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The name of the health check template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ping-IPv4</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -491,6 +598,12 @@ public class DescribeCloudGtmAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudGtmAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudGtmAddressResponseBody</p>
+     */
     public static class HealthTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthTask")
         private java.util.List < HealthTask> healthTask;

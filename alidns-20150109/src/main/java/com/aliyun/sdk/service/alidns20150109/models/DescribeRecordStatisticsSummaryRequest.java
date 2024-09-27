@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordStatisticsSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeRecordStatisticsSummaryRequest</p>
@@ -182,7 +183,10 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -191,11 +195,14 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The type of the domain name. The parameter value is not case-sensitive. Valid values:
-         * <p>
+         * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC (default): hosted public domain name</li>
+         * <li>CACHE: cache-accelerated domain name</li>
+         * </ul>
          * 
-         * *   PUBLIC (default): hosted public domain name
-         * *   CACHE: cache-accelerated domain name
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -204,10 +211,11 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The end date of the query. Specify the start date in the **YYYY-MM-DD** format.
-         * <p>
+         * <p>The end date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>The default value is the day when you query the data.</p>
          * 
-         * The default value is the day when you query the data.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -216,7 +224,10 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The keyword for searches in %KeyWord% mode. The value is not case-sensitive.
+         * <p>The keyword for searches in %KeyWord% mode. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -225,7 +236,10 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -234,7 +248,10 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -243,7 +260,10 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -252,11 +272,14 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The search mode of the keyword. Valid values:
-         * <p>
+         * <p>The search mode of the keyword. Valid values:</p>
+         * <ul>
+         * <li><strong>LIKE</strong> (default): fuzzy search</li>
+         * <li><strong>EXACT</strong>: exact search</li>
+         * </ul>
          * 
-         * *   **LIKE** (default): fuzzy search
-         * *   **EXACT**: exact search
+         * <strong>example:</strong>
+         * <p>EXACT</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -265,10 +288,11 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
-         * <p>
+         * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>You can only query the DNS records within the last 90 days.``</p>
          * 
-         * You can only query the DNS records within the last 90 days.``
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -277,7 +301,10 @@ public class DescribeRecordStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The maximum number of DNS requests that you can obtain. You can obtain data about a domain name with DNS request volume less than or equal to the maximum number. For example, if you set this parameter to 100, you can query domain names with less than 100 DNS requests.
+         * <p>The maximum number of DNS requests that you can obtain. You can obtain data about a domain name with DNS request volume less than or equal to the maximum number. For example, if you set this parameter to 100, you can query domain names with less than 100 DNS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder threshold(Long threshold) {
             this.putQueryParameter("Threshold", threshold);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDomainRecordRequest} extends {@link RequestModel}
  *
  * <p>DeleteDomainRecordRequest</p>
@@ -82,7 +83,10 @@ public class DeleteDomainRecordRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -91,10 +95,11 @@ public class DeleteDomainRecordRequest extends Request {
         }
 
         /**
-         * The ID of the DNS record.
-         * <p>
+         * <p>The ID of the DNS record.</p>
+         * <p>This parameter is returned when you add a DNS record or when you query a list of DNS records.</p>
          * 
-         * This parameter is returned when you add a DNS record or when you query a list of DNS records.
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -103,7 +108,10 @@ public class DeleteDomainRecordRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

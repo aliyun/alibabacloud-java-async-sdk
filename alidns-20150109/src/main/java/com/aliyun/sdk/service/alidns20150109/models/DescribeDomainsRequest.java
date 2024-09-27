@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainsRequest</p>
@@ -152,7 +153,10 @@ public class DescribeDomainsRequest extends Request {
         } 
 
         /**
-         * The ID of the domain name group. If you do not specify this parameter, all domain names are queried by default.
+         * <p>The ID of the domain name group. If you do not specify this parameter, all domain names are queried by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -161,7 +165,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.
+         * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -170,7 +177,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -179,7 +189,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +201,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +213,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-resourcegroupid01</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -206,11 +225,14 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * The search mode. Valid values:
-         * <p>
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li><strong>LIKE</strong>: fuzzy match.</li>
+         * <li><strong>EXACT</strong>: exact match.</li>
+         * </ul>
          * 
-         * *   **LIKE**: fuzzy match.
-         * *   **EXACT**: exact match.
+         * <strong>example:</strong>
+         * <p>LIKE</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -219,7 +241,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the starmark of the domain name.
+         * <p>Specifies whether to query the starmark of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder starmark(Boolean starmark) {
             this.putQueryParameter("Starmark", starmark);

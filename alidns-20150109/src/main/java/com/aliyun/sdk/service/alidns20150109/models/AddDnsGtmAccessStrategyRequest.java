@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDnsGtmAccessStrategyRequest} extends {@link RequestModel}
  *
  * <p>AddDnsGtmAccessStrategyRequest</p>
@@ -286,7 +287,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * The address pools in the primary address pool set.
+         * <p>The address pools in the primary address pool set.</p>
          */
         public Builder defaultAddrPool(java.util.List < DefaultAddrPool> defaultAddrPool) {
             this.putQueryParameter("DefaultAddrPool", defaultAddrPool);
@@ -295,12 +296,15 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The type of the primary address pool. Valid values:
-         * <p>
+         * <p>The type of the primary address pool. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * <li>DOMAIN</li>
+         * </ul>
          * 
-         * *   IPV4
-         * *   IPV6
-         * *   DOMAIN
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder defaultAddrPoolType(String defaultAddrPoolType) {
             this.putQueryParameter("DefaultAddrPoolType", defaultAddrPoolType);
@@ -309,11 +313,14 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable DNS resolution with optimal latency for the primary address pool set. Valid values:
-         * <p>
+         * <p>Specifies whether to enable DNS resolution with optimal latency for the primary address pool set. Valid values:</p>
+         * <ul>
+         * <li>OPEN</li>
+         * <li>CLOSE</li>
+         * </ul>
          * 
-         * *   OPEN
-         * *   CLOSE
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder defaultLatencyOptimization(String defaultLatencyOptimization) {
             this.putQueryParameter("DefaultLatencyOptimization", defaultLatencyOptimization);
@@ -322,11 +329,14 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The load balancing policy of the primary address pool set. Valid values:
-         * <p>
+         * <p>The load balancing policy of the primary address pool set. Valid values:</p>
+         * <ul>
+         * <li>ALL_RR: returns all addresses.</li>
+         * <li>RATIO: returns addresses by weight.</li>
+         * </ul>
          * 
-         * *   ALL_RR: returns all addresses.
-         * *   RATIO: returns addresses by weight.
+         * <strong>example:</strong>
+         * <p>all_rr</p>
          */
         public Builder defaultLbaStrategy(String defaultLbaStrategy) {
             this.putQueryParameter("DefaultLbaStrategy", defaultLbaStrategy);
@@ -335,7 +345,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The maximum number of addresses returned from the primary address pool set.
+         * <p>The maximum number of addresses returned from the primary address pool set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder defaultMaxReturnAddrNum(Integer defaultMaxReturnAddrNum) {
             this.putQueryParameter("DefaultMaxReturnAddrNum", defaultMaxReturnAddrNum);
@@ -344,7 +357,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The minimum number of available addresses in the primary address pool set.
+         * <p>The minimum number of available addresses in the primary address pool set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultMinAvailableAddrNum(Integer defaultMinAvailableAddrNum) {
             this.putQueryParameter("DefaultMinAvailableAddrNum", defaultMinAvailableAddrNum);
@@ -353,7 +369,7 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The address pools in the secondary address pool set. If no address pool exists in the secondary address pool set, set this parameter to EMPTY.
+         * <p>The address pools in the secondary address pool set. If no address pool exists in the secondary address pool set, set this parameter to EMPTY.</p>
          */
         public Builder failoverAddrPool(java.util.List < FailoverAddrPool> failoverAddrPool) {
             this.putQueryParameter("FailoverAddrPool", failoverAddrPool);
@@ -362,12 +378,15 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The type of the secondary address pool. Valid values:
-         * <p>
+         * <p>The type of the secondary address pool. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * <li>DOMAIN</li>
+         * </ul>
          * 
-         * *   IPV4
-         * *   IPV6
-         * *   DOMAIN
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder failoverAddrPoolType(String failoverAddrPoolType) {
             this.putQueryParameter("FailoverAddrPoolType", failoverAddrPoolType);
@@ -376,11 +395,14 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable DNS resolution with optimal latency for the secondary address pool set. Valid values:
-         * <p>
+         * <p>Specifies whether to enable DNS resolution with optimal latency for the secondary address pool set. Valid values:</p>
+         * <ul>
+         * <li>OPEN</li>
+         * <li>CLOSE</li>
+         * </ul>
          * 
-         * *   OPEN
-         * *   CLOSE
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder failoverLatencyOptimization(String failoverLatencyOptimization) {
             this.putQueryParameter("FailoverLatencyOptimization", failoverLatencyOptimization);
@@ -389,11 +411,14 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The load balancing policy of the secondary address pool set. Valid values:
-         * <p>
+         * <p>The load balancing policy of the secondary address pool set. Valid values:</p>
+         * <ul>
+         * <li>ALL_RR: returns all addresses.</li>
+         * <li>RATIO: returns addresses by weight.</li>
+         * </ul>
          * 
-         * *   ALL_RR: returns all addresses.
-         * *   RATIO: returns addresses by weight.
+         * <strong>example:</strong>
+         * <p>all_rr</p>
          */
         public Builder failoverLbaStrategy(String failoverLbaStrategy) {
             this.putQueryParameter("FailoverLbaStrategy", failoverLbaStrategy);
@@ -402,7 +427,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The maximum number of addresses returned from the secondary address pool set.
+         * <p>The maximum number of addresses returned from the secondary address pool set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failoverMaxReturnAddrNum(Integer failoverMaxReturnAddrNum) {
             this.putQueryParameter("FailoverMaxReturnAddrNum", failoverMaxReturnAddrNum);
@@ -411,7 +439,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The minimum number of available addresses in the secondary address pool set.
+         * <p>The minimum number of available addresses in the secondary address pool set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder failoverMinAvailableAddrNum(Integer failoverMinAvailableAddrNum) {
             this.putQueryParameter("FailoverMinAvailableAddrNum", failoverMinAvailableAddrNum);
@@ -420,7 +451,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -429,7 +463,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -438,7 +475,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The Domain Name System (DNS) request source. For example: `["default", "drpeng"]` indicates Global and Dr. Peng Group.
+         * <p>The Domain Name System (DNS) request source. For example: <code>[&quot;default&quot;, &quot;drpeng&quot;]</code> indicates Global and Dr. Peng Group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;default&quot;, &quot;drpeng&quot;]</p>
          */
         public Builder lines(String lines) {
             this.putQueryParameter("Lines", lines);
@@ -447,11 +487,14 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The type of the access policy. Valid values:
-         * <p>
+         * <p>The type of the access policy. Valid values:</p>
+         * <ul>
+         * <li>GEO: geographical location-based access policy</li>
+         * <li>LATENCY: latency-based access policy</li>
+         * </ul>
          * 
-         * *   GEO: geographical location-based access policy
-         * *   LATENCY: latency-based access policy
+         * <strong>example:</strong>
+         * <p>geo</p>
          */
         public Builder strategyMode(String strategyMode) {
             this.putQueryParameter("StrategyMode", strategyMode);
@@ -460,7 +503,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The name of the access policy.
+         * <p>The name of the access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testStrategyName</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -475,6 +521,12 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddDnsGtmAccessStrategyRequest} extends {@link TeaModel}
+     *
+     * <p>AddDnsGtmAccessStrategyRequest</p>
+     */
     public static class DefaultAddrPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -514,7 +566,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
             private Integer lbaWeight; 
 
             /**
-             * The ID of the address pool in the primary address pool set.
+             * <p>The ID of the address pool in the primary address pool set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -522,7 +577,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
             }
 
             /**
-             * The weight of the address pool in the primary address pool set.
+             * <p>The weight of the address pool in the primary address pool set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -536,6 +594,12 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddDnsGtmAccessStrategyRequest} extends {@link TeaModel}
+     *
+     * <p>AddDnsGtmAccessStrategyRequest</p>
+     */
     public static class FailoverAddrPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -575,7 +639,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
             private Integer lbaWeight; 
 
             /**
-             * The ID of the address pool in the secondary address pool set.
+             * <p>The ID of the address pool in the secondary address pool set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -583,7 +650,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
             }
 
             /**
-             * The weight of the address pool in the secondary address pool set.
+             * <p>The weight of the address pool in the secondary address pool set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;

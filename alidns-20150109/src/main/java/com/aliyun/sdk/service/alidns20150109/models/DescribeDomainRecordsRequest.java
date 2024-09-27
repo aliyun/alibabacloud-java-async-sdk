@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainRecordsRequest</p>
@@ -251,7 +252,10 @@ public class DescribeDomainRecordsRequest extends Request {
         } 
 
         /**
-         * The order in which you want to sort the returned DNS records. Valid values: DESC and ASC. Default value: DESC.
+         * <p>The order in which you want to sort the returned DNS records. Valid values: DESC and ASC. Default value: DESC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -260,7 +264,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -269,14 +276,17 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the domain name group.
-         * <p>
+         * <p>The ID of the domain name group.</p>
+         * <ul>
+         * <li>If you do not specify GroupId, all domain names are queried.</li>
+         * <li>If you set GroupId to 0, no value is returned.</li>
+         * <li>If you set GroupId to 1, the domain names in the default group are queried.</li>
+         * <li>If you set GroupId to -2, all domain names are queried.</li>
+         * <li>You can also specify GroupId based on the actual group ID.</li>
+         * </ul>
          * 
-         * *   If you do not specify GroupId, all domain names are queried.
-         * *   If you set GroupId to 0, no value is returned.
-         * *   If you set GroupId to 1, the domain names in the default group are queried.
-         * *   If you set GroupId to -2, all domain names are queried.
-         * *   You can also specify GroupId based on the actual group ID.
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -285,7 +295,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The keyword.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -294,7 +307,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -303,12 +319,12 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The resolution line. Default value: **default**.
-         * <p>
+         * <p>The resolution line. Default value: <strong>default</strong>.</p>
+         * <p>For more information, see</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS lines</a>.</p>
          * 
-         * For more information, see
-         * 
-         * [DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).
+         * <strong>example:</strong>
+         * <p>cn_mobile_anhui</p>
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -317,7 +333,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The method that is used to sort the returned DNS records. By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
+         * <p>The method that is used to sort the returned DNS records. By default, the DNS records are sorted in reverse chronological order based on the time when they were added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -326,7 +345,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -335,7 +357,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 500**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -344,7 +369,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The hostname keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.
+         * <p>The hostname keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         public Builder RRKeyWord(String RRKeyWord) {
             this.putQueryParameter("RRKeyWord", RRKeyWord);
@@ -353,17 +381,22 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The search mode. Valid values: **LIKE, EXACT, and ADVANCED**.
-         * <p>
+         * <p>The search mode. Valid values: <strong>LIKE, EXACT, and ADVANCED</strong>.</p>
+         * <ul>
+         * <li><p>If you set SearchMode to LIKE or EXACT, specify KeyWord. In this case, RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status are invalid.</p>
+         * </li>
+         * <li><p>If you set SearchMode to ADVANCED, specify RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status.</p>
+         * </li>
+         * <li><p>If you do not specify SearchMode, the system determines the search mode based on the following rules:</p>
+         * <ul>
+         * <li>If KeyWord is specified, the system uses the LIKE mode.</li>
+         * <li>If KeyWord is not specified, the system queries DNS records based on values of RRKeyWord and ValueKeyWord in fuzzy match mode, and based on the values of TypeKeyWord, Type, Line, and Status in exact match mode.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   If you set SearchMode to LIKE or EXACT, specify KeyWord. In this case, RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status are invalid.
-         * 
-         * *   If you set SearchMode to ADVANCED, specify RRKeyWord, TypeKeyWord, ValueKeyWord, Type, Line, and Status.
-         * 
-         * *   If you do not specify SearchMode, the system determines the search mode based on the following rules:
-         * 
-         *     *   If KeyWord is specified, the system uses the LIKE mode.
-         *     *   If KeyWord is not specified, the system queries DNS records based on values of RRKeyWord and ValueKeyWord in fuzzy match mode, and based on the values of TypeKeyWord, Type, Line, and Status in exact match mode.
+         * <strong>example:</strong>
+         * <p>LIKE</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -372,7 +405,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The status of the DNS records to query. Valid values: **Enable and Disable**.
+         * <p>The status of the DNS records to query. Valid values: <strong>Enable and Disable</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -381,10 +417,11 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The type of the DNS records to query. For more information, see
-         * <p>
+         * <p>The type of the DNS records to query. For more information, see</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</p>
          * 
-         * [DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -393,7 +430,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The type keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in exact match mode. The value is not case-sensitive.
+         * <p>The type keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in exact match mode. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MX</p>
          */
         public Builder typeKeyWord(String typeKeyWord) {
             this.putQueryParameter("TypeKeyWord", typeKeyWord);
@@ -402,7 +442,10 @@ public class DescribeDomainRecordsRequest extends Request {
         }
 
         /**
-         * The record value keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.
+         * <p>The record value keyword based on which the system queries DNS records. The system queries DNS records based on the value of this parameter in fuzzy match mode. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com</p>
          */
         public Builder valueKeyWord(String valueKeyWord) {
             this.putQueryParameter("ValueKeyWord", valueKeyWord);

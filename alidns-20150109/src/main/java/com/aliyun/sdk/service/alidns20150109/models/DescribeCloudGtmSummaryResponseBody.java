@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudGtmSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudGtmSummaryResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The total number of instances within the current account.
+         * <p>The total number of instances within the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder instanceTotalCount(Integer instanceTotalCount) {
             this.instanceTotalCount = instanceTotalCount;
@@ -81,7 +85,10 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of configured health check tasks.
+         * <p>The total number of configured health check tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder monitorTaskTotalCount(Integer monitorTaskTotalCount) {
             this.monitorTaskTotalCount = monitorTaskTotalCount;
@@ -89,7 +96,10 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The quota on the number of health check tasks.
+         * <p>The quota on the number of health check tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder monitorTaskTotalQuota(Integer monitorTaskTotalQuota) {
             this.monitorTaskTotalQuota = monitorTaskTotalQuota;
@@ -97,7 +107,10 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>199C3699-9A7B-41A1-BB5A-F1E862D3CB38</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindInstanceDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>BindInstanceDomainsResponseBody</p>
@@ -61,7 +62,10 @@ public class BindInstanceDomainsResponseBody extends TeaModel {
         private Integer successCount; 
 
         /**
-         * The number of domain names that failed to be bound to the instance.
+         * <p>The number of domain names that failed to be bound to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -69,7 +73,10 @@ public class BindInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class BindInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of domain names that are bound to the instance.
+         * <p>The number of domain names that are bound to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;

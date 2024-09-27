@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMainDomainNameRequest} extends {@link RequestModel}
  *
  * <p>GetMainDomainNameRequest</p>
@@ -68,7 +69,10 @@ public class GetMainDomainNameRequest extends Request {
         } 
 
         /**
-         * The string. The string can be up to 128 characters in length.
+         * <p>The string. The string can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder inputString(String inputString) {
             this.putQueryParameter("InputString", inputString);
@@ -77,7 +81,10 @@ public class GetMainDomainNameRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

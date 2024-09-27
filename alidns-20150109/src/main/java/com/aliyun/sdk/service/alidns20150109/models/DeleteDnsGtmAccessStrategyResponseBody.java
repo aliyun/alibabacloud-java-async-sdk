@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDnsGtmAccessStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDnsGtmAccessStrategyResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteDnsGtmAccessStrategyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

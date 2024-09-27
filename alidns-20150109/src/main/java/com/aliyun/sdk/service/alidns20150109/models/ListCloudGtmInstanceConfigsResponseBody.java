@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmInstanceConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudGtmInstanceConfigsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * InstanceConfigs.
+         * <p>The configurations of the instance.</p>
          */
         public Builder instanceConfigs(InstanceConfigs instanceConfigs) {
             this.instanceConfigs = instanceConfigs;
@@ -105,7 +106,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>Total number of entries for domain instance configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudGtmInstanceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmInstanceConfigsResponseBody</p>
+     */
     public static class RequestSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestSource")
         private java.util.List < String > requestSource;
@@ -191,6 +213,12 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmInstanceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmInstanceConfigsResponseBody</p>
+     */
     public static class AddressPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressLbStrategy")
         private String addressLbStrategy;
@@ -410,7 +438,16 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             private Integer weightValue; 
 
             /**
-             * AddressLbStrategy.
+             * <p>Load balancing policy among addresses in the address pool:</p>
+             * <ul>
+             * <li>round_robin: Round-robin, for any source of DNS resolution requests, returns all addresses and rotates the order of all addresses each time.</li>
+             * <li>sequence: Sequential, for any source of DNS resolution requests, returns the address with the smaller sequence number (the sequence number indicates the priority of the address return, the smaller the higher the priority). If the address with the smaller sequence number is unavailable, return the next address with a smaller sequence number.</li>
+             * <li>weight: Weighted, supports setting different weight values for each address to realize returning addresses according to the weight ratio for resolution queries.</li>
+             * <li>source_nearest: Source-nearest, i.e., intelligent resolution function, where GTM can return different addresses based on the source of different DNS resolution requests, achieving the effect of users accessing nearby.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>round_robin</p>
              */
             public Builder addressLbStrategy(String addressLbStrategy) {
                 this.addressLbStrategy = addressLbStrategy;
@@ -418,7 +455,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressPoolId.
+             * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool-89528023225442**16</p>
              */
             public Builder addressPoolId(String addressPoolId) {
                 this.addressPoolId = addressPoolId;
@@ -426,7 +466,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressPoolName.
+             * <p>Address pool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AddressPool-1</p>
              */
             public Builder addressPoolName(String addressPoolName) {
                 this.addressPoolName = addressPoolName;
@@ -434,7 +477,15 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressPoolType.
+             * <p>Address pool type:</p>
+             * <ul>
+             * <li>IPv4</li>
+             * <li>IPv6</li>
+             * <li>domain</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder addressPoolType(String addressPoolType) {
                 this.addressPoolType = addressPoolType;
@@ -442,7 +493,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableStatus.
+             * <p>Address pool availability status:</p>
+             * <ul>
+             * <li>available: Available</li>
+             * <li>unavailable: Unavailable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder availableStatus(String availableStatus) {
                 this.availableStatus = availableStatus;
@@ -450,7 +508,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Address pool creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -458,7 +519,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>Address pool creation time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -466,7 +530,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableStatus.
+             * <p>Address pool status:</p>
+             * <ul>
+             * <li>enable: Enabled status</li>
+             * <li>disable: Disabled status</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;
@@ -474,7 +545,15 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthJudgement.
+             * <p>The health state of the address pool. Valid values:</p>
+             * <ul>
+             * <li>ok: The health state of the address pool is Normal and all addresses that are referenced by the address pool are available.</li>
+             * <li>ok_alert: The health state of the address pool is Warning and some of the addresses that are referenced by the address pool are unavailable. However, the address pool is deemed normal. In this case, available address pools are normally used for DNS resolution, but unavailable address pools cannot be used for DNS resolution.</li>
+             * <li>exceptional: The health state of the address pool is Abnormal and some or all of the addresses that are referenced by the address pool are unavailable. In this case, the address pool is deemed abnormal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder healthJudgement(String healthJudgement) {
                 this.healthJudgement = healthJudgement;
@@ -482,7 +561,15 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * <p>The health state of the address pool. Valid values:</p>
+             * <ul>
+             * <li>ok: The health state of the address pool is Normal and all addresses that are referenced by the address pool are available.</li>
+             * <li>ok_alert: The health state of the address pool is Warning and some of the addresses that are referenced by the address pool are unavailable. However, the address pool is deemed normal. In this case, available address pools are normally used for DNS resolution, but unavailable address pools cannot be used for DNS resolution.</li>
+             * <li>exceptional: The health state of the address pool is Abnormal and some or all of the addresses that are referenced by the address pool are unavailable. In this case, the address pool is deemed abnormal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -490,7 +577,7 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestSource.
+             * <p>Parse the request source list.</p>
              */
             public Builder requestSource(RequestSource requestSource) {
                 this.requestSource = requestSource;
@@ -498,7 +585,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SeqNonPreemptiveSchedule.
+             * <p>Indicates whether the mode of the sequence policy for load balancing between address pools is non-preemptive. This parameter is available only for the multicloud integration scenario. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder seqNonPreemptiveSchedule(Boolean seqNonPreemptiveSchedule) {
                 this.seqNonPreemptiveSchedule = seqNonPreemptiveSchedule;
@@ -506,7 +600,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceLbStrategyMode.
+             * <p>The mode used if the address with the smallest sequence number is recovered. This parameter is required only when AddressLbStrategy is set to sequence. Valid values:</p>
+             * <ul>
+             * <li>preemptive: The address with the smallest sequence number is preferentially used if this address is recovered.</li>
+             * <li>non_preemptive: The current address is still used even if the address with the smallest sequence number is recovered.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preemptive</p>
              */
             public Builder sequenceLbStrategyMode(String sequenceLbStrategyMode) {
                 this.sequenceLbStrategyMode = sequenceLbStrategyMode;
@@ -514,7 +615,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * <p>Sequence number. For any parsing request, the address pool with the smaller sequence number (indicating the priority of the address pool returned, with smaller numbers having higher priority) is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serialNumber(Integer serialNumber) {
                 this.serialNumber = serialNumber;
@@ -522,7 +626,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Last modification time of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -530,7 +637,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>Last modification time of the address pool (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -538,7 +648,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * WeightValue.
+             * <p>Weight value (an integer between 1 and 100, including both 1 and 100), which supports setting different weight values for each address pool, enabling the resolution query to return address pools according to the weighted ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder weightValue(Integer weightValue) {
                 this.weightValue = weightValue;
@@ -552,6 +665,12 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmInstanceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmInstanceConfigsResponseBody</p>
+     */
     public static class AddressPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressPool")
         private java.util.List < AddressPool> addressPool;
@@ -593,6 +712,12 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmInstanceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmInstanceConfigsResponseBody</p>
+     */
     public static class InstanceConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressPoolLbStrategy")
         private String addressPoolLbStrategy;
@@ -860,7 +985,16 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             private String versionCode; 
 
             /**
-             * AddressPoolLbStrategy.
+             * <p>The policy for load balancing between address pools. Valid values:</p>
+             * <ul>
+             * <li>round_robin: All address pools are returned for DNS requests from any source. All address pools are sorted in round-robin mode each time they are returned.</li>
+             * <li>sequence: The address pool with the smallest sequence number is preferentially returned for DNS requests from any source. The sequence number indicates the priority for returning the address pool. A smaller sequence number indicates a higher priority. If the address pool with the smallest sequence number is unavailable, the address pool with the second smallest sequence number is returned.</li>
+             * <li>weight: You can set a different weight value for each address pool. This way, address pools are returned based on the weight values.</li>
+             * <li>source_nearest: GTM returns different address pools based on the sources of DNS requests. This way, users can access nearby addresses.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>round_robin</p>
              */
             public Builder addressPoolLbStrategy(String addressPoolLbStrategy) {
                 this.addressPoolLbStrategy = addressPoolLbStrategy;
@@ -868,7 +1002,7 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressPools.
+             * <p>The address pools.</p>
              */
             public Builder addressPools(AddressPools addressPools) {
                 this.addressPools = addressPools;
@@ -876,7 +1010,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableStatus.
+             * <p>The availability state of the access domain name. Valid values:</p>
+             * <ul>
+             * <li>available: If the access domain name is <strong>enabled</strong> and the health state of the access domain name is <strong>Normal</strong>, the access domain name is deemed <strong>Available</strong>.</li>
+             * <li>unavailable: If the access domain name is <strong>disabled</strong> or the health state of the access domain name is <strong>Abnormal</strong>, the access domain name is deemed <strong>Unavailable</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder availableStatus(String availableStatus) {
                 this.availableStatus = availableStatus;
@@ -884,7 +1025,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code. Valid values:</p>
+             * <ul>
+             * <li>dns_gtm_public_cn: the commodity code on the China site (aliyun.com)</li>
+             * <li>dns_gtm_public_intl: the commodity code on the international site (alibabacloud.com)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dns_gtm_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -892,7 +1040,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigId.
+             * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Config-000**11</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -900,7 +1051,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Instance configuration creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -908,7 +1062,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>Instance creation time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -916,7 +1073,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableStatus.
+             * <p>The enabling state of the access domain name. Valid values:</p>
+             * <ul>
+             * <li>enable: The access domain name is enabled and the intelligent scheduling policy of the GTM instance takes effect.</li>
+             * <li>disable: The access domain name is disabled and the intelligent scheduling policy of the GTM instance does not take effect.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;
@@ -924,7 +1088,15 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * <p>The health state of the access domain name. Valid values:</p>
+             * <ul>
+             * <li>ok: The health state of the access domain name is Normal and all address pools that are referenced by the access domain name are available.</li>
+             * <li>ok_alert: The health state of the access domain name is Warning and some of the address pools that are referenced by the access domain name are unavailable. In this case, available address pools are normally used for DNS resolution, but unavailable address pools cannot be used for DNS resolution.</li>
+             * <li>exceptional: The health state of the access domain name is Abnormal and all address pools that are referenced by the access domain name are unavailable. In this case, addresses in the non-empty address pool with the smallest sequence number are preferentially used for fallback resolution. This returns DNS results for clients as much as possible.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -932,7 +1104,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the GTM 3.0 instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gtm-cn-wwo3a3hbz**</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -940,7 +1115,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remarks on the configuration of domain instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -948,7 +1126,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleDomainName.
+             * <p>The GTM access domain name. The value of this parameter is composed of the value of ScheduleHostname and the value of ScheduleZoneName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder scheduleDomainName(String scheduleDomainName) {
                 this.scheduleDomainName = scheduleDomainName;
@@ -956,7 +1137,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleHostname.
+             * <p>Host record of the domain accessed by GTM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www</p>
              */
             public Builder scheduleHostname(String scheduleHostname) {
                 this.scheduleHostname = scheduleHostname;
@@ -964,7 +1148,15 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleRrType.
+             * <p>DNS record types for the scheduling domain:</p>
+             * <ul>
+             * <li>A: IPv4 address</li>
+             * <li>AAAA: IPv6 address</li>
+             * <li>CNAME: Domain name</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder scheduleRrType(String scheduleRrType) {
                 this.scheduleRrType = scheduleRrType;
@@ -972,7 +1164,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleZoneMode.
+             * <p>The allocation mode of the access domain name. Valid values:</p>
+             * <ul>
+             * <li>custom: custom allocation. You must specify a custom hostname and associate the hostname with a zone within the account to which the GTM instance belongs to generate an access domain name.</li>
+             * <li>sys_assign: system allocation. This mode is not supported. Do not set ScheduleZoneMode to sys_assign.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder scheduleZoneMode(String scheduleZoneMode) {
                 this.scheduleZoneMode = scheduleZoneMode;
@@ -980,7 +1179,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleZoneName.
+             * <p>The zone (such as example.com) or subzone (such as a.example.com) of the GTM access domain name. In most cases, the zone or subzone is hosted in Authoritative DNS Resolution of the Alibaba Cloud DNS console within the account to which the GTM instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder scheduleZoneName(String scheduleZoneName) {
                 this.scheduleZoneName = scheduleZoneName;
@@ -988,7 +1190,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceLbStrategyMode.
+             * <p>The mode used if the address pool with the smallest sequence number is recovered. This parameter is required when AddressPoolLbStrategy is set to sequence. Valid values:</p>
+             * <ul>
+             * <li>preemptive: The address pool with the smallest sequence number is preferentially used if this address pool is recovered.</li>
+             * <li>non_preemptive: The current address pool is still used even if the address pool with the smallest sequence number is recovered.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preemptive</p>
              */
             public Builder sequenceLbStrategyMode(String sequenceLbStrategyMode) {
                 this.sequenceLbStrategyMode = sequenceLbStrategyMode;
@@ -996,7 +1205,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * <p>Global TTL (in seconds), the TTL value for domain resolution to addresses in the address pool, affecting the caching time of DNS records in the ISP&quot;s LocalDNS. Supports custom TTL values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -1004,7 +1216,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The last modified time of the instance configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1012,7 +1227,10 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>The last modification time of the instance configuration (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -1020,7 +1238,14 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionCode.
+             * <p>The edition of the GTM 3.0 instance. Valid values:</p>
+             * <ul>
+             * <li>standard: Standard Edition</li>
+             * <li>ultimate: Ultimate Edition</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ultimate</p>
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
@@ -1034,6 +1259,12 @@ public class ListCloudGtmInstanceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmInstanceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmInstanceConfigsResponseBody</p>
+     */
     public static class InstanceConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceConfig")
         private java.util.List < InstanceConfig> instanceConfig;

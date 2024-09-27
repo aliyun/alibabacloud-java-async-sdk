@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDnsCacheDomainRequest} extends {@link RequestModel}
  *
  * <p>UpdateDnsCacheDomainRequest</p>
@@ -154,7 +155,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
         } 
 
         /**
-         * The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.
+         * <p>The maximum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         public Builder cacheTtlMax(Integer cacheTtlMax) {
             this.putQueryParameter("CacheTtlMax", cacheTtlMax);
@@ -163,7 +167,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.
+         * <p>The minimum time-to-live (TTL) period of the cached data retrieved from the origin Domain Name System (DNS) server. Unit: seconds. Valid values: 30 to 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder cacheTtlMin(Integer cacheTtlMin) {
             this.putQueryParameter("CacheTtlMin", cacheTtlMin);
@@ -172,7 +179,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns.example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -181,7 +191,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The instance ID of the cache-accelerated domain name.
+         * <p>The instance ID of the cache-accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-sg-l9u2ux1fw01</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -190,7 +203,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -199,7 +215,7 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The origin DNS servers. A maximum of 10 origin DNS servers are supported.
+         * <p>The origin DNS servers. A maximum of 10 origin DNS servers are supported.</p>
          */
         public Builder sourceDnsServer(java.util.List < SourceDnsServer> sourceDnsServer) {
             this.putQueryParameter("SourceDnsServer", sourceDnsServer);
@@ -208,7 +224,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.
+         * <p>Specifies whether the origin DNS server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUPPORT</p>
          */
         public Builder sourceEdns(String sourceEdns) {
             this.putQueryParameter("SourceEdns", sourceEdns);
@@ -217,7 +236,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
         }
 
         /**
-         * The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.
+         * <p>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UDP</p>
          */
         public Builder sourceProtocol(String sourceProtocol) {
             this.putQueryParameter("SourceProtocol", sourceProtocol);
@@ -232,6 +254,12 @@ public class UpdateDnsCacheDomainRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDnsCacheDomainRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDnsCacheDomainRequest</p>
+     */
     public static class SourceDnsServer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
@@ -271,7 +299,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
             private String port; 
 
             /**
-             * The domain name or IP address of the origin DNS server.
+             * <p>The domain name or IP address of the origin DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223.5.5.5</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -279,7 +310,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
             }
 
             /**
-             * The port of the origin DNS server.
+             * <p>The port of the origin DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53</p>
              */
             public Builder port(String port) {
                 this.port = port;

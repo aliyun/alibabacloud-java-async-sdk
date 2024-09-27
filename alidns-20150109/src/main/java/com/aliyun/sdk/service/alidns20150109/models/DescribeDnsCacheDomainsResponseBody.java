@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsCacheDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsCacheDomainsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The domain names.
+         * <p>The domain names.</p>
          */
         public Builder domains(java.util.List < Domains> domains) {
             this.domains = domains;
@@ -93,7 +94,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>57121A9C-CDCF-541F-AD39-275D89099420</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsCacheDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsCacheDomainsResponseBody</p>
+     */
     public static class SourceDnsServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
@@ -169,7 +188,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             private String port; 
 
             /**
-             * The domain name or IP address of the origin DNS server.
+             * <p>The domain name or IP address of the origin DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns8.alidns.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -177,7 +199,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the origin DNS server.
+             * <p>The port of the origin DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -191,6 +216,12 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsCacheDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsCacheDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CacheTtlMax")
         private Integer cacheTtlMax;
@@ -398,7 +429,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             private String versionCode; 
 
             /**
-             * The maximum time-to-live (TTL) period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.
+             * <p>The maximum time-to-live (TTL) period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder cacheTtlMax(Integer cacheTtlMax) {
                 this.cacheTtlMax = cacheTtlMax;
@@ -406,7 +440,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.
+             * <p>The minimum TTL period of the cached data retrieved from the origin DNS server. Unit: seconds. Valid values: 30 to 86400.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder cacheTtlMin(Integer cacheTtlMin) {
                 this.cacheTtlMin = cacheTtlMin;
@@ -414,7 +451,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was added. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the domain name was added. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-17T06:13Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -422,7 +462,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1660546144000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -430,7 +473,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cache-accelerated domain name.
+             * <p>The ID of the cache-accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -438,7 +484,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The cache-accelerated domain name.
+             * <p>The cache-accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dns-example.top</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -446,7 +495,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the instance expires. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-02T16:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -454,7 +506,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the instance expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1692374400000</p>
              */
             public Builder expireTimestamp(Long expireTimestamp) {
                 this.expireTimestamp = expireTimestamp;
@@ -462,7 +517,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the cache-accelerated domain name.
+             * <p>The instance ID of the cache-accelerated domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-7bg</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -470,7 +528,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the domain name.
+             * <p>The description of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -478,7 +539,7 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The origin DNS servers.
+             * <p>The origin DNS servers.</p>
              */
             public Builder sourceDnsServers(java.util.List < SourceDnsServers> sourceDnsServers) {
                 this.sourceDnsServers = sourceDnsServers;
@@ -486,7 +547,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the origin Domain Name System (DNS) server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.
+             * <p>Specifies whether the origin Domain Name System (DNS) server supports Extension Mechanisms for DNS (EDNS). Valid values: NOT_SUPPORT and SUPPORT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUPPORT</p>
              */
             public Builder sourceEdns(String sourceEdns) {
                 this.sourceEdns = sourceEdns;
@@ -494,7 +558,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.
+             * <p>The origin protocol policy. Valid values: TCP and UDP. Default value: UDP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UDP</p>
              */
             public Builder sourceProtocol(String sourceProtocol) {
                 this.sourceProtocol = sourceProtocol;
@@ -502,7 +569,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configurations of the domain name were updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the configurations of the domain name were updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-22T03:40Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -510,7 +580,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configurations of the domain name were updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the configurations of the domain name were updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671690491000</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -518,7 +591,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The edition code of Alibaba Cloud DNS.
+             * <p>The edition code of Alibaba Cloud DNS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ultimate</p>
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;

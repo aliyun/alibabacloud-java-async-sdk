@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDNSSLBWeightRequest} extends {@link RequestModel}
  *
  * <p>UpdateDNSSLBWeightRequest</p>
@@ -97,7 +98,10 @@ public class UpdateDNSSLBWeightRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +110,10 @@ public class UpdateDNSSLBWeightRequest extends Request {
         }
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -115,7 +122,10 @@ public class UpdateDNSSLBWeightRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -124,7 +134,10 @@ public class UpdateDNSSLBWeightRequest extends Request {
         }
 
         /**
-         * The weight of the DNS record that you want to specify. Valid values: `1 to 100`.
+         * <p>The weight of the DNS record that you want to specify. Valid values: <code>1 to 100</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

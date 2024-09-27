@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteGtmRecoveryPlanResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteGtmRecoveryPlanResponseBody</p>
@@ -37,7 +38,10 @@ public class ExecuteGtmRecoveryPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

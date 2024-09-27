@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudGtmMonitorTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCloudGtmMonitorTemplateResponseBody</p>
@@ -77,7 +78,10 @@ public class CreateCloudGtmMonitorTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the health check template. This ID uniquely identifies the health check template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mtp-89518052425100**80</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

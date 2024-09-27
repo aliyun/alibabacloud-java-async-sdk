@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmLogsResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The returned logs.
+         * <p>The returned logs.</p>
          */
         public Builder logs(Logs logs) {
             this.logs = logs;
@@ -105,7 +106,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50C60A29-2E93-425A-ABA8-068686E28873</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned on all pages.
+         * <p>The total number of entries returned on all pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmLogsResponseBody</p>
+     */
     public static class Log extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -261,7 +283,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             private Long operTimestamp; 
 
             /**
-             * The formatted message content.
+             * <p>The formatted message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>addtest-pool-1</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -269,7 +294,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the object on which the operation was performed.
+             * <p>The ID of the object on which the operation was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121212</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -277,7 +305,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the object on which the operation was performed.
+             * <p>The name of the object on which the operation was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pool-1</p>
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -285,7 +316,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object on which the operation was performed.
+             * <p>The type of the object on which the operation was performed.</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -293,7 +324,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the record.
+             * <p>The ID of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6726</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -301,7 +335,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation performed.
+             * <p>The operation performed.</p>
              */
             public Builder operAction(String operAction) {
                 this.operAction = operAction;
@@ -309,7 +343,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the operation was performed.
+             * <p>The time when the operation was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-24T07:35Z</p>
              */
             public Builder operTime(String operTime) {
                 this.operTime = operTime;
@@ -317,7 +354,10 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the operation.
+             * <p>The timestamp of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1516779348000</p>
              */
             public Builder operTimestamp(Long operTimestamp) {
                 this.operTimestamp = operTimestamp;
@@ -331,6 +371,12 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmLogsResponseBody</p>
+     */
     public static class Logs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Log")
         private java.util.List < Log> log;

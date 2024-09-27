@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudGtmInstancesResponseBody</p>
@@ -97,7 +98,7 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * Instances.
+         * <p>The instances.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -105,7 +106,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting with <strong>1</strong>, default is <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>Total number of instance entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudGtmInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmInstancesResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -357,7 +379,14 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             private String versionCode; 
 
             /**
-             * CommodityCode.
+             * <p>The commodity code. Valid values:</p>
+             * <ul>
+             * <li>dns_gtm_public_cn: commodity code on the China site (aliyun.com)</li>
+             * <li>dns_gtm_public_intl: commodity code on the international site (alibabacloud.com)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dns_gtm_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -365,7 +394,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Instance creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -373,7 +405,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>Instance creation time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231298343343</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -381,7 +416,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>Instance expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -389,7 +427,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTimestamp.
+             * <p>Instance expiration time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231298343343</p>
              */
             public Builder expireTimestamp(Long expireTimestamp) {
                 this.expireTimestamp = expireTimestamp;
@@ -397,7 +438,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the GTM instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gtm-cn-jmp3qnw**03</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -405,7 +449,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>Instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -413,7 +460,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorTaskQuota.
+             * <p>Monitor probe task quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder monitorTaskQuota(Integer monitorTaskQuota) {
                 this.monitorTaskQuota = monitorTaskQuota;
@@ -421,7 +471,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyEmailUsed.
+             * <p>Monthly email sending volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder monthlyEmailUsed(Integer monthlyEmailUsed) {
                 this.monthlyEmailUsed = monthlyEmailUsed;
@@ -429,7 +482,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlySmsQuota.
+             * <p>SMS quota, only supported on the China site as international sites do not support SMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder monthlySmsQuota(Integer monthlySmsQuota) {
                 this.monthlySmsQuota = monthlySmsQuota;
@@ -437,7 +493,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlySmsUsed.
+             * <p>Monthly SMS sending volume, only supported by the China site as international sites do not support SMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder monthlySmsUsed(Integer monthlySmsUsed) {
                 this.monthlySmsUsed = monthlySmsUsed;
@@ -445,7 +504,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyWebhookUsed.
+             * <p>Monthly webhook send volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder monthlyWebhookUsed(Integer monthlyWebhookUsed) {
                 this.monthlyWebhookUsed = monthlyWebhookUsed;
@@ -453,7 +515,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleDomainName.
+             * <p>The access domain name, which consists of a hostname and a zone or a subzone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder scheduleDomainName(String scheduleDomainName) {
                 this.scheduleDomainName = scheduleDomainName;
@@ -461,7 +526,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The last time the instance was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -469,7 +537,10 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>The last modification time of the instance (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231298343343</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -477,7 +548,14 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionCode.
+             * <p>GTM instance version:</p>
+             * <ul>
+             * <li>standard: Standard Edition</li>
+             * <li>ultimate: Ultimate Edition</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ultimate</p>
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
@@ -491,6 +569,12 @@ public class ListCloudGtmInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;

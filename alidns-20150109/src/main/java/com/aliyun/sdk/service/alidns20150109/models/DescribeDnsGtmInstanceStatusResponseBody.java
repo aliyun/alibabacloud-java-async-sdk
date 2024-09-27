@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmInstanceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmInstanceStatusResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         private Integer switchToFailoverStrategyNum; 
 
         /**
-         * The number of available addresses.
+         * <p>The number of available addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder addrAvailableNum(Integer addrAvailableNum) {
             this.addrAvailableNum = addrAvailableNum;
@@ -105,7 +109,10 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unavailable addresses.
+         * <p>The number of unavailable addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder addrNotAvailableNum(Integer addrNotAvailableNum) {
             this.addrNotAvailableNum = addrNotAvailableNum;
@@ -113,7 +120,10 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unavailable address pool groups.
+         * <p>The number of unavailable address pool groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder addrPoolGroupNotAvailableNum(Integer addrPoolGroupNotAvailableNum) {
             this.addrPoolGroupNotAvailableNum = addrPoolGroupNotAvailableNum;
@@ -121,7 +131,10 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,10 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of access policies that are unavailable in the current active address pool group.
+         * <p>The number of access policies that are unavailable in the current active address pool group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder strategyNotAvailableNum(Integer strategyNotAvailableNum) {
             this.strategyNotAvailableNum = strategyNotAvailableNum;
@@ -137,7 +153,10 @@ public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of access policies switched to the secondary address pool group.
+         * <p>The number of access policies switched to the secondary address pool group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder switchToFailoverStrategyNum(Integer switchToFailoverStrategyNum) {
             this.switchToFailoverStrategyNum = switchToFailoverStrategyNum;

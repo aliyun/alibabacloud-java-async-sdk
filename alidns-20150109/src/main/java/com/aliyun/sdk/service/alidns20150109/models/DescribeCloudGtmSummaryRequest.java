@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudGtmSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudGtmSummaryRequest</p>
@@ -53,11 +54,14 @@ public class DescribeCloudGtmSummaryRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
          * 
-         * *   zh-CN: Chinese
-         * *   en-US: English
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

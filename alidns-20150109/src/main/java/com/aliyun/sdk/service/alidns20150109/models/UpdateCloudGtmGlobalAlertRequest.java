@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCloudGtmGlobalAlertRequest} extends {@link RequestModel}
  *
  * <p>UpdateCloudGtmGlobalAlertRequest</p>
@@ -95,7 +96,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -104,7 +112,7 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
         }
 
         /**
-         * AlertConfig.
+         * <p>The alert configurations.</p>
          */
         public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
             String alertConfigShrink = shrink(alertConfig, "AlertConfig", "json");
@@ -114,7 +122,7 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
         }
 
         /**
-         * AlertGroup.
+         * <p>The alert contact groups.</p>
          */
         public Builder alertGroup(java.util.List < String > alertGroup) {
             String alertGroupShrink = shrink(alertGroup, "AlertGroup", "json");
@@ -124,7 +132,10 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -139,6 +150,12 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCloudGtmGlobalAlertRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCloudGtmGlobalAlertRequest</p>
+     */
     public static class AlertConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DingtalkNotice")
         private Boolean dingtalkNotice;
@@ -202,7 +219,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
             private Boolean smsNotice; 
 
             /**
-             * DingtalkNotice.
+             * <p>Specifies whether to configure DingTalk notifications. Valid values:</p>
+             * <ul>
+             * <li>true: configures DingTalk notifications. DingTalk notifications are sent when alerts are triggered.</li>
+             * <li>false: does not configure DingTalk notifications.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dingtalkNotice(Boolean dingtalkNotice) {
                 this.dingtalkNotice = dingtalkNotice;
@@ -210,7 +234,14 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
             }
 
             /**
-             * EmailNotice.
+             * <p>Specifies whether to configure email notifications. Valid values:</p>
+             * <ul>
+             * <li>true: configures email notifications. Emails are sent when alerts are triggered.</li>
+             * <li>false｜null: does not configure email notifications.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailNotice(Boolean emailNotice) {
                 this.emailNotice = emailNotice;
@@ -218,7 +249,16 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
             }
 
             /**
-             * NoticeType.
+             * <p>The type of the alert event. Valid values:</p>
+             * <ul>
+             * <li>addr_alert: The address is unavailable.</li>
+             * <li>addr_resume: The address becomes available.</li>
+             * <li>addr_pool_unavailable: The address pool is unavailable.</li>
+             * <li>addr_pool_available: The address pool becomes available.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>addr_alert</p>
              */
             public Builder noticeType(String noticeType) {
                 this.noticeType = noticeType;
@@ -226,7 +266,15 @@ public class UpdateCloudGtmGlobalAlertRequest extends Request {
             }
 
             /**
-             * SmsNotice.
+             * <p>Specifies whether to configure text message notifications. Valid values:</p>
+             * <ul>
+             * <li>true: configures text message notifications. Text messages are sent when alerts are triggered.</li>
+             * <li>false｜null: does not configure text message notifications.</li>
+             * </ul>
+             * <p>Only the China site (aliyun.com) supports text message notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder smsNotice(Boolean smsNotice) {
                 this.smsNotice = smsNotice;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -98,7 +99,10 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,7 +111,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-example.com</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -116,7 +123,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -125,7 +135,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tag to add to the resource.
+         * <p>The tag to add to the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -140,6 +150,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -179,7 +195,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the resource. The tag key can be up to 20 characters in length and cannot start with acs: or aliyun.
+             * <p>The key of tag N to add to the resource. The tag key can be up to 20 characters in length and cannot start with acs: or aliyun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +206,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the resource. The tag value can be up to 20 characters in length.
+             * <p>The value of tag N to add to the resource. The tag value can be up to 20 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder value(String value) {
                 this.value = value;

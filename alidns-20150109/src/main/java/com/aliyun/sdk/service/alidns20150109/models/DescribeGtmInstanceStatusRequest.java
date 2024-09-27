@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmInstanceStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmInstanceStatusRequest</p>
@@ -68,7 +69,10 @@ public class DescribeGtmInstanceStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the instance to query.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -77,7 +81,10 @@ public class DescribeGtmInstanceStatusRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

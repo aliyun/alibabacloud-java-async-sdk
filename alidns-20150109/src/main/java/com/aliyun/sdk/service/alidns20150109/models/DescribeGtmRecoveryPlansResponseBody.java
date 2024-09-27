@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmRecoveryPlansResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGtmRecoveryPlansResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +109,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +120,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the queried disaster recovery plans.
+         * <p>The details about the queried disaster recovery plans.</p>
          */
         public Builder recoveryPlans(RecoveryPlans recoveryPlans) {
             this.recoveryPlans = recoveryPlans;
@@ -121,7 +128,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2BA072CF-CA21-4A34-B6C2-227BE2C58079</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlansResponseBody</p>
+     */
     public static class RecoveryPlan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -321,7 +343,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * The time when the disaster recovery plan was created.
+             * <p>The time when the disaster recovery plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-11T06:45Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -329,7 +354,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp that indicates when the disaster recovery plan was created.
+             * <p>The UNIX timestamp that indicates when the disaster recovery plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565499867000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -337,7 +365,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The number of faulty address pools.
+             * <p>The number of faulty address pools.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder faultAddrPoolNum(Integer faultAddrPoolNum) {
                 this.faultAddrPoolNum = faultAddrPoolNum;
@@ -345,7 +376,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the disaster recovery plan was executed.
+             * <p>The last time when the disaster recovery plan was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-11T06:44Z</p>
              */
             public Builder lastExecuteTime(String lastExecuteTime) {
                 this.lastExecuteTime = lastExecuteTime;
@@ -353,7 +387,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp that indicates the last time when the disaster recovery plan was executed.
+             * <p>The UNIX timestamp that indicates the last time when the disaster recovery plan was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565505898000</p>
              */
             public Builder lastExecuteTimestamp(Long lastExecuteTimestamp) {
                 this.lastExecuteTimestamp = lastExecuteTimestamp;
@@ -361,7 +398,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the disaster recovery plan was rolled back.
+             * <p>The last time when the disaster recovery plan was rolled back.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-11T06:45Z</p>
              */
             public Builder lastRollbackTime(String lastRollbackTime) {
                 this.lastRollbackTime = lastRollbackTime;
@@ -369,7 +409,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp that indicates the last time when the disaster recovery plan was rolled back.
+             * <p>The UNIX timestamp that indicates the last time when the disaster recovery plan was rolled back.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565505919000</p>
              */
             public Builder lastRollbackTimestamp(Long lastRollbackTimestamp) {
                 this.lastRollbackTimestamp = lastRollbackTimestamp;
@@ -377,7 +420,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the disaster recovery plan.
+             * <p>The name of the disaster recovery plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -385,7 +431,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disaster recovery plan.
+             * <p>The ID of the disaster recovery plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55</p>
              */
             public Builder recoveryPlanId(Long recoveryPlanId) {
                 this.recoveryPlanId = recoveryPlanId;
@@ -393,7 +442,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks about the disaster recovery plan.
+             * <p>The remarks about the disaster recovery plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark-example</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -401,12 +453,15 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the disaster recovery plan. Valid values:
-             * <p>
+             * <p>The status of the disaster recovery plan. Valid values:</p>
+             * <ul>
+             * <li><strong>UNEXECUTED</strong>: The plan is not executed.</li>
+             * <li><strong>EXECUTED</strong>: The plan is executed.</li>
+             * <li><strong>ROLLED_BACK</strong>: The plan is rolled back.</li>
+             * </ul>
              * 
-             * *   **UNEXECUTED**: The plan is not executed.
-             * *   **EXECUTED**: The plan is executed.
-             * *   **ROLLED_BACK**: The plan is rolled back.
+             * <strong>example:</strong>
+             * <p>UNEXECUTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -414,7 +469,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the disaster recovery plan was updated.
+             * <p>The last time when the disaster recovery plan was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-11T06:45Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -422,7 +480,10 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp that indicates the last time when the disaster recovery plan was updated.
+             * <p>The UNIX timestamp that indicates the last time when the disaster recovery plan was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565505919000</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -436,6 +497,12 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlansResponseBody</p>
+     */
     public static class RecoveryPlans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecoveryPlan")
         private java.util.List < RecoveryPlan> recoveryPlan;

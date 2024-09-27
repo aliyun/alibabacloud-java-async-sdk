@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDomainRecordRemarkRequest} extends {@link RequestModel}
  *
  * <p>UpdateDomainRecordRemarkRequest</p>
@@ -96,7 +97,10 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +109,10 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         }
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder recordId(String recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -114,7 +121,7 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         }
 
         /**
-         * The description of the DNS record.
+         * <p>The description of the DNS record.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -123,7 +130,10 @@ public class UpdateDomainRecordRemarkRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

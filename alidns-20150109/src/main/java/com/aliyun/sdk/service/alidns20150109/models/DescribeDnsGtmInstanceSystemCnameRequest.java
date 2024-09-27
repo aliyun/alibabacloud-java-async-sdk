@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmInstanceSystemCnameRequest} extends {@link RequestModel}
  *
  * <p>DescribeDnsGtmInstanceSystemCnameRequest</p>
@@ -68,7 +69,10 @@ public class DescribeDnsGtmInstanceSystemCnameRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -77,7 +81,10 @@ public class DescribeDnsGtmInstanceSystemCnameRequest extends Request {
         }
 
         /**
-         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

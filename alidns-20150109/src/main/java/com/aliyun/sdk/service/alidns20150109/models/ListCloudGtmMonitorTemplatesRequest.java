@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmMonitorTemplatesRequest} extends {@link RequestModel}
  *
  * <p>ListCloudGtmMonitorTemplatesRequest</p>
@@ -125,7 +126,14 @@ public class ListCloudGtmMonitorTemplatesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -134,7 +142,14 @@ public class ListCloudGtmMonitorTemplatesRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * <p>The IP address type of health check nodes. Valid values:</p>
+         * <ul>
+         * <li>IPv4: applicable when health checks are performed on IPv4 addresses.</li>
+         * <li>IPv6: applicable when health checks are performed on IPv6 addresses.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -143,7 +158,10 @@ public class ListCloudGtmMonitorTemplatesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the health check probe template, which is recommended to be distinguishable for configuration personnel to differentiate and remember, ideally indicating the health check protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4-Ping</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -152,7 +170,10 @@ public class ListCloudGtmMonitorTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +182,10 @@ public class ListCloudGtmMonitorTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +194,16 @@ public class ListCloudGtmMonitorTemplatesRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>Protocol types for initiating probes to the target IP address:</p>
+         * <ul>
+         * <li>ping</li>
+         * <li>tcp</li>
+         * <li>http</li>
+         * <li>https</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ping</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);

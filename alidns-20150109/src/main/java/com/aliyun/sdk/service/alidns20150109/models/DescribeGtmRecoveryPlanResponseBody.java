@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmRecoveryPlanResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGtmRecoveryPlanResponseBody</p>
@@ -205,7 +206,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         private Long updateTimestamp; 
 
         /**
-         * The time when the disaster recovery plan was created.
+         * <p>The time when the disaster recovery plan was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-11T05:04Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -213,7 +217,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTimestamp.
+         * <p>The time when the disaster recovery plan was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565499867000</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -221,7 +228,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The number of faulty address pools.
+         * <p>The number of faulty address pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder faultAddrPoolNum(Integer faultAddrPoolNum) {
             this.faultAddrPoolNum = faultAddrPoolNum;
@@ -229,7 +239,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The list of faulty address pools.
+         * <p>The faulty address pools.</p>
          */
         public Builder faultAddrPools(FaultAddrPools faultAddrPools) {
             this.faultAddrPools = faultAddrPools;
@@ -237,7 +247,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The last time when the recovery plan was executed.
+         * <p>The time when the disaster recovery plan was last executed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-11T05:04Z</p>
          */
         public Builder lastExecuteTime(String lastExecuteTime) {
             this.lastExecuteTime = lastExecuteTime;
@@ -245,7 +258,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * A timestamp that indicates the last time when the recovery plan was executed.
+         * <p>The time when the disaster recovery plan was last executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565505898000</p>
          */
         public Builder lastExecuteTimestamp(Long lastExecuteTimestamp) {
             this.lastExecuteTimestamp = lastExecuteTimestamp;
@@ -253,7 +269,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The last time when the disaster recovery plan was rolled back.
+         * <p>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-11T06:45Z</p>
          */
         public Builder lastRollbackTime(String lastRollbackTime) {
             this.lastRollbackTime = lastRollbackTime;
@@ -261,7 +280,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * A timestamp that indicates the last time when the disaster recovery plan was rolled back.
+         * <p>The time when the disaster recovery plan was last rolled back. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565505919000</p>
          */
         public Builder lastRollbackTimestamp(Long lastRollbackTimestamp) {
             this.lastRollbackTimestamp = lastRollbackTimestamp;
@@ -269,7 +291,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the disaster recovery plan queried.
+         * <p>The name of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-example</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -277,7 +302,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the disaster recovery plan queried.
+         * <p>The ID of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder recoveryPlanId(Long recoveryPlanId) {
             this.recoveryPlanId = recoveryPlanId;
@@ -285,7 +313,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The remarks on the disaster recovery plan.
+         * <p>The description of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark-example</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -293,7 +324,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A5F4315-D6E8-435E-82DF-24F4C97D6999</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -301,7 +335,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the disaster recovery plan queried.
+         * <p>The status of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNEXECUTED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -309,7 +346,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The last time when the disaster recovery plan was updated.
+         * <p>The time when the disaster recovery plan was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-08-11T06:45Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -317,7 +357,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * A timestamp that indicates the last time when the disaster recovery plan was updated.
+         * <p>The time when the disaster recovery plan was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565499867000</p>
          */
         public Builder updateTimestamp(Long updateTimestamp) {
             this.updateTimestamp = updateTimestamp;
@@ -330,6 +373,12 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanResponseBody</p>
+     */
     public static class Addr extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -381,7 +430,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The ID of the address.
+             * <p>The address ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>739</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -389,7 +441,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The address work mode. It is the mode that was set for the IP address to work.
+             * <p>The address mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFLINE</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -397,7 +452,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The address value.
+             * <p>The address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -411,6 +469,12 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanResponseBody</p>
+     */
     public static class Addrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Addr")
         private java.util.List < Addr> addr;
@@ -452,6 +516,12 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanResponseBody</p>
+     */
     public static class FaultAddrPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddrPoolId")
         private String addrPoolId;
@@ -515,7 +585,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the address pool.
+             * <p>The address pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hra0oq</p>
              */
             public Builder addrPoolId(String addrPoolId) {
                 this.addrPoolId = addrPoolId;
@@ -523,7 +596,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the address pool.
+             * <p>The address pool name.</p>
              */
             public Builder addrPoolName(String addrPoolName) {
                 this.addrPoolName = addrPoolName;
@@ -531,7 +604,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The list of addresses in the address pool.
+             * Addrs.
              */
             public Builder addrs(Addrs addrs) {
                 this.addrs = addrs;
@@ -539,7 +612,10 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the GTM instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance-zwy-38</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -553,6 +629,12 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmRecoveryPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmRecoveryPlanResponseBody</p>
+     */
     public static class FaultAddrPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaultAddrPool")
         private java.util.List < FaultAddrPool> faultAddrPool;

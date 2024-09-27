@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDnsGtmMonitorResponseBody} extends {@link TeaModel}
  *
  * <p>AddDnsGtmMonitorResponseBody</p>
@@ -49,7 +50,10 @@ public class AddDnsGtmMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the health check configuration.
+         * <p>The ID of the health check configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MonitorConfigId1</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -57,7 +61,10 @@ public class AddDnsGtmMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

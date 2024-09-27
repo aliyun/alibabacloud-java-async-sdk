@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudGtmInstanceConfigFullInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudGtmInstanceConfigFullInfoRequest</p>
@@ -95,11 +96,14 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
          * 
-         * *   zh-CN: Chinese
-         * *   en-US (default): English
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,7 +112,10 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -117,10 +124,11 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends Request {
         }
 
         /**
-         * The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.
-         * <p>
+         * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+         * <p>You can call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the value of ConfigId for the access domain name.</p>
          * 
-         * You can call the [ListCloudGtmInstanceConfigs](~~ListCloudGtmInstanceConfigs~~) operation to query the value of ConfigId for the access domain name.
+         * <strong>example:</strong>
+         * <p>Config-000**11</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -129,7 +137,10 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends Request {
         }
 
         /**
-         * The ID of the GTM 3.0 instance.
+         * <p>The ID of the GTM 3.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-wwo3a3hbz**</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

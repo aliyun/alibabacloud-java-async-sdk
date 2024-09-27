@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDnsCacheDomainRemarkRequest} extends {@link RequestModel}
  *
  * <p>UpdateDnsCacheDomainRemarkRequest</p>
@@ -82,7 +83,10 @@ public class UpdateDnsCacheDomainRemarkRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -91,7 +95,10 @@ public class UpdateDnsCacheDomainRemarkRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +107,10 @@ public class UpdateDnsCacheDomainRemarkRequest extends Request {
         }
 
         /**
-         * The remarks. The remarks can be up to 50 characters in length and can contain only letters, digits, periods (.), underscores (\_), and hyphens (-).
+         * <p>The remarks. The remarks can be up to 50 characters in length and can contain only letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudGtmAddressPoolResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCloudGtmAddressPoolResponseBody</p>
@@ -61,7 +62,10 @@ public class DeleteCloudGtmAddressPoolResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AddressPoolId.
+         * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool-89528023225442**16</p>
          */
         public Builder addressPoolId(String addressPoolId) {
             this.addressPoolId = addressPoolId;

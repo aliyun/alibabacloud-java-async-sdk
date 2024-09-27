@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmMonitorConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeDnsGtmMonitorConfigRequest</p>
@@ -68,7 +69,10 @@ public class DescribeDnsGtmMonitorConfigRequest extends Request {
         } 
 
         /**
-         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,10 @@ public class DescribeDnsGtmMonitorConfigRequest extends Request {
         }
 
         /**
-         * The ID of the health check task.
+         * <p>The ID of the health check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MonitorConfigId1</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);

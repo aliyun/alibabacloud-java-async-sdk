@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmAddressPoolAvailableConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmAddressPoolAvailableConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * The supported source regions.
+         * <p>The supported source regions.</p>
          */
         public Builder attributeInfos(AttributeInfos attributeInfos) {
             this.attributeInfos = attributeInfos;
@@ -57,7 +58,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>199C3699-9A7B-41A1-BB5A-F1E862D3CB38</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmAddressPoolAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAddressPoolAvailableConfigResponseBody</p>
+     */
     public static class AttributeInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
@@ -145,7 +155,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             private String lineName; 
 
             /**
-             * The parent line code of the source region.
+             * <p>The parent line code of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecom</p>
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -153,7 +166,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The code of the source region group.
+             * <p>The code of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -161,7 +177,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The name of the request source group.
+             * <p>The name of the request source group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -169,7 +188,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The line code of the source region.
+             * <p>The line code of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -177,7 +199,10 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
             }
 
             /**
-             * The line name of the source region.
+             * <p>The line name of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -191,6 +216,12 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAddressPoolAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAddressPoolAvailableConfigResponseBody</p>
+     */
     public static class AttributeInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttributeInfo")
         private java.util.List < AttributeInfo> attributeInfo;

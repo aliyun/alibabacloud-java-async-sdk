@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudGtmMonitorTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCloudGtmMonitorTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteCloudGtmMonitorTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,14 @@ public class DeleteCloudGtmMonitorTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation to delete the health check template was successful:</p>
+         * <ul>
+         * <li>true: Operation successful</li>
+         * <li>false: Operation failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

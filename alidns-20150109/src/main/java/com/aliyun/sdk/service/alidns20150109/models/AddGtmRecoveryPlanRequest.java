@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmRecoveryPlanRequest} extends {@link RequestModel}
  *
  * <p>AddGtmRecoveryPlanRequest</p>
@@ -97,7 +98,10 @@ public class AddGtmRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * The list of IDs of faulty address pools.
+         * <p>The IDs of faulty address pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;hra0or&quot;]</p>
          */
         public Builder faultAddrPool(String faultAddrPool) {
             this.putQueryParameter("FaultAddrPool", faultAddrPool);
@@ -106,7 +110,10 @@ public class AddGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +122,10 @@ public class AddGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The name of the disaster recovery plan that you want to create.
+         * <p>The name of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name-example</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -124,7 +134,10 @@ public class AddGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The remarks on the disaster recovery plan.
+         * <p>The description of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

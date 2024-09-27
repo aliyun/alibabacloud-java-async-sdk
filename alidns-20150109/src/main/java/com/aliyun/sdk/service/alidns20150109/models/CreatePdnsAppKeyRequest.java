@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePdnsAppKeyRequest} extends {@link RequestModel}
  *
  * <p>CreatePdnsAppKeyRequest</p>
@@ -15,9 +16,14 @@ public class CreatePdnsAppKeyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
+
     private CreatePdnsAppKeyRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.remark = builder.remark;
     }
 
     public static Builder builder() {
@@ -40,8 +46,16 @@ public class CreatePdnsAppKeyRequest extends Request {
         return this.lang;
     }
 
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
     public static final class Builder extends Request.Builder<CreatePdnsAppKeyRequest, Builder> {
         private String lang; 
+        private String remark; 
 
         private Builder() {
             super();
@@ -50,6 +64,7 @@ public class CreatePdnsAppKeyRequest extends Request {
         private Builder(CreatePdnsAppKeyRequest request) {
             super(request);
             this.lang = request.lang;
+            this.remark = request.remark;
         } 
 
         /**
@@ -58,6 +73,15 @@ public class CreatePdnsAppKeyRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

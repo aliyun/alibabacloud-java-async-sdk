@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBatchResultCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBatchResultCountResponseBody</p>
@@ -121,7 +122,10 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The type of the batch operation.
+         * <p>The type of the batch operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN_ADD</p>
          */
         public Builder batchType(String batchType) {
             this.batchType = batchType;
@@ -129,7 +133,10 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of domain names or DNS records that failed to be processed.
+         * <p>The total number of domain names or DNS records that failed to be processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -137,7 +144,10 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * The cause of the execution failure.
+         * <p>The cause of the execution failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failed_reason</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -145,7 +155,10 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,13 +166,16 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The state of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: No task for importing domain names or DNS records is submitted.</li>
+         * <li><strong>0</strong>: The task is being processed.</li>
+         * <li><strong>1</strong>: The task is complete.</li>
+         * <li><strong>2</strong>: The task failed.</li>
+         * </ul>
          * 
-         * *   **-1**: No task for importing domain names or DNS records is submitted.
-         * *   **0**: The task is being processed.
-         * *   **1**: The task is completed.
-         * *   **2**: The task failed.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -167,7 +183,10 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of successfully processed domain names or DNS records.
+         * <p>The total number of domain names or DNS records that were processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -175,7 +194,10 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the last task.
+         * <p>The ID of the last task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -183,7 +205,10 @@ public class DescribeBatchResultCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DNS records that were processed in batches.
+         * <p>The total number of DNS records that were processed in batches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

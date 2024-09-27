@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIspFlushCacheInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIspFlushCacheInstancesResponseBody</p>
@@ -150,6 +151,12 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIspFlushCacheInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIspFlushCacheInstancesResponseBody</p>
+     */
     public static class QuotaInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceQuota")
         private Integer instanceQuota;
@@ -211,6 +218,12 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIspFlushCacheInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIspFlushCacheInstancesResponseBody</p>
+     */
     public static class IspFlushCacheInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;

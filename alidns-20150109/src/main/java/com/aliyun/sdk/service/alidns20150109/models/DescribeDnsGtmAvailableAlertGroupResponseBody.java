@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmAvailableAlertGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmAvailableAlertGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeDnsGtmAvailableAlertGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned available alert groups.
+         * <p>The returned available alert groups.</p>
          */
         public Builder availableAlertGroup(String availableAlertGroup) {
             this.availableAlertGroup = availableAlertGroup;
@@ -57,7 +58,10 @@ public class DescribeDnsGtmAvailableAlertGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

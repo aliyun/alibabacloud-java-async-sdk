@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudGtmInstanceConfigResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCloudGtmInstanceConfigResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ConfigId.
+         * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>config-000**1</p>
          */
         public Builder configId(Boolean configId) {
             this.configId = configId;
@@ -69,7 +73,10 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,14 @@ public class CreateCloudGtmInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

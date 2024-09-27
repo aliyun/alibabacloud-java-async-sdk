@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudGtmInstanceConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteCloudGtmInstanceConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteCloudGtmInstanceConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,13 @@ public class DeleteCloudGtmInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation to delete domain instance configurations was successful:</p>
+         * <ul>
+         * <li>true: Operation successful - false: Operation failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

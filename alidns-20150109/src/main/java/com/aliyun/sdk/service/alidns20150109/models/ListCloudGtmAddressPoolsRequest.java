@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmAddressPoolsRequest} extends {@link RequestModel}
  *
  * <p>ListCloudGtmAddressPoolsRequest</p>
@@ -151,7 +152,14 @@ public class ListCloudGtmAddressPoolsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -160,7 +168,10 @@ public class ListCloudGtmAddressPoolsRequest extends Request {
         }
 
         /**
-         * AddressPoolName.
+         * <p>Address pool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddressPool-1</p>
          */
         public Builder addressPoolName(String addressPoolName) {
             this.putQueryParameter("AddressPoolName", addressPoolName);
@@ -169,7 +180,15 @@ public class ListCloudGtmAddressPoolsRequest extends Request {
         }
 
         /**
-         * AddressPoolType.
+         * <p>The type of the address pool. Valid values:</p>
+         * <ul>
+         * <li>IPv4: indicates that the service address to be resolved is an IPv4 address.</li>
+         * <li>IPv6: indicates that the service address to be resolved is an IPv6 address.</li>
+         * <li>domain: indicates that the service address to be resolved is a domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressPoolType(String addressPoolType) {
             this.putQueryParameter("AddressPoolType", addressPoolType);
@@ -178,7 +197,10 @@ public class ListCloudGtmAddressPoolsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -187,7 +209,14 @@ public class ListCloudGtmAddressPoolsRequest extends Request {
         }
 
         /**
-         * EnableStatus.
+         * <p>The enabling state of the address pool. Valid values:</p>
+         * <ul>
+         * <li>enable: The address pool is enabled.</li>
+         * <li>disable: The address pool is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder enableStatus(String enableStatus) {
             this.putQueryParameter("EnableStatus", enableStatus);
@@ -196,7 +225,10 @@ public class ListCloudGtmAddressPoolsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting at <strong>1</strong>, default is <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -205,7 +237,10 @@ public class ListCloudGtmAddressPoolsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong>, and a default of <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,7 +249,10 @@ public class ListCloudGtmAddressPoolsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The additional description of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

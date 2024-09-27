@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmAccessStrategiesRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmAccessStrategiesRequest</p>
@@ -95,7 +96,10 @@ public class DescribeGtmAccessStrategiesRequest extends Request {
         } 
 
         /**
-         * The ID of the GTM instance whose access policies you want to query.
+         * <p>The ID of the GTM instance whose access policies you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -104,7 +108,10 @@ public class DescribeGtmAccessStrategiesRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -113,7 +120,10 @@ public class DescribeGtmAccessStrategiesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -122,7 +132,10 @@ public class DescribeGtmAccessStrategiesRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page.
+         * <p>The number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

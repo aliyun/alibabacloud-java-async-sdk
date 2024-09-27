@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDohDomainStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDohDomainStatisticsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
         private java.util.List < Statistics> statistics; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics list.
+         * <p>The statistics list.</p>
          */
         public Builder statistics(java.util.List < Statistics> statistics) {
             this.statistics = statistics;
@@ -70,6 +74,12 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDohDomainStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDohDomainStatisticsResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
@@ -157,7 +167,10 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
             private Long v6HttpsCount; 
 
             /**
-             * The timestamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1544976000000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -165,7 +178,10 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of requests.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -173,7 +189,10 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv4-based HTTP requests.
+             * <p>The number of IPv4-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v4HttpCount(Long v4HttpCount) {
                 this.v4HttpCount = v4HttpCount;
@@ -181,7 +200,10 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv4-based HTTPS requests.
+             * <p>The number of IPv4-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v4HttpsCount(Long v4HttpsCount) {
                 this.v4HttpsCount = v4HttpsCount;
@@ -189,7 +211,10 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv6-based HTTP requests.
+             * <p>The number of IPv6-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v6HttpCount(Long v6HttpCount) {
                 this.v6HttpCount = v6HttpCount;
@@ -197,7 +222,10 @@ public class DescribeDohDomainStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IPv6-based HTTPS requests.
+             * <p>The number of IPv6-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v6HttpsCount(Long v6HttpsCount) {
                 this.v6HttpsCount = v6HttpsCount;

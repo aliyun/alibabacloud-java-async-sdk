@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmInstanceAddressPoolsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDnsGtmInstanceAddressPoolsRequest</p>
@@ -98,7 +99,10 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -107,7 +111,10 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,7 +123,10 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +135,10 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

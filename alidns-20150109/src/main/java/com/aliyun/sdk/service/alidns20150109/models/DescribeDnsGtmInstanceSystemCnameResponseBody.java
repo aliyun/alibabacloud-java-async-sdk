@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmInstanceSystemCnameResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmInstanceSystemCnameResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDnsGtmInstanceSystemCnameResponseBody extends TeaModel {
         private String systemCname; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DescribeDnsGtmInstanceSystemCnameResponseBody extends TeaModel {
         }
 
         /**
-         * The CNAME domain name assigned by the system.
+         * <p>The CNAME domain name assigned by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtminstance.com</p>
          */
         public Builder systemCname(String systemCname) {
             this.systemCname = systemCname;

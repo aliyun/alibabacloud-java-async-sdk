@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsUdpIpSegmentsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsUdpIpSegmentsResponseBody</p>
@@ -150,6 +151,12 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsUdpIpSegmentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsUdpIpSegmentsResponseBody</p>
+     */
     public static class IpSegments extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreviewGtmRecoveryPlanResponseBody} extends {@link TeaModel}
  *
  * <p>PreviewGtmRecoveryPlanResponseBody</p>
@@ -97,7 +98,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +109,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +120,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The returned preview information of the disaster recovery plan.
+         * <p>The returned preview information of the disaster recovery plan.</p>
          */
         public Builder previews(Previews previews) {
             this.previews = previews;
@@ -121,7 +128,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>853805EA-3D47-47D5-9A1A-A45C24313ABD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned on all pages.
+         * <p>The total number of entries returned on all pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PreviewGtmRecoveryPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewGtmRecoveryPlanResponseBody</p>
+     */
     public static class SwitchInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -189,7 +211,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             private String strategyName; 
 
             /**
-             * The formatted message content.
+             * <p>The formatted message content.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -197,7 +219,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the switching policy for address pools.
+             * <p>The name of the switching policy for address pools.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>strategy-name-example-1</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -211,6 +236,12 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewGtmRecoveryPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewGtmRecoveryPlanResponseBody</p>
+     */
     public static class SwitchInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SwitchInfo")
         private java.util.List < SwitchInfo> switchInfo;
@@ -252,6 +283,12 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewGtmRecoveryPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewGtmRecoveryPlanResponseBody</p>
+     */
     public static class Preview extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -315,7 +352,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             private String userDomainName; 
 
             /**
-             * The ID of the GTM instance to which the previewed disaster recovery plan belongs.
+             * <p>The ID of the GTM instance to which the previewed disaster recovery plan belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance-example</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -323,7 +363,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the GTM instance to which the previewed disaster recovery plan belongs.
+             * <p>The name of the GTM instance to which the previewed disaster recovery plan belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -331,7 +374,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information of the switching policies for address pools.
+             * <p>The returned information of the switching policies for address pools.</p>
              */
             public Builder switchInfos(SwitchInfos switchInfos) {
                 this.switchInfos = switchInfos;
@@ -339,7 +382,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
             }
 
             /**
-             * The user\"s domain name or domain name list.
+             * <p>The user&quot;s domain name or domain name list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.yyy.com</p>
              */
             public Builder userDomainName(String userDomainName) {
                 this.userDomainName = userDomainName;
@@ -353,6 +399,12 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PreviewGtmRecoveryPlanResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewGtmRecoveryPlanResponseBody</p>
+     */
     public static class Previews extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Preview")
         private java.util.List < Preview> preview;

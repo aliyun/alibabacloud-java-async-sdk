@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBatchResultDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeBatchResultDetailRequest</p>
@@ -123,13 +124,16 @@ public class DescribeBatchResultDetailRequest extends Request {
         } 
 
         /**
-         * The type of the batch operation. Valid values:
-         * <p>
+         * <p>The type of the batch operation. Valid values:</p>
+         * <ul>
+         * <li><strong>DOMAIN_ADD</strong>: adds domain names in batches.</li>
+         * <li><strong>DOMAIN_DEL</strong>: deletes domain names in batches.</li>
+         * <li><strong>RR_ADD</strong>: adds Domain Name System (DNS) records in batches.</li>
+         * <li><strong>RR_DEL</strong>: deletes DNS records in batches.</li>
+         * </ul>
          * 
-         * *   **DOMAIN_ADD**: adds domain names in batches.
-         * *   **DOMAIN_DEL**: deletes domain names in batches.
-         * *   **RR_ADD**: adds Domain Name System (DNS) records in batches.
-         * *   **RR_DEL**: deletes DNS records in batches.
+         * <strong>example:</strong>
+         * <p>DOMAIN_ADD</p>
          */
         public Builder batchType(String batchType) {
             this.putQueryParameter("BatchType", batchType);
@@ -138,7 +142,10 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -147,7 +154,10 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -156,7 +166,10 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -165,7 +178,10 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * The execution result. If you do not specify this parameter, all results are returned.
+         * <p>The execution result. If you do not specify this parameter, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -174,7 +190,10 @@ public class DescribeBatchResultDetailRequest extends Request {
         }
 
         /**
-         * The ID of the batch operation task.
+         * <p>The ID of the batch operation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83618818</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

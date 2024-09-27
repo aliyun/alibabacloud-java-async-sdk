@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDomainDnssecStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDomainDnssecStatusRequest</p>
@@ -83,7 +84,10 @@ public class SetDomainDnssecStatusRequest extends Request {
         } 
 
         /**
-         * The domain name for which you want to set the DNSSEC status.
+         * <p>The domain name for which you want to enable the DNSSEC. Only the users of the paid editions of Alibaba Cloud DNS can enable this feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -92,7 +96,15 @@ public class SetDomainDnssecStatusRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,11 +113,14 @@ public class SetDomainDnssecStatusRequest extends Request {
         }
 
         /**
-         * The DNSSEC status. Valid values:
-         * <p>
+         * <p>The DNSSEC status. Valid values:</p>
+         * <ul>
+         * <li>ON: enables DNSSEC for the domain name.</li>
+         * <li>OFF: disables DNSSEC for the domain name.</li>
+         * </ul>
          * 
-         * *   ON: enables DNSSEC for the domain name.
-         * *   OFF: disables DNSSEC for the domain name.
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

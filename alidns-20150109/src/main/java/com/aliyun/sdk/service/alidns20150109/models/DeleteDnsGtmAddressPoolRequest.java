@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDnsGtmAddressPoolRequest} extends {@link RequestModel}
  *
  * <p>DeleteDnsGtmAddressPoolRequest</p>
@@ -68,7 +69,10 @@ public class DeleteDnsGtmAddressPoolRequest extends Request {
         } 
 
         /**
-         * The ID of the address pool.
+         * <p>The ID of the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testpool1</p>
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -77,7 +81,10 @@ public class DeleteDnsGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

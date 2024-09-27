@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSubDomainRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSubDomainRecordsResponseBody</p>
@@ -61,7 +62,10 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The host record.
+         * <p>The host record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -69,7 +73,10 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of deleted DNS records.
+         * <p>The total number of deleted DNS records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;

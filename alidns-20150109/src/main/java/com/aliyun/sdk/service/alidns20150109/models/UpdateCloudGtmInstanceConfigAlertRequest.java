@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCloudGtmInstanceConfigAlertRequest} extends {@link RequestModel}
  *
  * <p>UpdateCloudGtmInstanceConfigAlertRequest</p>
@@ -137,11 +138,14 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
          * 
-         * *   zh-CN: Chinese
-         * *   en-US: English
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -150,7 +154,7 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * The alert configurations.
+         * <p>The alert configurations.</p>
          */
         public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
             String alertConfigShrink = shrink(alertConfig, "AlertConfig", "json");
@@ -160,7 +164,7 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * The alert contact groups.
+         * <p>The alert contact groups.</p>
          */
         public Builder alertGroup(java.util.List < String > alertGroup) {
             String alertGroupShrink = shrink(alertGroup, "AlertGroup", "json");
@@ -170,11 +174,14 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * The alert configuration mode of the instance. Valid values:
-         * <p>
+         * <p>The alert configuration mode of the instance. Valid values:</p>
+         * <ul>
+         * <li>global: global alert configuration</li>
+         * <li>instance_config: custom alert configuration</li>
+         * </ul>
          * 
-         * *   global: global alert configuration
-         * *   instance_config: custom alert configuration
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder alertMode(String alertMode) {
             this.putQueryParameter("AlertMode", alertMode);
@@ -183,7 +190,10 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,7 +202,10 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * The configuration ID of the access domain name. Two configuration IDs exist when an A record and an AAAA record are configured for the access domain name that is bound to the GTM instance. This ID uniquely identifies a configuration.
+         * <p>The configuration ID of the access domain name. Two configuration IDs exist when an A record and an AAAA record are configured for the access domain name that is bound to the GTM instance. This ID uniquely identifies a configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Config-000**11</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -201,7 +214,10 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * The ID of the Global Traffic Manager (GTM) 3.0 instance.
+         * <p>The ID of the Global Traffic Manager (GTM) 3.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-zz11t58**0s</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -216,6 +232,12 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCloudGtmInstanceConfigAlertRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCloudGtmInstanceConfigAlertRequest</p>
+     */
     public static class AlertConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DingtalkNotice")
         private Boolean dingtalkNotice;
@@ -279,11 +301,14 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
             private Boolean smsNotice; 
 
             /**
-             * Specifies whether to configure DingTalk notifications. Valid values:
-             * <p>
+             * <p>Specifies whether to configure DingTalk notifications. Valid values:</p>
+             * <ul>
+             * <li>true: configures DingTalk notifications. DingTalk notifications are sent when alerts are triggered.</li>
+             * <li>false: does not configure DingTalk notifications.</li>
+             * </ul>
              * 
-             * *   true: DingTalk notifications are configured. DingTalk notifications are sent when alerts are triggered.
-             * *   false: DingTalk notifications are not configured.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dingtalkNotice(Boolean dingtalkNotice) {
                 this.dingtalkNotice = dingtalkNotice;
@@ -291,11 +316,14 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
             }
 
             /**
-             * Specifies whether to configure email notifications. Valid values:
-             * <p>
+             * <p>Specifies whether to configure email notifications. Valid values:</p>
+             * <ul>
+             * <li>true: configures email notifications. Emails are sent when alerts are triggered.</li>
+             * <li>false: does not configure email notifications.</li>
+             * </ul>
              * 
-             * *   true: Email notifications are configured. Emails are sent when alerts are triggered.
-             * *   false: Email notifications are not configured.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailNotice(Boolean emailNotice) {
                 this.emailNotice = emailNotice;
@@ -303,13 +331,16 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
             }
 
             /**
-             * The type of the alert event. Valid values:
-             * <p>
+             * <p>The type of the alert event. Valid values:</p>
+             * <ul>
+             * <li>addr_alert: The address is unavailable.</li>
+             * <li>addr_resume: The address becomes available.</li>
+             * <li>addr_pool_unavailable: The address pool is unavailable.</li>
+             * <li>addr_pool_available: The address pool becomes available.</li>
+             * </ul>
              * 
-             * *   addr_alert: The address is unavailable.
-             * *   addr_resume: The address becomes available.
-             * *   addr_pool_unavailable: The address pool is unavailable.
-             * *   addr_pool_available: The address pool becomes available.
+             * <strong>example:</strong>
+             * <p>addr_alert</p>
              */
             public Builder noticeType(String noticeType) {
                 this.noticeType = noticeType;
@@ -317,13 +348,15 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
             }
 
             /**
-             * Specifies whether to configure text message notifications. Valid values:
-             * <p>
+             * <p>Specifies whether to configure text message notifications. Valid values:</p>
+             * <ul>
+             * <li>true: configures text message notifications. Text messages are sent when alerts are triggered.</li>
+             * <li>false: does not configure text message notifications.</li>
+             * </ul>
+             * <p>Only the China site (aliyun.com) supports text message notifications.</p>
              * 
-             * *   true: Text message notifications are configured. Text messages are sent when alerts are triggered.
-             * *   false: Text message notifications are not configured.
-             * 
-             * Only the China site (aliyun.com) supports text message notifications.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder smsNotice(Boolean smsNotice) {
                 this.smsNotice = smsNotice;

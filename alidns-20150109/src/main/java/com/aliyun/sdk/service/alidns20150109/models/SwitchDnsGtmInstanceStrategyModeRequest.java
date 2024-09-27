@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchDnsGtmInstanceStrategyModeRequest} extends {@link RequestModel}
  *
  * <p>SwitchDnsGtmInstanceStrategyModeRequest</p>
@@ -83,7 +84,10 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends Request {
         } 
 
         /**
-         * The ID of the GTM instance.
+         * <p>The ID of the GTM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -92,7 +96,10 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends Request {
         }
 
         /**
-         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,11 +108,14 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends Request {
         }
 
         /**
-         * The access policy type. Valid values:
-         * <p>
+         * <p>The access policy type. Valid values:</p>
+         * <ul>
+         * <li>GEO: geographical location-based</li>
+         * <li>LATENCY: latency-based</li>
+         * </ul>
          * 
-         * *   GEO: geographical location-based
-         * *   LATENCY: latency-based
+         * <strong>example:</strong>
+         * <p>GEO</p>
          */
         public Builder strategyMode(String strategyMode) {
             this.putQueryParameter("StrategyMode", strategyMode);

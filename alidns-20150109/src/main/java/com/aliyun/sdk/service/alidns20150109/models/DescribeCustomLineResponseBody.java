@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomLineResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomLineResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The code of the custom line.
+         * <p>The code of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0yc-597</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -113,7 +120,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the custom line.
+         * <p>The ID of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>597</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -121,7 +131,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.
+         * <p>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</p>
          */
         public Builder ipSegmentList(java.util.List < IpSegmentList> ipSegmentList) {
             this.ipSegmentList = ipSegmentList;
@@ -129,7 +139,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the custom line.
+         * <p>The name of the custom line.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -137,7 +147,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,6 +163,12 @@ public class DescribeCustomLineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomLineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomLineResponseBody</p>
+     */
     public static class IpSegmentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndIp")
         private String endIp;
@@ -189,7 +208,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
             private String startIp; 
 
             /**
-             * The end IP address of the CIDR block.
+             * <p>The end IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.1.1.3</p>
              */
             public Builder endIp(String endIp) {
                 this.endIp = endIp;
@@ -197,7 +219,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
             }
 
             /**
-             * The start IP address of the CIDR block.
+             * <p>The start IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.1.1.2</p>
              */
             public Builder startIp(String startIp) {
                 this.startIp = startIp;

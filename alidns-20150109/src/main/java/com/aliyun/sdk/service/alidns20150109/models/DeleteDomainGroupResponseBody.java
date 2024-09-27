@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDomainGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDomainGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteDomainGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the domain name group.
+         * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyGroup</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -57,7 +61,10 @@ public class DeleteDomainGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

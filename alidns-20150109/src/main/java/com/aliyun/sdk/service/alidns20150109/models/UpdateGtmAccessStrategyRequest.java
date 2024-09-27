@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGtmAccessStrategyRequest} extends {@link RequestModel}
  *
  * <p>UpdateGtmAccessStrategyRequest</p>
@@ -124,7 +125,10 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * The line codes of access regions.
+         * <p>The line codes of access regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;default&quot;, &quot;mobile&quot;]</p>
          */
         public Builder accessLines(String accessLines) {
             this.putQueryParameter("AccessLines", accessLines);
@@ -133,7 +137,10 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the default address pool.
+         * <p>The ID of the default address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hrsix</p>
          */
         public Builder defaultAddrPoolId(String defaultAddrPoolId) {
             this.putQueryParameter("DefaultAddrPoolId", defaultAddrPoolId);
@@ -142,7 +149,10 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the failover address pool.
+         * <p>The ID of the failover address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hrsyw</p>
          */
         public Builder failoverAddrPoolId(String failoverAddrPoolId) {
             this.putQueryParameter("FailoverAddrPoolId", failoverAddrPoolId);
@@ -151,7 +161,10 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -160,7 +173,10 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the access policy that you want to query for the GTM instance.
+         * <p>The ID of the access policy that you want to query for the GTM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hrmxc</p>
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -169,7 +185,7 @@ public class UpdateGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The name of the access policy.
+         * <p>The name of the access policy.</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

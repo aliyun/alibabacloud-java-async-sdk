@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCloudGtmAddressRemarkResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateCloudGtmAddressRemarkResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateCloudGtmAddressRemarkResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,14 @@ public class UpdateCloudGtmAddressRemarkResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the modification operation was successful:</p>
+         * <ul>
+         * <li>true: Operation was successful</li>
+         * <li>false: Operation was failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

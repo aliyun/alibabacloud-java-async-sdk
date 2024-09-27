@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmMonitorTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudGtmMonitorTemplatesResponseBody</p>
@@ -97,7 +98,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from 1, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +109,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +120,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75446CC1-FC9A-4595-8D96-089D73D7A63D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,7 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * <p>The health check templates.</p>
          */
         public Builder templates(Templates templates) {
             this.templates = templates;
@@ -129,7 +139,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>Total number of health check template entries retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>Total number of pages after data pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudGtmMonitorTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorTemplatesResponseBody</p>
+     */
     public static class IspCityNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -261,7 +283,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * CityCode.
+             * <p>City code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>738</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -269,7 +294,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * <p>City name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -277,7 +305,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CountryCode.
+             * <p>Country code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>629</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -285,7 +316,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CountryName.
+             * <p>Country name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -293,7 +327,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>Probe node group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP Nodes</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -301,7 +338,15 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * <p>Probe node group types:</p>
+             * <ul>
+             * <li>BGP: BGP nodes</li>
+             * <li>OVERSEAS: International nodes</li>
+             * <li>ISP: Carrier nodes</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -309,7 +354,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IspCode.
+             * <p>Operator code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -317,7 +365,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>Operator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -331,6 +382,12 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmMonitorTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorTemplatesResponseBody</p>
+     */
     public static class IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IspCityNode")
         private java.util.List < IspCityNode> ispCityNode;
@@ -372,6 +429,12 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmMonitorTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorTemplatesResponseBody</p>
+     */
     public static class Template extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -567,7 +630,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * CreateTime.
+             * <p>Health check template creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-23T13:09Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -575,7 +641,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>Health check template creation time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -583,7 +652,13 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationCount.
+             * <p>The number of retries. The system will only judge the application service as abnormal after consecutive monitoring failures to prevent inaccurate monitoring results due to momentary network fluctuations or other reasons. Available retry options are:</p>
+             * <ul>
+             * <li>1 - 2 - 3</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder evaluationCount(Integer evaluationCount) {
                 this.evaluationCount = evaluationCount;
@@ -591,7 +666,35 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInfo.
+             * <p>The extended information. The value of this parameter is a JSON string. The required parameters vary based on the health check protocol.</p>
+             * <ul>
+             * <li><p>HTTP or HTTPS:</p>
+             * <p><strong>host</strong>: the Host field of an HTTP or HTTPS request header during an HTTP or HTTPS health check. The parameter value indicates the HTTP website that you want to visit. By default, the value is the primary domain name. You can change the value based on your business requirements.</p>
+             * <p><strong>path</strong>: the URL for HTTP or HTTPS health checks. Default value: /.</p>
+             * <p><strong>code</strong>: the alert threshold. During an HTTP or HTTPS health check, the system checks whether a web server functions as expected based on the status code that is returned from the web server. If the returned status code is greater than the specified threshold, the corresponding application service address is deemed abnormal. Valid values:</p>
+             * <ul>
+             * <li>400: indicates an invalid request. If an HTTP or HTTPS request contains invalid request parameters, a web server returns a status code that is greater than 400. You must specify an exact URL for path if you set code to 400.</li>
+             * <li>500: indicates a server error. If some exceptions occur on a web server, the web server returns a status code that is greater than 500. This value is used by default.</li>
+             * </ul>
+             * <p><strong>sni</strong>: indicates whether Server Name Indication (SNI) is enabled. This parameter is used only when the health check protocol is HTTPS. SNI is an extension to the Transport Layer Security (TLS) protocol, which allows a client to specify the host to be connected when the client sends a TLS handshake request. TLS handshakes occur before any data of HTTP requests is sent. Therefore, SNI enables servers to identify the services that clients are attempting to access before certificates are sent. This allows the servers to present correct certificates to the clients. Valid values:</p>
+             * <ul>
+             * <li>true: SNI is enabled.</li>
+             * <li>false: SNI is disabled.</li>
+             * </ul>
+             * <p><strong>followRedirect</strong>: indicates whether 3XX redirects are followed. Valid values:</p>
+             * <ul>
+             * <li>true: 3XX redirects are followed. You are redirected to the destination address if a 3XX status code such as 301, 302, 303, 307, or 308 is returned.</li>
+             * <li>false: 3XX redirects are not followed.</li>
+             * </ul>
+             * </li>
+             * <li><p>ping:</p>
+             * <p><strong>packetNum</strong>: the total number of Internet Control Message Protocol (ICMP) packets that are sent to the address for each ping-based health check. Valid values: 20, 50, and 100.</p>
+             * <p><strong>packetLossRate</strong>: the ICMP packet loss rate for each ping-based health check. The packet loss rate in a health check can be calculated by using the following formula: Packet loss rate in a health check = (Number of lost packets/Total number of sent ICMP packets) × 100%. If the packet loss rate reaches the threshold, an alert is triggered. Valid values: 10, 30, 40, 80, 90, and 100.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;code&quot;:200,&quot;path&quot;:&quot;\index.htm&quot;,&quot;host&quot;:&quot;aliyun.com&quot;}</p>
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -599,7 +702,16 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * FailureRate.
+             * <p>Percentage of selected node probe failures (%), that is, the percentage of unhealthy check points among total probe points. When the failure ratio exceeds the set threshold, the service address is judged as abnormal. The available failure ratio thresholds are:</p>
+             * <ul>
+             * <li>20</li>
+             * <li>50</li>
+             * <li>80</li>
+             * <li>100</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder failureRate(Integer failureRate) {
                 this.failureRate = failureRate;
@@ -607,7 +719,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The time interval between each check (in seconds), with a default of probing once every minute. The minimum supported health check interval is 15 seconds, available for flagship edition instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -615,7 +730,14 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * <p>The IP address type of health check nodes. Valid values:</p>
+             * <ul>
+             * <li>IPv4: applicable when health checks are performed on IPv4 addresses.</li>
+             * <li>IPv6: applicable when health checks are performed on IPv6 addresses.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -623,7 +745,7 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IspCityNodes.
+             * <p>The health check nodes. You can call the <a href="~~ListCloudGtmMonitorNodes~~">ListCloudGtmMonitorNodes</a> operation to obtain the health check nodes.</p>
              */
             public Builder ispCityNodes(IspCityNodes ispCityNodes) {
                 this.ispCityNodes = ispCityNodes;
@@ -631,7 +753,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the health check probe template, generally for the convenience of configuration personnel to distinguish and remember.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4-Ping</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -639,7 +764,16 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>Protocol types for initiating probes to the target IP address:</p>
+             * <ul>
+             * <li>ping</li>
+             * <li>tcp</li>
+             * <li>http</li>
+             * <li>https</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ping</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -647,7 +781,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remarks for the health check template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -655,7 +792,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the health check template. This ID uniquely identifies the health check template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mtp-89518052425100**80</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -663,7 +803,16 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>Probe timeout (in milliseconds), data packets not returned within the timeout period are deemed as health check timeouts:</p>
+             * <ul>
+             * <li>2000</li>
+             * <li>3000</li>
+             * <li>5000</li>
+             * <li>10000</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -671,7 +820,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Last modification time of the health check template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-29T13:20Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -679,7 +831,10 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>Health check template configuration modification time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -693,6 +848,12 @@ public class ListCloudGtmMonitorTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmMonitorTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorTemplatesResponseBody</p>
+     */
     public static class Templates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Template")
         private java.util.List < Template> template;

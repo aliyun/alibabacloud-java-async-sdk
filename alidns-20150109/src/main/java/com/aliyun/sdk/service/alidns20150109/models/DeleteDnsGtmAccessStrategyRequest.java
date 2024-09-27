@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDnsGtmAccessStrategyRequest} extends {@link RequestModel}
  *
  * <p>DeleteDnsGtmAccessStrategyRequest</p>
@@ -68,7 +69,10 @@ public class DeleteDnsGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,10 @@ public class DeleteDnsGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the access policy.
+         * <p>The ID of the access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testStrategyId1</p>
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

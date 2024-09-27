@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGtmRecoveryPlanRequest} extends {@link RequestModel}
  *
  * <p>UpdateGtmRecoveryPlanRequest</p>
@@ -110,7 +111,10 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * The list of faulty address pools.
+         * <p>The list of faulty address pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;hra0or&quot;]</p>
          */
         public Builder faultAddrPool(String faultAddrPool) {
             this.putQueryParameter("FaultAddrPool", faultAddrPool);
@@ -119,7 +123,10 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+         * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -128,7 +135,10 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The name of the disaster recovery plan.
+         * <p>The name of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -137,7 +147,10 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The ID of the disaster recovery plan.
+         * <p>The ID of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder recoveryPlanId(Long recoveryPlanId) {
             this.putQueryParameter("RecoveryPlanId", recoveryPlanId);
@@ -146,7 +159,10 @@ public class UpdateGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The remarks about the disaster recovery plan.
+         * <p>The remarks about the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

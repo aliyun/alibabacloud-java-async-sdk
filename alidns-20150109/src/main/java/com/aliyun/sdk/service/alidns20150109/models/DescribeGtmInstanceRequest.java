@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmInstanceRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmInstanceRequest</p>
@@ -82,7 +83,10 @@ public class DescribeGtmInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the GTM instance.
+         * <p>The ID of the GTM instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -91,7 +95,10 @@ public class DescribeGtmInstanceRequest extends Request {
         }
 
         /**
-         * The language of the values of specific response parameters.
+         * <p>The language of the values of specific response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +107,10 @@ public class DescribeGtmInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether additional information is required. Default value: **false**. If the value is **true**, the AccessStrategyNum and AddressPoolNum parameters are returned.
+         * <p>Specifies whether additional information is required. Default value: <strong>false</strong>. If the value is <strong>true</strong>, the AccessStrategyNum and AddressPoolNum parameters are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needDetailAttributes(Boolean needDetailAttributes) {
             this.putQueryParameter("NeedDetailAttributes", needDetailAttributes);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDnsGtmLogsRequest</p>
@@ -142,7 +143,10 @@ public class DescribeDnsGtmLogsRequest extends Request {
         } 
 
         /**
-         * The timestamp that specifies the end of the time range to query.
+         * <p>The timestamp that specifies the end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1516779348000</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -151,7 +155,10 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -160,7 +167,10 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.
+         * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -169,7 +179,10 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -178,7 +191,10 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -187,7 +203,10 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,7 +215,10 @@ public class DescribeDnsGtmLogsRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the beginning of the time range to query.
+         * <p>The timestamp that specifies the beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1516779348000</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

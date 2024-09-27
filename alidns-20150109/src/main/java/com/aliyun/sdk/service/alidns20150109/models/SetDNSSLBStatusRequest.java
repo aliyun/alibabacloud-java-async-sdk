@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDNSSLBStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDNSSLBStatusRequest</p>
@@ -138,7 +139,10 @@ public class SetDNSSLBStatusRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -147,7 +151,10 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -156,7 +163,10 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The DNS resolution line. The line can be the default line, China Telecom, and China Mobile.
+         * <p>The DNS resolution line. The line can be the default line, China Telecom, and China Mobile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Mobile.</p>
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -165,11 +175,14 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable weighted round-robin. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable weighted round-robin. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): enables weighted round-robin.</li>
+         * <li><strong>false</strong>: disables weighted round-robin.</li>
+         * </ul>
          * 
-         * *   **true** (default): enables weighted round-robin.
-         * *   **false**: disables weighted round-robin.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder open(Boolean open) {
             this.putQueryParameter("Open", open);
@@ -178,7 +191,10 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.
+         * <p>The subdomain name for which you want to enable weighted round-robin. Set the parameter to @.example.com instead of example.com.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);
@@ -187,7 +203,10 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The type of the Domain Name System (DNS) record. Valid values: A and AAAA. Default value: A.
+         * <p>The type of the Domain Name System (DNS) record. Valid values: A and AAAA. Default value: A.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -196,7 +215,10 @@ public class SetDNSSLBStatusRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

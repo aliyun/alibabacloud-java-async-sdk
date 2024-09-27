@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsAccountSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsAccountSummaryResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribePdnsAccountSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsAccountSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsAccountSummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainCount")
         private Long domainCount;

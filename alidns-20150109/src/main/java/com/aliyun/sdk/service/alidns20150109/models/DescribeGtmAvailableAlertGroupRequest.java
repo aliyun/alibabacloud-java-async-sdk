@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmAvailableAlertGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmAvailableAlertGroupRequest</p>
@@ -53,7 +54,10 @@ public class DescribeGtmAvailableAlertGroupRequest extends Request {
         } 
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

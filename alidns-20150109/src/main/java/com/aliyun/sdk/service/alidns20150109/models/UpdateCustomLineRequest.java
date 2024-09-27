@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCustomLineRequest} extends {@link RequestModel}
  *
  * <p>UpdateCustomLineRequest</p>
@@ -96,7 +97,7 @@ public class UpdateCustomLineRequest extends Request {
         } 
 
         /**
-         * The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.
+         * <p>The CIDR blocks. Separate IP addresses with a hyphen (-). Enter a CIDR block in each row. You can enter 1 to 50 CIDR blocks at a time. If a CIDR block contains only one IP address, enter the IP address in the format of IP1-IP1. Different CIDR blocks cannot be overlapped.</p>
          */
         public Builder ipSegment(java.util.List < IpSegment> ipSegment) {
             this.putQueryParameter("IpSegment", ipSegment);
@@ -105,7 +106,10 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +118,10 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * The unique ID of the custom line.
+         * <p>The unique ID of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder lineId(Long lineId) {
             this.putQueryParameter("LineId", lineId);
@@ -123,7 +130,7 @@ public class UpdateCustomLineRequest extends Request {
         }
 
         /**
-         * The name of the custom line. The name must be 1 to 20 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
+         * <p>The name of the custom line. The name must be 1 to 20 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</p>
          */
         public Builder lineName(String lineName) {
             this.putQueryParameter("LineName", lineName);
@@ -138,6 +145,12 @@ public class UpdateCustomLineRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateCustomLineRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateCustomLineRequest</p>
+     */
     public static class IpSegment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndIp")
         private String endIp;
@@ -177,7 +190,10 @@ public class UpdateCustomLineRequest extends Request {
             private String startIp; 
 
             /**
-             * The end IP address of the CIDR block.
+             * <p>The end IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.2.2</p>
              */
             public Builder endIp(String endIp) {
                 this.endIp = endIp;
@@ -185,7 +201,10 @@ public class UpdateCustomLineRequest extends Request {
             }
 
             /**
-             * The start IP address of the CIDR block.
+             * <p>The start IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder startIp(String startIp) {
                 this.startIp = startIp;

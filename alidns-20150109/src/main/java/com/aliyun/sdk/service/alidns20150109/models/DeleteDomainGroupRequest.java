@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDomainGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteDomainGroupRequest</p>
@@ -68,7 +69,10 @@ public class DeleteDomainGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the domain name group.
+         * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -77,7 +81,15 @@ public class DeleteDomainGroupRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

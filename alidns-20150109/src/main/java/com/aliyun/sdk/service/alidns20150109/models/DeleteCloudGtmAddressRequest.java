@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudGtmAddressRequest} extends {@link RequestModel}
  *
  * <p>DeleteCloudGtmAddressRequest</p>
@@ -82,7 +83,14 @@ public class DeleteCloudGtmAddressRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +99,10 @@ public class DeleteCloudGtmAddressRequest extends Request {
         }
 
         /**
-         * AddressId.
+         * <p>The address ID. This ID uniquely identifies the address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>addr-895182181143688192</p>
          */
         public Builder addressId(String addressId) {
             this.putQueryParameter("AddressId", addressId);
@@ -100,7 +111,10 @@ public class DeleteCloudGtmAddressRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

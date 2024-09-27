@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -110,7 +111,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The language in which you want some response parameters to be returned.
+         * <p>The language in which you want some response parameters to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +123,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query.
+         * <p>The token that determines the start point of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4698691</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -128,7 +135,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -137,7 +144,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -146,7 +156,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * An array of tag key-value pairs.
+         * <p>An array of tag key-value pairs.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -161,6 +171,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -200,7 +216,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -208,7 +227,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcd</p>
              */
             public Builder value(String value) {
                 this.value = value;

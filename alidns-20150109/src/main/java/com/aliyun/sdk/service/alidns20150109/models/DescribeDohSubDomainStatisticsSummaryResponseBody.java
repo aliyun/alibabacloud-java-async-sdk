@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDohSubDomainStatisticsSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDohSubDomainStatisticsSummaryResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         private Integer totalPages; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +109,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +120,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,7 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         }
 
         /**
-         * The statistics list.
+         * <p>The statistics list.</p>
          */
         public Builder statistics(java.util.List < Statistics> statistics) {
             this.statistics = statistics;
@@ -129,7 +139,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         }
 
         /**
-         * Total number of entries returned.
+         * <p>Total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
         }
 
         /**
-         * Total number of pages returned.
+         * <p>Total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDohSubDomainStatisticsSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDohSubDomainStatisticsSummaryResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpCount")
         private Long httpCount;
@@ -273,7 +295,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             private Long v6HttpsCount; 
 
             /**
-             * The number of HTTP requests.
+             * <p>The number of HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder httpCount(Long httpCount) {
                 this.httpCount = httpCount;
@@ -281,7 +306,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             }
 
             /**
-             * The number of HTTPS requests.
+             * <p>The number of HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder httpsCount(Long httpsCount) {
                 this.httpsCount = httpsCount;
@@ -289,7 +317,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             }
 
             /**
-             * The number of IP addresses.
+             * <p>The number of IP addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder ipCount(Long ipCount) {
                 this.ipCount = ipCount;
@@ -297,7 +328,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             }
 
             /**
-             * The subdomain.
+             * <p>The subdomain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder subDomain(String subDomain) {
                 this.subDomain = subDomain;
@@ -305,7 +339,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             }
 
             /**
-             * Total number of requests.
+             * <p>Total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14141592653</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -313,7 +350,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             }
 
             /**
-             * The number of IPv4-based HTTP requests.
+             * <p>The number of IPv4-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v4HttpCount(Long v4HttpCount) {
                 this.v4HttpCount = v4HttpCount;
@@ -321,7 +361,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             }
 
             /**
-             * The number of IPv4-based HTTPS requests.
+             * <p>The number of IPv4-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v4HttpsCount(Long v4HttpsCount) {
                 this.v4HttpsCount = v4HttpsCount;
@@ -329,7 +372,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             }
 
             /**
-             * The number of IPv6-based HTTP requests.
+             * <p>The number of IPv6-based HTTP requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v6HttpCount(Long v6HttpCount) {
                 this.v6HttpCount = v6HttpCount;
@@ -337,7 +383,10 @@ public class DescribeDohSubDomainStatisticsSummaryResponseBody extends TeaModel 
             }
 
             /**
-             * The number of IPv6-based HTTPS requests.
+             * <p>The number of IPv6-based HTTPS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3141592653</p>
              */
             public Builder v6HttpsCount(Long v6HttpsCount) {
                 this.v6HttpsCount = v6HttpsCount;

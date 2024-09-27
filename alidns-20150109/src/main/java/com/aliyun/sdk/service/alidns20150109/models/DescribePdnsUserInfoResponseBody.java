@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsUserInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsUserInfoResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsUserInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsUserInfoResponseBody</p>
+     */
     public static class UserInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableService")
         private String availableService;

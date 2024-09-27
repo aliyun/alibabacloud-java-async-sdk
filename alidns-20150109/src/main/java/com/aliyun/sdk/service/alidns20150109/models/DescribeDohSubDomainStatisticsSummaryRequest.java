@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDohSubDomainStatisticsSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeDohSubDomainStatisticsSummaryRequest</p>
@@ -138,7 +139,10 @@ public class DescribeDohSubDomainStatisticsSummaryRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -147,10 +151,11 @@ public class DescribeDohSubDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the YYYY-MM-DD format.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+         * <p>The default value is the day when you query the required data.</p>
          * 
-         * The default value is the day when you query the required data.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -159,7 +164,10 @@ public class DescribeDohSubDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -168,7 +176,10 @@ public class DescribeDohSubDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -177,7 +188,10 @@ public class DescribeDohSubDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100. Default value: 20.
+         * <p>The number of entries to return on each page. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -186,10 +200,11 @@ public class DescribeDohSubDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+         * <p>You can query only the DNS records of the last 90 days. <code>The value of StartDate must be greater than or equal to the difference between the current date and 90</code>.</p>
          * 
-         * You can query only the DNS records of the last 90 days. `The value of StartDate must be greater than or equal to the difference between the current date and 90`.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -198,7 +213,10 @@ public class DescribeDohSubDomainStatisticsSummaryRequest extends Request {
         }
 
         /**
-         * The subdomain.
+         * <p>The subdomain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);

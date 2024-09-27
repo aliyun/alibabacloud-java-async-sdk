@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDNSSLBSubDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDNSSLBSubDomainsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The subdomains for which weighted round-robin is enabled.
+         * <p>The subdomains for which weighted round-robin is enabled.</p>
          */
         public Builder slbSubDomains(SlbSubDomains slbSubDomains) {
             this.slbSubDomains = slbSubDomains;
@@ -117,7 +127,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDNSSLBSubDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDNSSLBSubDomainsResponseBody</p>
+     */
     public static class LineAlgorithm extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
@@ -169,7 +188,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             private Boolean open; 
 
             /**
-             * The DNS resolution line. The line can be China Telecom, China Mobile, and China Unicom.
+             * <p>The DNS resolution line. The line can be China Telecom, China Mobile, and China Unicom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder line(String line) {
                 this.line = line;
@@ -177,11 +199,14 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether weighted round-robin is enabled for the line. Valid values:
-             * <p>
+             * <p>Indicates whether weighted round-robin is enabled for the line. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong> (default): Weighted round-robin is enabled.</li>
+             * <li><strong>false</strong>: Weighted round-robin is disabled.</li>
+             * </ul>
              * 
-             * *   **true** (default): Weighted round-robin is enabled.
-             * *   **false**: Weighted round-robin is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder open(Boolean open) {
                 this.open = open;
@@ -195,6 +220,12 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDNSSLBSubDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDNSSLBSubDomainsResponseBody</p>
+     */
     public static class LineAlgorithms extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LineAlgorithm")
         private java.util.List < LineAlgorithm> lineAlgorithm;
@@ -236,6 +267,12 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDNSSLBSubDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDNSSLBSubDomainsResponseBody</p>
+     */
     public static class SlbSubDomain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LineAlgorithms")
         private LineAlgorithms lineAlgorithms;
@@ -311,7 +348,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The lines for which weighted round-robin is enabled.
+             * <p>The lines for which weighted round-robin is enabled.</p>
              */
             public Builder lineAlgorithms(LineAlgorithms lineAlgorithms) {
                 this.lineAlgorithms = lineAlgorithms;
@@ -319,7 +356,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether weighted round-robin is enabled for the subdomain.
+             * <p>Indicates whether weighted round-robin is enabled for the subdomain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder open(Boolean open) {
                 this.open = open;
@@ -327,7 +367,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of DNS records added for the subdomain.
+             * <p>The number of DNS records added for the subdomain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder recordCount(Long recordCount) {
                 this.recordCount = recordCount;
@@ -335,7 +378,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The subdomain name.
+             * <p>The subdomain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder subDomain(String subDomain) {
                 this.subDomain = subDomain;
@@ -343,7 +389,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Domain Name System (DNS) record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.
+             * <p>The type of the Domain Name System (DNS) record that supports weighted round-robin. Valid values: A, AAAA, and CNAME.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -357,6 +406,12 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDNSSLBSubDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDNSSLBSubDomainsResponseBody</p>
+     */
     public static class SlbSubDomains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlbSubDomain")
         private java.util.List < SlbSubDomain> slbSubDomain;

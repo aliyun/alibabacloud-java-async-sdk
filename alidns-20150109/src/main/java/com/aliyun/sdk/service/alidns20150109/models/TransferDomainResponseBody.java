@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferDomainResponseBody} extends {@link TeaModel}
  *
  * <p>TransferDomainResponseBody</p>
@@ -49,7 +50,10 @@ public class TransferDomainResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class TransferDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The task ID.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112233</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSupportLinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSupportLinesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 云解析线路列表。
+         * <p>The Alibaba Cloud DNS lines.</p>
          */
         public Builder recordLines(RecordLines recordLines) {
             this.recordLines = recordLines;
@@ -57,7 +58,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +71,12 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSupportLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSupportLinesResponseBody</p>
+     */
     public static class RecordLine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
@@ -133,7 +140,10 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             private String lineName; 
 
             /**
-             * 2021-12-06T02:47:26.000+0000
+             * <p>The code of the parent line. This parameter is not returned if the line has no parent line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unicom</p>
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -141,7 +151,10 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 子线路Code。
+             * <p>The code of the line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn_unicom_shanxi</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -149,7 +162,10 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 父线路展示名称。
+             * <p>The display name of the parent line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Unicom</p>
              */
             public Builder lineDisplayName(String lineDisplayName) {
                 this.lineDisplayName = lineDisplayName;
@@ -157,7 +173,10 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 子线路展示名称。
+             * <p>The display name of the line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Unicom_Shanxi</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -171,6 +190,12 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSupportLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSupportLinesResponseBody</p>
+     */
     public static class RecordLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordLine")
         private java.util.List < RecordLine> recordLine;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReplaceCloudGtmAddressPoolAddressRequest} extends {@link RequestModel}
  *
  * <p>ReplaceCloudGtmAddressPoolAddressRequest</p>
@@ -95,7 +96,14 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese</li>
+         * <li><strong>en-US (default)</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -104,7 +112,10 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
         }
 
         /**
-         * AddressPoolId.
+         * <p>The ID of the address pool for which you want to replace addresses. This ID uniquely identifies the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool-89618921167339**24</p>
          */
         public Builder addressPoolId(String addressPoolId) {
             this.putQueryParameter("AddressPoolId", addressPoolId);
@@ -113,7 +124,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
         }
 
         /**
-         * Addresses.
+         * <p>The addresses.</p>
          */
         public Builder addresses(java.util.List < Addresses> addresses) {
             String addressesShrink = shrink(addresses, "Addresses", "json");
@@ -123,7 +134,10 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -138,6 +152,12 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ReplaceCloudGtmAddressPoolAddressRequest} extends {@link TeaModel}
+     *
+     * <p>ReplaceCloudGtmAddressPoolAddressRequest</p>
+     */
     public static class Addresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressId")
         private String addressId;
@@ -201,7 +221,14 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
             private Integer weightValue; 
 
             /**
-             * AddressId.
+             * <p>The ID of the new address. This ID uniquely identifies the address.</p>
+             * <ul>
+             * <li>If you specify this parameter, the original addresses in the address pool will be deleted and replaced with new addresses.</li>
+             * <li>If you do not specify this parameter, all addresses in the address pool will be deleted and the address pool will be left empty.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>addr-89636516932803**44</p>
              */
             public Builder addressId(String addressId) {
                 this.addressId = addressId;
@@ -209,7 +236,7 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
             }
 
             /**
-             * RequestSource.
+             * <p>The DNS request sources.</p>
              */
             public Builder requestSource(java.util.List < String > requestSource) {
                 this.requestSource = requestSource;
@@ -217,7 +244,10 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
             }
 
             /**
-             * SerialNumber.
+             * <p>The sequence number that specifies the priority for returning the new address. A smaller sequence number specifies a higher priority. This setting takes effect for new addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serialNumber(Integer serialNumber) {
                 this.serialNumber = serialNumber;
@@ -225,7 +255,10 @@ public class ReplaceCloudGtmAddressPoolAddressRequest extends Request {
             }
 
             /**
-             * WeightValue.
+             * <p>The weight value of the new address. You can set a different weight value for each address. This way, addresses are returned based on the weight values for Domain Name System (DNS) requests. A weight value must be an integer that ranges from 1 to 100. This setting takes effect for new addresses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder weightValue(Integer weightValue) {
                 this.weightValue = weightValue;

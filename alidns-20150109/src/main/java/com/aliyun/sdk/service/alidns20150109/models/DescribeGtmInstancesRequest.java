@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmInstancesRequest</p>
@@ -123,7 +124,10 @@ public class DescribeGtmInstancesRequest extends Request {
         } 
 
         /**
-         * The keyword that you use for query. Exact match is supported by instance ID or instance name.
+         * <p>The keyword that you use for query. Exact match is supported by instance ID or instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -132,7 +136,10 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+         * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -141,7 +148,10 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether additional information is required. Default value: **false**.
+         * <p>Specifies whether additional information is required. Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needDetailAttributes(Boolean needDetailAttributes) {
             this.putQueryParameter("NeedDetailAttributes", needDetailAttributes);
@@ -150,7 +160,10 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * The page number to return.
+         * <p>The page number to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -159,7 +172,10 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page.
+         * <p>The number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -168,7 +184,10 @@ public class DescribeGtmInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGtmInstancesResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The list of queried instances.
+         * <p>The list of queried instances.</p>
          */
         public Builder gtmInstances(GtmInstances gtmInstances) {
             this.gtmInstances = gtmInstances;
@@ -105,7 +106,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned page number.
+         * <p>The returned page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>193B0163-7F93-42DF-AB05-ACEEB7D22707</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGtmInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmInstancesResponseBody</p>
+     */
     public static class GtmInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessStrategyNum")
         private Integer accessStrategyNum;
@@ -357,7 +379,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             private String versionCode; 
 
             /**
-             * The number of access policies.
+             * <p>The number of access policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder accessStrategyNum(Integer accessStrategyNum) {
                 this.accessStrategyNum = accessStrategyNum;
@@ -365,7 +390,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of address pools.
+             * <p>The number of address pools.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder addressPoolNum(Integer addressPoolNum) {
                 this.addressPoolNum = addressPoolNum;
@@ -373,7 +401,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert group.
+             * <p>The name of the alert group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[\&quot;R&amp;D group\&quot;]</p>
              */
             public Builder alertGroup(String alertGroup) {
                 this.alertGroup = alertGroup;
@@ -381,7 +412,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME domain name that is used to access the instance.
+             * <p>The CNAME domain name that is used to access the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance1.14.com</p>
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -389,11 +423,14 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The CNAME domain name used to access the instance. Valid values:
-             * <p>
+             * <p>The CNAME domain name used to access the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>SYSTEM_ASSIGN</strong>: A CNAME domain name assigned by the system is used.</li>
+             * <li><strong>CUSTOM</strong>: A custom CNAME domain name is used.</li>
+             * </ul>
              * 
-             * *   **SYSTEM_ASSIGN**: A CNAME domain name assigned by the system is used.
-             * *   **CUSTOM**: A custom CNAME domain name is used.
+             * <strong>example:</strong>
+             * <p>SYSTEM_ASSIGN</p>
              */
             public Builder cnameMode(String cnameMode) {
                 this.cnameMode = cnameMode;
@@ -401,7 +438,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-06-06T11:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -409,7 +449,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp that indicates when the instance was created.
+             * <p>The UNIX timestamp that indicates when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1528284856000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -417,7 +460,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-06-06T11:34Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -425,7 +471,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp that indicates when the instance expires.
+             * <p>The UNIX timestamp that indicates when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1528284856000</p>
              */
             public Builder expireTimestamp(Long expireTimestamp) {
                 this.expireTimestamp = expireTimestamp;
@@ -433,7 +482,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -441,7 +493,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -449,11 +504,14 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The load balancing policy that is used. Valid values:
-             * <p>
+             * <p>The load balancing policy that is used. Valid values:</p>
+             * <ul>
+             * <li><strong>ALL_RR</strong>: Load balancing</li>
+             * <li><strong>RATIO</strong>: Weighted round-robin</li>
+             * </ul>
              * 
-             * *   **ALL_RR**: Load balancing
-             * *   **RATIO**: Weighted round-robin
+             * <strong>example:</strong>
+             * <p>RATIO</p>
              */
             public Builder lbaStrategy(String lbaStrategy) {
                 this.lbaStrategy = lbaStrategy;
@@ -461,7 +519,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the instance belongs.
+             * <p>The ID of the resource group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm2q2jqpjh***</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -469,7 +530,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The global time to live (TTL).
+             * <p>The global time to live (TTL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -477,7 +541,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the user.
+             * <p>The domain name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder userDomainName(String userDomainName) {
                 this.userDomainName = userDomainName;
@@ -485,7 +552,10 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version code of the instance.
+             * <p>The version code of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>biaozhun</p>
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
@@ -499,6 +569,12 @@ public class DescribeGtmInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGtmInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGtmInstancesResponseBody</p>
+     */
     public static class GtmInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GtmInstance")
         private java.util.List < GtmInstance> gtmInstance;

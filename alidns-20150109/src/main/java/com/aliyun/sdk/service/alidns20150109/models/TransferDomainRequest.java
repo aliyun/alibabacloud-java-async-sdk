@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TransferDomainRequest} extends {@link RequestModel}
  *
  * <p>TransferDomainRequest</p>
@@ -97,7 +98,10 @@ public class TransferDomainRequest extends Request {
         } 
 
         /**
-         * The domain names. Separate multiple domain names with commas (,). Only domain names registered with Alibaba Cloud are supported.
+         * <p>The domain names. Separate multiple domain names with commas (,). Only domain names registered with Alibaba Cloud are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1.com,test2.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -106,11 +110,14 @@ public class TransferDomainRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -119,7 +126,10 @@ public class TransferDomainRequest extends Request {
         }
 
         /**
-         * The description of the domain name.
+         * <p>The description of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test domain transfer</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -128,7 +138,10 @@ public class TransferDomainRequest extends Request {
         }
 
         /**
-         * The destination user ID. The domain names and their Domain Name System (DNS) records are transferred to the destination user ID.
+         * <p>The destination user ID. The domain names and their Domain Name System (DNS) records are transferred to the destination user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder targetUserId(Long targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);

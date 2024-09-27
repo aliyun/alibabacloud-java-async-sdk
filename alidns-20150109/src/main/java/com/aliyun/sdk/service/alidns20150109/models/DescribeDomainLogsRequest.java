@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainLogsRequest</p>
@@ -152,7 +153,10 @@ public class DescribeDomainLogsRequest extends Request {
         } 
 
         /**
-         * The ID of the domain name group.
+         * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -161,7 +165,10 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * The keyword for the query in "%KeyWord%" mode. The keyword is not case-sensitive.
+         * <p>The keyword for the query in &quot;%KeyWord%&quot; mode. The keyword is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -170,7 +177,10 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+         * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -179,7 +189,10 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * The page number to return. The page number starts from **1**. Default value: **1**.
+         * <p>The page number to return. The page number starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +201,10 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Maximum value: **100**. Default value: **20**.
+         * <p>The number of entries to return per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +213,10 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * The start time for the query. Format: **YYYY-MM-DD**
+         * <p>The start time for the query. Format: <strong>YYYY-MM-DD</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -206,11 +225,14 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * The type of object of which you want to query operation logs. Valid values:
-         * <p>
+         * <p>The type of object of which you want to query operation logs. Valid values:</p>
+         * <ul>
+         * <li>domain: domain name</li>
+         * <li>slavedns: secondary Domain Name System (DNS)</li>
+         * </ul>
          * 
-         * *   domain: domain name
-         * *   slavedns: secondary Domain Name System (DNS)
+         * <strong>example:</strong>
+         * <p>domain</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -219,7 +241,10 @@ public class DescribeDomainLogsRequest extends Request {
         }
 
         /**
-         * The end time for the query. Format: **YYYY-MM-DD**
+         * <p>The end time for the query. Format: <strong>YYYY-MM-DD</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmAccessStrategyRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmAccessStrategyRequest</p>
@@ -68,7 +69,10 @@ public class DescribeGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,10 @@ public class DescribeGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the access policy that you want to query.
+         * <p>The ID of the access policy that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0hs</p>
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

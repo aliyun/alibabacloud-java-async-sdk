@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIspFlushCacheTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIspFlushCacheTasksResponseBody</p>
@@ -150,6 +151,12 @@ public class DescribeIspFlushCacheTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIspFlushCacheTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIspFlushCacheTasksResponseBody</p>
+     */
     public static class IspFlushCacheTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

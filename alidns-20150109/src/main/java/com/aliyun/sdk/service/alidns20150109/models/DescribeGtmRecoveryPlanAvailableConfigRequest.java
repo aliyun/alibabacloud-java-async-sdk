@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmRecoveryPlanAvailableConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmRecoveryPlanAvailableConfigRequest</p>
@@ -53,7 +54,15 @@ public class DescribeGtmRecoveryPlanAvailableConfigRequest extends Request {
         } 
 
         /**
-         * The language used by the user.
+         * <p>The language in which the returned results are displayed. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

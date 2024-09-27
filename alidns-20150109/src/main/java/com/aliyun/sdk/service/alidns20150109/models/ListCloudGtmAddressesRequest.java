@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmAddressesRequest} extends {@link RequestModel}
  *
  * <p>ListCloudGtmAddressesRequest</p>
@@ -195,7 +196,14 @@ public class ListCloudGtmAddressesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>Return language value, options:</p>
+         * <ul>
+         * <li>zh-CN: Chinese.</li>
+         * <li>en-US: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -204,7 +212,10 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * Address.
+         * <p>IP address or domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223.5.XX.XX</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -213,7 +224,10 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * AddressId.
+         * <p>The address ID. This ID uniquely identifies the address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>addr-89518218114368**92</p>
          */
         public Builder addressId(String addressId) {
             this.putQueryParameter("AddressId", addressId);
@@ -222,7 +236,10 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -231,7 +248,14 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * EnableStatus.
+         * <p>Indicates the current availability of the address:</p>
+         * <ul>
+         * <li>enable: Enabled status</li>
+         * <li>disable: Disabled status</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder enableStatus(String enableStatus) {
             this.putQueryParameter("EnableStatus", enableStatus);
@@ -240,7 +264,16 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * HealthStatus.
+         * <p>The health check state of the address. Valid values:</p>
+         * <ul>
+         * <li>ok: The address passes all health checks of the referenced health check templates.</li>
+         * <li>ok_alert: The address fails some health checks of the referenced health check templates but the address is deemed normal.</li>
+         * <li>ok_no_monitor: The address does not reference a health check template.</li>
+         * <li>exceptional: The address fails some or all health checks of the referenced health check templates and the address is deemed abnormal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -249,7 +282,10 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * MonitorTemplateId.
+         * <p>The ID of the health check template. This ID uniquely identifies the health check template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mtp-89518052425100**80</p>
          */
         public Builder monitorTemplateId(String monitorTemplateId) {
             this.putQueryParameter("MonitorTemplateId", monitorTemplateId);
@@ -258,7 +294,10 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Address name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -267,7 +306,10 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from <strong>1</strong>, default is <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -276,7 +318,10 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -285,7 +330,15 @@ public class ListCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Address type:</p>
+         * <ul>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
+         * <li>domain</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

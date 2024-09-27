@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainInfoRequest</p>
@@ -82,7 +83,10 @@ public class DescribeDomainInfoRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -91,7 +95,10 @@ public class DescribeDomainInfoRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,10 +107,11 @@ public class DescribeDomainInfoRequest extends Request {
         }
 
         /**
-         * Specifies whether detailed attributes are required. The default value is **false**, which indicates that detailed attributes are not required.
-         * <p>
+         * <p>Specifies whether detailed attributes are required. The default value is <strong>false</strong>, which indicates that detailed attributes are not required.</p>
+         * <p>If you set this parameter to <strong>true</strong>, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.</p>
          * 
-         * If you set this parameter to **true**, the values of the following parameters are returned: LineType, MinTtl, RecordLineTreeJson, RecordLines, LineCode, LineDisplayName, LineName, RegionLines, and SlaveDns.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needDetailAttributes(Boolean needDetailAttributes) {
             this.putQueryParameter("NeedDetailAttributes", needDetailAttributes);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The domain names.
+         * <p>The domain names.</p>
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -93,7 +94,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68386699-8B9E-4D5B-BC4C-75A28F6C2A00</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of domain names.
+         * <p>The total number of domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class DnsServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsServer")
         private java.util.List < String > dnsServer;
@@ -171,6 +190,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -210,7 +235,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag added to the resource.
+             * <p>The key of tag N added to the resource.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -218,7 +243,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag added to the resource.
+             * <p>The value of tag N added to the resource.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -232,6 +257,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -273,6 +304,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Domain extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliDomain")
         private Boolean aliDomain;
@@ -540,7 +577,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * Indicates whether the domain name was registered in Alibaba Cloud.
+             * <p>Indicates whether the domain name was registered with Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder aliDomain(Boolean aliDomain) {
                 this.aliDomain = aliDomain;
@@ -548,7 +588,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was added.
+             * <p>The time when the domain name was added. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-30T05:25Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -556,7 +599,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the domain name was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1660546144000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -564,7 +610,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the DNS servers configured for the domain name.
+             * <p>The names of the DNS servers configured for the domain name assigned by Alibaba Cloud DNS.</p>
              */
             public Builder dnsServers(DnsServers dnsServers) {
                 this.dnsServers = dnsServers;
@@ -572,7 +618,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name.
+             * <p>The ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -580,7 +629,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainLoggingSwitchStatus.
+             * <p>Indicates whether the DNS traffic analysis feature is enabled for the domain name. Valid values:</p>
+             * <ul>
+             * <li>OPEN</li>
+             * <li>CLOSE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OPEN</p>
              */
             public Builder domainLoggingSwitchStatus(String domainLoggingSwitchStatus) {
                 this.domainLoggingSwitchStatus = domainLoggingSwitchStatus;
@@ -588,7 +644,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -596,7 +655,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name group.
+             * <p>The ID of the domain name group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2223</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -604,7 +666,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the domain name group.
+             * <p>The name of the domain name group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mygroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -612,7 +677,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Alibaba Cloud DNS instance expires.
+             * <p>The time when the Alibaba Cloud DNS instance expires. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-03-14T16:00Z</p>
              */
             public Builder instanceEndTime(String instanceEndTime) {
                 this.instanceEndTime = instanceEndTime;
@@ -620,7 +688,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Alibaba Cloud DNS instance expires.
+             * <p>Indicates whether the Alibaba Cloud DNS instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder instanceExpired(Boolean instanceExpired) {
                 this.instanceExpired = instanceExpired;
@@ -628,7 +699,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud DNS instance.
+             * <p>The ID of the Alibaba Cloud DNS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-7bg</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -636,7 +710,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The Punycode for the domain name. This parameter is returned only for Chinese domain names.
+             * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc.com</p>
              */
             public Builder punyCode(String punyCode) {
                 this.punyCode = punyCode;
@@ -644,7 +721,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Domain Name System (DNS) records added for the domain name.
+             * <p>The number of Domain Name System (DNS) records added for the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder recordCount(Long recordCount) {
                 this.recordCount = recordCount;
@@ -652,7 +732,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the registrant.
+             * <p>The email address of the registrant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.com">test@example.com</a></p>
              */
             public Builder registrantEmail(String registrantEmail) {
                 this.registrantEmail = registrantEmail;
@@ -660,7 +743,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the domain name.
+             * <p>The description of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -668,7 +754,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the domain name belongs.
+             * <p>The ID of the resource group to which the domain name belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acf</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -676,7 +765,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the domain name was added to favorites.
+             * <p>Indicates whether the domain name was added to favorites.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder starmark(Boolean starmark) {
                 this.starmark = starmark;
@@ -684,7 +776,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags added to the resource.
+             * <p>The tags added to the resource.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -692,7 +784,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The edition code of Alibaba Cloud DNS.
+             * <p>The edition code of Alibaba Cloud DNS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version_enterprise_basic</p>
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
@@ -700,7 +795,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Alibaba Cloud DNS.
+             * <p>The edition of Alibaba Cloud DNS.</p>
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -714,6 +809,12 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainsResponseBody</p>
+     */
     public static class Domains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private java.util.List < Domain> domain;

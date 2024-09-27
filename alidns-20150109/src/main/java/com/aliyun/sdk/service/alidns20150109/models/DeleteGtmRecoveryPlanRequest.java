@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGtmRecoveryPlanRequest} extends {@link RequestModel}
  *
  * <p>DeleteGtmRecoveryPlanRequest</p>
@@ -68,7 +69,10 @@ public class DeleteGtmRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,10 @@ public class DeleteGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The ID of the disaster recovery plan that you want to delete.
+         * <p>The ID of the disaster recovery plan that you want to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder recoveryPlanId(Long recoveryPlanId) {
             this.putQueryParameter("RecoveryPlanId", recoveryPlanId);

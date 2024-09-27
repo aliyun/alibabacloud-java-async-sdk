@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyGtmConfigResponseBody} extends {@link TeaModel}
  *
  * <p>CopyGtmConfigResponseBody</p>
@@ -37,7 +38,10 @@ public class CopyGtmConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

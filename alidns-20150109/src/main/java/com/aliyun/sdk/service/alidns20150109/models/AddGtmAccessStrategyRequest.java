@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmAccessStrategyRequest} extends {@link RequestModel}
  *
  * <p>AddGtmAccessStrategyRequest</p>
@@ -128,7 +129,10 @@ public class AddGtmAccessStrategyRequest extends Request {
         } 
 
         /**
-         * The line codes of access regions.
+         * <p>The line codes of access regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;default&quot;, &quot;drpeng&quot;]</p>
          */
         public Builder accessLines(String accessLines) {
             this.putQueryParameter("AccessLines", accessLines);
@@ -137,7 +141,10 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the default address pool.
+         * <p>The ID of the default address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hrsix</p>
          */
         public Builder defaultAddrPoolId(String defaultAddrPoolId) {
             this.putQueryParameter("DefaultAddrPoolId", defaultAddrPoolId);
@@ -146,10 +153,11 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the failover address pool.
-         * <p>
+         * <p>The ID of the failover address pool.</p>
+         * <p>If the failover address pool is not set, pass the <strong>Empty</strong> value.</p>
          * 
-         * If the failover address pool is not set, pass the **Empty** value.
+         * <strong>example:</strong>
+         * <p>hrsyw</p>
          */
         public Builder failoverAddrPoolId(String failoverAddrPoolId) {
             this.putQueryParameter("FailoverAddrPoolId", failoverAddrPoolId);
@@ -158,7 +166,10 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the GTM instance for which you want to create an access policy.
+         * <p>The ID of the GTM instance for which you want to create an access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -167,7 +178,10 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -176,7 +190,7 @@ public class AddGtmAccessStrategyRequest extends Request {
         }
 
         /**
-         * The name of the access policy.
+         * <p>The name of the access policy.</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

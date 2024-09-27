@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsRequestStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsRequestStatisticsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsRequestStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsRequestStatisticsResponseBody</p>
+     */
     public static class ThreatInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
@@ -191,6 +198,12 @@ public class DescribePdnsRequestStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePdnsRequestStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsRequestStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DohTotalCount")
         private Long dohTotalCount;

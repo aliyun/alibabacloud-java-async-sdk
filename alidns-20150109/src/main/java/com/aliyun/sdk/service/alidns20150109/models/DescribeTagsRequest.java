@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTagsRequest</p>
@@ -96,7 +97,10 @@ public class DescribeTagsRequest extends Request {
         } 
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +109,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +121,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Default value: 200.
+         * <p>The number of entries to return per page. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +133,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The type of the resources from which you want to query tags. Set the value to DOMAIN.
+         * <p>The type of the resources from which you want to query tags. Set the value to DOMAIN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

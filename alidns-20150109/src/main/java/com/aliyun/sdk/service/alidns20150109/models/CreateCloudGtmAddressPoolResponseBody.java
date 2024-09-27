@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudGtmAddressPoolResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCloudGtmAddressPoolResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateCloudGtmAddressPoolResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AddressPoolId.
+         * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool-89528023225442**16</p>
          */
         public Builder addressPoolId(String addressPoolId) {
             this.addressPoolId = addressPoolId;
@@ -69,7 +73,10 @@ public class CreateCloudGtmAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,14 @@ public class CreateCloudGtmAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the address pool creation operation was successful:</p>
+         * <ul>
+         * <li>true: Operation was successful</li>
+         * <li>false: Operation was failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

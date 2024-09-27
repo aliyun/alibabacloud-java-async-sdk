@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmAddrAttributeInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeDnsGtmAddrAttributeInfoRequest</p>
@@ -83,7 +84,10 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends Request {
         } 
 
         /**
-         * The addresses whose source regions you want to query.
+         * <p>The addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;1.1.1.1&quot;]</p>
          */
         public Builder addrs(String addrs) {
             this.putQueryParameter("Addrs", addrs);
@@ -92,7 +96,10 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends Request {
         }
 
         /**
-         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,12 +108,15 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends Request {
         }
 
         /**
-         * The type of the addresses. Valid values:
-         * <p>
+         * <p>The type of addresses. Valid values:</p>
+         * <ul>
+         * <li>IPV4: IPv4 address</li>
+         * <li>IPv6: IPv6 address</li>
+         * <li>DOMAIN: domain name</li>
+         * </ul>
          * 
-         * *   IPV4: IPv4 address
-         * *   IPV6: IPv6 address
-         * *   DOMAIN: domain name
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

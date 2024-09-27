@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudGtmMonitorTemplateRequest} extends {@link RequestModel}
  *
  * <p>DeleteCloudGtmMonitorTemplateRequest</p>
@@ -82,7 +83,14 @@ public class DeleteCloudGtmMonitorTemplateRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language in which the returned results are displayed. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +99,10 @@ public class DeleteCloudGtmMonitorTemplateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -100,7 +111,10 @@ public class DeleteCloudGtmMonitorTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the health check template. This ID uniquely identifies a health check template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mtp-89518052425100**80</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

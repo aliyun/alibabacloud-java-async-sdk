@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitored nodes that can be used to perform health checks on address pools that contain public domain names that are resolved to IPv4 addresses.
+         * <p>The nodes that perform health checks on domain names that use public IPv4 addresses.</p>
          */
         public Builder domainIpv4IspCityNodes(DomainIpv4IspCityNodes domainIpv4IspCityNodes) {
             this.domainIpv4IspCityNodes = domainIpv4IspCityNodes;
@@ -93,7 +94,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The monitored nodes that can be used to perform health checks on address pools that contain public domain names that are resolved to IPv6 addresses.
+         * <p>The nodes that perform health checks on domain names that use public IPv6 addresses.</p>
          */
         public Builder domainIpv6IspCityNodes(DomainIpv6IspCityNodes domainIpv6IspCityNodes) {
             this.domainIpv6IspCityNodes = domainIpv6IspCityNodes;
@@ -101,7 +102,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The monitored nodes that can be used to perform health checks on address pools that contain public IPv4 addresses.
+         * <p>The nodes that perform health checks on public IPv4 addresses.</p>
          */
         public Builder ipv4IspCityNodes(Ipv4IspCityNodes ipv4IspCityNodes) {
             this.ipv4IspCityNodes = ipv4IspCityNodes;
@@ -109,7 +110,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The monitored nodes that can be used to perform health checks on address pools that contain public IPv6 addresses.
+         * <p>The nodes that perform health checks on public IPv6 addresses.</p>
          */
         public Builder ipv6IspCityNodes(Ipv6IspCityNodes ipv6IspCityNodes) {
             this.ipv6IspCityNodes = ipv6IspCityNodes;
@@ -117,7 +118,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class Ips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
@@ -171,6 +181,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class DomainIpv4IspCityNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -282,7 +298,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * The code of the city where the monitored node is deployed.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>503</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -290,7 +309,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the city where the monitored node is deployed.
+             * <p>The display name of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhangjiakou</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -298,7 +320,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the monitored node is selected for the health check by default.
+             * <p>Indicates whether the health check node is selected by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -306,7 +331,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the monitored node belongs.
+             * <p>The name of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP Nodes</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -314,12 +342,15 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the group to which the monitored node belongs. Valid values:
-             * <p>
+             * <p>The type of the node group. Valid values:</p>
+             * <ul>
+             * <li>BGP: BGP node</li>
+             * <li>OVERSEAS: node outside the Chinese mainland</li>
+             * <li>ISP: ISP node</li>
+             * </ul>
              * 
-             * *   BGP: BGP nodes
-             * *   OVERSEAS: nodes outside the Chinese mainland
-             * *   ISP: ISP nodes
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -327,7 +358,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * <p>The IP addresses of the health check nodes.</p>
              */
             public Builder ips(Ips ips) {
                 this.ips = ips;
@@ -335,7 +366,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the ISP to which the monitored node belongs.
+             * <p>The ISP code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -343,7 +377,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the ISP to which the monitored node belongs.
+             * <p>The display name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -357,6 +394,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class DomainIpv4IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainIpv4IspCityNode")
         private java.util.List < DomainIpv4IspCityNode> domainIpv4IspCityNode;
@@ -398,6 +441,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class DomainIpv6IspCityNodeIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ip")
         private java.util.List < String > ip;
@@ -439,6 +488,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class DomainIpv6IspCityNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -550,7 +605,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * The code of the city where the monitored node is deployed.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>503</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -558,7 +616,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the city where the monitored node is deployed.
+             * <p>The display name of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhangjiakou</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -566,7 +627,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the monitored node is selected for the health check by default.
+             * <p>Indicates whether the health check node is selected by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -574,7 +638,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the monitored node belongs.
+             * <p>The name of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP Nodes</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -582,12 +649,15 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the group to which the monitored node belongs. Valid values:
-             * <p>
+             * <p>The type of the node group. Valid values:</p>
+             * <ul>
+             * <li>BGP: BGP node</li>
+             * <li>OVERSEAS: node outside the Chinese mainland</li>
+             * <li>ISP: ISP node</li>
+             * </ul>
              * 
-             * *   BGP: BGP nodes
-             * *   OVERSEAS: nodes outside the Chinese mainland
-             * *   ISP: ISP nodes
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -595,7 +665,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * <p>This parameter is not returned.</p>
              */
             public Builder ips(DomainIpv6IspCityNodeIps ips) {
                 this.ips = ips;
@@ -603,7 +673,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the ISP to which the monitored node belongs.
+             * <p>The ISP code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -611,7 +684,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the ISP to which the monitored node belongs.
+             * <p>The display name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -625,6 +701,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class DomainIpv6IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainIpv6IspCityNode")
         private java.util.List < DomainIpv6IspCityNode> domainIpv6IspCityNode;
@@ -666,6 +748,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class Ipv4IspCityNodeIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
@@ -707,6 +795,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class Ipv4IspCityNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -818,7 +912,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * The code of the city where the monitored node is deployed.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>503</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -826,7 +923,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the city where the monitored node is deployed.
+             * <p>The display name of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhangjiakou</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -834,7 +934,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the monitored node is selected for the health check by default.
+             * <p>Indicates whether the health check node is selected by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -842,7 +945,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the monitored node belongs.
+             * <p>The name of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP Nodes</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -850,12 +956,15 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the group to which the monitored node belongs. Valid values:
-             * <p>
+             * <p>The type of the node group. Valid values:</p>
+             * <ul>
+             * <li>BGP: Border Gateway Protocol (BGP) node</li>
+             * <li>OVERSEAS: node outside the Chinese mainland</li>
+             * <li>ISP: ISP node</li>
+             * </ul>
              * 
-             * *   BGP: Border Gateway Protocol (BGP) nodes
-             * *   OVERSEAS: nodes outside the Chinese mainland
-             * *   ISP: ISP nodes
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -863,7 +972,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * <p>The IP addresses of the health check nodes.</p>
              */
             public Builder ips(Ipv4IspCityNodeIps ips) {
                 this.ips = ips;
@@ -871,7 +980,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the Internet service provider (ISP) to which the monitored node belongs.
+             * <p>The Internet service provider (ISP) code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -879,7 +991,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the ISP to which the monitored node belongs.
+             * <p>The display name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -893,6 +1008,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class Ipv4IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4IspCityNode")
         private java.util.List < Ipv4IspCityNode> ipv4IspCityNode;
@@ -934,6 +1055,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class Ipv6IspCityNodeIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
@@ -975,6 +1102,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class Ipv6IspCityNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -1086,7 +1219,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             private String ispName; 
 
             /**
-             * The code of the city where the monitored node is deployed.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>503</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -1094,7 +1230,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the city where the monitored node is deployed.
+             * <p>The display name of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhangjiakou</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -1102,7 +1241,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the monitored node is selected for the health check by default.
+             * <p>Indicates whether the health check node is selected by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -1110,7 +1252,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group to which the monitored node belongs.
+             * <p>The name of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP Nodes</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1118,12 +1263,15 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the group to which the monitored node belongs. Valid values:
-             * <p>
+             * <p>The type of the node group. Valid values:</p>
+             * <ul>
+             * <li>BGP: BGP node</li>
+             * <li>OVERSEAS: node outside the Chinese mainland</li>
+             * <li>ISP: ISP node</li>
+             * </ul>
              * 
-             * *   BGP: BGP nodes
-             * *   OVERSEAS: nodes outside the Chinese mainland
-             * *   ISP: ISP nodes
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -1131,7 +1279,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * <p>This parameter is not returned.</p>
              */
             public Builder ips(Ipv6IspCityNodeIps ips) {
                 this.ips = ips;
@@ -1139,7 +1287,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the ISP to which the monitored node belongs.
+             * <p>The ISP code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -1147,7 +1298,10 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the ISP to which the monitored node belongs.
+             * <p>The display name of the ISP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -1161,6 +1315,12 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmMonitorAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
+     */
     public static class Ipv6IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6IspCityNode")
         private java.util.List < Ipv6IspCityNode> ipv6IspCityNode;

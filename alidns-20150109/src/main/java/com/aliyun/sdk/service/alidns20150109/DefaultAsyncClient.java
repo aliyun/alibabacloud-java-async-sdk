@@ -40,9 +40,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
-      * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
-      *
+     * <b>description</b> :
+     * <p>In each CIDR block, the end IP address must be greater than or equal to the start IP address.\
+     * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.</p>
      */
     @Override
     public CompletableFuture<AddCustomLineResponse> addCustomLine(AddCustomLineRequest request) {
@@ -101,8 +101,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ***
-      *
+     * <b>description</b> :
+     * <hr>
      */
     @Override
     public CompletableFuture<AddDnsGtmMonitorResponse> addDnsGtmMonitor(AddDnsGtmMonitorRequest request) {
@@ -119,9 +119,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about how to check whether a domain name is valid, see
-      * [Domain name validity](https://www.alibabacloud.com/help/zh/doc-detail/67788.htm).
-      *
+     * <b>description</b> :
+     * <p>For more information about how to check whether a domain name is valid, see
+     * <a href="https://www.alibabacloud.com/help/zh/doc-detail/67788.htm">Domain name validity</a>.</p>
      */
     @Override
     public CompletableFuture<AddDomainResponse> addDomain(AddDomainRequest request) {
@@ -236,9 +236,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
-      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.
-      *
+     * <b>description</b> :
+     * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call this API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
+     * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call this API operation to bind only one domain name to the instance. However, if the instance is already bound to a domain name, you must unbind the original domain name from the instance and bind the desired domain name to the instance.</p>
      */
     @Override
     public CompletableFuture<BindInstanceDomainsResponse> bindInstanceDomains(BindInstanceDomainsRequest request) {
@@ -255,8 +255,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.
-      *
+     * <b>description</b> :
+     * <p>You can specify GroupId to move a domain name to a specific domain name group. You can move the domain name to the group that contains all domain names or the default group.</p>
      */
     @Override
     public CompletableFuture<ChangeDomainGroupResponse> changeDomainGroup(ChangeDomainGroupRequest request) {
@@ -273,8 +273,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation to change the domain name for an Alibaba Cloud DNS instance to which a domain name is bound. You can also call this operation to bind a domain name to an Alibaba Cloud DNS instance to which no domain name is bound. If you need to unbind a domain name from an Alibaba Cloud DNS instance, you can call this operation. In this case, the NewDomain parameter must not be specified.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>You can call this operation regardless of whether the Alibaba Cloud DNS instance is bound to a domain name. You can also call this operation to unbind the domain name from the Alibaba Cloud DNS instance by leaving the NewDomain parameter empty.</strong></li>
+     * <li>**This operation applies to instances of the custom edition. To change the domain name that is bound to an Alibaba Cloud DNS instance of Personal Edition, Enterprise Standard Edition, or Enterprise Ultimate Edition, call the BindInstanceDomains operation.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<ChangeDomainOfDnsProductResponse> changeDomainOfDnsProduct(ChangeDomainOfDnsProductRequest request) {
@@ -515,8 +518,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  The default group cannot be deleted.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The default group cannot be deleted.</p>
+     * </blockquote>
      */
     @Override
     public CompletableFuture<DeleteDomainGroupResponse> deleteDomainGroup(DeleteDomainGroupRequest request) {
@@ -589,8 +594,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.
-      *
+     * <b>description</b> :
+     * <p>If the DNS records to be deleted contain locked DNS records, locked DNS records will not be deleted.</p>
      */
     @Override
     public CompletableFuture<DeleteSubDomainRecordsResponse> deleteSubDomainRecords(DeleteSubDomainRecordsRequest request) {
@@ -621,8 +626,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that the batch operation task is complete.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the batch operation task is complete.</p>
      */
     @Override
     public CompletableFuture<DescribeBatchResultDetailResponse> describeBatchResultDetail(DescribeBatchResultDetailRequest request) {
@@ -1059,8 +1064,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> If the response parameters of an Alibaba Cloud DNS instance do not contain domain names, no domain names are bound to the instance.</p>
+     * </blockquote>
      */
     @Override
     public CompletableFuture<DescribeDnsProductInstancesResponse> describeDnsProductInstances(DescribeDnsProductInstancesRequest request) {
@@ -1189,8 +1196,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * In this example, the domain name is bound to an instance of Alibaba Cloud DNS Enterprise Ultimate Edition. For more information about valid Domain Name System (DNS) request lines, see the return values of the RecordLines parameter.
-      *
+     * <b>description</b> :
+     * <p>In this example, the domain name is bound to an instance of Alibaba Cloud DNS Enterprise Ultimate Edition. For more information about valid Domain Name System (DNS) request lines, see the return values of the RecordLines parameter.</p>
      */
     @Override
     public CompletableFuture<DescribeDomainInfoResponse> describeDomainInfo(DescribeDomainInfoRequest request) {
@@ -1221,8 +1228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call this operation to query the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation to query the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.</p>
+     * </blockquote>
      */
     @Override
     public CompletableFuture<DescribeDomainNsResponse> describeDomainNs(DescribeDomainNsRequest request) {
@@ -1239,9 +1248,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Alidns\\&api=DescribeDomainRecordInfo\\&type=RPC\\&version=2015-01-09)
-      *
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=Alidns%5C&api=DescribeDomainRecordInfo%5C&type=RPC%5C&version=2015-01-09">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
      */
     @Override
     public CompletableFuture<DescribeDomainRecordInfoResponse> describeDomainRecordInfo(DescribeDomainRecordInfoRequest request) {
@@ -1258,11 +1267,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can specify DomainName, PageNumber, and PageSize to query the DNS records of the specified domain names.
-      * *   You can also specify RRKeyWord, TypeKeyWord, or ValueKeyWord to query the DNS records that contain the specified keyword.
-      * *   By default, the DNS records are sorted in reverse chronological order based on the time when they were added.
-      * *   You can specify GroupId to query the DNS records of the specified domain names based on the group ID. You can query the DNS records of all domain names and the domain names in the default group.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>You can specify DomainName, PageNumber, and PageSize to query the DNS records of the specified domain names.</li>
+     * <li>You can also specify RRKeyWord, TypeKeyWord, or ValueKeyWord to query the DNS records that contain the specified keyword.</li>
+     * <li>By default, the DNS records are sorted in reverse chronological order based on the time when they were added.</li>
+     * <li>You can specify GroupId to query the DNS records of the specified domain names based on the group ID. You can query the DNS records of all domain names and the domain names in the default group.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<DescribeDomainRecordsResponse> describeDomainRecords(DescribeDomainRecordsRequest request) {
@@ -1293,8 +1304,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real-time data is collected per hour.
-      *
+     * <b>description</b> :
+     * <p>Real-time data is collected per hour.</p>
      */
     @Override
     public CompletableFuture<DescribeDomainStatisticsResponse> describeDomainStatistics(DescribeDomainStatisticsRequest request) {
@@ -1325,11 +1336,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can specify the PageNumber and PageSize parameters to query domain names.
-      * *   You can specify the KeyWord parameter to query domain names that contain the specified keyword.
-      * *   By default, the domain names in a list are sorted in descending order of the time they were added.
-      * *   You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>You can specify the PageNumber and PageSize parameters to query domain names.</li>
+     * <li>You can specify the KeyWord parameter to query domain names that contain the specified keyword.</li>
+     * <li>By default, the domain names in a list are sorted in descending order of the time they were added.</li>
+     * <li>You can specify the GroupId parameter. If you do not specify this parameter, all domain names are queried by default.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<DescribeDomainsResponse> describeDomains(DescribeDomainsRequest request) {
@@ -1836,8 +1849,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Real-time data is collected per hour.
-      *
+     * <b>description</b> :
+     * <p>Real-time data is collected per hour.</p>
      */
     @Override
     public CompletableFuture<DescribeRecordStatisticsResponse> describeRecordStatistics(DescribeRecordStatisticsRequest request) {
@@ -1938,9 +1951,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the difference between primary domain names and subdomain names, see
-      * [Subdomain levels](https://www.alibabacloud.com/help/zh/faq-detail/39803.htm). For example, if you enter `www.abc.com`, abc.com is obtained.
-      *
+     * <b>description</b> :
+     * <p>For more information about the difference between primary domain names and subdomain names, see
+     * <a href="https://www.alibabacloud.com/help/zh/faq-detail/39803.htm">Subdomain levels</a>. For example, if you enter <code>www.abc.com</code>, abc.com is obtained.</p>
      */
     @Override
     public CompletableFuture<GetMainDomainNameResponse> getMainDomainName(GetMainDomainNameRequest request) {
@@ -2083,11 +2096,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Set ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.
-      * *   Tag.N is a resource tag that consists of a key-value pair. If you set only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you set only Tag.N.Value, an error message is returned.
-      * *   If you set both Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.
-      * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>Set ResourceId.N or Tag.N that consists of Tag.N.Key and Tag.N.Value in the request to specify the object to be queried.</li>
+     * <li>Tag.N is a resource tag that consists of a key-value pair. If you set only Tag.N.Key, all tag values that are assigned to the specified key are returned. If you set only Tag.N.Value, an error message is returned.</li>
+     * <li>If you set both Tag.N and ResourceId.N to filter tags, ResourceId.N must match all specified key-value pairs.</li>
+     * <li>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
@@ -2104,9 +2119,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the operation succeeds, the name of the DNS server changes to that of an Alibaba Cloud DNS server (ending with hichina.com).
-      * >  Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS server in use is not an Alibaba Cloud DNS server.
-      *
+     * <b>description</b> :
+     * <p>If the operation succeeds, the names of DNS servers change to those of Alibaba Cloud DNS servers (ending with hichina.com).</p>
+     * <blockquote>
+     * <p> **Before you call this operation, make sure that your domain name has been registered with Alibaba Cloud and the DNS servers in use are not Alibaba Cloud DNS servers.</p>
+     * </blockquote>
      */
     @Override
     public CompletableFuture<ModifyHichinaDomainDNSResponse> modifyHichinaDomainDNS(ModifyHichinaDomainDNSRequest request) {
@@ -2151,8 +2168,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.
-      *
+     * <b>description</b> :
+     * <p>Scenario: You need to execute a large number of tasks related to DNS resolution and you do not have high requirements for efficiency.</p>
      */
     @Override
     public CompletableFuture<OperateBatchDomainResponse> operateBatchDomain(OperateBatchDomainRequest request) {
@@ -2267,8 +2284,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the [GetTxtRecordForVerify](https://www.alibabacloud.com/help/zh/alibaba-cloud-dns/latest/generating-a-txt-record) operation to generate a TXT record.
-      *
+     * <b>description</b> :
+     * <p>To retrieve a domain name, you must verify a text (TXT) record. Therefore, before you call this API operation to retrieve a domain name, call the <a href="https://www.alibabacloud.com/help/en/alibaba-cloud-dns/latest/generating-a-txt-record">GetTxtRecordForVerify</a> operation to generate a TXT record.</p>
      */
     @Override
     public CompletableFuture<RetrieveDomainResponse> retrieveDomain(RetrieveDomainRequest request) {
@@ -2383,8 +2400,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ****
-      *
+     * <b>description</b> :
+     * <hr>
      */
     @Override
     public CompletableFuture<SetDnsGtmAccessModeResponse> setDnsGtmAccessMode(SetDnsGtmAccessModeRequest request) {
@@ -2527,9 +2544,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\\
-      * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.
-      *
+     * <b>description</b> :
+     * <p>A paid Alibaba Cloud DNS instance whose ID starts with dns is an instance of the new version. You can call an API operation to bind multiple domain names to the instance. If the upper limit is exceeded, an error message is returned.\
+     * A paid Alibaba Cloud DNS instance whose ID does not start with dns is an instance of the old version. You can call an API operation to bind only one domain name to the instance. However, if the instance that you want to bind to the desired domain name is already bound to a domain name, you can call this operation to unbind the original domain name from the instance and then bind the desired domain name to the instance.</p>
      */
     @Override
     public CompletableFuture<UnbindInstanceDomainsResponse> unbindInstanceDomains(UnbindInstanceDomainsRequest request) {
@@ -2587,6 +2604,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If an address is <strong>enabled</strong> and the health status of the address is <strong>Normal</strong>, the availability status of the address is <strong>Available</strong>.</li>
+     * <li>If an address is <strong>disabled</strong> or the health status of the address is <strong>Abnormal</strong>, the availability status of the address is <strong>Unavailable</strong>.</li>
+     * </ul>
+     */
     @Override
     public CompletableFuture<UpdateCloudGtmAddressEnableStatusResponse> updateCloudGtmAddressEnableStatus(UpdateCloudGtmAddressEnableStatusRequest request) {
         try {
@@ -2629,6 +2653,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If an address pool is <strong>enabled</strong> and the health status of the address pool is <strong>Normal</strong>, the availability status of the address pool is <strong>Available</strong>.</li>
+     * <li>If an address pool is <strong>disabled</strong> or the health status of the address pool is <strong>Abnormal</strong>, the availability status of the address pool is <strong>unavailable</strong>.</li>
+     * </ul>
+     */
     @Override
     public CompletableFuture<UpdateCloudGtmAddressPoolEnableStatusResponse> updateCloudGtmAddressPoolEnableStatus(UpdateCloudGtmAddressPoolEnableStatusRequest request) {
         try {
@@ -2727,6 +2758,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If an access domain name is <strong>enabled</strong> and the health state is <strong>normal</strong>, the access domain name is deemed <strong>available</strong>.</li>
+     * <li>If an access domain name is <strong>disabled</strong> or the health state is <strong>abnormal</strong>, the access domain name is deemed <strong>unavailable</strong>.</li>
+     * </ul>
+     */
     @Override
     public CompletableFuture<UpdateCloudGtmInstanceConfigEnableStatusResponse> updateCloudGtmInstanceConfigEnableStatus(UpdateCloudGtmInstanceConfigEnableStatusRequest request) {
         try {
@@ -2812,9 +2850,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * In each CIDR block, the end IP address must be greater than or equal to the start IP address.\\
-      * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.
-      *
+     * <b>description</b> :
+     * <p>In each CIDR block, the end IP address must be greater than or equal to the start IP address.\
+     * The CIDR blocks that are specified for all custom lines of a domain name cannot be overlapped.</p>
      */
     @Override
     public CompletableFuture<UpdateCustomLineResponse> updateCustomLine(UpdateCustomLineRequest request) {
@@ -2928,6 +2966,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Modifies the name of an existing domain name group.</p>
+     */
     @Override
     public CompletableFuture<UpdateDomainGroupResponse> updateDomainGroup(UpdateDomainGroupRequest request) {
         try {

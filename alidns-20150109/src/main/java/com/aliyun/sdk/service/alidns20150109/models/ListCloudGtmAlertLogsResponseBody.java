@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmAlertLogsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudGtmAlertLogsResponseBody</p>
@@ -97,7 +98,7 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * Logs.
+         * <p>The alert logs.</p>
          */
         public Builder logs(Logs logs) {
             this.logs = logs;
@@ -105,7 +106,10 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from 1, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>Total number of alarm log entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudGtmAlertLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmAlertLogsResponseBody</p>
+     */
     public static class Log extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
@@ -213,7 +235,14 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * ActionType.
+             * <p>Alert type:</p>
+             * <ul>
+             * <li>ALERT</li>
+             * <li>RESUME</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALERT</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -221,7 +250,10 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The alert content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The alert content.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -229,7 +261,16 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>Alarm object types:</p>
+             * <ul>
+             * <li>GTM_ADDRESS: Address</li>
+             * <li>GTM_ADDRESS_POOL: Address Pool</li>
+             * <li>GTM_INSTANCE: Instance</li>
+             * <li>GTM_MONITOR_TEMPLATE: Health Check Template</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GTM_ADDRESS</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -237,7 +278,10 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>Alert log time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1711328826977</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -251,6 +295,12 @@ public class ListCloudGtmAlertLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmAlertLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmAlertLogsResponseBody</p>
+     */
     public static class Logs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Log")
         private java.util.List < Log> log;

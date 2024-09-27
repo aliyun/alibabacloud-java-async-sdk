@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDomainRecordRequest} extends {@link RequestModel}
  *
  * <p>AddDomainRecordRequest</p>
@@ -26,7 +27,7 @@ public class AddDomainRecordRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Priority")
-    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 65535)
     private Long priority;
 
     @com.aliyun.core.annotation.Query
@@ -171,7 +172,10 @@ public class AddDomainRecordRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -180,7 +184,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -189,10 +196,11 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The DNS resolution line. Default value: **default**. For more information, see
-         * <p>
+         * <p>The resolution line. Default value: <strong>default</strong>. For more information, see</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29807.htm">DNS resolution lines</a>.</p>
          * 
-         * [DNS lines](https://www.alibabacloud.com/help/zh/doc-detail/29807.htm).
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -201,10 +209,11 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The priority of the mail exchanger (MX) record. Valid values: `1 to 50`.
-         * <p>
+         * <p>The priority of the mail exchanger (MX) record. Valid values: <code>1 to 50</code>.</p>
+         * <p>This parameter is required if the type of the DNS record is MX. A smaller value indicates a higher priority.</p>
          * 
-         * This parameter must be specified if the type of the DNS record is MX. A smaller value indicates a higher priority.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(Long priority) {
             this.putQueryParameter("Priority", priority);
@@ -213,10 +222,11 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The hostname.
-         * <p>
+         * <p>The hostname.</p>
+         * <p>For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.</p>
          * 
-         * For example, if you want to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it empty.
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         public Builder rr(String rr) {
             this.putQueryParameter("RR", rr);
@@ -225,10 +235,11 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The time-to-live (TTL) of the DNS record. Default value: 600. Unit: seconds. For more information, see
-         * <p>
+         * <p>The time to live (TTL) period of the Domain Name System (DNS) record. Default value: 600. Unit: seconds. For more information, see</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29806.htm">TTL definition</a>.</p>
          * 
-         * [TTL definition](https://www.alibabacloud.com/help/zh/doc-detail/29806.htm).
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder TTL(Long TTL) {
             this.putQueryParameter("TTL", TTL);
@@ -237,10 +248,11 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The type of the DNS record. For more information, see
-         * <p>
+         * <p>The type of the DNS record. For more information, see</p>
+         * <p><a href="https://www.alibabacloud.com/help/zh/doc-detail/29805.htm">DNS record types</a>.</p>
          * 
-         * [DNS record types](https://www.alibabacloud.com/help/zh/doc-detail/29805.htm).
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -249,7 +261,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -258,7 +273,10 @@ public class AddDomainRecordRequest extends Request {
         }
 
         /**
-         * The record value.
+         * <p>The record value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.254</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

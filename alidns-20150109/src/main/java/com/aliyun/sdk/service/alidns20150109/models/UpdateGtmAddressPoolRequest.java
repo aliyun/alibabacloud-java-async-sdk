@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGtmAddressPoolRequest} extends {@link RequestModel}
  *
  * <p>UpdateGtmAddressPoolRequest</p>
@@ -135,7 +136,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The ID of the address pool that you want to modify.
+         * <p>The ID of the address pool that you want to modify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234abc</p>
          */
         public Builder addrPoolId(String addrPoolId) {
             this.putQueryParameter("AddrPoolId", addrPoolId);
@@ -144,7 +148,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -153,7 +160,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The minimum number of available addresses in the address pool.
+         * <p>The minimum number of available addresses in the address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minAvailableAddrNum(Integer minAvailableAddrNum) {
             this.putQueryParameter("MinAvailableAddrNum", minAvailableAddrNum);
@@ -162,7 +172,7 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The name of the address pool that you want to modify.
+         * <p>The name of the address pool that you want to modify.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -171,7 +181,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
         }
 
         /**
-         * The type of the address pool that you want to modify.
+         * <p>The type of the address pool that you want to modify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -186,6 +199,12 @@ public class UpdateGtmAddressPoolRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGtmAddressPoolRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGtmAddressPoolRequest</p>
+     */
     public static class Addr extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
@@ -237,7 +256,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
             private String value; 
 
             /**
-             * The weight of the address pool that you want to modify.
+             * <p>The weight of the address pool that you want to modify.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -245,12 +267,15 @@ public class UpdateGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The mode of the address pool that you want to modify.
-             * <p>
+             * <p>The mode of the address pool that you want to modify.</p>
+             * <ul>
+             * <li><strong>SMART</strong>: Intelligent return</li>
+             * <li><strong>ONLINE</strong>: Always online</li>
+             * <li><strong>OFFLINE</strong>: Always offline</li>
+             * </ul>
              * 
-             * *   **SMART**: Intelligent return
-             * *   **ONLINE**: Always online
-             * *   **OFFLINE**: Always offline
+             * <strong>example:</strong>
+             * <p>SMART</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -258,7 +283,10 @@ public class UpdateGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The addresses in the address pool.
+             * <p>The addresses in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainGroupsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The domain name groups.
+         * <p>The domain name groups.</p>
          */
         public Builder domainGroups(DomainGroups domainGroups) {
             this.domainGroups = domainGroups;
@@ -93,7 +94,10 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainGroupsResponseBody</p>
+     */
     public static class DomainGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainCount")
         private Long domainCount;
@@ -181,7 +200,10 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The number of domain name groups.
+             * <p>The number of domain name groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder domainCount(Long domainCount) {
                 this.domainCount = domainCount;
@@ -189,11 +211,14 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name group. Valid values:
-             * <p>
+             * <p>The ID of the domain name group. Valid values:</p>
+             * <ul>
+             * <li>defaultGroup: the default group</li>
+             * <li>If an empty string is returned, it indicates the group that contains all domain names.</li>
+             * </ul>
              * 
-             * *   defaultGroup: the default group
-             * *   If an empty string is returned, it indicates the group that contains all domain names.
+             * <strong>example:</strong>
+             * <p>2223</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -201,7 +226,10 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the domain name group.
+             * <p>The name of the domain name group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -215,6 +243,12 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainGroupsResponseBody</p>
+     */
     public static class DomainGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainGroup")
         private java.util.List < DomainGroup> domainGroup;

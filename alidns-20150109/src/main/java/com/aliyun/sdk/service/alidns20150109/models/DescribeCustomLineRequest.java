@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomLineRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomLineRequest</p>
@@ -67,7 +68,10 @@ public class DescribeCustomLineRequest extends Request {
         } 
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -76,7 +80,10 @@ public class DescribeCustomLineRequest extends Request {
         }
 
         /**
-         * The unique ID of the custom line.
+         * <p>The unique ID of the custom line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>597</p>
          */
         public Builder lineId(Long lineId) {
             this.putQueryParameter("LineId", lineId);

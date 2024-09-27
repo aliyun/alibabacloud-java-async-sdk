@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDomainGroupResponseBody} extends {@link TeaModel}
  *
  * <p>AddDomainGroupResponseBody</p>
@@ -61,7 +62,10 @@ public class AddDomainGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the domain name group.
+         * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -69,7 +73,10 @@ public class AddDomainGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the domain name group.
+         * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewName</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -77,7 +84,10 @@ public class AddDomainGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

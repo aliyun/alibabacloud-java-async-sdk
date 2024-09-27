@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudGtmMonitorTemplateRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudGtmMonitorTemplateRequest</p>
@@ -68,7 +69,14 @@ public class DescribeCloudGtmMonitorTemplateRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese</li>
+         * <li><strong>en-US</strong> (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -77,7 +85,10 @@ public class DescribeCloudGtmMonitorTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the health check template that you want to query. This ID uniquely identifies the health check template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mtp-89518052425100**80</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

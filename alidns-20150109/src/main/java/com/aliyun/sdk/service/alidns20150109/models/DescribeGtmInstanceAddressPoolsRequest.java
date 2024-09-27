@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmInstanceAddressPoolsRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmInstanceAddressPoolsRequest</p>
@@ -97,7 +98,10 @@ public class DescribeGtmInstanceAddressPoolsRequest extends Request {
         } 
 
         /**
-         * The ID of the GTM instance that you want to query.
+         * <p>The ID of the GTM instance that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtmtest</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -106,7 +110,10 @@ public class DescribeGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -115,7 +122,10 @@ public class DescribeGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -124,7 +134,10 @@ public class DescribeGtmInstanceAddressPoolsRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Maximum value: **100**. Default value: **20**.
+         * <p>The number of entries to return per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

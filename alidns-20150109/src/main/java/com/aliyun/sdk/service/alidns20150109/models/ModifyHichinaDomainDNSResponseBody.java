@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHichinaDomainDNSResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyHichinaDomainDNSResponseBody</p>
@@ -61,7 +62,7 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of DNS servers after the domain name is changed.
+         * <p>The DNS server names after modification.</p>
          */
         public Builder newDnsServers(NewDnsServers newDnsServers) {
             this.newDnsServers = newDnsServers;
@@ -69,7 +70,7 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         }
 
         /**
-         * The list of DNS servers before the domain name is changed.
+         * <p>The DNS server names before modification.</p>
          */
         public Builder originalDnsServers(OriginalDnsServers originalDnsServers) {
             this.originalDnsServers = originalDnsServers;
@@ -77,7 +78,10 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyHichinaDomainDNSResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyHichinaDomainDNSResponseBody</p>
+     */
     public static class NewDnsServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsServer")
         private java.util.List < String > dnsServer;
@@ -131,6 +141,12 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyHichinaDomainDNSResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyHichinaDomainDNSResponseBody</p>
+     */
     public static class OriginalDnsServers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsServer")
         private java.util.List < String > dnsServer;

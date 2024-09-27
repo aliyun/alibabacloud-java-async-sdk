@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmAvailableAlertGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListCloudGtmAvailableAlertGroupsRequest</p>
@@ -53,7 +54,14 @@ public class ListCloudGtmAvailableAlertGroupsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese</li>
+         * <li><strong>en-US</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

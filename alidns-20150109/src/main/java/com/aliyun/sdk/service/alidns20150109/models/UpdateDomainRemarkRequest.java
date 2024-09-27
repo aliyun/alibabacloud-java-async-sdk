@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDomainRemarkRequest} extends {@link RequestModel}
  *
  * <p>UpdateDomainRemarkRequest</p>
@@ -82,7 +83,10 @@ public class UpdateDomainRemarkRequest extends Request {
         } 
 
         /**
-         * The domain name that already exists in Alibaba Cloud DNS.
+         * <p>The domain name that already exists in Alibaba Cloud DNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mydomain.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -91,7 +95,15 @@ public class UpdateDomainRemarkRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -100,7 +112,8 @@ public class UpdateDomainRemarkRequest extends Request {
         }
 
         /**
-         * The description of your domain name.
+         * <p>The description of your domain name.</p>
+         * <p>It can be up to 50 characters in length and can contain digits, letters, and the following special characters: _ - , .</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

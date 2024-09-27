@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetGtmAccessModeRequest} extends {@link RequestModel}
  *
  * <p>SetGtmAccessModeRequest</p>
@@ -83,12 +84,15 @@ public class SetGtmAccessModeRequest extends Request {
         } 
 
         /**
-         * The target access policy of the GTM instance. Valid values:
-         * <p>
+         * <p>The desired access policy. Valid values:</p>
+         * <ul>
+         * <li><strong>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</strong></li>
+         * <li><strong>DEFAULT: specifies the primary address pool set.</strong></li>
+         * <li>**FAILOVER: specifies the secondary address pool set.</li>
+         * </ul>
          * 
-         * *   **AUTO**: Automatic switch
-         * *   **DEFAULT**: Default address pool
-         * *   **FAILOVER**: Failover address pool
+         * <strong>example:</strong>
+         * <p>AUTO</p>
          */
         public Builder accessMode(String accessMode) {
             this.putQueryParameter("AccessMode", accessMode);
@@ -97,7 +101,10 @@ public class SetGtmAccessModeRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +113,10 @@ public class SetGtmAccessModeRequest extends Request {
         }
 
         /**
-         * The ID of the access policy.
+         * <p>The ID of the access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0hx</p>
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyGtmConfigRequest} extends {@link RequestModel}
  *
  * <p>CopyGtmConfigRequest</p>
@@ -98,7 +99,10 @@ public class CopyGtmConfigRequest extends Request {
         } 
 
         /**
-         * The type of the object that you want to copy. Only the INSTANCE type is supported.
+         * <p>The type of the object that is copied. Only the INSTANCE type is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         public Builder copyType(String copyType) {
             this.putQueryParameter("CopyType", copyType);
@@ -107,7 +111,10 @@ public class CopyGtmConfigRequest extends Request {
         }
 
         /**
-         * The language that specific response parameters will use.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,7 +123,10 @@ public class CopyGtmConfigRequest extends Request {
         }
 
         /**
-         * The ID of the source object. Only instance IDs are supported.
+         * <p>The ID of the source object. Only instance IDs are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-0pp1j84v60d</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -125,7 +135,10 @@ public class CopyGtmConfigRequest extends Request {
         }
 
         /**
-         * The ID of the target object. Only instance IDs are supported.
+         * <p>The ID of the target object. Only instance IDs are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-v0h1gaujg06</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);

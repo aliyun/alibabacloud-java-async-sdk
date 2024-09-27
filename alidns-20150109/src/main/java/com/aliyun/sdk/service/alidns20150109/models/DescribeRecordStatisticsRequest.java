@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRecordStatisticsRequest</p>
@@ -126,7 +127,10 @@ public class DescribeRecordStatisticsRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The primary domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -135,11 +139,14 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The type of the domain name. The parameter value is not case-sensitive. Valid values:
-         * <p>
+         * <p>The type of the domain name. The parameter value is not case-sensitive. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC (default): hosted public domain name</li>
+         * <li>CACHE: cache-accelerated domain name</li>
+         * </ul>
          * 
-         * *   PUBLIC (default): hosted public domain name
-         * *   CACHE: cache-accelerated domain name
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -148,10 +155,11 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The end date of the query. Specify the end date in the **YYYY-MM-DD** format.
-         * <p>
+         * <p>The end date of the query. Specify the end date in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>The default value is the day when you query the data.</p>
          * 
-         * The default value is the day when you query the data.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -160,7 +168,10 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -169,7 +180,10 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The hostname. If you want to resolve the subdomain name www.dns-exmaple.top, set this parameter to www.
+         * <p>The hostname. If you want to resolve <a href="http://www.dns-exmaple.top">www.dns-exmaple.top</a>, set Rr to www.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         public Builder rr(String rr) {
             this.putQueryParameter("Rr", rr);
@@ -178,14 +192,13 @@ public class DescribeRecordStatisticsRequest extends Request {
         }
 
         /**
-         * The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
-         * <p>
+         * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
+         * <p>You can only query the DNS records within the last 90 days.``</p>
+         * <p>If the time range is less than or equal to seven days, data is returned on an hourly basis.````</p>
+         * <p>If the time range is greater than seven days, data is returned on a daily basis.````</p>
          * 
-         * You can only query the DNS records within the last 90 days.``
-         * 
-         * If the time range is less than or equal to seven days, data is returned on an hourly basis.````
-         * 
-         * If the time range is greater than seven days, data is returned on a daily basis.````
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

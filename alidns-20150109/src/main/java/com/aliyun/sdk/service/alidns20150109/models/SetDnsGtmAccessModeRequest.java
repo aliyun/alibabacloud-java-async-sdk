@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDnsGtmAccessModeRequest} extends {@link RequestModel}
  *
  * <p>SetDnsGtmAccessModeRequest</p>
@@ -83,12 +84,15 @@ public class SetDnsGtmAccessModeRequest extends Request {
         } 
 
         /**
-         * The primary/secondary switchover policy for address pool groups. Valid values:
-         * <p>
+         * <p>The switchover policy for primary and secondary address pool sets. Valid values:</p>
+         * <ul>
+         * <li>AUTO: performs automatic switchover between the primary and secondary address pool sets upon failures.</li>
+         * <li>DEFAULT: the primary address pool set</li>
+         * <li>FAILOVER: the secondary address pool set</li>
+         * </ul>
          * 
-         * *   AUTO: performs automatic switchover between the primary and secondary address pool groups upon failures.
-         * *   DEFAULT: uses the primary address pool group.
-         * *   FAILOVER: uses the secondary address pool group.
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         public Builder accessMode(String accessMode) {
             this.putQueryParameter("AccessMode", accessMode);
@@ -97,7 +101,10 @@ public class SetDnsGtmAccessModeRequest extends Request {
         }
 
         /**
-         * The language to return some response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,7 +113,10 @@ public class SetDnsGtmAccessModeRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategyId</p>
          */
         public Builder strategyId(String strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

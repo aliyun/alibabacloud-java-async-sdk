@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInternetDnsLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInternetDnsLogsRequest</p>
@@ -165,7 +166,10 @@ public class DescribeInternetDnsLogsRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>The account ID displayed on the Recursive Resolution (Public DNS) page after you activate Alibaba Cloud Public DNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51**4</p>
          */
         public Builder accountId(Long accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -174,7 +178,10 @@ public class DescribeInternetDnsLogsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

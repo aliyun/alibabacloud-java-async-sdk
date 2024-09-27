@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDohUserInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDohUserInfoResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         private Integer subDomainCount; 
 
         /**
-         * The number of accessed domains.
+         * <p>The number of accessed domains.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder domainCount(Integer domainCount) {
             this.domainCount = domainCount;
@@ -81,7 +85,10 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud public DNS user.
+         * <p>The ID of the Alibaba Cloud public DNS user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder pdnsId(Long pdnsId) {
             this.pdnsId = pdnsId;
@@ -89,7 +96,10 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class DescribeDohUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of accessed subdomains.
+         * <p>The number of accessed subdomains.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder subDomainCount(Integer subDomainCount) {
             this.subDomainCount = subDomainCount;

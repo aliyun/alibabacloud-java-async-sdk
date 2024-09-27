@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchCloudGtmAddressPoolsResponseBody} extends {@link TeaModel}
  *
  * <p>SearchCloudGtmAddressPoolsResponseBody</p>
@@ -97,7 +98,7 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * AddressPools.
+         * <p>The address pools.</p>
          */
         public Builder addressPools(AddressPools addressPools) {
             this.addressPools = addressPools;
@@ -105,7 +106,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from 1, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * <p>Total number of address pools matching the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchCloudGtmAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchCloudGtmAddressPoolsResponseBody</p>
+     */
     public static class HealthTask extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -201,7 +223,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * Port.
+             * <p>The target service port for health checks. When the Ping protocol is selected for health checks, configuration of the service port is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -209,7 +234,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the health check template associated with the address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mtp-89518052425100**80</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -217,7 +245,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>Health check template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4-Ping</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -231,6 +262,12 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchCloudGtmAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchCloudGtmAddressPoolsResponseBody</p>
+     */
     public static class HealthTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HealthTask")
         private java.util.List < HealthTask> healthTask;
@@ -272,6 +309,12 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchCloudGtmAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchCloudGtmAddressPoolsResponseBody</p>
+     */
     public static class Address extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -527,7 +570,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             private Integer weightValue; 
 
             /**
-             * Address.
+             * <p>IP address or domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223.5.XX.XX</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -535,7 +581,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressId.
+             * <p>The address ID. This ID uniquely identifies the address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>addr-895182181143688192</p>
              */
             public Builder addressId(String addressId) {
                 this.addressId = addressId;
@@ -543,7 +592,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeInfo.
+             * <p>Address ownership information, not supported in the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not supported in the current version.</p>
              */
             public Builder attributeInfo(String attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -551,7 +603,14 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableMode.
+             * <p>The failover method that is used if the address fails health checks. Valid values:</p>
+             * <ul>
+             * <li>auto: the automatic mode. The system determines whether to return an address based on the health check results. If the address fails health checks, the system does not return the address. If the address passes health checks, the system returns the address.</li>
+             * <li>manual: the manual mode. If an address is in the unavailable state, the address is not returned for DNS requests even if the address passes health checks. If an address is in the available state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder availableMode(String availableMode) {
                 this.availableMode = availableMode;
@@ -559,7 +618,14 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableStatus.
+             * <p>Address availability status:</p>
+             * <ul>
+             * <li>available: Address is available</li>
+             * <li>unavailable: Address is unavailable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder availableStatus(String availableStatus) {
                 this.availableStatus = availableStatus;
@@ -567,7 +633,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Address creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -575,7 +644,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>Address creation time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -583,7 +655,14 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableStatus.
+             * <p>Address enable status, indicating whether the address is currently available:</p>
+             * <ul>
+             * <li>enable: Enabled status </li>
+             * <li>disable: Disabled status</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;
@@ -591,7 +670,17 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthJudgement.
+             * <p>The condition for determining the health status of the address. Valid values:</p>
+             * <ul>
+             * <li>any_ok: The health check results of at least one health check template are normal.</li>
+             * <li>p30_ok: The health check results of at least 30% of health check templates are normal.</li>
+             * <li>p50_ok: The health check results of at least 50% of health check templates are normal.</li>
+             * <li>p70_ok: The health check results of at least 70% of health check templates are normal.</li>
+             * <li>all_ok: The health check results of all health check templates are normal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>any_ok</p>
              */
             public Builder healthJudgement(String healthJudgement) {
                 this.healthJudgement = healthJudgement;
@@ -599,7 +688,16 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * <p>The health check state of the address. Valid values:</p>
+             * <ul>
+             * <li>ok: The address passes all health checks of the referenced health check templates.</li>
+             * <li>ok_alert: The address fails some health checks of the referenced health check templates but the address is deemed normal.</li>
+             * <li>ok_no_monitor: The address does not reference a health check template and is normal.</li>
+             * <li>exceptional: The address fails some or all health checks of the referenced health check templates and the address is deemed abnormal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -607,7 +705,7 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthTasks.
+             * <p>The health check tasks.</p>
              */
             public Builder healthTasks(HealthTasks healthTasks) {
                 this.healthTasks = healthTasks;
@@ -615,7 +713,14 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * ManualAvailableStatus.
+             * <p>The availability state of the address when AvailableMode is set to manual. Valid values:</p>
+             * <ul>
+             * <li>available: The address is normal. In this state, the address is returned for DNS requests even if an alert is triggered when the address fails health checks.</li>
+             * <li>unavailable: The address is abnormal. In this state, the address is not returned for DNS requests even if the address passes health checks.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder manualAvailableStatus(String manualAvailableStatus) {
                 this.manualAvailableStatus = manualAvailableStatus;
@@ -623,7 +728,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Address name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Address-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -631,7 +739,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -639,7 +750,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestSource.
+             * <p>Request source, referring to the source of the request. GTM schedules based on the exit IP of the LocalDNS used by the terminal. If the LocalDNS supports ECS (edns-client-subnet), intelligent scheduling can also be performed based on the IP of the visiting terminal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder requestSource(String requestSource) {
                 this.requestSource = requestSource;
@@ -647,7 +761,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * <p>Sequence number, indicating the priority of address return, where smaller numbers have higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serialNumber(Integer serialNumber) {
                 this.serialNumber = serialNumber;
@@ -655,7 +772,13 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Address type:</p>
+             * <ul>
+             * <li>IPv4: ipv4 address - IPv6: ipv6 address - domain: domain name</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -663,7 +786,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The last time the address was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -671,7 +797,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>The last modification time of the address (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -679,7 +808,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * WeightValue.
+             * <p>Weight value (an integer between 1 and 100), allowing different weight values to be set for each address, enabling resolution queries to return addresses according to the weighted ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder weightValue(Integer weightValue) {
                 this.weightValue = weightValue;
@@ -693,6 +825,12 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchCloudGtmAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchCloudGtmAddressPoolsResponseBody</p>
+     */
     public static class Addresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private java.util.List < Address> address;
@@ -720,7 +858,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             private java.util.List < Address> address; 
 
             /**
-             * Address.
+             * <p>IP address or domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223.5.XX.XX</p>
              */
             public Builder address(java.util.List < Address> address) {
                 this.address = address;
@@ -734,6 +875,12 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchCloudGtmAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchCloudGtmAddressPoolsResponseBody</p>
+     */
     public static class AddressPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressLbStrategy")
         private String addressLbStrategy;
@@ -929,7 +1076,16 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             private Long updateTimestamp; 
 
             /**
-             * AddressLbStrategy.
+             * <p>Load balancing policy among addresses in the address pool:</p>
+             * <ul>
+             * <li>round_robin: Round-robin, for any source of DNS resolution requests, returns all addresses and rotates the order of all addresses each time.</li>
+             * <li>sequence: Sequential, for any source of DNS resolution requests, returns the address with the smaller sequence number (the sequence number indicates the priority of the address return, the smaller the higher the priority). If the address with the smaller sequence number is unavailable, return the next address with a smaller sequence number.</li>
+             * <li>weight: Weighted, supports setting different weight values for each address to realize returning addresses according to the weight ratio for resolution queries.</li>
+             * <li>source_nearest: Source-nearest, i.e., intelligent resolution function, where GTM can return different addresses based on the source of different DNS resolution requests, achieving the effect of users accessing nearby.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>round_robin</p>
              */
             public Builder addressLbStrategy(String addressLbStrategy) {
                 this.addressLbStrategy = addressLbStrategy;
@@ -937,7 +1093,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressPoolId.
+             * <p>The ID of the address pool. This ID uniquely identifies the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool-895280232254422016</p>
              */
             public Builder addressPoolId(String addressPoolId) {
                 this.addressPoolId = addressPoolId;
@@ -945,7 +1104,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressPoolName.
+             * <p>Address pool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AddressPool-1</p>
              */
             public Builder addressPoolName(String addressPoolName) {
                 this.addressPoolName = addressPoolName;
@@ -953,7 +1115,15 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressPoolType.
+             * <p>Address pool type:</p>
+             * <ul>
+             * <li>IPv4</li>
+             * <li>IPv6</li>
+             * <li>domain</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder addressPoolType(String addressPoolType) {
                 this.addressPoolType = addressPoolType;
@@ -961,7 +1131,7 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Addresses.
+             * <p>The IP addresses or domain names.</p>
              */
             public Builder addresses(Addresses addresses) {
                 this.addresses = addresses;
@@ -969,7 +1139,14 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableStatus.
+             * <p>Address pool availability status:</p>
+             * <ul>
+             * <li>available: Available</li>
+             * <li>unavailable: Unavailable</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>available</p>
              */
             public Builder availableStatus(String availableStatus) {
                 this.availableStatus = availableStatus;
@@ -977,7 +1154,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Address pool creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T01:46Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -985,7 +1165,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>Address pool creation time (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -993,7 +1176,14 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableStatus.
+             * <p>Address pool status:</p>
+             * <ul>
+             * <li>enable: Enabled status</li>
+             * <li>disable: Disabled status</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;
@@ -1001,7 +1191,17 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthJudgement.
+             * <p>The condition for determining the health status of the address pool. Valid values:</p>
+             * <ul>
+             * <li>any_ok: At least one address in the address pool is available.</li>
+             * <li>p30_ok: At least 30% of the addresses in the address pool are available.</li>
+             * <li>p50_ok: At least 50% of the addresses in the address pool are available.</li>
+             * <li>p70_ok: At least 70% of the addresses in the address pool are available.</li>
+             * <li>all_ok: All addresses in the address pool are available.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>any_ok</p>
              */
             public Builder healthJudgement(String healthJudgement) {
                 this.healthJudgement = healthJudgement;
@@ -1009,7 +1209,15 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * <p>The health state of the address pool. Valid values:</p>
+             * <ul>
+             * <li>ok: The health state of the address pool is normal and all addresses that are referenced by the address pool are available.</li>
+             * <li>ok_alert: The health state of the address pool is warning and some of the addresses that are referenced by the address pool are unavailable. However, the address pool is deemed normal. In this case, only the available addresses are returned for DNS requests.</li>
+             * <li>exceptional: The health state of the address pool is abnormal and some or all of the addresses that are referenced by the address pool are unavailable. In this case, the address pool is deemed abnormal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -1017,7 +1225,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Address remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1025,7 +1236,14 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceLbStrategyMode.
+             * <p>The mode used if the address with the smallest sequence number is recovered. This parameter is returned only when the policy for load balancing between addresses is sequence. Valid values:</p>
+             * <ul>
+             * <li>preemptive: The address with the smallest sequence number is preferentially used if this address is recovered.</li>
+             * <li>non_preemptive: The current address is still used even if the address with the smallest sequence number is recovered.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>preemptive</p>
              */
             public Builder sequenceLbStrategyMode(String sequenceLbStrategyMode) {
                 this.sequenceLbStrategyMode = sequenceLbStrategyMode;
@@ -1033,7 +1251,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Last modification time of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>024-03-15T01:46Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1041,7 +1262,10 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>Last modification time of the address pool (timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1527690629357</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -1055,6 +1279,12 @@ public class SearchCloudGtmAddressPoolsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchCloudGtmAddressPoolsResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchCloudGtmAddressPoolsResponseBody</p>
+     */
     public static class AddressPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressPool")
         private java.util.List < AddressPool> addressPool;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchCloudGtmMonitorTemplatesRequest} extends {@link RequestModel}
  *
  * <p>SearchCloudGtmMonitorTemplatesRequest</p>
@@ -125,7 +126,14 @@ public class SearchCloudGtmMonitorTemplatesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -134,7 +142,14 @@ public class SearchCloudGtmMonitorTemplatesRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * <p>The IP address type of health check nodes. An exact search is performed based on the IP address type. Valid values:</p>
+         * <ul>
+         * <li>IPv4: applicable when the destination address of health checks is an IPv4 address</li>
+         * <li>IPv6: applicable when the destination address of health checks is an IPv6 address</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);

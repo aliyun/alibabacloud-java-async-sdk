@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainGroupsRequest</p>
@@ -96,7 +97,10 @@ public class DescribeDomainGroupsRequest extends Request {
         } 
 
         /**
-         * The keyword of the domain name group for searches in %KeyWord% mode. The value is not case-sensitive.
+         * <p>The keyword of the domain name group for searches in %KeyWord% mode. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Group</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -105,7 +109,10 @@ public class DescribeDomainGroupsRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -114,7 +121,10 @@ public class DescribeDomainGroupsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +133,10 @@ public class DescribeDomainGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

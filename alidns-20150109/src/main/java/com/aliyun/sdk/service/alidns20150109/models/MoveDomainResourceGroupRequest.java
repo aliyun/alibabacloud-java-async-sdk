@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MoveDomainResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>MoveDomainResourceGroupRequest</p>
@@ -83,7 +84,10 @@ public class MoveDomainResourceGroupRequest extends Request {
         } 
 
         /**
-         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +96,11 @@ public class MoveDomainResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the new resource group.
+         * <p>The ID of the new resource group.</p>
+         * <p>You can view the ID of the resource group in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> or call the ListResourceGroups operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzzk7hx3glaoq</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -101,7 +109,10 @@ public class MoveDomainResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource ID. If Tag is left empty, ResourceId is required.
+         * <p>The resource ID. If Tag is left empty, ResourceId is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

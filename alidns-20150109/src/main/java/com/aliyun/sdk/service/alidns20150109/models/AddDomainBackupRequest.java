@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDomainBackupRequest} extends {@link RequestModel}
  *
  * <p>AddDomainBackupRequest</p>
@@ -83,7 +84,10 @@ public class AddDomainBackupRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.aliyun.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -92,7 +96,15 @@ public class AddDomainBackupRequest extends Request {
         }
 
         /**
-         * The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,11 +113,14 @@ public class AddDomainBackupRequest extends Request {
         }
 
         /**
-         * The backup cycle. Valid values:
-         * <p>
+         * <p>The backup cycle. Valid values:</p>
+         * <ul>
+         * <li>DAY: backs up data on a daily basis.</li>
+         * <li>HOUR: backs up data on an hourly basis.</li>
+         * </ul>
          * 
-         * *   **DAY**: Backs up data once every day.
-         * *   **HOUR**: Backs up data once every hour.
+         * <strong>example:</strong>
+         * <p>HOUR</p>
          */
         public Builder periodType(String periodType) {
             this.putQueryParameter("PeriodType", periodType);

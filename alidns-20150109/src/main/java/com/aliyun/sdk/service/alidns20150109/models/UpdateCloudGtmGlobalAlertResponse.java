@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCloudGtmGlobalAlertResponse} extends {@link TeaModel}
  *
  * <p>UpdateCloudGtmGlobalAlertResponse</p>

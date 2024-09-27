@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindInstanceDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>UnbindInstanceDomainsResponseBody</p>
@@ -61,7 +62,10 @@ public class UnbindInstanceDomainsResponseBody extends TeaModel {
         private Integer successCount; 
 
         /**
-         * The number of domain names that failed to be unbound from the instance.
+         * <p>The number of domain names that failed to be unbound from the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -69,7 +73,10 @@ public class UnbindInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class UnbindInstanceDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of domain names that are unbound from the instance.
+         * <p>The number of domain names that are unbound from the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;

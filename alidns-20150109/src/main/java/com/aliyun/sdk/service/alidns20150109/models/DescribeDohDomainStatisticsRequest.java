@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDohDomainStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDohDomainStatisticsRequest</p>
@@ -96,7 +97,10 @@ public class DescribeDohDomainStatisticsRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -105,10 +109,11 @@ public class DescribeDohDomainStatisticsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the YYYY-MM-DD format.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+         * <p>The default value is the day when you perform the operation.</p>
          * 
-         * The default value is the day when you perform the operation.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -117,7 +122,10 @@ public class DescribeDohDomainStatisticsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -126,10 +134,11 @@ public class DescribeDohDomainStatisticsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+         * <p>You can query only the DNS records of the latest 90 days. <code>The value of StartDate must be greater than or equal to the difference between the current date and 90</code>.</p>
          * 
-         * You can query only the DNS records of the latest 90 days. `The value of StartDate must be greater than or equal to the difference between the current date and 90`.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

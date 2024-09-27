@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCloudGtmInstanceConfigEnableStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateCloudGtmInstanceConfigEnableStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateCloudGtmInstanceConfigEnableStatusResponseBody extends TeaMod
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,14 @@ public class UpdateCloudGtmInstanceConfigEnableStatusResponseBody extends TeaMod
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful: </p>
+         * <ul>
+         * <li><strong>true</strong>: The call succeeded. </li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

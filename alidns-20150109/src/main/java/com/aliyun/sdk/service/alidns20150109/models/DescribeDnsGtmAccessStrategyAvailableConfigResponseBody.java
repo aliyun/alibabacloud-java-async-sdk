@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
@@ -133,7 +134,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         private Boolean suggestSetDefaultLine; 
 
         /**
-         * The available address pools of the domain name type.
+         * <p>The available address pools of the domain name type.</p>
          */
         public Builder domainAddrPools(DomainAddrPools domainAddrPools) {
             this.domainAddrPools = domainAddrPools;
@@ -141,7 +142,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * The available address pools of the IPv4 type.
+         * <p>The available address pools of the IPv4 type.</p>
          */
         public Builder ipv4AddrPools(Ipv4AddrPools ipv4AddrPools) {
             this.ipv4AddrPools = ipv4AddrPools;
@@ -149,7 +150,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * The available address pools of the IPv6 type.
+         * <p>The available address pools of the IPv6 type.</p>
          */
         public Builder ipv6AddrPools(Ipv6AddrPools ipv6AddrPools) {
             this.ipv6AddrPools = ipv6AddrPools;
@@ -157,7 +158,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * The source regions.
+         * <p>The source regions.</p>
          */
         public Builder lines(Lines lines) {
             this.lines = lines;
@@ -165,7 +166,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2851BA9-CE56-49AF-8D12-4FC6A49EE688</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +201,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         }
 
         /**
-         * Indicates whether we recommend that you set the source region to global.
+         * <p>Indicates whether we recommend that you set the source region to global.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder suggestSetDefaultLine(Boolean suggestSetDefaultLine) {
             this.suggestSetDefaultLine = suggestSetDefaultLine;
@@ -210,6 +217,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class DomainAddrPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
@@ -261,7 +274,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String name; 
 
             /**
-             * The number of addresses in the address pool.
+             * <p>The number of addresses in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -269,7 +285,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The ID of the address pool.
+             * <p>The ID of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -277,7 +296,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testpool</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,6 +313,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class DomainAddrPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainAddrPool")
         private java.util.List < DomainAddrPool> domainAddrPool;
@@ -332,6 +360,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class Ipv4AddrPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
@@ -383,7 +417,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String name; 
 
             /**
-             * The number of addresses in the address pool.
+             * <p>The number of addresses in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -391,7 +428,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The ID of the address pool.
+             * <p>The ID of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -399,7 +439,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testpool</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -413,6 +456,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class Ipv4AddrPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4AddrPool")
         private java.util.List < Ipv4AddrPool> ipv4AddrPool;
@@ -454,6 +503,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class Ipv6AddrPool extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
@@ -505,7 +560,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String name; 
 
             /**
-             * The number of addresses in the address pool.
+             * <p>The number of addresses in the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder addrCount(Integer addrCount) {
                 this.addrCount = addrCount;
@@ -513,7 +571,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The ID of the address pool.
+             * <p>The ID of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pool1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -521,7 +582,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The name of the address pool.
+             * <p>The name of the address pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testpool</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -535,6 +599,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class Ipv6AddrPools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6AddrPool")
         private java.util.List < Ipv6AddrPool> ipv6AddrPool;
@@ -576,6 +646,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class Line extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
@@ -651,7 +727,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             private String lineName; 
 
             /**
-             * The parent line code of the source region. Leave it blank if no parent line exists.
+             * <p>The parent line code of the source region. Leave it blank if no parent line exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telecom</p>
              */
             public Builder fatherCode(String fatherCode) {
                 this.fatherCode = fatherCode;
@@ -659,7 +738,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The line name of the source region.
+             * <p>The line name of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupCode(String groupCode) {
                 this.groupCode = groupCode;
@@ -667,7 +749,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The name of the source region group.
+             * <p>The name of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -675,7 +760,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The line code of the source region.
+             * <p>The line code of the source region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder lineCode(String lineCode) {
                 this.lineCode = lineCode;
@@ -683,7 +771,10 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
             }
 
             /**
-             * The code of the source region group.
+             * <p>The code of the source region group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder lineName(String lineName) {
                 this.lineName = lineName;
@@ -697,6 +788,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class Lines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < Line> line;
@@ -738,6 +835,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class SelectedDomainLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SelectedDomainLine")
         private java.util.List < String > selectedDomainLine;
@@ -779,6 +882,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class SelectedIpv4Lines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SelectedIpv4Line")
         private java.util.List < String > selectedIpv4Line;
@@ -820,6 +929,12 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDnsGtmAccessStrategyAvailableConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
+     */
     public static class SelectedIpv6Lines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SelectedIpv6Line")
         private java.util.List < String > selectedIpv6Line;

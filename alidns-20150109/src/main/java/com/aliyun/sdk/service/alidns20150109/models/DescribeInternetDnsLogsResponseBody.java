@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInternetDnsLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInternetDnsLogsResponseBody</p>
@@ -125,7 +126,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Logs.
+         * <p>The logs.</p>
          */
         public Builder logs(Logs logs) {
             this.logs = logs;
@@ -170,6 +171,12 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInternetDnsLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInternetDnsLogsResponseBody</p>
+     */
     public static class Value extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
@@ -211,6 +218,12 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInternetDnsLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInternetDnsLogsResponseBody</p>
+     */
     public static class Log extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsMsgId")
         private String dnsMsgId;
@@ -394,7 +407,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryName.
+             * <p>The domain name for which you want to query Domain Name System (DNS) records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder queryName(String queryName) {
                 this.queryName = queryName;
@@ -458,7 +474,10 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneName.
+             * <p>The zone name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -472,6 +491,12 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInternetDnsLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInternetDnsLogsResponseBody</p>
+     */
     public static class Logs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Log")
         private java.util.List < Log> log;

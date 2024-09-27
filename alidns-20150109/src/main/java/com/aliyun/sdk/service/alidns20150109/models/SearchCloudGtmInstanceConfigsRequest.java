@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchCloudGtmInstanceConfigsRequest} extends {@link RequestModel}
  *
  * <p>SearchCloudGtmInstanceConfigsRequest</p>
@@ -193,7 +194,14 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -202,7 +210,14 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * AvailableStatus.
+         * <p>The availability state of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>available: If the access domain name is <strong>enabled</strong> and the health state is <strong>normal</strong>, the access domain name is deemed <strong>available</strong>.</li>
+         * <li>unavailable: If the access domain name is <strong>disabled</strong> or the health state is <strong>abnormal</strong>, the access domain name is deemed <strong>unavailable</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         public Builder availableStatus(String availableStatus) {
             this.putQueryParameter("AvailableStatus", availableStatus);
@@ -211,7 +226,10 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -220,7 +238,14 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * EnableStatus.
+         * <p>The enabling state of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>enable: The access domain name is enabled and the intelligent scheduling policy of the corresponding GTM instance takes effect.</li>
+         * <li>disable: The access domain name is disabled and the intelligent scheduling policy of the corresponding GTM instance does not take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder enableStatus(String enableStatus) {
             this.putQueryParameter("EnableStatus", enableStatus);
@@ -229,7 +254,15 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * HealthStatus.
+         * <p>The health state of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>ok: The health state of the access domain name is normal and all address pools that are referenced by the access domain name are available.</li>
+         * <li>ok_alert: The health state of the access domain name is warning and some of the address pools that are referenced by the access domain name are unavailable. In this case, only the available address pools are returned for Domain Name System (DNS) requests.</li>
+         * <li>exceptional: The health state of the access domain name is abnormal and all address pools that are referenced by the access domain name are unavailable. In this case, addresses in the non-empty address pool with the smallest sequence number are preferentially used for fallback resolution. This returns DNS results for clients as much as possible.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -238,7 +271,10 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Global Traffic Manager (GTM) 3.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-wwo3a3hbz**</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -247,7 +283,10 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from 1, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -256,7 +295,10 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong>, and a default of <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +307,10 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>Remarks for the domain instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -274,7 +319,10 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * ScheduleDomainName.
+         * <p>The access domain name. The value of this parameter is composed of the value of ScheduleHostname and the value of ScheduleZoneName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder scheduleDomainName(String scheduleDomainName) {
             this.putQueryParameter("ScheduleDomainName", scheduleDomainName);
@@ -283,7 +331,10 @@ public class SearchCloudGtmInstanceConfigsRequest extends Request {
         }
 
         /**
-         * ScheduleZoneName.
+         * <p>The zone such as example.com or subzone such as a.example.com of the access domain name. In most cases, the zone or subzone is hosted by the Public Authoritative DNS module of Alibaba Cloud DNS. This zone belongs to the account to which the GTM instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder scheduleZoneName(String scheduleZoneName) {
             this.putQueryParameter("ScheduleZoneName", scheduleZoneName);

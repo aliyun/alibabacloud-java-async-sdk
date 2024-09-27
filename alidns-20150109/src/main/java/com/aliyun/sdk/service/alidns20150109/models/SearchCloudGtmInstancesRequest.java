@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchCloudGtmInstancesRequest} extends {@link RequestModel}
  *
  * <p>SearchCloudGtmInstancesRequest</p>
@@ -123,7 +124,14 @@ public class SearchCloudGtmInstancesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the return value. Options are:</p>
+         * <ul>
+         * <li><strong>zh-CN</strong>: Chinese. </li>
+         * <li><strong>en-US</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -132,7 +140,10 @@ public class SearchCloudGtmInstancesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see How to ensure idempotence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -141,7 +152,10 @@ public class SearchCloudGtmInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Global Traffic Manager (GTM) 3.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-wwo3a3hbz**</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -150,7 +164,10 @@ public class SearchCloudGtmInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>Schedule instance name, supports fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -159,7 +176,10 @@ public class SearchCloudGtmInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from 1, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -168,7 +188,10 @@ public class SearchCloudGtmInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of <strong>100</strong>, and a default of <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

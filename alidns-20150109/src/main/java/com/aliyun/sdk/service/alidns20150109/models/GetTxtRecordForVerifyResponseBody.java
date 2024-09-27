@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTxtRecordForVerifyResponseBody} extends {@link TeaModel}
  *
  * <p>GetTxtRecordForVerifyResponseBody</p>
@@ -85,10 +86,13 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         private String value; 
 
         /**
-         * The domain name.
-         * <p>
+         * <p>The domain name.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, it is not returned.</p>
+         * </blockquote>
          * 
-         * >  If you do not specify this parameter, it is not returned.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -104,7 +108,10 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * The hostname.
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyunRetrieval</p>
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -112,7 +119,10 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9CC0D642-49D4-48DE-A1A5-9F218652E4A7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,10 +130,13 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * The record value.
-         * <p>
+         * <p>The record value.</p>
+         * <blockquote>
+         * <p> The validity period is three days.</p>
+         * </blockquote>
          * 
-         * >  The validity period is three days.
+         * <strong>example:</strong>
+         * <p>c99419e6997f41daaa3e*****</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIspFlushCacheTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIspFlushCacheTaskResponseBody</p>
@@ -230,6 +231,12 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIspFlushCacheTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIspFlushCacheTaskResponseBody</p>
+     */
     public static class Answers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -331,6 +338,12 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIspFlushCacheTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIspFlushCacheTaskResponseBody</p>
+     */
     public static class DnsNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Answers")
         private java.util.List < Answers> answers;
@@ -432,6 +445,12 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIspFlushCacheTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIspFlushCacheTaskResponseBody</p>
+     */
     public static class FlushCacheResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DnsNodes")
         private java.util.List < DnsNodes> dnsNodes;

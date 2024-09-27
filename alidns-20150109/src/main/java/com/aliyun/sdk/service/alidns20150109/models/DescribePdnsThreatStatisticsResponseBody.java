@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsThreatStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsThreatStatisticsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribePdnsThreatStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsThreatStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsThreatStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DohTotalCount")
         private Long dohTotalCount;

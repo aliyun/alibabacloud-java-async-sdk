@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudGtmInstanceConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteCloudGtmInstanceConfigRequest</p>
@@ -95,7 +96,14 @@ public class DeleteCloudGtmInstanceConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -104,7 +112,10 @@ public class DeleteCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -113,7 +124,10 @@ public class DeleteCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * ConfigId.
+         * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration. You can call the <a href="~~ListCloudGtmInstanceConfigs~~">ListCloudGtmInstanceConfigs</a> operation to query the configuration ID of the access domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>config-000**1</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -122,7 +136,10 @@ public class DeleteCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The access domain name that is configured for the desired GTM 3.0 instance. You can delete only one access domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-jmp3qnw**03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

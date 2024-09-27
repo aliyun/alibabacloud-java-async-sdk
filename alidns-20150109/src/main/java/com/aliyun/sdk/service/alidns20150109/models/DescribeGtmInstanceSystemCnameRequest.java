@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGtmInstanceSystemCnameRequest} extends {@link RequestModel}
  *
  * <p>DescribeGtmInstanceSystemCnameRequest</p>
@@ -68,7 +69,10 @@ public class DescribeGtmInstanceSystemCnameRequest extends Request {
         } 
 
         /**
-         * The ID of the Global Traffic Manager (GTM) instance.
+         * <p>The ID of the Global Traffic Manager (GTM) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -77,7 +81,10 @@ public class DescribeGtmInstanceSystemCnameRequest extends Request {
         }
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

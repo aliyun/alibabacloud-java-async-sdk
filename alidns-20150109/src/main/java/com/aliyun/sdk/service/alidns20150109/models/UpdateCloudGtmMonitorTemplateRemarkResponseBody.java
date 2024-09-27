@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCloudGtmMonitorTemplateRemarkResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateCloudGtmMonitorTemplateRemarkResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateCloudGtmMonitorTemplateRemarkResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,14 @@ public class UpdateCloudGtmMonitorTemplateRemarkResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Modify the health check template remark operation status:</p>
+         * <ul>
+         * <li>true: Operation successful</li>
+         * <li>false: Operation failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

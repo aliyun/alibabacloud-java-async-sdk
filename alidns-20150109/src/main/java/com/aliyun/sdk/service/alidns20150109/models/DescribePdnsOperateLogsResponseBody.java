@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsOperateLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsOperateLogsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribePdnsOperateLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsOperateLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsOperateLogsResponseBody</p>
+     */
     public static class Logs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;

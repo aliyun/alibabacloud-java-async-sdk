@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchCloudGtmAddressesRequest} extends {@link RequestModel}
  *
  * <p>SearchCloudGtmAddressesRequest</p>
@@ -237,7 +238,14 @@ public class SearchCloudGtmAddressesRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US (default): English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -246,7 +254,10 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * Address.
+         * <p>Query by service address with precise conditions, supporting IP addresses or domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223.5.XX.XX</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -255,7 +266,10 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * AddressId.
+         * <p>The address ID. This ID uniquely identifies the address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>addr-89518218114368**92</p>
          */
         public Builder addressId(String addressId) {
             this.putQueryParameter("AddressId", addressId);
@@ -264,7 +278,14 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * AvailableStatus.
+         * <p>Search by address availability status with precise conditions:</p>
+         * <ul>
+         * <li>available</li>
+         * <li>unavailable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         public Builder availableStatus(String availableStatus) {
             this.putQueryParameter("AvailableStatus", availableStatus);
@@ -273,7 +294,14 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * EnableStatus.
+         * <p>Query by exact address enable status:</p>
+         * <ul>
+         * <li>enable: enabled status</li>
+         * <li>disable: disabled status</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder enableStatus(String enableStatus) {
             this.putQueryParameter("EnableStatus", enableStatus);
@@ -282,7 +310,16 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * HealthStatus.
+         * <p>The health state of the addresses that you want to query. Valid values:</p>
+         * <ul>
+         * <li>ok: The addresses pass all health checks of the referenced health check templates.</li>
+         * <li>ok_alert: The addresses fail some health checks of the referenced health check templates, but the addresses are deemed available.</li>
+         * <li>ok_no_monitor: The addresses do not reference any health check template.</li>
+         * <li>exceptional: The addresses fail some or all health checks of the referenced health check templates, and the addresses are deemed unavailable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -291,7 +328,10 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * MonitorTemplateName.
+         * <p>Health check template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ping-IPv4</p>
          */
         public Builder monitorTemplateName(String monitorTemplateName) {
             this.putQueryParameter("MonitorTemplateName", monitorTemplateName);
@@ -300,7 +340,14 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * NameSearchCondition.
+         * <p>The logical condition for querying addresses by name. This parameter is required if you want to query addresses by name. Valid values:</p>
+         * <ul>
+         * <li>and: displays the results that match all search conditions.</li>
+         * <li>or: displays the results that match some or all search conditions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder nameSearchCondition(String nameSearchCondition) {
             this.putQueryParameter("NameSearchCondition", nameSearchCondition);
@@ -309,7 +356,7 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * Names.
+         * <p>Address name, usually for users to distinguish between different addresses.</p>
          */
         public Builder names(java.util.List < String > names) {
             this.putQueryParameter("Names", names);
@@ -318,7 +365,10 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Current page number, starting from 1, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -327,7 +377,10 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page when paginating queries, with a maximum value of 100 and a default of 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -336,7 +389,12 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * RemarkSearchCondition.
+         * <p>The logical condition for querying addresses by additional description. This parameter is required if you want to query addresses by additional description. Valid values:</p>
+         * <p>and: displays the results that match all search conditions.</p>
+         * <p>or: displays the results that match some or all search conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>or</p>
          */
         public Builder remarkSearchCondition(String remarkSearchCondition) {
             this.putQueryParameter("RemarkSearchCondition", remarkSearchCondition);
@@ -345,7 +403,7 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * Remarks.
+         * <p>Remarks for the address.</p>
          */
         public Builder remarks(java.util.List < String > remarks) {
             this.putQueryParameter("Remarks", remarks);
@@ -354,7 +412,15 @@ public class SearchCloudGtmAddressesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Search precisely by address type conditions:</p>
+         * <ul>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
+         * <li>domain</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

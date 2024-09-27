@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmAvailableAlertGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudGtmAvailableAlertGroupsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AlertGroups.
+         * <p>The alert contact groups.</p>
          */
         public Builder alertGroups(AlertGroups alertGroups) {
             this.alertGroups = alertGroups;
@@ -57,7 +58,10 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudGtmAvailableAlertGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmAvailableAlertGroupsResponseBody</p>
+     */
     public static class AlertGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
@@ -97,7 +107,10 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * GroupName.
+             * <p>The name of the alert contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;Default&quot;]</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -111,6 +124,12 @@ public class ListCloudGtmAvailableAlertGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmAvailableAlertGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmAvailableAlertGroupsResponseBody</p>
+     */
     public static class AlertGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertGroup")
         private java.util.List < AlertGroup> alertGroup;

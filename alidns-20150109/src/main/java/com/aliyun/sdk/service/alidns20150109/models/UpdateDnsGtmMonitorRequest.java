@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDnsGtmMonitorRequest} extends {@link RequestModel}
  *
  * <p>UpdateDnsGtmMonitorRequest</p>
@@ -158,7 +159,10 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         } 
 
         /**
-         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+         * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -167,7 +171,10 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * The health check interval. Unit: seconds.
+         * <p>The health check interval. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -176,7 +183,7 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * The monitored nodes.
+         * <p>The monitored nodes.</p>
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -185,7 +192,10 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values of specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -194,7 +204,10 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the health check configuration.
+         * <p>The ID of the health check configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MonitorConfigId1</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);
@@ -203,54 +216,68 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * The extended information. The required parameters vary based on the health check protocol.
-         * <p>
+         * <p>The extended information. The required parameters vary based on the health check protocol.</p>
+         * <ul>
+         * <li><p>HTTP or HTTPS</p>
+         * <ul>
+         * <li><p>port: the port that you want to check</p>
+         * </li>
+         * <li><p>host: the host settings</p>
+         * </li>
+         * <li><p>path: the URL path</p>
+         * </li>
+         * <li><p>code: the return code. If the return value of code is greater than the specified value, the health check result is deemed abnormal. For example, if code is set to 400 and the code 404 is returned, the health check result is deemed abnormal.</p>
+         * </li>
+         * <li><p>failureRate: the failure rate</p>
+         * </li>
+         * <li><p>sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:</p>
+         * <ul>
+         * <li>true: enables SNI.</li>
+         * <li>false: disables SNI.</li>
+         * </ul>
+         * </li>
+         * <li><p>nodeType: the type of the monitoring node when the address pool type is domain name. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>PING</p>
+         * <ul>
+         * <li><p>failureRate: the failure rate</p>
+         * </li>
+         * <li><p>packetNum: the number of ping packets</p>
+         * </li>
+         * <li><p>packetLossRate: the loss rate of ping packets</p>
+         * </li>
+         * <li><p>nodeType: the type of the monitoring node when the address pool type is domain name. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>TCP</p>
+         * <ul>
+         * <li><p>port: the port that you want to check</p>
+         * </li>
+         * <li><p>failureRate: the failure rate</p>
+         * </li>
+         * <li><p>nodeType: the type of the monitoring node when the address pool type is domain name. Valid values:</p>
+         * <ul>
+         * <li>IPV4</li>
+         * <li>IPV6</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   HTTP or HTTPS
-         * 
-         *     *   port: the port that you want to check
-         * 
-         *     *   host: the host settings
-         * 
-         *     *   path: the URL path
-         * 
-         *     *   code: the return code. If the return value of code is greater than the specified value, the health check result is deemed abnormal. For example, if code is set to 400 and the code 404 is returned, the health check result is deemed abnormal.
-         * 
-         *     *   failureRate: the failure rate
-         * 
-         *     *   sni: specifies whether to enable server name indication (SNI). This parameter is available only when ProtocolType is set to HTTPS. Valid values:
-         * 
-         *         *   true: enables SNI.
-         *         *   false: disables SNI.
-         * 
-         *     *   nodeType: the type of the monitoring node when the address pool type is domain name. Valid values:
-         * 
-         *         *   IPV4
-         *         *   IPV6
-         * 
-         * *   PING
-         * 
-         *     *   failureRate: the failure rate
-         * 
-         *     *   packetNum: the number of ping packets
-         * 
-         *     *   packetLossRate: the loss rate of ping packets
-         * 
-         *     *   nodeType: the type of the monitoring node when the address pool type is domain name. Valid values:
-         * 
-         *         *   IPV4
-         *         *   IPV6
-         * 
-         * *   TCP
-         * 
-         *     *   port: the port that you want to check
-         * 
-         *     *   failureRate: the failure rate
-         * 
-         *     *   nodeType: the type of the monitoring node when the address pool type is domain name. Valid values:
-         * 
-         *         *   IPV4
-         *         *   IPV6
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:200,&quot;path&quot;:&quot;\index.htm&quot;,&quot;host&quot;:&quot;aliyun.com&quot;}</p>
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.putQueryParameter("MonitorExtendInfo", monitorExtendInfo);
@@ -259,13 +286,16 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * The protocol used for the health check. Valid values:
-         * <p>
+         * <p>The protocol used for the health check. Valid values:</p>
+         * <ul>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * <li>PING</li>
+         * <li>TCP</li>
+         * </ul>
          * 
-         * *   HTTP
-         * *   HTTPS
-         * *   PING
-         * *   TCP
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -274,7 +304,10 @@ public class UpdateDnsGtmMonitorRequest extends Request {
         }
 
         /**
-         * The health check timeout period. Unit: milliseconds.
+         * <p>The timeout period. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -289,6 +322,12 @@ public class UpdateDnsGtmMonitorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDnsGtmMonitorRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDnsGtmMonitorRequest</p>
+     */
     public static class IspCityNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -328,7 +367,10 @@ public class UpdateDnsGtmMonitorRequest extends Request {
             private String ispCode; 
 
             /**
-             * The code of the city where the monitored node is deployed.
+             * <p>The code of the city where the monitored node is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -336,7 +378,10 @@ public class UpdateDnsGtmMonitorRequest extends Request {
             }
 
             /**
-             * The code of the Internet service provider (ISP) to which the monitored node belongs.
+             * <p>The code of the Internet service provider (ISP) to which the monitored node belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

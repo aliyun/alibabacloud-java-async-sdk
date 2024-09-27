@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudGtmSystemLinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudGtmSystemLinesResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
         private String systemLinesTree; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>389DFFA3-77A5-4A9E-BF3D-147C6F98A5BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
         }
 
         /**
-         * SystemLines.
+         * <p>The system lines.</p>
          */
         public Builder systemLines(SystemLines systemLines) {
             this.systemLines = systemLines;
@@ -77,7 +81,10 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
         }
 
         /**
-         * SystemLinesTree.
+         * <p>The system lines, which are in a tree structure. Only a system line is listed in this example.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;displayName&quot;:&quot;Default&quot;,&quot;id&quot;:&quot;default&quot;,&quot;isAvailable&quot;:true,&quot;name&quot;:&quot;Default&quot;,&quot;parentId&quot;:&quot;&quot;}]</p>
          */
         public Builder systemLinesTree(String systemLinesTree) {
             this.systemLinesTree = systemLinesTree;
@@ -90,6 +97,12 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudGtmSystemLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudGtmSystemLinesResponseBody</p>
+     */
     public static class SystemLine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -165,7 +178,10 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
             private String parentCode; 
 
             /**
-             * Code.
+             * <p>The line code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_r_ap-south-1</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -173,7 +189,10 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -181,7 +200,14 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
             }
 
             /**
-             * IsAvailable.
+             * <p>Indicates whether the line can be selected as the source of a Domain Name System (DNS) request. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAvailable(Boolean isAvailable) {
                 this.isAvailable = isAvailable;
@@ -189,7 +215,10 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -197,7 +226,10 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCode.
+             * <p>The code of the parent line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String	aliyun</p>
              */
             public Builder parentCode(String parentCode) {
                 this.parentCode = parentCode;
@@ -211,6 +243,12 @@ public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudGtmSystemLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudGtmSystemLinesResponseBody</p>
+     */
     public static class SystemLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemLine")
         private java.util.List < SystemLine> systemLine;

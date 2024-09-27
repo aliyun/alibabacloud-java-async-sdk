@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDomainBackupResponseBody} extends {@link TeaModel}
  *
  * <p>AddDomainBackupResponseBody</p>
@@ -61,7 +62,10 @@ public class AddDomainBackupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.aliyun.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -69,7 +73,10 @@ public class AddDomainBackupResponseBody extends TeaModel {
         }
 
         /**
-         * The backup cycle.
+         * <p>The backup cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAY</p>
          */
         public Builder periodType(String periodType) {
             this.periodType = periodType;
@@ -77,7 +84,10 @@ public class AddDomainBackupResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD552816-FCC8-4832-B4A2-2DA0C2BA1688</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

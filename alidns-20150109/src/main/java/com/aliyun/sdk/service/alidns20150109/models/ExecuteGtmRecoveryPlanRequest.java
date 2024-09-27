@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteGtmRecoveryPlanRequest} extends {@link RequestModel}
  *
  * <p>ExecuteGtmRecoveryPlanRequest</p>
@@ -68,7 +69,15 @@ public class ExecuteGtmRecoveryPlanRequest extends Request {
         } 
 
         /**
-         * The language used by the user.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +86,10 @@ public class ExecuteGtmRecoveryPlanRequest extends Request {
         }
 
         /**
-         * The ID of the disaster recovery plan that you want to executed.
+         * <p>The ID of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder recoveryPlanId(Long recoveryPlanId) {
             this.putQueryParameter("RecoveryPlanId", recoveryPlanId);

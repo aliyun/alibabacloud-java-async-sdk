@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDohSubDomainStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDohSubDomainStatisticsRequest</p>
@@ -96,10 +97,11 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the YYYY-MM-DD format.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+         * <p>The default value is the day when you perform the operation.</p>
          * 
-         * The default value is the day when you perform the operation.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -108,7 +110,10 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
         }
 
         /**
-         * The language type.
+         * <p>The language type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,10 +122,11 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</p>
+         * <p>You can query only the DNS records of the latest 90 days. <code>The value of StartDate must be greater than or equal to the difference between the current date and 90</code>.</p>
          * 
-         * You can query only the DNS records of the latest 90 days. `The value of StartDate must be greater than or equal to the difference between the current date and 90`.
+         * <strong>example:</strong>
+         * <p>2019-07-04</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -129,7 +135,10 @@ public class DescribeDohSubDomainStatisticsRequest extends Request {
         }
 
         /**
-         * The subdomain whose statistics you want to query.
+         * <p>The subdomain whose statistics you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         public Builder subDomain(String subDomain) {
             this.putQueryParameter("SubDomain", subDomain);

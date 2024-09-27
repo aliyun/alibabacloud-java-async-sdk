@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDnsProductInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDnsProductInstancesRequest</p>
@@ -152,10 +153,14 @@ public class DescribeDnsProductInstancesRequest extends Request {
         } 
 
         /**
-         * The Sorting direction. Values:
-         * <p>
-         * * **DESC**: Descending (if not specified, the default is descending order)
-         * * **ASC**: Ascending
+         * <p>The order in which you want to sort returned entries. Valid values:</p>
+         * <ul>
+         * <li>DESC: Returned entries are sorted in descending order. If this parameter is left empty, returned entries are sorted in descending order by default.</li>
+         * <li>ASC: Returned entries are sorted in ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DESC</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -164,11 +169,14 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The type of the domain name. Valid values:
-         * <p>
+         * <p>The type of the domain name. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC (default): hosted public domain name</li>
+         * <li>CACHE: cached public domain name</li>
+         * </ul>
          * 
-         * *   PUBLIC (default): hosted public domain name
-         * *   CACHE: cached public domain name
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -177,11 +185,15 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en</p>
          * 
-         * *   **zh** : Chinese
-         * *   **en** (default) : English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -190,10 +202,14 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The Sorting parameter. Values:
-         * <p>
-         * * createDate: Sort by creation time (if not specified, the default is to sort by creation time)
-         * * expireDate: Sort by expiration time
+         * <p>The method that is used to sort returned entries. Valid values:</p>
+         * <ul>
+         * <li>createDate: sorts returned entries by creation time. If this parameter is left empty, returned entries are sorted by creation time by default.</li>
+         * <li>expireDate: sorts returned entries by expiration time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>createDate</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -202,7 +218,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -211,7 +230,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **100**. Default value: **20**.
+         * <p>The number of entries to return on each page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,7 +242,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -229,7 +254,10 @@ public class DescribeDnsProductInstancesRequest extends Request {
         }
 
         /**
-         * The version code of the Alibaba Cloud DNS instance.
+         * <p>The version code of the Alibaba Cloud DNS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>version1</p>
          */
         public Builder versionCode(String versionCode) {
             this.putQueryParameter("VersionCode", versionCode);

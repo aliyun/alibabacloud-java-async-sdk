@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecordStatisticsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         private Statistics statistics; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6AEC7A64-3CB1-4C49-8B35-0B901F1E26BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics on the DNS requests.
+         * <p>The statistics on the DNS requests.</p>
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -70,6 +74,12 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecordStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordStatisticsResponseBody</p>
+     */
     public static class Statistic extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * The number of DNS requests.
+             * <p>The number of DNS requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15292887</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,7 +130,10 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1556640000000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -131,6 +147,12 @@ public class DescribeRecordStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordStatisticsResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Statistic")
         private java.util.List < Statistic> statistic;

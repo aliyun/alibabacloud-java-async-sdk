@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDNSSLBWeightResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDNSSLBWeightResponseBody</p>
@@ -61,7 +62,10 @@ public class UpdateDNSSLBWeightResponseBody extends TeaModel {
         private Integer weight; 
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -69,7 +73,10 @@ public class UpdateDNSSLBWeightResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class UpdateDNSSLBWeightResponseBody extends TeaModel {
         }
 
         /**
-         * The updated weight.
+         * <p>The updated weight.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder weight(Integer weight) {
             this.weight = weight;

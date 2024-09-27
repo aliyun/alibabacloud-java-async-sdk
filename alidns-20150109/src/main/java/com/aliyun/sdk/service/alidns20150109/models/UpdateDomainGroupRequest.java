@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDomainGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateDomainGroupRequest</p>
@@ -83,7 +84,10 @@ public class UpdateDomainGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the domain name group.
+         * <p>The ID of the domain name group whose name you want to modify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -92,7 +96,10 @@ public class UpdateDomainGroupRequest extends Request {
         }
 
         /**
-         * The new name of the domain name group.
+         * <p>The new name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewName</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -101,7 +108,15 @@ public class UpdateDomainGroupRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCloudGtmInstanceConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateCloudGtmInstanceConfigRequest</p>
@@ -179,7 +180,14 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -188,7 +196,10 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can specify a custom value for this parameter, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ae05db4-10e7-11ef-b126-00163e24**22</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -197,7 +208,14 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * EnableStatus.
+         * <p>The enabling state of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>enable: The access domain name is enabled and the intelligent scheduling policy of the corresponding GTM instance takes effect.</li>
+         * <li>disable: The access domain name is disabled and the intelligent scheduling policy of the corresponding GTM instance is unavailable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder enableStatus(String enableStatus) {
             this.putQueryParameter("EnableStatus", enableStatus);
@@ -206,7 +224,10 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Global Traffic Manager (GTM) 3.0 instance. This ID uniquely identifies a GTM 3.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-jmp3qnw**03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -215,7 +236,10 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The description of the access domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -224,7 +248,10 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * ScheduleHostname.
+         * <p>The hostname of the access domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>www</p>
          */
         public Builder scheduleHostname(String scheduleHostname) {
             this.putQueryParameter("ScheduleHostname", scheduleHostname);
@@ -233,7 +260,15 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * ScheduleRrType.
+         * <p>The type of the Domain Name System (DNS) record configured for the access domain name. Valid values:</p>
+         * <ul>
+         * <li>A: IPv4 address</li>
+         * <li>AAAA: IPv6 address</li>
+         * <li>CNAME: domain name</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         public Builder scheduleRrType(String scheduleRrType) {
             this.putQueryParameter("ScheduleRrType", scheduleRrType);
@@ -242,7 +277,14 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * ScheduleZoneMode.
+         * <p>The configuration mode of the access domain name. Valid values:</p>
+         * <ul>
+         * <li>sys_assign: system allocation. This mode is not supported.</li>
+         * <li>custom: custom allocation. You must select a zone within the account to which the instance belongs and enter a hostname to generate an access domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder scheduleZoneMode(String scheduleZoneMode) {
             this.putQueryParameter("ScheduleZoneMode", scheduleZoneMode);
@@ -251,7 +293,10 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * ScheduleZoneName.
+         * <p>The name of the parent zone for the access domain name configured in GTM. In most cases, the value of this parameter is the name of a zone hosted by Alibaba Cloud DNS. This zone belongs to the account to which the GTM instance belongs. You can specify the name of a zone or subzone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder scheduleZoneName(String scheduleZoneName) {
             this.putQueryParameter("ScheduleZoneName", scheduleZoneName);
@@ -260,7 +305,10 @@ public class CreateCloudGtmInstanceConfigRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * <p>The global time to live (TTL) period. Unit: seconds. The global TTL period affects how long the DNS records that map the access domain name to the addresses in the address pools are cached in the local DNS servers of Internet service providers (ISPs). You can specify a custom value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);

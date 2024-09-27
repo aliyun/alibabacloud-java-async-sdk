@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSupportLinesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSupportLinesRequest</p>
@@ -81,7 +82,7 @@ public class DescribeSupportLinesRequest extends Request {
         } 
 
         /**
-         * 域名名称。
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -90,7 +91,7 @@ public class DescribeSupportLinesRequest extends Request {
         }
 
         /**
-         * 语言。
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -99,7 +100,7 @@ public class DescribeSupportLinesRequest extends Request {
         }
 
         /**
-         * 用户端IP。
+         * UserClientIp.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

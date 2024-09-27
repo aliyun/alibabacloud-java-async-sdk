@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTagsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 200.
+         * <p>The number of entries per page. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89184F33-48A1-4401-9C0F-40E45DB091AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The tags added to the resource.
+         * <p>The tags added to the resource.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -117,7 +127,10 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class DescribeTagsResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * The key of tag N added to the resource.
+             * <p>The key of tag N added to the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The values of tags added to the resource.
+             * <p>The values of tags added to the resource.</p>
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;

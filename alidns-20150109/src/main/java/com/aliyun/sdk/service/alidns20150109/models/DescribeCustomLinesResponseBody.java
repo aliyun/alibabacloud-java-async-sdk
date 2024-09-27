@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomLinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomLinesResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * The custom lines.
+         * <p>The custom lines.</p>
          */
         public Builder customLines(java.util.List < CustomLines> customLines) {
             this.customLines = customLines;
@@ -105,7 +106,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B57C121B-A45F-44D8-A9B2-13E5A5044195</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of custom lines.
+         * <p>The total number of custom lines.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -137,7 +150,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned pages.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -150,6 +166,12 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomLinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomLinesResponseBody</p>
+     */
     public static class CustomLines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -201,7 +223,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the custom line.
+             * <p>The code of the custom line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hra0yc-597</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -209,7 +234,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the custom line.
+             * <p>The unique ID of the custom line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>597</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -217,7 +245,10 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom line.
+             * <p>The name of the custom line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hra0yd-597</p>
              */
             public Builder name(String name) {
                 this.name = name;

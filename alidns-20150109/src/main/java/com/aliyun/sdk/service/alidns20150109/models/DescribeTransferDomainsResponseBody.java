@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTransferDomainsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTransferDomainsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The domain names that were transferred between accounts.
+         * <p>The domain names that were transferred between accounts.</p>
          */
         public Builder domainTransfers(DomainTransfers domainTransfers) {
             this.domainTransfers = domainTransfers;
@@ -93,7 +94,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTransferDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTransferDomainsResponseBody</p>
+     */
     public static class DomainTransfer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -217,7 +236,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             private Long targetUserId; 
 
             /**
-             * The time when the domain name was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
+             * <p>The time when the domain name was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-10-30T07:16Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -225,7 +247,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572419764000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -233,7 +258,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -241,7 +269,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID from which the domain name was transferred.
+             * <p>The user ID from which the domain name was transferred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2222</p>
              */
             public Builder fromUserId(Long fromUserId) {
                 this.fromUserId = fromUserId;
@@ -249,7 +280,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the domain name that was transferred.
+             * <p>The ID of the domain name that was transferred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -257,7 +291,10 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID to which the domain name was transferred.
+             * <p>The user ID to which the domain name was transferred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111</p>
              */
             public Builder targetUserId(Long targetUserId) {
                 this.targetUserId = targetUserId;
@@ -271,6 +308,12 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTransferDomainsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTransferDomainsResponseBody</p>
+     */
     public static class DomainTransfers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainTransfer")
         private java.util.List < DomainTransfer> domainTransfer;

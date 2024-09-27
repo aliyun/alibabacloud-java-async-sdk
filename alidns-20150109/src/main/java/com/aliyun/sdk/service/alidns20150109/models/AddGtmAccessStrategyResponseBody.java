@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmAccessStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>AddGtmAccessStrategyResponseBody</p>
@@ -49,7 +50,10 @@ public class AddGtmAccessStrategyResponseBody extends TeaModel {
         private String strategyId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29D0F8F8-5499-4F6C-9FDC-1EE13BF55925</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class AddGtmAccessStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the access policy created.
+         * <p>The ID of the access policy created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategyid</p>
          */
         public Builder strategyId(String strategyId) {
             this.strategyId = strategyId;

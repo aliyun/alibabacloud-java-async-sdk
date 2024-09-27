@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmAddressPoolResponseBody} extends {@link TeaModel}
  *
  * <p>AddGtmAddressPoolResponseBody</p>
@@ -61,7 +62,10 @@ public class AddGtmAddressPoolResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the address pool created.
+         * <p>The ID of the address pool created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hraf3x</p>
          */
         public Builder addrPoolId(String addrPoolId) {
             this.addrPoolId = addrPoolId;
@@ -69,7 +73,10 @@ public class AddGtmAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the health check configuration.
+         * <p>The ID of the health check configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hraf14</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;
@@ -77,7 +84,10 @@ public class AddGtmAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

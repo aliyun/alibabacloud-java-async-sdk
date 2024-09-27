@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudGtmInstanceConfigAlertResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudGtmInstanceConfigAlertResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AlertConfig.
+         * <p>The alert configurations.</p>
          */
         public Builder alertConfig(AlertConfig alertConfig) {
             this.alertConfig = alertConfig;
@@ -105,7 +106,7 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         }
 
         /**
-         * AlertGroup.
+         * <p>The alert contact groups.</p>
          */
         public Builder alertGroup(AlertGroup alertGroup) {
             this.alertGroup = alertGroup;
@@ -113,7 +114,14 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         }
 
         /**
-         * AlertMode.
+         * <p>The alert configuration mode of the instance. Valid values:</p>
+         * <ul>
+         * <li>global: global alert configuration</li>
+         * <li>instance_config: custom alert configuration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder alertMode(String alertMode) {
             this.alertMode = alertMode;
@@ -121,7 +129,10 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigId.
+         * <p>The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Config-000**11</p>
          */
         public Builder configId(String configId) {
             this.configId = configId;
@@ -129,7 +140,10 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the GTM 3.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gtm-cn-wwo3a3hbz**</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -137,7 +151,10 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F32959D-417B-4D66-8463-68606605E3E2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,6 +167,12 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudGtmInstanceConfigAlertResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudGtmInstanceConfigAlertResponseBody</p>
+     */
     public static class AlertConfigAlertConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DingtalkNotice")
         private Boolean dingtalkNotice;
@@ -213,7 +236,14 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
             private Boolean smsNotice; 
 
             /**
-             * DingtalkNotice.
+             * <p>Indicates whether DingTalk notifications are configured. Valid values:</p>
+             * <ul>
+             * <li>true: DingTalk notifications are configured. DingTalk notifications are sent after alerts are triggered.</li>
+             * <li>false: DingTalk notifications are not configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dingtalkNotice(Boolean dingtalkNotice) {
                 this.dingtalkNotice = dingtalkNotice;
@@ -221,7 +251,14 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
             }
 
             /**
-             * EmailNotice.
+             * <p>Indicates whether email notifications are configured. Valid values:</p>
+             * <ul>
+             * <li>true: Email notifications are configured. Emails are sent after alerts are triggered.</li>
+             * <li>false: Email notifications are not configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailNotice(Boolean emailNotice) {
                 this.emailNotice = emailNotice;
@@ -229,7 +266,16 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
             }
 
             /**
-             * NoticeType.
+             * <p>The type of the alert event. Valid values:</p>
+             * <ul>
+             * <li>addr_alert: The address is unavailable.</li>
+             * <li>addr_resume: The address becomes available.</li>
+             * <li>addr_pool_unavailable: The address pool is unavailable.</li>
+             * <li>addr_pool_available: The address pool becomes available.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>addr_alert</p>
              */
             public Builder noticeType(String noticeType) {
                 this.noticeType = noticeType;
@@ -237,7 +283,15 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
             }
 
             /**
-             * SmsNotice.
+             * <p>Indicates whether text message notifications are configured. Valid values:</p>
+             * <ul>
+             * <li>true: Text message notifications are configured. Text messages are sent after alerts are triggered.</li>
+             * <li>false: Text message notifications are not configured.</li>
+             * </ul>
+             * <p>Only the China site (aliyun.com) supports text message notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder smsNotice(Boolean smsNotice) {
                 this.smsNotice = smsNotice;
@@ -251,6 +305,12 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudGtmInstanceConfigAlertResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudGtmInstanceConfigAlertResponseBody</p>
+     */
     public static class AlertConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private java.util.List < AlertConfigAlertConfig> alertConfig;
@@ -278,7 +338,7 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
             private java.util.List < AlertConfigAlertConfig> alertConfig; 
 
             /**
-             * AlertConfig.
+             * <p>The alert configurations.</p>
              */
             public Builder alertConfig(java.util.List < AlertConfigAlertConfig> alertConfig) {
                 this.alertConfig = alertConfig;
@@ -292,6 +352,12 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudGtmInstanceConfigAlertResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudGtmInstanceConfigAlertResponseBody</p>
+     */
     public static class AlertGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertGroup")
         private java.util.List < String > alertGroup;
@@ -319,7 +385,7 @@ public class DescribeCloudGtmInstanceConfigAlertResponseBody extends TeaModel {
             private java.util.List < String > alertGroup; 
 
             /**
-             * AlertGroup.
+             * <p>The alert contact groups.</p>
              */
             public Builder alertGroup(java.util.List < String > alertGroup) {
                 this.alertGroup = alertGroup;

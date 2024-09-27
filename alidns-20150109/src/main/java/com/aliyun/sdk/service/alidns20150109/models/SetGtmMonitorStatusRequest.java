@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetGtmMonitorStatusRequest} extends {@link RequestModel}
  *
  * <p>SetGtmMonitorStatusRequest</p>
@@ -83,7 +84,10 @@ public class SetGtmMonitorStatusRequest extends Request {
         } 
 
         /**
-         * The language used by the user.
+         * <p>The language used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +96,10 @@ public class SetGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * The health check ID.
+         * <p>The health check ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc1234</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);
@@ -101,11 +108,14 @@ public class SetGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether health check is enabled for the address pool. Valid values:
-         * <p>
+         * <p>Specifies whether health check is enabled for the address pool. Valid values:</p>
+         * <ul>
+         * <li><strong>OPEN</strong>: Enabled</li>
+         * <li><strong>CLOSE</strong>: Disabled</li>
+         * </ul>
          * 
-         * *   **OPEN**: Enabled
-         * *   **CLOSE**: Disabled
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

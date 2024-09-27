@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCustomLineRequest} extends {@link RequestModel}
  *
  * <p>AddCustomLineRequest</p>
@@ -98,7 +99,10 @@ public class AddCustomLineRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -107,7 +111,7 @@ public class AddCustomLineRequest extends Request {
         }
 
         /**
-         * The CIDR blocks.
+         * <p>The CIDR blocks.</p>
          */
         public Builder ipSegment(java.util.List < IpSegment> ipSegment) {
             this.putQueryParameter("IpSegment", ipSegment);
@@ -116,7 +120,10 @@ public class AddCustomLineRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -125,7 +132,7 @@ public class AddCustomLineRequest extends Request {
         }
 
         /**
-         * The name of the custom line.
+         * <p>The name of the custom line.</p>
          */
         public Builder lineName(String lineName) {
             this.putQueryParameter("LineName", lineName);
@@ -140,6 +147,12 @@ public class AddCustomLineRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddCustomLineRequest} extends {@link TeaModel}
+     *
+     * <p>AddCustomLineRequest</p>
+     */
     public static class IpSegment extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndIp")
         private String endIp;
@@ -179,7 +192,10 @@ public class AddCustomLineRequest extends Request {
             private String startIp; 
 
             /**
-             * The end IP address of the CIDR block.
+             * <p>The end IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.254</p>
              */
             public Builder endIp(String endIp) {
                 this.endIp = endIp;
@@ -187,7 +203,10 @@ public class AddCustomLineRequest extends Request {
             }
 
             /**
-             * The start IP address of the CIDR block.
+             * <p>The start IP address of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.0.2.0</p>
              */
             public Builder startIp(String startIp) {
                 this.startIp = startIp;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePdnsAppKeysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePdnsAppKeysResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePdnsAppKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePdnsAppKeysResponseBody</p>
+     */
     public static class AppKeys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppKeyId")
         private String appKeyId;
@@ -80,6 +87,9 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
@@ -87,6 +97,7 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
             this.appKeyId = builder.appKeyId;
             this.createDate = builder.createDate;
             this.createTimestamp = builder.createTimestamp;
+            this.remark = builder.remark;
             this.state = builder.state;
         }
 
@@ -120,6 +131,13 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -130,6 +148,7 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
             private String appKeyId; 
             private String createDate; 
             private Long createTimestamp; 
+            private String remark; 
             private String state; 
 
             /**
@@ -153,6 +172,14 @@ public class DescribePdnsAppKeysResponseBody extends TeaModel {
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 

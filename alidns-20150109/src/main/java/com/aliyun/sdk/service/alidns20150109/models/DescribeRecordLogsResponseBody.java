@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordLogsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecordLogsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation logs.
+         * <p>The operation logs.</p>
          */
         public Builder recordLogs(RecordLogs recordLogs) {
             this.recordLogs = recordLogs;
@@ -109,7 +116,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecordLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordLogsResponseBody</p>
+     */
     public static class RecordLog extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
@@ -205,7 +224,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The operation that you performed.
+             * <p>The operation that you performed.</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -213,7 +232,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when you performed the operation.
+             * <p>The time when you performed the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-12T09:23Z</p>
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -221,7 +243,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when you performed the operation. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * <p>The time when you performed the operation. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>134514540000</p>
              */
             public Builder actionTimestamp(Long actionTimestamp) {
                 this.actionTimestamp = actionTimestamp;
@@ -229,7 +254,10 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the operator.
+             * <p>The IP address of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>182.92.253.XX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -237,7 +265,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation message.
+             * <p>The operation message.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -251,6 +279,12 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRecordLogsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecordLogsResponseBody</p>
+     */
     public static class RecordLogs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecordLog")
         private java.util.List < RecordLog> recordLog;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGtmMonitorRequest} extends {@link RequestModel}
  *
  * <p>UpdateGtmMonitorRequest</p>
@@ -155,7 +156,10 @@ public class UpdateGtmMonitorRequest extends Request {
         } 
 
         /**
-         * The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.
+         * <p>The maximum number of consecutive exceptions detected. If the number of consecutive exceptions detected reaches the maximum number, the application service is deemed abnormal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -164,7 +168,10 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * The health check interval. Unit: seconds. Set the value to 60.
+         * <p>The health check interval. Unit: seconds. Set the value to 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -173,7 +180,7 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * The monitored nodes.
+         * <p>The monitored nodes.</p>
          */
         public Builder ispCityNode(java.util.List < IspCityNode> ispCityNode) {
             this.putQueryParameter("IspCityNode", ispCityNode);
@@ -182,7 +189,10 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * The language of the values of specific response parameters.
+         * <p>The language of the values of specific response parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -191,7 +201,10 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the health check configuration.
+         * <p>The ID of the health check configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234abc</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);
@@ -200,27 +213,29 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:
-         * <p>
+         * <p>The extended information, that is, the parameters required for the protocol. Different protocols require different parameters:</p>
+         * <p>HTTP or HTTPS:</p>
+         * <ul>
+         * <li>port: the port to check.</li>
+         * <li>failureRate: the failure rate.</li>
+         * <li>code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.</li>
+         * <li>host: the host configuration.</li>
+         * <li>path: the health check URL.</li>
+         * </ul>
+         * <p>PING:</p>
+         * <ul>
+         * <li>packetNum: the number of ping packets.</li>
+         * <li>packetLossRate: the loss rate of ping packets.</li>
+         * <li>failureRate: the failure rate.</li>
+         * </ul>
+         * <p>TCP:</p>
+         * <ul>
+         * <li>port: the port to check.</li>
+         * <li>failureRate: the failure rate.</li>
+         * </ul>
          * 
-         * HTTP or HTTPS:
-         * 
-         * *   port: the port to check.
-         * *   failureRate: the failure rate.
-         * *   code: the status code threshold. If the returned status code is greater than the specified threshold, the application service is deemed abnormal. Valid values: 400 and 500.
-         * *   host: the host configuration.
-         * *   path: the health check URL.
-         * 
-         * PING:
-         * 
-         * *   packetNum: the number of ping packets.
-         * *   packetLossRate: the loss rate of ping packets.
-         * *   failureRate: the failure rate.
-         * 
-         * TCP:
-         * 
-         * *   port: the port to check.
-         * *   failureRate: the failure rate.
+         * <strong>example:</strong>
+         * <p>{&quot;code&quot;:200,&quot;path&quot;:&quot;\index.htm&quot;,&quot;host&quot;:&quot;aliyun.com&quot;}</p>
          */
         public Builder monitorExtendInfo(String monitorExtendInfo) {
             this.putQueryParameter("MonitorExtendInfo", monitorExtendInfo);
@@ -229,7 +244,10 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * The protocol used for the health check.
+         * <p>The protocol used for the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -238,7 +256,10 @@ public class UpdateGtmMonitorRequest extends Request {
         }
 
         /**
-         * The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.
+         * <p>The health check timeout period. Unit: milliseconds. Valid values: 2000, 3000, 5000, and 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         public Builder timeout(Integer timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -253,6 +274,12 @@ public class UpdateGtmMonitorRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateGtmMonitorRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateGtmMonitorRequest</p>
+     */
     public static class IspCityNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -292,7 +319,10 @@ public class UpdateGtmMonitorRequest extends Request {
             private String ispCode; 
 
             /**
-             * The code of the city where the monitored node is deployed.
+             * <p>The code of the city where the monitored node is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>572</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -300,10 +330,14 @@ public class UpdateGtmMonitorRequest extends Request {
             }
 
             /**
-             * *   The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.
-             * <p>
-             * *   If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.
-             * *   If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.
+             * <ul>
+             * <li>The code of the Internet service provider (ISP) to which the monitored node belongs. For more information about specific values, see the response parameters of DescribeGtmMonitorAvailableConfig.</li>
+             * <li>If the value of the GroupType parameter is BGP or OVERSEAS, IspCode is optional. The default value is 465.</li>
+             * <li>If the value of the GroupType parameter is not BGP or OVERSEAS, IspCode is required and is used together with CityCode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;

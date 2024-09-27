@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDNSSLBStatusResponseBody} extends {@link TeaModel}
  *
  * <p>SetDNSSLBStatusResponseBody</p>
@@ -61,7 +62,10 @@ public class SetDNSSLBStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether weighted round-robin is enabled for the subdomain name.
+         * <p>Indicates whether weighted round-robin is enabled for the subdomain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder open(Boolean open) {
             this.open = open;
@@ -69,7 +73,10 @@ public class SetDNSSLBStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of A records that are matched.
+         * <p>The number of A records that are matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder recordCount(Long recordCount) {
             this.recordCount = recordCount;
@@ -77,7 +84,10 @@ public class SetDNSSLBStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

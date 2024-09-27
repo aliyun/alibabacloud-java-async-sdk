@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainRecordInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainRecordInfoResponseBody</p>
@@ -217,7 +218,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         private String value; 
 
         /**
-         * The ID of the domain name.
+         * <p>The ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00efd71a-770e-4255-b54e-6fe5659baffe</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -225,7 +229,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dns-example.top</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -233,7 +240,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the domain name group.
+         * <p>The ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -241,7 +251,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the domain name group.
+         * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyGroup</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -249,7 +262,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The DNS resolution line.
+         * <p>The DNS resolution line.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder line(String line) {
             this.line = line;
@@ -257,7 +273,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The lock state of the DNS record. Valid values: **true and false**.
+         * <p>The lock state of the DNS record. Valid values: <strong>true and false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder locked(Boolean locked) {
             this.locked = locked;
@@ -265,7 +284,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The priority of the mail exchanger (MX) record.
+         * <p>The priority of the mail exchanger (MX) record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder priority(Long priority) {
             this.priority = priority;
@@ -273,7 +295,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The Punycode for the domain name. This parameter is returned only for Chinese domain names.
+         * <p>The Punycode for the domain name. This parameter is returned only for Chinese domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xn--fsq270a.com</p>
          */
         public Builder punyCode(String punyCode) {
             this.punyCode = punyCode;
@@ -281,7 +306,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The hostname.
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@</p>
          */
         public Builder rr(String rr) {
             this.rr = rr;
@@ -289,7 +317,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the DNS record.
+         * <p>The ID of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9999985</p>
          */
         public Builder recordId(String recordId) {
             this.recordId = recordId;
@@ -297,7 +328,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The description of your DNS record.
+         * <p>The description of your DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -305,7 +339,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -313,7 +350,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the DNS records. Valid values: **Enable and Disable**.
+         * <p>The state of the DNS records. Valid values: <strong>Enable and Disable</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -321,7 +361,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time-to-live (TTL) of the DNS record.
+         * <p>The time-to-live (TTL) of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder TTL(Long TTL) {
             this.TTL = TTL;
@@ -329,7 +372,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the DNS record.
+         * <p>The type of the DNS record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MX</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -337,7 +383,10 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The record value.
+         * <p>The record value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder value(String value) {
             this.value = value;

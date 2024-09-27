@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetDnsGtmMonitorStatusRequest} extends {@link RequestModel}
  *
  * <p>SetDnsGtmMonitorStatusRequest</p>
@@ -83,7 +84,10 @@ public class SetDnsGtmMonitorStatusRequest extends Request {
         } 
 
         /**
-         * The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.
+         * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +96,10 @@ public class SetDnsGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * The ID of the health check task.
+         * <p>The ID of the health check task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MonitorConfigId1</p>
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.putQueryParameter("MonitorConfigId", monitorConfigId);
@@ -101,11 +108,14 @@ public class SetDnsGtmMonitorStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the health check feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the health check feature. Valid values:</p>
+         * <ul>
+         * <li>OPEN: enables the health check feature.</li>
+         * <li>CLOSE: disables the health check feature.</li>
+         * </ul>
          * 
-         * *   OPEN: enables the health check feature.
-         * *   CLOSE: disables the health check feature.
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

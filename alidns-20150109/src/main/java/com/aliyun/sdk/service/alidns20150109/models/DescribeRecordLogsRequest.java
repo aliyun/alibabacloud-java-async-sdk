@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecordLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRecordLogsRequest</p>
@@ -153,7 +154,10 @@ public class DescribeRecordLogsRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -162,7 +166,10 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.
+         * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -171,7 +178,10 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -180,7 +190,10 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page **1**. Default value: **1**.
+         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +202,10 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 100**. Default value: **20**.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +214,10 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The start date of the query. Specify the start date in the **YYYY-MM-DD** format.
+         * <p>The start date of the query. Specify the start date in the <strong>YYYY-MM-DD</strong> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-12</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -207,7 +226,10 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The IP address of the client.
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -216,7 +238,10 @@ public class DescribeRecordLogsRequest extends Request {
         }
 
         /**
-         * The end date of the query. Specify the end date in the **YYYY-MM-DD** format.
+         * <p>The end date of the query. Specify the end date in the <strong>YYYY-MM-DD</strong> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-12</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("endDate", endDate);

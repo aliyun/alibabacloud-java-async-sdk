@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddGtmRecoveryPlanResponseBody} extends {@link TeaModel}
  *
  * <p>AddGtmRecoveryPlanResponseBody</p>
@@ -49,7 +50,10 @@ public class AddGtmRecoveryPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the disaster recovery plan created.
+         * <p>The ID of the disaster recovery plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder recoveryPlanId(String recoveryPlanId) {
             this.recoveryPlanId = recoveryPlanId;
@@ -57,7 +61,10 @@ public class AddGtmRecoveryPlanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

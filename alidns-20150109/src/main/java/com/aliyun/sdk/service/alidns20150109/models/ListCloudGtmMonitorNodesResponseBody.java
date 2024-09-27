@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudGtmMonitorNodesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudGtmMonitorNodesResponseBody</p>
@@ -61,7 +62,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Ipv4IspCityNodes.
+         * <p>Public IPv4 monitoring node list.</p>
          */
         public Builder ipv4IspCityNodes(Ipv4IspCityNodes ipv4IspCityNodes) {
             this.ipv4IspCityNodes = ipv4IspCityNodes;
@@ -69,7 +70,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         }
 
         /**
-         * Ipv6IspCityNodes.
+         * <p>List of public IPv6 monitoring nodes.</p>
          */
         public Builder ipv6IspCityNodes(Ipv6IspCityNodes ipv6IspCityNodes) {
             this.ipv6IspCityNodes = ipv6IspCityNodes;
@@ -77,7 +78,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request identification code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudGtmMonitorNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorNodesResponseBody</p>
+     */
     public static class Ips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
@@ -131,6 +141,12 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmMonitorNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorNodesResponseBody</p>
+     */
     public static class Ipv4IspCityNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -278,7 +294,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * CityCode.
+             * <p>City code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>503</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -286,7 +305,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * <p>City name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -294,7 +316,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CountryCode.
+             * <p>Country code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>629</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -302,7 +327,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CountryName.
+             * <p>Country name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -310,7 +338,14 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultSelected.
+             * <p>Monitor node default selection:</p>
+             * <ul>
+             * <li>true: Selected by default</li>
+             * <li>false: Not selected by default</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -318,7 +353,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>Monitor probe group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP Nodes</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -326,7 +364,15 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * <p>Monitoring node group type, currently supported:</p>
+             * <ul>
+             * <li>BGP: BGP node</li>
+             * <li>OVERSEAS: International node</li>
+             * <li>ISP: Carrier node</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -334,7 +380,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * <p>List of node IP addresses.</p>
              */
             public Builder ips(Ips ips) {
                 this.ips = ips;
@@ -342,7 +388,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IspCode.
+             * <p>Operator code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -350,7 +399,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>Operator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -358,7 +410,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>Unique identifier ID of the probe node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node-ewze1bysndy4gf**j8</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -372,6 +427,12 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmMonitorNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorNodesResponseBody</p>
+     */
     public static class Ipv4IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4IspCityNode")
         private java.util.List < Ipv4IspCityNode> ipv4IspCityNode;
@@ -413,6 +474,12 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmMonitorNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorNodesResponseBody</p>
+     */
     public static class Ipv6IspCityNodeIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
@@ -454,6 +521,12 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmMonitorNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorNodesResponseBody</p>
+     */
     public static class Ipv6IspCityNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
@@ -601,7 +674,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * CityCode.
+             * <p>City code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>357</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -609,7 +685,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * <p>City name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shanghai</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -617,7 +696,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CountryCode.
+             * <p>Country code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>629</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -625,7 +707,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * CountryName.
+             * <p>Country name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -633,7 +718,14 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultSelected.
+             * <p>Monitor node default selection:</p>
+             * <ul>
+             * <li>true: Selected by default</li>
+             * <li>false: Not selected by default</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultSelected(Boolean defaultSelected) {
                 this.defaultSelected = defaultSelected;
@@ -641,7 +733,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>Monitoring probe group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -649,7 +744,15 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * <p>Monitoring node group type, currently supported:</p>
+             * <ul>
+             * <li>BGP: BGP node</li>
+             * <li>OVERSEAS: International node</li>
+             * <li>ISP: Carrier node</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BGP</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -657,7 +760,7 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * <p>List of node IP addresses.</p>
              */
             public Builder ips(Ipv6IspCityNodeIps ips) {
                 this.ips = ips;
@@ -665,7 +768,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IspCode.
+             * <p>Operator code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>465</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -673,7 +779,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * <p>Operator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -681,7 +790,10 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>Unique identifier ID of the probe node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node-ewze1bysndy4gf**j8</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -695,6 +807,12 @@ public class ListCloudGtmMonitorNodesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudGtmMonitorNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudGtmMonitorNodesResponseBody</p>
+     */
     public static class Ipv6IspCityNodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6IspCityNode")
         private java.util.List < Ipv6IspCityNode> ipv6IspCityNode;

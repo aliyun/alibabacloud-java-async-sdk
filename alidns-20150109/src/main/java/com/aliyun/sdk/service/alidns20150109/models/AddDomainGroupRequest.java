@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDomainGroupRequest} extends {@link RequestModel}
  *
  * <p>AddDomainGroupRequest</p>
@@ -68,7 +69,10 @@ public class AddDomainGroupRequest extends Request {
         } 
 
         /**
-         * The name of the domain name group.
+         * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyGroup</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -77,7 +81,15 @@ public class AddDomainGroupRequest extends Request {
         }
 
         /**
-         * The language.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
