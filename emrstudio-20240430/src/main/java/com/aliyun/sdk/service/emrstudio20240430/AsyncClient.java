@@ -37,19 +37,27 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeWorkflowInstanceResponse> describeWorkflowInstance(DescribeWorkflowInstanceRequest request);
 
+    CompletableFuture<ListAlertGroupsResponse> listAlertGroups(ListAlertGroupsRequest request);
+
     CompletableFuture<ListManualTaskInstancesResponse> listManualTaskInstances(ListManualTaskInstancesRequest request);
 
     CompletableFuture<ListManualTasksResponse> listManualTasks(ListManualTasksRequest request);
 
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
+    CompletableFuture<ListResourceGroupsResponse> listResourceGroups(ListResourceGroupsRequest request);
+
     CompletableFuture<ListTaskInstancesResponse> listTaskInstances(ListTaskInstancesRequest request);
 
     CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request);
 
+    CompletableFuture<ListWorkflowDirectoriesResponse> listWorkflowDirectories(ListWorkflowDirectoriesRequest request);
+
     CompletableFuture<ListWorkflowInstancesResponse> listWorkflowInstances(ListWorkflowInstancesRequest request);
 
     CompletableFuture<ListWorkflowsResponse> listWorkflows(ListWorkflowsRequest request);
+
+    CompletableFuture<OperateWorkflowInstanceResponse> operateWorkflowInstance(OperateWorkflowInstanceRequest request);
 
     CompletableFuture<RunWorkflowResponse> runWorkflow(RunWorkflowRequest request);
 
