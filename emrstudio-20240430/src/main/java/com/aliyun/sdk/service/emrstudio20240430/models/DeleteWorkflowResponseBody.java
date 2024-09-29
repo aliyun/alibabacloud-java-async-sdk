@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWorkflowResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteWorkflowResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteWorkflowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

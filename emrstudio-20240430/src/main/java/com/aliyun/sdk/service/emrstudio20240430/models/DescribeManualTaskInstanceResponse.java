@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeManualTaskInstanceResponse} extends {@link TeaModel}
  *
  * <p>DescribeManualTaskInstanceResponse</p>

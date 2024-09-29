@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWorkflowResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWorkflowResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeWorkflowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWorkflowResponseBody</p>
+     */
     public static class Schedule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alertGroupId")
         private String alertGroupId;
@@ -371,6 +378,12 @@ public class DescribeWorkflowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWorkflowResponseBody</p>
+     */
     public static class TaskRelations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("postTaskId")
         private String postTaskId;
@@ -432,6 +445,12 @@ public class DescribeWorkflowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWorkflowResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -533,6 +552,12 @@ public class DescribeWorkflowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWorkflowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWorkflowResponseBody</p>
+     */
     public static class Workflow extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;

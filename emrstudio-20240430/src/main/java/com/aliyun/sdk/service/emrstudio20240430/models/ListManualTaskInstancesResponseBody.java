@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListManualTaskInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListManualTaskInstancesResponseBody</p>
@@ -89,7 +90,10 @@ public class ListManualTaskInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class ListManualTaskInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListManualTaskInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListManualTaskInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EmrClusterId")
         private String emrClusterId;

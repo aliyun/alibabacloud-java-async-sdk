@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListWorkflowInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListWorkflowInstancesResponseBody</p>
@@ -110,6 +111,12 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListWorkflowInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListWorkflowInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
         private String endTime;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTaskInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTaskInstancesResponseBody</p>
@@ -89,7 +90,10 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E3A7161-EB7B-172B-8D18-FFB06BA38***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTaskInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTaskInstancesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DryRun")
         private String dryRun;
