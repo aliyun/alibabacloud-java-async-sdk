@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QueryTextStreamResponseBody} extends {@link TeaModel}
+ * {@link InteractTextResponseBody} extends {@link TeaModel}
  *
- * <p>QueryTextStreamResponseBody</p>
+ * <p>InteractTextResponseBody</p>
  */
-public class QueryTextStreamResponseBody extends TeaModel {
+public class InteractTextResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("end")
     private Boolean end;
 
@@ -21,13 +21,25 @@ public class QueryTextStreamResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("relatedImages")
+    private java.util.List < String > relatedImages;
+
+    @com.aliyun.core.annotation.NameInMap("relatedVideos")
+    private java.util.List < String > relatedVideos;
+
+    @com.aliyun.core.annotation.NameInMap("sessionId")
+    private String sessionId;
+
     @com.aliyun.core.annotation.NameInMap("type")
     private Integer type;
 
-    private QueryTextStreamResponseBody(Builder builder) {
+    private InteractTextResponseBody(Builder builder) {
         this.end = builder.end;
         this.index = builder.index;
         this.message = builder.message;
+        this.relatedImages = builder.relatedImages;
+        this.relatedVideos = builder.relatedVideos;
+        this.sessionId = builder.sessionId;
         this.type = builder.type;
     }
 
@@ -35,7 +47,7 @@ public class QueryTextStreamResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static QueryTextStreamResponseBody create() {
+    public static InteractTextResponseBody create() {
         return builder().build();
     }
 
@@ -61,6 +73,27 @@ public class QueryTextStreamResponseBody extends TeaModel {
     }
 
     /**
+     * @return relatedImages
+     */
+    public java.util.List < String > getRelatedImages() {
+        return this.relatedImages;
+    }
+
+    /**
+     * @return relatedVideos
+     */
+    public java.util.List < String > getRelatedVideos() {
+        return this.relatedVideos;
+    }
+
+    /**
+     * @return sessionId
+     */
+    public String getSessionId() {
+        return this.sessionId;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
@@ -71,6 +104,9 @@ public class QueryTextStreamResponseBody extends TeaModel {
         private Boolean end; 
         private Integer index; 
         private String message; 
+        private java.util.List < String > relatedImages; 
+        private java.util.List < String > relatedVideos; 
+        private String sessionId; 
         private Integer type; 
 
         /**
@@ -90,13 +126,34 @@ public class QueryTextStreamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>None</p>
+         * message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * relatedImages.
+         */
+        public Builder relatedImages(java.util.List < String > relatedImages) {
+            this.relatedImages = relatedImages;
+            return this;
+        }
+
+        /**
+         * relatedVideos.
+         */
+        public Builder relatedVideos(java.util.List < String > relatedVideos) {
+            this.relatedVideos = relatedVideos;
+            return this;
+        }
+
+        /**
+         * sessionId.
+         */
+        public Builder sessionId(String sessionId) {
+            this.sessionId = sessionId;
             return this;
         }
 
@@ -108,8 +165,8 @@ public class QueryTextStreamResponseBody extends TeaModel {
             return this;
         }
 
-        public QueryTextStreamResponseBody build() {
-            return new QueryTextStreamResponseBody(this);
+        public InteractTextResponseBody build() {
+            return new InteractTextResponseBody(this);
         } 
 
     } 

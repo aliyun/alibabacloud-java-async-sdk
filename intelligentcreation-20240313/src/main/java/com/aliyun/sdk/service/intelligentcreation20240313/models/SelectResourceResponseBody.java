@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SelectResourceResponseBody} extends {@link TeaModel}
  *
  * <p>SelectResourceResponseBody</p>
@@ -70,6 +71,12 @@ public class SelectResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SelectResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>SelectResourceResponseBody</p>
+     */
     public static class ResourceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("expireTime")
         private String expireTime;

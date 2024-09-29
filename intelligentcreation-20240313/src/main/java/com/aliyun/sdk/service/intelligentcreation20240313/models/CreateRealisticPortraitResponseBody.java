@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRealisticPortraitResponseBody} extends {@link TeaModel}
  *
  * <p>CreateRealisticPortraitResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateRealisticPortraitResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D5798660-1531-5D12-9C20-16FEE9D22351</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

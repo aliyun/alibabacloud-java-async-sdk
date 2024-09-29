@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SelectImageTaskResponseBody} extends {@link TeaModel}
  *
  * <p>SelectImageTaskResponseBody</p>
@@ -197,7 +198,10 @@ public class SelectImageTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -250,6 +254,12 @@ public class SelectImageTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SelectImageTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>SelectImageTaskResponseBody</p>
+     */
     public static class ImageInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("customImageUrl")
         private String customImageUrl;

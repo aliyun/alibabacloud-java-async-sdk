@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CountTextResponseBody} extends {@link TeaModel}
  *
  * <p>CountTextResponseBody</p>
@@ -70,6 +71,12 @@ public class CountTextResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CountTextResponseBody} extends {@link TeaModel}
+     *
+     * <p>CountTextResponseBody</p>
+     */
     public static class CountTextCmdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("count")
         private Long count;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAvatarResourceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAvatarResourceResponseBody</p>
@@ -70,6 +71,12 @@ public class QueryAvatarResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAvatarResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAvatarResourceResponseBody</p>
+     */
     public static class QueryResourceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;

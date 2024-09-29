@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTextTemplateResponse} extends {@link TeaModel}
+ * {@link InteractTextResponse} extends {@link TeaModel}
  *
- * <p>GetTextTemplateResponse</p>
+ * <p>InteractTextResponse</p>
  */
-public class GetTextTemplateResponse extends Response {
+public class InteractTextResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetTextTemplateResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetTextTemplateResponseBody body;
+    private InteractTextResponseBody body;
 
-    private GetTextTemplateResponse(BuilderImpl builder) {
+    private InteractTextResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetTextTemplateResponse create() {
+    public static InteractTextResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetTextTemplateResponse extends Response {
     /**
      * @return body
      */
-    public GetTextTemplateResponseBody getBody() {
+    public InteractTextResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetTextTemplateResponse, Builder> {
+    public interface Builder extends Response.Builder<InteractTextResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetTextTemplateResponseBody body);
+        Builder body(InteractTextResponseBody body);
 
         @Override
-        GetTextTemplateResponse build();
+        InteractTextResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetTextTemplateResponse, Builder>
+            extends Response.BuilderImpl<InteractTextResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetTextTemplateResponseBody body; 
+        private InteractTextResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetTextTemplateResponse response) {
+        private BuilderImpl(InteractTextResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetTextTemplateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetTextTemplateResponseBody body) {
+        public Builder body(InteractTextResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetTextTemplateResponse build() {
-            return new GetTextTemplateResponse(this);
+        public InteractTextResponse build() {
+            return new InteractTextResponse(this);
         } 
 
     } 

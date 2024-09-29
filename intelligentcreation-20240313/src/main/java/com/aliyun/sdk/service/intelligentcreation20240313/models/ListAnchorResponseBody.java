@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAnchorResponseBody} extends {@link TeaModel}
  *
  * <p>ListAnchorResponseBody</p>
@@ -109,7 +110,10 @@ public class ListAnchorResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * code
+         * <p>code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,7 +145,10 @@ public class ListAnchorResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * <p>requestId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5389BE87-571B-573C-90ED-F07C5E68760B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

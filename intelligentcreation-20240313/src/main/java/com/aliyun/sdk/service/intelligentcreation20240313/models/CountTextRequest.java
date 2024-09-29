@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CountTextRequest} extends {@link RequestModel}
  *
  * <p>CountTextRequest</p>
@@ -95,7 +96,10 @@ public class CountTextRequest extends Request {
         } 
 
         /**
-         * API
+         * <p>API</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PLATFORM</p>
          */
         public Builder generationSource(String generationSource) {
             this.putQueryParameter("generationSource", generationSource);

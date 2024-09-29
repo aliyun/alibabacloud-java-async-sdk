@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchGetProjectTaskResponseBody} extends {@link TeaModel}
  *
  * <p>BatchGetProjectTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class BatchGetProjectTaskResponseBody extends TeaModel {
         private java.util.List < ResultList> resultList; 
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class BatchGetProjectTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchGetProjectTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchGetProjectTaskResponseBody</p>
+     */
     public static class ResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("errorMsg")
         private String errorMsg;

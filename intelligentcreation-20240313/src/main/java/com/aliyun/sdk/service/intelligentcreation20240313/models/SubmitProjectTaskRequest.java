@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitProjectTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitProjectTaskRequest</p>
@@ -95,7 +96,7 @@ public class SubmitProjectTaskRequest extends Request {
         } 
 
         /**
-         * frame
+         * <p>frame</p>
          */
         public Builder frames(java.util.List < Frames> frames) {
             this.putBodyParameter("frames", frames);
@@ -137,6 +138,12 @@ public class SubmitProjectTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitProjectTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitProjectTaskRequest</p>
+     */
     public static class Material extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("format")
         private String format;
@@ -238,6 +245,12 @@ public class SubmitProjectTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitProjectTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitProjectTaskRequest</p>
+     */
     public static class Layers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("height")
         private Integer height;
@@ -399,6 +412,12 @@ public class SubmitProjectTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitProjectTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitProjectTaskRequest</p>
+     */
     public static class Subtitle extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alignment")
         private String alignment;
@@ -620,9 +639,18 @@ public class SubmitProjectTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitProjectTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitProjectTaskRequest</p>
+     */
     public static class VideoScript extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("audioUrl")
         private String audioUrl;
+
+        @com.aliyun.core.annotation.NameInMap("speechOpen")
+        private Boolean speechOpen;
 
         @com.aliyun.core.annotation.NameInMap("speedRate")
         private String speedRate;
@@ -641,6 +669,7 @@ public class SubmitProjectTaskRequest extends Request {
 
         private VideoScript(Builder builder) {
             this.audioUrl = builder.audioUrl;
+            this.speechOpen = builder.speechOpen;
             this.speedRate = builder.speedRate;
             this.textContent = builder.textContent;
             this.type = builder.type;
@@ -661,6 +690,13 @@ public class SubmitProjectTaskRequest extends Request {
          */
         public String getAudioUrl() {
             return this.audioUrl;
+        }
+
+        /**
+         * @return speechOpen
+         */
+        public Boolean getSpeechOpen() {
+            return this.speechOpen;
         }
 
         /**
@@ -700,6 +736,7 @@ public class SubmitProjectTaskRequest extends Request {
 
         public static final class Builder {
             private String audioUrl; 
+            private Boolean speechOpen; 
             private String speedRate; 
             private String textContent; 
             private String type; 
@@ -711,6 +748,14 @@ public class SubmitProjectTaskRequest extends Request {
              */
             public Builder audioUrl(String audioUrl) {
                 this.audioUrl = audioUrl;
+                return this;
+            }
+
+            /**
+             * speechOpen.
+             */
+            public Builder speechOpen(Boolean speechOpen) {
+                this.speechOpen = speechOpen;
                 return this;
             }
 
@@ -761,6 +806,12 @@ public class SubmitProjectTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitProjectTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitProjectTaskRequest</p>
+     */
     public static class Frames extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("index")
         private Integer index;

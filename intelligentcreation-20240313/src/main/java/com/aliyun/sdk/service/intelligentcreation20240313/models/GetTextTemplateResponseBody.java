@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTextTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetTextTemplateResponseBody</p>
@@ -70,6 +71,12 @@ public class GetTextTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetTextTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextTemplateResponseBody</p>
+     */
     public static class TextStyles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -171,6 +178,12 @@ public class GetTextTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTextTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextTemplateResponseBody</p>
+     */
     public static class TextModeTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -232,6 +245,12 @@ public class GetTextTemplateResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetTextTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetTextTemplateResponseBody</p>
+     */
     public static class AvailableIndustry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;

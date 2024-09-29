@@ -47,7 +47,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTextTemplateResponse> getTextTemplate(GetTextTemplateRequest request);
 
+    CompletableFuture<InteractTextResponse> interactText(InteractTextRequest request);
+
+    ResponseIterable<InteractTextResponseBody> interactTextWithResponseIterable(InteractTextRequest request);
+
     CompletableFuture<ListAnchorResponse> listAnchor(ListAnchorRequest request);
+
+    CompletableFuture<ListAvatarProjectResponse> listAvatarProject(ListAvatarProjectRequest request);
 
     CompletableFuture<ListTextThemesResponse> listTextThemes(ListTextThemesRequest request);
 

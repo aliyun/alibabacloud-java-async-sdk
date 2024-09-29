@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetTextTemplateResponse} extends {@link TeaModel}
+ * {@link ListAvatarProjectResponse} extends {@link TeaModel}
  *
- * <p>GetTextTemplateResponse</p>
+ * <p>ListAvatarProjectResponse</p>
  */
-public class GetTextTemplateResponse extends Response {
+public class ListAvatarProjectResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetTextTemplateResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetTextTemplateResponseBody body;
+    private ListAvatarProjectResponseBody body;
 
-    private GetTextTemplateResponse(BuilderImpl builder) {
+    private ListAvatarProjectResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetTextTemplateResponse create() {
+    public static ListAvatarProjectResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetTextTemplateResponse extends Response {
     /**
      * @return body
      */
-    public GetTextTemplateResponseBody getBody() {
+    public ListAvatarProjectResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetTextTemplateResponse, Builder> {
+    public interface Builder extends Response.Builder<ListAvatarProjectResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetTextTemplateResponseBody body);
+        Builder body(ListAvatarProjectResponseBody body);
 
         @Override
-        GetTextTemplateResponse build();
+        ListAvatarProjectResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetTextTemplateResponse, Builder>
+            extends Response.BuilderImpl<ListAvatarProjectResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetTextTemplateResponseBody body; 
+        private ListAvatarProjectResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetTextTemplateResponse response) {
+        private BuilderImpl(ListAvatarProjectResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetTextTemplateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetTextTemplateResponseBody body) {
+        public Builder body(ListAvatarProjectResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetTextTemplateResponse build() {
-            return new GetTextTemplateResponse(this);
+        public ListAvatarProjectResponse build() {
+            return new ListAvatarProjectResponse(this);
         } 
 
     } 
