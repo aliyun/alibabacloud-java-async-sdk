@@ -1,41 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTagRequest} extends {@link RequestModel}
  *
  * <p>DeleteTagRequest</p>
  */
 public class DeleteTagRequest extends Request {
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private DeleteTagRequest(Builder builder) {
@@ -126,10 +126,11 @@ public class DeleteTagRequest extends Request {
         } 
 
         /**
-         * The tag key.
-         * <p>
+         * <p>The tag key.</p>
+         * <p>If no tag value is associated with a tag key, you can specify the <code>Key</code> parameter without specifying the Value parameter to delete the tag key. Otherwise, you must specify both the <code>Key</code> and <code>Value</code> parameters to delete a preset tag.</p>
          * 
-         * If no tag value is associated with a tag key, you can specify the `Key` parameter without specifying the Value parameter to delete the tag key. Otherwise, you must specify both the `Key` and `Value` parameters to delete a preset tag.
+         * <strong>example:</strong>
+         * <p>Environment</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -156,10 +157,13 @@ public class DeleteTagRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> Only <code>cn-hangzhou</code> is supported.</p>
+         * </blockquote>
          * 
-         * >  Only `cn-hangzhou` is supported.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,7 +181,10 @@ public class DeleteTagRequest extends Request {
         }
 
         /**
-         * The tag value.
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

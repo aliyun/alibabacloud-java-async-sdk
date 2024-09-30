@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPolicyEnableStatusRequest} extends {@link RequestModel}
  *
  * <p>GetPolicyEnableStatusRequest</p>
  */
 public class GetPolicyEnableStatusRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenType")
+    private String openType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
-    @Query
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private String userType;
 
     private GetPolicyEnableStatusRequest(Builder builder) {
         super(builder);
+        this.openType = builder.openType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -57,6 +62,13 @@ public class GetPolicyEnableStatusRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return openType
+     */
+    public String getOpenType() {
+        return this.openType;
     }
 
     /**
@@ -102,6 +114,7 @@ public class GetPolicyEnableStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetPolicyEnableStatusRequest, Builder> {
+        private String openType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -115,6 +128,7 @@ public class GetPolicyEnableStatusRequest extends Request {
 
         private Builder(GetPolicyEnableStatusRequest request) {
             super(request);
+            this.openType = request.openType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -122,6 +136,22 @@ public class GetPolicyEnableStatusRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.userType = request.userType;
         } 
+
+        /**
+         * <p>The enabling type. Valid values:</p>
+         * <ul>
+         * <li>TAG_POLICY: the Tag Policy feature.</li>
+         * <li>VERIFY_NO_TAG: the strong verification feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TAG_POLICY</p>
+         */
+        public Builder openType(String openType) {
+            this.putQueryParameter("OpenType", openType);
+            this.openType = openType;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -142,7 +172,10 @@ public class GetPolicyEnableStatusRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-shanghai.
+         * <p>The region ID. Set the value to cn-shanghai.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,15 +202,18 @@ public class GetPolicyEnableStatusRequest extends Request {
         }
 
         /**
-         * The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:
-         * <p>
+         * <p>The mode of the Tag Policy feature. This parameter specifies a filter condition for the query. Valid values:</p>
+         * <ul>
+         * <li>USER: single-account mode</li>
+         * <li>RD: multi-account mode</li>
+         * </ul>
+         * <p>For more information about the modes of the Tag Policy feature, see <a href="~~417434~~">Modes of the Tag Policy feature</a>.</p>
+         * <blockquote>
+         * <p> The value of this parameter is not case-sensitive.</p>
+         * </blockquote>
          * 
-         * *   USER: single-account mode
-         * *   RD: multi-account mode
-         * 
-         * For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
-         * 
-         * >  The value of this parameter is not case-sensitive.
+         * <strong>example:</strong>
+         * <p>RD</p>
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

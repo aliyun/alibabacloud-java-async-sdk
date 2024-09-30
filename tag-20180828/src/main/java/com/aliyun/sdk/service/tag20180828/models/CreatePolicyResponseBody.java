@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePolicyResponseBody</p>
  */
 public class CreatePolicyResponseBody extends TeaModel {
-    @NameInMap("PolicyId")
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
     private String policyId;
 
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePolicyResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the tag policy.
+         * <p>The ID of the tag policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-5732750813924f90****</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;
@@ -70,7 +73,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyName.
+         * <p>The name of the tag policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder policyName(String policyName) {
             this.policyName = policyName;
@@ -78,7 +84,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDBE270D-C491-5EEC-A5CD-98245422D3F7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

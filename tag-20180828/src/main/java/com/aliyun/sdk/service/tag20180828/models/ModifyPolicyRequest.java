@@ -1,52 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyPolicyRequest</p>
  */
 public class ModifyPolicyRequest extends Request {
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PolicyContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyContent")
     private String policyContent;
 
-    @Query
-    @NameInMap("PolicyDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyDesc")
     private String policyDesc;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     private ModifyPolicyRequest(Builder builder) {
@@ -167,11 +167,14 @@ public class ModifyPolicyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to perform a dry run for the request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform a dry run for the request. Valid values:</p>
+         * <ul>
+         * <li>false: The system performs the related operation based on the parameter settings in the request. This is the default value.</li>
+         * <li>true: The system does not perform the related operation based on the parameter settings in the request but only verifies the parameter settings.</li>
+         * </ul>
          * 
-         * *   false: The system performs the related operation based on the parameter settings in the request. This is the default value.
-         * *   true: The system does not perform the related operation based on the parameter settings in the request but only verifies the parameter settings.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -198,10 +201,11 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * The document of the tag policy.
-         * <p>
+         * <p>The document of the tag policy.</p>
+         * <p>For more information about the syntax of a tag policy, see <a href="~~417436~~">Syntax of a tag policy</a>.</p>
          * 
-         * For more information about the syntax of a tag policy, see [Syntax of a tag policy](~~417436~~).
+         * <strong>example:</strong>
+         * <p>{&quot;tags&quot;:{&quot;CostCenter&quot;:{&quot;tag_value&quot;:{&quot;@@assign&quot;:[&quot;Beijing&quot;,&quot;Shanghai&quot;]},&quot;tag_key&quot;:{&quot;@@assign&quot;:&quot;CostCenter&quot;}}}}</p>
          */
         public Builder policyContent(String policyContent) {
             this.putQueryParameter("PolicyContent", policyContent);
@@ -210,10 +214,11 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * The description of the tag policy.
-         * <p>
+         * <p>The description of the tag policy.</p>
+         * <p>The description must be 0 to 512 characters in length.</p>
          * 
-         * The description must be 0 to 512 characters in length.
+         * <strong>example:</strong>
+         * <p>This is a tag policy example.</p>
          */
         public Builder policyDesc(String policyDesc) {
             this.putQueryParameter("PolicyDesc", policyDesc);
@@ -222,7 +227,10 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the tag policy.
+         * <p>The ID of the tag policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-5732750813924f90****</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -231,10 +239,11 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * The name of the tag policy.
-         * <p>
+         * <p>The name of the tag policy.</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_).</p>
          * 
-         * The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (\_).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -243,7 +252,10 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-shanghai.
+         * <p>The region ID. Set the value to cn-shanghai.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

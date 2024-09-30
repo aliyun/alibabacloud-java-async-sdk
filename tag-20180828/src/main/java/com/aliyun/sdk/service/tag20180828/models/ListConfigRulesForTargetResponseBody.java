@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConfigRulesForTargetResponseBody} extends {@link TeaModel}
  *
  * <p>ListConfigRulesForTargetResponseBody</p>
  */
 public class ListConfigRulesForTargetResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListConfigRulesForTargetResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The tag detection tasks.
+         * <p>The tag detection tasks.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,11 +70,14 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the next query is required.
-         * <p>
+         * <p>Indicates whether the next query is required.</p>
+         * <ul>
+         * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
+         * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+         * </ul>
          * 
-         * *   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.
-         * *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -82,7 +85,10 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7126AECD-D7AD-5073-8E88-DD2BD1FC139E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -95,29 +101,35 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConfigRulesForTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConfigRulesForTargetResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("Remediation")
+        @com.aliyun.core.annotation.NameInMap("Remediation")
         private Boolean remediation;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private Data(Builder builder) {
@@ -206,12 +218,14 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The ID of the account group.
-             * <p>
+             * <p>The ID of the account group.</p>
+             * <p>You can use the ID to query the content of the related resource non-compliance report in Cloud Config.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if you use the Tag Policy feature in multi-account mode.</p>
+             * </blockquote>
              * 
-             * You can use the ID to query the content of the related resource non-compliance report in Cloud Config.
-             * 
-             * >  This parameter is returned only if you use the Tag Policy feature in multi-account mode.
+             * <strong>example:</strong>
+             * <p>ca-efdc33dc9b37002d****</p>
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -219,7 +233,10 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-0lb4866180880069****</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -227,11 +244,14 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The use scenario of the tag policy. Valid values:
-             * <p>
+             * <p>The use scenario of the tag policy. Valid values:</p>
+             * <ul>
+             * <li>tags: enables tags with specified tag values to be added to resources.</li>
+             * <li>rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.</li>
+             * </ul>
              * 
-             * *   tags: enables tags with specified tag values to be added to resources.
-             * *   rg_inherit: enables resources in a resource group to automatically inherit tags from the resource group.
+             * <strong>example:</strong>
+             * <p>tags</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -239,11 +259,14 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic remediation is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether automatic remediation is enabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder remediation(Boolean remediation) {
                 this.remediation = remediation;
@@ -251,7 +274,10 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CostCenter</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -259,7 +285,10 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value for automatic remediation.
+             * <p>The tag value for automatic remediation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Project</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -267,7 +296,10 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the object.
+             * <p>The ID of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>134254031178****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -275,13 +307,16 @@ public class ListConfigRulesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
+             * <p>The type of the object. Valid values:</p>
+             * <ul>
+             * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
+             * <li>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+             * <li>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+             * <li>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+             * </ul>
              * 
-             * *   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.
-             * *   ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-             * *   FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-             * *   ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

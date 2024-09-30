@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagValuesResponseBody</p>
  */
 public class ListTagValuesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.NameInMap("Values")
     private Values values;
 
     private ListTagValuesResponseBody(Builder builder) {
@@ -62,11 +62,14 @@ public class ListTagValuesResponseBody extends TeaModel {
         private Values values; 
 
         /**
-         * Indicates whether the next query is required. The value of this parameter may be empty.
-         * <p>
+         * <p>Indicates whether the next query is required. The value of this parameter may be empty.</p>
+         * <ul>
+         * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
+         * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+         * </ul>
          * 
-         * *   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.
-         * *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +77,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8989CA7E-D2E0-4B6D-8282-311106E80150</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +88,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the tag values.
+         * <p>The information of the tag values.</p>
          */
         public Builder values(Values values) {
             this.values = values;
@@ -95,8 +101,14 @@ public class ListTagValuesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagValuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagValuesResponseBody</p>
+     */
     public static class Values extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private Values(Builder builder) {

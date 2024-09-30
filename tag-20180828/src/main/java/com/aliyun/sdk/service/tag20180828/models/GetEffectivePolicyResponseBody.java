@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEffectivePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>GetEffectivePolicyResponseBody</p>
  */
 public class GetEffectivePolicyResponseBody extends TeaModel {
-    @NameInMap("EffectivePolicy")
+    @com.aliyun.core.annotation.NameInMap("EffectivePolicy")
     private String effectivePolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetEffectivePolicyResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetEffectivePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The effective tag policy.
+         * <p>The effective tag policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;tags&quot;:{&quot;costcenter&quot;:{&quot;tag_value&quot;:[&quot;Beijing&quot;,&quot;Shanghai&quot;],&quot;tag_key&quot;:&quot;CostCenter&quot;}}}</p>
          */
         public Builder effectivePolicy(String effectivePolicy) {
             this.effectivePolicy = effectivePolicy;
@@ -58,7 +61,10 @@ public class GetEffectivePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB532282-94F5-5F56-877F-32D5E2A04F3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

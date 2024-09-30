@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetConfigRuleReportResponseBody} extends {@link TeaModel}
  *
  * <p>GetConfigRuleReportResponseBody</p>
  */
 public class GetConfigRuleReportResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetConfigRuleReportResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The basic information of the resource non-compliance report that is last generated.
+         * <p>The basic information of the resource non-compliance report that is last generated.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,10 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +93,10 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A68BD5BC-5B12-5A9B-8AE9-77884886BE10</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,11 +104,14 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -115,17 +124,23 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetConfigRuleReportResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetConfigRuleReportResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private Data(Builder builder) {
@@ -178,7 +193,10 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The time when the report was generated. This value is a UNIX timestamp.
+             * <p>The time when the report was generated. This value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1655089159000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -186,7 +204,10 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the report.
+             * <p>The ID of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-ao0786618088006c****</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -194,10 +215,13 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the object.
-             * <p>
+             * <p>The ID of the object.</p>
+             * <blockquote>
+             * <p> This parameter is returned if you set the <code>TargetType</code> and <code>TargetId</code> parameters in the current request to the same values as the parameters that are configured when you call the <a href="~~433313~~">GenerateConfigRuleReport</a> operation to generate the report.</p>
+             * </blockquote>
              * 
-             * >  This parameter is returned if you set the `TargetType` and `TargetId` parameters in the current request to the same values as the parameters that are configured when you call the [GenerateConfigRuleReport](~~433313~~) operation to generate the report.
+             * <strong>example:</strong>
+             * <p>154950938137****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -205,15 +229,19 @@ public class GetConfigRuleReportResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
+             * <p>The type of the object. Valid values:</p>
+             * <ul>
+             * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
+             * <li>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+             * <li>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+             * <li>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is returned if you set the <code>TargetType</code> and <code>TargetId</code> parameters in the current request to the same values as the parameters that are configured when you call the <a href="~~433313~~">GenerateConfigRuleReport</a> operation to generate the report.</p>
+             * </blockquote>
              * 
-             * *   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.
-             * *   ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-             * *   FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-             * *   ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-             * 
-             * >  This parameter is returned if you set the `TargetType` and `TargetId` parameters in the current request to the same values as the parameters that are configured when you call the [GenerateConfigRuleReport](~~433313~~) operation to generate the report.
+             * <strong>example:</strong>
+             * <p>ACCOUNT</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

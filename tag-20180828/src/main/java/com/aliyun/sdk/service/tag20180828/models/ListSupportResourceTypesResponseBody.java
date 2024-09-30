@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSupportResourceTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSupportResourceTypesResponseBody</p>
  */
 public class ListSupportResourceTypesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportResourceTypes")
+    @com.aliyun.core.annotation.NameInMap("SupportResourceTypes")
     private java.util.List < SupportResourceTypes> supportResourceTypes;
 
     private ListSupportResourceTypesResponseBody(Builder builder) {
@@ -62,11 +62,14 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         private java.util.List < SupportResourceTypes> supportResourceTypes; 
 
         /**
-         * Indicates whether the next query is required.
-         * <p>
+         * <p>Indicates whether the next query is required.</p>
+         * <ul>
+         * <li>If the value of this parameter is empty, all results are returned, and the next query is not required.</li>
+         * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+         * </ul>
          * 
-         * *   If the value of this parameter is empty, all results are returned, and the next query is not required.
-         * *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.
+         * <strong>example:</strong>
+         * <p>AAAAAYws9fJ0Ur4MGm****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -74,7 +77,10 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABC71772-F3A1-59CA-B811-4A5B0E0B72F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +88,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The supported resource types.
+         * <p>The supported resource types.</p>
          */
         public Builder supportResourceTypes(java.util.List < SupportResourceTypes> supportResourceTypes) {
             this.supportResourceTypes = supportResourceTypes;
@@ -95,14 +101,20 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSupportResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSupportResourceTypesResponseBody</p>
+     */
     public static class SupportItems extends TeaModel {
-        @NameInMap("Support")
+        @com.aliyun.core.annotation.NameInMap("Support")
         private Boolean support;
 
-        @NameInMap("SupportCode")
+        @com.aliyun.core.annotation.NameInMap("SupportCode")
         private String supportCode;
 
-        @NameInMap("SupportDetails")
+        @com.aliyun.core.annotation.NameInMap("SupportDetails")
         private java.util.List < java.util.Map<String, String>> supportDetails;
 
         private SupportItems(Builder builder) {
@@ -146,11 +158,14 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, String>> supportDetails; 
 
             /**
-             * Indicates whether the tag-related capability item is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the tag-related capability item is supported. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder support(Boolean support) {
                 this.support = support;
@@ -158,7 +173,10 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the tag-related capability item.
+             * <p>The code of the tag-related capability item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TAG_CONSOLE_SUPPORT</p>
              */
             public Builder supportCode(String supportCode) {
                 this.supportCode = supportCode;
@@ -166,7 +184,7 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the support for the tag-related capability item.
+             * <p>The details of the support for the tag-related capability item.</p>
              */
             public Builder supportDetails(java.util.List < java.util.Map<String, String>> supportDetails) {
                 this.supportDetails = supportDetails;
@@ -180,17 +198,27 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSupportResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSupportResourceTypesResponseBody</p>
+     */
     public static class SupportResourceTypes extends TeaModel {
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ArnTemplate")
+        private String arnTemplate;
+
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SupportItems")
+        @com.aliyun.core.annotation.NameInMap("SupportItems")
         private java.util.List < SupportItems> supportItems;
 
         private SupportResourceTypes(Builder builder) {
+            this.arnTemplate = builder.arnTemplate;
             this.productCode = builder.productCode;
             this.resourceType = builder.resourceType;
             this.supportItems = builder.supportItems;
@@ -202,6 +230,13 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
 
         public static SupportResourceTypes create() {
             return builder().build();
+        }
+
+        /**
+         * @return arnTemplate
+         */
+        public String getArnTemplate() {
+            return this.arnTemplate;
         }
 
         /**
@@ -226,12 +261,24 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String arnTemplate; 
             private String productCode; 
             private String resourceType; 
             private java.util.List < SupportItems> supportItems; 
 
             /**
-             * The service code.
+             * ArnTemplate.
+             */
+            public Builder arnTemplate(String arnTemplate) {
+                this.arnTemplate = arnTemplate;
+                return this;
+            }
+
+            /**
+             * <p>The service code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -239,7 +286,10 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -247,10 +297,10 @@ public class ListSupportResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The supported tag-related capability items.
-             * <p>
-             * 
-             * >  This parameter is returned only if the `ShowItems` parameter is set to `true`.
+             * <p>The supported tag-related capability items.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if the <code>ShowItems</code> parameter is set to <code>true</code>.</p>
+             * </blockquote>
              */
             public Builder supportItems(java.util.List < SupportItems> supportItems) {
                 this.supportItems = supportItems;

@@ -1,42 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceARN")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceARN")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceARN;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("TagKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > tagKey;
 
     private UntagResourcesRequest(Builder builder) {
@@ -145,7 +145,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resources.
+         * <p>The region ID.</p>
+         * <ul>
+         * <li>If the resources belong to a service that is centrally deployed, set the value to <code>cn-hangzhou</code> or to the region ID of the resources by referring to <a href="~~2579691~~">Regions supported by tag-related operations on resources of centrally deployed Alibaba Cloud services</a>.</li>
+         * <li>If the resources belong to a service that is not centrally deployed, set the value to the region ID of the resources.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +161,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of a resource.
+         * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arn:acs:vpc:cn-hangzhou:123456789****:vpc/vpc-bp19dd90tkt6tz7wu****</p>
          */
         public Builder resourceARN(java.util.List < String > resourceARN) {
             this.putQueryParameter("ResourceARN", resourceARN);
@@ -172,7 +182,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * A tag key.
+         * <p>A tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

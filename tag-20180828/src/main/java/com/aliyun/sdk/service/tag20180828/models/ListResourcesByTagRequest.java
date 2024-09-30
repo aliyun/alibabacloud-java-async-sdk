@@ -1,57 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesByTagRequest} extends {@link RequestModel}
  *
  * <p>ListResourcesByTagRequest</p>
  */
 public class ListResourcesByTagRequest extends Request {
-    @Query
-    @NameInMap("TagFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagFilter")
     private TagFilter tagFilter;
 
-    @Query
-    @NameInMap("FuzzyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FuzzyType")
     private String fuzzyType;
 
-    @Query
-    @NameInMap("IncludeAllTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeAllTags")
     private Boolean includeAllTags;
 
-    @Query
-    @NameInMap("MaxResult")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResult")
     private Integer maxResult;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private ListResourcesByTagRequest(Builder builder) {
@@ -191,11 +191,14 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * The type of the query. Valid values:
-         * <p>
+         * <p>The type of the query. Valid values:</p>
+         * <ul>
+         * <li>EQUAL: exact match for resources to which the specified tag is added. This is the default value.</li>
+         * <li>NOT: exact match for resources to which the specified tag is not added.</li>
+         * </ul>
          * 
-         * *   EQUAL: exact match for resources to which the specified tag is added. This is the default value.
-         * *   NOT: exact match for resources to which the specified tag is not added.
+         * <strong>example:</strong>
+         * <p>EQUAL</p>
          */
         public Builder fuzzyType(String fuzzyType) {
             this.putQueryParameter("FuzzyType", fuzzyType);
@@ -204,11 +207,14 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the information of tags added to the resources. Valid values:
-         * <p>
+         * <p>Specifies whether to return the information of tags added to the resources. Valid values:</p>
+         * <ul>
+         * <li>False: does not return the information of tags added to the resources. This is the default value.</li>
+         * <li>True: returns the information of all tags added to the resources.</li>
+         * </ul>
          * 
-         * *   False: does not return the information of tags added to the resources. This is the default value.
-         * *   True: returns the information of all tags added to the resources.
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder includeAllTags(Boolean includeAllTags) {
             this.putQueryParameter("IncludeAllTags", includeAllTags);
@@ -217,10 +223,11 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 50. Maximum value: 1000.</p>
          * 
-         * Default value: 50. Maximum value: 1000.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -229,7 +236,10 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * The token that is used to start the next query.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -256,10 +266,11 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <p>For more information about region IDs, see <a href="~~2330902~~">Endpoints</a>.</p>
          * 
-         * For more information about region IDs, see [Endpoints](~~2330902~~).
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,11 +288,14 @@ public class ListResourcesByTagRequest extends Request {
         }
 
         /**
-         * The resource type. This parameter specifies a filter condition for the query.
-         * <p>
+         * <p>The resource type. This parameter specifies a filter condition for the query.</p>
+         * <ul>
+         * <li>If you set the FuzzyType parameter to EQUAL, you can set this parameter to a value obtained from the response of the <a href="~~2330915~~">ListSupportResourceTypes</a> operation.</li>
+         * <li>If you set the FuzzyType parameter to NOT, you can set this parameter to a resource type provided in <strong>Types of resources that support queries based on the NOT operator</strong>.</li>
+         * </ul>
          * 
-         * *   If you set the FuzzyType parameter to EQUAL, you can set this parameter to a value obtained from the response of the [ListSupportResourceTypes](~~2330915~~) operation.
-         * *   If you set the FuzzyType parameter to NOT, you can set this parameter to a resource type provided in **Types of resources that support queries based on the NOT operator**.
+         * <strong>example:</strong>
+         * <p>ALIYUN::VPC::VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -296,12 +310,18 @@ public class ListResourcesByTagRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourcesByTagRequest} extends {@link TeaModel}
+     *
+     * <p>ListResourcesByTagRequest</p>
+     */
     public static class TagFilter extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagFilter(Builder builder) {
@@ -336,10 +356,11 @@ public class ListResourcesByTagRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. This parameter specifies a filter condition for the query.
-             * <p>
+             * <p>The tag key. This parameter specifies a filter condition for the query.</p>
+             * <p>The tag key can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code> and cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * The tag key can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -347,10 +368,11 @@ public class ListResourcesByTagRequest extends Request {
             }
 
             /**
-             * The tag value. This parameter specifies a filter condition for the query.
-             * <p>
+             * <p>The tag value. This parameter specifies a filter condition for the query.</p>
+             * <p>The tag value can be a maximum of 128 characters in length. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be a maximum of 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

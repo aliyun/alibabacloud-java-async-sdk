@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesForTargetResponseBody} extends {@link TeaModel}
  *
  * <p>ListPoliciesForTargetResponseBody</p>
  */
 public class ListPoliciesForTargetResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPoliciesForTargetResponseBody(Builder builder) {
@@ -62,7 +62,7 @@ public class ListPoliciesForTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The tag policies that are attached to the object.
+         * <p>The tag policies that are attached to the object.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,11 +70,14 @@ public class ListPoliciesForTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the next query is required.
-         * <p>
+         * <p>Indicates whether the next query is required.</p>
+         * <ul>
+         * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
+         * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+         * </ul>
          * 
-         * *   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.
-         * *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -82,7 +85,10 @@ public class ListPoliciesForTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C962146-AB38-516C-818C-695D4E9F2EA2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -95,20 +101,26 @@ public class ListPoliciesForTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPoliciesForTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPoliciesForTargetResponseBody</p>
+     */
     public static class Data extends TeaModel {
-        @NameInMap("PolicyContent")
+        @com.aliyun.core.annotation.NameInMap("PolicyContent")
         private String policyContent;
 
-        @NameInMap("PolicyDesc")
+        @com.aliyun.core.annotation.NameInMap("PolicyDesc")
         private String policyDesc;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private Data(Builder builder) {
@@ -170,7 +182,10 @@ public class ListPoliciesForTargetResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * The document of the tag policy.
+             * <p>The document of the tag policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;tags&quot;:{&quot;CostCenter&quot;:{&quot;tag_value&quot;:{&quot;@@assign&quot;:[&quot;Beijing&quot;,&quot;Shanghai&quot;]},&quot;tag_key&quot;:{&quot;@@assign&quot;:&quot;CostCenter&quot;}}}}</p>
              */
             public Builder policyContent(String policyContent) {
                 this.policyContent = policyContent;
@@ -178,7 +193,10 @@ public class ListPoliciesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the tag policy.
+             * <p>The description of the tag policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a tag policy example.</p>
              */
             public Builder policyDesc(String policyDesc) {
                 this.policyDesc = policyDesc;
@@ -186,7 +204,10 @@ public class ListPoliciesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tag policy.
+             * <p>The ID of the tag policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-de62a0bf400e4b69****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -194,7 +215,10 @@ public class ListPoliciesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tag policy.
+             * <p>The name of the tag policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -202,13 +226,15 @@ public class ListPoliciesForTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the Tag Policy feature. Valid values:
-             * <p>
+             * <p>The mode of the Tag Policy feature. Valid values:</p>
+             * <ul>
+             * <li>USER: single-account mode</li>
+             * <li>RD: multi-account mode</li>
+             * </ul>
+             * <p>For more information about the modes of the Tag Policy feature, see <a href="~~417434~~">Modes of the Tag Policy feature</a>.</p>
              * 
-             * *   USER: single-account mode
-             * *   RD: multi-account mode
-             * 
-             * For more information about the modes of the Tag Policy feature, see [Modes of the Tag Policy feature](~~417434~~).
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;

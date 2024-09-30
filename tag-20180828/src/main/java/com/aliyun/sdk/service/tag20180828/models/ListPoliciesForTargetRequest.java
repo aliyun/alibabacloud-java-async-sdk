@@ -1,47 +1,47 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesForTargetRequest} extends {@link RequestModel}
  *
  * <p>ListPoliciesForTargetRequest</p>
  */
 public class ListPoliciesForTargetRequest extends Request {
-    @Query
-    @NameInMap("MaxResult")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResult")
     private Integer maxResult;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("TargetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
     private ListPoliciesForTargetRequest(Builder builder) {
@@ -152,10 +152,11 @@ public class ListPoliciesForTargetRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 50. Maximum value: 1000.</p>
          * 
-         * Default value: 50. Maximum value: 1000.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -164,7 +165,10 @@ public class ListPoliciesForTargetRequest extends Request {
         }
 
         /**
-         * The token that is used to start the next query.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -191,7 +195,10 @@ public class ListPoliciesForTargetRequest extends Request {
         }
 
         /**
-         * The region ID. Set the value to cn-shanghai.
+         * <p>The region ID. Set the value to cn-shanghai.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -209,7 +216,10 @@ public class ListPoliciesForTargetRequest extends Request {
         }
 
         /**
-         * The ID of the object. This parameter specifies a filter condition for the query.
+         * <p>The ID of the object. This parameter specifies a filter condition for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154950938137****</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -218,15 +228,19 @@ public class ListPoliciesForTargetRequest extends Request {
         }
 
         /**
-         * The type of the object. This parameter specifies a filter condition for the query. Valid values:
-         * <p>
+         * <p>The type of the object. This parameter specifies a filter condition for the query. Valid values:</p>
+         * <ul>
+         * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
+         * <li>ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li>FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li>ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The value of this parameter is not case-sensitive.</p>
+         * </blockquote>
          * 
-         * *   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.
-         * *   ROOT: the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-         * *   FOLDER: a folder other than the Root folder in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-         * *   ACCOUNT: a member in a resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-         * 
-         * >  The value of this parameter is not case-sensitive.
+         * <strong>example:</strong>
+         * <p>ACCOUNT</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisablePolicyTypeRequest} extends {@link RequestModel}
  *
  * <p>DisablePolicyTypeRequest</p>
  */
 public class DisablePolicyTypeRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenType")
+    private String openType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
-    @Query
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private String userType;
 
     private DisablePolicyTypeRequest(Builder builder) {
         super(builder);
+        this.openType = builder.openType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -57,6 +62,13 @@ public class DisablePolicyTypeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return openType
+     */
+    public String getOpenType() {
+        return this.openType;
     }
 
     /**
@@ -102,6 +114,7 @@ public class DisablePolicyTypeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DisablePolicyTypeRequest, Builder> {
+        private String openType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -115,6 +128,7 @@ public class DisablePolicyTypeRequest extends Request {
 
         private Builder(DisablePolicyTypeRequest request) {
             super(request);
+            this.openType = request.openType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -122,6 +136,15 @@ public class DisablePolicyTypeRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.userType = request.userType;
         } 
+
+        /**
+         * OpenType.
+         */
+        public Builder openType(String openType) {
+            this.putQueryParameter("OpenType", openType);
+            this.openType = openType;
+            return this;
+        }
 
         /**
          * OwnerAccount.

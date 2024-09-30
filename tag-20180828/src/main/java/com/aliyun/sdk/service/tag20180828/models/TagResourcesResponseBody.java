@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>TagResourcesResponseBody</p>
  */
 public class TagResourcesResponseBody extends TeaModel {
-    @NameInMap("FailedResources")
+    @com.aliyun.core.annotation.NameInMap("FailedResources")
     private FailedResources failedResources;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TagResourcesResponseBody(Builder builder) {
@@ -50,14 +50,15 @@ public class TagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the resources to which tags fail to be added.
-         * <p>
-         * 
-         * > 
-         * 
-         * *   If tags are added to all resources, the value of `FailedResources` is empty.
-         * 
-         * *   If tags fail to be added to some or all resources, the value of `FailedResources` contains the detailed information about the resources.
+         * <p>The information about the resources to which tags fail to be added.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If tags are added to all resources, the value of <code>FailedResources</code> is empty.</p>
+         * </li>
+         * <li><p>If tags fail to be added to some or all resources, the value of <code>FailedResources</code> contains the detailed information about the resources.</p>
+         * </li>
+         * </ul>
          */
         public Builder failedResources(FailedResources failedResources) {
             this.failedResources = failedResources;
@@ -65,7 +66,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72086426-9F8C-4A60-852B-864048FD1199</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,11 +82,17 @@ public class TagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>TagResourcesResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Result(Builder builder) {
@@ -117,7 +127,10 @@ public class TagResourcesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidResourceId.NotFound</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -125,7 +138,10 @@ public class TagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified ResourceIds are not found in our records.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -139,11 +155,17 @@ public class TagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>TagResourcesResponseBody</p>
+     */
     public static class FailedResource extends TeaModel {
-        @NameInMap("ResourceARN")
+        @com.aliyun.core.annotation.NameInMap("ResourceARN")
         private String resourceARN;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
         private FailedResource(Builder builder) {
@@ -178,7 +200,10 @@ public class TagResourcesResponseBody extends TeaModel {
             private Result result; 
 
             /**
-             * The ARN of the resource.
+             * <p>The ARN of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arn:acs:vpc:cn-hangzhou:123456789****:vpc/vpc-bp19dd90tkt6tz7wu****</p>
              */
             public Builder resourceARN(String resourceARN) {
                 this.resourceARN = resourceARN;
@@ -186,7 +211,7 @@ public class TagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the error.
+             * <p>The information about the error.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -200,8 +225,14 @@ public class TagResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link TagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>TagResourcesResponseBody</p>
+     */
     public static class FailedResources extends TeaModel {
-        @NameInMap("FailedResource")
+        @com.aliyun.core.annotation.NameInMap("FailedResource")
         private java.util.List < FailedResource> failedResource;
 
         private FailedResources(Builder builder) {

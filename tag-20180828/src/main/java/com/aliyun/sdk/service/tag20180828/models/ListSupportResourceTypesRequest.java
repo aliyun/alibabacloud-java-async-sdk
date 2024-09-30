@@ -1,55 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSupportResourceTypesRequest} extends {@link RequestModel}
  *
  * <p>ListSupportResourceTypesRequest</p>
  */
 public class ListSupportResourceTypesRequest extends Request {
-    @Query
-    @NameInMap("MaxResult")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResult")
     private Integer maxResult;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceTye")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTye")
     private String resourceTye;
 
-    @Query
-    @NameInMap("ShowItems")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowItems")
     private Boolean showItems;
 
-    @Query
-    @NameInMap("SupportCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportCode")
     private String supportCode;
 
     private ListSupportResourceTypesRequest(Builder builder) {
@@ -180,10 +180,11 @@ public class ListSupportResourceTypesRequest extends Request {
         } 
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 1000. Default value: 50.</p>
          * 
-         * Maximum value: 1000. Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
@@ -192,7 +193,10 @@ public class ListSupportResourceTypesRequest extends Request {
         }
 
         /**
-         * The token that is used to start the next query.
+         * <p>The token that is used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAYws9fJ0Ur4MGm/5OkDoW/Y3wDNwUdssyKODK****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -219,10 +223,11 @@ public class ListSupportResourceTypesRequest extends Request {
         }
 
         /**
-         * The service code. This parameter specifies a filter condition for the query.
-         * <p>
+         * <p>The service code. This parameter specifies a filter condition for the query.</p>
+         * <p>This parameter is obtained from the response.</p>
          * 
-         * For more information about service codes, see [Services that work with Tag](~~171455~~).
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -231,10 +236,11 @@ public class ListSupportResourceTypesRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <p>For more information about region IDs, see <a href="~~2330902~~">Endpoints</a>.</p>
          * 
-         * For more information about the region ID, see [Endpoints](~~170112~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,10 +258,11 @@ public class ListSupportResourceTypesRequest extends Request {
         }
 
         /**
-         * The resource type. This parameter specifies a filter condition for the query.
-         * <p>
+         * <p>The resource type. This parameter specifies a filter condition for the query.</p>
+         * <p>This parameter is obtained from the response.</p>
          * 
-         * For more information about resource types, see [Services that work with Tag](~~171455~~).
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceTye(String resourceTye) {
             this.putQueryParameter("ResourceTye", resourceTye);
@@ -264,11 +271,14 @@ public class ListSupportResourceTypesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return tag-related capability items. Valid values:
-         * <p>
+         * <p>Specifies whether to return tag-related capability items. Valid values:</p>
+         * <ul>
+         * <li>true: The system returns tag-related capability items.</li>
+         * <li>false (default value): The system does not return tag-related capability items.</li>
+         * </ul>
          * 
-         * *   true: The system returns tag-related capability items.
-         * *   false (default value): The system does not return tag-related capability items.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showItems(Boolean showItems) {
             this.putQueryParameter("ShowItems", showItems);
@@ -277,7 +287,11 @@ public class ListSupportResourceTypesRequest extends Request {
         }
 
         /**
-         * The code of the tag-related capability item. This parameter specifies a filter condition for the query.
+         * <p>The code of the tag-related capability item. This parameter specifies a filter condition for the query.</p>
+         * <p>For more information, see <strong>Tag-related capability items</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TAG_CONSOLE_SUPPORT</p>
          */
         public Builder supportCode(String supportCode) {
             this.putQueryParameter("SupportCode", supportCode);

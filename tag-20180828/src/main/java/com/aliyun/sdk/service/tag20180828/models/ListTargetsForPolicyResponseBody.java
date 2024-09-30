@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTargetsForPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ListTargetsForPolicyResponseBody</p>
  */
 public class ListTargetsForPolicyResponseBody extends TeaModel {
-    @NameInMap("IsRd")
+    @com.aliyun.core.annotation.NameInMap("IsRd")
     private Boolean isRd;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RdId")
+    @com.aliyun.core.annotation.NameInMap("RdId")
     private String rdId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Targets")
+    @com.aliyun.core.annotation.NameInMap("Targets")
     private java.util.List < Targets> targets;
 
     private ListTargetsForPolicyResponseBody(Builder builder) {
@@ -86,11 +86,14 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         private java.util.List < Targets> targets; 
 
         /**
-         * Indicates whether the object belongs to the resource directory. Valid values:
-         * <p>
+         * <p>Indicates whether the object belongs to the resource directory. Valid values:</p>
+         * <ul>
+         * <li>true: The object belongs to the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+         * <li>false: The object does not belong to the resource directory. This value is available if you use the Tag Policy feature in single-account mode.</li>
+         * </ul>
          * 
-         * *   true: The object belongs to the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-         * *   false: The object does not belong to the resource directory. This value is available if you use the Tag Policy feature in single-account mode.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isRd(Boolean isRd) {
             this.isRd = isRd;
@@ -98,11 +101,14 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the next query is required.
-         * <p>
+         * <p>Indicates whether the next query is required.</p>
+         * <ul>
+         * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
+         * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+         * </ul>
          * 
-         * *   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.
-         * *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,10 +116,13 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource directory.
-         * <p>
+         * <p>The ID of the resource directory.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if you use the Tag Policy feature in multi-account mode.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only if you use the Tag Policy feature in multi-account mode.
+         * <strong>example:</strong>
+         * <p>rd-3G****</p>
          */
         public Builder rdId(String rdId) {
             this.rdId = rdId;
@@ -121,7 +130,10 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2EE71C8D-6DB8-56AC-8B05-3D4C0116E6A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +141,7 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The objects to which the tag policy is attached.
+         * <p>The objects to which the tag policy is attached.</p>
          */
         public Builder targets(java.util.List < Targets> targets) {
             this.targets = targets;
@@ -142,11 +154,17 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTargetsForPolicyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTargetsForPolicyResponseBody</p>
+     */
     public static class Targets extends TeaModel {
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private Integer targetType;
 
         private Targets(Builder builder) {
@@ -181,7 +199,10 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
             private Integer targetType; 
 
             /**
-             * The ID of the object.
+             * <p>The ID of the object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>195320939469****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -189,13 +210,16 @@ public class ListTargetsForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
+             * <p>The type of the object. Valid values:</p>
+             * <ul>
+             * <li>USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.</li>
+             * <li>ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+             * <li>FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+             * <li>ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.</li>
+             * </ul>
              * 
-             * *   USER: the current logon account. This value is available if you use the Tag Policy feature in single-account mode.
-             * *   ROOT: the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-             * *   FOLDER: a folder other than the Root folder in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
-             * *   ACCOUNT: a member in the resource directory. This value is available if you use the Tag Policy feature in multi-account mode.
+             * <strong>example:</strong>
+             * <p>ACCOUNT</p>
              */
             public Builder targetType(Integer targetType) {
                 this.targetType = targetType;

@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.tag20180828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateConfigRuleReportResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateConfigRuleReportResponseBody</p>
  */
 public class GenerateConfigRuleReportResponseBody extends TeaModel {
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateConfigRuleReportResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GenerateConfigRuleReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the resource non-compliance report.
+         * <p>The ID of the resource non-compliance report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-ao0786618088006c****</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -58,7 +61,10 @@ public class GenerateConfigRuleReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37B2AC06-89D8-5D95-98DF-3E68C12BDE05</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
