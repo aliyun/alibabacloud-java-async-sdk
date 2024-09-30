@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitConvertImageToWordJobResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitConvertImageToWordJobResponseBody</p>
@@ -110,6 +111,12 @@ public class SubmitConvertImageToWordJobResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitConvertImageToWordJobResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitConvertImageToWordJobResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;

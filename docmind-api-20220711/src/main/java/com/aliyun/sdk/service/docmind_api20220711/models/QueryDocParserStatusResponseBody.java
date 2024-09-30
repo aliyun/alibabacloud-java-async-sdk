@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDocParserStatusResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDocParserStatusResponseBody</p>
@@ -110,16 +111,42 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDocParserStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDocParserStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImageCount")
+        private Integer imageCount;
+
         @com.aliyun.core.annotation.NameInMap("NumberOfSuccessfulParsing")
         private Integer numberOfSuccessfulParsing;
+
+        @com.aliyun.core.annotation.NameInMap("PageCountEstimate")
+        private Integer pageCountEstimate;
+
+        @com.aliyun.core.annotation.NameInMap("ParagraphCount")
+        private Integer paragraphCount;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TableCount")
+        private Integer tableCount;
+
+        @com.aliyun.core.annotation.NameInMap("Tokens")
+        private Long tokens;
+
         private Data(Builder builder) {
+            this.imageCount = builder.imageCount;
             this.numberOfSuccessfulParsing = builder.numberOfSuccessfulParsing;
+            this.pageCountEstimate = builder.pageCountEstimate;
+            this.paragraphCount = builder.paragraphCount;
             this.status = builder.status;
+            this.tableCount = builder.tableCount;
+            this.tokens = builder.tokens;
         }
 
         public static Builder builder() {
@@ -131,10 +158,31 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageCount
+         */
+        public Integer getImageCount() {
+            return this.imageCount;
+        }
+
+        /**
          * @return numberOfSuccessfulParsing
          */
         public Integer getNumberOfSuccessfulParsing() {
             return this.numberOfSuccessfulParsing;
+        }
+
+        /**
+         * @return pageCountEstimate
+         */
+        public Integer getPageCountEstimate() {
+            return this.pageCountEstimate;
+        }
+
+        /**
+         * @return paragraphCount
+         */
+        public Integer getParagraphCount() {
+            return this.paragraphCount;
         }
 
         /**
@@ -144,9 +192,36 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tableCount
+         */
+        public Integer getTableCount() {
+            return this.tableCount;
+        }
+
+        /**
+         * @return tokens
+         */
+        public Long getTokens() {
+            return this.tokens;
+        }
+
         public static final class Builder {
+            private Integer imageCount; 
             private Integer numberOfSuccessfulParsing; 
+            private Integer pageCountEstimate; 
+            private Integer paragraphCount; 
             private String status; 
+            private Integer tableCount; 
+            private Long tokens; 
+
+            /**
+             * ImageCount.
+             */
+            public Builder imageCount(Integer imageCount) {
+                this.imageCount = imageCount;
+                return this;
+            }
 
             /**
              * NumberOfSuccessfulParsing.
@@ -157,10 +232,42 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
             }
 
             /**
+             * PageCountEstimate.
+             */
+            public Builder pageCountEstimate(Integer pageCountEstimate) {
+                this.pageCountEstimate = pageCountEstimate;
+                return this;
+            }
+
+            /**
+             * ParagraphCount.
+             */
+            public Builder paragraphCount(Integer paragraphCount) {
+                this.paragraphCount = paragraphCount;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TableCount.
+             */
+            public Builder tableCount(Integer tableCount) {
+                this.tableCount = tableCount;
+                return this;
+            }
+
+            /**
+             * Tokens.
+             */
+            public Builder tokens(Long tokens) {
+                this.tokens = tokens;
                 return this;
             }
 

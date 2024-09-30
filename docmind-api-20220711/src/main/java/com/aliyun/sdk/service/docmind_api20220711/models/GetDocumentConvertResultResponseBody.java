@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentConvertResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocumentConvertResultResponseBody</p>
@@ -152,6 +153,12 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentConvertResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentConvertResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;

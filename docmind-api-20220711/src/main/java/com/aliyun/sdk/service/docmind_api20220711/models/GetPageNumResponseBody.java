@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPageNumResponseBody} extends {@link TeaModel}
  *
  * <p>GetPageNumResponseBody</p>
@@ -150,6 +151,12 @@ public class GetPageNumResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetPageNumResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPageNumResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
