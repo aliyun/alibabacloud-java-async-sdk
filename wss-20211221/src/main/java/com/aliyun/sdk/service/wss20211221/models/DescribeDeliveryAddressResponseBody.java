@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeliveryAddressResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeliveryAddressResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeliveryAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeliveryAddressResponseBody</p>
+     */
     public static class Area extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AreaId")
         private Long areaId;
@@ -151,6 +158,12 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeliveryAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeliveryAddressResponseBody</p>
+     */
     public static class City extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CityId")
         private Long cityId;
@@ -212,6 +225,12 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeliveryAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeliveryAddressResponseBody</p>
+     */
     public static class Province extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProvinceId")
         private Long provinceId;
@@ -273,6 +292,12 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeliveryAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeliveryAddressResponseBody</p>
+     */
     public static class Town extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TownId")
         private Long townId;
@@ -334,6 +359,12 @@ public class DescribeDeliveryAddressResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeliveryAddressResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeliveryAddressResponseBody</p>
+     */
     public static class Addresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private Area area;

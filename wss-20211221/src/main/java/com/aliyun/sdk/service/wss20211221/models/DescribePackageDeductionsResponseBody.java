@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePackageDeductionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePackageDeductionsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePackageDeductionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePackageDeductionsResponseBody</p>
+     */
     public static class Deductions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
