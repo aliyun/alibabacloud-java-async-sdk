@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAsyncJobResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetAsyncJobResultResponseBody</p>
@@ -70,6 +71,12 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAsyncJobResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAsyncJobResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
