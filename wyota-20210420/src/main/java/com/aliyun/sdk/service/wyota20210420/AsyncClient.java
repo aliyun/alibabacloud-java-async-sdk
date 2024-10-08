@@ -33,6 +33,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddTerminalResponse> addTerminal(AddTerminalRequest request);
 
+    CompletableFuture<AddTerminalsResponse> addTerminals(AddTerminalsRequest request);
+
     CompletableFuture<AttachEndUsersResponse> attachEndUsers(AttachEndUsersRequest request);
 
     CompletableFuture<AttachLabelResponse> attachLabel(AttachLabelRequest request);
