@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHanaBackupSettingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHanaBackupSettingResponseBody</p>
  */
 public class DescribeHanaBackupSettingResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HanaBackupSetting")
+    @com.aliyun.core.annotation.NameInMap("HanaBackupSetting")
     private HanaBackupSetting hanaBackupSetting;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeHanaBackupSettingResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,7 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The backup settings.
+         * <p>The backup settings.</p>
          */
         public Builder hanaBackupSetting(HanaBackupSetting hanaBackupSetting) {
             this.hanaBackupSetting = hanaBackupSetting;
@@ -102,7 +105,10 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +116,10 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D0DB5BC-5071-5ADF-BCD1-14EBB0C17C54</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +127,14 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,29 +147,35 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHanaBackupSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaBackupSettingResponseBody</p>
+     */
     public static class HanaBackupSetting extends TeaModel {
-        @NameInMap("CatalogBackupParameterFile")
+        @com.aliyun.core.annotation.NameInMap("CatalogBackupParameterFile")
         private String catalogBackupParameterFile;
 
-        @NameInMap("CatalogBackupUsingBackint")
+        @com.aliyun.core.annotation.NameInMap("CatalogBackupUsingBackint")
         private Boolean catalogBackupUsingBackint;
 
-        @NameInMap("DataBackupParameterFile")
+        @com.aliyun.core.annotation.NameInMap("DataBackupParameterFile")
         private String dataBackupParameterFile;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("EnableAutoLogBackup")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoLogBackup")
         private Boolean enableAutoLogBackup;
 
-        @NameInMap("LogBackupParameterFile")
+        @com.aliyun.core.annotation.NameInMap("LogBackupParameterFile")
         private String logBackupParameterFile;
 
-        @NameInMap("LogBackupTimeout")
+        @com.aliyun.core.annotation.NameInMap("LogBackupTimeout")
         private Long logBackupTimeout;
 
-        @NameInMap("LogBackupUsingBackint")
+        @com.aliyun.core.annotation.NameInMap("LogBackupUsingBackint")
         private Boolean logBackupUsingBackint;
 
         private HanaBackupSetting(Builder builder) {
@@ -246,7 +264,10 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
             private Boolean logBackupUsingBackint; 
 
             /**
-             * The configuration file for catalog backup.
+             * <p>The configuration file for catalog backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/sap/SID/SYS/global/hdb/opt/hdbconfig/param</p>
              */
             public Builder catalogBackupParameterFile(String catalogBackupParameterFile) {
                 this.catalogBackupParameterFile = catalogBackupParameterFile;
@@ -254,11 +275,14 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Backint is used to back up catalogs. Valid values:
-             * <p>
+             * <p>Indicates whether Backint is used to back up catalogs. Valid values:</p>
+             * <ul>
+             * <li>true: Backint is used to back up catalogs.</li>
+             * <li>false: Backint is not used to back up catalogs.</li>
+             * </ul>
              * 
-             * *   true: Backint is used to back up catalogs.
-             * *   false: Backint is not used to back up catalogs.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder catalogBackupUsingBackint(Boolean catalogBackupUsingBackint) {
                 this.catalogBackupUsingBackint = catalogBackupUsingBackint;
@@ -266,7 +290,10 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration file for data backup.
+             * <p>The configuration file for data backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/sap/SID/SYS/global/hdb/opt/hdbconfig/param</p>
              */
             public Builder dataBackupParameterFile(String dataBackupParameterFile) {
                 this.dataBackupParameterFile = dataBackupParameterFile;
@@ -274,7 +301,10 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEMDB</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -282,11 +312,14 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic log backup is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether automatic log backup is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Automatic log backup is enabled.</li>
+             * <li><strong>false</strong>: Automatic log backup is disabled.</li>
+             * </ul>
              * 
-             * *   **true**: Automatic log backup is enabled.
-             * *   **false**: Automatic log backup is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAutoLogBackup(Boolean enableAutoLogBackup) {
                 this.enableAutoLogBackup = enableAutoLogBackup;
@@ -294,7 +327,10 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration file for log backup.
+             * <p>The configuration file for log backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/sap/SID/SYS/global/hdb/opt/hdbconfig/param</p>
              */
             public Builder logBackupParameterFile(String logBackupParameterFile) {
                 this.logBackupParameterFile = logBackupParameterFile;
@@ -302,7 +338,10 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which logs are backed up. Unit: seconds.
+             * <p>The interval at which logs are backed up. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900</p>
              */
             public Builder logBackupTimeout(Long logBackupTimeout) {
                 this.logBackupTimeout = logBackupTimeout;
@@ -310,11 +349,14 @@ public class DescribeHanaBackupSettingResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Backint is used to back up logs. Valid values:
-             * <p>
+             * <p>Indicates whether Backint is used to back up logs. Valid values:</p>
+             * <ul>
+             * <li>true: Backint is used to back up logs.</li>
+             * <li>false: Backint is not used to back up logs.</li>
+             * </ul>
              * 
-             * *   true: Backint is used to back up logs.
-             * *   false: Backint is not used to back up logs.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder logBackupUsingBackint(Boolean logBackupUsingBackint) {
                 this.logBackupUsingBackint = logBackupUsingBackint;

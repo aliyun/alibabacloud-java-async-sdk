@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableBackupPlanRequest} extends {@link RequestModel}
  *
  * <p>EnableBackupPlanRequest</p>
  */
 public class EnableBackupPlanRequest extends Request {
-    @Query
-    @NameInMap("PlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private EnableBackupPlanRequest(Builder builder) {
@@ -83,7 +83,10 @@ public class EnableBackupPlanRequest extends Request {
         } 
 
         /**
-         * The ID of the backup schedule.
+         * <p>The ID of the backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-*********************</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -92,12 +95,15 @@ public class EnableBackupPlanRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: ECS files</li>
+         * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+         * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS) file systems</li>
+         * </ul>
          * 
-         * *   **ECS_FILE**: The system backs up data from Elastic Compute Service (ECS) instances.
-         * *   **OSS**: The system backs up data from Object Storage Service (OSS) buckets.
-         * *   **NAS**: The system backs up data from Apsara File Storage NAS file systems.
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -106,7 +112,10 @@ public class EnableBackupPlanRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClientsResponseBody} extends {@link TeaModel}
  *
  * <p>CreateClientsResponseBody</p>
  */
 public class CreateClientsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("InstanceStatuses")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatuses")
     private InstanceStatuses instanceStatuses;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private CreateClientsResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class CreateClientsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +109,7 @@ public class CreateClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the ECS instance. If you specify more than one instance IDs in the request and the status of an ECS instance does not meet the requirements to install an HBR client, an error message is returned based on the value of this parameter.
+         * <p>The status of the ECS instance. If you specify more than one instance IDs in the request and the status of an ECS instance does not meet the requirements to install an HBR client, an error message is returned based on the value of this parameter.</p>
          */
         public Builder instanceStatuses(InstanceStatuses instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
@@ -114,7 +117,10 @@ public class CreateClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class CreateClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A8A9AE4-F798-5E6D-853E-10F9F5A1BD4E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +139,14 @@ public class CreateClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +154,10 @@ public class CreateClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.
+         * <p>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-000h9x5t02vhyksf1x7k</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -155,11 +170,17 @@ public class CreateClientsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateClientsResponseBody</p>
+     */
     public static class InstanceStatus extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ValidInstance")
+        @com.aliyun.core.annotation.NameInMap("ValidInstance")
         private Boolean validInstance;
 
         private InstanceStatus(Builder builder) {
@@ -194,7 +215,10 @@ public class CreateClientsResponseBody extends TeaModel {
             private Boolean validInstance; 
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zegp3cdu******uj9i</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -202,11 +226,14 @@ public class CreateClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an HBR client can be installed on the ECS instance. Valid values:
-             * <p>
+             * <p>Indicates whether an HBR client can be installed on the ECS instance. Valid values:</p>
+             * <ul>
+             * <li>true: An HBR client can be installed on the ECS instance.</li>
+             * <li>false: An HBR client cannot be installed on the ECS instance.</li>
+             * </ul>
              * 
-             * *   true: An HBR client can be installed on the ECS instance.
-             * *   false: An HBR client cannot be installed on the ECS instance.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder validInstance(Boolean validInstance) {
                 this.validInstance = validInstance;
@@ -220,8 +247,14 @@ public class CreateClientsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateClientsResponseBody</p>
+     */
     public static class InstanceStatuses extends TeaModel {
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private java.util.List < InstanceStatus> instanceStatus;
 
         private InstanceStatuses(Builder builder) {

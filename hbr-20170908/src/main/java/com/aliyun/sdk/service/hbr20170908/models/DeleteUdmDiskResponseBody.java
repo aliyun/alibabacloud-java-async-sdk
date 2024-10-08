@@ -1,45 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AttachNasFileSystemResponseBody} extends {@link TeaModel}
+ * 
+ * {@link DeleteUdmDiskResponseBody} extends {@link TeaModel}
  *
- * <p>AttachNasFileSystemResponseBody</p>
+ * <p>DeleteUdmDiskResponseBody</p>
  */
-public class AttachNasFileSystemResponseBody extends TeaModel {
-    @NameInMap("Code")
+public class DeleteUdmDiskResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskId")
-    private String taskId;
-
-    private AttachNasFileSystemResponseBody(Builder builder) {
+    private DeleteUdmDiskResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
-        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AttachNasFileSystemResponseBody create() {
+    public static DeleteUdmDiskResponseBody create() {
         return builder().build();
     }
 
@@ -71,19 +67,11 @@ public class AttachNasFileSystemResponseBody extends TeaModel {
         return this.success;
     }
 
-    /**
-     * @return taskId
-     */
-    public String getTaskId() {
-        return this.taskId;
-    }
-
     public static final class Builder {
         private String code; 
         private String message; 
         private String requestId; 
         private Boolean success; 
-        private String taskId; 
 
         /**
          * Code.
@@ -102,7 +90,10 @@ public class AttachNasFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,16 +108,8 @@ public class AttachNasFileSystemResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * TaskId.
-         */
-        public Builder taskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-
-        public AttachNasFileSystemResponseBody build() {
-            return new AttachNasFileSystemResponseBody(this);
+        public DeleteUdmDiskResponseBody build() {
+            return new DeleteUdmDiskResponseBody(this);
         } 
 
     } 

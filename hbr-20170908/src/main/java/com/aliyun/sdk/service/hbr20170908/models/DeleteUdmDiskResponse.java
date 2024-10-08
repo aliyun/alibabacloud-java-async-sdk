@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreatePolicyBindingsResponse} extends {@link TeaModel}
+ * {@link DeleteUdmDiskResponse} extends {@link TeaModel}
  *
- * <p>CreatePolicyBindingsResponse</p>
+ * <p>DeleteUdmDiskResponse</p>
  */
-public class CreatePolicyBindingsResponse extends Response {
+public class DeleteUdmDiskResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class CreatePolicyBindingsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreatePolicyBindingsResponseBody body;
+    private DeleteUdmDiskResponseBody body;
 
-    private CreatePolicyBindingsResponse(BuilderImpl builder) {
+    private DeleteUdmDiskResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreatePolicyBindingsResponse create() {
+    public static DeleteUdmDiskResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class CreatePolicyBindingsResponse extends Response {
     /**
      * @return body
      */
-    public CreatePolicyBindingsResponseBody getBody() {
+    public DeleteUdmDiskResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreatePolicyBindingsResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteUdmDiskResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreatePolicyBindingsResponseBody body);
+        Builder body(DeleteUdmDiskResponseBody body);
 
         @Override
-        CreatePolicyBindingsResponse build();
+        DeleteUdmDiskResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreatePolicyBindingsResponse, Builder>
+            extends Response.BuilderImpl<DeleteUdmDiskResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private CreatePolicyBindingsResponseBody body; 
+        private DeleteUdmDiskResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreatePolicyBindingsResponse response) {
+        private BuilderImpl(DeleteUdmDiskResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class CreatePolicyBindingsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreatePolicyBindingsResponseBody body) {
+        public Builder body(DeleteUdmDiskResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreatePolicyBindingsResponse build() {
-            return new CreatePolicyBindingsResponse(this);
+        public DeleteUdmDiskResponse build() {
+            return new DeleteUdmDiskResponse(this);
         } 
 
     } 

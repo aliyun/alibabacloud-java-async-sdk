@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVaultRequest} extends {@link RequestModel}
  *
  * <p>UpdateVaultRequest</p>
  */
 public class UpdateVaultRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("VaultId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultId;
 
-    @Query
-    @NameInMap("VaultName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultName")
     private String vaultName;
 
     private UpdateVaultRequest(Builder builder) {
@@ -97,7 +97,10 @@ public class UpdateVaultRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the backup vault. The description must be 0 to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vault description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -106,7 +109,10 @@ public class UpdateVaultRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2fa2xeiebyy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -115,7 +121,10 @@ public class UpdateVaultRequest extends Request {
         }
 
         /**
-         * VaultId.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);
@@ -124,7 +133,10 @@ public class UpdateVaultRequest extends Request {
         }
 
         /**
-         * VaultName.
+         * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vaultname</p>
          */
         public Builder vaultName(String vaultName) {
             this.putQueryParameter("VaultName", vaultName);

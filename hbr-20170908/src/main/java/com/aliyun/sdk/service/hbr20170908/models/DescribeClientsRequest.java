@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClientsRequest} extends {@link RequestModel}
  *
  * <p>DescribeClientsRequest</p>
  */
 public class DescribeClientsRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
-    @Query
-    @NameInMap("ClientType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
     private String clientType;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private DescribeClientsRequest(Builder builder) {
@@ -153,7 +153,10 @@ public class DescribeClientsRequest extends Request {
         } 
 
         /**
-         * The ID of the backup client.
+         * <p>The ID of the Cloud Backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-000ed600******6b0</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -162,7 +165,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * The type of the backup client. Valid value:**ECS_AGENT**, which indicates an SAP HANA backup client.
+         * <p>The type of the Cloud Backup client. Valid value: <strong>ECS_AGENT</strong>, which indicates an SAP HANA backup client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_AGENT</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -171,7 +177,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * The ID of the SAP HANA instance.
+         * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0005ni1******2l87</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -180,7 +189,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -189,7 +201,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +213,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmw6bxl7o5qyq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -207,7 +225,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid value:**HANA**, which indicates SAP HANA backup.
+         * <p>The type of the data source. Valid value:<strong>HANA</strong>, which indicates SAP HANA backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HANA</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -216,7 +237,10 @@ public class DescribeClientsRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0001vk0z******xdyr</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

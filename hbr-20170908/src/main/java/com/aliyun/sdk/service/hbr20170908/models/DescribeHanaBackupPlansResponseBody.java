@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHanaBackupPlansResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHanaBackupPlansResponseBody</p>
  */
 public class DescribeHanaBackupPlansResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HanaBackupPlans")
+    @com.aliyun.core.annotation.NameInMap("HanaBackupPlans")
     private HanaBackupPlans hanaBackupPlans;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeHanaBackupPlansResponseBody(Builder builder) {
@@ -122,7 +122,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,7 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the backup plan.
+         * <p>The details of the backup plan.</p>
          */
         public Builder hanaBackupPlans(HanaBackupPlans hanaBackupPlans) {
             this.hanaBackupPlans = hanaBackupPlans;
@@ -138,7 +141,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +152,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +163,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +174,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F029C1C7-26B6-5ADD-A73E-D85CCD7C73A9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,11 +185,14 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +200,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -195,32 +216,38 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHanaBackupPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaBackupPlansResponseBody</p>
+     */
     public static class HanaBackupPlan extends TeaModel {
-        @NameInMap("BackupPrefix")
+        @com.aliyun.core.annotation.NameInMap("BackupPrefix")
         private String backupPrefix;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("PlanId")
+        @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
 
-        @NameInMap("PlanName")
+        @com.aliyun.core.annotation.NameInMap("PlanName")
         private String planName;
 
-        @NameInMap("Schedule")
+        @com.aliyun.core.annotation.NameInMap("Schedule")
         private String schedule;
 
-        @NameInMap("VaultId")
+        @com.aliyun.core.annotation.NameInMap("VaultId")
         private String vaultId;
 
         private HanaBackupPlan(Builder builder) {
@@ -318,7 +345,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * The backup prefix.
+             * <p>The backup prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETE_DATA_BACKUP</p>
              */
             public Builder backupPrefix(String backupPrefix) {
                 this.backupPrefix = backupPrefix;
@@ -326,12 +356,15 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The backup type. Valid values:
-             * <p>
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li>COMPLETE: full backup</li>
+             * <li>INCREMENTAL: incremental backup</li>
+             * <li>DIFFERENTIAL: differential backup</li>
+             * </ul>
              * 
-             * *   COMPLETE: full backup
-             * *   INCREMENTAL: incremental backup
-             * *   DIFFERENTIAL: differential backup
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -339,7 +372,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SAP HANA instance.
+             * <p>The ID of the SAP HANA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl-0002scknka*****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -347,7 +383,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEMDB</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -355,11 +394,14 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the backup plan is disabled. Valid values:
-             * <p>
+             * <p>Indicates whether the backup plan is disabled. Valid values:</p>
+             * <ul>
+             * <li>true: The backup plan is disabled.</li>
+             * <li>false: The backup plan is enabled.</li>
+             * </ul>
              * 
-             * *   true: The backup plan is disabled.
-             * *   false: The backup plan is enabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -367,7 +409,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup plan.
+             * <p>The ID of the backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-0000tnyndg3ne5m4ubeu</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -375,7 +420,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backup plan.
+             * <p>The name of the backup plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plan-20220118-141153</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -383,11 +431,14 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
-             * <p>
+             * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> indicates that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+             * <ul>
+             * <li>startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
+             * <li>interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
+             * </ul>
              * 
-             * *   startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.
-             * *   interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.
+             * <strong>example:</strong>
+             * <p>I|1602673264|P1D</p>
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -395,7 +446,10 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup vault.
+             * <p>The ID of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-000csihw82pqkd7hcjws</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;
@@ -409,8 +463,14 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHanaBackupPlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaBackupPlansResponseBody</p>
+     */
     public static class HanaBackupPlans extends TeaModel {
-        @NameInMap("HanaBackupPlan")
+        @com.aliyun.core.annotation.NameInMap("HanaBackupPlan")
         private java.util.List < HanaBackupPlan> hanaBackupPlan;
 
         private HanaBackupPlans(Builder builder) {

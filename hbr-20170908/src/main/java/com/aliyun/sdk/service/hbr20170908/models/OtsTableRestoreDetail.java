@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OtsTableRestoreDetail} extends {@link TeaModel}
  *
  * <p>OtsTableRestoreDetail</p>
  */
 public class OtsTableRestoreDetail extends TeaModel {
-    @NameInMap("BatchChannelCount")
+    @com.aliyun.core.annotation.NameInMap("BatchChannelCount")
     private Integer batchChannelCount;
 
-    @NameInMap("IndexNameSuffix")
+    @com.aliyun.core.annotation.NameInMap("IndexNameSuffix")
     private String indexNameSuffix;
 
-    @NameInMap("OverwriteExisting")
+    @com.aliyun.core.annotation.NameInMap("OverwriteExisting")
     private Boolean overwriteExisting;
 
-    @NameInMap("ReGenerateAutoIncrementPK")
+    @com.aliyun.core.annotation.NameInMap("ReGenerateAutoIncrementPK")
     private Boolean reGenerateAutoIncrementPK;
 
-    @NameInMap("RestoreIndex")
+    @com.aliyun.core.annotation.NameInMap("RestoreIndex")
     private Boolean restoreIndex;
 
-    @NameInMap("RestoreSearchIndex")
+    @com.aliyun.core.annotation.NameInMap("RestoreSearchIndex")
     private Boolean restoreSearchIndex;
 
-    @NameInMap("SearchIndexNameSuffix")
+    @com.aliyun.core.annotation.NameInMap("SearchIndexNameSuffix")
     private String searchIndexNameSuffix;
 
     private OtsTableRestoreDetail(Builder builder) {

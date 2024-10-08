@@ -7,19 +7,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GenerateRamPolicyResponseBody} extends {@link TeaModel}
+ * {@link DeleteUdmEcsInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>GenerateRamPolicyResponseBody</p>
+ * <p>DeleteUdmEcsInstanceResponseBody</p>
  */
-public class GenerateRamPolicyResponseBody extends TeaModel {
+public class DeleteUdmEcsInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
-
-    @com.aliyun.core.annotation.NameInMap("PolicyDocument")
-    private String policyDocument;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -27,10 +24,9 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private GenerateRamPolicyResponseBody(Builder builder) {
+    private DeleteUdmEcsInstanceResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
-        this.policyDocument = builder.policyDocument;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -39,7 +35,7 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GenerateRamPolicyResponseBody create() {
+    public static DeleteUdmEcsInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -55,13 +51,6 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
      */
     public String getMessage() {
         return this.message;
-    }
-
-    /**
-     * @return policyDocument
-     */
-    public String getPolicyDocument() {
-        return this.policyDocument;
     }
 
     /**
@@ -81,7 +70,6 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private String policyDocument; 
         private String requestId; 
         private Boolean success; 
 
@@ -108,21 +96,10 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The content of the policy.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{     &quot;Version&quot;: &quot;1&quot;,     &quot;Statement&quot;: [         {             &quot;Effect&quot;: &quot;Deny&quot;,             &quot;Action&quot;: [                 &quot;hbr:CreateRestore&quot;,                 &quot;hbr:CreateRestoreJob&quot;,                 &quot;hbr:CreateHanaRestore&quot;,                 &quot;hbr:CreateUniRestorePlan&quot;,                 &quot;hbr:CreateSqlServerRestore&quot;             ],             &quot;Resource&quot;: [                 &quot;acs:hbr:<em>:1178</em><em><strong><strong>531:vault/v-000</strong></strong></em><em>blx06&quot;,                 &quot;acs:hbr:</em>:1178<strong><strong><strong>531:vault/v-000</strong></strong></strong>blx06/client/*&quot;             ]         }     ] }</p>
-         */
-        public Builder policyDocument(String policyDocument) {
-            this.policyDocument = policyDocument;
-            return this;
-        }
-
-        /**
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+         * <p>0497C0D3-82B5-56B2-8D64-D62E61B90E95</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,8 +121,8 @@ public class GenerateRamPolicyResponseBody extends TeaModel {
             return this;
         }
 
-        public GenerateRamPolicyResponseBody build() {
-            return new GenerateRamPolicyResponseBody(this);
+        public DeleteUdmEcsInstanceResponseBody build() {
+            return new DeleteUdmEcsInstanceResponseBody(this);
         } 
 
     } 

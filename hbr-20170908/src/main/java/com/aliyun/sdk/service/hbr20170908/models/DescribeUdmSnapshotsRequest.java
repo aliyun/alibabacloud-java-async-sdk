@@ -1,51 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUdmSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>DescribeUdmSnapshotsRequest</p>
  */
 public class DescribeUdmSnapshotsRequest extends Request {
-    @Query
-    @NameInMap("DiskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
     private String diskId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Body
-    @NameInMap("SnapshotIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SnapshotIds")
     private java.util.Map < String, ? > snapshotIds;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("UdmRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UdmRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String udmRegionId;
 
     private DescribeUdmSnapshotsRequest(Builder builder) {
@@ -156,7 +156,10 @@ public class DescribeUdmSnapshotsRequest extends Request {
         } 
 
         /**
-         * The ID of the disk.
+         * <p>The ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1560750pclffpzxy70</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -165,7 +168,10 @@ public class DescribeUdmSnapshotsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value must be a UNIX timestamp. Unit: seconds.
+         * <p>The end of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1643092168</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -174,7 +180,10 @@ public class DescribeUdmSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance.
+         * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp18x2k7sw925ir7ofh8</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -183,7 +192,10 @@ public class DescribeUdmSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the backup job.
+         * <p>The ID of the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-*********************</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -192,7 +204,10 @@ public class DescribeUdmSnapshotsRequest extends Request {
         }
 
         /**
-         * The list of backup snapshots.
+         * <p>The list of backup snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;s-000e3vhhu62xsm6v92r0&quot;]</p>
          */
         public Builder snapshotIds(java.util.Map < String, ? > snapshotIds) {
             String snapshotIdsShrink = shrink(snapshotIds, "SnapshotIds", "json");
@@ -202,12 +217,15 @@ public class DescribeUdmSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
+         * <li><strong>UDM_ECS_DISK</strong>: disk backup subtask of ECS instance backup</li>
+         * <li><strong>UDM_DISK</strong>: disk backup</li>
+         * </ul>
          * 
-         * *   **UDM_ECS**: ECS instance backup
-         * *   **UDM_ECS_DISK**: disk backup subtask of ECS instance backup
-         * *   **UDM_DISK**: disk backup
+         * <strong>example:</strong>
+         * <p>UDM_ECS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -216,7 +234,10 @@ public class DescribeUdmSnapshotsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value must be a UNIX timestamp. Unit: seconds.
+         * <p>The beginning of the time range to query. The value must be a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642057551</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -225,7 +246,10 @@ public class DescribeUdmSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the ECS instance resides.
+         * <p>The ID of the region where the ECS instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder udmRegionId(String udmRegionId) {
             this.putQueryParameter("UdmRegionId", udmRegionId);

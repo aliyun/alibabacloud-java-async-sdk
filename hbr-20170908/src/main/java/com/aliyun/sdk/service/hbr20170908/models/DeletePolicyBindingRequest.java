@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePolicyBindingRequest} extends {@link RequestModel}
  *
  * <p>DeletePolicyBindingRequest</p>
  */
 public class DeletePolicyBindingRequest extends Request {
-    @Body
-    @NameInMap("DataSourceIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceIds")
     private java.util.List < String > dataSourceIds;
 
-    @Body
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
     private DeletePolicyBindingRequest(Builder builder) {
@@ -83,7 +83,7 @@ public class DeletePolicyBindingRequest extends Request {
         } 
 
         /**
-         * The IDs of the data sources that you want to disassociate from the backup policy.
+         * <p>The IDs of the data sources that you want to disassociate from the backup policy.</p>
          */
         public Builder dataSourceIds(java.util.List < String > dataSourceIds) {
             String dataSourceIdsShrink = shrink(dataSourceIds, "DataSourceIds", "json");
@@ -93,7 +93,10 @@ public class DeletePolicyBindingRequest extends Request {
         }
 
         /**
-         * The ID of the backup policy.
+         * <p>The ID of the backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000************hgp</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -102,10 +105,13 @@ public class DeletePolicyBindingRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
+         * </ul>
          * 
-         * *   **UDM_ECS**: ECS instance backup
+         * <strong>example:</strong>
+         * <p>UDM_ECS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

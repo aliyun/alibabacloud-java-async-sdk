@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVaultsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVaultsRequest</p>
  */
 public class DescribeVaultsRequest extends Request {
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Body
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
-    @Query
-    @NameInMap("VaultRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultRegionId")
     private String vaultRegionId;
 
-    @Query
-    @NameInMap("VaultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultType")
     private String vaultType;
 
     private DescribeVaultsRequest(Builder builder) {
@@ -153,7 +153,10 @@ public class DescribeVaultsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -162,7 +165,10 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,7 +186,16 @@ public class DescribeVaultsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the backup vault. Valid values:</p>
+         * <ul>
+         * <li><strong>UNKNOWN</strong>: The backup vault is in an unknown state.</li>
+         * <li><strong>INITIALIZING</strong>: The backup vault is being initialized.</li>
+         * <li><strong>CREATED</strong>: The backup vault is created.</li>
+         * <li><strong>ERROR</strong>: An error occurs on the backup vault.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -231,11 +246,17 @@ public class DescribeVaultsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVaultsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

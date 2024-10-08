@@ -1,89 +1,89 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBackupPlanRequest} extends {@link RequestModel}
  *
  * <p>UpdateBackupPlanRequest</p>
  */
 public class UpdateBackupPlanRequest extends Request {
-    @Query
-    @NameInMap("ChangeListPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeListPath")
     private String changeListPath;
 
-    @Query
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, ? > detail;
 
-    @Body
-    @NameInMap("Exclude")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Exclude")
     private String exclude;
 
-    @Body
-    @NameInMap("Include")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Include")
     private String include;
 
-    @Query
-    @NameInMap("KeepLatestSnapshots")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepLatestSnapshots")
     private Long keepLatestSnapshots;
 
-    @Body
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("OtsDetail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OtsDetail")
     private OtsDetail otsDetail;
 
-    @Query
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
     private java.util.List < String > path;
 
-    @Query
-    @NameInMap("PlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planId;
 
-    @Query
-    @NameInMap("PlanName")
-    @Validation(maxLength = 64, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 1)
     private String planName;
 
-    @Query
-    @NameInMap("Prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Long retention;
 
-    @Body
-    @NameInMap("Rule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rule")
     private java.util.List < Rule> rule;
 
-    @Query
-    @NameInMap("Schedule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Schedule")
     private String schedule;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("SpeedLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeedLimit")
     private String speedLimit;
 
-    @Query
-    @NameInMap("UpdatePaths")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdatePaths")
     private Boolean updatePaths;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private UpdateBackupPlanRequest(Builder builder) {
@@ -294,7 +294,10 @@ public class UpdateBackupPlanRequest extends Request {
         } 
 
         /**
-         * The configurations of the incremental file synchronization. This parameter is required for data synchronization only.
+         * <p>The configurations of the incremental file synchronization. This parameter is required for data synchronization only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</p>
          */
         public Builder changeListPath(String changeListPath) {
             this.putQueryParameter("ChangeListPath", changeListPath);
@@ -303,13 +306,16 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The details about ECS instance backup. The value is a JSON string.
-         * <p>
+         * <p>The details about ECS instance backup. The value is a JSON string.</p>
+         * <ul>
+         * <li>snapshotGroup: specifies whether to use a snapshot-consistent group. This parameter is valid only if all disks of the ECS instance are enhanced SSDs (ESSDs).</li>
+         * <li>appConsistent: specifies whether to enable application consistency. If you set this parameter to true, you must also specify the preScriptPath and postScriptPath parameters.</li>
+         * <li>preScriptPath: the path to the pre-freeze scripts.</li>
+         * <li>postScriptPath: the path to the post-thaw scripts.</li>
+         * </ul>
          * 
-         * *   snapshotGroup: specifies whether to use a snapshot-consistent group. This parameter is valid only if all disks of the ECS instance are enhanced SSDs (ESSDs).
-         * *   appConsistent: specifies whether to enable application consistency. If you set this parameter to true, you must also specify the preScriptPath and postScriptPath parameters.
-         * *   preScriptPath: the path to the pre-freeze scripts.
-         * *   postScriptPath: the path to the post-thaw scripts.
+         * <strong>example:</strong>
+         * <p>{&quot;EnableFsFreeze&quot;:true,&quot;appConsistent&quot;:false,&quot;postScriptPath&quot;:&quot;&quot;,&quot;preScriptPath&quot;:&quot;&quot;,&quot;snapshotGroup&quot;:true,&quot;timeoutInSeconds&quot;:60}</p>
          */
         public Builder detail(java.util.Map < String, ? > detail) {
             String detailShrink = shrink(detail, "Detail", "json");
@@ -319,7 +325,10 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
          */
         public Builder exclude(String exclude) {
             this.putBodyParameter("Exclude", exclude);
@@ -328,7 +337,10 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies the paths to the files that you want to back up. The value must be 1 to 255 characters in length.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the paths to the files that you want to back up. The value must be 1 to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
          */
         public Builder include(String include) {
             this.putBodyParameter("Include", include);
@@ -337,11 +349,14 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the feature of keeping at least one backup version. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the feature of keeping at least one backup version. Valid values:</p>
+         * <ul>
+         * <li>0: The feature is disabled.</li>
+         * <li>1: The feature is enabled.</li>
+         * </ul>
          * 
-         * *   0: The feature is disabled.
-         * *   1: The feature is enabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder keepLatestSnapshots(Long keepLatestSnapshots) {
             this.putQueryParameter("KeepLatestSnapshots", keepLatestSnapshots);
@@ -350,12 +365,15 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies whether to use Windows Volume Shadow Copy Service (VSS) to define a source path.
-         * <p>
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies whether to use Windows Volume Shadow Copy Service (VSS) to define a source path.</p>
+         * <ul>
+         * <li>This parameter is available only for Windows ECS instances.</li>
+         * <li>If data changes occur in the backup source, the source data must be the same as the data to be backed up before you can set this parameter to <code>[&quot;UseVSS&quot;:true]</code>.</li>
+         * <li>If you use VSS, you cannot back up data from multiple directories.</li>
+         * </ul>
          * 
-         * *   This parameter is available only for Windows ECS instances.
-         * *   If data changes occur in the backup source, the source data must be the same as the data to be backed up before you can set this parameter to `["UseVSS":true]`.
-         * *   If you use VSS, you cannot back up data from multiple directories.
+         * <strong>example:</strong>
+         * <p>{&quot;UseVSS&quot;:false}</p>
          */
         public Builder options(String options) {
             this.putBodyParameter("Options", options);
@@ -364,7 +382,7 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The details about the Tablestore instance.
+         * <p>The details about the Tablestore instance.</p>
          */
         public Builder otsDetail(OtsDetail otsDetail) {
             String otsDetailShrink = shrink(otsDetail, "OtsDetail", "json");
@@ -374,7 +392,7 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The source paths.
+         * <p>The source paths.</p>
          */
         public Builder path(java.util.List < String > path) {
             this.putQueryParameter("Path", path);
@@ -383,7 +401,10 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The ID of the backup plan.
+         * <p>The ID of the backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-20211***735</p>
          */
         public Builder planId(String planId) {
             this.putQueryParameter("PlanId", planId);
@@ -392,7 +413,10 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The name of the backup plan.
+         * <p>The name of the backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planname</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("PlanName", planName);
@@ -401,7 +425,10 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **OSS**. This parameter specifies the prefix of objects that you want to back up. After a prefix is specified, only objects whose names start with the prefix are backed up.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>OSS</strong>. This parameter specifies the prefix of objects that you want to back up. After a prefix is specified, only objects whose names start with the prefix are backed up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-prefix</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("Prefix", prefix);
@@ -410,7 +437,10 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The retention period of the backup data. Minimum value: 1. Unit: days.
+         * <p>The retention period of the backup data. Minimum value: 1. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder retention(Long retention) {
             this.putQueryParameter("Retention", retention);
@@ -419,7 +449,7 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The rule of the backup plan.
+         * <p>The rule of the backup plan.</p>
          */
         public Builder rule(java.util.List < Rule> rule) {
             this.putBodyParameter("Rule", rule);
@@ -428,11 +458,14 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified in the `{startTime}` parameter and the subsequent backup jobs at an interval that is specified in the `{interval}` parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
-         * <p>
+         * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified in the <code>{startTime}</code> parameter and the subsequent backup jobs at an interval that is specified in the <code>{interval}</code> parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+         * <ul>
+         * <li><strong>startTime</strong>: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
+         * <li><strong>interval</strong>: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</li>
+         * </ul>
          * 
-         * *   **startTime**: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.
-         * *   **interval**: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.
+         * <strong>example:</strong>
+         * <p>I|1602673264|P1D</p>
          */
         public Builder schedule(String schedule) {
             this.putQueryParameter("Schedule", schedule);
@@ -441,14 +474,17 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+         * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+         * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
+         * <li><strong>OTS</strong>: Tablestore instances</li>
+         * <li><strong>UDM_ECS</strong>: ECS instances</li>
+         * </ul>
          * 
-         * *   **ECS_FILE**: Elastic Compute Service (ECS) files
-         * *   **OSS**: Object Storage Service (OSS) buckets
-         * *   **NAS**: Apsara File Storage NAS file systems
-         * *   **OTS**: Tablestore instances
-         * *   **UDM_ECS**: ECS instances
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -457,12 +493,15 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies the throttling rules. To ensure business continuity, you can limit the bandwidth that is used for file backup during peak hours. Format: `{start}|{end}|{bandwidth}`. Separate multiple throttling rules with vertical bars (|). A specified time range cannot overlap with another time range.
-         * <p>
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the throttling rules. To ensure business continuity, you can limit the bandwidth that is used for file backup during peak hours. Format: <code>{start}|{end}|{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). A specified time range cannot overlap with another time range.</p>
+         * <ul>
+         * <li><strong>start</strong>: the start hour</li>
+         * <li><strong>end</strong>: the end hour.</li>
+         * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+         * </ul>
          * 
-         * *   **start**: the start hour
-         * *   **end**: the end hour.
-         * *   **bandwidth**: the bandwidth. Unit: KB/s.
+         * <strong>example:</strong>
+         * <p>0:24:5120</p>
          */
         public Builder speedLimit(String speedLimit) {
             this.putQueryParameter("SpeedLimit", speedLimit);
@@ -471,11 +510,14 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * Specifies whether to update the source path if the backup source is empty. Valid values:
-         * <p>
+         * <p>Specifies whether to update the source path if the backup source is empty. Valid values:</p>
+         * <ul>
+         * <li>true: The system replaces the original source path with the specified source path.</li>
+         * <li>false: The system does not update the original source path. The system backs up data based on the source path that you specified when you created the backup plan.</li>
+         * </ul>
          * 
-         * *   true: The system replaces the original source path with the specified source path.
-         * *   false: The system does not update the original source path. The system backs up data based on the source path that you specified when you created the backup plan.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder updatePaths(Boolean updatePaths) {
             this.putQueryParameter("UpdatePaths", updatePaths);
@@ -484,7 +526,10 @@ public class UpdateBackupPlanRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0006******q</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);
@@ -499,29 +544,35 @@ public class UpdateBackupPlanRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateBackupPlanRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBackupPlanRequest</p>
+     */
     public static class Rule extends TeaModel {
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("DestinationRegionId")
+        @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
         private String destinationRegionId;
 
-        @NameInMap("DestinationRetention")
+        @com.aliyun.core.annotation.NameInMap("DestinationRetention")
         private Long destinationRetention;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("DoCopy")
+        @com.aliyun.core.annotation.NameInMap("DoCopy")
         private Boolean doCopy;
 
-        @NameInMap("Retention")
+        @com.aliyun.core.annotation.NameInMap("Retention")
         private Long retention;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Schedule")
+        @com.aliyun.core.annotation.NameInMap("Schedule")
         private String schedule;
 
         private Rule(Builder builder) {
@@ -610,7 +661,10 @@ public class UpdateBackupPlanRequest extends Request {
             private String schedule; 
 
             /**
-             * The backup type. Valid value: **COMPLETE**, which indicates full backup.
+             * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -618,7 +672,10 @@ public class UpdateBackupPlanRequest extends Request {
             }
 
             /**
-             * The ID of the region where the remote backup vault resides.
+             * <p>The ID of the region where the remote backup vault resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder destinationRegionId(String destinationRegionId) {
                 this.destinationRegionId = destinationRegionId;
@@ -626,7 +683,10 @@ public class UpdateBackupPlanRequest extends Request {
             }
 
             /**
-             * The retention period of the backup data. Unit: days.
+             * <p>The retention period of the backup data. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder destinationRetention(Long destinationRetention) {
                 this.destinationRetention = destinationRetention;
@@ -634,7 +694,10 @@ public class UpdateBackupPlanRequest extends Request {
             }
 
             /**
-             * Specifies whether to disable the policy.
+             * <p>Specifies whether to disable the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -642,7 +705,10 @@ public class UpdateBackupPlanRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable remote replication.
+             * <p>Specifies whether to enable remote replication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder doCopy(Boolean doCopy) {
                 this.doCopy = doCopy;
@@ -650,7 +716,10 @@ public class UpdateBackupPlanRequest extends Request {
             }
 
             /**
-             * The retention period of the backup data. Minimum value: 1. Unit: days.
+             * <p>The retention period of the backup data. Minimum value: 1. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -658,7 +727,10 @@ public class UpdateBackupPlanRequest extends Request {
             }
 
             /**
-             * The name of the backup policy.
+             * <p>The name of the backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-test-name</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -666,10 +738,11 @@ public class UpdateBackupPlanRequest extends Request {
             }
 
             /**
-             * The backup policy. Format: I|{startTime}|{interval}. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, I|1631685600|P1D specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
-             * <p>
+             * <p>The backup policy. Format: I|{startTime}|{interval}. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, I|1631685600|P1D specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+             * <p>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds. interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</p>
              * 
-             * startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds. interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.
+             * <strong>example:</strong>
+             * <p>I|1631685600|P1D</p>
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;

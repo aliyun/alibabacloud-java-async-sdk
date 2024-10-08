@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecoverableOtsInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRecoverableOtsInstancesResponseBody</p>
  */
 public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OtsInstances")
+    @com.aliyun.core.annotation.NameInMap("OtsInstances")
     private java.util.List < OtsInstances> otsInstances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeRecoverableOtsInstancesResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,10 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of Tablestore instances that can be restored and the tables in the instances.
+         * <p>The list of Tablestore instances that can be restored and the tables in the instances.</p>
          */
         public Builder otsInstances(java.util.List < OtsInstances> otsInstances) {
             this.otsInstances = otsInstances;
@@ -110,7 +116,10 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14DC089E-5DD3-5028-AEDB-93D78E11DB2A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +127,14 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,11 +147,17 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRecoverableOtsInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRecoverableOtsInstancesResponseBody</p>
+     */
     public static class OtsInstances extends TeaModel {
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("TableNames")
+        @com.aliyun.core.annotation.NameInMap("TableNames")
         private java.util.List < String > tableNames;
 
         private OtsInstances(Builder builder) {
@@ -174,7 +192,10 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
             private java.util.List < String > tableNames; 
 
             /**
-             * The name of the Tablestore instance that can be restored.
+             * <p>The name of the Tablestore instance that can be restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instancename</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -182,7 +203,7 @@ public class DescribeRecoverableOtsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the tables in the Tablestore instance.
+             * <p>The names of the tables in the Tablestore instance.</p>
              */
             public Builder tableNames(java.util.List < String > tableNames) {
                 this.tableNames = tableNames;

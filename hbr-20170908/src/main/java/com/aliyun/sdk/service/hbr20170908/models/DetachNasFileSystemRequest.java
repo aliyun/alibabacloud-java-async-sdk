@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachNasFileSystemRequest} extends {@link RequestModel}
  *
  * <p>DetachNasFileSystemRequest</p>
  */
 public class DetachNasFileSystemRequest extends Request {
-    @Query
-    @NameInMap("CreateTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String createTime;
 
-    @Query
-    @NameInMap("CrossAccountRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
     private String crossAccountRoleName;
 
-    @Query
-    @NameInMap("CrossAccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountType")
     private String crossAccountType;
 
-    @Query
-    @NameInMap("CrossAccountUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
     private DetachNasFileSystemRequest(Builder builder) {
@@ -112,7 +112,10 @@ public class DetachNasFileSystemRequest extends Request {
         } 
 
         /**
-         * The time when the file system was created. The value must be a UNIX timestamp. Unit: seconds.
+         * <p>The time when the file system was created. The value must be a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607436917</p>
          */
         public Builder createTime(String createTime) {
             this.putQueryParameter("CreateTime", createTime);
@@ -121,7 +124,10 @@ public class DetachNasFileSystemRequest extends Request {
         }
 
         /**
-         * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.
+         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BackupRole</p>
          */
         public Builder crossAccountRoleName(String crossAccountRoleName) {
             this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
@@ -130,11 +136,14 @@ public class DetachNasFileSystemRequest extends Request {
         }
 
         /**
-         * Specifies whether data is backed up and restored within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
-         * <p>
+         * <p>Specifies whether data is backed up and restored within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.</li>
+         * </ul>
          * 
-         * *   SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.
-         * *   CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>SELF_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -143,7 +152,10 @@ public class DetachNasFileSystemRequest extends Request {
         }
 
         /**
-         * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.
+         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158975xxxxx4625</p>
          */
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
@@ -152,7 +164,10 @@ public class DetachNasFileSystemRequest extends Request {
         }
 
         /**
-         * The ID of the file system.
+         * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>005494</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

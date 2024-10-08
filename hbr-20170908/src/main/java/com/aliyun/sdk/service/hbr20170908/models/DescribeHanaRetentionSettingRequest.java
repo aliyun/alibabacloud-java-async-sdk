@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHanaRetentionSettingRequest} extends {@link RequestModel}
  *
  * <p>DescribeHanaRetentionSettingRequest</p>
  */
 public class DescribeHanaRetentionSettingRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @Query
-    @NameInMap("VaultId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultId;
 
     private DescribeHanaRetentionSettingRequest(Builder builder) {
@@ -84,7 +84,10 @@ public class DescribeHanaRetentionSettingRequest extends Request {
         } 
 
         /**
-         * The ID of the SAP HANA instance.
+         * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0002ys1i******wwtf</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +96,10 @@ public class DescribeHanaRetentionSettingRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C4P</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -102,7 +108,10 @@ public class DescribeHanaRetentionSettingRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-000ii8t******ntrt2</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

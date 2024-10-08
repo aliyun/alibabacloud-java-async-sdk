@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClientsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClientsResponseBody</p>
  */
 public class DescribeClientsResponseBody extends TeaModel {
-    @NameInMap("Clients")
+    @com.aliyun.core.annotation.NameInMap("Clients")
     private Clients clients;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeClientsResponseBody(Builder builder) {
@@ -122,7 +122,7 @@ public class DescribeClientsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The backup clients.
+         * <p>The Cloud Backup clients.</p>
          */
         public Builder clients(Clients clients) {
             this.clients = clients;
@@ -130,7 +130,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,7 +141,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +152,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +163,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +174,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17189276-465D-5EF3-8FFD-0FF51B5A41A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,11 +185,14 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +200,10 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -195,53 +216,59 @@ public class DescribeClientsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClientsResponseBody</p>
+     */
     public static class Client extends TeaModel {
-        @NameInMap("AlertSetting")
+        @com.aliyun.core.annotation.NameInMap("AlertSetting")
         private String alertSetting;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ClientName")
+        @com.aliyun.core.annotation.NameInMap("ClientName")
         private String clientName;
 
-        @NameInMap("ClientType")
+        @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
 
-        @NameInMap("ClientVersion")
+        @com.aliyun.core.annotation.NameInMap("ClientVersion")
         private String clientVersion;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("MaxVersion")
+        @com.aliyun.core.annotation.NameInMap("MaxVersion")
         private String maxVersion;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
-        @NameInMap("UseHttps")
+        @com.aliyun.core.annotation.NameInMap("UseHttps")
         private Boolean useHttps;
 
-        @NameInMap("VaultId")
+        @com.aliyun.core.annotation.NameInMap("VaultId")
         private String vaultId;
 
         private Client(Builder builder) {
@@ -402,7 +429,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * The alert settings. Valid value: INHERITED, which indicates that the backup client sends alert notifications in the same way as the backup vault.
+             * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INHERITED</p>
              */
             public Builder alertSetting(String alertSetting) {
                 this.alertSetting = alertSetting;
@@ -410,7 +440,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup client.
+             * <p>The ID of the Cloud Backup client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-00062uu******2fgj</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -418,7 +451,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the backup client.
+             * <p>The client name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>client-20211224-101226</p>
              */
             public Builder clientName(String clientName) {
                 this.clientName = clientName;
@@ -426,7 +462,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backup client. Valid value:**ECS_AGENT**, which indicates an SAP HANA backup client.
+             * <p>The type of the Cloud Backup client. Valid value: <strong>ECS_AGENT</strong>, which indicates an SAP HANA backup client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS_AGENT</p>
              */
             public Builder clientType(String clientType) {
                 this.clientType = clientType;
@@ -434,7 +473,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the backup client.
+             * <p>The version number of the Cloud Backup client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.11.16</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -442,7 +484,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SAP HANA instance.
+             * <p>The ID of the SAP HANA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl-0008c48frr******ncpk</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -450,7 +495,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup client was created.
+             * <p>The time when the Cloud Backup client was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554347313</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -458,7 +506,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9b6wya******n8yo</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -466,7 +517,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ECS instance.
+             * <p>The name of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swh-hbr</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -474,7 +528,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum version number of the backup client.
+             * <p>The maximum version number of the Cloud Backup client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.11.23</p>
              */
             public Builder maxVersion(String maxVersion) {
                 this.maxVersion = maxVersion;
@@ -482,11 +539,14 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>CLASSIC</strong>: the classic network</li>
+             * <li><strong>VPC</strong>: the virtual private cloud (VPC)</li>
+             * </ul>
              * 
-             * *   **CLASSIC**: classic network
-             * *   **VPC**: virtual private cloud (VPC)
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -494,21 +554,24 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the backup client. Valid values:
-             * <p>
+             * <p>The status of the Cloud Backup client. Valid values:</p>
+             * <ul>
+             * <li><strong>REGISTERED</strong>: The backup client is registered.</li>
+             * <li><strong>ACTIVATED</strong>: The backup client is activated.</li>
+             * <li><strong>DEACTIVATED</strong>: The backup client fails to be activated.</li>
+             * <li><strong>INSTALLING</strong>: The backup client is being installed.</li>
+             * <li><strong>INSTALL_FAILED</strong>: The backup client fails to be installed.</li>
+             * <li><strong>NOT_INSTALLED</strong>: The backup client is not installed.</li>
+             * <li><strong>UPGRADING</strong>: The backup client is being upgraded.</li>
+             * <li><strong>UPGRADE_FAILED</strong>: The backup client fails to be upgraded.</li>
+             * <li><strong>UNINSTALLING</strong>: The backup client is being uninstalled.</li>
+             * <li><strong>UNINSTALL_FAILED</strong>: The backup client fails to be uninstalled.</li>
+             * <li><strong>STOPPED</strong>: The backup client is out of service.</li>
+             * <li><strong>UNKNOWN</strong>: The backup client is disconnected.</li>
+             * </ul>
              * 
-             * *   **REGISTERED**: The backup client is registered.
-             * *   **ACTIVATED**: The backup client is enabled.
-             * *   **DEACTIVATED**: The backup client fails to be enabled.
-             * *   **INSTALLING**: The backup client is being installed.
-             * *   **INSTALL_FAILED**: The backup client fails to be installed.
-             * *   **NOT_INSTALLED**: The backup client is not installed.
-             * *   **UPGRADING**: The backup client is being upgraded.
-             * *   **UPGRADE_FAILED**: The backup client fails to be upgraded.
-             * *   **UNINSTALLING**: The backup client is being uninstalled.
-             * *   **UNINSTALL_FAILED**: The backup client fails to be uninstalled.
-             * *   **STOPPED**: The backup client is out of service.
-             * *   **UNKNOWN**: The backup client is disconnected.
+             * <strong>example:</strong>
+             * <p>ACTIVATED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -516,7 +579,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The status information.
+             * <p>The status information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HANA_NOT_SUPPORT</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -524,7 +590,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup client was updated. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the Cloud Backup client was updated. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554347313</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -532,11 +601,14 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether data is transmitted over HTTPS. Valid values:
-             * <p>
+             * <p>Indicates whether data is transmitted over HTTPS. Valid values:</p>
+             * <ul>
+             * <li>true: Data is transmitted over HTTPS.</li>
+             * <li>false: Data is transmitted over HTTP.</li>
+             * </ul>
              * 
-             * *   true: Data is transmitted over HTTPS.
-             * *   false: Data is transmitted over HTTP.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useHttps(Boolean useHttps) {
                 this.useHttps = useHttps;
@@ -544,7 +616,10 @@ public class DescribeClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup vault.
+             * <p>The ID of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-00029mx6o******n85lg</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;
@@ -558,8 +633,14 @@ public class DescribeClientsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClientsResponseBody</p>
+     */
     public static class Clients extends TeaModel {
-        @NameInMap("Client")
+        @com.aliyun.core.annotation.NameInMap("Client")
         private java.util.List < Client> client;
 
         private Clients(Builder builder) {

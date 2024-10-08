@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVaultReplicationRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVaultReplicationRegionsRequest</p>
  */
 public class DescribeVaultReplicationRegionsRequest extends Request {
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     @Deprecated
     private String vaultId;
 
@@ -69,7 +69,10 @@ public class DescribeVaultReplicationRegionsRequest extends Request {
         } 
 
         /**
-         * The access token.
+         * <p>The access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01W3ZZOQ</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -78,7 +81,10 @@ public class DescribeVaultReplicationRegionsRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-00030j3c******sn</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

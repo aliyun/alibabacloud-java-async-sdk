@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVaultReplicationRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVaultReplicationRegionsResponseBody</p>
  */
 public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeVaultReplicationRegionsResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,10 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,7 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The regions that support cross-region replication.
+         * <p>The regions that support cross-region replication.</p>
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -110,7 +116,10 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4EEB401-DD21-588D-AE3B-1E835C7655E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +127,14 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
-         * <p>
+         * <p>Indicates whether the call is successful.</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,8 +147,14 @@ public class DescribeVaultReplicationRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVaultReplicationRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultReplicationRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private java.util.List < String > regionId;
 
         private Regions(Builder builder) {

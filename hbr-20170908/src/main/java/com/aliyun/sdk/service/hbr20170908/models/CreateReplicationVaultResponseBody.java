@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReplicationVaultResponseBody} extends {@link TeaModel}
  *
  * <p>CreateReplicationVaultResponseBody</p>
  */
 public class CreateReplicationVaultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private CreateReplicationVaultResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         private String vaultId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +109,10 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the request was successful, "successful" is returned. If the request failed, an error message is returned.
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +120,10 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,11 +131,14 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,10 +146,10 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the initialization task used to initialize the backup vault.
-         * <p>
+         * <p>The ID of the job that is used to initialize the backup vault. You can call the DescribeTask operation to query the job status.</p>
          * 
-         * You can call the DescribeTask operation to query the status of an initialization task.
+         * <strong>example:</strong>
+         * <p>t-*********************</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -145,7 +157,10 @@ public class CreateReplicationVaultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder vaultId(String vaultId) {
             this.vaultId = vaultId;

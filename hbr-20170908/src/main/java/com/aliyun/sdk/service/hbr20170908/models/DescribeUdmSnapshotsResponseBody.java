@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUdmSnapshotsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUdmSnapshotsResponseBody</p>
  */
 public class DescribeUdmSnapshotsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Snapshots")
+    @com.aliyun.core.annotation.NameInMap("Snapshots")
     private java.util.List < Snapshots> snapshots;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeUdmSnapshotsResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +109,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +120,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51CDEECB-7001-51CC-94AC-2A0F2A4B71D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +131,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The details about snapshots.
+         * <p>The details about snapshots.</p>
          */
         public Builder snapshots(java.util.List < Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -130,11 +139,14 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +154,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of backup snapshots.
+         * <p>The total number of backup snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -155,71 +170,77 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUdmSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUdmSnapshotsResponseBody</p>
+     */
     public static class Detail extends TeaModel {
-        @NameInMap("ConsistentLevel")
+        @com.aliyun.core.annotation.NameInMap("ConsistentLevel")
         private String consistentLevel;
 
-        @NameInMap("ContainOsDisk")
+        @com.aliyun.core.annotation.NameInMap("ContainOsDisk")
         private Boolean containOsDisk;
 
-        @NameInMap("DiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
 
-        @NameInMap("DiskDevName")
+        @com.aliyun.core.annotation.NameInMap("DiskDevName")
         private String diskDevName;
 
-        @NameInMap("DiskHbrSnapshotIdWithDeviceMap")
+        @com.aliyun.core.annotation.NameInMap("DiskHbrSnapshotIdWithDeviceMap")
         private java.util.Map < String, ? > diskHbrSnapshotIdWithDeviceMap;
 
-        @NameInMap("DiskIdList")
+        @com.aliyun.core.annotation.NameInMap("DiskIdList")
         private java.util.List < String > diskIdList;
 
-        @NameInMap("DowngradeReason")
+        @com.aliyun.core.annotation.NameInMap("DowngradeReason")
         private String downgradeReason;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("InstanceIdWithDiskIdListMap")
+        @com.aliyun.core.annotation.NameInMap("InstanceIdWithDiskIdListMap")
         private java.util.Map < String, ? > instanceIdWithDiskIdListMap;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InstantAccess")
+        @com.aliyun.core.annotation.NameInMap("InstantAccess")
         private Boolean instantAccess;
 
-        @NameInMap("NativeSnapshotIdList")
+        @com.aliyun.core.annotation.NameInMap("NativeSnapshotIdList")
         private java.util.List < String > nativeSnapshotIdList;
 
-        @NameInMap("OsDiskId")
+        @com.aliyun.core.annotation.NameInMap("OsDiskId")
         private String osDiskId;
 
-        @NameInMap("OsName")
+        @com.aliyun.core.annotation.NameInMap("OsName")
         private String osName;
 
-        @NameInMap("OsNameEn")
+        @com.aliyun.core.annotation.NameInMap("OsNameEn")
         private String osNameEn;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("SnapshotGroupId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotGroupId")
         private String snapshotGroupId;
 
-        @NameInMap("SystemDisk")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk")
         private Boolean systemDisk;
 
-        @NameInMap("VmName")
+        @com.aliyun.core.annotation.NameInMap("VmName")
         private String vmName;
 
         private Detail(Builder builder) {
@@ -434,7 +455,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             private String vmName; 
 
             /**
-             * The consistency level.
+             * <p>The consistency level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CRASH</p>
              */
             public Builder consistentLevel(String consistentLevel) {
                 this.consistentLevel = consistentLevel;
@@ -442,7 +466,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system disk is included.
+             * <p>Indicates whether the system disk is included.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder containOsDisk(Boolean containOsDisk) {
                 this.containOsDisk = containOsDisk;
@@ -450,7 +477,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source disk.
+             * <p>The type of the source disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder diskCategory(String diskCategory) {
                 this.diskCategory = diskCategory;
@@ -458,7 +488,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the disk.
+             * <p>The name of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvdb</p>
              */
             public Builder diskDevName(String diskDevName) {
                 this.diskDevName = diskDevName;
@@ -466,7 +499,13 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The mapping between the device and the recovery point ID.
+             * <p>The mapping between the device and the recovery point ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;/dev/xvdb&quot;:&quot;s-0000u7y6wm3v1e7hxh5a&quot;,					 
+             *     &quot;/dev/xvda&quot;:&quot;s-0004bl6yr5pt89jjsv5a&quot;
+             * }</p>
              */
             public Builder diskHbrSnapshotIdWithDeviceMap(java.util.Map < String, ? > diskHbrSnapshotIdWithDeviceMap) {
                 this.diskHbrSnapshotIdWithDeviceMap = diskHbrSnapshotIdWithDeviceMap;
@@ -474,7 +513,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the disks that are backed up at the recovery point.
+             * <p>The IDs of the disks that are backed up at the recovery point.</p>
              */
             public Builder diskIdList(java.util.List < String > diskIdList) {
                 this.diskIdList = diskIdList;
@@ -482,7 +521,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the downgrade.
+             * <p>The reason for the downgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HBR.NoRamRoleBound</p>
              */
             public Builder downgradeReason(String downgradeReason) {
                 this.downgradeReason = downgradeReason;
@@ -490,7 +532,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iZbpxxxxxxxxxxxxxxxxe2Z</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -498,7 +543,13 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The mapping between the instance ID and the disk ID.
+             * <p>The mapping between the instance ID and the disk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;i-bp1dlp0keohh7ids4uo6&quot;:&quot;d-bp1e6427vhd320hifvs&quot;,					 
+             *     &quot;i-bp1dlp0keohh7ids4uo6&quot;:&quot;d-bp1e6427vhd320hifvd&quot;
+             * }</p>
              */
             public Builder instanceIdWithDiskIdListMap(java.util.Map < String, ? > instanceIdWithDiskIdListMap) {
                 this.instanceIdWithDiskIdListMap = instanceIdWithDiskIdListMap;
@@ -506,7 +557,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swh-hbr</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -514,7 +568,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the source instance.
+             * <p>The specifications of the source instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c6.xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -522,7 +579,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the backup is created by the instant clone feature.
+             * <p>Indicates whether the backup is created by the instant clone feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -530,7 +590,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of snapshot IDs, corresponding to DiskIdList.
+             * <p>The list of snapshot IDs, corresponding to DiskIdList.</p>
              */
             public Builder nativeSnapshotIdList(java.util.List < String > nativeSnapshotIdList) {
                 this.nativeSnapshotIdList = nativeSnapshotIdList;
@@ -538,7 +598,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the system disk.
+             * <p>The ID of the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp1e6427vhd320hifvc</p>
              */
             public Builder osDiskId(String osDiskId) {
                 this.osDiskId = osDiskId;
@@ -546,7 +609,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operating system.
+             * <p>The name of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Debian 10.10 64-bit (UEFI)</p>
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -554,7 +620,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The English name of the operating system.
+             * <p>The English name of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Debian  11.1 64 bit</p>
              */
             public Builder osNameEn(String osNameEn) {
                 this.osNameEn = osNameEn;
@@ -562,7 +631,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values: linux and windows.
+             * <p>The type of the operating system. Valid values: linux and windows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -570,7 +642,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level of the source disk.
+             * <p>The performance level of the source disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -578,7 +653,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The system platform.
+             * <p>The system platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -586,7 +664,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot group.
+             * <p>The ID of the snapshot group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssg-uf6856txcaq31uj***</p>
              */
             public Builder snapshotGroupId(String snapshotGroupId) {
                 this.snapshotGroupId = snapshotGroupId;
@@ -594,7 +675,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the disk is a system disk.
+             * <p>Indicates whether the disk is a system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder systemDisk(Boolean systemDisk) {
                 this.systemDisk = systemDisk;
@@ -602,7 +686,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BNSHSVR42 IPGUARD</p>
              */
             public Builder vmName(String vmName) {
                 this.vmName = vmName;
@@ -616,77 +703,83 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUdmSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUdmSnapshotsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
-        @NameInMap("ActualBytes")
+        @com.aliyun.core.annotation.NameInMap("ActualBytes")
         private String actualBytes;
 
-        @NameInMap("AdvancedRetentionType")
+        @com.aliyun.core.annotation.NameInMap("AdvancedRetentionType")
         private String advancedRetentionType;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("BytesTotal")
+        @com.aliyun.core.annotation.NameInMap("BytesTotal")
         private Long bytesTotal;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private Long completeTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Detail detail;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("NativeSnapshotId")
+        @com.aliyun.core.annotation.NameInMap("NativeSnapshotId")
         private String nativeSnapshotId;
 
-        @NameInMap("NativeSnapshotInfo")
+        @com.aliyun.core.annotation.NameInMap("NativeSnapshotInfo")
         private String nativeSnapshotInfo;
 
-        @NameInMap("ParentSnapshotHash")
+        @com.aliyun.core.annotation.NameInMap("ParentSnapshotHash")
         private String parentSnapshotHash;
 
-        @NameInMap("Prefix")
+        @com.aliyun.core.annotation.NameInMap("Prefix")
         private String prefix;
 
-        @NameInMap("RealSnapshotTime")
+        @com.aliyun.core.annotation.NameInMap("RealSnapshotTime")
         private Long realSnapshotTime;
 
-        @NameInMap("Retention")
+        @com.aliyun.core.annotation.NameInMap("Retention")
         private Long retention;
 
-        @NameInMap("SnapshotHash")
+        @com.aliyun.core.annotation.NameInMap("SnapshotHash")
         private String snapshotHash;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
         private Snapshots(Builder builder) {
@@ -919,7 +1012,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             private Long updatedTime; 
 
             /**
-             * The size of the backup snapshot. Unit: bytes.
+             * <p>The size of the backup snapshot. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder actualBytes(String actualBytes) {
                 this.actualBytes = actualBytes;
@@ -927,12 +1023,15 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The special retention type, which is valid only for special backups. Valid values:
-             * <p>
+             * <p>The special retention type, which is valid only for special backups. Valid values:</p>
+             * <ul>
+             * <li><strong>WEEKLY</strong>: weekly backups</li>
+             * <li><strong>MONTHLY</strong>: monthly backups</li>
+             * <li><strong>YEARLY</strong>: yearly backups</li>
+             * </ul>
              * 
-             * *   **WEEKLY**: weekly backups
-             * *   **MONTHLY**: monthly backups
-             * *   **YEARLY**: yearly backups
+             * <strong>example:</strong>
+             * <p>WEEKLY</p>
              */
             public Builder advancedRetentionType(String advancedRetentionType) {
                 this.advancedRetentionType = advancedRetentionType;
@@ -940,7 +1039,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup type. Valid value: **COMPLETE**, which indicates full backup.
+             * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -948,7 +1050,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of data. Unit: bytes.
+             * <p>The total amount of data. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -956,7 +1061,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1646895666</p>
              */
             public Builder completeTime(Long completeTime) {
                 this.completeTime = completeTime;
@@ -964,7 +1072,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup snapshot was created.
+             * <p>The time when the backup snapshot was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1607436917</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -972,7 +1083,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642496679</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -980,7 +1094,7 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot details.
+             * <p>The snapshot details.</p>
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -988,7 +1102,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud disk or local disk.
+             * <p>The ID of the cloud disk or local disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-2ze86h5fga5rfwxxa8ef</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -996,7 +1113,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the backup.
+             * <p>The expiration time of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640334062</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -1004,7 +1124,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1f0pe78dxizrsdcgxd</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1012,7 +1135,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup job.
+             * <p>The ID of the backup job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-00030j3chkt******2</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1020,7 +1146,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup snapshot.
+             * <p>The ID of the backup snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-00047mg17p26x*****b</p>
              */
             public Builder nativeSnapshotId(String nativeSnapshotId) {
                 this.nativeSnapshotId = nativeSnapshotId;
@@ -1028,7 +1157,36 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot information.
+             * <p>The snapshot information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *                     &quot;sourceDiskId&quot;:&quot;d-bp17misjuy636t82v7b0&quot;,
+             *                     &quot;lastModifiedTime&quot;:&quot;2022-03-09T11:35:12Z&quot;,
+             *                     &quot;snapshotSN&quot;:&quot;64588-429372675-857161235&quot;,
+             *                     &quot;snapshotId&quot;:&quot;s-bp1fbtwv3e6xr6wpe9e0&quot;,
+             *                     &quot;creationTime&quot;:&quot;2022-03-09T11:31:12Z&quot;,
+             *                     &quot;snapshotType&quot;:&quot;user&quot;,
+             *                     &quot;usage&quot;:&quot;none&quot;,
+             *                     &quot;description&quot;:&quot;&quot;,
+             *                     &quot;sourceStorageType&quot;:&quot;disk&quot;,
+             *                     &quot;tags&quot;:[
+             *                         {
+             *                             &quot;tagValue&quot;:&quot;job-0007e0wqjl0imbrtkmnm&quot;,
+             *                             &quot;tagKey&quot;:&quot;HBR JobId&quot;
+             *                         }
+             *                     ],
+             *                     &quot;productCode&quot;:&quot;&quot;,
+             *                     &quot;encrypted&quot;:false,
+             *                     &quot;sourceDiskType&quot;:&quot;system&quot;,
+             *                     &quot;retentionDays&quot;:30,
+             *                     &quot;snapshotName&quot;:&quot;Created-from-HBR-job:job-0007e0wqjl0imbrtkmnm&quot;,
+             *                     &quot;kMSKeyId&quot;:&quot;&quot;,
+             *                     &quot;progress&quot;:&quot;100%&quot;,
+             *                     &quot;category&quot;:&quot;standard&quot;,
+             *                     &quot;sourceDiskSize&quot;:&quot;20&quot;,
+             *                     &quot;status&quot;:&quot;accomplished&quot;
+             *                 }</p>
              */
             public Builder nativeSnapshotInfo(String nativeSnapshotInfo) {
                 this.nativeSnapshotInfo = nativeSnapshotInfo;
@@ -1036,7 +1194,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The hash value of the parent backup snapshot.
+             * <p>The hash value of the parent backup snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f2fe..</p>
              */
             public Builder parentSnapshotHash(String parentSnapshotHash) {
                 this.parentSnapshotHash = parentSnapshotHash;
@@ -1044,7 +1205,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the backup snapshot.
+             * <p>The prefix of the backup snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example/</p>
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -1052,7 +1216,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the backup snapshot. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The timestamp of the backup snapshot. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642496679</p>
              */
             public Builder realSnapshotTime(Long realSnapshotTime) {
                 this.realSnapshotTime = realSnapshotTime;
@@ -1060,7 +1227,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the backup snapshot. Unit: days.
+             * <p>The retention period of the backup snapshot. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -1068,7 +1238,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The hash value of the backup snapshot.
+             * <p>The hash value of the backup snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f2fe...</p>
              */
             public Builder snapshotHash(String snapshotHash) {
                 this.snapshotHash = snapshotHash;
@@ -1076,7 +1249,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup snapshot.
+             * <p>The ID of the backup snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-00047mxg17p26*****b</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -1084,12 +1260,15 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
+             * <li><strong>UDM_ECS_DISK</strong>: disk backup subtask of ECS instance backup</li>
+             * <li><strong>UDM_DISK</strong>: disk backup</li>
+             * </ul>
              * 
-             * *   **UDM_ECS**: ECS instance backup
-             * *   **UDM_ECS_DISK**: disk backup subtask of ECS instance backup
-             * *   **UDM_DISK**: disk backup
+             * <strong>example:</strong>
+             * <p>UDM_ECS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1097,7 +1276,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the backup snapshot was created. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554347313</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -1105,12 +1287,15 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the backup job. Valid values:
-             * <p>
+             * <p>The status of the backup job. Valid values:</p>
+             * <ul>
+             * <li><strong>COMPLETE</strong>: The backup job is completed.</li>
+             * <li><strong>PARTIAL_COMPLETE</strong>: The backup job is partially completed.</li>
+             * <li><strong>FAILED</strong>: The backup job has failed.</li>
+             * </ul>
              * 
-             * *   **COMPLETE**: The backup job is completed.
-             * *   **PARTIAL_COMPLETE**: The backup job is partially completed.
-             * *   **FAILED**: The backup job has failed.
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1118,7 +1303,10 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup snapshot was updated. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the backup snapshot was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642496679</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

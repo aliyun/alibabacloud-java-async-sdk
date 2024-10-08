@@ -1,38 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddContainerClusterRequest} extends {@link RequestModel}
  *
  * <p>AddContainerClusterRequest</p>
  */
 public class AddContainerClusterRequest extends Request {
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Identifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NetworkType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkType;
 
     private AddContainerClusterRequest(Builder builder) {
@@ -113,7 +113,10 @@ public class AddContainerClusterRequest extends Request {
         } 
 
         /**
-         * The type of the cluster. Only Container Service for Kubernetes (ACK) clusters are supported.
+         * <p>The type of the cluster. Only Container Service for Kubernetes (ACK) clusters are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -122,7 +125,10 @@ public class AddContainerClusterRequest extends Request {
         }
 
         /**
-         * The description of the cluster.
+         * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description ack pv backup</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -131,7 +137,10 @@ public class AddContainerClusterRequest extends Request {
         }
 
         /**
-         * The ID of the cluster that you want to register.
+         * <p>The ID of the cluster that you want to register.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cca8f35f0e0d84540b49d994511c2c87a</p>
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);
@@ -140,7 +149,10 @@ public class AddContainerClusterRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack_pv_backup_location</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -149,11 +161,14 @@ public class AddContainerClusterRequest extends Request {
         }
 
         /**
-         * The network type of the cluster. Valid values:
-         * <p>
+         * <p>The network type of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong>: the classic network</li>
+         * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
+         * </ul>
          * 
-         * *   **CLASSIC**: the classic network
-         * *   **VPC**: a virtual private cloud (VPC)
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);

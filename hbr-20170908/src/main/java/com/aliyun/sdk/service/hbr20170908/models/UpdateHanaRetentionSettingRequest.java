@@ -1,43 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHanaRetentionSettingRequest} extends {@link RequestModel}
  *
  * <p>UpdateHanaRetentionSettingRequest</p>
  */
 public class UpdateHanaRetentionSettingRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("DatabaseName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseName;
 
-    @Query
-    @NameInMap("Disabled")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Disabled")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean disabled;
 
-    @Query
-    @NameInMap("RetentionDays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long retentionDays;
 
-    @Query
-    @NameInMap("Schedule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Schedule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schedule;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private UpdateHanaRetentionSettingRequest(Builder builder) {
@@ -128,7 +128,10 @@ public class UpdateHanaRetentionSettingRequest extends Request {
         } 
 
         /**
-         * The ID of the SAP HANA instance.
+         * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-00024vyjj******srrq</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -137,7 +140,10 @@ public class UpdateHanaRetentionSettingRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEMDB</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -146,11 +152,14 @@ public class UpdateHanaRetentionSettingRequest extends Request {
         }
 
         /**
-         * Specifies whether to permanently retain the backup. Valid values:
-         * <p>
+         * <p>Specifies whether to permanently retain the backup. Valid values:</p>
+         * <ul>
+         * <li>true: The backup is permanently retained.</li>
+         * <li>false: The backup is retained for the specified number of days.</li>
+         * </ul>
          * 
-         * *   true: The backup is permanently retained.
-         * *   false: The backup is retained for the specified number of days.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disabled(Boolean disabled) {
             this.putQueryParameter("Disabled", disabled);
@@ -159,7 +168,10 @@ public class UpdateHanaRetentionSettingRequest extends Request {
         }
 
         /**
-         * The number of days for which the backup is retained. If you set the Disabled parameter to false, the backup is retained for the number of days specified by this parameter.
+         * <p>The retention period of the backup data. Unit: days. If you set the Disabled parameter to false, the backup is retained for the number of days specified by this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder retentionDays(Long retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -168,11 +180,14 @@ public class UpdateHanaRetentionSettingRequest extends Request {
         }
 
         /**
-         * The policy to update the retention period. Format: `I|{startTime}|{interval}`. The retention period is updated at an interval of {interval} starting from {startTime}.
-         * <p>
+         * <p>The policy to update the retention period. Format: <code>I|{startTime}|{interval}</code>. The retention period is updated at an interval of {interval} starting from {startTime}.</p>
+         * <ul>
+         * <li>startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
+         * <li>interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour, and P1D indicates an interval of one day.</li>
+         * </ul>
          * 
-         * *   startTime: the time at which the system starts to update the retention period. The time must follow the UNIX time format. Unit: seconds.
-         * *   interval: the interval at which the system updates the retention period. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of 1 hour and P1D specifies an interval of one day.
+         * <strong>example:</strong>
+         * <p>I|0|P1D</p>
          */
         public Builder schedule(String schedule) {
             this.putQueryParameter("Schedule", schedule);
@@ -181,7 +196,10 @@ public class UpdateHanaRetentionSettingRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-000fb0v2ly******k6</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

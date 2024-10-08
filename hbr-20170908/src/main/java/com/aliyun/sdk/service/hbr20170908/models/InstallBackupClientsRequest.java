@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallBackupClientsRequest} extends {@link RequestModel}
  *
  * <p>InstallBackupClientsRequest</p>
  */
 public class InstallBackupClientsRequest extends Request {
-    @Query
-    @NameInMap("CrossAccountRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
     private String crossAccountRoleName;
 
-    @Query
-    @NameInMap("CrossAccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountType")
     private String crossAccountType;
 
-    @Query
-    @NameInMap("CrossAccountUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map < String, ? > instanceIds;
 
     private InstallBackupClientsRequest(Builder builder) {
@@ -97,7 +97,10 @@ public class InstallBackupClientsRequest extends Request {
         } 
 
         /**
-         * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BackupRole</p>
          */
         public Builder crossAccountRoleName(String crossAccountRoleName) {
             this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
@@ -106,11 +109,14 @@ public class InstallBackupClientsRequest extends Request {
         }
 
         /**
-         * Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
-         * <p>
+         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+         * </ul>
          * 
-         * *   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.
-         * *   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -119,7 +125,10 @@ public class InstallBackupClientsRequest extends Request {
         }
 
         /**
-         * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16392782xxxxxx</p>
          */
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
@@ -128,7 +137,10 @@ public class InstallBackupClientsRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances. You can specify up to 20 IDs.
+         * <p>The IDs of the ECS instances. You can specify up to 20 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-0xi5wj5*****v3j3bh2gj5&quot;]</p>
          */
         public Builder instanceIds(java.util.Map < String, ? > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

@@ -1,32 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPlansRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupPlansRequest</p>
  */
 public class DescribeBackupPlansRequest extends Request {
-    @Query
-    @NameInMap("Filters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
     private java.util.List < Filters> filters;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
     private DescribeBackupPlansRequest(Builder builder) {
@@ -97,7 +97,7 @@ public class DescribeBackupPlansRequest extends Request {
         } 
 
         /**
-         * The filter.
+         * <p>The filter.</p>
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -106,7 +106,10 @@ public class DescribeBackupPlansRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +118,10 @@ public class DescribeBackupPlansRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,14 +130,17 @@ public class DescribeBackupPlansRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+         * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+         * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
+         * <li><strong>OTS</strong>: Tablestore instances</li>
+         * <li><strong>UDM_ECS</strong>: ECS instances</li>
+         * </ul>
          * 
-         * *   **ECS_FILE**: Elastic Compute Service (ECS) files
-         * *   **OSS**: Object Storage Service (OSS) buckets
-         * *   **NAS**: Apsara File Storage NAS file systems
-         * *   **OTS**: Tablestore instances
-         * *   **UDM_ECS**: ECS instances
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -146,11 +155,17 @@ public class DescribeBackupPlansRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupPlansRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupPlansRequest</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private Filters(Builder builder) {
@@ -185,16 +200,19 @@ public class DescribeBackupPlansRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * The keys in the filter. Valid values:
-             * <p>
+             * <p>The keys in the filter. Valid values:</p>
+             * <ul>
+             * <li><strong>regionId</strong>: the ID of a region</li>
+             * <li><strong>planId</strong>: the ID of a backup plan</li>
+             * <li><strong>sourceType</strong>: the type of a data source</li>
+             * <li><strong>vaultId</strong>: the ID of a backup vault</li>
+             * <li><strong>instanceName</strong>: the name of an instance</li>
+             * <li><strong>instanceId</strong>: the ID of an instance</li>
+             * <li><strong>planName</strong>: the name of a backup plan</li>
+             * </ul>
              * 
-             * *   **regionId**: the ID of a region
-             * *   **planId**: the ID of a backup plan
-             * *   **sourceType**: the type of a data source
-             * *   **vaultId**: the ID of a backup vault
-             * *   **instanceName**: the name of an instance
-             * *   **instanceId**: the ID of an instance
-             * *   **planName**: the name of a backup plan
+             * <strong>example:</strong>
+             * <p>vaultId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -202,7 +220,10 @@ public class DescribeBackupPlansRequest extends Request {
             }
 
             /**
-             * The values that you want to match in the filter.
+             * <p>The values that you want to match in the filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;v-*********************&quot;]</p>
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallBackupClientsResponseBody} extends {@link TeaModel}
  *
  * <p>InstallBackupClientsResponseBody</p>
  */
 public class InstallBackupClientsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("InstanceStatuses")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatuses")
     private java.util.List < InstanceStatuses> instanceStatuses;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private InstallBackupClientsResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +109,7 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the ECS instance.
+         * <p>The status of the ECS instance.</p>
          */
         public Builder instanceStatuses(java.util.List < InstanceStatuses> instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
@@ -114,7 +117,10 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +139,14 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +154,10 @@ public class InstallBackupClientsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.
+         * <p>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of an asynchronous job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-*********************</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -155,14 +170,20 @@ public class InstallBackupClientsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link InstallBackupClientsResponseBody} extends {@link TeaModel}
+     *
+     * <p>InstallBackupClientsResponseBody</p>
+     */
     public static class InstanceStatuses extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ValidInstance")
+        @com.aliyun.core.annotation.NameInMap("ValidInstance")
         private Boolean validInstance;
 
         private InstanceStatuses(Builder builder) {
@@ -206,13 +227,16 @@ public class InstallBackupClientsResponseBody extends TeaModel {
             private Boolean validInstance; 
 
             /**
-             * The error code that is returned. Valid values:
-             * <p>
+             * <p>The error code that is returned. Valid values:</p>
+             * <ul>
+             * <li>If the value is empty, the call is successful.</li>
+             * <li><strong>InstanceNotExists</strong>: The ECS instance does not exist.</li>
+             * <li><strong>InstanceNotRunning</strong>: The ECS instance is not running.</li>
+             * <li><strong>CloudAssistNotRunningOnInstance</strong>: Cloud Assistant is unavailable.</li>
+             * </ul>
              * 
-             * *   If the value is empty, the call is successful.
-             * *   **InstanceNotExists**: The ECS instance does not exist.
-             * *   **InstanceNotRunning**: The ECS instance is not running.
-             * *   **CloudAssistNotRunningOnInstance**: Cloud Assistant is unavailable.
+             * <strong>example:</strong>
+             * <p>InstanceNotExists</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -220,7 +244,10 @@ public class InstallBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-0xi5w***v3j3bh2gj5</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -228,11 +255,14 @@ public class InstallBackupClientsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an HBR client can be installed on the ECS instance. Valid values:
-             * <p>
+             * <p>Indicates whether an HBR client can be installed on the ECS instance. Valid values:</p>
+             * <ul>
+             * <li>true: An HBR client can be installed on the ECS instance.</li>
+             * <li>false: An HBR client cannot be installed on the ECS instance.</li>
+             * </ul>
              * 
-             * *   true: An HBR client can be installed on the ECS instance.
-             * *   false: An HBR client cannot be installed on the ECS instance.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder validInstance(Boolean validInstance) {
                 this.validInstance = validInstance;

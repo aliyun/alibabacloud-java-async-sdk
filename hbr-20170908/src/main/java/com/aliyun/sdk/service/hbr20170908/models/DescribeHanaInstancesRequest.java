@@ -1,40 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHanaInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeHanaInstancesRequest</p>
  */
 public class DescribeHanaInstancesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private DescribeHanaInstancesRequest(Builder builder) {
@@ -125,7 +125,10 @@ public class DescribeHanaInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the SAP HANA instance.
+         * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0001zfc******50pr3</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -134,7 +137,10 @@ public class DescribeHanaInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,7 +149,10 @@ public class DescribeHanaInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,7 +161,10 @@ public class DescribeHanaInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz24ikcjyqjkq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -161,7 +173,7 @@ public class DescribeHanaInstancesRequest extends Request {
         }
 
         /**
-         * The tags of SAP HANA instance.
+         * <p>The tags of the SAP HANA instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -170,7 +182,10 @@ public class DescribeHanaInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-000b0ov******6zs</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);
@@ -185,11 +200,17 @@ public class DescribeHanaInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHanaInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -224,7 +245,10 @@ public class DescribeHanaInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ace:rm:rgld</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -232,7 +256,10 @@ public class DescribeHanaInstancesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmwutpyat2kwy</p>
              */
             public Builder value(String value) {
                 this.value = value;

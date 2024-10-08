@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHanaRestoresResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHanaRestoresResponseBody</p>
  */
 public class DescribeHanaRestoresResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HanaRestore")
+    @com.aliyun.core.annotation.NameInMap("HanaRestore")
     private HanaRestore hanaRestore;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHanaRestoresResponseBody(Builder builder) {
@@ -122,7 +122,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,7 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         }
 
         /**
-         * The information about restore jobs.
+         * <p>The information about restore jobs.</p>
          */
         public Builder hanaRestore(HanaRestore hanaRestore) {
             this.hanaRestore = hanaRestore;
@@ -138,7 +141,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +152,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +163,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +174,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7DEFC897-8F05-5C05-912C-C9A9510FBFF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,11 +185,14 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +200,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -195,92 +216,98 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHanaRestoresResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaRestoresResponseBody</p>
+     */
     public static class HanaRestores extends TeaModel {
-        @NameInMap("BackupID")
+        @com.aliyun.core.annotation.NameInMap("BackupID")
         private Long backupID;
 
-        @NameInMap("BackupPrefix")
+        @com.aliyun.core.annotation.NameInMap("BackupPrefix")
         private String backupPrefix;
 
-        @NameInMap("CheckAccess")
+        @com.aliyun.core.annotation.NameInMap("CheckAccess")
         private Boolean checkAccess;
 
-        @NameInMap("ClearLog")
+        @com.aliyun.core.annotation.NameInMap("ClearLog")
         private Boolean clearLog;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("CurrentPhase")
+        @com.aliyun.core.annotation.NameInMap("CurrentPhase")
         private Integer currentPhase;
 
-        @NameInMap("CurrentProgress")
+        @com.aliyun.core.annotation.NameInMap("CurrentProgress")
         private Long currentProgress;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("DatabaseRestoreId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseRestoreId")
         private Long databaseRestoreId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("LogPosition")
+        @com.aliyun.core.annotation.NameInMap("LogPosition")
         private Long logPosition;
 
-        @NameInMap("MaxPhase")
+        @com.aliyun.core.annotation.NameInMap("MaxPhase")
         private Integer maxPhase;
 
-        @NameInMap("MaxProgress")
+        @com.aliyun.core.annotation.NameInMap("MaxProgress")
         private Long maxProgress;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Phase")
+        @com.aliyun.core.annotation.NameInMap("Phase")
         private String phase;
 
-        @NameInMap("ReachedTime")
+        @com.aliyun.core.annotation.NameInMap("ReachedTime")
         private Long reachedTime;
 
-        @NameInMap("RecoveryPointInTime")
+        @com.aliyun.core.annotation.NameInMap("RecoveryPointInTime")
         private Long recoveryPointInTime;
 
-        @NameInMap("RestoreId")
+        @com.aliyun.core.annotation.NameInMap("RestoreId")
         private String restoreId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceClusterId")
+        @com.aliyun.core.annotation.NameInMap("SourceClusterId")
         private String sourceClusterId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SystemCopy")
+        @com.aliyun.core.annotation.NameInMap("SystemCopy")
         private Boolean systemCopy;
 
-        @NameInMap("UseCatalog")
+        @com.aliyun.core.annotation.NameInMap("UseCatalog")
         private Boolean useCatalog;
 
-        @NameInMap("UseDelta")
+        @com.aliyun.core.annotation.NameInMap("UseDelta")
         private Boolean useDelta;
 
-        @NameInMap("VaultId")
+        @com.aliyun.core.annotation.NameInMap("VaultId")
         private String vaultId;
 
-        @NameInMap("VolumeId")
+        @com.aliyun.core.annotation.NameInMap("VolumeId")
         private Integer volumeId;
 
         private HanaRestores(Builder builder) {
@@ -558,7 +585,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             private Integer volumeId; 
 
             /**
-             * The ID of the backup.
+             * <p>The backup ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1635315505</p>
              */
             public Builder backupID(Long backupID) {
                 this.backupID = backupID;
@@ -566,7 +596,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The backup prefix.
+             * <p>The backup prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INC_DATA_BACKUP</p>
              */
             public Builder backupPrefix(String backupPrefix) {
                 this.backupPrefix = backupPrefix;
@@ -574,11 +607,14 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the differential backup and log backup are validated. Valid values:
-             * <p>
+             * <p>Indicates whether the differential backup and log backup are validated. Valid values:</p>
+             * <ul>
+             * <li>true: Cloud Backup checks whether the required differential backup and log backup are available before the restore job starts. If the differential backup or log backup is unavailable, Cloud Backup does not start the restore job.</li>
+             * <li>false: Cloud Backup does not check whether the required differential backup and log backup are available before the restore job starts.</li>
+             * </ul>
              * 
-             * *   true: HBR checks whether the required differential backup and log backup are available before the restore job starts. If the differential backup or log backup is unavailable, HBR does not start the restore job.
-             * *   false: HBR does not check whether the required differential backup and log backup are available before the restore job starts.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder checkAccess(Boolean checkAccess) {
                 this.checkAccess = checkAccess;
@@ -586,7 +622,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether all log entries are deleted from the log area after the log entries are restored. Valid values: true and false. If the return value is false, all log entries are deleted from the log area after the log entries are restored.
+             * <p>Indicates whether all log entries are deleted from the log area after the log entries are restored. Valid values: true and false. If the return value is false, all log entries are deleted from the log area after the log entries are restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder clearLog(Boolean clearLog) {
                 this.clearLog = clearLog;
@@ -594,7 +633,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SAP HANA instance that is restored.
+             * <p>The ID of the SAP HANA instance that is restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl-000923yu******p00j4</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -602,7 +644,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The current recovery phase. This value is obtained from SAP HANA.
+             * <p>The current recovery phase. This value is obtained from SAP HANA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder currentPhase(Integer currentPhase) {
                 this.currentPhase = currentPhase;
@@ -610,7 +655,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The current progress. This value is obtained from SAP HANA.
+             * <p>The current progress. This value is obtained from SAP HANA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentProgress(Long currentProgress) {
                 this.currentProgress = currentProgress;
@@ -618,7 +666,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BWD</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -626,7 +677,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the database recovery.
+             * <p>The ID of the database recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644038961030</p>
              */
             public Builder databaseRestoreId(Long databaseRestoreId) {
                 this.databaseRestoreId = databaseRestoreId;
@@ -634,7 +688,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the restore job ends. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the restore job ends. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1634356382</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -642,7 +699,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The log position to which the database is restored. This parameter is returned only if the value of the Mode parameter is **RECOVERY_TO_LOG_POSITION**.
+             * <p>The log position to which the database is restored. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder logPosition(Long logPosition) {
                 this.logPosition = logPosition;
@@ -650,7 +710,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum recovery phase. This value is obtained from SAP HANA.
+             * <p>The maximum recovery phase. This value is obtained from SAP HANA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder maxPhase(Integer maxPhase) {
                 this.maxPhase = maxPhase;
@@ -658,7 +721,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum progress. This value is obtained from SAP HANA.
+             * <p>The maximum progress. This value is obtained from SAP HANA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxProgress(Long maxProgress) {
                 this.maxProgress = maxProgress;
@@ -666,7 +732,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the recovery phase.
+             * <p>The details of the recovery phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL Error 448 - recovery could not be completed:</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -674,13 +743,16 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The recovery mode. Valid values:
-             * <p>
+             * <p>The recovery mode. Valid values:</p>
+             * <ul>
+             * <li><strong>RECOVERY_TO_MOST_RECENT</strong>: The database is restored to the recently available state to which the database has been backed up.</li>
+             * <li><strong>RECOVERY_TO_POINT_IN_TIME</strong>: The database is restored to a specified point in time.</li>
+             * <li><strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>: The database is restored to a specified backup.</li>
+             * <li><strong>RECOVERY_TO_LOG_POSITION</strong>: The database is restored to a specified log position.</li>
+             * </ul>
              * 
-             * *   **RECOVERY_TO_MOST_RECENT**: The database is restored to the recently available state to which the database has been backed up.
-             * *   **RECOVERY_TO_POINT_IN_TIME**: The database is restored to a specified point in time.
-             * *   **RECOVERY_TO_SPECIFIC_BACKUP**: The database is restored to a specified backup.
-             * *   **RECOVERY_TO_LOG_POSITION**: The database is restored to a specified log position.
+             * <strong>example:</strong>
+             * <p>RECOVERY_TO_SPECIFIC_BACKUP</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -688,7 +760,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The recovery phase.
+             * <p>The recovery phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>restart</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -696,7 +771,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time at which the database is restored.
+             * <p>The point in time at which the database is restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1635315505</p>
              */
             public Builder reachedTime(Long reachedTime) {
                 this.reachedTime = reachedTime;
@@ -704,7 +782,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time to which the database is restored. This parameter is returned only if the value of the Mode parameter is **RECOVERY_TO_POINT_IN_TIME**. HBR restores the database to a state closest to the specified point in time.
+             * <p>The point in time to which the database is restored. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_POINT_IN_TIME</strong>. Cloud Backup restores the database to a state closest to the specified point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649851200</p>
              */
             public Builder recoveryPointInTime(Long recoveryPointInTime) {
                 this.recoveryPointInTime = recoveryPointInTime;
@@ -712,7 +793,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the restore job.
+             * <p>The ID of the restore job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-000c1en183ayn9sesgqh</p>
              */
             public Builder restoreId(String restoreId) {
                 this.restoreId = restoreId;
@@ -720,7 +804,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source system. This parameter indicates the name of the source database that is restored. Format: `<Source database name>@SID`.
+             * <p>The name of the source system. This parameter indicates the name of the source database that is restored. Format: <code>&lt;Source database name&gt;@SID</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRD@H4P</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -728,7 +815,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source SAP HANA instance.
+             * <p>The ID of the source SAP HANA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl-0000g3mvy******5cj</p>
              */
             public Builder sourceClusterId(String sourceClusterId) {
                 this.sourceClusterId = sourceClusterId;
@@ -736,7 +826,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the restore job starts. This value is a UNIX timestamp. Unit: seconds.
+             * <p>The time when the restore job starts. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636970413</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -744,7 +837,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The recovery status. This value is obtained from SAP HANA.
+             * <p>The recovery status. This value is obtained from SAP HANA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -752,15 +848,18 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the restore job. Valid values:
-             * <p>
+             * <p>The status of the restore job. Valid values:</p>
+             * <ul>
+             * <li><strong>RUNNING</strong>: The job is running.</li>
+             * <li><strong>COMPLETE</strong>: The job is completed.</li>
+             * <li><strong>PARTIAL_COMPLETE</strong>: The job is partially completed.</li>
+             * <li><strong>FAILED</strong>: The job failed.</li>
+             * <li><strong>CANCELED</strong>: The job is canceled.</li>
+             * <li><strong>EXPIRED</strong>: The job timed out.</li>
+             * </ul>
              * 
-             * *   **RUNNING**: The restore job is running.
-             * *   **COMPLETE**: The restore job is completed.
-             * *   **PARTIAL_COMPLETE**: The restore job is partially completed.
-             * *   **FAILED**: The restore job has failed.
-             * *   **CANCELED**: The restore job is canceled.
-             * *   **EXPIRED**: The restore job has timed out.
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -768,11 +867,14 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the database is restored to a different instance. Valid values:
-             * <p>
+             * <p>Indicates whether the database is restored to a different instance. Valid values:</p>
+             * <ul>
+             * <li>true: The database is restored to a different instance.</li>
+             * <li>false: The database is restored within the same instance.</li>
+             * </ul>
              * 
-             * *   true: The database is restored to a different instance.
-             * *   false: The database is restored within the same instance.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder systemCopy(Boolean systemCopy) {
                 this.systemCopy = systemCopy;
@@ -780,7 +882,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a catalog backup is used to restore the database. This parameter is returned only if the value of the Mode parameter is **RECOVERY_TO_SPECIFIC_BACKUP**. If the return value is false, HBR finds the backup file based on the specified prefix and then restores the backup file.
+             * <p>Indicates whether a catalog backup is used to restore the database. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>. If the return value is false, Cloud Backup finds the backup file based on the specified prefix and then restores the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useCatalog(Boolean useCatalog) {
                 this.useCatalog = useCatalog;
@@ -788,7 +893,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a differential backup or an incremental backup is used to restore the database. Valid values: true and false. If the return value is true, HBR uses a differential backup or an incremental backup to restore the database. If the return value is false, HBR uses a log backup to restore the database.
+             * <p>Indicates whether a differential backup or an incremental backup is used to restore the database. Valid values: true and false. If the return value is true, Cloud Backup uses a differential backup or an incremental backup to restore the database. If the return value is false, Cloud Backup uses a log backup to restore the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useDelta(Boolean useDelta) {
                 this.useDelta = useDelta;
@@ -796,7 +904,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup vault.
+             * <p>The ID of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-000g9acf******gta</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;
@@ -804,7 +915,10 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the volume that is restored. This parameter is returned only if the value of the Mode parameter is **RECOVERY_TO_LOG_POSITION**.
+             * <p>The ID of the volume that is restored. This parameter is returned only if the value of the Mode parameter is <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder volumeId(Integer volumeId) {
                 this.volumeId = volumeId;
@@ -818,8 +932,14 @@ public class DescribeHanaRestoresResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHanaRestoresResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaRestoresResponseBody</p>
+     */
     public static class HanaRestore extends TeaModel {
-        @NameInMap("HanaRestores")
+        @com.aliyun.core.annotation.NameInMap("HanaRestores")
         private java.util.List < HanaRestores> hanaRestores;
 
         private HanaRestore(Builder builder) {

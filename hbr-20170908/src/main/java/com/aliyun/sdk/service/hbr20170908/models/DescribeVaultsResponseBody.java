@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVaultsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVaultsResponseBody</p>
  */
 public class DescribeVaultsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Vaults")
+    @com.aliyun.core.annotation.NameInMap("Vaults")
     private Vaults vaults;
 
     private DescribeVaultsResponseBody(Builder builder) {
@@ -178,7 +178,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         /**
-         * Vaults.
+         * <p>The backup vaults.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Vault&quot;: []}</p>
          */
         public Builder vaults(Vaults vaults) {
             this.vaults = vaults;
@@ -191,47 +194,57 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVaultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsResponseBody</p>
+     */
     public static class BackupPlanStatistics extends TeaModel {
-        @NameInMap("CommonNas")
+        @com.aliyun.core.annotation.NameInMap("Archive")
+        private Integer archive;
+
+        @com.aliyun.core.annotation.NameInMap("CommonNas")
         private Integer commonNas;
 
-        @NameInMap("Csg")
+        @com.aliyun.core.annotation.NameInMap("Csg")
         private Integer csg;
 
-        @NameInMap("EcsFile")
+        @com.aliyun.core.annotation.NameInMap("EcsFile")
         private Integer ecsFile;
 
-        @NameInMap("EcsHana")
+        @com.aliyun.core.annotation.NameInMap("EcsHana")
         private Integer ecsHana;
 
-        @NameInMap("Isilon")
+        @com.aliyun.core.annotation.NameInMap("Isilon")
         private Integer isilon;
 
-        @NameInMap("LocalFile")
+        @com.aliyun.core.annotation.NameInMap("LocalFile")
         private Integer localFile;
 
-        @NameInMap("LocalVm")
+        @com.aliyun.core.annotation.NameInMap("LocalVm")
         private Integer localVm;
 
-        @NameInMap("MySql")
+        @com.aliyun.core.annotation.NameInMap("MySql")
         private Integer mySql;
 
-        @NameInMap("Nas")
+        @com.aliyun.core.annotation.NameInMap("Nas")
         private Integer nas;
 
-        @NameInMap("Oracle")
+        @com.aliyun.core.annotation.NameInMap("Oracle")
         private Integer oracle;
 
-        @NameInMap("Oss")
+        @com.aliyun.core.annotation.NameInMap("Oss")
         private Integer oss;
 
-        @NameInMap("Ots")
+        @com.aliyun.core.annotation.NameInMap("Ots")
         private Integer ots;
 
-        @NameInMap("SqlServer")
+        @com.aliyun.core.annotation.NameInMap("SqlServer")
         private Integer sqlServer;
 
         private BackupPlanStatistics(Builder builder) {
+            this.archive = builder.archive;
             this.commonNas = builder.commonNas;
             this.csg = builder.csg;
             this.ecsFile = builder.ecsFile;
@@ -253,6 +266,13 @@ public class DescribeVaultsResponseBody extends TeaModel {
 
         public static BackupPlanStatistics create() {
             return builder().build();
+        }
+
+        /**
+         * @return archive
+         */
+        public Integer getArchive() {
+            return this.archive;
         }
 
         /**
@@ -347,6 +367,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer archive; 
             private Integer commonNas; 
             private Integer csg; 
             private Integer ecsFile; 
@@ -362,7 +383,21 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private Integer sqlServer; 
 
             /**
-             * CommonNas.
+             * <p>The number of archive plans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder archive(Integer archive) {
+                this.archive = archive;
+                return this;
+            }
+
+            /**
+             * <p>The number of backup plans for General-purpose NAS file systems.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder commonNas(Integer commonNas) {
                 this.commonNas = commonNas;
@@ -370,7 +405,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Csg.
+             * <p>The number of backup plans for Cloud Storage Gateway (CSG) gateways.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder csg(Integer csg) {
                 this.csg = csg;
@@ -378,7 +416,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * EcsFile.
+             * <p>The number of backup plans for ECS files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ecsFile(Integer ecsFile) {
                 this.ecsFile = ecsFile;
@@ -386,7 +427,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * EcsHana.
+             * <p>The number of backup plans for SAP HANA instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ecsHana(Integer ecsHana) {
                 this.ecsHana = ecsHana;
@@ -394,7 +438,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Isilon.
+             * <p>The number of backup plans for Isilon storage systems.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isilon(Integer isilon) {
                 this.isilon = isilon;
@@ -402,7 +449,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalFile.
+             * <p>The number of backup plans for on-premises servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder localFile(Integer localFile) {
                 this.localFile = localFile;
@@ -410,7 +460,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalVm.
+             * <p>The number of backup plans for on-premises virtual machines (VMs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder localVm(Integer localVm) {
                 this.localVm = localVm;
@@ -418,7 +471,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * MySql.
+             * <p>The number of backup plans for MySQL databases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mySql(Integer mySql) {
                 this.mySql = mySql;
@@ -426,7 +482,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Nas.
+             * <p>The number of backup plans for NAS file systems.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nas(Integer nas) {
                 this.nas = nas;
@@ -434,7 +493,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Oracle.
+             * <p>The number of backup plans for Oracle databases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder oracle(Integer oracle) {
                 this.oracle = oracle;
@@ -442,7 +504,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Oss.
+             * <p>The number of backup plans for OSS buckets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder oss(Integer oss) {
                 this.oss = oss;
@@ -450,7 +515,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Ots.
+             * <p>The number of backup plans for Tablestore instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ots(Integer ots) {
                 this.ots = ots;
@@ -458,7 +526,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlServer.
+             * <p>The number of backup plans for SQL Server databases.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sqlServer(Integer sqlServer) {
                 this.sqlServer = sqlServer;
@@ -472,11 +543,17 @@ public class DescribeVaultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVaultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsResponseBody</p>
+     */
     public static class ReplicationProgress extends TeaModel {
-        @NameInMap("HistoricalReplicationProgress")
+        @com.aliyun.core.annotation.NameInMap("HistoricalReplicationProgress")
         private Integer historicalReplicationProgress;
 
-        @NameInMap("NewReplicationProgress")
+        @com.aliyun.core.annotation.NameInMap("NewReplicationProgress")
         private Long newReplicationProgress;
 
         private ReplicationProgress(Builder builder) {
@@ -511,7 +588,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private Long newReplicationProgress; 
 
             /**
-             * HistoricalReplicationProgress.
+             * <p>The progress of historical data synchronization from the backup vault to the mirror vault. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder historicalReplicationProgress(Integer historicalReplicationProgress) {
                 this.historicalReplicationProgress = historicalReplicationProgress;
@@ -519,7 +599,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * NewReplicationProgress.
+             * <p>The latest synchronization time of incremental data in the mirror vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579413159</p>
              */
             public Builder newReplicationProgress(Long newReplicationProgress) {
                 this.newReplicationProgress = newReplicationProgress;
@@ -533,8 +616,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVaultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsResponseBody</p>
+     */
     public static class SourceTypes extends TeaModel {
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private java.util.List < String > sourceType;
 
         private SourceTypes(Builder builder) {
@@ -574,11 +663,17 @@ public class DescribeVaultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVaultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -613,7 +708,15 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key of the backup vault. Valid values of N: 1 to 20.</p>
+             * <ul>
+             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>The tag key cannot be an empty string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -621,7 +724,15 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the backup vault. Valid values of N: 1 to 20.</p>
+             * <ul>
+             * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>The tag value cannot be an empty string.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>a1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -635,8 +746,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVaultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -676,17 +793,23 @@ public class DescribeVaultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVaultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsResponseBody</p>
+     */
     public static class TrialInfo extends TeaModel {
-        @NameInMap("KeepAfterTrialExpiration")
+        @com.aliyun.core.annotation.NameInMap("KeepAfterTrialExpiration")
         private Boolean keepAfterTrialExpiration;
 
-        @NameInMap("TrialExpireTime")
+        @com.aliyun.core.annotation.NameInMap("TrialExpireTime")
         private Long trialExpireTime;
 
-        @NameInMap("TrialStartTime")
+        @com.aliyun.core.annotation.NameInMap("TrialStartTime")
         private Long trialStartTime;
 
-        @NameInMap("TrialVaultReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("TrialVaultReleaseTime")
         private Long trialVaultReleaseTime;
 
         private TrialInfo(Builder builder) {
@@ -739,7 +862,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             private Long trialVaultReleaseTime; 
 
             /**
-             * KeepAfterTrialExpiration.
+             * <p>Indicates whether you are billed based on the pay-as-you-go method after the free trial ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder keepAfterTrialExpiration(Boolean keepAfterTrialExpiration) {
                 this.keepAfterTrialExpiration = keepAfterTrialExpiration;
@@ -747,7 +873,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * TrialExpireTime.
+             * <p>The expiration time of the free trial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1584597600</p>
              */
             public Builder trialExpireTime(Long trialExpireTime) {
                 this.trialExpireTime = trialExpireTime;
@@ -755,7 +884,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * TrialStartTime.
+             * <p>The start time of the free trial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1579413159</p>
              */
             public Builder trialStartTime(Long trialStartTime) {
                 this.trialStartTime = trialStartTime;
@@ -763,7 +895,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * TrialVaultReleaseTime.
+             * <p>The time when the free-trial backup vault is released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1594965600</p>
              */
             public Builder trialVaultReleaseTime(Long trialVaultReleaseTime) {
                 this.trialVaultReleaseTime = trialVaultReleaseTime;
@@ -777,128 +912,134 @@ public class DescribeVaultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVaultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsResponseBody</p>
+     */
     public static class Vault extends TeaModel {
-        @NameInMap("ArchiveBytesDone")
+        @com.aliyun.core.annotation.NameInMap("ArchiveBytesDone")
         private Long archiveBytesDone;
 
-        @NameInMap("ArchiveStorageSize")
+        @com.aliyun.core.annotation.NameInMap("ArchiveStorageSize")
         private Long archiveStorageSize;
 
-        @NameInMap("BackupPlanStatistics")
+        @com.aliyun.core.annotation.NameInMap("BackupPlanStatistics")
         private BackupPlanStatistics backupPlanStatistics;
 
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("BytesDone")
+        @com.aliyun.core.annotation.NameInMap("BytesDone")
         private Long bytesDone;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ChargedStorageSize")
+        @com.aliyun.core.annotation.NameInMap("ChargedStorageSize")
         private Long chargedStorageSize;
 
-        @NameInMap("CompressionAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("CompressionAlgorithm")
         private String compressionAlgorithm;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("Dedup")
+        @com.aliyun.core.annotation.NameInMap("Dedup")
         private Boolean dedup;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EncryptType")
+        @com.aliyun.core.annotation.NameInMap("EncryptType")
         private String encryptType;
 
-        @NameInMap("IndexAvailable")
+        @com.aliyun.core.annotation.NameInMap("IndexAvailable")
         private Boolean indexAvailable;
 
-        @NameInMap("IndexLevel")
+        @com.aliyun.core.annotation.NameInMap("IndexLevel")
         private String indexLevel;
 
-        @NameInMap("IndexUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("IndexUpdateTime")
         private Long indexUpdateTime;
 
-        @NameInMap("KmsKeyId")
+        @com.aliyun.core.annotation.NameInMap("KmsKeyId")
         private String kmsKeyId;
 
-        @NameInMap("LatestReplicationTime")
+        @com.aliyun.core.annotation.NameInMap("LatestReplicationTime")
         private Long latestReplicationTime;
 
-        @NameInMap("RedundancyType")
+        @com.aliyun.core.annotation.NameInMap("RedundancyType")
         private String redundancyType;
 
-        @NameInMap("Replication")
+        @com.aliyun.core.annotation.NameInMap("Replication")
         private Boolean replication;
 
-        @NameInMap("ReplicationProgress")
+        @com.aliyun.core.annotation.NameInMap("ReplicationProgress")
         private ReplicationProgress replicationProgress;
 
-        @NameInMap("ReplicationSourceRegionId")
+        @com.aliyun.core.annotation.NameInMap("ReplicationSourceRegionId")
         private String replicationSourceRegionId;
 
-        @NameInMap("ReplicationSourceVault")
+        @com.aliyun.core.annotation.NameInMap("ReplicationSourceVault")
         private Boolean replicationSourceVault;
 
-        @NameInMap("ReplicationSourceVaultId")
+        @com.aliyun.core.annotation.NameInMap("ReplicationSourceVaultId")
         private String replicationSourceVaultId;
 
-        @NameInMap("ReplicationTargetRegionId")
+        @com.aliyun.core.annotation.NameInMap("ReplicationTargetRegionId")
         private String replicationTargetRegionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Retention")
+        @com.aliyun.core.annotation.NameInMap("Retention")
         private Long retention;
 
-        @NameInMap("SearchEnabled")
+        @com.aliyun.core.annotation.NameInMap("SearchEnabled")
         private Boolean searchEnabled;
 
-        @NameInMap("SnapshotCount")
+        @com.aliyun.core.annotation.NameInMap("SnapshotCount")
         private Long snapshotCount;
 
-        @NameInMap("SourceTypes")
+        @com.aliyun.core.annotation.NameInMap("SourceTypes")
         private SourceTypes sourceTypes;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageSize")
+        @com.aliyun.core.annotation.NameInMap("StorageSize")
         private Long storageSize;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TrialInfo")
+        @com.aliyun.core.annotation.NameInMap("TrialInfo")
         private TrialInfo trialInfo;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
-        @NameInMap("VaultId")
+        @com.aliyun.core.annotation.NameInMap("VaultId")
         private String vaultId;
 
-        @NameInMap("VaultName")
+        @com.aliyun.core.annotation.NameInMap("VaultName")
         private String vaultName;
 
-        @NameInMap("VaultRegionId")
+        @com.aliyun.core.annotation.NameInMap("VaultRegionId")
         private String vaultRegionId;
 
-        @NameInMap("VaultStatusMessage")
+        @com.aliyun.core.annotation.NameInMap("VaultStatusMessage")
         private String vaultStatusMessage;
 
-        @NameInMap("VaultStorageClass")
+        @com.aliyun.core.annotation.NameInMap("VaultStorageClass")
         private String vaultStorageClass;
 
-        @NameInMap("VaultType")
+        @com.aliyun.core.annotation.NameInMap("VaultType")
         private String vaultType;
 
-        @NameInMap("WormEnabled")
+        @com.aliyun.core.annotation.NameInMap("WormEnabled")
         private Boolean wormEnabled;
 
         private Vault(Builder builder) {
@@ -1292,7 +1433,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * ArchiveStorageSize.
+             * <p>The billable storage usage of the Archive tier. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024000</p>
              */
             public Builder archiveStorageSize(Long archiveStorageSize) {
                 this.archiveStorageSize = archiveStorageSize;
@@ -1300,7 +1444,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPlanStatistics.
+             * <p>The statistics of backup plans that use the backup vault.</p>
              */
             public Builder backupPlanStatistics(BackupPlanStatistics backupPlanStatistics) {
                 this.backupPlanStatistics = backupPlanStatistics;
@@ -1308,7 +1452,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * BucketName.
+             * <p>The name of the OSS bucket used by the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hbr-0005i51******t58</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -1316,7 +1463,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * BytesDone.
+             * <p>The amount of data that is backed up. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder bytesDone(Long bytesDone) {
                 this.bytesDone = bytesDone;
@@ -1324,7 +1474,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FREE</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1332,7 +1485,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * ChargedStorageSize.
+             * <p>The billable storage usage of the archive vault. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024000</p>
              */
             public Builder chargedStorageSize(Long chargedStorageSize) {
                 this.chargedStorageSize = chargedStorageSize;
@@ -1340,7 +1496,15 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * CompressionAlgorithm.
+             * <p>The encryption algorithm used to compress the backup vault. Valid values:</p>
+             * <ul>
+             * <li>DISABLED: The backup vault is not compressed.</li>
+             * <li>SNAPPY: The backup vault is compressed by using the SNAPPY encryption algorithm.</li>
+             * <li>ZSTD: The backup vault is compressed by using Zstandard, a fast lossless compression algorithm.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ZSTD</p>
              */
             public Builder compressionAlgorithm(String compressionAlgorithm) {
                 this.compressionAlgorithm = compressionAlgorithm;
@@ -1348,7 +1512,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the backup vault was created. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554347313</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -1356,7 +1523,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Dedup.
+             * <p>Indicates whether the deduplication feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dedup(Boolean dedup) {
                 this.dedup = dedup;
@@ -1364,7 +1534,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vault description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1372,7 +1545,15 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptType.
+             * <p>The encryption type of the backup vault. Valid values:</p>
+             * <ul>
+             * <li>NONE: The backup vault is not encrypted.</li>
+             * <li>HBR_PRIVATE (default): The backup vault is encrypted by using a key provided by Cloud Backup.</li>
+             * <li>KMS: The backup vault is encrypted by using a custom master key (CMK) created in Key Management Service (KMS).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HBR_PRIVATE</p>
              */
             public Builder encryptType(String encryptType) {
                 this.encryptType = encryptType;
@@ -1380,7 +1561,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * IndexAvailable.
+             * <p>Indicates whether indexes are available. Indexes are available when they are not being updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder indexAvailable(Boolean indexAvailable) {
                 this.indexAvailable = indexAvailable;
@@ -1388,7 +1572,15 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * IndexLevel.
+             * <p>The index level.</p>
+             * <ul>
+             * <li>OFF: No indexes are created.</li>
+             * <li>META: Metadata indexes are created.</li>
+             * <li>ALL: Full-text indexes are created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OFF</p>
              */
             public Builder indexLevel(String indexLevel) {
                 this.indexLevel = indexLevel;
@@ -1396,7 +1588,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * IndexUpdateTime.
+             * <p>The time when the index was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639645628</p>
              */
             public Builder indexUpdateTime(Long indexUpdateTime) {
                 this.indexUpdateTime = indexUpdateTime;
@@ -1404,7 +1599,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyId.
+             * <p>The ID or alias of the CMK created in KMS. This parameter is returned only when EncryptType is set to KMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alias/acs/acm</p>
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -1412,7 +1610,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * LatestReplicationTime.
+             * <p>The time when the last remote backup was synchronized. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554347313</p>
              */
             public Builder latestReplicationTime(Long latestReplicationTime) {
                 this.latestReplicationTime = latestReplicationTime;
@@ -1420,7 +1621,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * RedundancyType.
+             * <p>The data redundancy type of the backup vault. Valid values:</p>
+             * <ul>
+             * <li>LRS: Locally redundant storage (LRS) is enabled for the backup vault. Cloud Backup stores the copies of each object on multiple devices of different facilities in the same zone. This way, Cloud Backup ensures data durability and availability even if hardware failures occur.</li>
+             * <li>ZRS: Zone-redundant storage (ZRS) is enabled for the backup vault. Cloud Backup uses the multi-zone mechanism to distribute data across three zones within the same region. If a zone fails, the data that is stored in the other two zones is still accessible.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LRS</p>
              */
             public Builder redundancyType(String redundancyType) {
                 this.redundancyType = redundancyType;
@@ -1428,7 +1636,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Replication.
+             * <p>Indicates whether the backup vault is a remote backup vault. Valid values:</p>
+             * <ul>
+             * <li>true: The backup vault is a remote backup vault.</li>
+             * <li>false: The backup vault is a local backup vault.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder replication(Boolean replication) {
                 this.replication = replication;
@@ -1436,7 +1651,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationProgress.
+             * <p>The progress of data synchronization from the backup vault to the mirror vault.</p>
              */
             public Builder replicationProgress(ReplicationProgress replicationProgress) {
                 this.replicationProgress = replicationProgress;
@@ -1444,7 +1659,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationSourceRegionId.
+             * <p>The ID of the region in which the source vault resides. This parameter is valid only for remote backup vaults.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-*********************</p>
              */
             public Builder replicationSourceRegionId(String replicationSourceRegionId) {
                 this.replicationSourceRegionId = replicationSourceRegionId;
@@ -1452,7 +1670,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationSourceVault.
+             * <p>Indicate whether the backup vault is the source vault that corresponds to the remote backup vault. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder replicationSourceVault(Boolean replicationSourceVault) {
                 this.replicationSourceVault = replicationSourceVault;
@@ -1460,7 +1685,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationSourceVaultId.
+             * <p>The ID of the source vault that corresponds to the remote backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-*********************</p>
              */
             public Builder replicationSourceVaultId(String replicationSourceVaultId) {
                 this.replicationSourceVaultId = replicationSourceVaultId;
@@ -1476,7 +1704,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-*********************</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1484,7 +1715,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Retention.
+             * <p>The retention period of the backup vault. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -1492,7 +1726,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * SearchEnabled.
+             * <p>Indicates whether the backup search feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder searchEnabled(Boolean searchEnabled) {
                 this.searchEnabled = searchEnabled;
@@ -1500,7 +1737,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotCount.
+             * <p>The number of snapshots in the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder snapshotCount(Long snapshotCount) {
                 this.snapshotCount = snapshotCount;
@@ -1508,7 +1748,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTypes.
+             * <p>The data source types of the backup vault.</p>
              */
             public Builder sourceTypes(SourceTypes sourceTypes) {
                 this.sourceTypes = sourceTypes;
@@ -1516,7 +1756,16 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the backup vault. Valid values:</p>
+             * <ul>
+             * <li><strong>UNKNOWN</strong>: The backup vault is in an unknown state.</li>
+             * <li><strong>INITIALIZING</strong>: The backup vault is being initialized.</li>
+             * <li><strong>CREATED</strong>: The backup vault is created.</li>
+             * <li><strong>ERROR</strong>: An error occurs on the backup vault.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1524,7 +1773,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The usage of the backup vault. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder storageSize(Long storageSize) {
                 this.storageSize = storageSize;
@@ -1532,7 +1784,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the backup vault.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1540,7 +1792,7 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * TrialInfo.
+             * <p>The free trial information.</p>
              */
             public Builder trialInfo(TrialInfo trialInfo) {
                 this.trialInfo = trialInfo;
@@ -1548,7 +1800,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time when the backup vault was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554347313</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -1556,7 +1811,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultId.
+             * <p>The ID of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-*********************</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;
@@ -1564,7 +1822,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultName.
+             * <p>The name of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vaultname</p>
              */
             public Builder vaultName(String vaultName) {
                 this.vaultName = vaultName;
@@ -1572,7 +1833,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultRegionId.
+             * <p>The ID of the region in which the backup vault resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder vaultRegionId(String vaultRegionId) {
                 this.vaultRegionId = vaultRegionId;
@@ -1580,7 +1844,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultStatusMessage.
+             * <p>The status message that is returned when the backup vault is in the ERROR state. This parameter is valid only for remote backup vaults. Valid values:</p>
+             * <ul>
+             * <li><strong>UNKNOWN_ERROR</strong>: An unknown error occurs.</li>
+             * <li><strong>SOURCE_VAULT_ALREADY_HAS_REPLICATION</strong>: A mirror vault is configured for the source vault.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SOURCE_VAULT_ALREADY_HAS_REPLICATION</p>
              */
             public Builder vaultStatusMessage(String vaultStatusMessage) {
                 this.vaultStatusMessage = vaultStatusMessage;
@@ -1588,7 +1859,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultStorageClass.
+             * <p>The storage class of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder vaultStorageClass(String vaultStorageClass) {
                 this.vaultStorageClass = vaultStorageClass;
@@ -1596,7 +1870,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * VaultType.
+             * <p>The type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates a standard backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STANDARD</p>
              */
             public Builder vaultType(String vaultType) {
                 this.vaultType = vaultType;
@@ -1604,7 +1881,10 @@ public class DescribeVaultsResponseBody extends TeaModel {
             }
 
             /**
-             * WormEnabled.
+             * <p>Indicates whether the immutable backup feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder wormEnabled(Boolean wormEnabled) {
                 this.wormEnabled = wormEnabled;
@@ -1618,8 +1898,14 @@ public class DescribeVaultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVaultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVaultsResponseBody</p>
+     */
     public static class Vaults extends TeaModel {
-        @NameInMap("Vault")
+        @com.aliyun.core.annotation.NameInMap("Vault")
         private java.util.List < Vault> vault;
 
         private Vaults(Builder builder) {

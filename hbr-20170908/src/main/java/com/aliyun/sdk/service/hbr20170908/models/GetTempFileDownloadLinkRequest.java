@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTempFileDownloadLinkRequest} extends {@link RequestModel}
  *
  * <p>GetTempFileDownloadLinkRequest</p>
  */
 public class GetTempFileDownloadLinkRequest extends Request {
-    @Query
-    @NameInMap("TempFileKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TempFileKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tempFileKey;
 
     private GetTempFileDownloadLinkRequest(Builder builder) {
@@ -55,7 +55,10 @@ public class GetTempFileDownloadLinkRequest extends Request {
         } 
 
         /**
-         * The key that is used to download a file.
+         * <p>The key that is used to download a file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp/1797733170015112/report/r-000jdzknbp39cnf9hs99/r-000jdzknbp39cnf9hs99-total.csv</p>
          */
         public Builder tempFileKey(String tempFileKey) {
             this.putQueryParameter("TempFileKey", tempFileKey);

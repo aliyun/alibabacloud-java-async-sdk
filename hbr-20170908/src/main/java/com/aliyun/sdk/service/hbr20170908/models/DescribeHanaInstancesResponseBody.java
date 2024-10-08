@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHanaInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHanaInstancesResponseBody</p>
  */
 public class DescribeHanaInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Hanas")
+    @com.aliyun.core.annotation.NameInMap("Hanas")
     private Hanas hanas;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHanaInstancesResponseBody(Builder builder) {
@@ -122,7 +122,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the SAP HANA instances.
+         * <p>The information about the SAP HANA instances.</p>
          */
         public Builder hanas(Hanas hanas) {
             this.hanas = hanas;
@@ -138,7 +141,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +152,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +163,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +174,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4003DD68-3C3C-5071-B4FC-631A6C1BAC1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,11 +185,14 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +200,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -195,11 +216,17 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHanaInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaInstancesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -234,7 +261,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ace:rm:rgld</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -242,7 +272,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmwutpyat2kwy</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -256,8 +289,14 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHanaInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -297,49 +336,67 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHanaInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaInstancesResponseBody</p>
+     */
     public static class Hana extends TeaModel {
-        @NameInMap("AlertSetting")
+        @com.aliyun.core.annotation.NameInMap("AlertSetting")
         private String alertSetting;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("HanaName")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
+        private String crossAccountRoleName;
+
+        @com.aliyun.core.annotation.NameInMap("CrossAccountType")
+        private String crossAccountType;
+
+        @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
+        private Long crossAccountUserId;
+
+        @com.aliyun.core.annotation.NameInMap("HanaName")
         private String hanaName;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("InstanceNumber")
+        @com.aliyun.core.annotation.NameInMap("InstanceNumber")
         private Integer instanceNumber;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("UseSsl")
+        @com.aliyun.core.annotation.NameInMap("UseSsl")
         private Boolean useSsl;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("ValidateCertificate")
+        @com.aliyun.core.annotation.NameInMap("ValidateCertificate")
         private Boolean validateCertificate;
 
-        @NameInMap("VaultId")
+        @com.aliyun.core.annotation.NameInMap("VaultId")
         private String vaultId;
 
         private Hana(Builder builder) {
             this.alertSetting = builder.alertSetting;
             this.clusterId = builder.clusterId;
+            this.crossAccountRoleName = builder.crossAccountRoleName;
+            this.crossAccountType = builder.crossAccountType;
+            this.crossAccountUserId = builder.crossAccountUserId;
             this.hanaName = builder.hanaName;
             this.host = builder.host;
             this.instanceNumber = builder.instanceNumber;
@@ -373,6 +430,27 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
          */
         public String getClusterId() {
             return this.clusterId;
+        }
+
+        /**
+         * @return crossAccountRoleName
+         */
+        public String getCrossAccountRoleName() {
+            return this.crossAccountRoleName;
+        }
+
+        /**
+         * @return crossAccountType
+         */
+        public String getCrossAccountType() {
+            return this.crossAccountType;
+        }
+
+        /**
+         * @return crossAccountUserId
+         */
+        public Long getCrossAccountUserId() {
+            return this.crossAccountUserId;
         }
 
         /**
@@ -455,6 +533,9 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String alertSetting; 
             private String clusterId; 
+            private String crossAccountRoleName; 
+            private String crossAccountType; 
+            private Long crossAccountUserId; 
             private String hanaName; 
             private String host; 
             private Integer instanceNumber; 
@@ -468,7 +549,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * The alert settings. Valid value: INHERITED, which indicates that the backup client sends alert notifications in the same way as the backup vault.
+             * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INHERITED</p>
              */
             public Builder alertSetting(String alertSetting) {
                 this.alertSetting = alertSetting;
@@ -476,7 +560,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SAP HANA instance.
+             * <p>The ID of the SAP HANA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl-0004cf6g6******0yd7y</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -484,7 +571,47 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SAP HANA instance.
+             * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hbrcrossrole</p>
+             */
+            public Builder crossAccountRoleName(String crossAccountRoleName) {
+                this.crossAccountRoleName = crossAccountRoleName;
+                return this;
+            }
+
+            /**
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>SELF_ACCOUNT</strong>: Data is backed up within the same Alibaba Cloud account.</li>
+             * <li><strong>CROSS_ACCOUNT</strong>: Data is backed up across Alibaba Cloud accounts.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CROSS_ACCOUNT</p>
+             */
+            public Builder crossAccountType(String crossAccountType) {
+                this.crossAccountType = crossAccountType;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>158975xxxxx4625</p>
+             */
+            public Builder crossAccountUserId(Long crossAccountUserId) {
+                this.crossAccountUserId = crossAccountUserId;
+                return this;
+            }
+
+            /**
+             * <p>The name of the SAP HANA instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HANA-DEV</p>
              */
             public Builder hanaName(String hanaName) {
                 this.hanaName = hanaName;
@@ -492,7 +619,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The private or internal IP address of the host where the primary node of the SAP HANA instance resides.
+             * <p>The private or internal IP address of the host where the primary node of the SAP HANA instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.100.XX.XX</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -500,7 +630,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance number of the SAP HANA system.
+             * <p>The instance number of the SAP HANA system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00</p>
              */
             public Builder instanceNumber(Integer instanceNumber) {
                 this.instanceNumber = instanceNumber;
@@ -508,7 +641,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of resource group.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmvnf22m7itha</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -516,13 +652,16 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the SAP HANA instance. Valid values:
-             * <p>
+             * <p>The status of the SAP HANA instance. Valid values:</p>
+             * <ul>
+             * <li>INITIALIZING: The instance is being initialized.</li>
+             * <li>INITIALIZED: The instance is registered.</li>
+             * <li>INVALID_HANA_NODE: The instance is invalid.</li>
+             * <li>INITIALIZE_FAILED: The client fails to be installed on the instance.</li>
+             * </ul>
              * 
-             * *   INITIALIZING: The instance is being initialized.
-             * *   INITIALIZED: The instance is registered.
-             * *   INVALID_HANA_NODE: The instance is invalid.
-             * *   INITIALIZE_FAILED: The client fails to be installed on the instance.
+             * <strong>example:</strong>
+             * <p>INITIALIZED</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -530,7 +669,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status information.
+             * <p>The status information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALL_CLIENT_FAILED</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -538,7 +680,7 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the SAP HANA instance.
+             * <p>The tags of the SAP HANA instance.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -546,11 +688,14 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SAP HANA instance is connected over Secure Sockets Layer (SSL). Valid values:
-             * <p>
+             * <p>Indicates whether the SAP HANA instance is connected over Secure Sockets Layer (SSL). Valid values:</p>
+             * <ul>
+             * <li>true: The SAP HANA instance is connected over SSL.</li>
+             * <li>false: The SAP HANA instance is not connected over SSL.</li>
+             * </ul>
              * 
-             * *   true: The SAP HANA instance is connected over SSL.
-             * *   false: The SAP HANA instance is not connected over SSL.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useSsl(Boolean useSsl) {
                 this.useSsl = useSsl;
@@ -558,7 +703,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the SYSTEMDB database.
+             * <p>The username of the SYSTEMDB database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -566,7 +714,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the SSL certificate of the SAP HANA instance is verified.
+             * <p>Indicates whether the SSL certificate of the SAP HANA instance is verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder validateCertificate(Boolean validateCertificate) {
                 this.validateCertificate = validateCertificate;
@@ -574,7 +725,10 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup vault.
+             * <p>The ID of the backup vault.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-0000s974******1hl</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;
@@ -588,8 +742,14 @@ public class DescribeHanaInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHanaInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaInstancesResponseBody</p>
+     */
     public static class Hanas extends TeaModel {
-        @NameInMap("Hana")
+        @com.aliyun.core.annotation.NameInMap("Hana")
         private java.util.List < Hana> hana;
 
         private Hanas(Builder builder) {

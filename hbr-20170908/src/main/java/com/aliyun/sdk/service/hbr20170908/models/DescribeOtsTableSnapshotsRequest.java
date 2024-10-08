@@ -1,51 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOtsTableSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>DescribeOtsTableSnapshotsRequest</p>
  */
 public class DescribeOtsTableSnapshotsRequest extends Request {
-    @Query
-    @NameInMap("CrossAccountRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
     private String crossAccountRoleName;
 
-    @Query
-    @NameInMap("CrossAccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountType")
     private String crossAccountType;
 
-    @Query
-    @NameInMap("CrossAccountUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Body
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("OtsInstances")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OtsInstances")
     private java.util.List < OtsInstances> otsInstances;
 
-    @Body
-    @NameInMap("SnapshotIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SnapshotIds")
     private java.util.List < String > snapshotIds;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private DescribeOtsTableSnapshotsRequest(Builder builder) {
@@ -166,7 +166,10 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         } 
 
         /**
-         * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BackupRole</p>
          */
         public Builder crossAccountRoleName(String crossAccountRoleName) {
             this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
@@ -175,11 +178,14 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         }
 
         /**
-         * Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
-         * <p>
+         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+         * </ul>
          * 
-         * *   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.
-         * *   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -188,7 +194,10 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         }
 
         /**
-         * The UID of the source account used for cross-account backup.
+         * <p>The UID of the source account used for cross-account backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>144015xxxxx98732</p>
          */
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
@@ -197,7 +206,10 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         }
 
         /**
-         * The end time of the backup. The value must be a UNIX timestamp. Unit: milliseconds.
+         * <p>The end time of the backup. The value must be a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652068250881</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -206,7 +218,10 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         }
 
         /**
-         * The maximum number of rows that you want the current query to return.
+         * <p>The maximum number of rows that you want the current query to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("Limit", limit);
@@ -215,7 +230,10 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         }
 
         /**
-         * The token that is required to obtain the next page of backup snapshots.
+         * <p>The token that is required to obtain the next page of backup snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -224,7 +242,7 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         }
 
         /**
-         * The Tablestore instances that are backed up.
+         * <p>The Tablestore instances that are backed up.</p>
          */
         public Builder otsInstances(java.util.List < OtsInstances> otsInstances) {
             this.putBodyParameter("OtsInstances", otsInstances);
@@ -233,7 +251,7 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         }
 
         /**
-         * The snapshot IDs.
+         * <p>The snapshot IDs.</p>
          */
         public Builder snapshotIds(java.util.List < String > snapshotIds) {
             this.putBodyParameter("SnapshotIds", snapshotIds);
@@ -242,7 +260,10 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
         }
 
         /**
-         * The start time of the backup. The value must be a UNIX timestamp. Unit: milliseconds.
+         * <p>The start time of the backup. The value must be a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611109271630</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -257,11 +278,17 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOtsTableSnapshotsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeOtsTableSnapshotsRequest</p>
+     */
     public static class OtsInstances extends TeaModel {
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("TableNames")
+        @com.aliyun.core.annotation.NameInMap("TableNames")
         private java.util.List < String > tableNames;
 
         private OtsInstances(Builder builder) {
@@ -296,7 +323,10 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
             private java.util.List < String > tableNames; 
 
             /**
-             * The name of the Tablestore instance.
+             * <p>The name of the Tablestore instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instancename</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -304,7 +334,7 @@ public class DescribeOtsTableSnapshotsRequest extends Request {
             }
 
             /**
-             * The names of the tables in the Tablestore instance.
+             * <p>The names of the tables in the Tablestore instance.</p>
              */
             public Builder tableNames(java.util.List < String > tableNames) {
                 this.tableNames = tableNames;

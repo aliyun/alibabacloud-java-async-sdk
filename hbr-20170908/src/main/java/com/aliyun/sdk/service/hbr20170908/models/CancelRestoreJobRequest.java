@@ -1,25 +1,25 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelRestoreJobRequest} extends {@link RequestModel}
  *
  * <p>CancelRestoreJobRequest</p>
  */
 public class CancelRestoreJobRequest extends Request {
-    @Query
-    @NameInMap("RestoreId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String restoreId;
 
-    @Query
-    @NameInMap("VaultId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultId;
 
     private CancelRestoreJobRequest(Builder builder) {
@@ -70,7 +70,10 @@ public class CancelRestoreJobRequest extends Request {
         } 
 
         /**
-         * The ID of the restore job.
+         * <p>The ID of the restore job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-*********************</p>
          */
         public Builder restoreId(String restoreId) {
             this.putQueryParameter("RestoreId", restoreId);
@@ -79,7 +82,10 @@ public class CancelRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

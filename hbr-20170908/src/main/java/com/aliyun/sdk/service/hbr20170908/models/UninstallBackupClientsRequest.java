@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UninstallBackupClientsRequest} extends {@link RequestModel}
  *
  * <p>UninstallBackupClientsRequest</p>
  */
 public class UninstallBackupClientsRequest extends Request {
-    @Query
-    @NameInMap("ClientIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIds")
     private java.util.Map < String, ? > clientIds;
 
-    @Query
-    @NameInMap("CrossAccountRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
     private String crossAccountRoleName;
 
-    @Query
-    @NameInMap("CrossAccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountType")
     private String crossAccountType;
 
-    @Query
-    @NameInMap("CrossAccountUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.Map < String, ? > instanceIds;
 
     private UninstallBackupClientsRequest(Builder builder) {
@@ -110,7 +110,10 @@ public class UninstallBackupClientsRequest extends Request {
         } 
 
         /**
-         * The ID of the backup client. The sum of the number of backup client IDs and the number of ECS instance IDs cannot exceed 20. Otherwise, an error occurs.
+         * <p>The IDs of Cloud Backup clients. The sum of the number of Cloud Backup client IDs and the number of ECS instance IDs cannot exceed 20. Otherwise, an error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;c-*********************&quot;]</p>
          */
         public Builder clientIds(java.util.Map < String, ? > clientIds) {
             String clientIdsShrink = shrink(clientIds, "ClientIds", "json");
@@ -120,7 +123,10 @@ public class UninstallBackupClientsRequest extends Request {
         }
 
         /**
-         * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.
+         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BackupRole</p>
          */
         public Builder crossAccountRoleName(String crossAccountRoleName) {
             this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
@@ -129,11 +135,14 @@ public class UninstallBackupClientsRequest extends Request {
         }
 
         /**
-         * Specifies whether data is backed up and restored within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
-         * <p>
+         * <p>Specifies whether data is backed up and restored within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.</li>
+         * </ul>
          * 
-         * *   SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.
-         * *   CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -142,7 +151,10 @@ public class UninstallBackupClientsRequest extends Request {
         }
 
         /**
-         * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.
+         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129349237xxxxx</p>
          */
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
@@ -151,7 +163,10 @@ public class UninstallBackupClientsRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance. You can specify up to 20 IDs.
+         * <p>The IDs of ECS instances. You can specify a maximum of 20 ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-0xi5wj5*****v3j3bh2gj5&quot;]</p>
          */
         public Builder instanceIds(java.util.Map < String, ? > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

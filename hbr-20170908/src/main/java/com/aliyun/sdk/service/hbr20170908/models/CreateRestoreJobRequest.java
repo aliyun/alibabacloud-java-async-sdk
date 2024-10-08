@@ -1,125 +1,125 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRestoreJobRequest} extends {@link RequestModel}
  *
  * <p>CreateRestoreJobRequest</p>
  */
 public class CreateRestoreJobRequest extends Request {
-    @Query
-    @NameInMap("CrossAccountRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
     private String crossAccountRoleName;
 
-    @Query
-    @NameInMap("CrossAccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountType")
     private String crossAccountType;
 
-    @Query
-    @NameInMap("CrossAccountUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
-    @Body
-    @NameInMap("Exclude")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Exclude")
     private String exclude;
 
-    @Query
-    @NameInMap("FailbackDetail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailbackDetail")
     private java.util.Map < String, ? > failbackDetail;
 
-    @Body
-    @NameInMap("Include")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Include")
     private String include;
 
-    @Query
-    @NameInMap("InitiatedByAck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitiatedByAck")
     private Boolean initiatedByAck;
 
-    @Query
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("OtsDetail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OtsDetail")
     private OtsTableRestoreDetail otsDetail;
 
-    @Query
-    @NameInMap("RestoreType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String restoreType;
 
-    @Query
-    @NameInMap("SnapshotHash")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotHash")
     private String snapshotHash;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
-    @Query
-    @NameInMap("TargetBucket")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetBucket")
     private String targetBucket;
 
-    @Query
-    @NameInMap("TargetContainer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetContainer")
     private String targetContainer;
 
-    @Query
-    @NameInMap("TargetContainerClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetContainerClusterId")
     private String targetContainerClusterId;
 
-    @Query
-    @NameInMap("TargetCreateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetCreateTime")
     private Long targetCreateTime;
 
-    @Query
-    @NameInMap("TargetFileSystemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetFileSystemId")
     private String targetFileSystemId;
 
-    @Body
-    @NameInMap("TargetInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetInstanceId")
     private String targetInstanceId;
 
-    @Query
-    @NameInMap("TargetInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetInstanceName")
     private String targetInstanceName;
 
-    @Body
-    @NameInMap("TargetPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetPath")
     private String targetPath;
 
-    @Query
-    @NameInMap("TargetPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetPrefix")
     private String targetPrefix;
 
-    @Query
-    @NameInMap("TargetTableName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetTableName")
     private String targetTableName;
 
-    @Query
-    @NameInMap("TargetTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetTime")
     private Long targetTime;
 
-    @Query
-    @NameInMap("UdmDetail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UdmDetail")
     private java.util.Map < String, ? > udmDetail;
 
-    @Query
-    @NameInMap("UdmRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UdmRegionId")
     private String udmRegionId;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private CreateRestoreJobRequest(Builder builder) {
@@ -420,7 +420,10 @@ public class CreateRestoreJobRequest extends Request {
         } 
 
         /**
-         * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BackupRole</p>
          */
         public Builder crossAccountRoleName(String crossAccountRoleName) {
             this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
@@ -429,11 +432,14 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
-         * <p>
+         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+         * </ul>
          * 
-         * *   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.
-         * *   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>SELF_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -442,7 +448,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158975xxxxx4625</p>
          */
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
@@ -451,7 +460,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The paths to the files that you do not want to restore. No files in the specified paths are restored. The value must be 1 to 255 characters in length.
+         * <p>The paths to the files that you do not want to restore. No files in the specified paths are restored. The value must be 1 to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
          */
         public Builder exclude(String exclude) {
             this.putBodyParameter("Exclude", exclude);
@@ -470,7 +482,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The paths to the files that you want to restore. All files in the specified paths are restored. The value must be 1 to 255 characters in length.
+         * <p>The paths to the files that you want to restore. All files in the specified paths are restored. The value must be 1 to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
          */
         public Builder include(String include) {
             this.putBodyParameter("Include", include);
@@ -479,7 +494,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to initiate the request by using Container Service for Kubernetes (ACK). Default value: false.
+         * <p>Specifies whether to initiate the request by using Container Service for Kubernetes (ACK). Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder initiatedByAck(Boolean initiatedByAck) {
             this.putQueryParameter("InitiatedByAck", initiatedByAck);
@@ -497,7 +515,7 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The details about the Tablestore instance.
+         * <p>The details about the Tablestore instance.</p>
          */
         public Builder otsDetail(OtsTableRestoreDetail otsDetail) {
             String otsDetailShrink = shrink(otsDetail, "OtsDetail", "json");
@@ -507,14 +525,17 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The type of the restore destination. Valid values:
-         * <p>
+         * <p>The type of the restore destination. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: restores data to Elastic Compute Service (ECS) files.</li>
+         * <li><strong>OSS</strong>: restores data to Object Storage Service (OSS) buckets.</li>
+         * <li><strong>NAS</strong>: restores data to Apsara File Storage NAS file systems.</li>
+         * <li><strong>OTS_TABLE</strong>: restores data to Tablestore instances.</li>
+         * <li><strong>UDM_ECS_ROLLBACK</strong>: restores data to ECS instances.</li>
+         * </ul>
          * 
-         * *   **ECS_FILE**: restores data to Elastic Compute Service (ECS) files.
-         * *   **OSS**: restores data to Object Storage Service (OSS) buckets.
-         * *   **NAS**: restores data to Apsara File Storage NAS file systems.
-         * *   **OTS_TABLE**: restores data to Tablestore instances.
-         * *   **UDM_ECS_ROLLBACK**: restores data to ECS instances.
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
@@ -523,7 +544,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The hash value of the backup snapshot.
+         * <p>The hash value of the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2fe...</p>
          */
         public Builder snapshotHash(String snapshotHash) {
             this.putQueryParameter("SnapshotHash", snapshotHash);
@@ -532,7 +556,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the backup snapshot.
+         * <p>The ID of the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-********************</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -541,14 +568,17 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: ECS files</li>
+         * <li><strong>OSS</strong>: OSS buckets</li>
+         * <li><strong>NAS</strong>: NAS file systems</li>
+         * <li><strong>OTS_TABLE</strong>: Tablestore instances</li>
+         * <li><strong>UDM_ECS</strong>: ECS instances</li>
+         * </ul>
          * 
-         * *   **ECS_FILE**: ECS files
-         * *   **OSS**: OSS buckets
-         * *   **NAS**: NAS file systems
-         * *   **OTS_TABLE**: Tablestore instances
-         * *   **UDM_ECS**: ECS instances
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -557,7 +587,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **RestoreType** parameter is set to **OSS**. This parameter specifies the name of the OSS bucket to which you want to restore data.
+         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>OSS</strong>. This parameter specifies the name of the OSS bucket to which you want to restore data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbr-backup-oss</p>
          */
         public Builder targetBucket(String targetBucket) {
             this.putQueryParameter("TargetBucket", targetBucket);
@@ -566,7 +599,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The details about the container to which you want to restore data.
+         * <p>The details about the container to which you want to restore data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;host&quot;:&quot;k8s-node1&quot;,&quot;hostPrefix&quot;:&quot;/var/lib/kubelet/pods/4acb31fe-8577-40ff-bc8c-eccabd835f73/volumes/kubernetes.io~csi/pvc-b050b00e-ef17-4792-aab1-1642355cf1f4/mount&quot;,&quot;pvPath&quot;:&quot;/&quot;}</p>
          */
         public Builder targetContainer(String targetContainer) {
             this.putQueryParameter("TargetContainer", targetContainer);
@@ -575,7 +611,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the container cluster to which you want to restore data.
+         * <p>The ID of the container cluster to which you want to restore data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-000amjsc7o1h9506oob7</p>
          */
         public Builder targetContainerClusterId(String targetContainerClusterId) {
             this.putQueryParameter("TargetContainerClusterId", targetContainerClusterId);
@@ -584,7 +623,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **RestoreType** parameter is set to **NAS**. This parameter specifies the time when the file system is created.
+         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>NAS</strong>. This parameter specifies the time when the file system is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
          */
         public Builder targetCreateTime(Long targetCreateTime) {
             this.putQueryParameter("TargetCreateTime", targetCreateTime);
@@ -593,7 +635,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **RestoreType** parameter is set to **NAS**. This parameter specifies the ID of the file system to which you want to restore data.
+         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>NAS</strong>. This parameter specifies the ID of the file system to which you want to restore data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>005494</p>
          */
         public Builder targetFileSystemId(String targetFileSystemId) {
             this.putQueryParameter("TargetFileSystemId", targetFileSystemId);
@@ -602,7 +647,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **RestoreType** parameter is set to **ECS_FILE**. This parameter specifies the ID of the ECS instance to which you want to restore data.
+         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the ID of the ECS instance to which you want to restore data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-*********************</p>
          */
         public Builder targetInstanceId(String targetInstanceId) {
             this.putBodyParameter("TargetInstanceId", targetInstanceId);
@@ -611,7 +659,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The name of the Tablestore instance to which you want to restore data.
+         * <p>The name of the Tablestore instance to which you want to restore data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instancename</p>
          */
         public Builder targetInstanceName(String targetInstanceName) {
             this.putQueryParameter("TargetInstanceName", targetInstanceName);
@@ -620,7 +671,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **RestoreType** parameter is set to **ECS_FILE**. This parameter specifies the destination file path.
+         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the destination file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C:\</p>
          */
         public Builder targetPath(String targetPath) {
             this.putBodyParameter("TargetPath", targetPath);
@@ -629,7 +683,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **RestoreType** parameter is set to **OSS**. This parameter specifies the prefix of objects that you want to restore.
+         * <p>This parameter is required only if the <strong>RestoreType</strong> parameter is set to <strong>OSS</strong>. This parameter specifies the prefix of objects that you want to restore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbr</p>
          */
         public Builder targetPrefix(String targetPrefix) {
             this.putQueryParameter("TargetPrefix", targetPrefix);
@@ -638,7 +695,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The name of the table that stores the restored data.
+         * <p>The name of the table that stores the restored data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tablename</p>
          */
         public Builder targetTableName(String targetTableName) {
             this.putQueryParameter("TargetTableName", targetTableName);
@@ -647,7 +707,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The time when data is restored to the Tablestore instance. The value must be a UNIX timestamp. Unit: seconds.
+         * <p>The time when data is restored to the Tablestore instance. The value must be a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642496881</p>
          */
         public Builder targetTime(Long targetTime) {
             this.putQueryParameter("TargetTime", targetTime);
@@ -656,7 +719,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The details of ECS instance backup.
+         * <p>The details of ECS instance backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sourceInstanceId&quot;:&quot;i-uf62te6pm3iwsyxyz66q&quot;,&quot;bootAfterRestore&quot;:false}</p>
          */
         public Builder udmDetail(java.util.Map < String, ? > udmDetail) {
             String udmDetailShrink = shrink(udmDetail, "UdmDetail", "json");
@@ -666,7 +732,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * This parameter is required only if you set the **SourceType** parameter to **UDM_ECS**. This parameter specifies the region to which you want to restore data.
+         * <p>This parameter is required only if you set the <strong>SourceType</strong> parameter to <strong>UDM_ECS</strong>. This parameter specifies the region to which you want to restore data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder udmRegionId(String udmRegionId) {
             this.putQueryParameter("UdmRegionId", udmRegionId);
@@ -675,7 +744,10 @@ public class CreateRestoreJobRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault to which the backup snapshot belongs.
+         * <p>The ID of the backup vault to which the backup snapshot belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

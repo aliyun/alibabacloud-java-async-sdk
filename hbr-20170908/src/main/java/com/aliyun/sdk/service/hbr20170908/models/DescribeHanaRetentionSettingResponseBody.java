@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHanaRetentionSettingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHanaRetentionSettingResponseBody</p>
  */
 public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("Disabled")
+    @com.aliyun.core.annotation.NameInMap("Disabled")
     private Boolean disabled;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RetentionDays")
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
     private Long retentionDays;
 
-    @NameInMap("Schedule")
+    @com.aliyun.core.annotation.NameInMap("Schedule")
     private String schedule;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private DescribeHanaRetentionSettingResponseBody(Builder builder) {
@@ -146,7 +146,10 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         private String vaultId; 
 
         /**
-         * The ID of the SAP HANA instance.
+         * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-0003jyv******fsku5m</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -154,7 +157,10 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -162,7 +168,10 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q01</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -170,11 +179,14 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the backup is permanently retained. Valid values:
-         * <p>
+         * <p>Indicates whether the backup is permanently retained. Valid values:</p>
+         * <ul>
+         * <li>true: The backup is permanently retained.</li>
+         * <li>false: The backup is retained for the specified number of days.</li>
+         * </ul>
          * 
-         * *   true: The backup is permanently retained.
-         * *   false: The backup is retained for the specified number of days.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;
@@ -182,7 +194,10 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +205,10 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>280DD872-EE25-52E8-9CB4-491067173DD0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +216,10 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days for which the backup is retained. If the value of the Disabled parameter is false, the backup is retained for the number of days specified by this parameter.
+         * <p>The number of days for which the backup is retained. If the value of the Disabled parameter is false, the backup is retained for the number of days specified by this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3650</p>
          */
         public Builder retentionDays(Long retentionDays) {
             this.retentionDays = retentionDays;
@@ -206,11 +227,14 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The policy to update the retention period. Format: `I|{startTime}|{interval}`, which indicates that the retention period is updated at an interval of {interval} starting from {startTime}.
-         * <p>
+         * <p>The policy to update the retention period. Format: <code>I|{startTime}|{interval}</code>, which indicates that the retention period is updated at an interval of {interval} starting from {startTime}.</p>
+         * <ul>
+         * <li>startTime: the time at which the system starts to run a backup job. The time follows the UNIX time format. Unit: seconds.</li>
+         * <li>interval: the interval at which the system runs a backup job. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.</li>
+         * </ul>
          * 
-         * *   startTime: the time at which the system starts to update the retention period. The time follows the UNIX time format. Unit: seconds.
-         * *   interval: the interval at which the system updates the retention period. The interval follows the ISO 8601 standard. For example, PT1H indicates an interval of 1 hour. P1D indicates an interval of one day.
+         * <strong>example:</strong>
+         * <p>I|0|P1D</p>
          */
         public Builder schedule(String schedule) {
             this.schedule = schedule;
@@ -218,11 +242,14 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +257,10 @@ public class DescribeHanaRetentionSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0006wkn7******zkn</p>
          */
         public Builder vaultId(String vaultId) {
             this.vaultId = vaultId;

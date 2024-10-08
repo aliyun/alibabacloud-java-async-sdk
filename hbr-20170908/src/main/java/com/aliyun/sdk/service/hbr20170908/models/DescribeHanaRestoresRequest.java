@@ -1,53 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHanaRestoresRequest} extends {@link RequestModel}
  *
  * <p>DescribeHanaRestoresRequest</p>
  */
 public class DescribeHanaRestoresRequest extends Request {
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private Long backupId;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("RestoreId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreId")
     private String restoreId;
 
-    @Query
-    @NameInMap("RestoreStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreStatus")
     private String restoreStatus;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private DescribeHanaRestoresRequest(Builder builder) {
@@ -168,7 +168,10 @@ public class DescribeHanaRestoresRequest extends Request {
         } 
 
         /**
-         * The ID of the backup.
+         * <p>The backup ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632754800158</p>
          */
         public Builder backupId(Long backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -177,7 +180,10 @@ public class DescribeHanaRestoresRequest extends Request {
         }
 
         /**
-         * The ID of the SAP HANA instance.
+         * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-000b******soejg</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -186,7 +192,10 @@ public class DescribeHanaRestoresRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEMDB</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -195,7 +204,10 @@ public class DescribeHanaRestoresRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -204,7 +216,10 @@ public class DescribeHanaRestoresRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +228,10 @@ public class DescribeHanaRestoresRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4ebtpkzx7zy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -222,7 +240,10 @@ public class DescribeHanaRestoresRequest extends Request {
         }
 
         /**
-         * The ID of the restore job.
+         * <p>The ID of the restore job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-0007o3vqfukfe92hvf13</p>
          */
         public Builder restoreId(String restoreId) {
             this.putQueryParameter("RestoreId", restoreId);
@@ -231,15 +252,18 @@ public class DescribeHanaRestoresRequest extends Request {
         }
 
         /**
-         * The status of the restore job. Valid values:
-         * <p>
+         * <p>The status of the restore job. Valid values:</p>
+         * <ul>
+         * <li><strong>RUNNING</strong>: The job is running.</li>
+         * <li><strong>COMPLETE</strong>: The job is completed.</li>
+         * <li><strong>PARTIAL_COMPLETE</strong>: The job is partially completed.</li>
+         * <li><strong>FAILED</strong>: The job failed.</li>
+         * <li><strong>CANCELED</strong>: The job is canceled.</li>
+         * <li><strong>EXPIRED</strong>: The job timed out.</li>
+         * </ul>
          * 
-         * *   **RUNNING**: The restore job is running.
-         * *   **COMPLETE**: The restore job is completed.
-         * *   **PARTIAL_COMPLETE**: The restore job is partially completed.
-         * *   **FAILED**: The restore job has failed.
-         * *   **CANCELED**: The restore job is canceled.
-         * *   **EXPIRED**: The restore job has timed out.
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         public Builder restoreStatus(String restoreStatus) {
             this.putQueryParameter("RestoreStatus", restoreStatus);
@@ -248,7 +272,10 @@ public class DescribeHanaRestoresRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-000au6bq******mpu</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

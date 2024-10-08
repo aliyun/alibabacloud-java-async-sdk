@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenHbrServiceResponseBody} extends {@link TeaModel}
  *
  * <p>OpenHbrServiceResponseBody</p>
  */
 public class OpenHbrServiceResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private OpenHbrServiceResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class OpenHbrServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>215463686160696</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +61,10 @@ public class OpenHbrServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4A1D5F4-5055-549A-8B25-6DD23311E299</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -88,20 +88,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<AttachNasFileSystemResponse> attachNasFileSystem(AttachNasFileSystemRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AttachNasFileSystem").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AttachNasFileSystemResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AttachNasFileSystemResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<CancelBackupJobResponse> cancelBackupJob(CancelBackupJobRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -130,10 +116,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   In the Hybrid Backup Recovery (HBR), you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.
-      * *   A resource is a cloud service entity that you create on Alibaba Cloud, such as an ECS instance, a backup vault, or an SAP HANA instance.
-      * *   You can sort resources owned by your Alibaba Cloud account into various resource groups. This facilitates resource management among multiple projects or applications within your Alibaba Cloud account and simplifies permission management.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>In Cloud Backup, you can use resource groups to manage resources such as backup vaults, backup clients, and SAP HANA instances.</li>
+     * <li>A resource is a cloud service entity that you create on Alibaba Cloud, such as an Elastic Compute Service (ECS) instance, a backup vault, or an SAP HANA instance.</li>
+     * <li>You can sort resources owned by your Alibaba Cloud account into various resource groups. Resource groups facilitate resource management among multiple projects or applications within your Alibaba Cloud account and simplify permission management.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
@@ -178,11 +166,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   You can specify only one type of data source in a backup schedule.
-      * *   You can specify only one interval as a backup cycle in a backup schedule.
-      * *   Each backup schedule allows you to back up data to only one backup vault.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>A backup schedule defines the data source, backup policy, and other configurations. After you execute a backup schedule, a backup job is generated to record the backup progress and the backup result. If a backup job is complete, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</li>
+     * <li>You can specify only one type of data source in a backup schedule.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup schedule.</li>
+     * <li>Each backup schedule allows you to back up data to only one backup vault.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<CreateBackupPlanResponse> createBackupPlan(CreateBackupPlanRequest request) {
@@ -199,8 +189,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see [Billable items and billing methods](~~89062~~).
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you fully understand the billing methods and pricing of Hybrid Backup Recovery (HBR). For more information, see <a href="~~89062~~">Billable items and billing methods</a>.</p>
      */
     @Override
     public CompletableFuture<CreateClientsResponse> createClients(CreateClientsRequest request) {
@@ -217,11 +207,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   You can specify only one type of data source in a backup plan.
-      * *   You can specify only one interval as a backup cycle in a backup plan.
-      * *   Each backup plan allows you to back up data to only one backup vault.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</li>
+     * <li>You can specify only one type of data source in a backup plan.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup plan.</li>
+     * <li>Each backup plan allows you to back up data to only one backup vault.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<CreateHanaBackupPlanResponse> createHanaBackupPlan(CreateHanaBackupPlanRequest request) {
@@ -238,8 +230,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, HBR installs an HBR client on the ECS instance that hosts the SAP HANA instance.
-      *
+     * <b>description</b> :
+     * <p>To register an SAP HANA instance, you must configure the connection parameters of the SAP HANA instance. After the SAP HANA instance is registered, Cloud Backup installs a Cloud Backup client on the Elastic Compute Service (ECS) instance that hosts the SAP HANA instance.</p>
      */
     @Override
     public CompletableFuture<CreateHanaInstanceResponse> createHanaInstance(CreateHanaInstanceRequest request) {
@@ -256,8 +248,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see [Restore databases to an SAP HANA instance](~~101178~~).
-      *
+     * <b>description</b> :
+     * <p>If you call this operation to restore a database, the database is restored to a specified state. Proceed with caution. For more information, see <a href="~~101178~~">Restore databases to an SAP HANA instance</a>.</p>
      */
     @Override
     public CompletableFuture<CreateHanaRestoreResponse> createHanaRestore(CreateHanaRestoreRequest request) {
@@ -274,9 +266,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can bind data sources to only one policy in each request.
-      * *   Elastic Compute Service (ECS) instances can be bound to only one policy.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>You can bind data sources to only one policy in each request.</li>
+     * <li>Elastic Compute Service (ECS) instances can be bound to only one policy.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<CreatePolicyBindingsResponse> createPolicyBindings(CreatePolicyBindingsRequest request) {
@@ -293,11 +287,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.
-      * *   You can specify only one interval as a backup cycle in a backup policy.
-      * *   Each backup policy allows you to back up data to only one backup vault.
-      *
+     * <b>description</b> :
+     * <p>A backup policy records the information required for backup. After you execute a backup policy, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</p>
+     * <ul>
+     * <li>A backup policy supports multiple data sources. The data sources can be only Elastic Compute Service (ECS) instances.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup policy.</li>
+     * <li>Each backup policy allows you to back up data to only one backup vault.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<CreatePolicyV2Response> createPolicyV2(CreatePolicyV2Request request) {
@@ -314,8 +310,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.
-      *
+     * <b>description</b> :
+     * <p>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state.</p>
      */
     @Override
     public CompletableFuture<CreateReplicationVaultResponse> createReplicationVault(CreateReplicationVaultRequest request) {
@@ -332,9 +328,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You must create a restore job based on the specified backup snapshot and restore destination.
-      * *   The type of the data source from which you restore data must be the same as the type of the restore destination.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>You must create a restore job based on the specified backup snapshot and restore destination.</li>
+     * <li>The type of the data source from which you restore data must be the same as the type of the restore destination.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<CreateRestoreJobResponse> createRestoreJob(CreateRestoreJobRequest request) {
@@ -351,10 +349,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 1.  You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.
-      * 2.  For more information about how to upload a file to OSS by using a form, see OSS documentation.
-      * 3.  The system periodically deletes files that are uploaded to OSS.
-      *
+     * <b>description</b> :
+     * <ol>
+     * <li>You can directly upload a file to Object Storage Service (OSS) by using a form based on the returned value of this operation.</li>
+     * <li>For more information about how to upload a file to OSS by using a form, see OSS documentation.</li>
+     * <li>The system periodically deletes files that are uploaded to OSS.</li>
+     * </ol>
      */
     @Override
     public CompletableFuture<CreateTempFileUploadUrlResponse> createTempFileUploadUrl(CreateTempFileUploadUrlRequest request) {
@@ -371,9 +371,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Each Alibaba Cloud account can create up to 100 backup vaults.
-      * *   After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>Each Alibaba Cloud account can create up to 100 backup vaults.</li>
+     * <li>After a backup vault is created, the backup vault is in the INITIALIZING state, and the system automatically runs an initialization task to initialize the backup vault. After the initialization task is completed, the backup vault is in the CREATED state. A backup job can use a backup vault to store backup data only if the backup vault is in the CREATED state.
+     * **
+     * <strong>Note</strong> Before you call this operation, make sure that you fully understand the billing of Cloud Backup.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<CreateVaultResponse> createVault(CreateVaultRequest request) {
@@ -390,12 +394,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You cannot delete an active backup client from which a heartbeat packet is received within the previous hour. After you call the UninstallBackupClients operation to uninstall a backup client, the status of the backup client changes to inactive.
-      * *   This operation deletes the resources that are related to the backup client. The following resources are included:
-      *     *   Backup plans
-      *     *   Backup jobs
-      *     *   Backup files
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>You cannot delete the active Cloud Backup clients that receive heartbeat packets within 1 hour. You can call the UninstallBackupClients operation to uninstall a Cloud Backup client. Then, the client becomes inactive.</li>
+     * <li>When you perform this operation, resources that are associated with the client are also deleted, including:<ul>
+     * <li>Backup plans</li>
+     * <li>Backup jobs</li>
+     * <li>Snapshots</li>
+     * </ul>
+     * </li>
+     * </ul>
      */
     @Override
     public CompletableFuture<DeleteBackupClientResponse> deleteBackupClient(DeleteBackupClientRequest request) {
@@ -412,8 +420,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.
-      *
+     * <b>description</b> :
+     * <p>This operation deletes only the resources that are related to HBR clients. The resources include backup plans, backup jobs, and backup snapshots. The operation does not delete HBR clients.</p>
      */
     @Override
     public CompletableFuture<DeleteBackupClientResourceResponse> deleteBackupClientResource(DeleteBackupClientResourceRequest request) {
@@ -430,9 +438,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If you delete a backup plan, the backup jobs are also deleted.
-      * *   If you delete a backup plan, the created snapshot files are not deleted.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>If you delete a backup plan, the backup jobs are also deleted.</li>
+     * <li>If you delete a backup plan, the created snapshot files are not deleted.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<DeleteBackupPlanResponse> deleteBackupPlan(DeleteBackupPlanRequest request) {
@@ -477,8 +487,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the data in the HBR client of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see [How to find sid user and instance number of HANA db?](https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?)
-      *
+     * <b>description</b> :
+     * <p>If you delete an SAP HANA instance, the existing backup data is also deleted and the running backup and restore jobs fail to be completed. Before you delete the SAP HANA instance, make sure that you no longer need the backup data of the instance and no backup or restore jobs are running for the instance. To delete an SAP HANA instance, you must specify the security identifier (SID) of the instance. The SID is three characters in length and starts with a letter. For more information, see <a href="https://answers.sap.com/questions/555192/how-to-find-sid-user-and-instance-number-of-hana-d.html?">How to find sid user and instance number of HANA db?</a></p>
      */
     @Override
     public CompletableFuture<DeleteHanaInstanceResponse> deleteHanaInstance(DeleteHanaInstanceRequest request) {
@@ -509,8 +519,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.
-      *
+     * <b>description</b> :
+     * <p>If you delete a backup policy, the backup policy is disassociated with all data sources. Proceed with caution.</p>
      */
     @Override
     public CompletableFuture<DeletePolicyV2Response> deletePolicyV2(DeletePolicyV2Request request) {
@@ -527,8 +537,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you delete the most recent backup file for a data source, you must set the `Force parameter to true`. Otherwise, an error occurs.
-      *
+     * <b>description</b> :
+     * <p>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <code>true</code>. Otherwise, an error occurs.</p>
      */
     @Override
     public CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request) {
@@ -544,10 +554,40 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<DeleteUdmDiskResponse> deleteUdmDisk(DeleteUdmDiskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteUdmDisk").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUdmDiskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteUdmDiskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DeleteUdmEcsInstanceResponse> deleteUdmEcsInstance(DeleteUdmEcsInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteUdmEcsInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteUdmEcsInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteUdmEcsInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
-      * *   You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.
-      * *   After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include backup clients of earlier versions, backup plans, backup jobs, snapshots, and restore jobs.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>You cannot delete a backup vault within 2 hours after the backup vault is created or a backup vault that is in the INITIALIZING state.</li>
+     * <li>After you delete a backup vault, all resources that are associated with the backup vault are deleted. The resources include the Cloud Backup client of the old version, backup plans, backup jobs, snapshots, and restore jobs.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<DeleteVaultResponse> deleteVault(DeleteVaultRequest request) {
@@ -606,8 +646,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is applicable only to SAP HANA backup. For backup clients of other data sources, call the DescribeBackupClients operation.
-      *
+     * <b>description</b> :
+     * <p>This operation is applicable only to SAP HANA backup. For Cloud Backup clients of other data sources, call the DescribeBackupClients operation.</p>
      */
     @Override
     public CompletableFuture<DescribeClientsResponse> describeClients(DescribeClientsRequest request) {
@@ -624,8 +664,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query only Container Service for Kubernetes (ACK) clusters.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query only Container Service for Kubernetes (ACK) clusters.</p>
      */
     @Override
     public CompletableFuture<DescribeContainerClusterResponse> describeContainerCluster(DescribeContainerClusterRequest request) {
@@ -670,8 +710,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.
-      *
+     * <b>description</b> :
+     * <p>If you want to query the backup retention period of a database, you can call the DescribeHanaRetentionSetting operation.</p>
      */
     @Override
     public CompletableFuture<DescribeHanaBackupSettingResponse> describeHanaBackupSetting(DescribeHanaBackupSettingRequest request) {
@@ -688,8 +728,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the execution result of the asynchronous job.
-      *
+     * <b>description</b> :
+     * <p>After you call the DescribeHanaBackupsAsync operation to query the SAP HANA backups that meet the specified conditions, call the DescribeTask operation to query the final result.</p>
      */
     @Override
     public CompletableFuture<DescribeHanaBackupsAsyncResponse> describeHanaBackupsAsync(DescribeHanaBackupsAsyncRequest request) {
@@ -706,8 +746,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you register an SAP HANA instance and install a backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.
-      *
+     * <b>description</b> :
+     * <p>After you register an SAP HANA instance and install a Cloud Backup client on the instance, you can call this operation to query the information about SAP HANA databases. You can call the StartHanaDatabaseAsync operation to start a database and call the StopHanaDatabaseAsync operation to stop a database.</p>
      */
     @Override
     public CompletableFuture<DescribeHanaDatabasesResponse> describeHanaDatabases(DescribeHanaDatabasesRequest request) {
@@ -752,9 +792,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.
-      * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>If you want to query the backup parameters of a database, you can call the DescribeHanaBackupSetting operation.</li>
+     * <li>Cloud Backup deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<DescribeHanaRetentionSettingResponse> describeHanaRetentionSetting(DescribeHanaRetentionSettingRequest request) {
@@ -911,9 +953,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If the request is successful, the mount target is deleted.
-      * *   After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the **Status** column of the mount target of the NAS file system, the following information is displayed: **This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR**.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>If the request is successful, the mount target is deleted.</li>
+     * <li>After you create a backup plan for an Apsara File Storage NAS file system, HBR automatically creates a mount target for the file system. You can call this operation to delete the mount target. In the <strong>Status</strong> column of the mount target of the NAS file system, the following information is displayed: <strong>This mount target is created by an Alibaba Cloud internal service and cannot be operated. Service name: HBR</strong>.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<DetachNasFileSystemResponse> detachNasFileSystem(DetachNasFileSystemRequest request) {
@@ -930,8 +974,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the request is successful, the specified backup plan is disabled. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is set to true for the backup plan.
-      *
+     * <b>description</b> :
+     * <p>After you call this operation, the backup plan is suspended. In the DescribeBackupPlans operation, the Disabled parameter is set to true.</p>
      */
     @Override
     public CompletableFuture<DisableBackupPlanResponse> disableBackupPlan(DisableBackupPlanRequest request) {
@@ -948,8 +992,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To enable the backup plan again, call the EnableHanaBackupPlan operation.
-      *
+     * <b>description</b> :
+     * <p>To enable the backup plan again, call the EnableHanaBackupPlan operation.</p>
      */
     @Override
     public CompletableFuture<DisableHanaBackupPlanResponse> disableHanaBackupPlan(DisableHanaBackupPlanRequest request) {
@@ -966,8 +1010,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the request is successful, the system enables the backup plan and backs up data based on the polices that are specified in the backup plan. If you call the DescribeBackupPlans operation to query backup plans, the Disabled parameter is automatically set to false for the backup plan.
-      *
+     * <b>description</b> :
+     * <p>After you call this operation, the backup plan is restarted (Disabled is set to false in the DescribeBackupPlans operation). Cloud Backup continues to perform backups based on the policy specified in the backup plan.</p>
      */
     @Override
     public CompletableFuture<EnableBackupPlanResponse> enableBackupPlan(EnableBackupPlanRequest request) {
@@ -984,8 +1028,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To disable the backup plan again, call the DisableHanaBackupPlan operation.
-      *
+     * <b>description</b> :
+     * <p>To disable the backup plan again, call the DisableHanaBackupPlan operation.</p>
      */
     @Override
     public CompletableFuture<EnableHanaBackupPlanResponse> enableHanaBackupPlan(EnableHanaBackupPlanRequest request) {
@@ -1058,10 +1102,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.
-      * *   You can call the [DescribeTask](~~431265~~) operation to query the execution result of an asynchronous job.
-      * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation creates an asynchronous job at the backend and calls Cloud Assistant to install an HBR client on an ECS instance.</li>
+     * <li>You can call the <a href="~~431265~~">DescribeTask</a> operation to query the execution result of an asynchronous job.</li>
+     * <li>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 60 seconds after you call the InstallBackupClients operation to install HBR clients. Then, run the next queries at an interval of 30 seconds.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<InstallBackupClientsResponse> installBackupClients(InstallBackupClientsRequest request) {
@@ -1106,8 +1152,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To stop the database again, call the StopHanaDatabaseAsync operation.
-      *
+     * <b>description</b> :
+     * <p>To stop the database again, call the StopHanaDatabaseAsync operation.</p>
      */
     @Override
     public CompletableFuture<StartHanaDatabaseAsyncResponse> startHanaDatabaseAsync(StartHanaDatabaseAsyncRequest request) {
@@ -1124,8 +1170,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To start the database again, call the StartHanaDatabaseAsync operation.
-      *
+     * <b>description</b> :
+     * <p>To start the database again, call the StartHanaDatabaseAsync operation.</p>
      */
     @Override
     public CompletableFuture<StopHanaDatabaseAsyncResponse> stopHanaDatabaseAsync(StopHanaDatabaseAsyncRequest request) {
@@ -1142,10 +1188,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.
-      * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
-      * *   The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation creates an asynchronous job at the backend and calls Cloud Assistant to uninstall a backup client from an ECS instance.</li>
+     * <li>You can call the DescribeTask operation to query the execution result of an asynchronous job.</li>
+     * <li>The timeout period of an asynchronous job is 15 minutes. We recommend that you call the DescribeTask operation to run the first query 30 seconds after you call the UninstallBackupClients operation to uninstall backup clients. Then, run the next queries at an interval of 30 seconds.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<UninstallBackupClientsResponse> uninstallBackupClients(UninstallBackupClientsRequest request) {
@@ -1162,8 +1210,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.
-      *
+     * <b>description</b> :
+     * <p>If you call this operation, the specified HBR client is uninstalled. To reinstall the HBR client, call the CreateClients operation.</p>
      */
     @Override
     public CompletableFuture<UninstallClientResponse> uninstallClient(UninstallClientRequest request) {
@@ -1194,8 +1242,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to update the configurations of both the old and new HBR clients.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to update the configurations of both the old and new HBR clients.</p>
      */
     @Override
     public CompletableFuture<UpdateClientSettingsResponse> updateClientSettings(UpdateClientSettingsRequest request) {
@@ -1226,11 +1274,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.
-      * *   You can specify only one type of data source in a backup plan.
-      * *   You can specify only one interval as a backup cycle in a backup plan.
-      * *   Each backup plan allows you to back up data to only one backup vault.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>A backup plan defines the data source, backup policy, and other configurations. After you execute a backup plan, a backup job is generated to record the backup progress and the backup result. If a backup job is completed, a backup snapshot is generated. You can use a backup snapshot to create a restore job.</li>
+     * <li>You can specify only one type of data source in a backup plan.</li>
+     * <li>You can specify only one interval as a backup cycle in a backup plan.</li>
+     * <li>Each backup plan allows you to back up data to only one backup vault.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<UpdateHanaBackupPlanResponse> updateHanaBackupPlan(UpdateHanaBackupPlanRequest request) {
@@ -1247,8 +1297,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.
-      *
+     * <b>description</b> :
+     * <p>You can call the UpdateHanaRetentionSetting operation to update the backup retention period of a database.</p>
      */
     @Override
     public CompletableFuture<UpdateHanaBackupSettingResponse> updateHanaBackupSetting(UpdateHanaBackupSettingRequest request) {
@@ -1279,9 +1329,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.
-      * *   HBR deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>If you want to update the backup parameters of a database, you can call the UpdateHanaBackupSetting operation.</li>
+     * <li>Cloud Backup deletes the expired catalogs and data that are related to Backint and file backup. The deleted catalogs and data cannot be restored. We recommend that you set the retention period based on your business requirements.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<UpdateHanaRetentionSettingResponse> updateHanaRetentionSetting(UpdateHanaRetentionSettingRequest request) {
@@ -1312,8 +1364,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.
-      *
+     * <b>description</b> :
+     * <p>If you modify a backup policy, the modification takes effect on all data sources that are bound to the backup policy. Proceed with caution.</p>
      */
     @Override
     public CompletableFuture<UpdatePolicyV2Response> updatePolicyV2(UpdatePolicyV2Request request) {
@@ -1344,10 +1396,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.
-      * *   You can call the DescribeTask operation to query the execution result of an asynchronous job.
-      * *   The timeout period of an asynchronous job is 15 minutes.
-      *
+     * <b>description</b> :
+     * <ul>
+     * <li>This operation creates an asynchronous job at the backend and calls Cloud Assistant to upgrade an HBR client that is installed on an ECS instance.</li>
+     * <li>You can call the DescribeTask operation to query the execution result of an asynchronous job.</li>
+     * <li>The timeout period of an asynchronous job is 15 minutes.</li>
+     * </ul>
      */
     @Override
     public CompletableFuture<UpgradeBackupClientsResponse> upgradeBackupClients(UpgradeBackupClientsRequest request) {
@@ -1364,8 +1418,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to upgrade a backup client to the latest version. After the backup client is upgraded, the version of the backup client cannot be rolled back.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to upgrade a Cloud Backup client to the latest version. After the Cloud Backup client is upgraded, the version of the client cannot be rolled back.</p>
      */
     @Override
     public CompletableFuture<UpgradeClientResponse> upgradeClient(UpgradeClientRequest request) {

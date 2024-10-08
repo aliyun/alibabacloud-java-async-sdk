@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHanaDatabasesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHanaDatabasesResponseBody</p>
  */
 public class DescribeHanaDatabasesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HanaDatabases")
+    @com.aliyun.core.annotation.NameInMap("HanaDatabases")
     private HanaDatabases hanaDatabases;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeHanaDatabasesResponseBody(Builder builder) {
@@ -122,7 +122,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The response code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,7 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about SAP HANA databases.
+         * <p>The information about SAP HANA databases.</p>
          */
         public Builder hanaDatabases(HanaDatabases hanaDatabases) {
             this.hanaDatabases = hanaDatabases;
@@ -138,7 +141,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +152,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +163,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +174,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAAB6A29-34EB-5F56-962F-D5BDBFE8A5C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,11 +185,14 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +200,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -195,23 +216,29 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHanaDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaDatabasesResponseBody</p>
+     */
     public static class HanaDatabase extends TeaModel {
-        @NameInMap("ActiveStatus")
+        @com.aliyun.core.annotation.NameInMap("ActiveStatus")
         private String activeStatus;
 
-        @NameInMap("DatabaseName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseName")
         private String databaseName;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("SqlPort")
+        @com.aliyun.core.annotation.NameInMap("SqlPort")
         private Integer sqlPort;
 
         private HanaDatabase(Builder builder) {
@@ -282,11 +309,14 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             private Integer sqlPort; 
 
             /**
-             * Indicates whether the database is started. Valid values:
-             * <p>
+             * <p>Indicates whether the database is started. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong>: The database is started.</li>
+             * <li><strong>NO</strong>: The database is not started.</li>
+             * </ul>
              * 
-             * *   **YES**: The database is started.
-             * *   **NO**: The database is not started.
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder activeStatus(String activeStatus) {
                 this.activeStatus = activeStatus;
@@ -294,7 +324,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEMDB</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -302,7 +335,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information.
+             * <p>The detailed information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -310,7 +346,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>izbp1jbf3zy******antqmz</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -318,7 +357,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>indexserver</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -326,7 +368,10 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The port number.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30013</p>
              */
             public Builder sqlPort(Integer sqlPort) {
                 this.sqlPort = sqlPort;
@@ -340,8 +385,14 @@ public class DescribeHanaDatabasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHanaDatabasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHanaDatabasesResponseBody</p>
+     */
     public static class HanaDatabases extends TeaModel {
-        @NameInMap("HanaDatabase")
+        @com.aliyun.core.annotation.NameInMap("HanaDatabase")
         private java.util.List < HanaDatabase> hanaDatabase;
 
         private HanaDatabases(Builder builder) {

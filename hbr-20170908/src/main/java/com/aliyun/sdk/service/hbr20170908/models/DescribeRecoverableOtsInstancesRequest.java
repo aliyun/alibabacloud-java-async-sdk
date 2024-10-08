@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRecoverableOtsInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeRecoverableOtsInstancesRequest</p>
  */
 public class DescribeRecoverableOtsInstancesRequest extends Request {
-    @Query
-    @NameInMap("CrossAccountRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
     private String crossAccountRoleName;
 
-    @Query
-    @NameInMap("CrossAccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountType")
     private String crossAccountType;
 
-    @Query
-    @NameInMap("CrossAccountUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
     private DescribeRecoverableOtsInstancesRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class DescribeRecoverableOtsInstancesRequest extends Request {
         } 
 
         /**
-         * The role name created in the RAM of the original account used for cross-account backup.
+         * <p>The name of the Resource Access Management (RAM) role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbrcrossrole</p>
          */
         public Builder crossAccountRoleName(String crossAccountRoleName) {
             this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
@@ -91,10 +94,14 @@ public class DescribeRecoverableOtsInstancesRequest extends Request {
         }
 
         /**
-         * The type of cross-account backup. Supported:
-         * <p>
-         * * SELF_ACCOUNT: backup of this account
-         * * CROSS_ACCOUNT: Cross-account backup
+         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -103,7 +110,10 @@ public class DescribeRecoverableOtsInstancesRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud Uid of the original account used to cross accounts.
+         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1440155109798732</p>
          */
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);

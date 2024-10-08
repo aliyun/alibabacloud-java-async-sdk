@@ -1,19 +1,19 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePolicyV2Request} extends {@link RequestModel}
  *
  * <p>DeletePolicyV2Request</p>
  */
 public class DeletePolicyV2Request extends Request {
-    @Body
-    @NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
     private String policyId;
 
     private DeletePolicyV2Request(Builder builder) {
@@ -54,7 +54,10 @@ public class DeletePolicyV2Request extends Request {
         } 
 
         /**
-         * The ID of the backup policy.
+         * <p>The ID of the backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000************2l6</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);

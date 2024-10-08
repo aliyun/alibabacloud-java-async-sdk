@@ -1,53 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHanaBackupPlanRequest} extends {@link RequestModel}
  *
  * <p>CreateHanaBackupPlanRequest</p>
  */
 public class CreateHanaBackupPlanRequest extends Request {
-    @Query
-    @NameInMap("BackupPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPrefix")
     private String backupPrefix;
 
-    @Query
-    @NameInMap("BackupType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupType;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DatabaseName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseName;
 
-    @Query
-    @NameInMap("PlanName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String planName;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Schedule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Schedule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schedule;
 
-    @Query
-    @NameInMap("VaultId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultId;
 
     private CreateHanaBackupPlanRequest(Builder builder) {
@@ -158,7 +158,10 @@ public class CreateHanaBackupPlanRequest extends Request {
         } 
 
         /**
-         * The backup prefix.
+         * <p>The backup prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIFF_DATA_BACKUP</p>
          */
         public Builder backupPrefix(String backupPrefix) {
             this.putQueryParameter("BackupPrefix", backupPrefix);
@@ -167,12 +170,15 @@ public class CreateHanaBackupPlanRequest extends Request {
         }
 
         /**
-         * The backup type. Valid values:
-         * <p>
+         * <p>The backup type. Valid values:</p>
+         * <ul>
+         * <li>COMPLETE: full backup</li>
+         * <li>INCREMENTAL: incremental backup</li>
+         * <li>DIFFERENTIAL: differential backup</li>
+         * </ul>
          * 
-         * *   COMPLETE: full backup
-         * *   INCREMENTAL: incremental backup
-         * *   DIFFERENTIAL: differential backup
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         public Builder backupType(String backupType) {
             this.putQueryParameter("BackupType", backupType);
@@ -181,7 +187,10 @@ public class CreateHanaBackupPlanRequest extends Request {
         }
 
         /**
-         * The ID of the SAP HANA instance.
+         * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-00024vyjj9******v</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -190,7 +199,10 @@ public class CreateHanaBackupPlanRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEMDB</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -199,7 +211,10 @@ public class CreateHanaBackupPlanRequest extends Request {
         }
 
         /**
-         * The name of the backup plan.
+         * <p>The name of the backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-20220110-113108</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("PlanName", planName);
@@ -208,7 +223,10 @@ public class CreateHanaBackupPlanRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvnf22m7itha</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -217,11 +235,14 @@ public class CreateHanaBackupPlanRequest extends Request {
         }
 
         /**
-         * The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, `I|1631685600|P1D` specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
-         * <p>
+         * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is completed. For example, <code>I|1631685600|P1D</code> specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+         * <ul>
+         * <li>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
+         * <li>interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</li>
+         * </ul>
          * 
-         * *   startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.
-         * *   interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.
+         * <strong>example:</strong>
+         * <p>I|1602673264|P1D</p>
          */
         public Builder schedule(String schedule) {
             this.putQueryParameter("Schedule", schedule);
@@ -230,7 +251,10 @@ public class CreateHanaBackupPlanRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0002pcwhdn******wmi</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

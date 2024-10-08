@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Rule} extends {@link TeaModel}
  *
  * <p>Rule</p>
  */
 public class Rule extends TeaModel {
-    @NameInMap("BackupType")
+    @com.aliyun.core.annotation.NameInMap("BackupType")
     private String backupType;
 
-    @NameInMap("DestinationRegionId")
+    @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
     private String destinationRegionId;
 
-    @NameInMap("DestinationRetention")
+    @com.aliyun.core.annotation.NameInMap("DestinationRetention")
     private Long destinationRetention;
 
-    @NameInMap("Disabled")
+    @com.aliyun.core.annotation.NameInMap("Disabled")
     private Boolean disabled;
 
-    @NameInMap("DoCopy")
+    @com.aliyun.core.annotation.NameInMap("DoCopy")
     private Boolean doCopy;
 
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Long retention;
 
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @NameInMap("Schedule")
+    @com.aliyun.core.annotation.NameInMap("Schedule")
     private String schedule;
 
     private Rule(Builder builder) {

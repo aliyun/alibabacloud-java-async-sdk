@@ -1,52 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateReplicationVaultRequest} extends {@link RequestModel}
  *
  * <p>CreateReplicationVaultRequest</p>
  */
 public class CreateReplicationVaultRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("RedundancyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
+    private String encryptType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsKeyId")
+    private String kmsKeyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RedundancyType")
     private String redundancyType;
 
-    @Query
-    @NameInMap("ReplicationSourceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicationSourceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String replicationSourceRegionId;
 
-    @Query
-    @NameInMap("ReplicationSourceVaultId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicationSourceVaultId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String replicationSourceVaultId;
 
-    @Query
-    @NameInMap("VaultName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultName;
 
-    @Query
-    @NameInMap("VaultRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultRegionId;
 
-    @Query
-    @NameInMap("VaultStorageClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultStorageClass")
     private String vaultStorageClass;
 
     private CreateReplicationVaultRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.encryptType = builder.encryptType;
+        this.kmsKeyId = builder.kmsKeyId;
         this.redundancyType = builder.redundancyType;
         this.replicationSourceRegionId = builder.replicationSourceRegionId;
         this.replicationSourceVaultId = builder.replicationSourceVaultId;
@@ -73,6 +83,20 @@ public class CreateReplicationVaultRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return encryptType
+     */
+    public String getEncryptType() {
+        return this.encryptType;
+    }
+
+    /**
+     * @return kmsKeyId
+     */
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     /**
@@ -119,6 +143,8 @@ public class CreateReplicationVaultRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateReplicationVaultRequest, Builder> {
         private String description; 
+        private String encryptType; 
+        private String kmsKeyId; 
         private String redundancyType; 
         private String replicationSourceRegionId; 
         private String replicationSourceVaultId; 
@@ -133,6 +159,8 @@ public class CreateReplicationVaultRequest extends Request {
         private Builder(CreateReplicationVaultRequest request) {
             super(request);
             this.description = request.description;
+            this.encryptType = request.encryptType;
+            this.kmsKeyId = request.kmsKeyId;
             this.redundancyType = request.redundancyType;
             this.replicationSourceRegionId = request.replicationSourceRegionId;
             this.replicationSourceVaultId = request.replicationSourceVaultId;
@@ -142,7 +170,10 @@ public class CreateReplicationVaultRequest extends Request {
         } 
 
         /**
-         * The description of the backup vault. The description must be 0 to 255 characters in length.
+         * <p>The description of the backup vault. The description must be 0 to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -151,11 +182,32 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * The data redundancy type of the backup vault. Valid values:
-         * <p>
+         * EncryptType.
+         */
+        public Builder encryptType(String encryptType) {
+            this.putQueryParameter("EncryptType", encryptType);
+            this.encryptType = encryptType;
+            return this;
+        }
+
+        /**
+         * KmsKeyId.
+         */
+        public Builder kmsKeyId(String kmsKeyId) {
+            this.putQueryParameter("KmsKeyId", kmsKeyId);
+            this.kmsKeyId = kmsKeyId;
+            return this;
+        }
+
+        /**
+         * <p>The data redundancy type of the backup vault. Valid values:</p>
+         * <ul>
+         * <li>LRS: standard locally redundant storage (LRS). Cloud Backup stores the copies of each object on multiple devices of different facilities in the same zone. This way, Cloud Backup ensures data durability and availability even if hardware failures occur.</li>
+         * <li>ZRS: standard zone-redundant storage (ZRS). Cloud Backup uses the multi-zone mechanism to distribute data across three zones within the same region. If a zone fails, the data that is stored in the other two zones is still accessible.</li>
+         * </ul>
          * 
-         * - LRS: Locally redundant storage (LRS) is enabled for the backup vault. HBR stores the copies of each object on multiple devices of different facilities in the same zone. This way, HBR ensures data durability and availability even if hardware failures occur.
-         * - ZRS: Zone-redundant storage (ZRS) is enabled for the backup vault. HBR uses the multi-zone mechanism to distribute data across three zones within the same region. If a zone becomes unavailable, the data can still be accessed.
+         * <strong>example:</strong>
+         * <p>LRS</p>
          */
         public Builder redundancyType(String redundancyType) {
             this.putQueryParameter("RedundancyType", redundancyType);
@@ -164,7 +216,10 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * The ID of the region where the source vault resides.
+         * <p>The ID of the region where the source vault resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder replicationSourceRegionId(String replicationSourceRegionId) {
             this.putQueryParameter("ReplicationSourceRegionId", replicationSourceRegionId);
@@ -173,7 +228,10 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * The ID of the source vault.
+         * <p>The ID of the source vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-*********************</p>
          */
         public Builder replicationSourceVaultId(String replicationSourceVaultId) {
             this.putQueryParameter("ReplicationSourceVaultId", replicationSourceVaultId);
@@ -182,7 +240,10 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * The name of the backup vault. The name must be 1 to 64 characters in length.
+         * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mirrorvaultname</p>
          */
         public Builder vaultName(String vaultName) {
             this.putQueryParameter("VaultName", vaultName);
@@ -191,7 +252,10 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * The ID of the region where the backup vault resides.
+         * <p>The ID of the region where the backup vault resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder vaultRegionId(String vaultRegionId) {
             this.putQueryParameter("VaultRegionId", vaultRegionId);
@@ -200,7 +264,10 @@ public class CreateReplicationVaultRequest extends Request {
         }
 
         /**
-         * The storage type of the backup vault. Valid value: **STANDARD**. The value indicates standard storage.
+         * <p>The storage class of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder vaultStorageClass(String vaultStorageClass) {
             this.putQueryParameter("VaultStorageClass", vaultStorageClass);

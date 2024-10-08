@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddContainerClusterResponseBody} extends {@link TeaModel}
  *
  * <p>AddContainerClusterResponseBody</p>
  */
 public class AddContainerClusterResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private AddContainerClusterResponseBody(Builder builder) {
@@ -98,7 +98,10 @@ public class AddContainerClusterResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc-00049slr9iuvvv6pp134</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -106,7 +109,10 @@ public class AddContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +120,10 @@ public class AddContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.
+         * <p>The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +131,10 @@ public class AddContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1FCBC078-FFCB-542A-8555-566477679720</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,11 +142,14 @@ public class AddContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
-         * <p>
+         * <p>Indicates whether the request is successful.</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -142,7 +157,10 @@ public class AddContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used to register the Hybrid Backup Recovery (HBR) client in the cluster.
+         * <p>The token that is used to register the Hybrid Backup Recovery (HBR) client in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhY2NvdW*****VnZpgXQC5A==</p>
          */
         public Builder token(String token) {
             this.token = token;

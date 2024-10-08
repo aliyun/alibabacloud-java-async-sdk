@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Report} extends {@link TeaModel}
  *
  * <p>Report</p>
  */
 public class Report extends TeaModel {
-    @NameInMap("FailedFiles")
+    @com.aliyun.core.annotation.NameInMap("FailedFiles")
     private String failedFiles;
 
-    @NameInMap("SkippedFiles")
+    @com.aliyun.core.annotation.NameInMap("SkippedFiles")
     private String skippedFiles;
 
-    @NameInMap("SuccessFiles")
+    @com.aliyun.core.annotation.NameInMap("SuccessFiles")
     private String successFiles;
 
-    @NameInMap("TotalFiles")
+    @com.aliyun.core.annotation.NameInMap("TotalFiles")
     private String totalFiles;
 
     private Report(Builder builder) {

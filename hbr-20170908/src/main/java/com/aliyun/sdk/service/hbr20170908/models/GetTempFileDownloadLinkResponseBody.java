@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTempFileDownloadLinkResponseBody} extends {@link TeaModel}
  *
  * <p>GetTempFileDownloadLinkResponseBody</p>
  */
 public class GetTempFileDownloadLinkResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private GetTempFileDownloadLinkResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class GetTempFileDownloadLinkResponseBody extends TeaModel {
         private String url; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,10 @@ public class GetTempFileDownloadLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.
+         * <p>The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,10 @@ public class GetTempFileDownloadLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,11 +119,14 @@ public class GetTempFileDownloadLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
-         * <p>
+         * <p>Indicates whether the request is successful.</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -122,7 +134,10 @@ public class GetTempFileDownloadLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The download URL of the file.
+         * <p>The download URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/job-0007yg2i0m6705wdhgb6_0.csv?Expires=1649406469&OSSAccessKeyId=LTAIjGotF8wX****&Signature=26%2BgjegCrRmMDCpS5jzyG4ivKU8%3D">https://a-hbr-temp-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/job-0007yg2i0m6705wdhgb6_0.csv?Expires=1649406469&amp;OSSAccessKeyId=LTAIjGotF8wX****&amp;Signature=26%2BgjegCrRmMDCpS5jzyG4ivKU8%3D</a></p>
          */
         public Builder url(String url) {
             this.url = url;

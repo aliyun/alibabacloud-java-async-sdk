@@ -1,91 +1,91 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHanaRestoreRequest} extends {@link RequestModel}
  *
  * <p>CreateHanaRestoreRequest</p>
  */
 public class CreateHanaRestoreRequest extends Request {
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private Long backupId;
 
-    @Query
-    @NameInMap("BackupPrefix")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPrefix")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupPrefix;
 
-    @Query
-    @NameInMap("CheckAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckAccess")
     private Boolean checkAccess;
 
-    @Query
-    @NameInMap("ClearLog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClearLog")
     private Boolean clearLog;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("DatabaseName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseName;
 
-    @Query
-    @NameInMap("LogPosition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogPosition")
     private Long logPosition;
 
-    @Query
-    @NameInMap("MasterClientId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterClientId")
     private String masterClientId;
 
-    @Query
-    @NameInMap("Mode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mode;
 
-    @Query
-    @NameInMap("RecoveryPointInTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecoveryPointInTime")
     private Long recoveryPointInTime;
 
-    @Query
-    @NameInMap("SidAdmin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SidAdmin")
     private String sidAdmin;
 
-    @Query
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Query
-    @NameInMap("SourceClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceClusterId")
     private String sourceClusterId;
 
-    @Query
-    @NameInMap("SystemCopy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemCopy")
     private Boolean systemCopy;
 
-    @Query
-    @NameInMap("UseCatalog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseCatalog")
     private Boolean useCatalog;
 
-    @Query
-    @NameInMap("UseDelta")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseDelta")
     private Boolean useDelta;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
-    @Query
-    @NameInMap("VolumeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VolumeId")
     private Integer volumeId;
 
     private CreateHanaRestoreRequest(Builder builder) {
@@ -296,7 +296,10 @@ public class CreateHanaRestoreRequest extends Request {
         } 
 
         /**
-         * The ID of the backup.
+         * <p>The ID of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645628400235</p>
          */
         public Builder backupId(Long backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -305,7 +308,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The backup prefix.
+         * <p>The backup prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE_DATA_BACKUP_2022_05_02_15_39</p>
          */
         public Builder backupPrefix(String backupPrefix) {
             this.putQueryParameter("BackupPrefix", backupPrefix);
@@ -314,7 +320,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * Specifies whether to validate the differential backup and log backup. Valid values: true and false. If you set the value to true, HBR checks whether the required differential backup and log backup are available before the restore job starts. If the differential backup or log backup is unavailable, HBR does not start the restore job.
+         * <p>Specifies whether to validate the differential backup and log backup. Valid values: true and false. If you set the value to true, HBR checks whether the required differential backup and log backup are available before the restore job starts. If the differential backup or log backup is unavailable, HBR does not start the restore job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder checkAccess(Boolean checkAccess) {
             this.putQueryParameter("CheckAccess", checkAccess);
@@ -323,7 +332,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete all log entries from the log area after the log entries are restored. Valid values: true and false. If you set the value to false, all log entries are deleted from the log area after the log entries are restored.
+         * <p>Specifies whether to delete all log entries from the log area after the log entries are restored. Valid values: true and false. If you set the value to false, all log entries are deleted from the log area after the log entries are restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder clearLog(Boolean clearLog) {
             this.putQueryParameter("ClearLog", clearLog);
@@ -332,7 +344,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The ID of the SAP HANA instance that you want to restore.
+         * <p>The ID of the SAP HANA instance that you want to restore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-000fbrs5******ka9w</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -341,7 +356,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The name of the database that you want to restore.
+         * <p>The name of the database that you want to restore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TS2</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -350,7 +368,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The log position to which you want to restore the database. This parameter is valid only if you set the Mode parameter to **RECOVERY_TO_LOG_POSITION**.
+         * <p>The log position to which you want to restore the database. This parameter is valid only if you set the Mode parameter to <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder logPosition(Long logPosition) {
             this.putQueryParameter("LogPosition", logPosition);
@@ -359,7 +380,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The ID of the client where the primary node of the SAP HANA resides.
+         * <p>The ID of the client where the primary node of the SAP HANA resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-000ii8tzv**********</p>
          */
         public Builder masterClientId(String masterClientId) {
             this.putQueryParameter("MasterClientId", masterClientId);
@@ -368,13 +392,16 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The recovery mode. Valid values:
-         * <p>
+         * <p>The recovery mode. Valid values:</p>
+         * <ul>
+         * <li><strong>RECOVERY_TO_MOST_RECENT</strong>: restores the database to the recently available state to which the database has been backed up.</li>
+         * <li><strong>RECOVERY_TO_POINT_IN_TIME</strong>: restores the database to a specified point in time.</li>
+         * <li><strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>: restores the database to a specified backup.</li>
+         * <li><strong>RECOVERY_TO_LOG_POSITION</strong>: restores the database to a specified log position.</li>
+         * </ul>
          * 
-         * *   **RECOVERY_TO_MOST_RECENT**: restores the database to the recently available state to which the database has been backed up.
-         * *   **RECOVERY_TO_POINT_IN_TIME**: restores the database to a specified point in time.
-         * *   **RECOVERY_TO_SPECIFIC_BACKUP**: restores the database to a specified backup.
-         * *   **RECOVERY_TO_LOG_POSITION**: restores the database to a specified log position.
+         * <strong>example:</strong>
+         * <p>RECOVERY_TO_POINT_IN_TIME</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -383,7 +410,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The point in time to which you want to restore the database. This parameter is valid only if you set the Mode parameter to **RECOVERY_TO_POINT_IN_TIME**. HBR restores the database to a state closest to the specified point in time.
+         * <p>The point in time to which you want to restore the database. This parameter is valid only if you set the Mode parameter to <strong>RECOVERY_TO_POINT_IN_TIME</strong>. HBR restores the database to a state closest to the specified point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635315505</p>
          */
         public Builder recoveryPointInTime(Long recoveryPointInTime) {
             this.putQueryParameter("RecoveryPointInTime", recoveryPointInTime);
@@ -392,7 +422,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The SID admin account that is created by SAP HANA.
+         * <p>The SID admin account that is created by SAP HANA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB</p>
          */
         public Builder sidAdmin(String sidAdmin) {
             this.putQueryParameter("SidAdmin", sidAdmin);
@@ -401,7 +434,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The name of the source system. This parameter specifies the name of the source database that you want to restore. You must set the parameter in the `<Source database name>@SID` format.
+         * <p>The name of the source system. This parameter specifies the name of the source database that you want to restore. You must set the parameter in the <code>&lt;Source database name&gt;@SID</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HNP@HNP</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -410,7 +446,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The ID of the source SAP HANA instance.
+         * <p>The ID of the source SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-000ii8tzv******xm0t</p>
          */
         public Builder sourceClusterId(String sourceClusterId) {
             this.putQueryParameter("SourceClusterId", sourceClusterId);
@@ -419,7 +458,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * Specifies whether to restore the database to a different instance.
+         * <p>Specifies whether to restore the database to a different instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder systemCopy(Boolean systemCopy) {
             this.putQueryParameter("SystemCopy", systemCopy);
@@ -428,7 +470,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a catalog backup to restore the database. This parameter is valid only if you set the Mode parameter to **RECOVERY_TO_SPECIFIC_BACKUP**. If you do not use a catalog backup, you must specify the prefix of a backup file. Then, HBR finds the backup file based on the specified prefix and restores the backup file.
+         * <p>Specifies whether to use a catalog backup to restore the database. This parameter is valid only if you set the Mode parameter to <strong>RECOVERY_TO_SPECIFIC_BACKUP</strong>. If you do not use a catalog backup, you must specify the prefix of a backup file. Then, HBR finds the backup file based on the specified prefix and restores the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useCatalog(Boolean useCatalog) {
             this.putQueryParameter("UseCatalog", useCatalog);
@@ -437,7 +482,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a differential backup or an incremental backup to restore the database. Valid values: true and false. If you want to use a differential backup or an incremental backup to restore the database, set the value to true. If you set the value to false, HBR uses a log backup to restore the database.
+         * <p>Specifies whether to use a differential backup or an incremental backup to restore the database. Valid values: true and false. If you want to use a differential backup or an incremental backup to restore the database, set the value to true. If you set the value to false, HBR uses a log backup to restore the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useDelta(Boolean useDelta) {
             this.putQueryParameter("UseDelta", useDelta);
@@ -446,7 +494,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The ID of the vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-000************yqr</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);
@@ -455,7 +506,10 @@ public class CreateHanaRestoreRequest extends Request {
         }
 
         /**
-         * The ID of the volume that you want to restore. This parameter is valid only if you set the Mode parameter to **RECOVERY_TO_LOG_POSITION**.
+         * <p>The ID of the volume that you want to restore. This parameter is valid only if you set the Mode parameter to <strong>RECOVERY_TO_LOG_POSITION</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder volumeId(Integer volumeId) {
             this.putQueryParameter("VolumeId", volumeId);

@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePoliciesV2Request} extends {@link RequestModel}
  *
  * <p>DescribePoliciesV2Request</p>
  */
 public class DescribePoliciesV2Request extends Request {
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
     private String policyId;
 
     private DescribePoliciesV2Request(Builder builder) {
@@ -82,10 +82,11 @@ public class DescribePoliciesV2Request extends Request {
         } 
 
         /**
-         * The number of results for each query.
-         * <p>
+         * <p>The number of results for each query.</p>
+         * <p>Valid values: 10 to 100. Default value: 10.</p>
          * 
-         * Valid values: 10 to 100. Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -94,7 +95,10 @@ public class DescribePoliciesV2Request extends Request {
         }
 
         /**
-         * The token that is used to obtain the next page of backup policies.
+         * <p>The token that is used to obtain the next page of backup policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -103,7 +107,10 @@ public class DescribePoliciesV2Request extends Request {
         }
 
         /**
-         * The ID of the backup policy.
+         * <p>The ID of the backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000************2l6</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);

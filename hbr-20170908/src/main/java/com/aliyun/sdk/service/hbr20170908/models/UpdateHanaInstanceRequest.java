@@ -1,62 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHanaInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateHanaInstanceRequest</p>
  */
 public class UpdateHanaInstanceRequest extends Request {
-    @Query
-    @NameInMap("AlertSetting")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertSetting")
     private String alertSetting;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("HanaName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HanaName")
     private String hanaName;
 
-    @Query
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @Query
-    @NameInMap("InstanceNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer instanceNumber;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("UseSsl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseSsl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean useSsl;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
-    @Query
-    @NameInMap("ValidateCertificate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidateCertificate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean validateCertificate;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private UpdateHanaInstanceRequest(Builder builder) {
@@ -197,7 +197,10 @@ public class UpdateHanaInstanceRequest extends Request {
         } 
 
         /**
-         * The alert settings. Valid value: INHERITED, which indicates that the backup client sends alert notifications in the same way as the backup vault.
+         * <p>The alert settings. Valid value: INHERITED, which indicates that the Cloud Backup client sends alert notifications by using the same method configured for the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INHERITED</p>
          */
         public Builder alertSetting(String alertSetting) {
             this.putQueryParameter("AlertSetting", alertSetting);
@@ -206,7 +209,10 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the SAP HANA instance.
+         * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-000axjt******c6j8</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -215,7 +221,10 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * The name of the SAP HANA instance.
+         * <p>The name of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAP-HANA-DEV</p>
          */
         public Builder hanaName(String hanaName) {
             this.putQueryParameter("HanaName", hanaName);
@@ -224,7 +233,10 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * The private or internal IP address of the host where the primary node of the SAP HANA instance resides.
+         * <p>The private or internal IP address of the host where the primary node of the SAP HANA instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -233,7 +245,10 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * The instance number of the SAP HANA system.
+         * <p>The instance number of the SAP HANA system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00</p>
          */
         public Builder instanceNumber(Integer instanceNumber) {
             this.putQueryParameter("InstanceNumber", instanceNumber);
@@ -242,7 +257,10 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * The password that is used to connect with the SAP HANA database.
+         * <p>The password that is used to connect with the SAP HANA database.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -251,7 +269,10 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzvx7d3c4kpny</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -260,11 +281,14 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to connect with the SAP HANA database over Secure Sockets Layer (SSL). Valid values:
-         * <p>
+         * <p>Specifies whether to connect with the SAP HANA database over Secure Sockets Layer (SSL). Valid values:</p>
+         * <ul>
+         * <li>true: The SAP HANA database is connected over SSL.</li>
+         * <li>false: The SAP HANA database is not connected over SSL.</li>
+         * </ul>
          * 
-         * *   true: The SAP HANA database is connected over SSL.
-         * *   false: The SAP HANA database is not connected over SSL.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useSsl(Boolean useSsl) {
             this.putQueryParameter("UseSsl", useSsl);
@@ -273,7 +297,10 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * The username of the SYSTEMDB database.
+         * <p>The username of the SYSTEMDB database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -282,11 +309,14 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to verify the SSL certificate of the SAP HANA database. Valid values:
-         * <p>
+         * <p>Specifies whether to verify the SSL certificate of the SAP HANA database. Valid values:</p>
+         * <ul>
+         * <li>true: The SSL certificate of the SAP HANA database is verified.</li>
+         * <li>false: The SSL certificate of the SAP HANA database is not verified.</li>
+         * </ul>
          * 
-         * *   true: The SSL certificate of the SAP HANA instance is verified.
-         * *   false: The SSL certificate of the SAP HANA instance is not verified.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder validateCertificate(Boolean validateCertificate) {
             this.putQueryParameter("ValidateCertificate", validateCertificate);
@@ -295,7 +325,10 @@ public class UpdateHanaInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0003v4ah******9xp</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePolicyBindingsRequest} extends {@link RequestModel}
  *
  * <p>CreatePolicyBindingsRequest</p>
  */
 public class CreatePolicyBindingsRequest extends Request {
-    @Query
-    @NameInMap("PolicyBindingList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyBindingList")
     private java.util.List < PolicyBindingList> policyBindingList;
 
-    @Body
-    @NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
     private String policyId;
 
     private CreatePolicyBindingsRequest(Builder builder) {
@@ -68,7 +68,7 @@ public class CreatePolicyBindingsRequest extends Request {
         } 
 
         /**
-         * The data sources that you want to bind to the backup policy.
+         * <p>The data sources that you want to bind to the backup policy.</p>
          */
         public Builder policyBindingList(java.util.List < PolicyBindingList> policyBindingList) {
             String policyBindingListShrink = shrink(policyBindingList, "PolicyBindingList", "json");
@@ -78,7 +78,10 @@ public class CreatePolicyBindingsRequest extends Request {
         }
 
         /**
-         * The ID of the backup policy.
+         * <p>The ID of the backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000************8ep</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -93,11 +96,17 @@ public class CreatePolicyBindingsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePolicyBindingsRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyBindingsRequest</p>
+     */
     public static class CommonFileSystemDetail extends TeaModel {
-        @NameInMap("FetchSliceSize")
+        @com.aliyun.core.annotation.NameInMap("FetchSliceSize")
         private Long fetchSliceSize;
 
-        @NameInMap("FullOnIncrementFail")
+        @com.aliyun.core.annotation.NameInMap("FullOnIncrementFail")
         private Boolean fullOnIncrementFail;
 
         private CommonFileSystemDetail(Builder builder) {
@@ -154,14 +163,20 @@ public class CreatePolicyBindingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePolicyBindingsRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyBindingsRequest</p>
+     */
     public static class CommonNasDetail extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("FetchSliceSize")
+        @com.aliyun.core.annotation.NameInMap("FetchSliceSize")
         private Long fetchSliceSize;
 
-        @NameInMap("FullOnIncrementFail")
+        @com.aliyun.core.annotation.NameInMap("FullOnIncrementFail")
         private Boolean fullOnIncrementFail;
 
         private CommonNasDetail(Builder builder) {
@@ -205,7 +220,10 @@ public class CreatePolicyBindingsRequest extends Request {
             private Boolean fullOnIncrementFail; 
 
             /**
-             * ClusterId.
+             * <p>The ID of the backup client group. When you perform on-premises NAS backup, Cloud Backup selects clients from the specified backup client group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl-000**************ggu</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -213,7 +231,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * FetchSliceSize.
+             * <p>The size of backup shards (the number of files).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder fetchSliceSize(Long fetchSliceSize) {
                 this.fetchSliceSize = fetchSliceSize;
@@ -221,7 +242,14 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * FullOnIncrementFail.
+             * <p>Specifies whether the system performs full backup if incremental backup fails. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The system performs full backup if incremental backup fails.</li>
+             * <li><strong>false</strong>: The system does not perform full backup if incremental backup fails.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullOnIncrementFail(Boolean fullOnIncrementFail) {
                 this.fullOnIncrementFail = fullOnIncrementFail;
@@ -235,11 +263,17 @@ public class CreatePolicyBindingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePolicyBindingsRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyBindingsRequest</p>
+     */
     public static class FileDetail extends TeaModel {
-        @NameInMap("AdvPolicy")
+        @com.aliyun.core.annotation.NameInMap("AdvPolicy")
         private Boolean advPolicy;
 
-        @NameInMap("UseVSS")
+        @com.aliyun.core.annotation.NameInMap("UseVSS")
         private Boolean useVSS;
 
         private FileDetail(Builder builder) {
@@ -274,7 +308,14 @@ public class CreatePolicyBindingsRequest extends Request {
             private Boolean useVSS; 
 
             /**
-             * AdvPolicy.
+             * <p>Specifies whether to use an advanced policy. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder advPolicy(Boolean advPolicy) {
                 this.advPolicy = advPolicy;
@@ -282,7 +323,14 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * UseVSS.
+             * <p>Specifies whether to enable the Volume Shadow Copy Service (VSS) feature. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useVSS(Boolean useVSS) {
                 this.useVSS = useVSS;
@@ -296,11 +344,17 @@ public class CreatePolicyBindingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePolicyBindingsRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyBindingsRequest</p>
+     */
     public static class OssDetail extends TeaModel {
-        @NameInMap("InventoryCleanupPolicy")
+        @com.aliyun.core.annotation.NameInMap("InventoryCleanupPolicy")
         private String inventoryCleanupPolicy;
 
-        @NameInMap("InventoryId")
+        @com.aliyun.core.annotation.NameInMap("InventoryId")
         private String inventoryId;
 
         private OssDetail(Builder builder) {
@@ -335,11 +389,15 @@ public class CreatePolicyBindingsRequest extends Request {
             private String inventoryId; 
 
             /**
-             * Whether delete inventory file after backup.
-             * <p>
-             * - **NO_CLEANUP**: Do not delete.
-             * - **DELETE_CURRENT**: Delete current.
-             * - **DELETE_CURRENT_AND_PREVIOUS**: Delete all.
+             * <p>Specifies whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</p>
+             * <ul>
+             * <li><strong>NO_CLEANUP</strong>: Inventory lists are not deleted.</li>
+             * <li><strong>DELETE_CURRENT</strong>: The current inventory list is deleted.</li>
+             * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: All inventory lists are deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NO_CLEANUP</p>
              */
             public Builder inventoryCleanupPolicy(String inventoryCleanupPolicy) {
                 this.inventoryCleanupPolicy = inventoryCleanupPolicy;
@@ -347,10 +405,14 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * OSS inventory name.
-             * <p>
-             * - If you want to back up more than 100 million OSS objects, we recommend that you use inventories to accelerate incremental backup. Storage fees for inventory lists are included into your OSS bills.
-             * - OSS inventory file generation takes time. The backup may fail before the OSS inventory file is generated. You can wait for the next cycle to execute.
+             * <p>The name of the OSS inventory. If this parameter is not empty, the OSS inventory is used for performance optimization.</p>
+             * <ul>
+             * <li>If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included into your OSS bills.</li>
+             * <li>A certain amount of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-inventory-default</p>
              */
             public Builder inventoryId(String inventoryId) {
                 this.inventoryId = inventoryId;
@@ -364,35 +426,41 @@ public class CreatePolicyBindingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePolicyBindingsRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyBindingsRequest</p>
+     */
     public static class UdmDetail extends TeaModel {
-        @NameInMap("AppConsistent")
+        @com.aliyun.core.annotation.NameInMap("AppConsistent")
         private Boolean appConsistent;
 
-        @NameInMap("DiskIdList")
+        @com.aliyun.core.annotation.NameInMap("DiskIdList")
         private java.util.List < String > diskIdList;
 
-        @NameInMap("EnableFsFreeze")
+        @com.aliyun.core.annotation.NameInMap("EnableFsFreeze")
         private Boolean enableFsFreeze;
 
-        @NameInMap("EnableWriters")
+        @com.aliyun.core.annotation.NameInMap("EnableWriters")
         private Boolean enableWriters;
 
-        @NameInMap("ExcludeDiskIdList")
+        @com.aliyun.core.annotation.NameInMap("ExcludeDiskIdList")
         private java.util.List < String > excludeDiskIdList;
 
-        @NameInMap("PostScriptPath")
+        @com.aliyun.core.annotation.NameInMap("PostScriptPath")
         private String postScriptPath;
 
-        @NameInMap("PreScriptPath")
+        @com.aliyun.core.annotation.NameInMap("PreScriptPath")
         private String preScriptPath;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("SnapshotGroup")
+        @com.aliyun.core.annotation.NameInMap("SnapshotGroup")
         private Boolean snapshotGroup;
 
-        @NameInMap("TimeoutInSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutInSeconds")
         private Long timeoutInSeconds;
 
         private UdmDetail(Builder builder) {
@@ -499,7 +567,10 @@ public class CreatePolicyBindingsRequest extends Request {
             private Long timeoutInSeconds; 
 
             /**
-             * Specifies whether to enable application consistency. You can enable application consistency only if all disks are ESSDs.
+             * <p>Specifies whether to enable application consistency. You can enable application consistency only if all disks are ESSDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder appConsistent(Boolean appConsistent) {
                 this.appConsistent = appConsistent;
@@ -507,7 +578,7 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.
+             * <p>The IDs of the disks that need to be protected. If all disks need to be protected, leave this parameter empty.</p>
              */
             public Builder diskIdList(java.util.List < String > diskIdList) {
                 this.diskIdList = diskIdList;
@@ -515,7 +586,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableFsFreeze(Boolean enableFsFreeze) {
                 this.enableFsFreeze = enableFsFreeze;
@@ -523,13 +597,15 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies whether to create application-consistent snapshots. Valid values:
-             * <p>
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies whether to create application-consistent snapshots. Valid values:</p>
+             * <ul>
+             * <li>true: creates application-consistent snapshots.</li>
+             * <li>false: creates file system-consistent snapshots.</li>
+             * </ul>
+             * <p>Default value: true.</p>
              * 
-             * *   true: creates application-consistent snapshots.
-             * *   false: creates file system-consistent snapshots.
-             * 
-             * Default value: true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableWriters(Boolean enableWriters) {
                 this.enableWriters = enableWriters;
@@ -537,7 +613,7 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The IDs of the disks that do not need to be protected. If the DiskIdList parameter is not empty, this parameter is ignored.
+             * <p>The IDs of the disks that do not need to be protected. If the DiskIdList parameter is not empty, this parameter is ignored.</p>
              */
             public Builder excludeDiskIdList(java.util.List < String > excludeDiskIdList) {
                 this.excludeDiskIdList = excludeDiskIdList;
@@ -545,7 +621,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the path of the post-thaw scripts that are executed after application-consistent snapshots are created.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/postscript.sh</p>
              */
             public Builder postScriptPath(String postScriptPath) {
                 this.postScriptPath = postScriptPath;
@@ -553,7 +632,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/prescript.sh</p>
              */
             public Builder preScriptPath(String preScriptPath) {
                 this.preScriptPath = preScriptPath;
@@ -561,7 +643,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the name of the RAM role that is required to create application-consistent snapshots.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the name of the RAM role that is required to create application-consistent snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunECSInstanceForHbrRole</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -569,7 +654,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).
+             * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder snapshotGroup(Boolean snapshotGroup) {
                 this.snapshotGroup = snapshotGroup;
@@ -577,7 +665,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timeoutInSeconds(Long timeoutInSeconds) {
                 this.timeoutInSeconds = timeoutInSeconds;
@@ -591,20 +682,26 @@ public class CreatePolicyBindingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePolicyBindingsRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyBindingsRequest</p>
+     */
     public static class AdvancedOptions extends TeaModel {
-        @NameInMap("CommonFileSystemDetail")
+        @com.aliyun.core.annotation.NameInMap("CommonFileSystemDetail")
         private CommonFileSystemDetail commonFileSystemDetail;
 
-        @NameInMap("CommonNasDetail")
+        @com.aliyun.core.annotation.NameInMap("CommonNasDetail")
         private CommonNasDetail commonNasDetail;
 
-        @NameInMap("FileDetail")
+        @com.aliyun.core.annotation.NameInMap("FileDetail")
         private FileDetail fileDetail;
 
-        @NameInMap("OssDetail")
+        @com.aliyun.core.annotation.NameInMap("OssDetail")
         private OssDetail ossDetail;
 
-        @NameInMap("UdmDetail")
+        @com.aliyun.core.annotation.NameInMap("UdmDetail")
         private UdmDetail udmDetail;
 
         private AdvancedOptions(Builder builder) {
@@ -674,7 +771,7 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * CommonNasDetail.
+             * <p>The advanced options for on-premises NAS backup.</p>
              */
             public Builder commonNasDetail(CommonNasDetail commonNasDetail) {
                 this.commonNasDetail = commonNasDetail;
@@ -682,7 +779,7 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * FileDetail.
+             * <p>The advanced options for file backup.</p>
              */
             public Builder fileDetail(FileDetail fileDetail) {
                 this.fileDetail = fileDetail;
@@ -690,7 +787,7 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The advanced options for OSS backup.
+             * <p>The advanced options for OSS backup.</p>
              */
             public Builder ossDetail(OssDetail ossDetail) {
                 this.ossDetail = ossDetail;
@@ -698,7 +795,7 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The details of ECS instance backup.
+             * <p>The advanced options for ECS instance backup.</p>
              */
             public Builder udmDetail(UdmDetail udmDetail) {
                 this.udmDetail = udmDetail;
@@ -712,30 +809,48 @@ public class CreatePolicyBindingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreatePolicyBindingsRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePolicyBindingsRequest</p>
+     */
     public static class PolicyBindingList extends TeaModel {
-        @NameInMap("AdvancedOptions")
+        @com.aliyun.core.annotation.NameInMap("AdvancedOptions")
         private AdvancedOptions advancedOptions;
 
-        @NameInMap("CrossAccountRoleName")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
         private String crossAccountRoleName;
 
-        @NameInMap("CrossAccountType")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountType")
         private String crossAccountType;
 
-        @NameInMap("CrossAccountUserId")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
         private Long crossAccountUserId;
 
-        @NameInMap("DataSourceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private String dataSourceId;
 
-        @NameInMap("PolicyBindingDescription")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
+        private String disabled;
+
+        @com.aliyun.core.annotation.NameInMap("Exclude")
+        private String exclude;
+
+        @com.aliyun.core.annotation.NameInMap("Include")
+        private String include;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyBindingDescription")
         private String policyBindingDescription;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
+
+        @com.aliyun.core.annotation.NameInMap("SpeedLimit")
+        private String speedLimit;
 
         private PolicyBindingList(Builder builder) {
             this.advancedOptions = builder.advancedOptions;
@@ -743,9 +858,13 @@ public class CreatePolicyBindingsRequest extends Request {
             this.crossAccountType = builder.crossAccountType;
             this.crossAccountUserId = builder.crossAccountUserId;
             this.dataSourceId = builder.dataSourceId;
+            this.disabled = builder.disabled;
+            this.exclude = builder.exclude;
+            this.include = builder.include;
             this.policyBindingDescription = builder.policyBindingDescription;
             this.source = builder.source;
             this.sourceType = builder.sourceType;
+            this.speedLimit = builder.speedLimit;
         }
 
         public static Builder builder() {
@@ -792,6 +911,27 @@ public class CreatePolicyBindingsRequest extends Request {
         }
 
         /**
+         * @return disabled
+         */
+        public String getDisabled() {
+            return this.disabled;
+        }
+
+        /**
+         * @return exclude
+         */
+        public String getExclude() {
+            return this.exclude;
+        }
+
+        /**
+         * @return include
+         */
+        public String getInclude() {
+            return this.include;
+        }
+
+        /**
          * @return policyBindingDescription
          */
         public String getPolicyBindingDescription() {
@@ -812,18 +952,29 @@ public class CreatePolicyBindingsRequest extends Request {
             return this.sourceType;
         }
 
+        /**
+         * @return speedLimit
+         */
+        public String getSpeedLimit() {
+            return this.speedLimit;
+        }
+
         public static final class Builder {
             private AdvancedOptions advancedOptions; 
             private String crossAccountRoleName; 
             private String crossAccountType; 
             private Long crossAccountUserId; 
             private String dataSourceId; 
+            private String disabled; 
+            private String exclude; 
+            private String include; 
             private String policyBindingDescription; 
             private String source; 
             private String sourceType; 
+            private String speedLimit; 
 
             /**
-             * Advanced options.
+             * <p>The advanced options.</p>
              */
             public Builder advancedOptions(AdvancedOptions advancedOptions) {
                 this.advancedOptions = advancedOptions;
@@ -831,7 +982,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+             * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hbrcrossrole</p>
              */
             public Builder crossAccountRoleName(String crossAccountRoleName) {
                 this.crossAccountRoleName = crossAccountRoleName;
@@ -839,11 +993,14 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * Specifies whether data is backed up and restored within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
-             * <p>
+             * <p>Specifies whether to back up and restore data within the same Alibaba Cloud account or across Alibaba Cloud accounts. Default value: SELF_ACCOUNT. Valid values:</p>
+             * <ul>
+             * <li><strong>SELF_ACCOUNT</strong>: Data is backed up within the same Alibaba Cloud account.</li>
+             * <li><strong>CROSS_ACCOUNT</strong>: Data is backed up across Alibaba Cloud accounts.</li>
+             * </ul>
              * 
-             * *   SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.
-             * *   CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.
+             * <strong>example:</strong>
+             * <p>SELF_ACCOUNT</p>
              */
             public Builder crossAccountType(String crossAccountType) {
                 this.crossAccountType = crossAccountType;
@@ -851,7 +1008,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The source Alibaba Cloud account ID when backup across Alibaba Cloud accounts.
+             * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>144**********732</p>
              */
             public Builder crossAccountUserId(Long crossAccountUserId) {
                 this.crossAccountUserId = crossAccountUserId;
@@ -859,7 +1019,18 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The ID of the data source.
+             * <p>The ID of the data source. The meaning of this parameter depends on the <strong>SourceType</strong> parameter.</p>
+             * <ul>
+             * <li><strong>UDM_ECS</strong>: the ID of the Elastic Compute Service (ECS) instance</li>
+             * <li><strong>OSS</strong>: the name of the Object Storage Service (OSS) bucket</li>
+             * <li><strong>NAS</strong>: the ID of the Apsara File Storage NAS (NAS) file system</li>
+             * <li><strong>COMMON_NAS</strong>: the ID of the on-premises NAS file system</li>
+             * <li><strong>ECS_FILE</strong>: the ID of the ECS instance</li>
+             * <li><strong>File</strong>: the ID of the Cloud Backup client</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1************dl8</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -867,7 +1038,47 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The description of the association.
+             * <p>策略对该数据源是否暂停生效。</p>
+             * <ul>
+             * <li>true：暂停</li>
+             * <li>false：未暂停</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder disabled(String disabled) {
+                this.disabled = disabled;
+                return this;
+            }
+
+            /**
+             * <p>仅当<strong>SourceType</strong>取值为<strong>ECS_FILE</strong>或<strong>File</strong>时，需要配置该参数。表示不需要进行备份的文件类型，该类型的所有文件都不备份。最多支持255个字符。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;<em>.doc&quot;,&quot;</em>.xltm&quot;]</p>
+             */
+            public Builder exclude(String exclude) {
+                this.exclude = exclude;
+                return this;
+            }
+
+            /**
+             * <p>仅当<strong>SourceType</strong>取值为<strong>ECS_FILE</strong>或<strong>File</strong>时，需要配置该参数。表示要进行备份的文件类型，这些类型的所有文件都备份。最多支持255个字符。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;<em>.doc&quot;,&quot;</em>.xltm&quot;]</p>
+             */
+            public Builder include(String include) {
+                this.include = include;
+                return this;
+            }
+
+            /**
+             * <p>The description of the association.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bind data sources to a backup policy</p>
              */
             public Builder policyBindingDescription(String policyBindingDescription) {
                 this.policyBindingDescription = policyBindingDescription;
@@ -875,7 +1086,10 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The prefix of the path to the folder that you want to back up. By default, the entire OSS bucket is backed up.
+             * <p>The prefix of the path to the folder that you want to back up. By default, the entire OSS bucket is backed up. This parameter is required only if you set the SourceType parameter to <strong>OSS</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup/</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -883,13 +1097,37 @@ public class CreatePolicyBindingsRequest extends Request {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li><strong>UDM_ECS</strong>: ECS instance</li>
+             * <li><strong>OSS</strong>: OSS bucket</li>
+             * <li><strong>NAS</strong>: Apsara File Storage NAS file system</li>
+             * <li><strong>COMMON_NAS</strong>: on-premises NAS file system</li>
+             * <li><strong>ECS_FILE</strong>: ECS files</li>
+             * <li><strong>File</strong>: on-premises files</li>
+             * </ul>
              * 
-             * *   **UDM_ECS**: ECS instance backup
+             * <strong>example:</strong>
+             * <p>UDM_ECS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * <p>仅当<strong>SourceType</strong>取值为<strong>ECS_FILE</strong>或<strong>File</strong>时，需要配置该参数。表示备份流量控制。格式为<code>{start}{end}{bandwidth}</code>。多个流量控制配置使用分隔，并且配置时间不允许有重叠。</p>
+             * <ul>
+             * <li><strong>start</strong>：起始小时。</li>
+             * <li><strong>end</strong>：结束小时。</li>
+             * <li><strong>bandwidth</strong>：限制速率，单位KB/s。</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0:24:1024</p>
+             */
+            public Builder speedLimit(String speedLimit) {
+                this.speedLimit = speedLimit;
                 return this;
             }
 

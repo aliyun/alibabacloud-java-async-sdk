@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachNasFileSystemResponseBody} extends {@link TeaModel}
  *
  * <p>DetachNasFileSystemResponseBody</p>
  */
 public class DetachNasFileSystemResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private DetachNasFileSystemResponseBody(Builder builder) {
@@ -86,7 +86,10 @@ public class DetachNasFileSystemResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +97,10 @@ public class DetachNasFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.
+         * <p>The message that is returned. If the request is successful, a value of successful is returned. If the request fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +108,10 @@ public class DetachNasFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,11 +119,14 @@ public class DetachNasFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
-         * <p>
+         * <p>Indicates whether the request is successful.</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -122,7 +134,10 @@ public class DetachNasFileSystemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of the asynchronous job.
+         * <p>The ID of the asynchronous job. You can call the DescribeTask operation to query the execution result of the asynchronous job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-*********************</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

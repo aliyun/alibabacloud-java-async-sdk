@@ -1,139 +1,139 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBackupPlanRequest} extends {@link RequestModel}
  *
  * <p>CreateBackupPlanRequest</p>
  */
 public class CreateBackupPlanRequest extends Request {
-    @Query
-    @NameInMap("BackupType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String backupType;
 
-    @Query
-    @NameInMap("Bucket")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bucket")
     private String bucket;
 
-    @Query
-    @NameInMap("ChangeListPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChangeListPath")
     private String changeListPath;
 
-    @Query
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @Query
-    @NameInMap("CrossAccountRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
     private String crossAccountRoleName;
 
-    @Query
-    @NameInMap("CrossAccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountType")
     private String crossAccountType;
 
-    @Query
-    @NameInMap("CrossAccountUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
-    @Query
-    @NameInMap("DestDataSourceDetail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestDataSourceDetail")
     private java.util.Map < String, ? > destDataSourceDetail;
 
-    @Query
-    @NameInMap("DestDataSourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestDataSourceId")
     private String destDataSourceId;
 
-    @Query
-    @NameInMap("DestSourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestSourceType")
     private String destSourceType;
 
-    @Query
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, ? > detail;
 
-    @Query
-    @NameInMap("Disabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Disabled")
     private Boolean disabled;
 
-    @Body
-    @NameInMap("Exclude")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Exclude")
     private String exclude;
 
-    @Query
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @Body
-    @NameInMap("Include")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Include")
     private String include;
 
-    @Body
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("KeepLatestSnapshots")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepLatestSnapshots")
     private Long keepLatestSnapshots;
 
-    @Body
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("OtsDetail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OtsDetail")
     private OtsDetail otsDetail;
 
-    @Body
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Path")
     private java.util.List < String > path;
 
-    @Query
-    @NameInMap("PlanName")
-    @Validation(required = true, maxLength = 64, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlanName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String planName;
 
-    @Query
-    @NameInMap("Prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Long retention;
 
-    @Body
-    @NameInMap("Rule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rule")
     private java.util.List < Rule> rule;
 
-    @Query
-    @NameInMap("Schedule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Schedule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schedule;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
-    @Body
-    @NameInMap("SpeedLimit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpeedLimit")
     private String speedLimit;
 
-    @Query
-    @NameInMap("UdmRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UdmRegionId")
     private String udmRegionId;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private CreateBackupPlanRequest(Builder builder) {
@@ -464,7 +464,10 @@ public class CreateBackupPlanRequest extends Request {
         } 
 
         /**
-         * The backup type. Valid value: **COMPLETE**, which indicates full backup.
+         * <p>The backup type. Valid value: <strong>COMPLETE</strong>, which indicates full backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         public Builder backupType(String backupType) {
             this.putQueryParameter("BackupType", backupType);
@@ -473,7 +476,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **OSS**. This parameter specifies the name of the OSS bucket.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>OSS</strong>. This parameter specifies the name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbr-backup-oss</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -482,7 +488,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The configurations of the incremental file synchronization. This parameter is required for data synchronization only.
+         * <p>The configurations of the incremental file synchronization. This parameter is required for data synchronization only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dataSourceId&quot;: &quot;ds-123456789&quot;, &quot;path&quot;: &quot;/changelist&quot;}</p>
          */
         public Builder changeListPath(String changeListPath) {
             this.putQueryParameter("ChangeListPath", changeListPath);
@@ -491,7 +500,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **NAS**. This parameter specifies the time to create the file system. The value must be a UNIX timestamp. Unit: seconds.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>NAS</strong>. This parameter specifies the time to create the file system. The value must be a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607436917</p>
          */
         public Builder createTime(Long createTime) {
             this.putQueryParameter("CreateTime", createTime);
@@ -500,7 +512,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.
+         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BackupRole</p>
          */
         public Builder crossAccountRoleName(String crossAccountRoleName) {
             this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
@@ -509,11 +524,14 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * Specifies whether data is backed up and restored within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
-         * <p>
+         * <p>Specifies whether data is backed up and restored within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.</li>
+         * </ul>
          * 
-         * *   SELF_ACCOUNT: Data is backed up and restored within the same Alibaba Cloud account.
-         * *   CROSS_ACCOUNT: Data is backed up and restored across Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -522,7 +540,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.
+         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up and restore data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15897534xxxx4625</p>
          */
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
@@ -559,13 +580,16 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The details about ECS instance backup. The value is a JSON string.
-         * <p>
+         * <p>The details about ECS instance backup. The value is a JSON string.</p>
+         * <ul>
+         * <li>snapshotGroup: specifies whether to use a snapshot-consistent group. This parameter is valid only if all disks of the ECS instance are enhanced SSDs (ESSDs).</li>
+         * <li>appConsistent: specifies whether to enable application consistency. If you set this parameter to true, you must also specify the preScriptPath and postScriptPath parameters.</li>
+         * <li>preScriptPath: the path to the prescript file.</li>
+         * <li>postScriptPath: the path to the postscript file.</li>
+         * </ul>
          * 
-         * *   snapshotGroup: specifies whether to use a snapshot-consistent group. This parameter is valid only if all disks of the ECS instance are enhanced SSDs (ESSDs).
-         * *   appConsistent: specifies whether to enable application consistency. If you set this parameter to true, you must also specify the preScriptPath and postScriptPath parameters.
-         * *   preScriptPath: the path to the prescript file.
-         * *   postScriptPath: the path to the postscript file.
+         * <strong>example:</strong>
+         * <p>{&quot;EnableFsFreeze&quot;:true,&quot;appConsistent&quot;:false,&quot;postScriptPath&quot;:&quot;&quot;,&quot;preScriptPath&quot;:&quot;&quot;,&quot;snapshotGroup&quot;:true,&quot;timeoutInSeconds&quot;:60}</p>
          */
         public Builder detail(java.util.Map < String, ? > detail) {
             String detailShrink = shrink(detail, "Detail", "json");
@@ -584,7 +608,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies the paths to the files that are excluded from the backup job. The value can be up to 255 characters in length.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the paths to the files that are excluded from the backup job. The value can be up to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/var&quot;, &quot;/proc&quot;]</p>
          */
         public Builder exclude(String exclude) {
             this.putBodyParameter("Exclude", exclude);
@@ -593,7 +620,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **NAS**. This parameter specifies the ID of the NAS file system.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>NAS</strong>. This parameter specifies the ID of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>005494</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -602,7 +632,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies the paths to the files that you want to back up. The value can be up to 255 characters in length.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the paths to the files that you want to back up. The value can be up to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/home/alice/<em>.pdf&quot;, &quot;/home/bob/</em>.txt&quot;]</p>
          */
         public Builder include(String include) {
             this.putBodyParameter("Include", include);
@@ -611,7 +644,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies the ID of the ECS instance.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-m5e*****6q</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -620,7 +656,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The name of the Tablestore instance.
+         * <p>The name of the Tablestore instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instancename</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -629,11 +668,14 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the "Keep at least one backup version" feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the &quot;Keep at least one backup version&quot; feature. Valid values:</p>
+         * <ul>
+         * <li>0: The feature is disabled.</li>
+         * <li>1: The feature is enabled.</li>
+         * </ul>
          * 
-         * *   0: The feature is disabled.
-         * *   1: The feature is enabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder keepLatestSnapshots(Long keepLatestSnapshots) {
             this.putQueryParameter("KeepLatestSnapshots", keepLatestSnapshots);
@@ -642,12 +684,15 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies whether to use Windows Volume Shadow Copy Service (VSS) to define a backup path.
-         * <p>
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies whether to use Windows Volume Shadow Copy Service (VSS) to define a backup path.</p>
+         * <ul>
+         * <li>This parameter is available only for Windows ECS instances.</li>
+         * <li>If data changes occur in the backup source, the source data must be the same as the data to be backed up before the system sets this parameter to <code>[&quot;UseVSS&quot;:true]</code>.</li>
+         * <li>If you use VSS, you cannot back up data from multiple directories.</li>
+         * </ul>
          * 
-         * *   This parameter is available only for Windows ECS instances.
-         * *   If data changes occur in the backup source, the source data must be the same as the data to be backed up before the system sets this parameter to `["UseVSS":true]`.
-         * *   If you use VSS, you cannot back up data from multiple directories.
+         * <strong>example:</strong>
+         * <p>{&quot;UseVSS&quot;:false}</p>
          */
         public Builder options(String options) {
             this.putBodyParameter("Options", options);
@@ -656,7 +701,7 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The details about the Tablestore instance.
+         * <p>The details about the Tablestore instance.</p>
          */
         public Builder otsDetail(OtsDetail otsDetail) {
             String otsDetailShrink = shrink(otsDetail, "OtsDetail", "json");
@@ -666,7 +711,7 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The backup paths.
+         * <p>The backup paths.</p>
          */
         public Builder path(java.util.List < String > path) {
             this.putBodyParameter("Path", path);
@@ -675,7 +720,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The name of the backup schedule. The name must be 1 to 64 characters in length. The name of a backup schedule for each type of data source must be unique within a backup vault.
+         * <p>The name of the backup schedule. The name must be 1 to 64 characters in length. The name of a backup schedule for each type of data source must be unique within a backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planname</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("PlanName", planName);
@@ -684,7 +732,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **OSS**. This parameter specifies the prefix of objects that you want to back up. After a prefix is specified, only objects whose names start with the prefix are backed up.
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>OSS</strong>. This parameter specifies the prefix of objects that you want to back up. After a prefix is specified, only objects whose names start with the prefix are backed up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-prefix</p>
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("Prefix", prefix);
@@ -693,7 +744,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The retention period of backup data. Minimum value: 1. Unit: days.
+         * <p>The retention period of backup data. Minimum value: 1. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder retention(Long retention) {
             this.putQueryParameter("Retention", retention);
@@ -702,7 +756,7 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The rules of the backup schedule.
+         * <p>The rules of the backup schedule.</p>
          */
         public Builder rule(java.util.List < Rule> rule) {
             this.putBodyParameter("Rule", rule);
@@ -711,11 +765,14 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The backup policy. Format: `I|{startTime}|{interval}`. The system runs the first backup job at a point in time that is specified in the `{startTime}` parameter and the subsequent backup jobs at an interval that is specified in the `{interval}` parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, `I|1631685600|P1D` specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
-         * <p>
+         * <p>The backup policy. Format: <code>I|{startTime}|{interval}</code>. The system runs the first backup job at a point in time that is specified in the <code>{startTime}</code> parameter and the subsequent backup jobs at an interval that is specified in the <code>{interval}</code> parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, <code>I|1631685600|P1D</code> specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+         * <ul>
+         * <li><strong>startTime</strong>: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.</li>
+         * <li><strong>interval</strong>: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</li>
+         * </ul>
          * 
-         * *   **startTime**: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds.
-         * *   **interval**: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.
+         * <strong>example:</strong>
+         * <p>I|1602673264|P1D</p>
          */
         public Builder schedule(String schedule) {
             this.putQueryParameter("Schedule", schedule);
@@ -724,14 +781,17 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_FILE</strong>: backs up Elastic Compute Service (ECS) files.</li>
+         * <li><strong>OSS</strong>: backs up Object Storage Service (OSS) buckets.</li>
+         * <li><strong>NAS</strong>: backs up Apsara File Storage NAS file systems.</li>
+         * <li><strong>OTS</strong>: backs up Tablestore instances.</li>
+         * <li><strong>UDM_ECS</strong>: backs up ECS instances.</li>
+         * </ul>
          * 
-         * *   **ECS_FILE**: backs up Elastic Compute Service (ECS) files.
-         * *   **OSS**: backs up Object Storage Service (OSS) buckets.
-         * *   **NAS**: backs up Apsara File Storage NAS file systems.
-         * *   **OTS**: backs up Tablestore instances.
-         * *   **UDM_ECS**: backs up ECS instances.
+         * <strong>example:</strong>
+         * <p>ECS_FILE</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -740,12 +800,15 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * This parameter is required only if the **SourceType** parameter is set to **ECS_FILE**. This parameter specifies the throttling rules. Format: `{start}|{end}|{bandwidth}`. Separate multiple throttling rules with vertical bars (|). A specified time range cannot overlap with another time range.
-         * <p>
+         * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the throttling rules. Format: <code>{start}|{end}|{bandwidth}</code>. Separate multiple throttling rules with vertical bars (|). A specified time range cannot overlap with another time range.</p>
+         * <ul>
+         * <li><strong>start</strong>: the start hour.</li>
+         * <li><strong>end</strong>: the end hour.</li>
+         * <li><strong>bandwidth</strong>: the bandwidth. Unit: KB/s.</li>
+         * </ul>
          * 
-         * *   **start**: the start hour.
-         * *   **end**: the end hour.
-         * *   **bandwidth**: the bandwidth. Unit: KB/s.
+         * <strong>example:</strong>
+         * <p>0:24:5120</p>
          */
         public Builder speedLimit(String speedLimit) {
             this.putBodyParameter("SpeedLimit", speedLimit);
@@ -754,7 +817,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The region in which the ECS instance that you want to back up resides.
+         * <p>The region in which the ECS instance that you want to back up resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder udmRegionId(String udmRegionId) {
             this.putQueryParameter("UdmRegionId", udmRegionId);
@@ -763,7 +829,10 @@ public class CreateBackupPlanRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0006******q</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);
@@ -778,29 +847,35 @@ public class CreateBackupPlanRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateBackupPlanRequest} extends {@link TeaModel}
+     *
+     * <p>CreateBackupPlanRequest</p>
+     */
     public static class Rule extends TeaModel {
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private String backupType;
 
-        @NameInMap("DestinationRegionId")
+        @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
         private String destinationRegionId;
 
-        @NameInMap("DestinationRetention")
+        @com.aliyun.core.annotation.NameInMap("DestinationRetention")
         private Long destinationRetention;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("DoCopy")
+        @com.aliyun.core.annotation.NameInMap("DoCopy")
         private Boolean doCopy;
 
-        @NameInMap("Retention")
+        @com.aliyun.core.annotation.NameInMap("Retention")
         private Long retention;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Schedule")
+        @com.aliyun.core.annotation.NameInMap("Schedule")
         private String schedule;
 
         private Rule(Builder builder) {
@@ -889,7 +964,10 @@ public class CreateBackupPlanRequest extends Request {
             private String schedule; 
 
             /**
-             * The backup type.
+             * <p>The backup type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETE</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -897,7 +975,10 @@ public class CreateBackupPlanRequest extends Request {
             }
 
             /**
-             * The ID of the region to which data is replicated.
+             * <p>The ID of the region to which data is replicated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder destinationRegionId(String destinationRegionId) {
                 this.destinationRegionId = destinationRegionId;
@@ -905,7 +986,10 @@ public class CreateBackupPlanRequest extends Request {
             }
 
             /**
-             * The retention period of the backup data in geo-redundancy mode. Unit: days.
+             * <p>The retention period of the backup data in geo-redundancy mode. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder destinationRetention(Long destinationRetention) {
                 this.destinationRetention = destinationRetention;
@@ -913,7 +997,10 @@ public class CreateBackupPlanRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the rule.
+             * <p>Specifies whether to enable the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -921,7 +1008,10 @@ public class CreateBackupPlanRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable cross-region replication.
+             * <p>Specifies whether to enable cross-region replication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder doCopy(Boolean doCopy) {
                 this.doCopy = doCopy;
@@ -929,7 +1019,10 @@ public class CreateBackupPlanRequest extends Request {
             }
 
             /**
-             * The retention period of the backup data. Unit: days.
+             * <p>The retention period of the backup data. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder retention(Long retention) {
                 this.retention = retention;
@@ -937,7 +1030,10 @@ public class CreateBackupPlanRequest extends Request {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-test-name</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -945,10 +1041,11 @@ public class CreateBackupPlanRequest extends Request {
             }
 
             /**
-             * The backup policy. Format: I|{startTime}|{interval}. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, I|1631685600|P1D specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.
-             * <p>
+             * <p>The backup policy. Format: I|{startTime}|{interval}. The system runs the first backup job at a point in time that is specified in the {startTime} parameter and the subsequent backup jobs at an interval that is specified in the {interval} parameter. The system does not run a backup job before the specified point in time. Each backup job, except the first one, starts only after the previous backup job is complete. For example, I|1631685600|P1D specifies that the system runs the first backup job at 14:00:00 on September 15, 2021 and the subsequent backup jobs once a day.</p>
+             * <p>startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds. interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.</p>
              * 
-             * startTime: the time at which the system starts to run a backup job. The time must follow the UNIX time format. Unit: seconds. interval: the interval at which the system runs a backup job. The interval must follow the ISO 8601 standard. For example, PT1H specifies an interval of one hour. P1D specifies an interval of one day.
+             * <strong>example:</strong>
+             * <p>I|1602673264|P1D</p>
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;

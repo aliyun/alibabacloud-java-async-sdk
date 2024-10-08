@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeTaskRequest</p>
  */
 public class DescribeTaskRequest extends Request {
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private DescribeTaskRequest(Builder builder) {
@@ -82,7 +82,10 @@ public class DescribeTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmvywqfey5njq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -91,7 +94,10 @@ public class DescribeTaskRequest extends Request {
         }
 
         /**
-         * The ID of the job.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-*********************</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -100,7 +106,10 @@ public class DescribeTaskRequest extends Request {
         }
 
         /**
-         * The access token.
+         * <p>The access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01W3ZZOQ</p>
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

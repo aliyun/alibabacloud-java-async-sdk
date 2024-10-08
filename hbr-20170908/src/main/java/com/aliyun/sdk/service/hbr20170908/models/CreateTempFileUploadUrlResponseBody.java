@@ -1,48 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTempFileUploadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTempFileUploadUrlResponseBody</p>
  */
 public class CreateTempFileUploadUrlResponseBody extends TeaModel {
-    @NameInMap("BucketName")
+    @com.aliyun.core.annotation.NameInMap("BucketName")
     private String bucketName;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Long expireTime;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OssAccessKeyId")
+    @com.aliyun.core.annotation.NameInMap("OssAccessKeyId")
     private String ossAccessKeyId;
 
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Signature")
+    @com.aliyun.core.annotation.NameInMap("Signature")
     private String signature;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TempFileKey")
+    @com.aliyun.core.annotation.NameInMap("TempFileKey")
     private String tempFileKey;
 
     private CreateTempFileUploadUrlResponseBody(Builder builder) {
@@ -158,7 +158,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         private String tempFileKey; 
 
         /**
-         * The name of the OSS bucket to which the file is uploaded.
+         * <p>The name of the OSS bucket to which the file is uploaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbr-temp-bucket</p>
          */
         public Builder bucketName(String bucketName) {
             this.bucketName = bucketName;
@@ -166,7 +169,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +180,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint that is used to upload the file to OSS.
+         * <p>The endpoint that is used to upload the file to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-shenzhen.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -182,7 +191,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time of the signature that is used to upload the file to OSS. This value is a UNIX timestamp. Unit: seconds.
+         * <p>The expiration time of the signature that is used to upload the file to OSS. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1654326678</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -190,7 +202,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +213,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The AccessKey ID that is used to upload the file to OSS.
+         * <p>The AccessKey ID that is used to upload the file to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI****Up</p>
          */
         public Builder ossAccessKeyId(String ossAccessKeyId) {
             this.ossAccessKeyId = ossAccessKeyId;
@@ -206,7 +224,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The policy that is used to upload the file to OSS.
+         * <p>The policy that is used to upload the file to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleH****V19</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -214,7 +235,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4EEB401-DD21-588D-AE3B-1E835C7655E1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +246,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The signature that is used to upload the file to OSS.
+         * <p>The signature that is used to upload the file to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RmhI****0A=</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;
@@ -230,11 +257,14 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +272,10 @@ public class CreateTempFileUploadUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The key that is used to upload the file to OSS.
+         * <p>The key that is used to upload the file to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp/1440155109798732/upload/2022-07-29/49bed34c-b430-4e7e-89b1-4be2b734f95c/iaclone.diff</p>
          */
         public Builder tempFileKey(String tempFileKey) {
             this.tempFileKey = tempFileKey;

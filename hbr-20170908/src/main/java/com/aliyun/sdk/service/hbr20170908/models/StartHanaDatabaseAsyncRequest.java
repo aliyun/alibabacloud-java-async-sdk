@@ -1,28 +1,28 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartHanaDatabaseAsyncRequest} extends {@link RequestModel}
  *
  * <p>StartHanaDatabaseAsyncRequest</p>
  */
 public class StartHanaDatabaseAsyncRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("DatabaseName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseName;
 
-    @Query
-    @NameInMap("VaultId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultId")
     private String vaultId;
 
     private StartHanaDatabaseAsyncRequest(Builder builder) {
@@ -83,7 +83,10 @@ public class StartHanaDatabaseAsyncRequest extends Request {
         } 
 
         /**
-         * The ID of the SAP HANA instance.
+         * <p>The ID of the SAP HANA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-000a9ipe******sme</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -92,7 +95,10 @@ public class StartHanaDatabaseAsyncRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HXE</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -101,7 +107,10 @@ public class StartHanaDatabaseAsyncRequest extends Request {
         }
 
         /**
-         * The ID of the backup vault.
+         * <p>The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0000hrh******vhr3i</p>
          */
         public Builder vaultId(String vaultId) {
             this.putQueryParameter("VaultId", vaultId);

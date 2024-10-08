@@ -1,34 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AttachNasFileSystemResponse} extends {@link TeaModel}
+ * 
+ * {@link DeleteUdmEcsInstanceResponse} extends {@link TeaModel}
  *
- * <p>AttachNasFileSystemResponse</p>
+ * <p>DeleteUdmEcsInstanceResponse</p>
  */
-public class AttachNasFileSystemResponse extends Response {
-    @NameInMap("headers")
+public class DeleteUdmEcsInstanceResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    private AttachNasFileSystemResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private DeleteUdmEcsInstanceResponseBody body;
 
-    private AttachNasFileSystemResponse(BuilderImpl builder) {
+    private DeleteUdmEcsInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AttachNasFileSystemResponse create() {
+    public static DeleteUdmEcsInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class AttachNasFileSystemResponse extends Response {
     /**
      * @return body
      */
-    public AttachNasFileSystemResponseBody getBody() {
+    public DeleteUdmEcsInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AttachNasFileSystemResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteUdmEcsInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AttachNasFileSystemResponseBody body);
+        Builder body(DeleteUdmEcsInstanceResponseBody body);
 
         @Override
-        AttachNasFileSystemResponse build();
+        DeleteUdmEcsInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AttachNasFileSystemResponse, Builder>
+            extends Response.BuilderImpl<DeleteUdmEcsInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private AttachNasFileSystemResponseBody body; 
+        private DeleteUdmEcsInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AttachNasFileSystemResponse response) {
+        private BuilderImpl(DeleteUdmEcsInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class AttachNasFileSystemResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AttachNasFileSystemResponseBody body) {
+        public Builder body(DeleteUdmEcsInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AttachNasFileSystemResponse build() {
-            return new AttachNasFileSystemResponse(this);
+        public DeleteUdmEcsInstanceResponse build() {
+            return new DeleteUdmEcsInstanceResponse(this);
         } 
 
     } 

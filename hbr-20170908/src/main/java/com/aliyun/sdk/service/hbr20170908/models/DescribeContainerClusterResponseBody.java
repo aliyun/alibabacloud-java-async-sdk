@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerClusterResponseBody</p>
  */
 public class DescribeContainerClusterResponseBody extends TeaModel {
-    @NameInMap("Clusters")
+    @com.aliyun.core.annotation.NameInMap("Clusters")
     private java.util.List < Clusters> clusters;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeContainerClusterResponseBody(Builder builder) {
@@ -122,7 +122,7 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The information of clusters.
+         * <p>The information of clusters.</p>
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -130,7 +130,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. The status code 200 indicates that the call is successful.
+         * <p>The HTTP status code. The status code 200 indicates that the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -138,7 +141,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned. If the call is successful, "successful" is returned. If the call fails, an error message is returned.
+         * <p>The message that is returned. If the call is successful, &quot;successful&quot; is returned. If the call fails, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +152,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page. Pages start from page 1. Default value: 1.
+         * <p>The page number of the returned page. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +163,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries returned on each page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +174,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC94B755-C3C2-5B9D-BD77-E0FE819A4DB2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,11 +185,14 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +200,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -195,29 +216,35 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerClusterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerClusterResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
-        @NameInMap("AgentStatus")
+        @com.aliyun.core.annotation.NameInMap("AgentStatus")
         private String agentStatus;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterType")
+        @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
         private Clusters(Builder builder) {
@@ -306,12 +333,15 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * The status of the client. Valid values:
-             * <p>
+             * <p>The status of the client. Valid values:</p>
+             * <ul>
+             * <li><strong>MISS</strong>: The client is disconnected.</li>
+             * <li><strong>UNKNOWN</strong>: The client is in an unknown state.</li>
+             * <li><strong>READY</strong>: The client is ready.</li>
+             * </ul>
              * 
-             * *   **MISS**: The client is disconnected.
-             * *   **UNKNOWN**: The client is in an unknown state.
-             * *   **READY**: The client is ready.
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -319,7 +349,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cl-0006gwppd0jtttpmb0ri</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -327,7 +360,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid value: ACK, which indicates ACK clusters.
+             * <p>The type of the cluster. Valid value: ACK, which indicates ACK clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACK</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -335,7 +371,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description ack pv backup</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -343,7 +382,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the cluster.
+             * <p>The identifier of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c5bbd0931a30947f4ab85efd19380a72d</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -351,7 +393,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack_pv_backup_location</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -359,11 +404,14 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the cluster. Valid values:
-             * <p>
+             * <p>The network type of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>CLASSIC</strong>: the classic network</li>
+             * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+             * </ul>
              * 
-             * *   **CLASSIC**: the classic network
-             * *   **VPC**: virtual private cloud (VPC)
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -371,7 +419,10 @@ public class DescribeContainerClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The token that is used to register the Hybrid Backup Recovery (HBR) client in the cluster.
+             * <p>The token that is used to register the Hybrid Backup Recovery (HBR) client in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJhY2Nvd******A/VnZpgXQC5A==</p>
              */
             public Builder token(String token) {
                 this.token = token;

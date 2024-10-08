@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCrossAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCrossAccountsResponseBody</p>
  */
 public class DescribeCrossAccountsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CrossAccounts")
+    @com.aliyun.core.annotation.NameInMap("CrossAccounts")
     private CrossAccounts crossAccounts;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeCrossAccountsResponseBody(Builder builder) {
@@ -122,7 +122,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Code.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,7 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * CrossAccounts.
+         * <p>The information about the accounts used in cross-account backup.</p>
          */
         public Builder crossAccounts(CrossAccounts crossAccounts) {
             this.crossAccounts = crossAccounts;
@@ -138,7 +141,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. If the request was successful, &quot;successful&quot; is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -146,7 +152,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +163,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +174,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +185,14 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +200,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -191,26 +216,32 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCrossAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossAccountsResponseBody</p>
+     */
     public static class CrossAccount extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("CrossAccountRoleName")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
         private String crossAccountRoleName;
 
-        @NameInMap("CrossAccountUserId")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
         private Long crossAccountUserId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
         private CrossAccount(Builder builder) {
@@ -290,7 +321,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             private Long updatedTime; 
 
             /**
-             * Alias.
+             * <p>The account alias. The value can be up to 32 bits in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -298,7 +332,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the account was created. This value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1654570439</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -306,7 +343,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossAccountRoleName.
+             * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BackupRole</p>
              */
             public Builder crossAccountRoleName(String crossAccountRoleName) {
                 this.crossAccountRoleName = crossAccountRoleName;
@@ -314,7 +354,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * CrossAccountUserId.
+             * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15897534xxxxx625</p>
              */
             public Builder crossAccountUserId(Long crossAccountUserId) {
                 this.crossAccountUserId = crossAccountUserId;
@@ -322,7 +365,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the backup type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -330,7 +376,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The ID of the current account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>184164xxxxx49795</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -338,7 +387,10 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The time when the account information was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640157098</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -352,8 +404,14 @@ public class DescribeCrossAccountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCrossAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCrossAccountsResponseBody</p>
+     */
     public static class CrossAccounts extends TeaModel {
-        @NameInMap("CrossAccount")
+        @com.aliyun.core.annotation.NameInMap("CrossAccount")
         private java.util.List < CrossAccount> crossAccount;
 
         private CrossAccounts(Builder builder) {

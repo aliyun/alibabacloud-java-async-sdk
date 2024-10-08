@@ -1,18 +1,18 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OtsDetail} extends {@link TeaModel}
  *
  * <p>OtsDetail</p>
  */
 public class OtsDetail extends TeaModel {
-    @NameInMap("TableNames")
+    @com.aliyun.core.annotation.NameInMap("TableNames")
     private java.util.List < String > tableNames;
 
     private OtsDetail(Builder builder) {

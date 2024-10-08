@@ -1,52 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePolicyBindingRequest} extends {@link RequestModel}
  *
  * <p>UpdatePolicyBindingRequest</p>
  */
 public class UpdatePolicyBindingRequest extends Request {
-    @Query
-    @NameInMap("AdvancedOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdvancedOptions")
     private AdvancedOptions advancedOptions;
 
-    @Body
-    @NameInMap("DataSourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceId;
 
-    @Query
-    @NameInMap("Disabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Disabled")
     private Boolean disabled;
 
-    @Query
-    @NameInMap("PolicyBindingDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Exclude")
+    private String exclude;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Include")
+    private String include;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyBindingDescription")
     private String policyBindingDescription;
 
-    @Body
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    private String source;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeedLimit")
+    private String speedLimit;
 
     private UpdatePolicyBindingRequest(Builder builder) {
         super(builder);
         this.advancedOptions = builder.advancedOptions;
         this.dataSourceId = builder.dataSourceId;
         this.disabled = builder.disabled;
+        this.exclude = builder.exclude;
+        this.include = builder.include;
         this.policyBindingDescription = builder.policyBindingDescription;
         this.policyId = builder.policyId;
+        this.source = builder.source;
         this.sourceType = builder.sourceType;
+        this.speedLimit = builder.speedLimit;
     }
 
     public static Builder builder() {
@@ -84,6 +104,20 @@ public class UpdatePolicyBindingRequest extends Request {
     }
 
     /**
+     * @return exclude
+     */
+    public String getExclude() {
+        return this.exclude;
+    }
+
+    /**
+     * @return include
+     */
+    public String getInclude() {
+        return this.include;
+    }
+
+    /**
      * @return policyBindingDescription
      */
     public String getPolicyBindingDescription() {
@@ -98,19 +132,37 @@ public class UpdatePolicyBindingRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return sourceType
      */
     public String getSourceType() {
         return this.sourceType;
     }
 
+    /**
+     * @return speedLimit
+     */
+    public String getSpeedLimit() {
+        return this.speedLimit;
+    }
+
     public static final class Builder extends Request.Builder<UpdatePolicyBindingRequest, Builder> {
         private AdvancedOptions advancedOptions; 
         private String dataSourceId; 
         private Boolean disabled; 
+        private String exclude; 
+        private String include; 
         private String policyBindingDescription; 
         private String policyId; 
+        private String source; 
         private String sourceType; 
+        private String speedLimit; 
 
         private Builder() {
             super();
@@ -121,13 +173,17 @@ public class UpdatePolicyBindingRequest extends Request {
             this.advancedOptions = request.advancedOptions;
             this.dataSourceId = request.dataSourceId;
             this.disabled = request.disabled;
+            this.exclude = request.exclude;
+            this.include = request.include;
             this.policyBindingDescription = request.policyBindingDescription;
             this.policyId = request.policyId;
+            this.source = request.source;
             this.sourceType = request.sourceType;
+            this.speedLimit = request.speedLimit;
         } 
 
         /**
-         * The advanced options.
+         * <p>The advanced options.</p>
          */
         public Builder advancedOptions(AdvancedOptions advancedOptions) {
             String advancedOptionsShrink = shrink(advancedOptions, "AdvancedOptions", "json");
@@ -137,7 +193,10 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         /**
-         * The ID of the data source.
+         * <p>The ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1************dtv</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("DataSourceId", dataSourceId);
@@ -146,11 +205,14 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable the backup policy for the data source.
-         * <p>
+         * <p>Specifies whether to disable the backup policy for the data source. Valid values:</p>
+         * <ul>
+         * <li>true: disables the backup policy for the data source</li>
+         * <li>false: enables the backup policy for the data source</li>
+         * </ul>
          * 
-         * *   true: disables the backup policy for the data source
-         * *   false: enables the backup policy for the data source
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disabled(Boolean disabled) {
             this.putQueryParameter("Disabled", disabled);
@@ -159,7 +221,28 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         /**
-         * The description of the association.
+         * Exclude.
+         */
+        public Builder exclude(String exclude) {
+            this.putQueryParameter("Exclude", exclude);
+            this.exclude = exclude;
+            return this;
+        }
+
+        /**
+         * Include.
+         */
+        public Builder include(String include) {
+            this.putQueryParameter("Include", include);
+            this.include = include;
+            return this;
+        }
+
+        /**
+         * <p>The description of the association.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000<strong><strong><strong><strong><strong><strong>5xx-i-2ze</strong></strong></strong></strong></strong></strong>nw4</p>
          */
         public Builder policyBindingDescription(String policyBindingDescription) {
             this.putQueryParameter("PolicyBindingDescription", policyBindingDescription);
@@ -168,7 +251,10 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         /**
-         * The ID of the backup policy.
+         * <p>The ID of the backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>po-000************ky9</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -177,14 +263,35 @@ public class UpdatePolicyBindingRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
+            return this;
+        }
+
+        /**
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li><strong>UDM_ECS</strong>: ECS instance backup</li>
+         * </ul>
          * 
-         * *   **UDM_ECS**: ECS instance backup
+         * <strong>example:</strong>
+         * <p>UDM_ECS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
             this.sourceType = sourceType;
+            return this;
+        }
+
+        /**
+         * SpeedLimit.
+         */
+        public Builder speedLimit(String speedLimit) {
+            this.putQueryParameter("SpeedLimit", speedLimit);
+            this.speedLimit = speedLimit;
             return this;
         }
 
@@ -195,11 +302,17 @@ public class UpdatePolicyBindingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdatePolicyBindingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePolicyBindingRequest</p>
+     */
     public static class CommonFileSystemDetail extends TeaModel {
-        @NameInMap("FetchSliceSize")
+        @com.aliyun.core.annotation.NameInMap("FetchSliceSize")
         private Long fetchSliceSize;
 
-        @NameInMap("FullOnIncrementFail")
+        @com.aliyun.core.annotation.NameInMap("FullOnIncrementFail")
         private Boolean fullOnIncrementFail;
 
         private CommonFileSystemDetail(Builder builder) {
@@ -256,11 +369,17 @@ public class UpdatePolicyBindingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePolicyBindingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePolicyBindingRequest</p>
+     */
     public static class OssDetail extends TeaModel {
-        @NameInMap("InventoryCleanupPolicy")
+        @com.aliyun.core.annotation.NameInMap("InventoryCleanupPolicy")
         private String inventoryCleanupPolicy;
 
-        @NameInMap("InventoryId")
+        @com.aliyun.core.annotation.NameInMap("InventoryId")
         private String inventoryId;
 
         private OssDetail(Builder builder) {
@@ -295,12 +414,15 @@ public class UpdatePolicyBindingRequest extends Request {
             private String inventoryId; 
 
             /**
-             * Specifies whether the system deletes the inventory lists after a backup is complete. This parameter is available only when OSS inventory lists are used. Valid values:
-             * <p>
+             * <p>Specifies whether the system deletes the inventory lists after a backup is complete. This parameter is available only when OSS inventory lists are used. Valid values:</p>
+             * <ul>
+             * <li><strong>NO_CLEANUP</strong>: Does not delete inventory lists.</li>
+             * <li><strong>DELETE_CURRENT</strong>: Deletes the current inventory list.</li>
+             * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: Deletes all inventory lists.</li>
+             * </ul>
              * 
-             * *   **NO_CLEANUP**: Does not delete inventory lists.
-             * *   **DELETE_CURRENT**: Deletes the current inventory list.
-             * *   **DELETE_CURRENT_AND_PREVIOUS**: Deletes all inventory lists.
+             * <strong>example:</strong>
+             * <p>NO_CLEANUP</p>
              */
             public Builder inventoryCleanupPolicy(String inventoryCleanupPolicy) {
                 this.inventoryCleanupPolicy = inventoryCleanupPolicy;
@@ -308,11 +430,14 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * The name of the OSS inventory list. The OSS inventory list specified for this parameter is used for performance optimization.
-             * <p>
+             * <p>The name of the OSS inventory list. The OSS inventory list specified for this parameter is used for performance optimization.</p>
+             * <ul>
+             * <li>If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included in your OSS bills.</li>
+             * <li>An extended period of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</li>
+             * </ul>
              * 
-             * *   If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included in your OSS bills.
-             * *   An extended period of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.
+             * <strong>example:</strong>
+             * <p>30663060</p>
              */
             public Builder inventoryId(String inventoryId) {
                 this.inventoryId = inventoryId;
@@ -326,35 +451,41 @@ public class UpdatePolicyBindingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePolicyBindingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePolicyBindingRequest</p>
+     */
     public static class UdmDetail extends TeaModel {
-        @NameInMap("AppConsistent")
+        @com.aliyun.core.annotation.NameInMap("AppConsistent")
         private Boolean appConsistent;
 
-        @NameInMap("DiskIdList")
+        @com.aliyun.core.annotation.NameInMap("DiskIdList")
         private java.util.List < String > diskIdList;
 
-        @NameInMap("EnableFsFreeze")
+        @com.aliyun.core.annotation.NameInMap("EnableFsFreeze")
         private Boolean enableFsFreeze;
 
-        @NameInMap("EnableWriters")
+        @com.aliyun.core.annotation.NameInMap("EnableWriters")
         private Boolean enableWriters;
 
-        @NameInMap("ExcludeDiskIdList")
+        @com.aliyun.core.annotation.NameInMap("ExcludeDiskIdList")
         private java.util.List < String > excludeDiskIdList;
 
-        @NameInMap("PostScriptPath")
+        @com.aliyun.core.annotation.NameInMap("PostScriptPath")
         private String postScriptPath;
 
-        @NameInMap("PreScriptPath")
+        @com.aliyun.core.annotation.NameInMap("PreScriptPath")
         private String preScriptPath;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("SnapshotGroup")
+        @com.aliyun.core.annotation.NameInMap("SnapshotGroup")
         private Boolean snapshotGroup;
 
-        @NameInMap("TimeoutInSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutInSeconds")
         private Long timeoutInSeconds;
 
         private UdmDetail(Builder builder) {
@@ -461,7 +592,10 @@ public class UpdatePolicyBindingRequest extends Request {
             private Long timeoutInSeconds; 
 
             /**
-             * Specifies whether to enable application consistency. You can enable application consistency only if all disks are ESSDs.
+             * <p>Specifies whether to enable application consistency. You can enable application consistency only if all disks are ESSDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder appConsistent(Boolean appConsistent) {
                 this.appConsistent = appConsistent;
@@ -469,7 +603,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * The IDs of the disks that require protection. This parameter is not required if all disks require protection.
+             * <p>The IDs of the disks that require protection. This parameter is not required if all disks require protection.</p>
              */
             public Builder diskIdList(java.util.List < String > diskIdList) {
                 this.diskIdList = diskIdList;
@@ -477,7 +611,10 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.
+             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableFsFreeze(Boolean enableFsFreeze) {
                 this.enableFsFreeze = enableFsFreeze;
@@ -485,13 +622,15 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies whether to create application-consistent snapshots. Valid values:
-             * <p>
+             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies whether to create application-consistent snapshots. Valid values:</p>
+             * <ul>
+             * <li>true: creates application-consistent snapshots.</li>
+             * <li>false: creates file system-consistent snapshots.</li>
+             * </ul>
+             * <p>Default value: true.</p>
              * 
-             * *   true: creates application-consistent snapshots.
-             * *   false: creates file system-consistent snapshots.
-             * 
-             * Default value: true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableWriters(Boolean enableWriters) {
                 this.enableWriters = enableWriters;
@@ -499,7 +638,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * The IDs of the disks that require no protection. This parameter is not required if the DiskIdList parameter is specified.
+             * <p>The IDs of the disks that require no protection. This parameter is not required if the DiskIdList parameter is specified.</p>
              */
             public Builder excludeDiskIdList(java.util.List < String > excludeDiskIdList) {
                 this.excludeDiskIdList = excludeDiskIdList;
@@ -507,7 +646,10 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the path of the post-thaw scripts that are executed after application-consistent snapshots are created.
+             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/postscript.sh</p>
              */
             public Builder postScriptPath(String postScriptPath) {
                 this.postScriptPath = postScriptPath;
@@ -515,7 +657,10 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.
+             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/prescript.sh</p>
              */
             public Builder preScriptPath(String preScriptPath) {
                 this.preScriptPath = preScriptPath;
@@ -523,7 +668,10 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.
+             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the name of the Resource Access Management (RAM) role that is required to create application-consistent snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunECSInstanceForHbrRole</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -531,7 +679,10 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).
+             * <p>Specifies whether to create a snapshot-consistent group. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder snapshotGroup(Boolean snapshotGroup) {
                 this.snapshotGroup = snapshotGroup;
@@ -539,7 +690,10 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * This parameter is required only if the **AppConsistent** parameter is set to **true**. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.
+             * <p>This parameter is required only if the <strong>AppConsistent</strong> parameter is set to <strong>true</strong>. This parameter specifies the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timeoutInSeconds(Long timeoutInSeconds) {
                 this.timeoutInSeconds = timeoutInSeconds;
@@ -553,14 +707,20 @@ public class UpdatePolicyBindingRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdatePolicyBindingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdatePolicyBindingRequest</p>
+     */
     public static class AdvancedOptions extends TeaModel {
-        @NameInMap("CommonFileSystemDetail")
+        @com.aliyun.core.annotation.NameInMap("CommonFileSystemDetail")
         private CommonFileSystemDetail commonFileSystemDetail;
 
-        @NameInMap("OssDetail")
+        @com.aliyun.core.annotation.NameInMap("OssDetail")
         private OssDetail ossDetail;
 
-        @NameInMap("UdmDetail")
+        @com.aliyun.core.annotation.NameInMap("UdmDetail")
         private UdmDetail udmDetail;
 
         private AdvancedOptions(Builder builder) {
@@ -612,7 +772,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * The details of the Object Storage Service (OSS) backup.
+             * <p>The details of the Object Storage Service (OSS) backup.</p>
              */
             public Builder ossDetail(OssDetail ossDetail) {
                 this.ossDetail = ossDetail;
@@ -620,7 +780,7 @@ public class UpdatePolicyBindingRequest extends Request {
             }
 
             /**
-             * The backup details of the Elastic Compute Service (ECS) instance.
+             * <p>The backup details of the Elastic Compute Service (ECS) instance.</p>
              */
             public Builder udmDetail(UdmDetail udmDetail) {
                 this.udmDetail = udmDetail;

@@ -1,57 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupClientsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupClientsRequest</p>
  */
 public class DescribeBackupClientsRequest extends Request {
-    @Body
-    @NameInMap("ClientIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientIds")
     private java.util.List < String > clientIds;
 
-    @Query
-    @NameInMap("ClientType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientType;
 
-    @Query
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @Query
-    @NameInMap("CrossAccountRoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
     private String crossAccountRoleName;
 
-    @Query
-    @NameInMap("CrossAccountType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountType")
     private String crossAccountType;
 
-    @Query
-    @NameInMap("CrossAccountUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
     private Long crossAccountUserId;
 
-    @Body
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeBackupClientsRequest(Builder builder) {
@@ -182,7 +182,10 @@ public class DescribeBackupClientsRequest extends Request {
         } 
 
         /**
-         * The IDs of HBR clients.
+         * <p>The IDs of HBR clients.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;c-*********************&quot;]</p>
          */
         public Builder clientIds(java.util.List < String > clientIds) {
             String clientIdsShrink = shrink(clientIds, "ClientIds", "json");
@@ -192,11 +195,14 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * The type of the HBR client. Valid values:
-         * <p>
+         * <p>The type of the HBR client. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS_CLIENT</strong>: HBR client for Elastic Compute Service (ECS) file backup</li>
+         * <li><strong>CONTAINER_CLIENT</strong>: HBR client for container backup</li>
+         * </ul>
          * 
-         * *   **ECS_CLIENT**: HBR client for Elastic Compute Service (ECS) file backup
-         * *   **CONTAINER_CLIENT**: HBR client for container backup
+         * <strong>example:</strong>
+         * <p>ECS_CLIENT</p>
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -205,7 +211,10 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster for the backup.
+         * <p>The ID of the cluster for the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cl-000ge4wa61b4d337xblq</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -214,7 +223,10 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+         * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hbrcrossrole</p>
          */
         public Builder crossAccountRoleName(String crossAccountRoleName) {
             this.putQueryParameter("CrossAccountRoleName", crossAccountRoleName);
@@ -223,11 +235,14 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
-         * <p>
+         * <p>Specifies whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+         * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+         * </ul>
          * 
-         * *   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.
-         * *   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>CROSS_ACCOUNT</p>
          */
         public Builder crossAccountType(String crossAccountType) {
             this.putQueryParameter("CrossAccountType", crossAccountType);
@@ -236,7 +251,10 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+         * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129374672382xxxx</p>
          */
         public Builder crossAccountUserId(Long crossAccountUserId) {
             this.putQueryParameter("CrossAccountUserId", crossAccountUserId);
@@ -245,7 +263,10 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * The IDs of ECS instances.
+         * <p>The IDs of ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-*********************&quot;]</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -255,7 +276,10 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -264,7 +288,10 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.
+         * <p>The number of entries to return on each page. Valid values: 1 to 99. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -273,7 +300,10 @@ public class DescribeBackupClientsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33738719#</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -288,11 +318,17 @@ public class DescribeBackupClientsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupClientsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupClientsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -327,12 +363,15 @@ public class DescribeBackupClientsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the backup vault. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The tag key of the backup vault. Valid values of N: 1 to 20.</p>
+             * <ul>
+             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>The tag key cannot be an empty string.</li>
+             * </ul>
              * 
-             * *   The tag key cannot start with `aliyun` or `acs:`.
-             * *   The tag key cannot contain `http://` or `https://`.
-             * *   The tag key cannot be an empty string.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -340,12 +379,15 @@ public class DescribeBackupClientsRequest extends Request {
             }
 
             /**
-             * The tag value of the backup vault. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The tag value of the backup vault. Valid values of N: 1 to 20.</p>
+             * <ul>
+             * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * <li>The tag value cannot be an empty string.</li>
+             * </ul>
              * 
-             * *   The tag value cannot start with `aliyun` or `acs:`.
-             * *   The tag value cannot contain `http://` or `https://`.
-             * *   The tag value cannot be an empty string.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

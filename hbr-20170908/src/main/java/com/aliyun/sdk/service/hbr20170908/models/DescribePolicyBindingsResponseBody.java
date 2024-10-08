@@ -1,39 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyBindingsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePolicyBindingsResponseBody</p>
  */
 public class DescribePolicyBindingsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PolicyBindings")
+    @com.aliyun.core.annotation.NameInMap("PolicyBindings")
     private java.util.List < PolicyBindings> policyBindings;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePolicyBindingsResponseBody(Builder builder) {
@@ -154,7 +154,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * The association between the backup policy and data sources.
+         * <p>The association between the backup policy and data sources.</p>
          */
         public Builder policyBindings(java.util.List < PolicyBindings> policyBindings) {
             this.policyBindings = policyBindings;
@@ -191,11 +191,17 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePolicyBindingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyBindingsResponseBody</p>
+     */
     public static class CommonFileSystemDetail extends TeaModel {
-        @NameInMap("FetchSliceSize")
+        @com.aliyun.core.annotation.NameInMap("FetchSliceSize")
         private Long fetchSliceSize;
 
-        @NameInMap("FullOnIncrementFail")
+        @com.aliyun.core.annotation.NameInMap("FullOnIncrementFail")
         private Boolean fullOnIncrementFail;
 
         private CommonFileSystemDetail(Builder builder) {
@@ -252,17 +258,23 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyBindingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyBindingsResponseBody</p>
+     */
     public static class CommonNasDetail extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("FetchSliceSize")
+        @com.aliyun.core.annotation.NameInMap("FetchSliceSize")
         private Long fetchSliceSize;
 
-        @NameInMap("FullOnIncrementFail")
+        @com.aliyun.core.annotation.NameInMap("FullOnIncrementFail")
         private Boolean fullOnIncrementFail;
 
         private CommonNasDetail(Builder builder) {
@@ -315,7 +327,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private Boolean fullOnIncrementFail; 
 
             /**
-             * The ID of the HBR client.
+             * <p>The ID of the Cloud Backup client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-0001eg6mcvjs93f46s2d</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -331,7 +346,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of backup shards (the number of files).
+             * <p>The size of backup shards (the number of files).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder fetchSliceSize(Long fetchSliceSize) {
                 this.fetchSliceSize = fetchSliceSize;
@@ -339,11 +357,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system performs full backup if incremental backup fails. Valid values:
-             * <p>
+             * <p>Indicates whether the system performs full backup if incremental backup fails. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The system performs full backup if incremental backup fails.</li>
+             * <li><strong>false</strong>: The system does not perform full backup if incremental backup fails.</li>
+             * </ul>
              * 
-             * *   **true**: The system performs full backup if incremental backup fails.
-             * *   **false**: The system does not perform full backup if incremental backup fails.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullOnIncrementFail(Boolean fullOnIncrementFail) {
                 this.fullOnIncrementFail = fullOnIncrementFail;
@@ -357,11 +378,17 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyBindingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyBindingsResponseBody</p>
+     */
     public static class FileDetail extends TeaModel {
-        @NameInMap("AdvPolicy")
+        @com.aliyun.core.annotation.NameInMap("AdvPolicy")
         private Boolean advPolicy;
 
-        @NameInMap("UseVSS")
+        @com.aliyun.core.annotation.NameInMap("UseVSS")
         private Boolean useVSS;
 
         private FileDetail(Builder builder) {
@@ -396,11 +423,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private Boolean useVSS; 
 
             /**
-             * Indicates whether an advanced policy is used. Valid values:
-             * <p>
+             * <p>Indicates whether an advanced policy is used. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder advPolicy(Boolean advPolicy) {
                 this.advPolicy = advPolicy;
@@ -408,11 +438,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Volume Shadow Copy Service (VSS) feature is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the Volume Shadow Copy Service (VSS) feature is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The feature is enabled.</li>
+             * <li><strong>false</strong>: The feature is disabled.</li>
+             * </ul>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder useVSS(Boolean useVSS) {
                 this.useVSS = useVSS;
@@ -426,11 +459,17 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyBindingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyBindingsResponseBody</p>
+     */
     public static class OssDetail extends TeaModel {
-        @NameInMap("InventoryCleanupPolicy")
+        @com.aliyun.core.annotation.NameInMap("InventoryCleanupPolicy")
         private String inventoryCleanupPolicy;
 
-        @NameInMap("InventoryId")
+        @com.aliyun.core.annotation.NameInMap("InventoryId")
         private String inventoryId;
 
         private OssDetail(Builder builder) {
@@ -465,12 +504,15 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private String inventoryId; 
 
             /**
-             * Indicates whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:
-             * <p>
+             * <p>Indicates whether the system deletes the inventory lists when a backup is completed. This parameter is valid only when OSS inventories are used. Valid values:</p>
+             * <ul>
+             * <li><strong>NO_CLEANUP</strong>: Inventory lists are not deleted.</li>
+             * <li><strong>DELETE_CURRENT</strong>: The current inventory list is deleted.</li>
+             * <li><strong>DELETE_CURRENT_AND_PREVIOUS</strong>: All inventory lists are deleted.</li>
+             * </ul>
              * 
-             * *   **NO_CLEANUP**: Inventory lists are not deleted.
-             * *   **DELETE_CURRENT**: The current inventory list is deleted.
-             * *   **DELETE_CURRENT_AND_PREVIOUS**: All inventory lists are deleted.
+             * <strong>example:</strong>
+             * <p>DELETE_CURRENT_AND_PREVIOUS</p>
              */
             public Builder inventoryCleanupPolicy(String inventoryCleanupPolicy) {
                 this.inventoryCleanupPolicy = inventoryCleanupPolicy;
@@ -478,11 +520,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OSS inventory. If this parameter is not empty, the OSS inventory is used for performance optimization.
-             * <p>
+             * <p>The name of the OSS inventory. If this parameter is not empty, the OSS inventory is used for performance optimization.</p>
+             * <ul>
+             * <li>If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included into your OSS bills.</li>
+             * <li>A certain amount of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.</li>
+             * </ul>
              * 
-             * *   If you want to back up more than 100 million OSS objects, we recommend that you use inventory lists to accelerate incremental backup. Storage fees for inventory lists are included into your OSS bills.
-             * *   A certain amount of time is required for OSS to generate inventory lists. Before inventory lists are generated, OSS objects may fail to be backed up. In this case, you can back up the OSS objects in the next backup cycle.
+             * <strong>example:</strong>
+             * <p>inventory_test</p>
              */
             public Builder inventoryId(String inventoryId) {
                 this.inventoryId = inventoryId;
@@ -496,38 +541,44 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyBindingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyBindingsResponseBody</p>
+     */
     public static class UdmDetail extends TeaModel {
-        @NameInMap("AppConsistent")
+        @com.aliyun.core.annotation.NameInMap("AppConsistent")
         private Boolean appConsistent;
 
-        @NameInMap("DestinationKmsKeyId")
+        @com.aliyun.core.annotation.NameInMap("DestinationKmsKeyId")
         private String destinationKmsKeyId;
 
-        @NameInMap("DiskIdList")
+        @com.aliyun.core.annotation.NameInMap("DiskIdList")
         private java.util.List < String > diskIdList;
 
-        @NameInMap("EnableFsFreeze")
+        @com.aliyun.core.annotation.NameInMap("EnableFsFreeze")
         private Boolean enableFsFreeze;
 
-        @NameInMap("EnableWriters")
+        @com.aliyun.core.annotation.NameInMap("EnableWriters")
         private Boolean enableWriters;
 
-        @NameInMap("ExcludeDiskIdList")
+        @com.aliyun.core.annotation.NameInMap("ExcludeDiskIdList")
         private java.util.List < String > excludeDiskIdList;
 
-        @NameInMap("PostScriptPath")
+        @com.aliyun.core.annotation.NameInMap("PostScriptPath")
         private String postScriptPath;
 
-        @NameInMap("PreScriptPath")
+        @com.aliyun.core.annotation.NameInMap("PreScriptPath")
         private String preScriptPath;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("SnapshotGroup")
+        @com.aliyun.core.annotation.NameInMap("SnapshotGroup")
         private Boolean snapshotGroup;
 
-        @NameInMap("TimeoutInSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutInSeconds")
         private Long timeoutInSeconds;
 
         private UdmDetail(Builder builder) {
@@ -643,7 +694,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             private Long timeoutInSeconds; 
 
             /**
-             * Indicates whether application consistency is enabled. You can enable application consistency only if all disks are ESSDs.
+             * <p>Indicates whether application consistency is enabled. You can enable application consistency only if all disks are ESSDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder appConsistent(Boolean appConsistent) {
                 this.appConsistent = appConsistent;
@@ -651,7 +705,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationKmsKeyId.
+             * <p>The ID of the custom KMS key in the destination region. If this parameter is not empty and geo-replication is enabled, the key is used for encrypted geo-replication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ed37b1e-da51-4187-aceb-9db4f9b7148b</p>
              */
             public Builder destinationKmsKeyId(String destinationKmsKeyId) {
                 this.destinationKmsKeyId = destinationKmsKeyId;
@@ -659,7 +716,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.
+             * <p>The IDs of the disks that need to be protected. If all disks need to be protected, this parameter is empty.</p>
              */
             public Builder diskIdList(java.util.List < String > diskIdList) {
                 this.diskIdList = diskIdList;
@@ -667,7 +724,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates whether Linux fsfreeze is enabled to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates whether to enable Linux fsfreeze to put file systems into the read-only state before application-consistent snapshots are created. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableFsFreeze(Boolean enableFsFreeze) {
                 this.enableFsFreeze = enableFsFreeze;
@@ -675,13 +735,15 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates whether application-consistent snapshots are created. Valid values:
-             * <p>
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates whether application-consistent snapshots are created. Valid values:</p>
+             * <ul>
+             * <li>true: Application-consistent snapshots are created.</li>
+             * <li>false: File system-consistent snapshots are created.</li>
+             * </ul>
+             * <p>Default value: true.</p>
              * 
-             * *   true: Application-consistent snapshots are created.
-             * *   false: File system-consistent snapshots are created.
-             * 
-             * Default value: true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableWriters(Boolean enableWriters) {
                 this.enableWriters = enableWriters;
@@ -689,7 +751,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the disks that do not need to be protected. If DiskIdList is not empty, this parameter is ignored.
+             * <p>The IDs of the disks that do not need to be protected. If the DiskIdList parameter is not empty, this parameter is ignored.</p>
              */
             public Builder excludeDiskIdList(java.util.List < String > excludeDiskIdList) {
                 this.excludeDiskIdList = excludeDiskIdList;
@@ -697,7 +759,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates the path of the post-thaw scripts that are executed after application-consistent snapshots are created.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates the path of the post-thaw scripts that are executed after application-consistent snapshots are created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/postscript.sh</p>
              */
             public Builder postScriptPath(String postScriptPath) {
                 this.postScriptPath = postScriptPath;
@@ -705,7 +770,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates the path of the pre-freeze scripts that are executed before application-consistent snapshots are created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/prescript.sh</p>
              */
             public Builder preScriptPath(String preScriptPath) {
                 this.preScriptPath = preScriptPath;
@@ -713,7 +781,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates the name of the RAM role that is required to create application-consistent snapshots.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates the name of the RAM role that is required to create application-consistent snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunECSInstanceForHbrRole</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -721,7 +792,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a snapshot-consistent group is created. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).
+             * <p>Indicates whether a snapshot-consistent group is created. You can create a snapshot-consistent group only if all disks are enhanced SSDs (ESSDs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder snapshotGroup(Boolean snapshotGroup) {
                 this.snapshotGroup = snapshotGroup;
@@ -729,7 +803,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is returned only if **AppConsistent** is set to **true**. This parameter indicates the I/O freeze timeout period. Default value: 30. Unit: seconds.
+             * <p>This parameter is required only if you set the <strong>AppConsistent</strong> parameter to <strong>true</strong>. This parameter indicates the I/O freeze timeout period. Default value: 30. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timeoutInSeconds(Long timeoutInSeconds) {
                 this.timeoutInSeconds = timeoutInSeconds;
@@ -743,20 +820,26 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyBindingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyBindingsResponseBody</p>
+     */
     public static class AdvancedOptions extends TeaModel {
-        @NameInMap("CommonFileSystemDetail")
+        @com.aliyun.core.annotation.NameInMap("CommonFileSystemDetail")
         private CommonFileSystemDetail commonFileSystemDetail;
 
-        @NameInMap("CommonNasDetail")
+        @com.aliyun.core.annotation.NameInMap("CommonNasDetail")
         private CommonNasDetail commonNasDetail;
 
-        @NameInMap("FileDetail")
+        @com.aliyun.core.annotation.NameInMap("FileDetail")
         private FileDetail fileDetail;
 
-        @NameInMap("OssDetail")
+        @com.aliyun.core.annotation.NameInMap("OssDetail")
         private OssDetail ossDetail;
 
-        @NameInMap("UdmDetail")
+        @com.aliyun.core.annotation.NameInMap("UdmDetail")
         private UdmDetail udmDetail;
 
         private AdvancedOptions(Builder builder) {
@@ -826,7 +909,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced options for on-premises NAS backup.
+             * <p>The advanced options for on-premises NAS backup.</p>
              */
             public Builder commonNasDetail(CommonNasDetail commonNasDetail) {
                 this.commonNasDetail = commonNasDetail;
@@ -834,7 +917,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced options for file backup.
+             * <p>The advanced options for file backup.</p>
              */
             public Builder fileDetail(FileDetail fileDetail) {
                 this.fileDetail = fileDetail;
@@ -842,7 +925,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced options for OSS backup.
+             * <p>The advanced options for OSS backup.</p>
              */
             public Builder ossDetail(OssDetail ossDetail) {
                 this.ossDetail = ossDetail;
@@ -850,7 +933,7 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced options for ECS instance backup.
+             * <p>The advanced options for ECS instance backup.</p>
              */
             public Builder udmDetail(UdmDetail udmDetail) {
                 this.udmDetail = udmDetail;
@@ -864,55 +947,172 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePolicyBindingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyBindingsResponseBody</p>
+     */
+    public static class HitTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private HitTags(Builder builder) {
+            this.key = builder.key;
+            this.operator = builder.operator;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HitTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String operator; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public HitTags build() {
+                return new HitTags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribePolicyBindingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePolicyBindingsResponseBody</p>
+     */
     public static class PolicyBindings extends TeaModel {
-        @NameInMap("AdvancedOptions")
+        @com.aliyun.core.annotation.NameInMap("AdvancedOptions")
         private AdvancedOptions advancedOptions;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedByTag")
+        private Boolean createdByTag;
+
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
 
-        @NameInMap("CrossAccountRoleName")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountRoleName")
         private String crossAccountRoleName;
 
-        @NameInMap("CrossAccountType")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountType")
         private String crossAccountType;
 
-        @NameInMap("CrossAccountUserId")
+        @com.aliyun.core.annotation.NameInMap("CrossAccountUserId")
         private Long crossAccountUserId;
 
-        @NameInMap("DataSourceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private String dataSourceId;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("PolicyBindingDescription")
+        @com.aliyun.core.annotation.NameInMap("Exclude")
+        private String exclude;
+
+        @com.aliyun.core.annotation.NameInMap("HitTags")
+        private java.util.List < HitTags> hitTags;
+
+        @com.aliyun.core.annotation.NameInMap("Include")
+        private String include;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyBindingDescription")
         private String policyBindingDescription;
 
-        @NameInMap("PolicyBindingId")
+        @com.aliyun.core.annotation.NameInMap("PolicyBindingId")
         private String policyBindingId;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("UpdatedTime")
+        @com.aliyun.core.annotation.NameInMap("SpeedLimit")
+        private String speedLimit;
+
+        @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
         private PolicyBindings(Builder builder) {
             this.advancedOptions = builder.advancedOptions;
+            this.createdByTag = builder.createdByTag;
             this.createdTime = builder.createdTime;
             this.crossAccountRoleName = builder.crossAccountRoleName;
             this.crossAccountType = builder.crossAccountType;
             this.crossAccountUserId = builder.crossAccountUserId;
             this.dataSourceId = builder.dataSourceId;
             this.disabled = builder.disabled;
+            this.exclude = builder.exclude;
+            this.hitTags = builder.hitTags;
+            this.include = builder.include;
             this.policyBindingDescription = builder.policyBindingDescription;
             this.policyBindingId = builder.policyBindingId;
             this.policyId = builder.policyId;
+            this.source = builder.source;
             this.sourceType = builder.sourceType;
+            this.speedLimit = builder.speedLimit;
             this.updatedTime = builder.updatedTime;
         }
 
@@ -929,6 +1129,13 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
          */
         public AdvancedOptions getAdvancedOptions() {
             return this.advancedOptions;
+        }
+
+        /**
+         * @return createdByTag
+         */
+        public Boolean getCreatedByTag() {
+            return this.createdByTag;
         }
 
         /**
@@ -974,6 +1181,27 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return exclude
+         */
+        public String getExclude() {
+            return this.exclude;
+        }
+
+        /**
+         * @return hitTags
+         */
+        public java.util.List < HitTags> getHitTags() {
+            return this.hitTags;
+        }
+
+        /**
+         * @return include
+         */
+        public String getInclude() {
+            return this.include;
+        }
+
+        /**
          * @return policyBindingDescription
          */
         public String getPolicyBindingDescription() {
@@ -995,10 +1223,24 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
          * @return sourceType
          */
         public String getSourceType() {
             return this.sourceType;
+        }
+
+        /**
+         * @return speedLimit
+         */
+        public String getSpeedLimit() {
+            return this.speedLimit;
         }
 
         /**
@@ -1010,20 +1252,26 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
 
         public static final class Builder {
             private AdvancedOptions advancedOptions; 
+            private Boolean createdByTag; 
             private Long createdTime; 
             private String crossAccountRoleName; 
             private String crossAccountType; 
             private Long crossAccountUserId; 
             private String dataSourceId; 
             private Boolean disabled; 
+            private String exclude; 
+            private java.util.List < HitTags> hitTags; 
+            private String include; 
             private String policyBindingDescription; 
             private String policyBindingId; 
             private String policyId; 
+            private String source; 
             private String sourceType; 
+            private String speedLimit; 
             private Long updatedTime; 
 
             /**
-             * The advanced options.
+             * <p>The advanced options.</p>
              */
             public Builder advancedOptions(AdvancedOptions advancedOptions) {
                 this.advancedOptions = advancedOptions;
@@ -1031,7 +1279,18 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup policy was created. This value is a UNIX timestamp. Unit: seconds.
+             * CreatedByTag.
+             */
+            public Builder createdByTag(Boolean createdByTag) {
+                this.createdByTag = createdByTag;
+                return this;
+            }
+
+            /**
+             * <p>The time when the backup policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1661399570</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -1039,7 +1298,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+             * <p>The name of the RAM role that is created within the source Alibaba Cloud account and assigned to the current Alibaba Cloud account to authorize the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hbrcrossrole</p>
              */
             public Builder crossAccountRoleName(String crossAccountRoleName) {
                 this.crossAccountRoleName = crossAccountRoleName;
@@ -1047,11 +1309,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:
-             * <p>
+             * <p>Indicates whether data is backed up within the same Alibaba Cloud account or across Alibaba Cloud accounts. Valid values:</p>
+             * <ul>
+             * <li>SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.</li>
+             * <li>CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.</li>
+             * </ul>
              * 
-             * *   SELF_ACCOUNT: Data is backed up within the same Alibaba Cloud account.
-             * *   CROSS_ACCOUNT: Data is backed up across Alibaba Cloud accounts.
+             * <strong>example:</strong>
+             * <p>CROSS_ACCOUNT</p>
              */
             public Builder crossAccountType(String crossAccountType) {
                 this.crossAccountType = crossAccountType;
@@ -1059,7 +1324,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.
+             * <p>The ID of the source Alibaba Cloud account that authorizes the current Alibaba Cloud account to back up data across Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1480************</p>
              */
             public Builder crossAccountUserId(Long crossAccountUserId) {
                 this.crossAccountUserId = crossAccountUserId;
@@ -1067,7 +1335,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data source.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-8vb************5ly</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -1075,11 +1346,14 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the backup policy is enabled for the data source. Valid values:
-             * <p>
+             * <p>Indicates whether the backup policy is enabled for the data source. Valid values:</p>
+             * <ul>
+             * <li>true: The backup policy is disabled.</li>
+             * <li>false: The backup policy is enabled.</li>
+             * </ul>
              * 
-             * *   true: The backup policy is disabled.
-             * *   false: The backup policy is enabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -1087,7 +1361,34 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the association.
+             * Exclude.
+             */
+            public Builder exclude(String exclude) {
+                this.exclude = exclude;
+                return this;
+            }
+
+            /**
+             * HitTags.
+             */
+            public Builder hitTags(java.util.List < HitTags> hitTags) {
+                this.hitTags = hitTags;
+                return this;
+            }
+
+            /**
+             * Include.
+             */
+            public Builder include(String include) {
+                this.include = include;
+                return this;
+            }
+
+            /**
+             * <p>The description of the association.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>po-000<strong><strong><strong><strong><strong><strong>eslc-i-uf6</strong></strong></strong></strong></strong></strong>y5g</p>
              */
             public Builder policyBindingDescription(String policyBindingDescription) {
                 this.policyBindingDescription = policyBindingDescription;
@@ -1095,7 +1396,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the association.
+             * <p>The ID of the association.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pd-000************slc</p>
              */
             public Builder policyBindingId(String policyBindingId) {
                 this.policyBindingId = policyBindingId;
@@ -1103,7 +1407,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The policy ID.
+             * <p>The ID of the backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>po-000************56y</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -1111,10 +1418,21 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li><strong>UDM_ECS</strong>: ECS instances</li>
+             * </ul>
              * 
-             * *   **UDM_ECS**: ECS instances
+             * <strong>example:</strong>
+             * <p>UDM_ECS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1122,7 +1440,18 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the backup policy was updated. The value is a UNIX timestamp. Unit: seconds.
+             * SpeedLimit.
+             */
+            public Builder speedLimit(String speedLimit) {
+                this.speedLimit = speedLimit;
+                return this;
+            }
+
+            /**
+             * <p>The time when the backup policy was updated. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1653611573</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

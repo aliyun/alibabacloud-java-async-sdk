@@ -1,45 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbr20170908.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVaultRequest} extends {@link RequestModel}
  *
  * <p>CreateVaultRequest</p>
  */
 public class CreateVaultRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EncryptType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
     private String encryptType;
 
-    @Query
-    @NameInMap("KmsKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsKeyId")
     private String kmsKeyId;
 
-    @Query
-    @NameInMap("VaultName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultName;
 
-    @Query
-    @NameInMap("VaultRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vaultRegionId;
 
-    @Query
-    @NameInMap("VaultStorageClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultStorageClass")
     private String vaultStorageClass;
 
-    @Query
-    @NameInMap("VaultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VaultType")
     private String vaultType;
 
     private CreateVaultRequest(Builder builder) {
@@ -140,7 +140,10 @@ public class CreateVaultRequest extends Request {
         } 
 
         /**
-         * The description of the backup vault. The description must be 0 to 255 characters in length.
+         * <p>The description of the backup vault. The description must be 0 to 255 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -149,11 +152,14 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:
-         * <p>
+         * <p>The method that is used to encrypt the source data. This parameter is valid only if you set the VaultType parameter to STANDARD or OTS_BACKUP. Valid values:</p>
+         * <ul>
+         * <li><strong>HBR_PRIVATE</strong>: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).</li>
+         * <li><strong>KMS</strong>: The source data is encrypted by using Key Management Service (KMS).</li>
+         * </ul>
          * 
-         * *   **HBR_PRIVATE**: The source data is encrypted by using the built-in encryption method of Hybrid Backup Recovery (HBR).
-         * *   **KMS**: The source data is encrypted by using Key Management Service (KMS).
+         * <strong>example:</strong>
+         * <p>KMS</p>
          */
         public Builder encryptType(String encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -162,7 +168,10 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.
+         * <p>The customer master key (CMK) created in KMS or the alias of the key. This parameter is required only if you set the EncryptType parameter to KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alias/yzs-hhht</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putQueryParameter("KmsKeyId", kmsKeyId);
@@ -171,7 +180,10 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * The name of the backup vault. The name must be 1 to 64 characters in length.
+         * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backupvaultname</p>
          */
         public Builder vaultName(String vaultName) {
             this.putQueryParameter("VaultName", vaultName);
@@ -180,7 +192,10 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * The ID of the region where the backup vault resides.
+         * <p>The ID of the region where the backup vault resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder vaultRegionId(String vaultRegionId) {
             this.putQueryParameter("VaultRegionId", vaultRegionId);
@@ -189,7 +204,10 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * The storage type of the backup vault. Valid value: **STANDARD**, which indicates standard storage.
+         * <p>The storage type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder vaultStorageClass(String vaultStorageClass) {
             this.putQueryParameter("VaultStorageClass", vaultStorageClass);
@@ -198,11 +216,14 @@ public class CreateVaultRequest extends Request {
         }
 
         /**
-         * The type of the backup vault. Valid value
-         * <p>
+         * <p>The type of the backup vault. Valid value</p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: standard backup vault</li>
+         * <li><strong>OTS_BACKUP</strong>: backup vault for Tablestore</li>
+         * </ul>
          * 
-         * *   **STANDARD**: standard backup vault
-         * *   **OTS_BACKUP**: backup vault for Tablestore
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder vaultType(String vaultType) {
             this.putQueryParameter("VaultType", vaultType);
