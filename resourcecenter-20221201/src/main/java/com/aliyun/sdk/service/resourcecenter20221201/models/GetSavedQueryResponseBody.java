@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSavedQueryResponseBody} extends {@link TeaModel}
  *
  * <p>GetSavedQueryResponseBody</p>
  */
 public class GetSavedQueryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SavedQuery")
+    @com.aliyun.core.annotation.NameInMap("SavedQuery")
     private SavedQuery savedQuery;
 
     private GetSavedQueryResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class GetSavedQueryResponseBody extends TeaModel {
         private SavedQuery savedQuery; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6D98D9B0-318D-56A4-910C-93B5F945AF2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class GetSavedQueryResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the custom query template.
+         * <p>The information about the template.</p>
          */
         public Builder savedQuery(SavedQuery savedQuery) {
             this.savedQuery = savedQuery;
@@ -71,23 +74,29 @@ public class GetSavedQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSavedQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSavedQueryResponseBody</p>
+     */
     public static class SavedQuery extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("QueryId")
+        @com.aliyun.core.annotation.NameInMap("QueryId")
         private String queryId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private SavedQuery(Builder builder) {
@@ -158,7 +167,10 @@ public class GetSavedQueryResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the template was created.
+             * <p>The time when the template was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-30T01:43:16Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +178,10 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +189,10 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The query statement in the template.
+             * <p>The query statement in the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM resources;</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -182,7 +200,10 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query of All Alibaba Cloud Resources</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +211,10 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sq-GeAck****</p>
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;
@@ -198,7 +222,10 @@ public class GetSavedQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was last updated.
+             * <p>The time when the template was updated. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-30T01:43:16Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

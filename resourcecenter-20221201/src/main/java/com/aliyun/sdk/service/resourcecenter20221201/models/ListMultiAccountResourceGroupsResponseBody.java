@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMultiAccountResourceGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMultiAccountResourceGroupsResponseBody</p>
  */
 public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroups")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroups")
     private java.util.List < ResourceGroups> resourceGroups;
 
     private ListMultiAccountResourceGroupsResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         private java.util.List < ResourceGroups> resourceGroups; 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAU5VsT9R1adMTuz9GzginZ3Y+7Y/5JATS+6q5GK9kT75</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,10 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FF0A66E-781F-51EE-9531-928F197558F2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resource groups.
+         * <p>The information about the resource groups.</p>
          */
         public Builder resourceGroups(java.util.List < ResourceGroups> resourceGroups) {
             this.resourceGroups = resourceGroups;
@@ -91,23 +97,29 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMultiAccountResourceGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMultiAccountResourceGroupsResponseBody</p>
+     */
     public static class ResourceGroups extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceGroups(Builder builder) {
@@ -178,7 +190,10 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the management account or member of the resource directory.
+             * <p>The ID of the management account or member of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1394339739****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -186,7 +201,10 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource group was created.
+             * <p>The time when the resource group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-30T09:20:08Z</p>
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -194,7 +212,10 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the resource group.
+             * <p>The display name of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -202,7 +223,10 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzawhxxc****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -210,7 +234,10 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the resource group.
+             * <p>The unique identifier of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-project</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,12 +245,15 @@ public class ListMultiAccountResourceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource group. Valid values:
-             * <p>
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li>Creating: The resource group is being created.</li>
+             * <li>OK: The resource group is created.</li>
+             * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+             * </ul>
              * 
-             * *   Creating: The resource group is being created.
-             * *   OK: The resource group is created.
-             * *   PendingDelete: The resource group is waiting to be deleted.
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,33 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMultiAccountResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>SearchMultiAccountResourcesResponseBody</p>
  */
 public class SearchMultiAccountResourcesResponseBody extends TeaModel {
-    @NameInMap("Filters")
+    @com.aliyun.core.annotation.NameInMap("Filters")
     private java.util.List < Filters> filters;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < Resources> resources;
 
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
     private SearchMultiAccountResourcesResponseBody(Builder builder) {
@@ -98,7 +98,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         private String scope; 
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.filters = filters;
@@ -106,7 +106,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFA806B9-7F36-55AB-8B7A-D680C2C5EE57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resources.
+         * <p>The information about the resources.</p>
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -138,13 +147,16 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The search scope.
-         * <p>
+         * <p>The search scope.</p>
+         * <ul>
+         * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched.</li>
+         * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.</li>
+         * <li>ID of a folder: Resources within all members in the folder are searched.</li>
+         * <li>ID of a member: Resources within the member are searched.</li>
+         * </ul>
          * 
-         * *   ID of a resource directory: Resources within the management account and all members of the resource directory are searched.
-         * *   ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.
-         * *   ID of a folder: Resources within all members in the folder are searched.
-         * *   ID of a member: Resources within the member are searched.
+         * <strong>example:</strong>
+         * <p>rd-r4****</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -157,14 +169,20 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchMultiAccountResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMultiAccountResourcesResponseBody</p>
+     */
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("MatchType")
+        @com.aliyun.core.annotation.NameInMap("MatchType")
         private String matchType;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private Filters(Builder builder) {
@@ -208,7 +226,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * The key of the filter condition.
+             * <p>The key of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -216,7 +237,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The matching mode.
+             * <p>The matching mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equals</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -224,7 +248,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the filter condition.
+             * <p>The values of the filter condition.</p>
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -238,14 +262,20 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMultiAccountResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMultiAccountResourcesResponseBody</p>
+     */
     public static class IpAddressAttributes extends TeaModel {
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private IpAddressAttributes(Builder builder) {
@@ -289,7 +319,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -297,11 +327,14 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: the Internet</li>
+             * <li><strong>Private</strong>: internal network</li>
+             * </ul>
              * 
-             * *   **Public**: the Internet
-             * *   **Private**: internal network
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -309,7 +342,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ipv4</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -323,11 +359,17 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMultiAccountResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMultiAccountResourcesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -362,7 +404,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +415,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -384,41 +432,47 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMultiAccountResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchMultiAccountResourcesResponseBody</p>
+     */
     public static class Resources extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("IpAddressAttributes")
+        @com.aliyun.core.annotation.NameInMap("IpAddressAttributes")
         private java.util.List < IpAddressAttributes> ipAddressAttributes;
 
-        @NameInMap("IpAddresses")
+        @com.aliyun.core.annotation.NameInMap("IpAddresses")
         private java.util.List < String > ipAddresses;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Resources(Builder builder) {
@@ -543,7 +597,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the management account or member of the resource directory.
+             * <p>The ID of the management account or member of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151266687691****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -551,10 +608,13 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created.
-             * <p>
+             * <p>The time when the resource was created.</p>
+             * <blockquote>
+             * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+             * </blockquote>
              * 
-             * >  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
+             * <strong>example:</strong>
+             * <p>2021-06-30T09:20:08Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -562,7 +622,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource expires.
+             * <p>The time when the resource expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-14T14:35:45Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -570,7 +633,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The attributes of the IP address.
+             * <p>The attributes of the IP address.</p>
              */
             public Builder ipAddressAttributes(java.util.List < IpAddressAttributes> ipAddressAttributes) {
                 this.ipAddressAttributes = ipAddressAttributes;
@@ -578,10 +641,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses.
-             * <p>
-             * 
-             * >  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
+             * <p>The IP addresses.</p>
+             * <blockquote>
+             * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+             * </blockquote>
              */
             public Builder ipAddresses(java.util.List < String > ipAddresses) {
                 this.ipAddresses = ipAddresses;
@@ -589,7 +652,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -597,7 +663,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzawhxxc****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -605,7 +674,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vtb-bp11lbh452fr8940s****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -613,7 +685,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group1</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -621,7 +696,10 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::VPC::RouteTable</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -629,7 +707,7 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -637,10 +715,13 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
-             * <p>
+             * <p>The zone ID.</p>
+             * <blockquote>
+             * <p> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+             * </blockquote>
              * 
-             * >  Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-k</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

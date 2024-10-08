@@ -1,35 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMultiAccountResourceConfigurationRequest} extends {@link RequestModel}
  *
  * <p>GetMultiAccountResourceConfigurationRequest</p>
  */
 public class GetMultiAccountResourceConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceRegionId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private GetMultiAccountResourceConfigurationRequest(Builder builder) {
@@ -100,7 +100,10 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the management account or member of the resource directory.
+         * <p>The ID of the management account or member of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1619302****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -109,7 +112,10 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-eb3hji****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,7 +124,10 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID of the resource.
+         * <p>The region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
@@ -127,7 +136,10 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::VPC::RouteTable</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

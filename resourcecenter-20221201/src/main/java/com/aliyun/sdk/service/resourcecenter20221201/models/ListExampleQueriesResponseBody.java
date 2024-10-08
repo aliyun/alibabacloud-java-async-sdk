@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExampleQueriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListExampleQueriesResponseBody</p>
  */
 public class ListExampleQueriesResponseBody extends TeaModel {
-    @NameInMap("ExampleQueries")
+    @com.aliyun.core.annotation.NameInMap("ExampleQueries")
     private java.util.List < ExampleQueries> exampleQueries;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListExampleQueriesResponseBody(Builder builder) {
@@ -74,7 +74,7 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the sample query templates.
+         * <p>The information about the sample query templates.</p>
          */
         public Builder exampleQueries(java.util.List < ExampleQueries> exampleQueries) {
             this.exampleQueries = exampleQueries;
@@ -82,7 +82,10 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries per page.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +93,10 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +104,10 @@ public class ListExampleQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D696E6EF-3A6D-5770-801E-4982081FE4D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,14 +120,20 @@ public class ListExampleQueriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListExampleQueriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListExampleQueriesResponseBody</p>
+     */
     public static class ExampleQueries extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("QueryId")
+        @com.aliyun.core.annotation.NameInMap("QueryId")
         private String queryId;
 
         private ExampleQueries(Builder builder) {
@@ -162,7 +177,10 @@ public class ListExampleQueriesResponseBody extends TeaModel {
             private String queryId; 
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +188,10 @@ public class ListExampleQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query of All Alibaba Cloud Resources</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +199,10 @@ public class ListExampleQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sq-0PfKy****</p>
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;

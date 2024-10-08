@@ -1,28 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteSQLQueryResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteSQLQueryResponseBody</p>
  */
 public class ExecuteSQLQueryResponseBody extends TeaModel {
-    @NameInMap("Columns")
+    @com.aliyun.core.annotation.NameInMap("Columns")
     private java.util.List < Columns> columns;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rows")
+    @com.aliyun.core.annotation.NameInMap("Rows")
     private java.util.List < ? > rows;
 
     private ExecuteSQLQueryResponseBody(Builder builder) {
         this.columns = builder.columns;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.rows = builder.rows;
     }
@@ -43,6 +51,20 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -58,11 +80,13 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < Columns> columns; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String requestId; 
         private java.util.List < ? > rows; 
 
         /**
-         * The columns.
+         * <p>The columns.</p>
          */
         public Builder columns(java.util.List < Columns> columns) {
             this.columns = columns;
@@ -70,7 +94,26 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D696E6EF-3A6D-5770-801E-4982081FE4D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +121,7 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
         }
 
         /**
-         * An array of search results.
+         * <p>An array of search results.</p>
          */
         public Builder rows(java.util.List < ? > rows) {
             this.rows = rows;
@@ -91,11 +134,17 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteSQLQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteSQLQueryResponseBody</p>
+     */
     public static class Columns extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Columns(Builder builder) {
@@ -130,7 +179,10 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>resource_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -138,7 +190,10 @@ public class ExecuteSQLQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the column.
+             * <p>The type of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder type(String type) {
                 this.type = type;

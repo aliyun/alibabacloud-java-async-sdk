@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypesRequest} extends {@link RequestModel}
  *
  * <p>ListResourceTypesRequest</p>
  */
 public class ListResourceTypesRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("Query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
     private java.util.List < String > query;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private ListResourceTypesRequest(Builder builder) {
@@ -82,11 +82,14 @@ public class ListResourceTypesRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * </ul>
          * 
-         * *   zh-CN: Chinese
-         * *   en-US: English
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -95,7 +98,7 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * The query conditions.
+         * <p>The query conditions.</p>
          */
         public Builder query(java.util.List < String > query) {
             this.putQueryParameter("Query", query);
@@ -104,10 +107,11 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * The resource type.
-         * <p>
+         * <p>The resource type.</p>
+         * <p>For more information about the resource types that are supported by Resource Center, see <a href="~~477798~~">Services that work with Resource Center</a>.</p>
          * 
-         * For more information about the resource types that are supported by Resource Center, see [Services that work with Resource Center](~~477798~~).
+         * <strong>example:</strong>
+         * <p>ACS::ACK::Cluster</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

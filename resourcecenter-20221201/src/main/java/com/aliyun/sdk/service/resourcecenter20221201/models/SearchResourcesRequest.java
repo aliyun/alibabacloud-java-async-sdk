@@ -1,36 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchResourcesRequest} extends {@link RequestModel}
  *
  * <p>SearchResourcesRequest</p>
  */
 public class SearchResourcesRequest extends Request {
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private java.util.List < Filter> filter;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SortCriterion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortCriterion")
     private SortCriterion sortCriterion;
 
     private SearchResourcesRequest(Builder builder) {
@@ -111,7 +111,7 @@ public class SearchResourcesRequest extends Request {
         } 
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -120,12 +120,12 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 20.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 20.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -134,10 +134,11 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>If the total number of entries returned for the current request exceeds the value of the <code>MaxResults</code> parameter, the entries are truncated. In this case, you can use the <code>token</code> to initiate another request and obtain the remaining entries.</p>
          * 
-         * If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the `token` to initiate another request and obtain the remaining entries.
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -146,7 +147,10 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -155,7 +159,7 @@ public class SearchResourcesRequest extends Request {
         }
 
         /**
-         * The method that is used to sort the entries returned.
+         * <p>The method that is used to sort the entries returned.</p>
          */
         public Builder sortCriterion(SortCriterion sortCriterion) {
             this.putQueryParameter("SortCriterion", sortCriterion);
@@ -170,14 +174,20 @@ public class SearchResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>SearchResourcesRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("MatchType")
+        @com.aliyun.core.annotation.NameInMap("MatchType")
         private String matchType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private Filter(Builder builder) {
@@ -221,7 +231,10 @@ public class SearchResourcesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The key of the filter condition. For more information, see `Supported filter parameters`.
+             * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -229,10 +242,11 @@ public class SearchResourcesRequest extends Request {
             }
 
             /**
-             * The matching mode.
-             * <p>
+             * <p>The matching mode.</p>
+             * <p>The value Equals indicates an equal match.</p>
              * 
-             * The value Equals indicates an equal match.
+             * <strong>example:</strong>
+             * <p>Equals</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -240,7 +254,7 @@ public class SearchResourcesRequest extends Request {
             }
 
             /**
-             * The values of the filter condition.
+             * <p>The values of the filter condition.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -254,11 +268,17 @@ public class SearchResourcesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>SearchResourcesRequest</p>
+     */
     public static class SortCriterion extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private String order;
 
         private SortCriterion(Builder builder) {
@@ -293,10 +313,11 @@ public class SearchResourcesRequest extends Request {
             private String order; 
 
             /**
-             * The attribute based on which the entries are sorted.
-             * <p>
+             * <p>The attribute based on which the entries are sorted.</p>
+             * <p>The value CreateTime indicates the creation time of resources.</p>
              * 
-             * The value CreateTime indicates the creation time of resources.
+             * <strong>example:</strong>
+             * <p>CreateTime</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,11 +325,14 @@ public class SearchResourcesRequest extends Request {
             }
 
             /**
-             * The order in which the entries are sorted. Valid values:
-             * <p>
+             * <p>The order in which the entries are sorted. Valid values:</p>
+             * <ul>
+             * <li>ASC: The entries are sorted in ascending order. This value is the default value.</li>
+             * <li>DESC: The entries are sorted in descending order.</li>
+             * </ul>
              * 
-             * *   ASC: The entries are sorted in ascending order. This value is the default value.
-             * *   DESC: The entries are sorted in descending order.
+             * <strong>example:</strong>
+             * <p>ASC</p>
              */
             public Builder order(String order) {
                 this.order = order;

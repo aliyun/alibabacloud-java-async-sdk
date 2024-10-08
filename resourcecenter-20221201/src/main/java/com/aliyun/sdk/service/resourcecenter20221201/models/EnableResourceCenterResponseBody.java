@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableResourceCenterResponseBody} extends {@link TeaModel}
  *
  * <p>EnableResourceCenterResponseBody</p>
  */
 public class EnableResourceCenterResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private EnableResourceCenterResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class EnableResourceCenterResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45357BEF-AB50-5E4D-B05D-5A882A4BE924</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,11 +61,14 @@ public class EnableResourceCenterResponseBody extends TeaModel {
         }
 
         /**
-         * The activation status of the service. Valid values:
-         * <p>
+         * <p>The activation status of the service. Valid values:</p>
+         * <ul>
+         * <li>Pending: The service is being activated.</li>
+         * <li>Enabled: The service is activated.</li>
+         * </ul>
          * 
-         * *   Pending: The service is being activated.
-         * *   Enabled: The service is activated.
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         public Builder status(String status) {
             this.status = status;

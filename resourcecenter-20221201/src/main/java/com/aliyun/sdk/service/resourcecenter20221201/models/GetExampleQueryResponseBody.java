@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExampleQueryResponseBody} extends {@link TeaModel}
  *
  * <p>GetExampleQueryResponseBody</p>
  */
 public class GetExampleQueryResponseBody extends TeaModel {
-    @NameInMap("ExampleQuery")
+    @com.aliyun.core.annotation.NameInMap("ExampleQuery")
     private ExampleQuery exampleQuery;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetExampleQueryResponseBody(Builder builder) {
@@ -50,7 +50,7 @@ public class GetExampleQueryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the sample query template.
+         * <p>The information about the sample query template.</p>
          */
         public Builder exampleQuery(ExampleQuery exampleQuery) {
             this.exampleQuery = exampleQuery;
@@ -58,7 +58,10 @@ public class GetExampleQueryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36A3D9BE-B607-5993-B546-7E19EF65DC00</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +74,23 @@ public class GetExampleQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetExampleQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExampleQueryResponseBody</p>
+     */
     public static class ExampleQuery extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("QueryId")
+        @com.aliyun.core.annotation.NameInMap("QueryId")
         private String queryId;
 
         private ExampleQuery(Builder builder) {
@@ -134,7 +143,10 @@ public class GetExampleQueryResponseBody extends TeaModel {
             private String queryId; 
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -142,7 +154,29 @@ public class GetExampleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The query statement in the template.
+             * <p>The query statement in the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT
+             *   resource_id,
+             *   resource_name,
+             *   region_id,
+             *   zone_id,
+             *   resource_type,
+             *   account_id,
+             *   create_time,
+             *   resource_group_id,
+             *   tags,
+             *   ip_addresses,
+             *   vpc_id,
+             *   v_switch_id
+             * FROM
+             *   resources
+             * ORDER BY
+             *   resource_type,
+             *   resource_id
+             * LIMIT
+             *   1000 OFFSET 0;</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -150,7 +184,10 @@ public class GetExampleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query of All Alibaba Cloud Resources</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +195,10 @@ public class GetExampleQueryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sq-0PfKy****</p>
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;

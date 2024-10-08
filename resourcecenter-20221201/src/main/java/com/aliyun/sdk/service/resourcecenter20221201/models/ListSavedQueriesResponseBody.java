@@ -1,27 +1,27 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSavedQueriesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSavedQueriesResponseBody</p>
  */
 public class ListSavedQueriesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SavedQueries")
+    @com.aliyun.core.annotation.NameInMap("SavedQueries")
     private java.util.List < SavedQueries> savedQueries;
 
     private ListSavedQueriesResponseBody(Builder builder) {
@@ -74,7 +74,10 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         private java.util.List < SavedQueries> savedQueries; 
 
         /**
-         * The maximum number of entries per page.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +85,10 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARfZmVDe9NvRXloR5+8CK9nNJufMdRA7W1miLC1P****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +96,10 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D696E6EF-3A6D-5770-801E-4982081FE4D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +107,7 @@ public class ListSavedQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the custom query templates.
+         * <p>The information about the custom query templates.</p>
          */
         public Builder savedQueries(java.util.List < SavedQueries> savedQueries) {
             this.savedQueries = savedQueries;
@@ -111,20 +120,26 @@ public class ListSavedQueriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSavedQueriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSavedQueriesResponseBody</p>
+     */
     public static class SavedQueries extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("QueryId")
+        @com.aliyun.core.annotation.NameInMap("QueryId")
         private String queryId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private SavedQueries(Builder builder) {
@@ -186,7 +201,10 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the template was created.
+             * <p>The time when the template was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-13T05:50:35Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -194,7 +212,10 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -202,7 +223,10 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Query of All Alibaba Cloud Resources</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +234,10 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sq-GeAck****</p>
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;
@@ -218,7 +245,10 @@ public class ListSavedQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was last updated.
+             * <p>The time when the template was updated. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-14 10:27:07</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMultiAccountResourceCenterServiceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetMultiAccountResourceCenterServiceStatusResponseBody</p>
  */
 public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaModel {
-    @NameInMap("InitialStatus")
+    @com.aliyun.core.annotation.NameInMap("InitialStatus")
     private String initialStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceStatus")
+    @com.aliyun.core.annotation.NameInMap("ServiceStatus")
     private String serviceStatus;
 
     private GetMultiAccountResourceCenterServiceStatusResponseBody(Builder builder) {
@@ -62,11 +62,14 @@ public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaM
         private String serviceStatus; 
 
         /**
-         * The initialization status of the feature. Valid values:
-         * <p>
+         * <p>The initialization status of the feature. Valid values:</p>
+         * <ul>
+         * <li>Pending: The feature is being initialized.</li>
+         * <li>Finished: The feature is initialized.</li>
+         * </ul>
          * 
-         * *   Pending: The feature is being initialized.
-         * *   Finished: The feature is initialized.
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         public Builder initialStatus(String initialStatus) {
             this.initialStatus = initialStatus;
@@ -74,7 +77,10 @@ public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaM
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81671397-1425-51F1-A144-4799E01BEBFF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,11 +88,14 @@ public class GetMultiAccountResourceCenterServiceStatusResponseBody extends TeaM
         }
 
         /**
-         * The status of the feature. Valid values:
-         * <p>
+         * <p>The status of the feature. Valid values:</p>
+         * <ul>
+         * <li>Enabled: The feature is enabled.</li>
+         * <li>Disabled: The feature is disabled.</li>
+         * </ul>
          * 
-         * *   Enabled: The feature is enabled.
-         * *   Disabled: The feature is disabled.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = serviceStatus;

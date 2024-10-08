@@ -1,30 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceConfigurationRequest} extends {@link RequestModel}
  *
  * <p>GetResourceConfigurationRequest</p>
  */
 public class GetResourceConfigurationRequest extends Request {
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceRegionId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private GetResourceConfigurationRequest(Builder builder) {
@@ -85,7 +85,10 @@ public class GetResourceConfigurationRequest extends Request {
         } 
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bp1kyg72m****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -94,7 +97,10 @@ public class GetResourceConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID of the resource.
+         * <p>The region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.putQueryParameter("ResourceRegionId", resourceRegionId);
@@ -103,10 +109,11 @@ public class GetResourceConfigurationRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>For more information about the resource types supported by Resource Center, see <a href="~~477798~~">Services that work with Resource Center</a>.</p>
          * 
-         * For more information about the resource types supported by Resource Center, see [Services that work with Resource Center](~~477798~~).
+         * <strong>example:</strong>
+         * <p>ACS::VPC::RouteTable</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

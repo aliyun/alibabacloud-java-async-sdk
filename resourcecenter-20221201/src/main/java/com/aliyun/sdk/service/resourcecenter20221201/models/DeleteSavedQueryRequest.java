@@ -1,20 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSavedQueryRequest} extends {@link RequestModel}
  *
  * <p>DeleteSavedQueryRequest</p>
  */
 public class DeleteSavedQueryRequest extends Request {
-    @Query
-    @NameInMap("QueryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queryId;
 
     private DeleteSavedQueryRequest(Builder builder) {
@@ -55,10 +55,11 @@ public class DeleteSavedQueryRequest extends Request {
         } 
 
         /**
-         * The ID of the template.
-         * <p>
+         * <p>The ID of the template.</p>
+         * <p>You can call the <a href="~~ListSavedQueries~~">ListSavedQueries</a> operation to obtain the template ID.</p>
          * 
-         * You can call the [ListSavedQueries](~~ListSavedQueries~~) operation to obtain the template ID.
+         * <strong>example:</strong>
+         * <p>sq-GeAck****</p>
          */
         public Builder queryId(String queryId) {
             this.putQueryParameter("QueryId", queryId);

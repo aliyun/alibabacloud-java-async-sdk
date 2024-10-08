@@ -1,37 +1,37 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchMultiAccountResourcesRequest} extends {@link RequestModel}
  *
  * <p>SearchMultiAccountResourcesRequest</p>
  */
 public class SearchMultiAccountResourcesRequest extends Request {
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private java.util.List < Filter> filter;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Scope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scope;
 
-    @Query
-    @NameInMap("SortCriterion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortCriterion")
     private SortCriterion sortCriterion;
 
     private SearchMultiAccountResourcesRequest(Builder builder) {
@@ -112,7 +112,7 @@ public class SearchMultiAccountResourcesRequest extends Request {
         } 
 
         /**
-         * The filter conditions.
+         * <p>The filter conditions.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -121,12 +121,12 @@ public class SearchMultiAccountResourcesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page.
-         * <p>
+         * <p>The maximum number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 20.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 20.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -135,10 +135,11 @@ public class SearchMultiAccountResourcesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
-         * <p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>If the total number of entries returned for the current request exceeds the value of the <code>MaxResults</code> parameter, the entries are truncated. In this case, you can use the token to initiate another request and obtain the remaining entries.``</p>
          * 
-         * If the total number of entries returned for the current request exceeds the value of the `MaxResults` parameter, the entries are truncated. In this case, you can use the token to initiate another request and obtain the remaining entries.``
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -147,13 +148,16 @@ public class SearchMultiAccountResourcesRequest extends Request {
         }
 
         /**
-         * The search scope. You can set the value to one of the following items:
-         * <p>
+         * <p>The search scope. You can set the value to one of the following items:</p>
+         * <ul>
+         * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="~~159995~~">GetResourceDirectory</a> operation to obtain the ID.</li>
+         * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="~~159997~~">ListFoldersForParent</a> operation to obtain the ID.</li>
+         * <li>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="~~159997~~">ListFoldersForParent</a> operation to obtain the ID.</li>
+         * <li>ID of a member: Resources within the member are searched. You can call the <a href="~~160016~~">ListAccounts</a> operation to obtain the ID.</li>
+         * </ul>
          * 
-         * *   ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the [GetResourceDirectory](~~159995~~) operation to obtain the ID.
-         * *   ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.
-         * *   ID of a folder: Resources within all members in the folder are searched. You can call the [ListFoldersForParent](~~159997~~) operation to obtain the ID.
-         * *   ID of a member: Resources within the member are searched. You can call the [ListAccounts](~~160016~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>rd-r4****</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -162,7 +166,7 @@ public class SearchMultiAccountResourcesRequest extends Request {
         }
 
         /**
-         * The method that is used to sort the entries returned.
+         * <p>The method that is used to sort the entries returned.</p>
          */
         public Builder sortCriterion(SortCriterion sortCriterion) {
             this.putQueryParameter("SortCriterion", sortCriterion);
@@ -177,14 +181,20 @@ public class SearchMultiAccountResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SearchMultiAccountResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>SearchMultiAccountResourcesRequest</p>
+     */
     public static class Filter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("MatchType")
+        @com.aliyun.core.annotation.NameInMap("MatchType")
         private String matchType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private Filter(Builder builder) {
@@ -228,7 +238,10 @@ public class SearchMultiAccountResourcesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * The key of the filter condition. For more information, see `Supported filter parameters`.
+             * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ResourceGroupId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,10 +249,11 @@ public class SearchMultiAccountResourcesRequest extends Request {
             }
 
             /**
-             * The matching mode.
-             * <p>
+             * <p>The matching mode.</p>
+             * <p>The value Equals indicates an equal match.</p>
              * 
-             * The value Equals indicates an equal match.
+             * <strong>example:</strong>
+             * <p>Equals</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -247,7 +261,7 @@ public class SearchMultiAccountResourcesRequest extends Request {
             }
 
             /**
-             * The values of the filter condition.
+             * <p>The values of the filter condition.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -261,11 +275,17 @@ public class SearchMultiAccountResourcesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchMultiAccountResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>SearchMultiAccountResourcesRequest</p>
+     */
     public static class SortCriterion extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private String order;
 
         private SortCriterion(Builder builder) {
@@ -300,10 +320,11 @@ public class SearchMultiAccountResourcesRequest extends Request {
             private String order; 
 
             /**
-             * The attribute based on which the entries are sorted.
-             * <p>
+             * <p>The attribute based on which the entries are sorted.</p>
+             * <p>The value CreateTime indicates the creation time of resources.</p>
              * 
-             * The value CreateTime indicates the creation time of resources.
+             * <strong>example:</strong>
+             * <p>CreateTime</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -311,11 +332,14 @@ public class SearchMultiAccountResourcesRequest extends Request {
             }
 
             /**
-             * The order in which the entries are sorted. Valid values:
-             * <p>
+             * <p>The order in which the entries are sorted. Valid values:</p>
+             * <ul>
+             * <li>ASC: The entries are sorted in ascending order. This value is the default value.</li>
+             * <li>DESC: The entries are sorted in descending order.</li>
+             * </ul>
              * 
-             * *   ASC: The entries are sorted in ascending order. This value is the default value.
-             * *   DESC: The entries are sorted in descending order.
+             * <strong>example:</strong>
+             * <p>ASC</p>
              */
             public Builder order(String order) {
                 this.order = order;

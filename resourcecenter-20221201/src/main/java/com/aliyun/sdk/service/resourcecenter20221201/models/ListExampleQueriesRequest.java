@@ -1,23 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListExampleQueriesRequest} extends {@link RequestModel}
  *
  * <p>ListExampleQueriesRequest</p>
  */
 public class ListExampleQueriesRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private ListExampleQueriesRequest(Builder builder) {
@@ -68,12 +68,12 @@ public class ListExampleQueriesRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries per page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(String maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -82,7 +82,10 @@ public class ListExampleQueriesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

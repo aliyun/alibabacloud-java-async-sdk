@@ -1,21 +1,21 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceTypesResponseBody</p>
  */
 public class ListResourceTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private java.util.List < ResourceTypes> resourceTypes;
 
     private ListResourceTypesResponseBody(Builder builder) {
@@ -50,7 +50,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         private java.util.List < ResourceTypes> resourceTypes; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5556E4C-479A-5BBB-B325-F07563E7E917</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +61,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the resource types.
+         * <p>The information about the resource types.</p>
          */
         public Builder resourceTypes(java.util.List < ResourceTypes> resourceTypes) {
             this.resourceTypes = resourceTypes;
@@ -71,20 +74,101 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
+    public static class CodeMapping extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
+        private String resourceGroup;
+
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private String tag;
+
+        private CodeMapping(Builder builder) {
+            this.resourceGroup = builder.resourceGroup;
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CodeMapping create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceGroup
+         */
+        public String getResourceGroup() {
+            return this.resourceGroup;
+        }
+
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private String resourceGroup; 
+            private String tag; 
+
+            /**
+             * ResourceGroup.
+             */
+            public Builder resourceGroup(String resourceGroup) {
+                this.resourceGroup = resourceGroup;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public CodeMapping build() {
+                return new CodeMapping(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListResourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTypesResponseBody</p>
+     */
     public static class ResourceTypes extends TeaModel {
-        @NameInMap("FilterKeys")
+        @com.aliyun.core.annotation.NameInMap("Authorized")
+        private Boolean authorized;
+
+        @com.aliyun.core.annotation.NameInMap("CodeMapping")
+        private CodeMapping codeMapping;
+
+        @com.aliyun.core.annotation.NameInMap("FilterKeys")
         private java.util.List < String > filterKeys;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("ResourceTypeName")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeName")
         private String resourceTypeName;
 
         private ResourceTypes(Builder builder) {
+            this.authorized = builder.authorized;
+            this.codeMapping = builder.codeMapping;
             this.filterKeys = builder.filterKeys;
             this.productName = builder.productName;
             this.resourceType = builder.resourceType;
@@ -97,6 +181,20 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
         public static ResourceTypes create() {
             return builder().build();
+        }
+
+        /**
+         * @return authorized
+         */
+        public Boolean getAuthorized() {
+            return this.authorized;
+        }
+
+        /**
+         * @return codeMapping
+         */
+        public CodeMapping getCodeMapping() {
+            return this.codeMapping;
         }
 
         /**
@@ -128,13 +226,31 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean authorized; 
+            private CodeMapping codeMapping; 
             private java.util.List < String > filterKeys; 
             private String productName; 
             private String resourceType; 
             private String resourceTypeName; 
 
             /**
-             * The supported filter conditions.
+             * Authorized.
+             */
+            public Builder authorized(Boolean authorized) {
+                this.authorized = authorized;
+                return this;
+            }
+
+            /**
+             * CodeMapping.
+             */
+            public Builder codeMapping(CodeMapping codeMapping) {
+                this.codeMapping = codeMapping;
+                return this;
+            }
+
+            /**
+             * <p>The supported filter conditions.</p>
              */
             public Builder filterKeys(java.util.List < String > filterKeys) {
                 this.filterKeys = filterKeys;
@@ -142,7 +258,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud service.
+             * <p>The name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Container Service for Kubernetes</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -150,7 +269,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ACK::Cluster</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -158,7 +280,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource type.
+             * <p>The name of the resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cluster</p>
              */
             public Builder resourceTypeName(String resourceTypeName) {
                 this.resourceTypeName = resourceTypeName;

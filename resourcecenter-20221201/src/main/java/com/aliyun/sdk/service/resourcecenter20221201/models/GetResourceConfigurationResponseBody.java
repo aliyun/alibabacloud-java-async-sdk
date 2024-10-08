@@ -1,57 +1,57 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResourceConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>GetResourceConfigurationResponseBody</p>
  */
 public class GetResourceConfigurationResponseBody extends TeaModel {
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @NameInMap("Configuration")
+    @com.aliyun.core.annotation.NameInMap("Configuration")
     private java.util.Map < String, ? > configuration;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("IpAddressAttributes")
+    @com.aliyun.core.annotation.NameInMap("IpAddressAttributes")
     private java.util.List < IpAddressAttributes> ipAddressAttributes;
 
-    @NameInMap("IpAddresses")
+    @com.aliyun.core.annotation.NameInMap("IpAddresses")
     private java.util.List < String > ipAddresses;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private GetResourceConfigurationResponseBody(Builder builder) {
@@ -194,7 +194,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * The ID of the Alibaba Cloud account to which the resource belongs.
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         public Builder accountId(String accountId) {
             this.accountId = accountId;
@@ -202,7 +205,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the resource.
+         * <p>The configurations of the resource.</p>
          */
         public Builder configuration(java.util.Map < String, ? > configuration) {
             this.configuration = configuration;
@@ -210,7 +213,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the resource was created.
+         * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-30T09:20:08Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -218,7 +224,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The time when the resource expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-30T09:20:08Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -226,7 +235,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddressAttributes.
+         * <p>The attributes of the IP address.</p>
          */
         public Builder ipAddressAttributes(java.util.List < IpAddressAttributes> ipAddressAttributes) {
             this.ipAddressAttributes = ipAddressAttributes;
@@ -234,10 +243,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The IP addresses.
-         * <p>
-         * 
-         * > Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.
+         * <p>The IP addresses.</p>
+         * <blockquote>
+         * <p>Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</p>
+         * </blockquote>
          */
         public Builder ipAddresses(java.util.List < String > ipAddresses) {
             this.ipAddresses = ipAddresses;
@@ -245,7 +254,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the resource.
+         * <p>The region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -253,7 +265,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F1CE0D52-32DA-531A-87A4-B9A5B68D5D8E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -261,7 +276,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the resource belongs.
+         * <p>The ID of the resource group to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmv4k****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -269,7 +287,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-uf6978gdqbi****</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -277,7 +298,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the resource.
+         * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group1</p>
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -285,7 +309,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the resource.
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::VPC::VSwitch</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -293,7 +320,7 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -301,7 +328,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID of the resource.
+         * <p>The zone ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -314,14 +344,20 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResourceConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceConfigurationResponseBody</p>
+     */
     public static class IpAddressAttributes extends TeaModel {
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private IpAddressAttributes(Builder builder) {
@@ -365,7 +401,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * IpAddress.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.2</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -373,7 +412,14 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: the Internet</li>
+             * <li><strong>Private</strong>: internal network</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -381,7 +427,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ipv4</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -395,11 +444,17 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResourceConfigurationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResourceConfigurationResponseBody</p>
+     */
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -434,7 +489,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -442,7 +500,10 @@ public class GetResourceConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

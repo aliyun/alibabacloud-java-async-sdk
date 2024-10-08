@@ -1,29 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSavedQueryRequest} extends {@link RequestModel}
  *
  * <p>CreateSavedQueryRequest</p>
  */
 public class CreateSavedQueryRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Expression")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expression")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String expression;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private CreateSavedQueryRequest(Builder builder) {
@@ -84,10 +84,11 @@ public class CreateSavedQueryRequest extends Request {
         } 
 
         /**
-         * The description of the template.
-         * <p>
+         * <p>The description of the template.</p>
+         * <p>The description must be 1 to 256 characters in length.</p>
          * 
-         * The description must be 1 to 256 characters in length.
+         * <strong>example:</strong>
+         * <p>Queries all resources on which you have permissions and sorts the resources by resource type and resource ID.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -96,7 +97,10 @@ public class CreateSavedQueryRequest extends Request {
         }
 
         /**
-         * The query statement in the template.
+         * <p>The query statement in the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM resources;</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -105,12 +109,15 @@ public class CreateSavedQueryRequest extends Request {
         }
 
         /**
-         * The name of the template.
-         * <p>
+         * <p>The name of the template.</p>
+         * <ul>
+         * <li>The name must be 1 to 64 characters in length.</li>
+         * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>The name must be unique.</li>
+         * </ul>
          * 
-         * *   The name must be 1 to 64 characters in length.
-         * *   The name can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The name must be unique.
+         * <strong>example:</strong>
+         * <p>Query of All Alibaba Cloud Resources</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

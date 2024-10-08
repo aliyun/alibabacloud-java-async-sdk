@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMultiAccountTagKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListMultiAccountTagKeysResponseBody</p>
  */
 public class ListMultiAccountTagKeysResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagKeys")
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
     private java.util.List < String > tagKeys;
 
     private ListMultiAccountTagKeysResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListMultiAccountTagKeysResponseBody extends TeaModel {
         private java.util.List < String > tagKeys; 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARfZmVDe9NvRXloR5+8CK9nNJufMdRA7W1miLC1P****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,10 @@ public class ListMultiAccountTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA6086F9-6363-51A5-A507-88E3201EBCCB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class ListMultiAccountTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The tag keys.
+         * <p>The tag keys.</p>
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
             this.tagKeys = tagKeys;

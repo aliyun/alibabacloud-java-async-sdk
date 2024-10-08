@@ -1,24 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcecenter20221201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagValuesResponseBody</p>
  */
 public class ListTagValuesResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagValues")
+    @com.aliyun.core.annotation.NameInMap("TagValues")
     private java.util.List < String > tagValues;
 
     private ListTagValuesResponseBody(Builder builder) {
@@ -62,7 +62,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         private java.util.List < String > tagValues; 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +73,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1840B83-1193-5E83-AFA6-4B8D303E29F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +84,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The tag values.
+         * <p>The tag values.</p>
          */
         public Builder tagValues(java.util.List < String > tagValues) {
             this.tagValues = tagValues;
