@@ -1,0 +1,96 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.esa20240910.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link CreateKvNamespaceRequest} extends {@link RequestModel}
+ *
+ * <p>CreateKvNamespaceRequest</p>
+ */
+public class CreateKvNamespaceRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String namespace;
+
+    private CreateKvNamespaceRequest(Builder builder) {
+        super(builder);
+        this.description = builder.description;
+        this.namespace = builder.namespace;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateKvNamespaceRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public static final class Builder extends Request.Builder<CreateKvNamespaceRequest, Builder> {
+        private String description; 
+        private String namespace; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(CreateKvNamespaceRequest request) {
+            super(request);
+            this.description = request.description;
+            this.namespace = request.namespace;
+        } 
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putBodyParameter("Namespace", namespace);
+            this.namespace = namespace;
+            return this;
+        }
+
+        @Override
+        public CreateKvNamespaceRequest build() {
+            return new CreateKvNamespaceRequest(this);
+        } 
+
+    } 
+
+}
