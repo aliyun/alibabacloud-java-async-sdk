@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeIntentionRequest} extends {@link RequestModel}
  *
  * <p>RecognizeIntentionRequest</p>
@@ -255,6 +256,12 @@ public class RecognizeIntentionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RecognizeIntentionRequest} extends {@link TeaModel}
+     *
+     * <p>RecognizeIntentionRequest</p>
+     */
     public static class GlobalIntentionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -336,6 +343,12 @@ public class RecognizeIntentionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeIntentionRequest} extends {@link TeaModel}
+     *
+     * <p>RecognizeIntentionRequest</p>
+     */
     public static class HierarchicalIntentionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -417,6 +430,12 @@ public class RecognizeIntentionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecognizeIntentionRequest} extends {@link TeaModel}
+     *
+     * <p>RecognizeIntentionRequest</p>
+     */
     public static class IntentionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAppConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetAppConfigResponseBody</p>
@@ -190,6 +191,12 @@ public class GetAppConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAppConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAppConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("embeddingTypeList")
         private java.util.List < java.util.Map<String, String>> embeddingTypeList;

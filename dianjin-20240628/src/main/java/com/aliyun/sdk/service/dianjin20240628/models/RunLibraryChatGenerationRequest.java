@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunLibraryChatGenerationRequest} extends {@link RequestModel}
  *
  * <p>RunLibraryChatGenerationRequest</p>
@@ -417,7 +418,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * sessionId
+         * <p>sessionId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("sessionId", sessionId);
@@ -486,6 +490,12 @@ public class RunLibraryChatGenerationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunLibraryChatGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunLibraryChatGenerationRequest</p>
+     */
     public static class And extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("boost")
         private Float boost;
@@ -587,6 +597,12 @@ public class RunLibraryChatGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunLibraryChatGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunLibraryChatGenerationRequest</p>
+     */
     public static class Or extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("boost")
         private Float boost;
@@ -688,6 +704,12 @@ public class RunLibraryChatGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunLibraryChatGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunLibraryChatGenerationRequest</p>
+     */
     public static class QueryCriteria extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("and")
         private java.util.List < And> and;
@@ -749,6 +771,12 @@ public class RunLibraryChatGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunLibraryChatGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunLibraryChatGenerationRequest</p>
+     */
     public static class TextSearchParameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limit")
         private Integer limit;
@@ -810,6 +838,12 @@ public class RunLibraryChatGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunLibraryChatGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunLibraryChatGenerationRequest</p>
+     */
     public static class VectorSearchParameter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("limit")
         private Integer limit;

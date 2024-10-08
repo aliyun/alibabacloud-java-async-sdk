@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePredefinedDocumentRequest} extends {@link RequestModel}
  *
  * <p>CreatePredefinedDocumentRequest</p>
@@ -161,6 +162,12 @@ public class CreatePredefinedDocumentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreatePredefinedDocumentRequest} extends {@link TeaModel}
+     *
+     * <p>CreatePredefinedDocumentRequest</p>
+     */
     public static class Chunks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkMeta")
         private java.util.Map < String, ? > chunkMeta;

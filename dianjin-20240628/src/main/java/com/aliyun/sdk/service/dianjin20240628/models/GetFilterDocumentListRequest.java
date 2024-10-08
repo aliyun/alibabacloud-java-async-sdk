@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFilterDocumentListRequest} extends {@link RequestModel}
  *
  * <p>GetFilterDocumentListRequest</p>
@@ -231,6 +232,12 @@ public class GetFilterDocumentListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetFilterDocumentListRequest} extends {@link TeaModel}
+     *
+     * <p>GetFilterDocumentListRequest</p>
+     */
     public static class And extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("boost")
         private Float boost;
@@ -332,6 +339,12 @@ public class GetFilterDocumentListRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link GetFilterDocumentListRequest} extends {@link TeaModel}
+     *
+     * <p>GetFilterDocumentListRequest</p>
+     */
     public static class Or extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("boost")
         private Float boost;

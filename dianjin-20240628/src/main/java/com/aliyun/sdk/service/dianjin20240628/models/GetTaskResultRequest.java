@@ -7,32 +7,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteLibraryRequest} extends {@link RequestModel}
+ * {@link GetTaskResultRequest} extends {@link RequestModel}
  *
- * <p>DeleteLibraryRequest</p>
+ * <p>GetTaskResultRequest</p>
  */
-public class DeleteLibraryRequest extends Request {
+public class GetTaskResultRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("libraryId")
+    @com.aliyun.core.annotation.NameInMap("taskId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String libraryId;
+    private String taskId;
 
-    private DeleteLibraryRequest(Builder builder) {
+    private GetTaskResultRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
-        this.libraryId = builder.libraryId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteLibraryRequest create() {
+    public static GetTaskResultRequest create() {
         return builder().build();
     }
 
@@ -49,24 +49,24 @@ public class DeleteLibraryRequest extends Request {
     }
 
     /**
-     * @return libraryId
+     * @return taskId
      */
-    public String getLibraryId() {
-        return this.libraryId;
+    public String getTaskId() {
+        return this.taskId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteLibraryRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetTaskResultRequest, Builder> {
         private String workspaceId; 
-        private String libraryId; 
+        private String taskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteLibraryRequest request) {
+        private Builder(GetTaskResultRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
-            this.libraryId = request.libraryId;
+            this.taskId = request.taskId;
         } 
 
         /**
@@ -79,17 +79,17 @@ public class DeleteLibraryRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * taskId.
          */
-        public Builder libraryId(String libraryId) {
-            this.putQueryParameter("libraryId", libraryId);
-            this.libraryId = libraryId;
+        public Builder taskId(String taskId) {
+            this.putQueryParameter("taskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 
         @Override
-        public DeleteLibraryRequest build() {
-            return new DeleteLibraryRequest(this);
+        public GetTaskResultRequest build() {
+            return new GetTaskResultRequest(this);
         } 
 
     } 

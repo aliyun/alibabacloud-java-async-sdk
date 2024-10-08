@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecallDocumentRequest} extends {@link RequestModel}
  *
  * <p>RecallDocumentRequest</p>
@@ -162,6 +163,12 @@ public class RecallDocumentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RecallDocumentRequest} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentRequest</p>
+     */
     public static class And extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("boost")
         private Float boost;
@@ -263,6 +270,12 @@ public class RecallDocumentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentRequest} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentRequest</p>
+     */
     public static class Or extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("boost")
         private Float boost;
@@ -364,6 +377,12 @@ public class RecallDocumentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentRequest} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentRequest</p>
+     */
     public static class Filters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("and")
         private java.util.List < And> and;

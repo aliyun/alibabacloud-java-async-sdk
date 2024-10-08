@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunChatResultGenerationResponseBody} extends {@link TeaModel}
  *
  * <p>RunChatResultGenerationResponseBody</p>
@@ -190,6 +191,12 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunChatResultGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunChatResultGenerationResponseBody</p>
+     */
     public static class Message extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -271,6 +278,12 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunChatResultGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunChatResultGenerationResponseBody</p>
+     */
     public static class Choices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("finishReason")
         private String finishReason;
@@ -352,6 +365,12 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RunChatResultGenerationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunChatResultGenerationResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("imageCount")
         private Integer imageCount;

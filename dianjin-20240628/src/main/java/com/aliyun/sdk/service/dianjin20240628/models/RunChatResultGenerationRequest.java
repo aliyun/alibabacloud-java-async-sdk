@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunChatResultGenerationRequest} extends {@link RequestModel}
  *
  * <p>RunChatResultGenerationRequest</p>
@@ -209,6 +210,12 @@ public class RunChatResultGenerationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RunChatResultGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunChatResultGenerationRequest</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -270,6 +277,12 @@ public class RunChatResultGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunChatResultGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunChatResultGenerationRequest</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("properties")
         private java.util.Map < String, ? > properties;
@@ -331,6 +344,12 @@ public class RunChatResultGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunChatResultGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunChatResultGenerationRequest</p>
+     */
     public static class Function extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
@@ -432,6 +451,12 @@ public class RunChatResultGenerationRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link RunChatResultGenerationRequest} extends {@link TeaModel}
+     *
+     * <p>RunChatResultGenerationRequest</p>
+     */
     public static class Tools extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("function")
         private Function function;

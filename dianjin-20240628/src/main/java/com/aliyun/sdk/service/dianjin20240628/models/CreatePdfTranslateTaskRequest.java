@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDocumentRequest} extends {@link RequestModel}
+ * {@link CreatePdfTranslateTaskRequest} extends {@link RequestModel}
  *
- * <p>UpdateDocumentRequest</p>
+ * <p>CreatePdfTranslateTaskRequest</p>
  */
-public class UpdateDocumentRequest extends Request {
+public class CreatePdfTranslateTaskRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -23,32 +23,38 @@ public class UpdateDocumentRequest extends Request {
     private String docId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("knowledge")
+    private String knowledge;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("libraryId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String libraryId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("meta")
-    private java.util.Map < String, ? > meta;
+    @com.aliyun.core.annotation.NameInMap("modelId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String modelId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("title")
-    private String title;
+    @com.aliyun.core.annotation.NameInMap("translateTo")
+    private String translateTo;
 
-    private UpdateDocumentRequest(Builder builder) {
+    private CreatePdfTranslateTaskRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.docId = builder.docId;
+        this.knowledge = builder.knowledge;
         this.libraryId = builder.libraryId;
-        this.meta = builder.meta;
-        this.title = builder.title;
+        this.modelId = builder.modelId;
+        this.translateTo = builder.translateTo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UpdateDocumentRequest create() {
+    public static CreatePdfTranslateTaskRequest create() {
         return builder().build();
     }
 
@@ -72,6 +78,13 @@ public class UpdateDocumentRequest extends Request {
     }
 
     /**
+     * @return knowledge
+     */
+    public String getKnowledge() {
+        return this.knowledge;
+    }
+
+    /**
      * @return libraryId
      */
     public String getLibraryId() {
@@ -79,37 +92,39 @@ public class UpdateDocumentRequest extends Request {
     }
 
     /**
-     * @return meta
+     * @return modelId
      */
-    public java.util.Map < String, ? > getMeta() {
-        return this.meta;
+    public String getModelId() {
+        return this.modelId;
     }
 
     /**
-     * @return title
+     * @return translateTo
      */
-    public String getTitle() {
-        return this.title;
+    public String getTranslateTo() {
+        return this.translateTo;
     }
 
-    public static final class Builder extends Request.Builder<UpdateDocumentRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreatePdfTranslateTaskRequest, Builder> {
         private String workspaceId; 
         private String docId; 
+        private String knowledge; 
         private String libraryId; 
-        private java.util.Map < String, ? > meta; 
-        private String title; 
+        private String modelId; 
+        private String translateTo; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateDocumentRequest request) {
+        private Builder(CreatePdfTranslateTaskRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
             this.docId = request.docId;
+            this.knowledge = request.knowledge;
             this.libraryId = request.libraryId;
-            this.meta = request.meta;
-            this.title = request.title;
+            this.modelId = request.modelId;
+            this.translateTo = request.translateTo;
         } 
 
         /**
@@ -131,6 +146,15 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
+         * knowledge.
+         */
+        public Builder knowledge(String knowledge) {
+            this.putBodyParameter("knowledge", knowledge);
+            this.knowledge = knowledge;
+            return this;
+        }
+
+        /**
          * libraryId.
          */
         public Builder libraryId(String libraryId) {
@@ -140,26 +164,26 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
-         * meta.
+         * modelId.
          */
-        public Builder meta(java.util.Map < String, ? > meta) {
-            this.putBodyParameter("meta", meta);
-            this.meta = meta;
+        public Builder modelId(String modelId) {
+            this.putBodyParameter("modelId", modelId);
+            this.modelId = modelId;
             return this;
         }
 
         /**
-         * title.
+         * translateTo.
          */
-        public Builder title(String title) {
-            this.putBodyParameter("title", title);
-            this.title = title;
+        public Builder translateTo(String translateTo) {
+            this.putBodyParameter("translateTo", translateTo);
+            this.translateTo = translateTo;
             return this;
         }
 
         @Override
-        public UpdateDocumentRequest build() {
-            return new UpdateDocumentRequest(this);
+        public CreatePdfTranslateTaskRequest build() {
+            return new CreatePdfTranslateTaskRequest(this);
         } 
 
     } 

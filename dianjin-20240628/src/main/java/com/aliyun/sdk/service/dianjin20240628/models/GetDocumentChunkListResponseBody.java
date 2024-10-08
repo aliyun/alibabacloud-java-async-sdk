@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentChunkListResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocumentChunkListResponseBody</p>
@@ -190,6 +191,12 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentChunkListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentChunkListResponseBody</p>
+     */
     public static class Pos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
         private java.util.List < Double > axisArray;
@@ -271,6 +278,12 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentChunkListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentChunkListResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkId")
         private String chunkId;
@@ -572,6 +585,12 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentChunkListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentChunkListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("currentPage")
         private Long currentPage;

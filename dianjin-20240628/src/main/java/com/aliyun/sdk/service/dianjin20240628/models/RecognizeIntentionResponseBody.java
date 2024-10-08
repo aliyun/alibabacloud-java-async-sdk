@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecognizeIntentionResponseBody} extends {@link TeaModel}
  *
  * <p>RecognizeIntentionResponseBody</p>
@@ -190,6 +191,12 @@ public class RecognizeIntentionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RecognizeIntentionResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecognizeIntentionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("analysisProcess")
         private String analysisProcess;

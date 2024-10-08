@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecallDocumentResponseBody} extends {@link TeaModel}
  *
  * <p>RecallDocumentResponseBody</p>
@@ -190,6 +191,12 @@ public class RecallDocumentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class Pos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
         private java.util.List < Double > axisArray;
@@ -271,6 +278,12 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class ChunkList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkId")
         private String chunkId;
@@ -572,6 +585,12 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class ChunkPartListPos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
         private java.util.List < Double > axisArray;
@@ -653,6 +672,12 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class ChunkPartList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkId")
         private String chunkId;
@@ -954,6 +979,12 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class Documents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("docId")
         private String docId;
@@ -1115,6 +1146,12 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class TextChunkListPos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
         private java.util.List < Double > axisArray;
@@ -1196,6 +1233,12 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class TextChunkList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkId")
         private String chunkId;
@@ -1497,6 +1540,12 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class VectorChunkListPos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("axisArray")
         private java.util.List < Double > axisArray;
@@ -1578,6 +1627,12 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class VectorChunkList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkId")
         private String chunkId;
@@ -1879,6 +1934,12 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link RecallDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>RecallDocumentResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkList")
         private java.util.List < ChunkList> chunkList;

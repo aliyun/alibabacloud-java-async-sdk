@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDocumentListResponseBody} extends {@link TeaModel}
  *
  * <p>GetDocumentListResponseBody</p>
@@ -190,6 +191,12 @@ public class GetDocumentListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDocumentListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentListResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("docId")
         private String docId;
@@ -391,6 +398,12 @@ public class GetDocumentListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDocumentListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDocumentListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("currentPage")
         private Long currentPage;

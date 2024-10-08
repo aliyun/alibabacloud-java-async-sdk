@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHistoryListByBizTypeResponseBody} extends {@link TeaModel}
  *
  * <p>GetHistoryListByBizTypeResponseBody</p>
@@ -190,6 +191,12 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHistoryListByBizTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoryListByBizTypeResponseBody</p>
+     */
     public static class Records extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bizId")
         private String bizId;
@@ -431,6 +438,12 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHistoryListByBizTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHistoryListByBizTypeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("currentPage")
         private Long currentPage;

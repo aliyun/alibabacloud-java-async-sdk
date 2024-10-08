@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetParseResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetParseResultResponseBody</p>
@@ -190,6 +191,12 @@ public class GetParseResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetParseResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetParseResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fileType")
         private String fileType;

@@ -7,16 +7,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDocumentResponseBody} extends {@link TeaModel}
+ * {@link GetTaskResultResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateDocumentResponseBody</p>
+ * <p>GetTaskResultResponseBody</p>
  */
-public class UpdateDocumentResponseBody extends TeaModel {
+public class GetTaskResultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cost")
     private Long cost;
 
     @com.aliyun.core.annotation.NameInMap("data")
-    private String data;
+    private java.util.Map < String, ? > data;
 
     @com.aliyun.core.annotation.NameInMap("dataType")
     private String dataType;
@@ -36,7 +36,7 @@ public class UpdateDocumentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("time")
     private String time;
 
-    private UpdateDocumentResponseBody(Builder builder) {
+    private GetTaskResultResponseBody(Builder builder) {
         this.cost = builder.cost;
         this.data = builder.data;
         this.dataType = builder.dataType;
@@ -51,7 +51,7 @@ public class UpdateDocumentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateDocumentResponseBody create() {
+    public static GetTaskResultResponseBody create() {
         return builder().build();
     }
 
@@ -65,7 +65,7 @@ public class UpdateDocumentResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public java.util.Map < String, ? > getData() {
         return this.data;
     }
 
@@ -113,7 +113,7 @@ public class UpdateDocumentResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long cost; 
-        private String data; 
+        private java.util.Map < String, ? > data; 
         private String dataType; 
         private String errCode; 
         private String message; 
@@ -132,7 +132,7 @@ public class UpdateDocumentResponseBody extends TeaModel {
         /**
          * data.
          */
-        public Builder data(String data) {
+        public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
             return this;
         }
@@ -185,8 +185,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateDocumentResponseBody build() {
-            return new UpdateDocumentResponseBody(this);
+        public GetTaskResultResponseBody build() {
+            return new GetTaskResultResponseBody(this);
         } 
 
     } 

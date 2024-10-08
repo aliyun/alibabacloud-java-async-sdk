@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDocumentResponseBody} extends {@link TeaModel}
+ * {@link CreatePdfTranslateTaskResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateDocumentResponseBody</p>
+ * <p>CreatePdfTranslateTaskResponseBody</p>
  */
-public class UpdateDocumentResponseBody extends TeaModel {
+public class CreatePdfTranslateTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cost")
     private Long cost;
 
@@ -36,7 +36,7 @@ public class UpdateDocumentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("time")
     private String time;
 
-    private UpdateDocumentResponseBody(Builder builder) {
+    private CreatePdfTranslateTaskResponseBody(Builder builder) {
         this.cost = builder.cost;
         this.data = builder.data;
         this.dataType = builder.dataType;
@@ -51,7 +51,7 @@ public class UpdateDocumentResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateDocumentResponseBody create() {
+    public static CreatePdfTranslateTaskResponseBody create() {
         return builder().build();
     }
 
@@ -185,8 +185,8 @@ public class UpdateDocumentResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateDocumentResponseBody build() {
-            return new UpdateDocumentResponseBody(this);
+        public CreatePdfTranslateTaskResponseBody build() {
+            return new CreatePdfTranslateTaskResponseBody(this);
         } 
 
     } 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSummaryTaskResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetSummaryTaskResultResponseBody</p>
@@ -190,6 +191,12 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSummaryTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSummaryTaskResultResponseBody</p>
+     */
     public static class Message extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
@@ -271,6 +278,12 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSummaryTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSummaryTaskResultResponseBody</p>
+     */
     public static class Choices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("finishReason")
         private String finishReason;
@@ -352,6 +365,12 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSummaryTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSummaryTaskResultResponseBody</p>
+     */
     public static class Usage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("imageCount")
         private Integer imageCount;
@@ -473,6 +492,12 @@ public class GetSummaryTaskResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSummaryTaskResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSummaryTaskResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("choices")
         private java.util.List < Choices> choices;

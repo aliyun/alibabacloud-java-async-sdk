@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PreviewDocumentResponseBody} extends {@link TeaModel}
  *
  * <p>PreviewDocumentResponseBody</p>
@@ -190,6 +191,12 @@ public class PreviewDocumentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PreviewDocumentResponseBody} extends {@link TeaModel}
+     *
+     * <p>PreviewDocumentResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("previewType")
         private String previewType;

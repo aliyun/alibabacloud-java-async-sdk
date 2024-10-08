@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLibraryResponseBody} extends {@link TeaModel}
  *
  * <p>GetLibraryResponseBody</p>
@@ -190,6 +191,12 @@ public class GetLibraryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetLibraryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLibraryResponseBody</p>
+     */
     public static class ChunkStrategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("docTreeSplit")
         private Boolean docTreeSplit;
@@ -391,6 +398,12 @@ public class GetLibraryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLibraryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLibraryResponseBody</p>
+     */
     public static class ModelConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("temperature")
         private Double temperature;
@@ -438,7 +451,10 @@ public class GetLibraryResponseBody extends TeaModel {
             }
 
             /**
-             * topP
+             * <p>topP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder topP(Double topP) {
                 this.topP = topP;
@@ -452,6 +468,12 @@ public class GetLibraryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLibraryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLibraryResponseBody</p>
+     */
     public static class QueryEnhancer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableFollowUp")
         private Boolean enableFollowUp;
@@ -613,6 +635,12 @@ public class GetLibraryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLibraryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLibraryResponseBody</p>
+     */
     public static class RecallStrategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("documentRankType")
         private String documentRankType;
@@ -674,6 +702,12 @@ public class GetLibraryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLibraryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLibraryResponseBody</p>
+     */
     public static class TextIndexSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
@@ -815,6 +849,12 @@ public class GetLibraryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLibraryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLibraryResponseBody</p>
+     */
     public static class VectorIndexSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
@@ -936,6 +976,12 @@ public class GetLibraryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLibraryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLibraryResponseBody</p>
+     */
     public static class IndexSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chunkStrategy")
         private ChunkStrategy chunkStrategy;
@@ -1097,6 +1143,12 @@ public class GetLibraryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetLibraryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetLibraryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;

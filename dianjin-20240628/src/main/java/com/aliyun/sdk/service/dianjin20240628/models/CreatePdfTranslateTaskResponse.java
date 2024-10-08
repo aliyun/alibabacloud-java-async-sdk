@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetParseResultResponse} extends {@link TeaModel}
+ * {@link CreatePdfTranslateTaskResponse} extends {@link TeaModel}
  *
- * <p>GetParseResultResponse</p>
+ * <p>CreatePdfTranslateTaskResponse</p>
  */
-public class GetParseResultResponse extends Response {
+public class CreatePdfTranslateTaskResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class GetParseResultResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetParseResultResponseBody body;
+    private CreatePdfTranslateTaskResponseBody body;
 
-    private GetParseResultResponse(BuilderImpl builder) {
+    private CreatePdfTranslateTaskResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetParseResultResponse create() {
+    public static CreatePdfTranslateTaskResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class GetParseResultResponse extends Response {
     /**
      * @return body
      */
-    public GetParseResultResponseBody getBody() {
+    public CreatePdfTranslateTaskResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetParseResultResponse, Builder> {
+    public interface Builder extends Response.Builder<CreatePdfTranslateTaskResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetParseResultResponseBody body);
+        Builder body(CreatePdfTranslateTaskResponseBody body);
 
         @Override
-        GetParseResultResponse build();
+        CreatePdfTranslateTaskResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetParseResultResponse, Builder>
+            extends Response.BuilderImpl<CreatePdfTranslateTaskResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetParseResultResponseBody body; 
+        private CreatePdfTranslateTaskResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetParseResultResponse response) {
+        private BuilderImpl(CreatePdfTranslateTaskResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class GetParseResultResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetParseResultResponseBody body) {
+        public Builder body(CreatePdfTranslateTaskResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetParseResultResponse build() {
-            return new GetParseResultResponse(this);
+        public CreatePdfTranslateTaskResponse build() {
+            return new CreatePdfTranslateTaskResponse(this);
         } 
 
     } 

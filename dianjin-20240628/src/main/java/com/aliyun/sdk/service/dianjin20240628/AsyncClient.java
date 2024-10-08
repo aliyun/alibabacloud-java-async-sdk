@@ -23,6 +23,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateLibraryResponse> createLibrary(CreateLibraryRequest request);
 
+    CompletableFuture<CreatePdfTranslateTaskResponse> createPdfTranslateTask(CreatePdfTranslateTaskRequest request);
+
     CompletableFuture<CreatePredefinedDocumentResponse> createPredefinedDocument(CreatePredefinedDocumentRequest request);
 
     CompletableFuture<DeleteDocumentResponse> deleteDocument(DeleteDocumentRequest request);
@@ -50,6 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetParseResultResponse> getParseResult(GetParseResultRequest request);
 
     CompletableFuture<GetSummaryTaskResultResponse> getSummaryTaskResult(GetSummaryTaskResultRequest request);
+
+    CompletableFuture<GetTaskResultResponse> getTaskResult(GetTaskResultRequest request);
 
     CompletableFuture<GetTaskStatusResponse> getTaskStatus(GetTaskStatusRequest request);
 
