@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckResultResponseBody} extends {@link TeaModel}
  *
  * <p>CheckResultResponseBody</p>
@@ -89,7 +90,10 @@ public class CheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EB35****87EBA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class CheckResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EkycResult")
         private String ekycResult;

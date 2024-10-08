@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FaceLivenessResponseBody} extends {@link TeaModel}
  *
  * <p>FaceLivenessResponseBody</p>
@@ -110,6 +111,12 @@ public class FaceLivenessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FaceLivenessResponseBody} extends {@link TeaModel}
+     *
+     * <p>FaceLivenessResponseBody</p>
+     */
     public static class ExtFaceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaceAge")
         private Integer faceAge;
@@ -231,6 +238,12 @@ public class FaceLivenessResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FaceLivenessResponseBody} extends {@link TeaModel}
+     *
+     * <p>FaceLivenessResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtFaceInfo")
         private ExtFaceInfo extFaceInfo;

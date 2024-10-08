@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CardOcrResponseBody} extends {@link TeaModel}
  *
  * <p>CardOcrResponseBody</p>
@@ -89,7 +90,10 @@ public class CardOcrResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EB356FE-BB6A-5DCC-B4C5-E8051787EBA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class CardOcrResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CardOcrResponseBody} extends {@link TeaModel}
+     *
+     * <p>CardOcrResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExtCardInfo")
         private String extCardInfo;

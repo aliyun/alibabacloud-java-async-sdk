@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVerifyResultResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteVerifyResultResponseBody</p>
@@ -110,6 +111,12 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteVerifyResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteVerifyResultResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeleteResult")
         private String deleteResult;

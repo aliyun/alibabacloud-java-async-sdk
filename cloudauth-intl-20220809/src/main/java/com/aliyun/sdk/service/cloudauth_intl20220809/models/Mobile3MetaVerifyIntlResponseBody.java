@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Mobile3MetaVerifyIntlResponseBody} extends {@link TeaModel}
  *
  * <p>Mobile3MetaVerifyIntlResponseBody</p>
@@ -110,6 +111,12 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Mobile3MetaVerifyIntlResponseBody} extends {@link TeaModel}
+     *
+     * <p>Mobile3MetaVerifyIntlResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;

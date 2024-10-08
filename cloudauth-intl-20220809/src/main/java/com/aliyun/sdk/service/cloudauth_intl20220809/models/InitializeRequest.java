@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitializeRequest} extends {@link RequestModel}
  *
  * <p>InitializeRequest</p>
@@ -112,6 +113,10 @@ public class InitializeRequest extends Request {
     private String showAlbumIcon;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowGuidePage")
+    private String showGuidePage;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowOcrResult")
     private String showOcrResult;
 
@@ -146,6 +151,7 @@ public class InitializeRequest extends Request {
         this.sceneCode = builder.sceneCode;
         this.securityLevel = builder.securityLevel;
         this.showAlbumIcon = builder.showAlbumIcon;
+        this.showGuidePage = builder.showGuidePage;
         this.showOcrResult = builder.showOcrResult;
         this.styleConfig = builder.styleConfig;
     }
@@ -339,6 +345,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return showGuidePage
+     */
+    public String getShowGuidePage() {
+        return this.showGuidePage;
+    }
+
+    /**
      * @return showOcrResult
      */
     public String getShowOcrResult() {
@@ -378,6 +391,7 @@ public class InitializeRequest extends Request {
         private String sceneCode; 
         private String securityLevel; 
         private String showAlbumIcon; 
+        private String showGuidePage; 
         private String showOcrResult; 
         private String styleConfig; 
 
@@ -412,6 +426,7 @@ public class InitializeRequest extends Request {
             this.sceneCode = request.sceneCode;
             this.securityLevel = request.securityLevel;
             this.showAlbumIcon = request.showAlbumIcon;
+            this.showGuidePage = request.showGuidePage;
             this.showOcrResult = request.showOcrResult;
             this.styleConfig = request.styleConfig;
         } 
@@ -579,7 +594,12 @@ public class InitializeRequest extends Request {
         }
 
         /**
-         * OCR。
+         * <p>OCR。</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder ocr(String ocr) {
             this.putQueryParameter("Ocr", ocr);
@@ -638,6 +658,15 @@ public class InitializeRequest extends Request {
         public Builder showAlbumIcon(String showAlbumIcon) {
             this.putQueryParameter("ShowAlbumIcon", showAlbumIcon);
             this.showAlbumIcon = showAlbumIcon;
+            return this;
+        }
+
+        /**
+         * ShowGuidePage.
+         */
+        public Builder showGuidePage(String showGuidePage) {
+            this.putQueryParameter("ShowGuidePage", showGuidePage);
+            this.showGuidePage = showGuidePage;
             return this;
         }
 

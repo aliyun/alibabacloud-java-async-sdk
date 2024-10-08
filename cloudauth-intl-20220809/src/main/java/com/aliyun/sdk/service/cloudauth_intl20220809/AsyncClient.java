@@ -20,30 +20,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated 
      */
+    @Deprecated
     CompletableFuture<CardOcrResponse> cardOcr(CardOcrRequest request);
 
     CompletableFuture<CheckResultResponse> checkResult(CheckResultRequest request);
 
     CompletableFuture<DeleteVerifyResultResponse> deleteVerifyResult(DeleteVerifyResultRequest request);
-
-    CompletableFuture<DescribeAddressLabelsResponse> describeAddressLabels(DescribeAddressLabelsRequest request);
-
-    CompletableFuture<DescribeAddressOverviewResponse> describeAddressOverview(DescribeAddressOverviewRequest request);
-
-    CompletableFuture<DescribeMaliciousAddressResponse> describeMaliciousAddress(DescribeMaliciousAddressRequest request);
-
-    CompletableFuture<DescribeRiskScoreResponse> describeRiskScore(DescribeRiskScoreRequest request);
-
-    CompletableFuture<DescribeTransactionsListResponse> describeTransactionsList(DescribeTransactionsListRequest request);
-
-    CompletableFuture<DescribeWeb3AddressLabelsResponse> describeWeb3AddressLabels(DescribeWeb3AddressLabelsRequest request);
-
-    CompletableFuture<DescribeWeb3RiskScoreResponse> describeWeb3RiskScore(DescribeWeb3RiskScoreRequest request);
-
-    CompletableFuture<DescribeWeb3TransactionLabelsResponse> describeWeb3TransactionLabels(DescribeWeb3TransactionLabelsRequest request);
 
     CompletableFuture<DocOcrResponse> docOcr(DocOcrRequest request);
 
