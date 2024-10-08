@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopServiceRequest} extends {@link RequestModel}
  *
  * <p>StopServiceRequest</p>
@@ -69,7 +70,10 @@ public class StopServiceRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is deployed.
+         * <p>The ID of the region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +82,10 @@ public class StopServiceRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);

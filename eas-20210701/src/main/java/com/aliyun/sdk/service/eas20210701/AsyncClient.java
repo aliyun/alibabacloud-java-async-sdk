@@ -34,8 +34,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGatewayIntranetLinkedVpcResponse> createGatewayIntranetLinkedVpc(CreateGatewayIntranetLinkedVpcRequest request);
 
     /**
-      * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
-      *
+     * <b>description</b> :
+     * <p>**Before you call this operation, make sure that you are familiar with the <a href="~~144261~~">billing</a> of Elastic Algorithm Service (EAS).</p>
      */
     CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request);
 
@@ -44,8 +44,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateResourceLogResponse> createResourceLog(CreateResourceLogRequest request);
 
     /**
-      * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
-      *
+     * <b>description</b> :
+     * <p>**Before you call this operation, make sure that you are familiar with the <a href="~~144261~~">billing</a> of Elastic Algorithm Service (EAS).</p>
      */
     CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
 
@@ -132,9 +132,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListResourceInstancesResponse> listResourceInstances(ListResourceInstancesRequest request);
 
     /**
-      * @deprecated
-      *
+     * @deprecated 
      */
+    @Deprecated
     CompletableFuture<ListResourceServicesResponse> listResourceServices(ListResourceServicesRequest request);
 
     CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request);

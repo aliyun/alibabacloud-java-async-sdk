@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGatewayResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The region ID of the private gateway.
+         * <p>The region ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -81,7 +85,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The private gateway ID.
+         * <p>The private gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -89,7 +96,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully create gateway.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

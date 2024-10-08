@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSpotDiscountHistoryRequest} extends {@link RequestModel}
  *
  * <p>DescribeSpotDiscountHistoryRequest</p>
@@ -68,7 +69,10 @@ public class DescribeSpotDiscountHistoryRequest extends Request {
         } 
 
         /**
-         * The type of the Elastic Algorithm Service (EAS) instance.
+         * <p>The type of the Elastic Algorithm Service (EAS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.4xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -77,7 +81,10 @@ public class DescribeSpotDiscountHistoryRequest extends Request {
         }
 
         /**
-         * Specifies whether the preemptible instance has a protection period. During the 1-hour protection period of the preemptible instance, the preemptible instance will not be released.
+         * <p>Specifies whether the preemptible instance has a protection period. During the 1-hour protection period of the preemptible instance, the preemptible instance will not be released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isProtect(Boolean isProtect) {
             this.putQueryParameter("IsProtect", isProtect);

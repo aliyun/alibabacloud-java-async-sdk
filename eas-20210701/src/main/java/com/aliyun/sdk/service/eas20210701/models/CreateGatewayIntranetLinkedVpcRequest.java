@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGatewayIntranetLinkedVpcRequest} extends {@link RequestModel}
  *
  * <p>CreateGatewayIntranetLinkedVpcRequest</p>
@@ -97,7 +98,10 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         } 
 
         /**
-         * The region ID of the private gateway.
+         * <p>The region ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +110,10 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * The private gateway ID.
+         * <p>The private gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
@@ -115,7 +122,10 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * The vSwitch ID.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-8vbqn2at0kljjxxxx****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -124,7 +134,10 @@ public class CreateGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) ID.
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf66uio7md****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

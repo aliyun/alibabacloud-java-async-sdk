@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeResourceRequest</p>
@@ -69,7 +70,10 @@ public class DescribeResourceRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster to which the resource group belongs.
+         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +82,10 @@ public class DescribeResourceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);

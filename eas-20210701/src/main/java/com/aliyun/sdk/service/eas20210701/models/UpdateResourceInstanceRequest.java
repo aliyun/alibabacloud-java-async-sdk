@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourceInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateResourceInstanceRequest</p>
@@ -99,7 +100,10 @@ public class UpdateResourceInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the instance belongs.
+         * <p>The ID of the region to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -108,7 +112,10 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
+         * <p>The ID of the resource group to which the instance belongs. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -117,7 +124,10 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * The instance ID. For more information about how to query the instance ID, see [ListResourceInstances](~~412129~~).
+         * <p>The instance ID. For more information about how to query the instance ID, see <a href="~~412129~~">ListResourceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-i-asdasdasd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -126,12 +136,15 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * The operation that updates the scheduling state of the instance in a dedicated resource group. Valid values:
-         * <p>
+         * <p>The operation that updates the scheduling state of the instance in a dedicated resource group. Valid values:</p>
+         * <ul>
+         * <li>Uncordon: allows scheduling the service to this instance.</li>
+         * <li>Cordon: prohibits scheduling the service to this instance.</li>
+         * <li>Drain: evicts the service that has been scheduled to this instance.</li>
+         * </ul>
          * 
-         * *   Uncordon: allows scheduling the service to this instance.
-         * *   Cordon: prohibits scheduling the service to this instance.
-         * *   Drain: evicts the service that has been scheduled to this instance.
+         * <strong>example:</strong>
+         * <p>Cordon</p>
          */
         public Builder action(String action) {
             this.putBodyParameter("Action", action);

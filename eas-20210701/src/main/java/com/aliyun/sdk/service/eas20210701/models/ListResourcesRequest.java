@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListResourcesRequest</p>
@@ -109,7 +110,10 @@ public class ListResourcesRequest extends Request {
         } 
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -118,7 +122,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 100.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -127,7 +134,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [CreateResource](~~412111~~) operation to query the ID of the resource group.
+         * <p>The ID of the resource group. You can call the <a href="~~412111~~">CreateResource</a> operation to query the ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-h7lcw24dyqztwxxxxxx</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -136,7 +146,10 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The name of the resource group. You can call the [CreateResource](~~412111~~) operation to query the name of the resource group.
+         * <p>The name of the resource group. You can call the <a href="~~412111~~">CreateResource</a> operation to query the name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyResource</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -145,11 +158,14 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource group. Valid values:
-         * <p>
+         * <p>The type of the resource group. Valid values:</p>
+         * <ul>
+         * <li>Dedicated: the dedicated resource group.</li>
+         * <li>SelfManaged: the self-managed resource group.</li>
+         * </ul>
          * 
-         * *   Dedicated: the dedicated resource group.
-         * *   SelfManaged: the self-managed resource group.
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

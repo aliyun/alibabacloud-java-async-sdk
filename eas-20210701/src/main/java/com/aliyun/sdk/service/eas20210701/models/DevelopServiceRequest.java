@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DevelopServiceRequest} extends {@link RequestModel}
  *
  * <p>DevelopServiceRequest</p>
@@ -83,7 +84,10 @@ public class DevelopServiceRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is deployed.
+         * <p>The ID of the region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,7 +96,10 @@ public class DevelopServiceRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -101,11 +108,14 @@ public class DevelopServiceRequest extends Request {
         }
 
         /**
-         * Specifies whether to exit development mode. Valid values:
-         * <p>
+         * <p>Specifies whether to exit development mode. Valid values:</p>
+         * <ul>
+         * <li>true: exits development mode.</li>
+         * <li>false (default): enters development mode.</li>
+         * </ul>
          * 
-         * *   true: exits development mode.
-         * *   false (default): enters development mode.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder exit(String exit) {
             this.putQueryParameter("Exit", exit);

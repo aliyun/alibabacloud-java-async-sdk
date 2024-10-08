@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListGroupsRequest</p>
@@ -95,7 +96,10 @@ public class ListGroupsRequest extends Request {
         } 
 
         /**
-         * The name of the filter that is used to filter out unwanted service groups. Fuzzy match is supported.
+         * <p>The name of the filter that is used to filter out unwanted service groups. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -104,7 +108,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -113,7 +120,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 100.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -122,7 +132,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

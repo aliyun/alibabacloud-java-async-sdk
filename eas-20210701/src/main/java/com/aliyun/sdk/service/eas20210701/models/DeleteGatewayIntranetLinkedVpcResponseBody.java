@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGatewayIntranetLinkedVpcResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteGatewayIntranetLinkedVpcResponseBody</p>
@@ -61,7 +62,10 @@ public class DeleteGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The private gateway ID.
+         * <p>The private gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -69,7 +73,10 @@ public class DeleteGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully delete intranet linked vpc for gateway</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +84,10 @@ public class DeleteGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

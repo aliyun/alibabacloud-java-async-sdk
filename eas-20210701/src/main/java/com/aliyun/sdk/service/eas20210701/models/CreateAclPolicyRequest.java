@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAclPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateAclPolicyRequest</p>
@@ -97,7 +98,10 @@ public class CreateAclPolicyRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +110,10 @@ public class CreateAclPolicyRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
@@ -115,7 +122,7 @@ public class CreateAclPolicyRequest extends Request {
         }
 
         /**
-         * AclPolicyList.
+         * <p>The whitelisted IP CIDR blocks in the VPC that can access the private gateway.</p>
          */
         public Builder aclPolicyList(java.util.List < AclPolicyList> aclPolicyList) {
             String aclPolicyListShrink = shrink(aclPolicyList, "AclPolicyList", "json");
@@ -125,7 +132,10 @@ public class CreateAclPolicyRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC). For more information about how to obtain the VPC ID, see DescribeVpcs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf66uio7md****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -140,6 +150,12 @@ public class CreateAclPolicyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAclPolicyRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAclPolicyRequest</p>
+     */
     public static class AclPolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
@@ -179,7 +195,10 @@ public class CreateAclPolicyRequest extends Request {
             private String entry; 
 
             /**
-             * Comment.
+             * <p>The comment on the IP CIDR block in the VPC that can access the private gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -187,7 +206,10 @@ public class CreateAclPolicyRequest extends Request {
             }
 
             /**
-             * Entry.
+             * <p>The IP CIDR block in the VPC that can access the private gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.23.XX.XX/32</p>
              */
             public Builder entry(String entry) {
                 this.entry = entry;

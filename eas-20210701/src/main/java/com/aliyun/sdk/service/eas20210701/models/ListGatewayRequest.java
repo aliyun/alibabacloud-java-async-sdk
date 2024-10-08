@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayRequest} extends {@link RequestModel}
  *
  * <p>ListGatewayRequest</p>
@@ -95,7 +96,10 @@ public class ListGatewayRequest extends Request {
         } 
 
         /**
-         * GatewayId.
+         * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -104,7 +108,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * GatewayName.
+         * <p>The private gateway alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mygateway1</p>
          */
         public Builder gatewayName(String gatewayName) {
             this.putQueryParameter("GatewayName", gatewayName);
@@ -113,7 +120,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -122,7 +132,10 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

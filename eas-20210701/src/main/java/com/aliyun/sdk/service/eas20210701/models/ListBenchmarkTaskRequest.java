@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBenchmarkTaskRequest} extends {@link RequestModel}
  *
  * <p>ListBenchmarkTaskRequest</p>
@@ -95,7 +96,10 @@ public class ListBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * The keyword used to query required stress testing tasks. If this parameter is specified, the system returns stress testing tasks based on the names of the stress testing tasks in the matched Elastic Algorithm Service (EAS).
+         * <p>The keyword used to query required stress testing tasks. If this parameter is specified, the system returns stress testing tasks based on the names of the stress testing tasks in the matched Elastic Algorithm Service (EAS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_bench</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -104,7 +108,10 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -113,7 +120,10 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 100.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -122,7 +132,10 @@ public class ListBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * The name of the EAS service that corresponds to the stress testing task. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The name of the EAS service that corresponds to the stress testing task. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_bench_srv</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

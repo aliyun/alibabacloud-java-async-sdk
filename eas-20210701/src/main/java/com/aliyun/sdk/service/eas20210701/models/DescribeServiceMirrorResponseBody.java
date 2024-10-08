@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceMirrorResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceMirrorResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         private String target; 
 
         /**
-         * The percentage of traffic that you want to mirror. Valid values: 0 to 100.
+         * <p>The percentage of traffic that you want to mirror. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder ratio(String ratio) {
             this.ratio = ratio;
@@ -81,7 +85,10 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,10 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -97,7 +107,10 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * The destination services to which you want to mirror traffic.
+         * <p>The destination services to which you want to mirror traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo2,foo3</p>
          */
         public Builder target(String target) {
             this.target = target;

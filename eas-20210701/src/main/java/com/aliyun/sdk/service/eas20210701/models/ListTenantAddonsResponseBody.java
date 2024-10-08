@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTenantAddonsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTenantAddonsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListTenantAddonsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Addons.
+         * <p>The information about the plug-in.</p>
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.addons = addons;
@@ -57,7 +58,10 @@ public class ListTenantAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListTenantAddonsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTenantAddonsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTenantAddonsResponseBody</p>
+     */
     public static class Addons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.Map < String, String > attributes;
@@ -109,7 +119,7 @@ public class ListTenantAddonsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Attributes.
+             * <p>The attributes of the plug-in.</p>
              */
             public Builder attributes(java.util.Map < String, String > attributes) {
                 this.attributes = attributes;
@@ -117,7 +127,10 @@ public class ListTenantAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prometheus_discovery</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayIntranetLinkedVpcRequest} extends {@link RequestModel}
  *
  * <p>ListGatewayIntranetLinkedVpcRequest</p>
@@ -67,7 +68,10 @@ public class ListGatewayIntranetLinkedVpcRequest extends Request {
         } 
 
         /**
-         * The region ID of the private gateway.
+         * <p>The region ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -76,7 +80,10 @@ public class ListGatewayIntranetLinkedVpcRequest extends Request {
         }
 
         /**
-         * The private gateway ID.
+         * <p>The private gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);

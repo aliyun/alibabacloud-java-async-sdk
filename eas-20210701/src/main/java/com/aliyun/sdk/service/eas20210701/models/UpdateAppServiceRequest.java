@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppServiceRequest} extends {@link RequestModel}
  *
  * <p>UpdateAppServiceRequest</p>
@@ -167,7 +168,10 @@ public class UpdateAppServiceRequest extends Request {
         } 
 
         /**
-         * The region ID of the service.
+         * <p>The region ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -176,7 +180,10 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -185,7 +192,10 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * The quota ID.
+         * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcdef</p>
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -194,7 +204,10 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -203,18 +216,19 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * The application type.
-         * <p>
+         * <p>The application type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>LLM: the large language model (LLM) application</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   LLM: the large language model (LLM) application
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>LLM</p>
          */
         public Builder appType(String appType) {
             this.putBodyParameter("AppType", appType);
@@ -223,7 +237,10 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * The application version.
+         * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder appVersion(String appVersion) {
             this.putBodyParameter("AppVersion", appVersion);
@@ -232,7 +249,7 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * The additional configurations that are required for service deployment.
+         * <p>The additional configurations that are required for service deployment.</p>
          */
         public Builder config(java.util.Map < String, ? > config) {
             this.putBodyParameter("Config", config);
@@ -241,7 +258,10 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * The number of instances. This value must be greater than 0.
+         * <p>The number of instances. This value must be greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);
@@ -250,19 +270,22 @@ public class UpdateAppServiceRequest extends Request {
         }
 
         /**
-         * The service specifications. Valid values:
-         * <p>
+         * <p>The service specifications. Valid values:</p>
+         * <ul>
+         * <li>llama_7b_fp16</li>
+         * <li>llama_7b_int8</li>
+         * <li>llama_13b_fp16</li>
+         * <li>llama_7b_int8</li>
+         * <li>chatglm_6b_fp16</li>
+         * <li>chatglm_6b_int8</li>
+         * <li>chatglm2_6b_fp16</li>
+         * <li>baichuan_7b_int8</li>
+         * <li>baichuan_13b_fp16</li>
+         * <li>baichuan_7b_fp16</li>
+         * </ul>
          * 
-         * *   llama\_7b_fp16
-         * *   llama\_7b_int8
-         * *   llama\_13b_fp16
-         * *   llama\_7b_int8
-         * *   chatglm\_6b_fp16
-         * *   chatglm\_6b_int8
-         * *   chatglm2\_6b_fp16
-         * *   baichuan\_7b_int8
-         * *   baichuan\_13b_fp16
-         * *   baichuan\_7b_fp16
+         * <strong>example:</strong>
+         * <p>llama_7b_fp16</p>
          */
         public Builder serviceSpec(String serviceSpec) {
             this.putBodyParameter("ServiceSpec", serviceSpec);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceInstanceDiagnosisResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceInstanceDiagnosisResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The diagnostics information.
+         * <p>The diagnostics information.</p>
          */
         public Builder diagnosis(Diagnosis diagnosis) {
             this.diagnosis = diagnosis;
@@ -57,7 +58,10 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceInstanceDiagnosisResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceInstanceDiagnosisResponseBody</p>
+     */
     public static class Diagnosis extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Advices")
         private java.util.List < String > advices;
@@ -121,7 +131,7 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
             private String error; 
 
             /**
-             * The solutions to the errors.
+             * <p>The solutions to the errors.</p>
              */
             public Builder advices(java.util.List < String > advices) {
                 this.advices = advices;
@@ -129,7 +139,7 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
             }
 
             /**
-             * The causes of the errors.
+             * <p>The causes of the errors.</p>
              */
             public Builder causes(java.util.List < String > causes) {
                 this.causes = causes;
@@ -137,7 +147,10 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Container worker0 failed to pull image.</p>
              */
             public Builder error(String error) {
                 this.error = error;

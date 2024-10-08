@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitServiceRequest} extends {@link RequestModel}
  *
  * <p>CommitServiceRequest</p>
@@ -67,7 +68,10 @@ public class CommitServiceRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is deployed.
+         * <p>The ID of the region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -76,7 +80,10 @@ public class CommitServiceRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);

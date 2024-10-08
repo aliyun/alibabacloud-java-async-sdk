@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListResourceInstancesRequest</p>
@@ -209,7 +210,10 @@ public class ListResourceInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the resource group belongs.
+         * <p>The ID of the region to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -218,7 +222,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -227,11 +234,14 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
          * 
-         * *   PrePaid: subscription.
-         * *   PostPaid: pay-as-you-go.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -240,7 +250,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The keyword used to query instances. Instances can be queried by instance ID or instance IP address.
+         * <p>The keyword used to query instances. Instances can be queried by instance ID or instance IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.224.xx.xx</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -249,7 +262,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The IP address of the instance.
+         * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.224.xx.xx</p>
          */
         public Builder instanceIP(String instanceIP) {
             this.putQueryParameter("InstanceIP", instanceIP);
@@ -258,7 +274,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID. For more information about how to query the instance ID, see [ListResourceInstances](~~412129~~).
+         * <p>The instance ID. For more information about how to query the instance ID, see <a href="~~412129~~">ListResourceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1jd6x3uotsv****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -267,7 +286,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-xxxx***</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -276,104 +298,87 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The instance state.
-         * <p>
+         * <p>The instance state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Ready-SchedulingDisabled</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   Ready-SchedulingDisabled
+         * <p>The instance is available but unschedulable</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>.</p>
+         * </li>
+         * <li><p>Ready</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>: The instance</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>is running</p>
+         * <!-- -->
          * 
-         *     The instance is available but unschedulable
+         * <p>.</p>
+         * </li>
+         * <li><p>NotReady</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>: The instance is unready.</p>
+         * <!-- -->
          * 
-         *     .
+         * <!-- -->
+         * </li>
+         * <li><p>Stopped</p>
+         * <!-- -->
          * 
-         * *   Ready
+         * <p>: The instance has stopped.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>NotReady-SchedulingDisabled</p>
+         * <!-- -->
          * 
-         *     : The instance
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>The instance is unavailable and unschedulable</p>
+         * <!-- -->
          * 
-         *     is running
+         * <p>.</p>
+         * </li>
+         * <li><p>Attaching</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>: The instance</p>
+         * <!-- -->
          * 
-         *     .
+         * <p>is starting</p>
+         * <!-- -->
          * 
-         * *   NotReady
+         * <p>.</p>
+         * </li>
+         * <li><p>Deleting</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>: The instance is being deleted.</p>
+         * <!-- -->
          * 
-         *     : The instance is unready.
+         * <!-- -->
+         * </li>
+         * <li><p>CreateFailed: The instance failed to be created.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         * *   Stopped
-         * 
-         *     <!-- -->
-         * 
-         *     : The instance has stopped.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   NotReady-SchedulingDisabled
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     The instance is unavailable and unschedulable
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   Attaching
-         * 
-         *     <!-- -->
-         * 
-         *     : The instance
-         * 
-         *     <!-- -->
-         * 
-         *     is starting
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   Deleting
-         * 
-         *     <!-- -->
-         * 
-         *     : The instance is being deleted.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   CreateFailed: The instance failed to be created.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -382,28 +387,27 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The sorting order.
-         * <p>
+         * <p>The sorting order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>asc: The instances are sorted in ascending order.</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   asc: The instances are sorted in ascending order.
+         * <!-- -->
+         * </li>
+         * <li><p>desc</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>: The instances are sorted in descending order.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   desc
-         * 
-         *     <!-- -->
-         * 
-         *     : The instances are sorted in descending order.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -412,7 +416,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -421,7 +428,10 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 100.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -430,66 +440,56 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * The field that you use to sort the query results.
-         * <p>
+         * <p>The field that you use to sort the query results.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>CreateTime</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>: The instances are sorted based on the time when the instances were created.</p>
+         * <!-- -->
          * 
-         * *   CreateTime
+         * <!-- -->
+         * </li>
+         * <li><p>MemoryUsed</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     : The instances are sorted based on the time when the instances were created.
+         * <p>The instances are sorted based on the memory usage of the instances</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>.</p>
+         * </li>
+         * <li><p>GpuUsed</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>: The instances are sorted based on the</p>
+         * <!-- -->
          * 
-         * *   MemoryUsed
+         * <p>GPU usage of the instances.</p>
+         * <!-- -->
+         * </li>
+         * <li><p>ExpireTime: The instances are sorted based on the time when the instances expired.</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     :
+         * <!-- -->
+         * </li>
+         * <li><p>CpuUsed</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     The instances are sorted based on the memory usage of the instances
+         * <p>The instances are sorted based on the CPU utilization of the instances.</p>
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   GpuUsed
-         * 
-         *     <!-- -->
-         * 
-         *     : The instances are sorted based on the
-         * 
-         *     <!-- -->
-         * 
-         *     GPU usage of the instances.
-         * 
-         *     <!-- -->
-         * 
-         * *   ExpireTime: The instances are sorted based on the time when the instances expired.
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   CpuUsed
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     The instances are sorted based on the CPU utilization of the instances.
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

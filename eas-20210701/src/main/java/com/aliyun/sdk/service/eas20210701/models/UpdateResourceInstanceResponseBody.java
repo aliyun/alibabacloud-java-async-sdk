@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourceInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateResourceInstanceResponseBody</p>
@@ -61,7 +62,10 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         private String resourceId; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-i-asdasdasd</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -69,7 +73,10 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;

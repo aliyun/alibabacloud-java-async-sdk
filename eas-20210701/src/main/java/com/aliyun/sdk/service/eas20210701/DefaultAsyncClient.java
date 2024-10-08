@@ -154,8 +154,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
-      *
+     * <b>description</b> :
+     * <p>**Before you call this operation, make sure that you are familiar with the <a href="~~144261~~">billing</a> of Elastic Algorithm Service (EAS).</p>
      */
     @Override
     public CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request) {
@@ -200,8 +200,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
-      *
+     * <b>description</b> :
+     * <p>**Before you call this operation, make sure that you are familiar with the <a href="~~144261~~">billing</a> of Elastic Algorithm Service (EAS).</p>
      */
     @Override
     public CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request) {
@@ -792,9 +792,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated 
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListResourceServicesResponse> listResourceServices(ListResourceServicesRequest request) {
         try {

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceInstancesRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceInstancesRequest</p>
@@ -171,7 +172,10 @@ public class CreateResourceInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the resource group belongs.
+         * <p>The ID of the region to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -180,7 +184,10 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -189,11 +196,14 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
          * 
-         * *   false (default)
-         * *   true
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.putBodyParameter("AutoRenewal", autoRenewal);
@@ -202,11 +212,14 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
          * 
-         * *   PrePaid: subscription.
-         * *   PostPaid: pay-as-you-go.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -215,7 +228,10 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * The number of instances that you want to create. Valid values: 1 to 100.
+         * <p>The number of instances that you want to create. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder ecsInstanceCount(Integer ecsInstanceCount) {
             this.putBodyParameter("EcsInstanceCount", ecsInstanceCount);
@@ -224,7 +240,10 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * The type of the Elastic Compute Service (ECS) instance.
+         * <p>The type of the Elastic Compute Service (ECS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.s6-c1m2.xlarge</p>
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
@@ -233,7 +252,10 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.
+         * <p>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);
@@ -242,7 +264,10 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * The user-defined information. This parameter is not in use.
+         * <p>The user-defined information. This parameter is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x112223333</p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);
@@ -251,7 +276,10 @@ public class CreateResourceInstancesRequest extends Request {
         }
 
         /**
-         * The zone to which the instance belongs.
+         * <p>The zone to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-f</p>
          */
         public Builder zone(String zone) {
             this.putBodyParameter("Zone", zone);

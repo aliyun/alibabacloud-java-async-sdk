@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBenchmarkTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateBenchmarkTaskResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Benchmark  task [foo] is Creating</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -81,7 +85,10 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the stress testing task is performed.
+         * <p>The ID of the region where the stress testing task is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -89,7 +96,10 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class CreateBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the stress testing task.
+         * <p>The name of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>benchmark-larec-test-1076</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

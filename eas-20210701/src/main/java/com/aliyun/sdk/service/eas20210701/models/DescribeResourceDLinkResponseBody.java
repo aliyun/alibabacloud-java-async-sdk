@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceDLinkResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceDLinkResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * The IDs of the secondary vSwitches that are directly connected.
+         * <p>The IDs of the secondary vSwitches that are directly connected.</p>
          */
         public Builder auxVSwitchList(java.util.List < String > auxVSwitchList) {
             this.auxVSwitchList = auxVSwitchList;
@@ -105,7 +106,10 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The CIDR blocks of the clients that you want to connect to. After this parameter is specified, the CIDR blocks are added to the back-to-origin route of the server. Either this parameter or the VSwitchIdList parameter can be used to determine CIDR blocks.
+         * <p>The CIDR blocks of the clients that you want to connect to. After this parameter is specified, the CIDR blocks are added to the back-to-origin route of the server. Either this parameter or the VSwitchIdList parameter can be used to determine CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72.16.0.0/16</p>
          */
         public Builder destinationCIDRs(String destinationCIDRs) {
             this.destinationCIDRs = destinationCIDRs;
@@ -113,7 +117,10 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +128,10 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the security group that is directly connected.
+         * <p>The ID of the security group that is directly connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1j1z7297hcink9d****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -129,7 +139,10 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the primary vSwitch that is directly connected.
+         * <p>The ID of the primary vSwitch that is directly connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-8vbqn2at0kljjxxxx****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -137,7 +150,10 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC that is directly connected.
+         * <p>The ID of the VPC that is directly connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf66uio7md****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

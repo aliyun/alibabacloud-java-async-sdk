@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBenchmarkTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteBenchmarkTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteBenchmarkTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Benchmark task [benchmark-test-service-234c] is Deleting</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -57,7 +61,10 @@ public class DeleteBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

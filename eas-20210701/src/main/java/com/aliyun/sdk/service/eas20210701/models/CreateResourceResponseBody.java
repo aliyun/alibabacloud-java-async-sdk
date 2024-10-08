@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateResourceResponseBody</p>
@@ -97,7 +98,10 @@ public class CreateResourceResponseBody extends TeaModel {
         private String resourceName; 
 
         /**
-         * The ID of the cluster to which the resource group belongs.
+         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -105,7 +109,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The instance IDs.
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.instanceIds = instanceIds;
@@ -113,7 +117,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The user ID (UID) of the resource group owner.
+         * <p>The user ID (UID) of the resource group owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14401087478****</p>
          */
         public Builder ownerUid(String ownerUid) {
             this.ownerUid = ownerUid;
@@ -121,7 +128,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +139,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-h7lcw24dyqztwxxxxxx</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -137,7 +150,10 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the resource group.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyResource</p>
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;

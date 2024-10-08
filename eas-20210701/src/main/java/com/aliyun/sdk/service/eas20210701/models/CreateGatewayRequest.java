@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGatewayRequest} extends {@link RequestModel}
  *
  * <p>CreateGatewayRequest</p>
@@ -124,7 +125,10 @@ public class CreateGatewayRequest extends Request {
         } 
 
         /**
-         * The resource group ID. To obtain a resource group ID, see the ResourceId field in the response of the [ListResources](~~412133~~) operation.
+         * <p>The resource group ID. To obtain a resource group ID, see the ResourceId field in the response of the <a href="~~412133~~">ListResources</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-4gt8twzwllfo******</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -133,13 +137,15 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access. Default value: false.
-         * <p>
+         * <p>Specifies whether to enable Internet access. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableInternet(Boolean enableInternet) {
             this.putBodyParameter("EnableInternet", enableInternet);
@@ -148,13 +154,15 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable private access. Default value: true.
-         * <p>
+         * <p>Specifies whether to enable private access. Default value: true.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableIntranet(Boolean enableIntranet) {
             this.putBodyParameter("EnableIntranet", enableIntranet);
@@ -163,13 +171,16 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * The instance type used by the private gateway. Valid values:
-         * <p>
+         * <p>The instance type used by the private gateway. Valid values:</p>
+         * <ul>
+         * <li>2c4g</li>
+         * <li>4c8g</li>
+         * <li>8c16g</li>
+         * <li>16c32g</li>
+         * </ul>
          * 
-         * *   2c4g
-         * *   4c8g
-         * *   8c16g
-         * *   16c32g
+         * <strong>example:</strong>
+         * <p>ecs.c6.4xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
@@ -178,7 +189,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * The alias of the private gateway.
+         * <p>The alias of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mygateway1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -187,7 +201,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * The number of nodes in the private gateway.
+         * <p>The number of nodes in the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);

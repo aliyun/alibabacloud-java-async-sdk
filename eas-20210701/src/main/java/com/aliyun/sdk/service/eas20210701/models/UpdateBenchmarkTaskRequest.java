@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateBenchmarkTaskRequest} extends {@link RequestModel}
  *
  * <p>UpdateBenchmarkTaskRequest</p>
@@ -83,7 +84,10 @@ public class UpdateBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the stress testing task is performed.
+         * <p>The ID of the region where the stress testing task is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,7 +96,10 @@ public class UpdateBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * The name of the stress testing task.
+         * <p>The name of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>benchmark-larec-test-645c</p>
          */
         public Builder taskName(String taskName) {
             this.putPathParameter("TaskName", taskName);
@@ -101,7 +108,14 @@ public class UpdateBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * The request body. The body includes the parameters that are set to create a stress testing task. For more information, see **Table 1. Fields in the base parameter**.
+         * <p>The request body. The body includes the parameters that are set to create a stress testing task. For more information, see <strong>Table 1. Fields in the base parameter</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;base&quot;:  {
+         *          &quot;qps&quot;: 200
+         *     }
+         * }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

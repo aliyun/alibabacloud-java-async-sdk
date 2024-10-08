@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServicesRequest} extends {@link RequestModel}
  *
  * <p>ListServicesRequest</p>
@@ -52,6 +53,10 @@ public class ListServicesRequest extends Request {
     private String resourceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
+    private String role;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
@@ -87,6 +92,7 @@ public class ListServicesRequest extends Request {
         this.parentServiceUid = builder.parentServiceUid;
         this.quotaId = builder.quotaId;
         this.resourceName = builder.resourceName;
+        this.role = builder.role;
         this.serviceName = builder.serviceName;
         this.serviceStatus = builder.serviceStatus;
         this.serviceType = builder.serviceType;
@@ -179,6 +185,13 @@ public class ListServicesRequest extends Request {
     }
 
     /**
+     * @return role
+     */
+    public String getRole() {
+        return this.role;
+    }
+
+    /**
      * @return serviceName
      */
     public String getServiceName() {
@@ -231,6 +244,7 @@ public class ListServicesRequest extends Request {
         private String parentServiceUid; 
         private String quotaId; 
         private String resourceName; 
+        private String role; 
         private String serviceName; 
         private String serviceStatus; 
         private String serviceType; 
@@ -254,6 +268,7 @@ public class ListServicesRequest extends Request {
             this.parentServiceUid = request.parentServiceUid;
             this.quotaId = request.quotaId;
             this.resourceName = request.resourceName;
+            this.role = request.role;
             this.serviceName = request.serviceName;
             this.serviceStatus = request.serviceStatus;
             this.serviceType = request.serviceType;
@@ -263,7 +278,10 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.
+         * <p>The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -272,7 +290,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The ID of the private gateway.
+         * <p>The ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gateway(String gateway) {
             this.putQueryParameter("Gateway", gateway);
@@ -281,7 +302,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The name of the service group. For more information about how to query the name of a service group, see [ListServices](~~412109~~).
+         * <p>The name of the service group. For more information about how to query the name of a service group, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -290,7 +314,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The tag that is used to filter services.
+         * <p>The tag that is used to filter services.</p>
          */
         public Builder label(java.util.Map < String, String > label) {
             String labelShrink = shrink(label, "Label", "json");
@@ -300,11 +324,14 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The sorting order. Valid values:
-         * <p>
+         * <p>The sorting order. Valid values:</p>
+         * <ul>
+         * <li>desc (default): The query results are sorted in descending order.</li>
+         * <li>asc: The query results are sorted in ascending order.</li>
+         * </ul>
          * 
-         * *   desc (default): The query results are sorted in descending order.
-         * *   asc: The query results are sorted in ascending order.
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -313,7 +340,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -322,7 +352,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 100.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -331,7 +364,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The ID of the primary service that corresponds to the Band member service.
+         * <p>The ID of the primary service that corresponds to the Band member service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-m-ijafy3c8cxxxx</p>
          */
         public Builder parentServiceUid(String parentServiceUid) {
             this.putQueryParameter("ParentServiceUid", parentServiceUid);
@@ -340,7 +376,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The quota ID.
+         * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota12345</p>
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -349,7 +388,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The name or ID of the resource group to which the service belongs.
+         * <p>The name or ID of the resource group to which the service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-hd0qwy8cxxxx</p>
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -358,7 +400,19 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The service name.
+         * Role.
+         */
+        public Builder role(String role) {
+            this.putQueryParameter("Role", role);
+            this.role = role;
+            return this;
+        }
+
+        /**
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo_test</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -367,154 +421,138 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The service state.
-         * <p>
+         * <p>The service state.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Creating</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   Creating
+         * <!-- -->
+         * </li>
+         * <li><p>Stopped</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Failed</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Stopped
+         * <!-- -->
+         * </li>
+         * <li><p>Complete</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Cloning</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Failed
+         * <!-- -->
+         * </li>
+         * <li><p>Stopping</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Updating</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Complete
+         * <!-- -->
+         * </li>
+         * <li><p>Waiting</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>HotUpdate</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Cloning
+         * <!-- -->
+         * </li>
+         * <li><p>Committing</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Starting</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Stopping
+         * <!-- -->
+         * </li>
+         * <li><p>DeleteFailed</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Running</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Updating
+         * <!-- -->
+         * </li>
+         * <li><p>Developing</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Scaling</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Waiting
+         * <!-- -->
+         * </li>
+         * <li><p>Deleted</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Pending</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   HotUpdate
+         * <!-- -->
+         * </li>
+         * <li><p>Deleting</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   Committing
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Starting
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   DeleteFailed
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Running
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Developing
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Scaling
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Deleted
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Pending
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Deleting
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder serviceStatus(String serviceStatus) {
             this.putQueryParameter("ServiceStatus", serviceStatus);
@@ -523,47 +561,46 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The service type. Valid values:
-         * <p>
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li>Async</li>
+         * <li>Standard</li>
+         * <li>Offline Task</li>
+         * <li>Proxima</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Async</p>
+         * <!-- -->
          * 
-         * *   Async
-         * *   Standard
-         * *   Offline Task
-         * *   Proxima
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
+         * </li>
+         * <li><p>Standard</p>
+         * <!-- -->
          * 
-         * *   Async
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>OfflineTask</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Proxima</p>
+         * <!-- -->
          * 
-         * *   Standard
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   OfflineTask
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Proxima
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -572,7 +609,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The user ID (UID) of the service.
+         * <p>The user ID (UID) of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-m-c9iw3yitxxxx</p>
          */
         public Builder serviceUid(String serviceUid) {
             this.putQueryParameter("ServiceUid", serviceUid);
@@ -581,7 +621,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The sort field. By default, the query results are sorted by the timestamp type in descending order.
+         * <p>The sort field. By default, the query results are sorted by the timestamp type in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -590,7 +633,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

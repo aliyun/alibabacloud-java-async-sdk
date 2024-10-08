@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewayResponseBody</p>
@@ -85,7 +86,7 @@ public class ListGatewayResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Gateways.
+         * <p>The private gateways.</p>
          */
         public Builder gateways(java.util.List < Gateways> gateways) {
             this.gateways = gateways;
@@ -93,7 +94,10 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of private gateways returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayResponseBody</p>
+     */
     public static class Gateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -277,7 +296,10 @@ public class ListGatewayResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-19T14:19:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -285,7 +307,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The private gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-1uhcqmsc7x22******</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -293,7 +318,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayName.
+             * <p>The private gateway alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mygateway1</p>
              */
             public Builder gatewayName(String gatewayName) {
                 this.gatewayName = gatewayName;
@@ -301,7 +329,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The type of instances used for the private gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2c4g</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -309,7 +340,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * InternetDomain.
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-1uhcqmsc7x22******-1801786532******.cn-wulanchabu.pai-eas.aliyuncs.com</p>
              */
             public Builder internetDomain(String internetDomain) {
                 this.internetDomain = internetDomain;
@@ -317,7 +351,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEnabled.
+             * <p>Indicates whether Internet access is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder internetEnabled(Boolean internetEnabled) {
                 this.internetEnabled = internetEnabled;
@@ -325,7 +362,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetDomain.
+             * <p>The internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-wulanchabu.pai-eas.aliyuncs.com</p>
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
@@ -333,7 +373,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether it is the default private gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -341,7 +384,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Replicas.
+             * <p>The number of nodes in the private gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replicas(Integer replicas) {
                 this.replicas = replicas;
@@ -349,7 +395,20 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The state of the private gateway.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Creating</li>
+             * <li>Stopped</li>
+             * <li>Failed</li>
+             * <li>Running</li>
+             * <li>Deleted</li>
+             * <li>Deleting</li>
+             * <li>Waiting</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -357,7 +416,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the private gateway was updated. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-24T11:52:17Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

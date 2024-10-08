@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceCronScalerRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceCronScalerRequest</p>
@@ -98,7 +99,10 @@ public class CreateServiceCronScalerRequest extends Request {
         } 
 
         /**
-         * The region ID of the service.
+         * <p>The region ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +111,10 @@ public class CreateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -116,7 +123,7 @@ public class CreateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.
+         * <p>The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.</p>
          */
         public Builder excludeDates(java.util.List < String > excludeDates) {
             this.putBodyParameter("ExcludeDates", excludeDates);
@@ -125,7 +132,7 @@ public class CreateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * The description of the CronHPA job.
+         * <p>The description of the CronHPA job.</p>
          */
         public Builder scaleJobs(java.util.List < ScaleJobs> scaleJobs) {
             this.putBodyParameter("ScaleJobs", scaleJobs);
@@ -140,6 +147,12 @@ public class CreateServiceCronScalerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceCronScalerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceCronScalerRequest</p>
+     */
     public static class ScaleJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -193,7 +206,10 @@ public class CreateServiceCronScalerRequest extends Request {
             private Integer targetSize; 
 
             /**
-             * The name of the CronHPA job.
+             * <p>The name of the CronHPA job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scale-job-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -201,7 +217,10 @@ public class CreateServiceCronScalerRequest extends Request {
             }
 
             /**
-             * The cron expression that is used to configure the execution time of the CronHPA job. For more information about how to configure cron expressions, see **Description of special characters** in this topic.
+             * <p>The cron expression that is used to configure the execution time of the CronHPA job. For more information about how to configure cron expressions, see <strong>Description of special characters</strong> in this topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 18 * * * *</p>
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -209,7 +228,10 @@ public class CreateServiceCronScalerRequest extends Request {
             }
 
             /**
-             * The number of instances that you want to configure for the CronHPA job.
+             * <p>The number of instances that you want to configure for the CronHPA job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder targetSize(Integer targetSize) {
                 this.targetSize = targetSize;

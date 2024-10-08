@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceRequest</p>
@@ -152,11 +153,14 @@ public class CreateResourceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-renewal. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
          * 
-         * *   false (default)
-         * *   true
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.putBodyParameter("AutoRenewal", autoRenewal);
@@ -165,13 +169,17 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * The billing method. Valid values:
-         * <p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: the subscription billing method.</li>
+         * <li>PostPaid: the pay-as-you-go billing method.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is required when the ResourceType parameter is set to Dedicated.</p>
+         * </blockquote>
          * 
-         * *   PrePaid: the subscription billing method.
-         * *   PostPaid: the pay-as-you-go billing method.
-         * 
-         * >  This parameter is required when the ResourceType parameter is set to Dedicated.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -180,10 +188,13 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * The number of ECS instances.
-         * <p>
+         * <p>The number of ECS instances.</p>
+         * <blockquote>
+         * <p> This parameter is required when the ResourceType parameter is set to Dedicated.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when the ResourceType parameter is set to Dedicated.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder ecsInstanceCount(Integer ecsInstanceCount) {
             this.putBodyParameter("EcsInstanceCount", ecsInstanceCount);
@@ -192,10 +203,13 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * The type of the Elastic Compute Service (ECS) instance.
-         * <p>
+         * <p>The type of the Elastic Compute Service (ECS) instance.</p>
+         * <blockquote>
+         * <p> This parameter is required when the ResourceType parameter is set to Dedicated.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when the ResourceType parameter is set to Dedicated.
+         * <strong>example:</strong>
+         * <p>ecs.c6.8xlarge</p>
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
@@ -204,13 +218,17 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * The type of the resource group. Valid values:
-         * <p>
+         * <p>The type of the resource group. Valid values:</p>
+         * <ul>
+         * <li>Dedicated: the dedicated resource group.</li>
+         * <li>SelfManaged: the self-managed resource group.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you use a self-managed resource group, you must configure a whitelist.</p>
+         * </blockquote>
          * 
-         * *   Dedicated: the dedicated resource group.
-         * *   SelfManaged: the self-managed resource group.
-         * 
-         * >  If you use a self-managed resource group, you must configure a whitelist.
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -219,7 +237,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * The configurations of the self-managed resource group.
+         * <p>The configurations of the self-managed resource group.</p>
          */
         public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
             this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
@@ -228,7 +246,10 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.
+         * <p>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putBodyParameter("SystemDiskSize", systemDiskSize);
@@ -237,7 +258,10 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which the instance resides.
+         * <p>The ID of the zone in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-f</p>
          */
         public Builder zone(String zone) {
             this.putBodyParameter("Zone", zone);
@@ -252,6 +276,12 @@ public class CreateResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateResourceRequest</p>
+     */
     public static class NodeTolerations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("effect")
         private String effect;
@@ -315,14 +345,16 @@ public class CreateResourceRequest extends Request {
             private String value; 
 
             /**
-             * The result.
-             * <p>
+             * <p>The result.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PreferNoSchedule</li>
+             * <li>NoSchedule</li>
+             * <li>NoExecute</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   PreferNoSchedule
-             * *   NoSchedule
-             * *   NoExecute
+             * <strong>example:</strong>
+             * <p>NoSchedule</p>
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -330,7 +362,10 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * The key name.
+             * <p>The key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -338,13 +373,15 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * The relationship between key names and key values.
-             * <p>
+             * <p>The relationship between key names and key values.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Equal</li>
+             * <li>Exists</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   Equal
-             * *   Exists
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -352,7 +389,10 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * The key value.
+             * <p>The key value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -366,6 +406,12 @@ public class CreateResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateResourceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateResourceRequest</p>
+     */
     public static class SelfManagedResourceOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExternalClusterId")
         private String externalClusterId;
@@ -429,7 +475,10 @@ public class CreateResourceRequest extends Request {
             private String roleName; 
 
             /**
-             * The ID of the self-managed cluster.
+             * <p>The ID of the self-managed cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cf0386f250f2545689ca7fdd1cd******</p>
              */
             public Builder externalClusterId(String externalClusterId) {
                 this.externalClusterId = externalClusterId;
@@ -437,7 +486,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * The tag key-value pairs for nodes.
+             * <p>The tag key-value pairs for nodes.</p>
              */
             public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
@@ -445,7 +494,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * Tolerations for nodes.
+             * <p>Tolerations for nodes.</p>
              */
             public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;
@@ -453,7 +502,10 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * The name of the RAM user to which the permissions on Elastic Algorithm Service of Platform for AI (PAI-EAS) are granted.
+             * <p>The name of the RAM user to which the permissions on Elastic Algorithm Service of Platform for AI (PAI-EAS) are granted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>clusterrole</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

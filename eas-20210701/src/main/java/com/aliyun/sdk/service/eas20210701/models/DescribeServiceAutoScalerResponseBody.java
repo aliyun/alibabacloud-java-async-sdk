@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceAutoScalerResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceAutoScalerResponseBody</p>
@@ -109,7 +110,16 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         private String serviceName; 
 
         /**
-         * The additional information about the Autoscaler policy, such as the interval of triggering Autoscaler.
+         * <p>The additional information about the Autoscaler policy, such as the interval of triggering Autoscaler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;behavior&quot;: {
+         *     &quot;scaleDown&quot;: {
+         *       &quot;stabilizationWindowSeconds&quot;: 150
+         *     }
+         *   }
+         * }</p>
          */
         public Builder behavior(java.util.Map < String, ? > behavior) {
             this.behavior = behavior;
@@ -117,7 +127,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * The metrics.
+         * <p>The metrics.</p>
          */
         public Builder currentMetrics(java.util.List < CurrentMetrics> currentMetrics) {
             this.currentMetrics = currentMetrics;
@@ -125,7 +135,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of instances in the service.
+         * <p>The maximum number of instances in the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder maxReplica(Integer maxReplica) {
             this.maxReplica = maxReplica;
@@ -133,7 +146,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum number of instances in the service.
+         * <p>The minimum number of instances in the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder minReplica(Integer minReplica) {
             this.minReplica = minReplica;
@@ -141,7 +157,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +168,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * The auto scaling policies.
+         * <p>The auto scaling policies.</p>
          */
         public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
             this.scaleStrategies = scaleStrategies;
@@ -157,7 +176,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -170,6 +192,12 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceAutoScalerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceAutoScalerResponseBody</p>
+     */
     public static class CurrentMetrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("metricName")
         private String metricName;
@@ -221,11 +249,14 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The metric name. Valid values:
-             * <p>
+             * <p>The metric name. Valid values:</p>
+             * <ul>
+             * <li>QPS</li>
+             * <li>CPU</li>
+             * </ul>
              * 
-             * *   QPS
-             * *   CPU
+             * <strong>example:</strong>
+             * <p>qps</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -233,7 +264,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The service for which the metric is specified.
+             * <p>The service for which the metric is specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_svc</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -241,7 +275,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The metric value.
+             * <p>The metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -255,6 +292,12 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeServiceAutoScalerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceAutoScalerResponseBody</p>
+     */
     public static class ScaleStrategies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("metricName")
         private String metricName;
@@ -306,11 +349,14 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * The metric name. Valid values:
-             * <p>
+             * <p>The metric name. Valid values:</p>
+             * <ul>
+             * <li>QPS: the queries per second (QPS) for an individual instance.</li>
+             * <li>CPU: the CPU utilization.</li>
+             * </ul>
              * 
-             * *   QPS: the queries per second (QPS) for an individual instance.
-             * *   CPU: the CPU utilization.
+             * <strong>example:</strong>
+             * <p>QPS</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -318,7 +364,10 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.
+             * <p>The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_svc</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -326,11 +375,14 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold of the metric that triggers auto scaling.
-             * <p>
+             * <p>The threshold of the metric that triggers auto scaling.</p>
+             * <ul>
+             * <li>If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.</li>
+             * <li>If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.</li>
+             * </ul>
              * 
-             * *   If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.
-             * *   If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGatewayIntranetLinkedVpcResponseBody} extends {@link TeaModel}
  *
  * <p>ListGatewayIntranetLinkedVpcResponseBody</p>
@@ -61,7 +62,10 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The private gateway ID.
+         * <p>The private gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -69,7 +73,7 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The internal endpoints.
+         * <p>The internal endpoints.</p>
          */
         public Builder intranetLinkedVpcList(java.util.List < IntranetLinkedVpcList> intranetLinkedVpcList) {
             this.intranetLinkedVpcList = intranetLinkedVpcList;
@@ -77,7 +81,10 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGatewayIntranetLinkedVpcResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGatewayIntranetLinkedVpcResponseBody</p>
+     */
     public static class IntranetLinkedVpcList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -165,7 +178,10 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The IP address.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.10.11</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -173,7 +189,10 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze4pgstgszvgq******</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -181,34 +200,30 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the private gateway.
-             * <p>
+             * <p>The state of the private gateway.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Creating</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <p>:</p>
+             * <!-- -->
              * 
-             * *   Creating
+             * <p>The private gateway is being created.</p>
+             * <!-- -->
+             * </li>
+             * <li><p>Running</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <p>:</p>
+             * <!-- -->
              * 
-             *     :
+             * <p>The private gateway is running.</p>
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     The private gateway is being created.
-             * 
-             *     <!-- -->
-             * 
-             * *   Running
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     The private gateway is running.
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -216,7 +231,10 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-8vb2qjoiio6m9pg******</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -224,7 +242,10 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zetuli9ws0qgjd******</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

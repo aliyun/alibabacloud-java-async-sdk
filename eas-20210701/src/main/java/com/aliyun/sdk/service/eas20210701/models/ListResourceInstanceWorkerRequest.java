@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceInstanceWorkerRequest} extends {@link RequestModel}
  *
  * <p>ListResourceInstanceWorkerRequest</p>
@@ -112,7 +113,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster to which the resource group belongs.
+         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -121,7 +125,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-adfabas</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -130,7 +137,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * The name of the instance in a resource group. For more information about how to query the instance name, see [ListResourceInstances](~~412129~~).
+         * <p>The name of the instance in a resource group. For more information about how to query the instance name, see <a href="~~412129~~">ListResourceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cne10</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);
@@ -139,7 +149,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,7 +161,10 @@ public class ListResourceInstanceWorkerRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 100.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

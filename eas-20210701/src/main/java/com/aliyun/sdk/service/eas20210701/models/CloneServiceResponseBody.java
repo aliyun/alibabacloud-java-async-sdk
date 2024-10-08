@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CloneServiceResponseBody</p>
@@ -97,7 +98,10 @@ public class CloneServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The public endpoint of the service.
+         * <p>The public endpoint of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
          */
         public Builder internetEndpoint(String internetEndpoint) {
             this.internetEndpoint = internetEndpoint;
@@ -105,7 +109,10 @@ public class CloneServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The private endpoint of the service.
+         * <p>The private endpoint of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo">http://10123*****.vpc.cn-shanghai.aliyuncs.com/api/predict/echo</a></p>
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
@@ -113,7 +120,10 @@ public class CloneServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +131,10 @@ public class CloneServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-m-r9knx7n9guf2p*****</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -129,7 +142,10 @@ public class CloneServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -137,7 +153,10 @@ public class CloneServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service status.
+         * <p>The service status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder status(String status) {
             this.status = status;

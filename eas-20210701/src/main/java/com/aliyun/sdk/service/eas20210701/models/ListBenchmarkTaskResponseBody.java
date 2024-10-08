@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBenchmarkTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListBenchmarkTaskResponseBody</p>
@@ -85,7 +86,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The stress testing tasks.
+         * <p>The stress testing tasks.</p>
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -117,7 +127,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBenchmarkTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBenchmarkTaskResponseBody</p>
+     */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableAgent")
         private Long availableAgent;
@@ -253,7 +272,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The number of instances that are available for stress testing.
+             * <p>The number of instances that are available for stress testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder availableAgent(Long availableAgent) {
                 this.availableAgent = availableAgent;
@@ -261,7 +283,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the stress testing task was created.
+             * <p>The time when the stress testing task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-04T02:43:15Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -269,7 +294,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Benchmark task [benchmark-larec-test-1076] is Running</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -277,7 +305,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the stress testing task.
+             * <p>The region ID of the stress testing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -285,7 +316,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service on which you want to perform a stress testing.
+             * <p>The name of the service on which you want to perform a stress testing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_quota</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -293,82 +327,75 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the stress testing task.
-             * <p>
+             * <p>The state of the stress testing task.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Creating</p>
+             * <!-- -->
              * 
-             * Valid values:
+             * <!-- -->
              * 
-             * *   Creating
+             * <!-- -->
+             * </li>
+             * <li><p>Starting</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>DeleteFailed</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Starting
+             * <!-- -->
+             * </li>
+             * <li><p>Running</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Stopping</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   DeleteFailed
+             * <!-- -->
+             * </li>
+             * <li><p>Error</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>Updating</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Running
+             * <!-- -->
+             * </li>
+             * <li><p>Deleting</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
+             * </li>
+             * <li><p>CreateFailed</p>
+             * <!-- -->
              * 
-             *     <!-- -->
+             * <!-- -->
              * 
-             * *   Stopping
+             * <!-- --></li>
+             * </ul>
              * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Error
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Updating
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Deleting
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   CreateFailed
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -376,7 +403,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the stress testing task.
+             * <p>The ID of the stress testing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eas-b-gv4y86uvgt****i</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -384,7 +414,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the stress testing task.
+             * <p>The name of the stress testing task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>benchmark-larec-test-1076</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -392,7 +425,10 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the stress testing task was updated.
+             * <p>The time when the stress testing task was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-24T03:11:30Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

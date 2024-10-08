@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceLogResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         private Long totalPageNum; 
 
         /**
-         * The returned logs.
+         * <p>The returned logs.</p>
          */
         public Builder logs(java.util.List < String > logs) {
             this.logs = logs;
@@ -93,7 +94,10 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -101,7 +105,10 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +127,10 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder totalPageNum(Long totalPageNum) {
             this.totalPageNum = totalPageNum;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Service} extends {@link TeaModel}
  *
  * <p>Service</p>
@@ -890,6 +891,12 @@ public class Service extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Service} extends {@link TeaModel}
+     *
+     * <p>Service</p>
+     */
     public static class Labels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelKey")
         private String labelKey;

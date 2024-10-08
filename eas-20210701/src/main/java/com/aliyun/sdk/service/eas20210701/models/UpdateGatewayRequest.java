@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateGatewayRequest} extends {@link RequestModel}
  *
  * <p>UpdateGatewayRequest</p>
@@ -153,7 +154,10 @@ public class UpdateGatewayRequest extends Request {
         } 
 
         /**
-         * The ID of the private gateway.
+         * <p>The ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
@@ -162,7 +166,10 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * The region of the private gateway.
+         * <p>The region of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -171,26 +178,26 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access. Default value: false.
-         * <p>
+         * <p>Specifies whether to enable Internet access. Default value: false.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableInternet(Boolean enableInternet) {
             this.putBodyParameter("EnableInternet", enableInternet);
@@ -199,7 +206,10 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable internal network access. Default value: true.
+         * <p>Specifies whether to enable internal network access. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableIntranet(Boolean enableIntranet) {
             this.putBodyParameter("EnableIntranet", enableIntranet);
@@ -208,7 +218,10 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * The instance type used for the private gateway.
+         * <p>The instance type used for the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.4xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
@@ -217,7 +230,10 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * Indicates whether it is the default private gateway.
+         * <p>Indicates whether it is the default private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putBodyParameter("IsDefault", isDefault);
@@ -226,7 +242,10 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * The private gateway alias.
+         * <p>The private gateway alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mygateway1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -235,7 +254,10 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * The number of nodes in the private gateway.
+         * <p>The number of nodes in the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);

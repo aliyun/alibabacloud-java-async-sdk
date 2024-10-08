@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReinstallTenantAddonRequest} extends {@link RequestModel}
  *
  * <p>ReinstallTenantAddonRequest</p>
@@ -69,7 +70,10 @@ public class ReinstallTenantAddonRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +82,10 @@ public class ReinstallTenantAddonRequest extends Request {
         }
 
         /**
-         * TenantAddonName.
+         * <p>The plug-in name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prometheus_discovery</p>
          */
         public Builder tenantAddonName(String tenantAddonName) {
             this.putPathParameter("TenantAddonName", tenantAddonName);

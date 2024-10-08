@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGatewayRequest} extends {@link RequestModel}
  *
  * <p>DescribeGatewayRequest</p>
@@ -69,7 +70,10 @@ public class DescribeGatewayRequest extends Request {
         } 
 
         /**
-         * The region ID of the private gateway.
+         * <p>The region ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +82,10 @@ public class DescribeGatewayRequest extends Request {
         }
 
         /**
-         * The ID of the private gateway. For more information about the private gateway ID, see the private_gateway_id parameter returned by [ListResources](~~412133~~).
+         * <p>The ID of the private gateway. For more information about the private gateway ID, see the private_gateway_id parameter returned by <a href="~~412133~~">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGatewayResponseBody</p>
@@ -193,7 +194,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * The time when the private gateway was created. The time is displayed in UTC.
+         * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-19T14:19:42Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -201,7 +205,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the self-managed cluster.
+         * <p>The ID of the self-managed cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c935eadf284c14c2da57a2a13ad6******</p>
          */
         public Builder externalClusterId(String externalClusterId) {
             this.externalClusterId = externalClusterId;
@@ -209,7 +216,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the private gateway.
+         * <p>The ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -217,7 +227,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The alias of the private gateway.
+         * <p>The alias of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mygateway1</p>
          */
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = gatewayName;
@@ -225,15 +238,17 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The instance type used by the private gateway.
-         * <p>
+         * <p>The instance type used by the private gateway.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>8c16g</li>
+         * <li>4c8g</li>
+         * <li>2c4g</li>
+         * <li>16c32g</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   8c16g
-         * *   4c8g
-         * *   2c4g
-         * *   16c32g
+         * <strong>example:</strong>
+         * <p>ecs.c6.4xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -241,7 +256,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The public endpoint.
+         * <p>The public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******-1801786532******.cn-hangzhou.pai-eas.aliyuncs.com</p>
          */
         public Builder internetDomain(String internetDomain) {
             this.internetDomain = internetDomain;
@@ -249,7 +267,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Internet access is enabled.
+         * <p>Indicates whether Internet access is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder internetEnabled(Boolean internetEnabled) {
             this.internetEnabled = internetEnabled;
@@ -257,16 +278,18 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Internet access is enabled.
-         * <p>
+         * <p>Indicates whether Internet access is enabled.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating: Internet access is being enabled.</li>
+         * <li>Failed: Internet access failed to be enabled or deleted.</li>
+         * <li>Running: Internet access is running.</li>
+         * <li>Deleted: Internet access is deleted.</li>
+         * <li>Deleting: Internet access is being deleted.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Creating: Internet access is being enabled.
-         * *   Failed: Internet access failed to be enabled or deleted.
-         * *   Running: Internet access is running.
-         * *   Deleted: Internet access is deleted.
-         * *   Deleting: Internet access is being deleted.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder internetStatus(String internetStatus) {
             this.internetStatus = internetStatus;
@@ -274,7 +297,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The internal endpoint.
+         * <p>The internal endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******-1801786532******-vpc.cn-hangzhou.pai-eas.aliyuncs.com</p>
          */
         public Builder intranetDomain(String intranetDomain) {
             this.intranetDomain = intranetDomain;
@@ -282,7 +308,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether it is the default private gateway.
+         * <p>Indicates whether it is the default private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = isDefault;
@@ -290,7 +319,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The number of nodes in the private gateway.
+         * <p>The number of nodes in the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder replicas(Integer replicas) {
             this.replicas = replicas;
@@ -298,7 +330,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -306,18 +341,20 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the private gateway.
-         * <p>
+         * <p>The status of the private gateway.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Stopped</li>
+         * <li>Failed</li>
+         * <li>Running</li>
+         * <li>Deleted</li>
+         * <li>Deleting</li>
+         * <li>Waiting</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   Creating
-         * *   Stopped
-         * *   Failed
-         * *   Running
-         * *   Deleted
-         * *   Deleting
-         * *   Waiting
+         * <strong>example:</strong>
+         * <p>PrivateGatewayRunning</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -325,7 +362,10 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the private gateway was updated. The time is displayed in UTC.
+         * <p>The time when the private gateway was updated. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-24T11:52:17Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

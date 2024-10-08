@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceResponseBody</p>
@@ -217,7 +218,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         private String updateTime; 
 
         /**
-         * The ID of the cluster to which the resource group belongs.
+         * <p>The ID of the cluster to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -225,7 +229,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of CPU cores.
+         * <p>The total number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = cpuCount;
@@ -233,7 +240,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the resource group was created.
+         * <p>The time when the resource group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-19T14:19:42Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -241,7 +251,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information, such as the connection status of a virtual private cloud (VPC) and the log status of Log Service.
+         * <p>The additional information, such as the connection status of a virtual private cloud (VPC) and the log status of Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vswitch_id&quot;:&quot;vsw-bp17uo6xebcusy****&quot;,&quot;gpu_share&quot;:true,&quot;aux_vswitch_id_list&quot;:[&quot;vsw-bp13b3pvjap3vxn****&quot;,&quot;vsw-bp1nls8o5hk8mt8*****&quot;],&quot;security_group_id&quot;:&quot;sg-bp1j1z7297hcink*****&quot;,&quot;vpc_id&quot;:&quot;vpc-bp1kjr3rfyhx01*****&quot;,&quot;destination_cidr&quot;:&quot;172.16.0.12/28&quot;,&quot;role_arn&quot;:&quot;acs:ram::1157703270*****:role/AliyunServiceRoleForPaiEas&quot;,&quot;sls_project&quot;:&quot;&quot;,&quot;sls_logstore&quot;:&quot;&quot;,&quot;sls_status&quot;:&quot;ResourceReady&quot;,&quot;sls_message&quot;:&quot;&quot;,&quot;update_time&quot;:&quot;&quot;}</p>
          */
         public Builder extraData(String extraData) {
             this.extraData = extraData;
@@ -249,7 +262,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of GPUs.
+         * <p>The total number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpuCount(Integer gpuCount) {
             this.gpuCount = gpuCount;
@@ -257,7 +273,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances in the resource group.
+         * <p>The total number of instances in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
@@ -265,7 +284,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource is ready</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -273,7 +295,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group owner.
+         * <p>The ID of the resource group owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14401087478****</p>
          */
         public Builder ownerUid(String ownerUid) {
             this.ownerUid = ownerUid;
@@ -281,7 +306,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pay-as-you-go instances in the resource group.
+         * <p>The total number of pay-as-you-go instances in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder postPaidInstanceCount(Integer postPaidInstanceCount) {
             this.postPaidInstanceCount = postPaidInstanceCount;
@@ -289,7 +317,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of subscription instances in the resource group.
+         * <p>The total number of subscription instances in the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder prePaidInstanceCount(Integer prePaidInstanceCount) {
             this.prePaidInstanceCount = prePaidInstanceCount;
@@ -297,7 +328,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>902976F2-6FAF-5404-8A4D-6CC223***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -305,7 +339,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Elastic Algorithm Service (EAS) resource.
+         * <p>The ID of the Elastic Algorithm Service (EAS) resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-glkfpsxuw57x1h*****</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -313,7 +350,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the EAS resource.
+         * <p>The name of the EAS resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-resouce****</p>
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
@@ -321,11 +361,14 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the resource group. Valid values:
-         * <p>
+         * <p>The type of the resource group. Valid values:</p>
+         * <ul>
+         * <li>Dedicated: the dedicated resource group.</li>
+         * <li>SelfManaged: the self-managed resource group.</li>
+         * </ul>
          * 
-         * *   Dedicated: the dedicated resource group.
-         * *   SelfManaged: the self-managed resource group.
+         * <strong>example:</strong>
+         * <p>Dedicated</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -333,7 +376,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the resource group.
+         * <p>The state of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceReady</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -341,7 +387,10 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the resource group was last updated.
+         * <p>The time when the resource group was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-02-24T11:52:17Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

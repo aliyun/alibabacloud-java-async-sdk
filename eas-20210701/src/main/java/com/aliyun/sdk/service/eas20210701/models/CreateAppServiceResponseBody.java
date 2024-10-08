@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppServiceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAppServiceResponseBody</p>
@@ -109,7 +110,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The public endpoint of the service.
+         * <p>The public endpoint of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://pai-eas.cn-shanghai">http://pai-eas.cn-shanghai</a>.****</p>
          */
         public Builder internetEndpoint(String internetEndpoint) {
             this.internetEndpoint = internetEndpoint;
@@ -117,7 +121,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The internal endpoint of the service.
+         * <p>The internal endpoint of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://pai-eas-vpc.cn-shanghai">http://pai-eas-vpc.cn-shanghai</a>.****</p>
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
@@ -125,7 +132,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the service.
+         * <p>The region ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -133,7 +143,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +154,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service ID.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-m-aaxxxddf</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -149,7 +165,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -157,7 +176,10 @@ public class CreateAppServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The service state.
+         * <p>The service state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder status(String status) {
             this.status = status;

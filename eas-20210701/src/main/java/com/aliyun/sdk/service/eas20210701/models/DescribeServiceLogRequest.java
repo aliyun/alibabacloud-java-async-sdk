@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceLogRequest} extends {@link RequestModel}
  *
  * <p>DescribeServiceLogRequest</p>
@@ -195,7 +196,10 @@ public class DescribeServiceLogRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is deployed.
+         * <p>The ID of the region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -204,7 +208,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -213,7 +220,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * The name of the container that runs the service.
+         * <p>The name of the container that runs the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker0</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -222,7 +232,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The time must be in UTC.
+         * <p>The end of the time range to query. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02 15:04:05</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -231,7 +244,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * The name of the instance that runs the service. For more information about how to query the instance name, see [ListServiceInstances](~~412108~~).
+         * <p>The name of the instance that runs the service. For more information about how to query the instance name, see <a href="~~412108~~">ListServiceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo-da290ac8-7fckm</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -240,7 +256,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * The IP address of the instance whose logs you want to query. For more information about how to query the IP address of an instance, see [ListServiceInstances](~~412108~~).
+         * <p>The IP address of the instance whose logs you want to query. For more information about how to query the IP address of an instance, see <a href="~~412108~~">ListServiceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.1</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -249,7 +268,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * The keyword that you use to query the logs of the service.
+         * <p>The keyword that you use to query the logs of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -258,7 +280,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -267,7 +292,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 500.
+         * <p>The number of entries per page. Default value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -276,26 +304,26 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the logs that are generated before the instance last restarts. This parameter is available only if the instance restarts.
-         * <p>
+         * <p>Specifies whether to query the logs that are generated before the instance last restarts. This parameter is available only if the instance restarts.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   true
+         * <!-- -->
+         * </li>
+         * <li><p>false</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder previous(Boolean previous) {
             this.putQueryParameter("Previous", previous);
@@ -304,7 +332,10 @@ public class DescribeServiceLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The time must be in Coordinated Universal Time (UTC).
+         * <p>The beginning of the time range to query. The time must be in Coordinated Universal Time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02 15:04:05</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

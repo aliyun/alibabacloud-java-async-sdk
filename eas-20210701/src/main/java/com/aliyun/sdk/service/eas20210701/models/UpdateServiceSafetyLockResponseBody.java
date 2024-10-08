@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceSafetyLockResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateServiceSafetyLockResponseBody</p>
@@ -49,7 +50,10 @@ public class UpdateServiceSafetyLockResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service safety lock updated to dangerous</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -57,7 +61,10 @@ public class UpdateServiceSafetyLockResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E089D584-B6F4-50C4-9902-DA2295B7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

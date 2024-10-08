@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceCronScalerResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceCronScalerResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         private String serviceName; 
 
         /**
-         * The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.
+         * <p>The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.</p>
          */
         public Builder excludeDates(java.util.List < String > excludeDates) {
             this.excludeDates = excludeDates;
@@ -81,7 +82,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +93,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         }
 
         /**
-         * The CronHPA jobs.
+         * <p>The CronHPA jobs.</p>
          */
         public Builder scaleJobs(java.util.List < ScaleJobs> scaleJobs) {
             this.scaleJobs = scaleJobs;
@@ -97,7 +101,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -110,6 +117,12 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceCronScalerResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceCronScalerResponseBody</p>
+     */
     public static class ScaleJobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -209,7 +222,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             private Integer targetSize; 
 
             /**
-             * The time when the most recent CronHPA job was created. The time is displayed in UTC.
+             * <p>The time when the most recent CronHPA job was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-24T02:11:30Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -217,7 +233,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the most recent CronHPA job ran. The time is displayed in UTC.
+             * <p>The time when the most recent CronHPA job ran. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-02-24T06:31:00Z</p>
              */
             public Builder lastProbeTime(String lastProbeTime) {
                 this.lastProbeTime = lastProbeTime;
@@ -225,7 +244,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;cron hpa job scale-jobs-0 executed successfully. current replicas:3, desired replicas:2.&quot;</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -233,7 +255,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the CronHPA job.
+             * <p>The name of the CronHPA job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scale-job-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -241,7 +266,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The cron expression that is used to configure the execution time of the CronHPA job.
+             * <p>The cron expression that is used to configure the execution time of the CronHPA job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 18 * * * *</p>
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -249,7 +277,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the most recent CronHPA job.
+             * <p>The status of the most recent CronHPA job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Succeed</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -257,7 +288,10 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that you expect to configure for the CronHPA job.
+             * <p>The number of instances that you expect to configure for the CronHPA job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder targetSize(Integer targetSize) {
                 this.targetSize = targetSize;

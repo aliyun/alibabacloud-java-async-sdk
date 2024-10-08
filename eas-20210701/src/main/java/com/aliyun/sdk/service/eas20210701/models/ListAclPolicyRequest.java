@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAclPolicyRequest} extends {@link RequestModel}
  *
  * <p>ListAclPolicyRequest</p>
@@ -81,7 +82,10 @@ public class ListAclPolicyRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The region ID of the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -90,7 +94,10 @@ public class ListAclPolicyRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-1uhcqmsc7x22******</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putPathParameter("GatewayId", gatewayId);
@@ -99,7 +106,10 @@ public class ListAclPolicyRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC). For more information about how to obtain the VPC ID, see DescribeVpcs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf66uio7md****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

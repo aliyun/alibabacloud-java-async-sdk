@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSpotDiscountHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSpotDiscountHistoryResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
         private java.util.List < SpotDiscounts> spotDiscounts; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The discount for the preemptible instance.
+         * <p>The discount for the preemptible instance.</p>
          */
         public Builder spotDiscounts(java.util.List < SpotDiscounts> spotDiscounts) {
             this.spotDiscounts = spotDiscounts;
@@ -70,6 +74,12 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSpotDiscountHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSpotDiscountHistoryResponseBody</p>
+     */
     public static class SpotDiscounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -133,7 +143,10 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The type of the ECS instance.
+             * <p>The type of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c7.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -141,7 +154,10 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The discount for the preemptible instance. For example, 0.1 represents a 90% discount.
+             * <p>The discount for the preemptible instance. For example, 0.1 represents a 90% discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder spotDiscount(String spotDiscount) {
                 this.spotDiscount = spotDiscount;
@@ -149,7 +165,10 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the discount is available. The time must be in UTC.
+             * <p>The time when the discount is available. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-10T10:00:00Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -157,7 +176,10 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

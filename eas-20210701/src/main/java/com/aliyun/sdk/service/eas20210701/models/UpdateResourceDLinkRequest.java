@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateResourceDLinkRequest} extends {@link RequestModel}
  *
  * <p>UpdateResourceDLinkRequest</p>
@@ -127,7 +128,10 @@ public class UpdateResourceDLinkRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the resource group belongs.
+         * <p>The ID of the region to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -136,7 +140,10 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iot</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -145,7 +152,10 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * The CIDR blocks of the clients that you want to connect to. After this parameter is specified, the CIDR blocks are added to the back-to-origin route of the server. Either this parameter or the VSwitchIdList parameter can be used to determine CIDR blocks.
+         * <p>The CIDR blocks of the clients that you want to connect to. After this parameter is specified, the CIDR blocks are added to the back-to-origin route of the server. Either this parameter or the VSwitchIdList parameter can be used to determine CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72.16.0.0/16</p>
          */
         public Builder destinationCIDRs(String destinationCIDRs) {
             this.putBodyParameter("DestinationCIDRs", destinationCIDRs);
@@ -154,7 +164,10 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the Elastic Compute Service (ECS) instance belongs.
+         * <p>The ID of the security group to which the Elastic Compute Service (ECS) instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp149cedsfx2rfspd2d</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("SecurityGroupId", securityGroupId);
@@ -163,7 +176,10 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * The ID of the peer primary vSwitch. After this parameter is specified, an elastic network interface (ENI) is created in the VSwitch.
+         * <p>The ID of the peer primary vSwitch. After this parameter is specified, an elastic network interface (ENI) is created in the VSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf66uio7md****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putBodyParameter("VSwitchId", vSwitchId);
@@ -172,7 +188,7 @@ public class UpdateResourceDLinkRequest extends Request {
         }
 
         /**
-         * The vSwitches of the clients that you want to connect to. After this parameter is specified, the CIDR blocks of these vSwitches are added to the back-to-origin route of the server.
+         * <p>The vSwitches of the clients that you want to connect to. After this parameter is specified, the CIDR blocks of these vSwitches are added to the back-to-origin route of the server.</p>
          */
         public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
             this.putBodyParameter("VSwitchIdList", vSwitchIdList);

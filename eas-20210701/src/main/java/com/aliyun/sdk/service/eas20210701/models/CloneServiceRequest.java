@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CloneServiceRequest} extends {@link RequestModel}
  *
  * <p>CloneServiceRequest</p>
@@ -97,7 +98,10 @@ public class CloneServiceRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +110,10 @@ public class CloneServiceRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -115,7 +122,7 @@ public class CloneServiceRequest extends Request {
         }
 
         /**
-         * Labels.
+         * <p>The label of the service to be cloned.</p>
          */
         public Builder labels(java.util.Map < String, String > labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -125,7 +132,10 @@ public class CloneServiceRequest extends Request {
         }
 
         /**
-         * The request body. For more information, see [CreateService](~~412086~~).
+         * <p>The request body. For more information, see <a href="~~412086~~">CreateService</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;name&quot;: &quot;foo&quot;,   &quot;model_path&quot;: &quot;<a href="http://path/to/model.tar.gz">http://path/to/model.tar.gz</a>&quot;,   &quot;processor&quot;: &quot;tensorflow_cpu&quot;,   &quot;metadata&quot;: {     &quot;instance&quot;: 2,     &quot;memory&quot;: 7000,     &quot;cpu&quot;: 4   } }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceInstancesRequest} extends {@link RequestModel}
  *
  * <p>ListServiceInstancesRequest</p>
@@ -251,7 +252,10 @@ public class ListServiceInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is deployed.
+         * <p>The ID of the region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -260,7 +264,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -269,7 +276,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The keyword used to query instances. Instances can be queried based on instance name, instance IP address, IP address of the server where the instance resides, and instance type.
+         * <p>The keyword used to query instances. Instances can be queried based on instance name, instance IP address, IP address of the server where the instance resides, and instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.118.xx.xx</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -278,7 +288,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The IP address of the server where the instance resides.
+         * <p>The IP address of the server where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.224.xx.xx</p>
          */
         public Builder hostIP(String hostIP) {
             this.putQueryParameter("HostIP", hostIP);
@@ -287,7 +300,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The IP address of the instance.
+         * <p>The IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.224.xx.xx</p>
          */
         public Builder instanceIP(String instanceIP) {
             this.putQueryParameter("InstanceIP", instanceIP);
@@ -296,7 +312,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The instance name.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo-bdc5xxxx-8l7rk</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -305,7 +324,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The instance state.
+         * <p>The instance state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -314,7 +336,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The instance type.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c7.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -323,7 +348,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance is a preemptible instance.
+         * <p>Specifies whether the instance is a preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isSpot(Boolean isSpot) {
             this.putQueryParameter("IsSpot", isSpot);
@@ -332,34 +360,33 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The sorting order.
-         * <p>
+         * <p>The sorting order.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>asc</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   asc
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>The instances are sorted in ascending order.</p>
+         * </li>
+         * <li><p>desc</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>The instances are sorted in descending order.</p>
+         * </li>
+         * </ul>
          * 
-         *     The instances are sorted in ascending order.
-         * 
-         * *   desc
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     The instances are sorted in descending order.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -368,7 +395,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -377,7 +407,10 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 100.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -386,26 +419,26 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The type of the resource group to which the instance belongs.
-         * <p>
+         * <p>The type of the resource group to which the instance belongs.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>PublicResource</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   PublicResource
+         * <!-- -->
+         * </li>
+         * <li><p>DedicatedResource</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         * *   DedicatedResource
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>PublicResource</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -414,66 +447,57 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The service role.
-         * <p>
+         * <p>The service role.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>DataSet</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <p>:</p>
+         * <!-- -->
          * 
-         * *   DataSet
+         * <p>dataset service</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>.</p>
+         * </li>
+         * <li><p>SDProxy</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>Stable-Diffusion proxy service</p>
+         * <!-- -->
          * 
-         *     dataset service
+         * <p>.</p>
+         * </li>
+         * <li><p>Standard</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     .
+         * <p>standard service</p>
+         * <!-- -->
          * 
-         * *   SDProxy
+         * <p>.</p>
+         * </li>
+         * <li><p>Queue</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>:</p>
+         * <!-- -->
          * 
-         *     :
+         * <p>queue service</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>.</p>
+         * </li>
+         * </ul>
          * 
-         *     Stable-Diffusion proxy service
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   Standard
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     standard service
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   Queue
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     queue service
-         * 
-         *     <!-- -->
-         * 
-         *     .
+         * <strong>example:</strong>
+         * <p>Queue</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -482,20 +506,22 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * The field that you use to sort the query results.
-         * <p>
+         * <p>The field that you use to sort the query results.</p>
+         * <ul>
+         * <li><p>Set the value to StartTime.</p>
+         * <!-- -->
          * 
-         * *   Set the value to StartTime.
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>The value specifies that the query results are sorted based on the time when the instances were created</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <p>.</p>
+         * </li>
+         * </ul>
          * 
-         *     The value specifies that the query results are sorted based on the time when the instances were created
-         * 
-         *     <!-- -->
-         * 
-         *     .
+         * <strong>example:</strong>
+         * <p>StartTime</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

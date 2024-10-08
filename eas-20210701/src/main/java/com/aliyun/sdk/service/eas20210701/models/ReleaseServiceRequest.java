@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseServiceRequest} extends {@link RequestModel}
  *
  * <p>ReleaseServiceRequest</p>
@@ -97,7 +98,10 @@ public class ReleaseServiceRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is deployed.
+         * <p>The ID of the region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +110,10 @@ public class ReleaseServiceRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -115,11 +122,14 @@ public class ReleaseServiceRequest extends Request {
         }
 
         /**
-         * The traffic state. Valid values:
-         * <p>
+         * <p>The traffic state. Valid values:</p>
+         * <ul>
+         * <li>standalone: independent traffic.</li>
+         * <li>grouping: grouped traffic.</li>
+         * </ul>
          * 
-         * *   standalone: independent traffic.
-         * *   grouping: grouped traffic.
+         * <strong>example:</strong>
+         * <p>grouping</p>
          */
         public Builder trafficState(String trafficState) {
             this.putBodyParameter("TrafficState", trafficState);
@@ -128,7 +138,10 @@ public class ReleaseServiceRequest extends Request {
         }
 
         /**
-         * The weight of the canary release. Valid values: 0 to 100.
+         * <p>The weight of the canary release. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder weight(Integer weight) {
             this.putBodyParameter("Weight", weight);

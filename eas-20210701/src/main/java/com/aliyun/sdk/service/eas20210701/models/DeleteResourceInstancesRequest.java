@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteResourceInstancesRequest} extends {@link RequestModel}
  *
  * <p>DeleteResourceInstancesRequest</p>
@@ -97,7 +98,10 @@ public class DeleteResourceInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the resource group belongs.
+         * <p>The ID of the region to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +110,10 @@ public class DeleteResourceInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -115,11 +122,14 @@ public class DeleteResourceInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete all the instances that fail to be created. Valid values:
-         * <p>
+         * <p>Specifies whether to delete all the instances that fail to be created. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allFailed(Boolean allFailed) {
             this.putQueryParameter("AllFailed", allFailed);
@@ -128,7 +138,10 @@ public class DeleteResourceInstancesRequest extends Request {
         }
 
         /**
-         * The instances. Separate multiple instances with commas (,), such as `instanceId1,instanceId2`. For more information about how to query the instances, see [ListResourceInstances](~~412129~~).
+         * <p>The instances. Separate multiple instances with commas (,), such as <code>instanceId1,instanceId2</code>. For more information about how to query the instances, see <a href="~~412129~~">ListResourceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-i-xxxxxxx,eas-i-xxxxxxx</p>
          */
         public Builder instanceList(String instanceList) {
             this.putQueryParameter("InstanceList", instanceList);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceContainersResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceContainersResponseBody</p>
@@ -61,7 +62,7 @@ public class ListServiceContainersResponseBody extends TeaModel {
         private String serviceName; 
 
         /**
-         * The containers of the service.
+         * <p>The containers of the service.</p>
          */
         public Builder containers(java.util.List < ContainerInfo > containers) {
             this.containers = containers;
@@ -69,7 +70,10 @@ public class ListServiceContainersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class ListServiceContainersResponseBody extends TeaModel {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;

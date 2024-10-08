@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeResourceLogResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The Logstore of Log Service.
+         * <p>The Logstore of Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>access_log</p>
          */
         public Builder logStore(String logStore) {
             this.logStore = logStore;
@@ -93,7 +97,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Network interfaces are updating</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The Log Service project that is associated with the resource group.
+         * <p>The Log Service project that is associated with the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd-sls</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -109,7 +119,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the resource group.
+         * <p>The state of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceReady</p>
          */
         public Builder status(String status) {
             this.status = status;

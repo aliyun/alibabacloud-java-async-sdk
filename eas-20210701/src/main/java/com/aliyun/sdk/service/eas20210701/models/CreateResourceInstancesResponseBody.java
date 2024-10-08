@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateResourceInstancesResponseBody</p>
@@ -61,7 +62,7 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance IDs.
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.instanceIds = instanceIds;
@@ -69,7 +70,10 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create 5 new ecs instance(s) in resource [eas-r-asdasdasd] successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +81,10 @@ public class CreateResourceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

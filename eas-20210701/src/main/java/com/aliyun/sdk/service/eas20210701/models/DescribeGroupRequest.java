@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupRequest} extends {@link RequestModel}
  *
  * <p>DescribeGroupRequest</p>
@@ -69,7 +70,10 @@ public class DescribeGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the service group belongs.
+         * <p>The ID of the region to which the service group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +82,10 @@ public class DescribeGroupRequest extends Request {
         }
 
         /**
-         * The name of the service group. For more information about how to query the group name, see [ListServices](~~412109~~).
+         * <p>The name of the service group. For more information about how to query the group name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder groupName(String groupName) {
             this.putPathParameter("GroupName", groupName);

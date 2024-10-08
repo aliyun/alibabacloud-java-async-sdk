@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBenchmarkTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBenchmarkTaskResponseBody</p>
@@ -181,7 +182,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * The number of instances that you can test.
+         * <p>The number of instances that you can test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder availableAgent(Long availableAgent) {
             this.availableAgent = availableAgent;
@@ -189,7 +193,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the operation caller.
+         * <p>The ID of the operation caller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640133467****</p>
          */
         public Builder callerUid(String callerUid) {
             this.callerUid = callerUid;
@@ -197,7 +204,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The number of instances that you want to test.
+         * <p>The number of instances that you want to test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder desiredAgent(Long desiredAgent) {
             this.desiredAgent = desiredAgent;
@@ -205,7 +215,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The endpoint of the service gateway.
+         * <p>The endpoint of the service gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192342311234.pai-eas.cn-chengdu.aliyuncs.com</p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -213,7 +226,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Benchmar task is Running</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -221,7 +237,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that is used to call the operation.
+         * <p>The ID of the Alibaba Cloud account that is used to call the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1029728669****</p>
          */
         public Builder parentUid(String parentUid) {
             this.parentUid = parentUid;
@@ -229,7 +248,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The event or reason that causes the current state of the stress testing task.
+         * <p>The event or reason that causes the current state of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -237,7 +259,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +270,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the service that you want to test.
+         * <p>The name of the service that you want to test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -253,82 +281,75 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the stress testing task.
-         * <p>
+         * <p>The state of the stress testing task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Creating</p>
+         * <!-- -->
          * 
-         * Valid values:
+         * <!-- -->
          * 
-         * *   Creating
+         * <!-- -->
+         * </li>
+         * <li><p>Starting</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>DeleteFailed</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Starting
+         * <!-- -->
+         * </li>
+         * <li><p>Running</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Stopping</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   DeleteFailed
+         * <!-- -->
+         * </li>
+         * <li><p>Error</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>Updating</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Running
+         * <!-- -->
+         * </li>
+         * <li><p>Deleting</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
+         * </li>
+         * <li><p>CreateFailed</p>
+         * <!-- -->
          * 
-         *     <!-- -->
+         * <!-- -->
          * 
-         * *   Stopping
+         * <!-- --></li>
+         * </ul>
          * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Error
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Updating
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   Deleting
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   CreateFailed
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -336,7 +357,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the stress testing task.
+         * <p>The ID of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-b-gv4y86u****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -344,7 +368,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the stress testing task.
+         * <p>The name of the stress testing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>benchmark-larec-test-ae70</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -352,7 +379,10 @@ public class DescribeBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The token for authentication when a stress testing task is created.
+         * <p>The token for authentication when a stress testing task is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6062787a-9301****</p>
          */
         public Builder token(String token) {
             this.token = token;

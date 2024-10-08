@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceRequest} extends {@link RequestModel}
  *
  * <p>UpdateServiceRequest</p>
@@ -97,7 +98,10 @@ public class UpdateServiceRequest extends Request {
         } 
 
         /**
-         * The region ID of the service.
+         * <p>The region ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +110,10 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -115,11 +122,14 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * The type of the service update. Valid values: merge and replace. By default, merge is used if you do not specify this parameter.
-         * <p>
+         * <p>The type of the service update. Valid values: merge and replace. By default, merge is used if you do not specify this parameter.</p>
+         * <ul>
+         * <li>merge: If the JSON string configured for the existing service is <code>{&quot;a&quot;:&quot;b&quot;}</code> and the JSON string specified in the body parameter is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the JSON string is <code>{&quot;a&quot;:&quot;b&quot;,&quot;c&quot;:&quot;d&quot;}</code> after the service update.</li>
+         * <li>replace: If the JSON string configured for the existing service is <code>{&quot;a&quot;:&quot;b&quot;}</code> and the JSON string specified in the body parameter is <code>{&quot;c&quot;:&quot;d&quot;}</code>, the JSON string is <code>{&quot;c&quot;:&quot;d&quot;}</code> after the service update.</li>
+         * </ul>
          * 
-         * *   merge: If the JSON string configured for the existing service is `{"a":"b"}` and the JSON string specified in the body parameter is `{"c":"d"}`, the JSON string is `{"a":"b","c":"d"}` after the service update.
-         * *   replace: If the JSON string configured for the existing service is `{"a":"b"}` and the JSON string specified in the body parameter is `{"c":"d"}`, the JSON string is `{"c":"d"}` after the service update.
+         * <strong>example:</strong>
+         * <p>merge</p>
          */
         public Builder updateType(String updateType) {
             this.putQueryParameter("UpdateType", updateType);
@@ -128,7 +138,10 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * The request body. The body includes the request parameters that you want to update. For more information about the request parameters, see [CreateService](~~412086~~).
+         * <p>The request body. The body includes the request parameters that you want to update. For more information about the request parameters, see <a href="~~412086~~">CreateService</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   &quot;name&quot;: &quot;foo&quot;,   &quot;model_path&quot;: &quot;<a href="http://path/to/model.tar.gz">http://path/to/model.tar.gz</a>&quot;,   &quot;processor&quot;: &quot;tensorflow_cpu&quot;,   &quot;metadata&quot;: {     &quot;instance&quot;: 2,     &quot;memory&quot;: 7000,     &quot;cpu&quot;: 4   } }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

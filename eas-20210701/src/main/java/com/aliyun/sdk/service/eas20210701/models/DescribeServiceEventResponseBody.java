@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceEventResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceEventResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         private Long totalPageNum; 
 
         /**
-         * The events.
+         * <p>The events.</p>
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -93,7 +94,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -101,7 +105,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D491C94-6239-5318-B4B4-799D859***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +116,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +127,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalPageNum(Long totalPageNum) {
             this.totalPageNum = totalPageNum;
@@ -130,6 +143,12 @@ public class DescribeServiceEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceEventResponseBody</p>
+     */
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -193,7 +212,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The returned message. The message is formatted and returned in the JSON format.
+             * <p>The returned message. The message is formatted and returned in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;versionId&quot;:1,&quot;message&quot;:&quot;Stage scale complete&quot;,&quot;availableInstance&quot;:1,&quot;unavailableInstance&quot;:0}</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -201,7 +223,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the event. The information about the change in the service status is returned.
+             * <p>The cause of the event. The information about the change in the service status is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Updating</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -209,7 +234,10 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event occurred. The time must be in UTC.
+             * <p>The time when the event occurred. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-09 06:30:00</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -217,11 +245,14 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * The event type. Valid values:
-             * <p>
+             * <p>The event type. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Warning</li>
+             * </ul>
              * 
-             * *   Normal
-             * *   Warning
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceSafetyLockRequest} extends {@link RequestModel}
  *
  * <p>UpdateServiceSafetyLockRequest</p>
@@ -84,7 +85,10 @@ public class UpdateServiceSafetyLockRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is deployed.
+         * <p>The ID of the region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +97,10 @@ public class UpdateServiceSafetyLockRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -102,12 +109,15 @@ public class UpdateServiceSafetyLockRequest extends Request {
         }
 
         /**
-         * The lock scope. Valid values:
-         * <p>
+         * <p>The lock scope. Valid values:</p>
+         * <ul>
+         * <li>all: locks all operations.</li>
+         * <li>dangerous: locks dangerous operations such as delete and stop operations.</li>
+         * <li>none: locks no operations.</li>
+         * </ul>
          * 
-         * *   all: locks all operations.
-         * *   dangerous: locks dangerous operations such as delete and stop operations.
-         * *   none: locks no operations.
+         * <strong>example:</strong>
+         * <p>dangerous</p>
          */
         public Builder lock(String lock) {
             this.putBodyParameter("Lock", lock);

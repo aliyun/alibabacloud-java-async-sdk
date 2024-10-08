@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceInstanceDiagnosisRequest} extends {@link RequestModel}
  *
  * <p>DescribeServiceInstanceDiagnosisRequest</p>
@@ -84,7 +85,10 @@ public class DescribeServiceInstanceDiagnosisRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is deployed.
+         * <p>The ID of the region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +97,10 @@ public class DescribeServiceInstanceDiagnosisRequest extends Request {
         }
 
         /**
-         * The service name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -102,7 +109,10 @@ public class DescribeServiceInstanceDiagnosisRequest extends Request {
         }
 
         /**
-         * The name of the instance that runs the service.
+         * <p>The name of the instance that runs the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo-69xxxx4f4-5w9r9</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);

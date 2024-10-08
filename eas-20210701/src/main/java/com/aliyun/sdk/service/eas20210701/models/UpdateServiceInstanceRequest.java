@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateServiceInstanceRequest} extends {@link RequestModel}
  *
  * <p>UpdateServiceInstanceRequest</p>
@@ -98,7 +99,10 @@ public class UpdateServiceInstanceRequest extends Request {
         } 
 
         /**
-         * The region ID of the service.
+         * <p>The region ID of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +111,10 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -116,7 +123,10 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The instance name. For more information about how to query the instance name, see [ListServiceInstances](~~412108~~).
+         * <p>The instance name. For more information about how to query the instance name, see <a href="~~412108~~">ListServiceInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo-69xxxx4f4-5w9r9</p>
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);
@@ -125,11 +135,14 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to isolate the service instance. Valid values:
-         * <p>
+         * <p>Specifies whether to isolate the service instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isolate(Boolean isolate) {
             this.putBodyParameter("Isolate", isolate);

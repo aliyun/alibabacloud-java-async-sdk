@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReinstallTenantAddonResponseBody} extends {@link TeaModel}
  *
  * <p>ReinstallTenantAddonResponseBody</p>
@@ -49,7 +50,10 @@ public class ReinstallTenantAddonResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Addon prometheus_discovery is successfully reinstalled</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -57,7 +61,10 @@ public class ReinstallTenantAddonResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40325405-579C-4D82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

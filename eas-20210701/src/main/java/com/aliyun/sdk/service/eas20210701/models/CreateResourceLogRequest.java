@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateResourceLogRequest} extends {@link RequestModel}
  *
  * <p>CreateResourceLogRequest</p>
@@ -99,7 +100,10 @@ public class CreateResourceLogRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the resource group belongs.
+         * <p>The ID of the region to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -108,7 +112,10 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
+         * <p>The ID of the resource group. For more information about how to query the ID of a resource group, see <a href="~~412133~~">ListResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -117,7 +124,10 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * The Logstore of Log Service. For more information about how to query a Logstore, see [ListLogStores](~~426970~~).
+         * <p>The Logstore of Log Service. For more information about how to query a Logstore, see <a href="~~426970~~">ListLogStores</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>access_log</p>
          */
         public Builder logStore(String logStore) {
             this.putBodyParameter("LogStore", logStore);
@@ -126,7 +136,10 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * The Log Service project that is associated with the resource group. For more information about how to query the project, see [ListProject](~~74955~~).
+         * <p>The Log Service project that is associated with the resource group. For more information about how to query the project, see <a href="~~74955~~">ListProject</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-r-asdasdasd-sls</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

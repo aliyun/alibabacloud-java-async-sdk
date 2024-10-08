@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListServiceVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListServiceVersionsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         private java.util.List < Versions> versions; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E089D584-B6F4-50C4-9902-DA2295B7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>166</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The historical versions of the service.
+         * <p>The historical versions of the service.</p>
          */
         public Builder versions(java.util.List < Versions> versions) {
             this.versions = versions;
@@ -130,6 +143,12 @@ public class ListServiceVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListServiceVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListServiceVersionsResponseBody</p>
+     */
     public static class Versions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildTime")
         private String buildTime;
@@ -217,7 +236,10 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             private String serviceRunnable; 
 
             /**
-             * The time when the service version was created. The time is displayed in UTC.
+             * <p>The time when the service version was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-29T22:02:14Z</p>
              */
             public Builder buildTime(String buildTime) {
                 this.buildTime = buildTime;
@@ -225,12 +247,15 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image is available. Valid values:
-             * <p>
+             * <p>Indicates whether the image is available. Valid values:</p>
+             * <ul>
+             * <li>true: The image is available.</li>
+             * <li>false: The image is unavailable.</li>
+             * <li>unknown: The availability of the image is unknown.</li>
+             * </ul>
              * 
-             * *   true: The image is available.
-             * *   false: The image is unavailable.
-             * *   unknown: The availability of the image is unknown.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder imageAvailable(String imageAvailable) {
                 this.imageAvailable = imageAvailable;
@@ -238,7 +263,10 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder imageId(Integer imageId) {
                 this.imageId = imageId;
@@ -246,7 +274,10 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service is Running</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -254,7 +285,17 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The service deployment configurations. This parameter is returned only if the service is deployed by using a custom image.
+             * <p>The service deployment configurations. This parameter is returned only if the service is deployed by using a custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;metadata&quot;: {
+             *         &quot;cpu&quot;: 1,
+             *         &quot;instance&quot;: 1,
+             *         &quot;memory&quot;: 1024
+             *     },
+             *     &quot;name&quot;: &quot;echo&quot;
+             * }</p>
              */
             public Builder serviceConfig(String serviceConfig) {
                 this.serviceConfig = serviceConfig;
@@ -262,12 +303,15 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Elastic Algorithm service (EAS) is activated. Valid values:
-             * <p>
+             * <p>Indicates whether Elastic Algorithm service (EAS) is activated. Valid values:</p>
+             * <ul>
+             * <li>true: EAS is activated.</li>
+             * <li>false: EAS is not activated.</li>
+             * <li>unknown: The activation of EAS is unknown.</li>
+             * </ul>
              * 
-             * *   true: EAS is activated.
-             * *   false: EAS is not activated.
-             * *   unknown: The activation of EAS is unknown.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceRunnable(String serviceRunnable) {
                 this.serviceRunnable = serviceRunnable;

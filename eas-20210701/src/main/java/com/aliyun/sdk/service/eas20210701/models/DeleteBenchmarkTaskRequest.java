@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBenchmarkTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteBenchmarkTaskRequest</p>
@@ -69,7 +70,10 @@ public class DeleteBenchmarkTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the stress testing task is performed.
+         * <p>The ID of the region where the stress testing task is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +82,10 @@ public class DeleteBenchmarkTaskRequest extends Request {
         }
 
         /**
-         * The name of the stress testing task. For more information about how to query the name of a stress testing task, see [ListBenchmarkTask](~~432976~~).
+         * <p>The name of the stress testing task. For more information about how to query the name of a stress testing task, see <a href="~~432976~~">ListBenchmarkTask</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>benchmark-larec-test-2b11</p>
          */
         public Builder taskName(String taskName) {
             this.putPathParameter("TaskName", taskName);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceAutoScalerRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceAutoScalerRequest</p>
@@ -128,7 +129,10 @@ public class CreateServiceAutoScalerRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is deployed.
+         * <p>The ID of the region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -137,7 +141,10 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
+         * <p>The service name. For more information about how to query the service name, see <a href="~~412109~~">ListServices</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>foo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -146,7 +153,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * The Autoscaler operation.
+         * <p>The Autoscaler operation.</p>
          */
         public Builder behavior(Behavior behavior) {
             this.putBodyParameter("behavior", behavior);
@@ -155,7 +162,10 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * The maximum number of instances in the service. The value of max must be greater than the value of min.
+         * <p>The maximum number of instances in the service. The value of max must be greater than the value of min.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder max(Integer max) {
             this.putBodyParameter("max", max);
@@ -164,7 +174,10 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * The minimum number of instances in the service.
+         * <p>The minimum number of instances in the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder min(Integer min) {
             this.putBodyParameter("min", min);
@@ -173,7 +186,7 @@ public class CreateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.
+         * <p>The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.</p>
          */
         public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
             this.putBodyParameter("scaleStrategies", scaleStrategies);
@@ -188,6 +201,12 @@ public class CreateServiceAutoScalerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateServiceAutoScalerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceAutoScalerRequest</p>
+     */
     public static class OnZero extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("scaleDownGracePeriodSeconds")
         private Integer scaleDownGracePeriodSeconds;
@@ -227,7 +246,10 @@ public class CreateServiceAutoScalerRequest extends Request {
             private Integer scaleUpActivationReplicas; 
 
             /**
-             * The time window that is required before the number of instances is reduced to 0. The number of instances can be reduced to 0 only if no request is available or no traffic exists in the specified time window. Default value: 600.
+             * <p>The time window that is required before the number of instances is reduced to 0. The number of instances can be reduced to 0 only if no request is available or no traffic exists in the specified time window. Default value: 600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder scaleDownGracePeriodSeconds(Integer scaleDownGracePeriodSeconds) {
                 this.scaleDownGracePeriodSeconds = scaleDownGracePeriodSeconds;
@@ -235,7 +257,10 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * The number of instances that you want to create at a time if the number of instances is 0. Default value: 1.
+             * <p>The number of instances that you want to create at a time if the number of instances is 0. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scaleUpActivationReplicas(Integer scaleUpActivationReplicas) {
                 this.scaleUpActivationReplicas = scaleUpActivationReplicas;
@@ -249,6 +274,12 @@ public class CreateServiceAutoScalerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServiceAutoScalerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceAutoScalerRequest</p>
+     */
     public static class ScaleDown extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stabilizationWindowSeconds")
         private Integer stabilizationWindowSeconds;
@@ -276,7 +307,10 @@ public class CreateServiceAutoScalerRequest extends Request {
             private Integer stabilizationWindowSeconds; 
 
             /**
-             * The time window that is required before the scale-in operation is performed. The scale-in operation can be performed only if the specified metric drops below the specified threshold in the specified time window. Default value: 300.
+             * <p>The time window that is required before the scale-in operation is performed. The scale-in operation can be performed only if the specified metric drops below the specified threshold in the specified time window. Default value: 300.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -290,6 +324,12 @@ public class CreateServiceAutoScalerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServiceAutoScalerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceAutoScalerRequest</p>
+     */
     public static class ScaleUp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stabilizationWindowSeconds")
         private Integer stabilizationWindowSeconds;
@@ -317,7 +357,10 @@ public class CreateServiceAutoScalerRequest extends Request {
             private Integer stabilizationWindowSeconds; 
 
             /**
-             * The time window that is required before the scale-out operation is performed. The scale-out operation can be performed only if the specified metric exceeds the specified threshold in the specified time window. Default value: 0.
+             * <p>The time window that is required before the scale-out operation is performed. The scale-out operation can be performed only if the specified metric exceeds the specified threshold in the specified time window. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -331,6 +374,12 @@ public class CreateServiceAutoScalerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServiceAutoScalerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceAutoScalerRequest</p>
+     */
     public static class Behavior extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("onZero")
         private OnZero onZero;
@@ -382,7 +431,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             private ScaleUp scaleUp; 
 
             /**
-             * The operation that reduces the number of instances to 0.
+             * <p>The operation that reduces the number of instances to 0.</p>
              */
             public Builder onZero(OnZero onZero) {
                 this.onZero = onZero;
@@ -390,7 +439,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * The scale-in operation.
+             * <p>The scale-in operation.</p>
              */
             public Builder scaleDown(ScaleDown scaleDown) {
                 this.scaleDown = scaleDown;
@@ -398,7 +447,7 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * The scale-out operation.
+             * <p>The scale-out operation.</p>
              */
             public Builder scaleUp(ScaleUp scaleUp) {
                 this.scaleUp = scaleUp;
@@ -412,6 +461,12 @@ public class CreateServiceAutoScalerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateServiceAutoScalerRequest} extends {@link TeaModel}
+     *
+     * <p>CreateServiceAutoScalerRequest</p>
+     */
     public static class ScaleStrategies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("metricName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -465,12 +520,15 @@ public class CreateServiceAutoScalerRequest extends Request {
             private Float threshold; 
 
             /**
-             * The name of the metric for triggering auto scaling. Valid values:
-             * <p>
+             * <p>The name of the metric for triggering auto scaling. Valid values:</p>
+             * <ul>
+             * <li>qps: the queries per second (qps) for an individual instance.</li>
+             * <li>cpu: the cpu utilization.</li>
+             * <li>gpu[util]: gpu utilization.</li>
+             * </ul>
              * 
-             * *   qps: the queries per second (qps) for an individual instance.
-             * *   cpu: the cpu utilization.
-             * * gpu[util]: gpu utilization.
+             * <strong>example:</strong>
+             * <p>qps</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -478,7 +536,10 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.
+             * <p>The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo_svc</p>
              */
             public Builder service(String service) {
                 this.service = service;
@@ -486,12 +547,15 @@ public class CreateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * The threshold of the metric that triggers auto scaling.
-             * <p>
+             * <p>The threshold of the metric that triggers auto scaling.</p>
+             * <ul>
+             * <li>If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.</li>
+             * <li>If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</li>
+             * <li>If you set metricName to gpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</li>
+             * </ul>
              * 
-             * *   If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.
-             * *   If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.
-             * *   If you set metricName to gpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
