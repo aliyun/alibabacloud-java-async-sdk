@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserFbAcIssuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserFbAcIssuesResponseBody</p>
@@ -110,6 +111,12 @@ public class ListUserFbAcIssuesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserFbAcIssuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserFbAcIssuesResponseBody</p>
+     */
     public static class FileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
@@ -211,6 +218,12 @@ public class ListUserFbAcIssuesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserFbAcIssuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserFbAcIssuesResponseBody</p>
+     */
     public static class IssueDataList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
@@ -472,6 +485,12 @@ public class ListUserFbAcIssuesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserFbAcIssuesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserFbAcIssuesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IssueDataList")
         private java.util.List < IssueDataList> issueDataList;

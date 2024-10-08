@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnLabelCountsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnLabelCountsResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeSnLabelCountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnLabelCountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnLabelCountsResponseBody</p>
+     */
     public static class LabelCountDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
@@ -171,6 +178,12 @@ public class DescribeSnLabelCountsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnLabelCountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnLabelCountsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelCountDTOList")
         private java.util.List < LabelCountDTOList> labelCountDTOList;

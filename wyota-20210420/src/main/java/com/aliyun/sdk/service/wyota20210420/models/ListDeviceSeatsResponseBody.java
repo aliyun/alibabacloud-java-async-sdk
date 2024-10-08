@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeviceSeatsResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeviceSeatsResponseBody</p>
@@ -110,6 +111,12 @@ public class ListDeviceSeatsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeviceSeatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeviceSeatsResponseBody</p>
+     */
     public static class DeviceSeatDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -271,6 +278,12 @@ public class ListDeviceSeatsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeviceSeatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeviceSeatsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceSeatDTOList")
         private java.util.List < DeviceSeatDTOList> deviceSeatDTOList;

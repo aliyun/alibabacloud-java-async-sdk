@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceConfigsResponseBody</p>
@@ -110,6 +111,12 @@ public class GetDeviceConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceConfigsResponseBody</p>
+     */
     public static class CustomResourcePackage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigAboutLogo")
         private String configAboutLogo;
@@ -291,6 +298,12 @@ public class GetDeviceConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeviceConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceConfigsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoLockScreenTime")
         private Integer autoLockScreenTime;

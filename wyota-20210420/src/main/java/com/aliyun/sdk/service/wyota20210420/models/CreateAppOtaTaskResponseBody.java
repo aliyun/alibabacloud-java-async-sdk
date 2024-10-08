@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAppOtaTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAppOtaTaskResponseBody</p>
@@ -110,6 +111,12 @@ public class CreateAppOtaTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAppOtaTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAppOtaTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskUid")
         private String taskUid;

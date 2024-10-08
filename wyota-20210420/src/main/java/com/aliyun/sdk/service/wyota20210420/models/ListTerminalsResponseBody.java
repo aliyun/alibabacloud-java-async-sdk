@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTerminalsResponseBody} extends {@link TeaModel}
  *
  * <p>ListTerminalsResponseBody</p>
@@ -190,9 +191,18 @@ public class ListTerminalsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTerminalsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTerminalsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
+
+        @com.aliyun.core.annotation.NameInMap("BindUserCount")
+        private Integer bindUserCount;
 
         @com.aliyun.core.annotation.NameInMap("BuildId")
         private String buildId;
@@ -209,6 +219,9 @@ public class ListTerminalsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4")
         private String ipv4;
 
+        @com.aliyun.core.annotation.NameInMap("LastLoginUser")
+        private String lastLoginUser;
+
         @com.aliyun.core.annotation.NameInMap("LocationInfo")
         private String locationInfo;
 
@@ -224,6 +237,9 @@ public class ListTerminalsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PasswordFreeLoginUser")
         private String passwordFreeLoginUser;
 
+        @com.aliyun.core.annotation.NameInMap("PublicIpv4")
+        private String publicIpv4;
+
         @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
@@ -238,16 +254,19 @@ public class ListTerminalsResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.alias = builder.alias;
+            this.bindUserCount = builder.bindUserCount;
             this.buildId = builder.buildId;
             this.clientType = builder.clientType;
             this.currentConnectDesktop = builder.currentConnectDesktop;
             this.currentLoginUser = builder.currentLoginUser;
             this.ipv4 = builder.ipv4;
+            this.lastLoginUser = builder.lastLoginUser;
             this.locationInfo = builder.locationInfo;
             this.manageTime = builder.manageTime;
             this.model = builder.model;
             this.online = builder.online;
             this.passwordFreeLoginUser = builder.passwordFreeLoginUser;
+            this.publicIpv4 = builder.publicIpv4;
             this.serialNumber = builder.serialNumber;
             this.setPasswordFreeLoginUserTime = builder.setPasswordFreeLoginUserTime;
             this.terminalGroupId = builder.terminalGroupId;
@@ -267,6 +286,13 @@ public class ListTerminalsResponseBody extends TeaModel {
          */
         public String getAlias() {
             return this.alias;
+        }
+
+        /**
+         * @return bindUserCount
+         */
+        public Integer getBindUserCount() {
+            return this.bindUserCount;
         }
 
         /**
@@ -305,6 +331,13 @@ public class ListTerminalsResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastLoginUser
+         */
+        public String getLastLoginUser() {
+            return this.lastLoginUser;
+        }
+
+        /**
          * @return locationInfo
          */
         public String getLocationInfo() {
@@ -340,6 +373,13 @@ public class ListTerminalsResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicIpv4
+         */
+        public String getPublicIpv4() {
+            return this.publicIpv4;
+        }
+
+        /**
          * @return serialNumber
          */
         public String getSerialNumber() {
@@ -369,16 +409,19 @@ public class ListTerminalsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alias; 
+            private Integer bindUserCount; 
             private String buildId; 
             private Integer clientType; 
             private String currentConnectDesktop; 
             private String currentLoginUser; 
             private String ipv4; 
+            private String lastLoginUser; 
             private String locationInfo; 
             private String manageTime; 
             private String model; 
             private Boolean online; 
             private String passwordFreeLoginUser; 
+            private String publicIpv4; 
             private String serialNumber; 
             private String setPasswordFreeLoginUserTime; 
             private String terminalGroupId; 
@@ -389,6 +432,14 @@ public class ListTerminalsResponseBody extends TeaModel {
              */
             public Builder alias(String alias) {
                 this.alias = alias;
+                return this;
+            }
+
+            /**
+             * BindUserCount.
+             */
+            public Builder bindUserCount(Integer bindUserCount) {
+                this.bindUserCount = bindUserCount;
                 return this;
             }
 
@@ -433,6 +484,14 @@ public class ListTerminalsResponseBody extends TeaModel {
             }
 
             /**
+             * LastLoginUser.
+             */
+            public Builder lastLoginUser(String lastLoginUser) {
+                this.lastLoginUser = lastLoginUser;
+                return this;
+            }
+
+            /**
              * LocationInfo.
              */
             public Builder locationInfo(String locationInfo) {
@@ -469,6 +528,14 @@ public class ListTerminalsResponseBody extends TeaModel {
              */
             public Builder passwordFreeLoginUser(String passwordFreeLoginUser) {
                 this.passwordFreeLoginUser = passwordFreeLoginUser;
+                return this;
+            }
+
+            /**
+             * PublicIpv4.
+             */
+            public Builder publicIpv4(String publicIpv4) {
+                this.publicIpv4 = publicIpv4;
                 return this;
             }
 

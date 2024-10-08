@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceVersionDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeviceVersionDetailResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeDeviceVersionDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeviceVersionDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceVersionDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AndroidHorizontalMultiCnImageDownloadUrl")
         private String androidHorizontalMultiCnImageDownloadUrl;

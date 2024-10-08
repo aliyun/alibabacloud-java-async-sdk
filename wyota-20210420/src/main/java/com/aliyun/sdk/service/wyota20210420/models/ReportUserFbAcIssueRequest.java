@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReportUserFbAcIssueRequest} extends {@link RequestModel}
  *
  * <p>ReportUserFbAcIssueRequest</p>
@@ -253,6 +254,12 @@ public class ReportUserFbAcIssueRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ReportUserFbAcIssueRequest} extends {@link TeaModel}
+     *
+     * <p>ReportUserFbAcIssueRequest</p>
+     */
     public static class FileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileName")
         @com.aliyun.core.annotation.Validation(required = true)

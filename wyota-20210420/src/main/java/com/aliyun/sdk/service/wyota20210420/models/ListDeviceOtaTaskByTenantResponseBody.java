@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeviceOtaTaskByTenantResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeviceOtaTaskByTenantResponseBody</p>
@@ -170,6 +171,12 @@ public class ListDeviceOtaTaskByTenantResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeviceOtaTaskByTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeviceOtaTaskByTenantResponseBody</p>
+     */
     public static class TenantDeviceOtaTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
@@ -331,6 +338,12 @@ public class ListDeviceOtaTaskByTenantResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeviceOtaTaskByTenantResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeviceOtaTaskByTenantResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantDeviceOtaTasks")
         private java.util.List < TenantDeviceOtaTasks> tenantDeviceOtaTasks;

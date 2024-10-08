@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDevicesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDevicesResponseBody</p>
@@ -170,6 +171,12 @@ public class ListDevicesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDevicesResponseBody</p>
+     */
     public static class ConnectConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectScript")
         private String connectScript;
@@ -271,6 +278,12 @@ public class ListDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDevicesResponseBody</p>
+     */
     public static class CustomResourcePackage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigAboutLogo")
         private String configAboutLogo;
@@ -452,6 +465,12 @@ public class ListDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDevicesResponseBody</p>
+     */
     public static class EndUserList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdDomain")
         private String adDomain;
@@ -633,6 +652,12 @@ public class ListDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDevicesResponseBody</p>
+     */
     public static class LabelList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -754,6 +779,12 @@ public class ListDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDevicesResponseBody</p>
+     */
     public static class PeripheralConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultPolicy")
         private Integer defaultPolicy;
@@ -875,6 +906,12 @@ public class ListDevicesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDevicesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDevicesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveTime")
         private String activeTime;

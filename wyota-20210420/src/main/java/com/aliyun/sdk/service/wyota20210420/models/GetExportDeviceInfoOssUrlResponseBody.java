@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExportDeviceInfoOssUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetExportDeviceInfoOssUrlResponseBody</p>
@@ -110,6 +111,12 @@ public class GetExportDeviceInfoOssUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetExportDeviceInfoOssUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetExportDeviceInfoOssUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;

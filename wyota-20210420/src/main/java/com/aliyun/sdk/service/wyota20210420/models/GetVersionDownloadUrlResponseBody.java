@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVersionDownloadUrlResponseBody} extends {@link TeaModel}
  *
  * <p>GetVersionDownloadUrlResponseBody</p>
@@ -110,6 +111,12 @@ public class GetVersionDownloadUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetVersionDownloadUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetVersionDownloadUrlResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullDownloadUrl")
         private String fullDownloadUrl;

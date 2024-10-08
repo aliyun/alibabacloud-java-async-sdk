@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDeviceBindedEndUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateDeviceBindedEndUserRequest</p>
@@ -184,6 +185,12 @@ public class UpdateDeviceBindedEndUserRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDeviceBindedEndUserRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDeviceBindedEndUserRequest</p>
+     */
     public static class SourceAdEndUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdDomain")
         private String adDomain;
@@ -265,6 +272,12 @@ public class UpdateDeviceBindedEndUserRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link UpdateDeviceBindedEndUserRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDeviceBindedEndUserRequest</p>
+     */
     public static class TargetAdEndUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdDomain")
         private String adDomain;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceOtaInfoTestRequest} extends {@link RequestModel}
  *
  * <p>GetDeviceOtaInfoTestRequest</p>

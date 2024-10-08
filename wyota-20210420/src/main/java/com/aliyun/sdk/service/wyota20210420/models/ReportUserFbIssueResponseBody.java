@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReportUserFbIssueResponseBody} extends {@link TeaModel}
  *
  * <p>ReportUserFbIssueResponseBody</p>
@@ -110,6 +111,12 @@ public class ReportUserFbIssueResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ReportUserFbIssueResponseBody} extends {@link TeaModel}
+     *
+     * <p>ReportUserFbIssueResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IssueId")
         private Integer issueId;

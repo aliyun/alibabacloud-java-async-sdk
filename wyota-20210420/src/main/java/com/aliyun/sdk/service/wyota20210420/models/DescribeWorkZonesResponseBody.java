@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWorkZonesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWorkZonesResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeWorkZonesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWorkZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWorkZonesResponseBody</p>
+     */
     public static class WorkZoneDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SeatCol")
         private Integer seatCol;
@@ -231,6 +238,12 @@ public class DescribeWorkZonesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWorkZonesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWorkZonesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;

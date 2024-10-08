@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTerminalResponseBody} extends {@link TeaModel}
  *
  * <p>ListTerminalResponseBody</p>
@@ -190,6 +191,12 @@ public class ListTerminalResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTerminalResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTerminalResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;

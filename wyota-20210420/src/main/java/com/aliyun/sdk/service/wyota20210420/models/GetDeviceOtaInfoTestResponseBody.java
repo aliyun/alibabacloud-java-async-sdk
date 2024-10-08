@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceOtaInfoTestResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceOtaInfoTestResponseBody</p>
@@ -110,6 +111,12 @@ public class GetDeviceOtaInfoTestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceOtaInfoTestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceOtaInfoTestResponseBody</p>
+     */
     public static class Version extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
@@ -351,6 +358,12 @@ public class GetDeviceOtaInfoTestResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDeviceOtaInfoTestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceOtaInfoTestResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Version")
         private Version version;

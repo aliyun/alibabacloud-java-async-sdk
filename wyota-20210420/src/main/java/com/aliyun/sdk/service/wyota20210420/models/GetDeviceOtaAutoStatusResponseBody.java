@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceOtaAutoStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceOtaAutoStatusResponseBody</p>
@@ -110,6 +111,12 @@ public class GetDeviceOtaAutoStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceOtaAutoStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceOtaAutoStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoUpdate")
         private Integer autoUpdate;

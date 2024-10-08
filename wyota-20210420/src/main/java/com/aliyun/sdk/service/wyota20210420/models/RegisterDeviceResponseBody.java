@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterDeviceResponseBody} extends {@link TeaModel}
  *
  * <p>RegisterDeviceResponseBody</p>
@@ -110,6 +111,12 @@ public class RegisterDeviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RegisterDeviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RegisterDeviceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;

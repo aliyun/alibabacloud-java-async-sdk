@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckUuidValidRequest} extends {@link RequestModel}
  *
  * <p>CheckUuidValidRequest</p>
@@ -51,6 +52,10 @@ public class CheckUuidValidRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Wlan")
     private String wlan;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WosAppVersion")
+    private String wosAppVersion;
+
     private CheckUuidValidRequest(Builder builder) {
         super(builder);
         this.bluetooth = builder.bluetooth;
@@ -62,6 +67,7 @@ public class CheckUuidValidRequest extends Request {
         this.serialNo = builder.serialNo;
         this.uuid = builder.uuid;
         this.wlan = builder.wlan;
+        this.wosAppVersion = builder.wosAppVersion;
     }
 
     public static Builder builder() {
@@ -140,6 +146,13 @@ public class CheckUuidValidRequest extends Request {
         return this.wlan;
     }
 
+    /**
+     * @return wosAppVersion
+     */
+    public String getWosAppVersion() {
+        return this.wosAppVersion;
+    }
+
     public static final class Builder extends Request.Builder<CheckUuidValidRequest, Builder> {
         private String bluetooth; 
         private String buildId; 
@@ -150,6 +163,7 @@ public class CheckUuidValidRequest extends Request {
         private String serialNo; 
         private String uuid; 
         private String wlan; 
+        private String wosAppVersion; 
 
         private Builder() {
             super();
@@ -166,6 +180,7 @@ public class CheckUuidValidRequest extends Request {
             this.serialNo = request.serialNo;
             this.uuid = request.uuid;
             this.wlan = request.wlan;
+            this.wosAppVersion = request.wosAppVersion;
         } 
 
         /**
@@ -246,6 +261,15 @@ public class CheckUuidValidRequest extends Request {
         public Builder wlan(String wlan) {
             this.putBodyParameter("Wlan", wlan);
             this.wlan = wlan;
+            return this;
+        }
+
+        /**
+         * WosAppVersion.
+         */
+        public Builder wosAppVersion(String wosAppVersion) {
+            this.putBodyParameter("WosAppVersion", wosAppVersion);
+            this.wosAppVersion = wosAppVersion;
             return this;
         }
 

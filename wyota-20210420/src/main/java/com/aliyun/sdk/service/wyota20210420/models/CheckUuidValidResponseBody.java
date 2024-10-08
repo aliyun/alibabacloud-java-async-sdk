@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckUuidValidResponseBody} extends {@link TeaModel}
  *
  * <p>CheckUuidValidResponseBody</p>
@@ -13,6 +14,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CheckUuidValidResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -22,6 +26,7 @@ public class CheckUuidValidResponseBody extends TeaModel {
 
     private CheckUuidValidResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -42,6 +47,13 @@ public class CheckUuidValidResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public Data getData() {
+        return this.data;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -57,6 +69,7 @@ public class CheckUuidValidResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Data data; 
         private String message; 
         private String requestId; 
 
@@ -65,6 +78,14 @@ public class CheckUuidValidResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
@@ -90,4 +111,51 @@ public class CheckUuidValidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CheckUuidValidResponseBody} extends {@link TeaModel}
+     *
+     * <p>CheckUuidValidResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NewUpgrade")
+        private Boolean newUpgrade;
+
+        private Data(Builder builder) {
+            this.newUpgrade = builder.newUpgrade;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return newUpgrade
+         */
+        public Boolean getNewUpgrade() {
+            return this.newUpgrade;
+        }
+
+        public static final class Builder {
+            private Boolean newUpgrade; 
+
+            /**
+             * NewUpgrade.
+             */
+            public Builder newUpgrade(Boolean newUpgrade) {
+                this.newUpgrade = newUpgrade;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceSeatsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeviceSeatsResponseBody</p>
@@ -170,6 +171,12 @@ public class DescribeDeviceSeatsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeviceSeatsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceSeatsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SeatCol")
         private Integer seatCol;

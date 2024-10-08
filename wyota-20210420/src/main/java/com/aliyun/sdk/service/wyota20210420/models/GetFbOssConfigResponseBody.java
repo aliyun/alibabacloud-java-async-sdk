@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFbOssConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetFbOssConfigResponseBody</p>
@@ -110,6 +111,12 @@ public class GetFbOssConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFbOssConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFbOssConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;

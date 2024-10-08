@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppOtaVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppOtaVersionResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeAppOtaVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppOtaVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppOtaVersionResponseBody</p>
+     */
     public static class AppOtaInfoDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
@@ -491,6 +498,12 @@ public class DescribeAppOtaVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppOtaVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppOtaVersionResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppOtaInfoDTOList")
         private java.util.List < AppOtaInfoDTOList> appOtaInfoDTOList;

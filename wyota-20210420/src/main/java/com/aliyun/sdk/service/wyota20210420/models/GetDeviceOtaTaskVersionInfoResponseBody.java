@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeviceOtaTaskVersionInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetDeviceOtaTaskVersionInfoResponseBody</p>
@@ -110,6 +111,12 @@ public class GetDeviceOtaTaskVersionInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDeviceOtaTaskVersionInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDeviceOtaTaskVersionInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
