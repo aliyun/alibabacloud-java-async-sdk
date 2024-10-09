@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnapshotGroupResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSnapshotGroupResponseBody</p>
@@ -49,7 +50,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the delete operation.
+         * <p>Details about the delete operation.</p>
          */
         public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
             this.operationProgressSet = operationProgressSet;
@@ -57,7 +58,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EDE885A-FDC1-4FAE-BC44-6EACAEA6CC6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteSnapshotGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteSnapshotGroupResponseBody</p>
+     */
     public static class RelatedItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -109,7 +119,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the resource.
+             * <p>The name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SnapshotId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -117,7 +130,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-j6c9lpuyxo2uxxnx****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +147,12 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteSnapshotGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteSnapshotGroupResponseBody</p>
+     */
     public static class RelatedItemSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelatedItem")
         private java.util.List < RelatedItem> relatedItem;
@@ -172,6 +194,12 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteSnapshotGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteSnapshotGroupResponseBody</p>
+     */
     public static class OperationProgress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -235,10 +263,11 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             private RelatedItemSet relatedItemSet; 
 
             /**
-             * The error code. This parameter is empty when the operation is successful.
-             * <p>
+             * <p>The error code. This parameter is empty when the operation is successful.</p>
+             * <p>For information about error codes and error messages, visit the <a href="https://error-center.aliyun.com/status/product/Ecs">API error center</a>.</p>
              * 
-             * For information about error codes and error messages, visit the [API error center](https://error-center.aliyun.com/status/product/Ecs).
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -246,10 +275,11 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The error message. This parameter is empty when the operation is successful.
-             * <p>
+             * <p>The error message. This parameter is empty when the operation is successful.</p>
+             * <p>For information about error codes and error messages, visit the <a href="https://error-center.aliyun.com/status/product/Ecs">API error center</a>.</p>
              * 
-             * For information about error codes and error messages, visit the [API error center](https://error-center.aliyun.com/status/product/Ecs).
+             * <strong>example:</strong>
+             * <p>testErrorMsg</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -257,7 +287,10 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation was successful. If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.
+             * <p>Indicates whether the operation was successful. If the operation was successful, a value of Success is returned. If the operation failed, an error code and an error message are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -265,7 +298,7 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the resources.
+             * <p>Details about the resources.</p>
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;
@@ -279,6 +312,12 @@ public class DeleteSnapshotGroupResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteSnapshotGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteSnapshotGroupResponseBody</p>
+     */
     public static class OperationProgressSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationProgress")
         private java.util.List < OperationProgress> operationProgress;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticityAssurancesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the elasticity assurances.
+         * <p>Details about the elasticity assurances.</p>
          */
         public Builder elasticityAssuranceSet(ElasticityAssuranceSet elasticityAssuranceSet) {
             this.elasticityAssuranceSet = elasticityAssuranceSet;
@@ -93,7 +94,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
     public static class AllocatedResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -193,7 +212,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The instance type.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c6.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -201,7 +223,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances for which capacity of an instance type is reserved.
+             * <p>The total number of instances for which capacity of an instance type is reserved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalAmount(Integer totalAmount) {
                 this.totalAmount = totalAmount;
@@ -209,7 +234,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that have used the elasticity assurance.
+             * <p>The number of instances that have used the elasticity assurance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -217,7 +245,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -231,6 +262,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
     public static class AllocatedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocatedResource")
         private java.util.List < AllocatedResource> allocatedResource;
@@ -272,6 +309,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -311,7 +354,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -319,7 +365,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -333,6 +382,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -374,6 +429,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
     public static class ElasticityAssuranceItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocatedResources")
         private AllocatedResources allocatedResources;
@@ -581,7 +642,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private Integer usedAssuranceTimes; 
 
             /**
-             * Details about the allocated resources.
+             * <p>Details about the allocated resources.</p>
              */
             public Builder allocatedResources(AllocatedResources allocatedResources) {
                 this.allocatedResources = allocatedResources;
@@ -589,7 +650,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the elasticity assurance.
+             * <p>The description of the elasticity assurance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -597,7 +661,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the elasticity assurance expires.
+             * <p>The time when the elasticity assurance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-03T16:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -605,7 +672,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance. The value can be only PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.
+             * <p>The billing method of the instance. The value can be only PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -613,7 +683,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder latestStartTime(String latestStartTime) {
                 this.latestStartTime = latestStartTime;
@@ -621,7 +696,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the elasticity assurance.
+             * <p>The ID of the elasticity assurance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-bp1ir35kqtn8ywci****</p>
              */
             public Builder privatePoolOptionsId(String privatePoolOptionsId) {
                 this.privatePoolOptionsId = privatePoolOptionsId;
@@ -629,11 +707,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the private pool associated with the elasticity assurance. Valid values:
-             * <p>
+             * <p>The type of the private pool associated with the elasticity assurance. Valid values:</p>
+             * <ul>
+             * <li>Open: open private pool</li>
+             * <li>Target: specific private pool</li>
+             * </ul>
              * 
-             * *   Open: open private pool
-             * *   Target: specific private pool
+             * <strong>example:</strong>
+             * <p>Target</p>
              */
             public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
                 this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
@@ -641,7 +722,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the elasticity assurance.
+             * <p>The name of the elasticity assurance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eapTestName</p>
              */
             public Builder privatePoolOptionsName(String privatePoolOptionsName) {
                 this.privatePoolOptionsName = privatePoolOptionsName;
@@ -649,7 +733,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the elasticity assurance.
+             * <p>The region ID of the elasticity assurance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -657,7 +744,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -665,7 +755,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the elasticity assurance takes effect.
+             * <p>The time when the elasticity assurance takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-03T05:25Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -673,11 +766,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates when the elasticity assurance takes effect. Valid values:
-             * <p>
+             * <p>Indicates when the elasticity assurance takes effect. Valid values:</p>
+             * <ul>
+             * <li>Now: The elasticity assurance takes effect immediately after it is created.</li>
+             * <li>Later: The elasticity assurance takes effect at a specified time.</li>
+             * </ul>
              * 
-             * *   Now: The elasticity assurance takes effect immediately after it is created.
-             * *   Later: The elasticity assurance takes effect at a specified time.
+             * <strong>example:</strong>
+             * <p>Now</p>
              */
             public Builder startTimeType(String startTimeType) {
                 this.startTimeType = startTimeType;
@@ -685,13 +781,16 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the elasticity assurance. Valid values:
-             * <p>
+             * <p>The status of the elasticity assurance. Valid values:</p>
+             * <ul>
+             * <li>Preparing</li>
+             * <li>Prepared</li>
+             * <li>Active</li>
+             * <li>Released</li>
+             * </ul>
              * 
-             * *   Preparing
-             * *   Prepared
-             * *   Active
-             * *   Released
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -699,7 +798,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the elasticity assurance.
+             * <p>The tags of the elasticity assurance.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -707,7 +806,10 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of times that the elasticity assurance is applied.
+             * <p>The total number of times that the elasticity assurance is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unlimited</p>
              */
             public Builder totalAssuranceTimes(String totalAssuranceTimes) {
                 this.totalAssuranceTimes = totalAssuranceTimes;
@@ -715,7 +817,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usedAssuranceTimes(Integer usedAssuranceTimes) {
                 this.usedAssuranceTimes = usedAssuranceTimes;
@@ -729,6 +836,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssurancesResponseBody</p>
+     */
     public static class ElasticityAssuranceSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ElasticityAssuranceItem")
         private java.util.List < ElasticityAssuranceItem> elasticityAssuranceItem;

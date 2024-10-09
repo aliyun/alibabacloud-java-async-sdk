@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouterInterfacesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRouterInterfacesResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouterInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouterInterfacesResponseBody</p>
+     */
     public static class RouterInterfaceType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
@@ -651,6 +658,12 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouterInterfacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouterInterfacesResponseBody</p>
+     */
     public static class RouterInterfaceSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouterInterfaceType")
         private java.util.List < RouterInterfaceType> routerInterfaceType;

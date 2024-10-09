@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDedicatedHostClusterResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteDedicatedHostClusterResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteDedicatedHostClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11B55F58-D3A4-4A9B-9596-342420D02FF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

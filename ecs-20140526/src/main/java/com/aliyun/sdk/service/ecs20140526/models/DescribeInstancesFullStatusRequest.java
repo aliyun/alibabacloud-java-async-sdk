@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesFullStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesFullStatusRequest</p>
@@ -291,7 +292,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The IDs of the system events. You can specify up to 100 event IDs in a single request.
+         * <p>The IDs of the system events. You can specify up to 100 event IDs in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-bp1hygp5b04o56l0****</p>
          */
         public Builder eventId(java.util.List < String > eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -300,16 +304,19 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The type of the system event. This parameter is valid only when InstanceEventType.N is not specified. Valid values:
-         * <p>
+         * <p>The type of the system event. This parameter is valid only when InstanceEventType.N is not specified. Valid values:</p>
+         * <ul>
+         * <li>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</li>
+         * <li>SystemFailure.Reboot: The instance is restarted due to a system failure.</li>
+         * <li>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</li>
+         * <li>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</li>
+         * <li>InstanceExpiration.Delete: The subscription instance is released due to expiration.</li>
+         * <li>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</li>
+         * <li>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</li>
+         * </ul>
          * 
-         * *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
-         * *   SystemFailure.Reboot: The instance is restarted due to a system failure.
-         * *   InstanceFailure.Reboot: The instance is restarted due to an instance failure.
-         * *   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.
-         * *   InstanceExpiration.Delete: The subscription instance is released due to expiration.
-         * *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
-         * *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
+         * <strong>example:</strong>
+         * <p>InstanceExpiration.Stop</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -318,16 +325,18 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The health status of the instance. Valid values:
-         * <p>
+         * <p>The health status of the instance. Valid values:</p>
+         * <ul>
+         * <li>OK</li>
+         * <li>Impaired</li>
+         * <li>Initializing</li>
+         * <li>InsufficientData</li>
+         * <li>NotApplicable</li>
+         * </ul>
+         * <p>All the values are case-sensitive.</p>
          * 
-         * *   OK
-         * *   Impaired
-         * *   Initializing
-         * *   InsufficientData
-         * *   NotApplicable
-         * 
-         * All the values are case-sensitive.
+         * <strong>example:</strong>
+         * <p>Maintaining</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -336,7 +345,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The types of system events. You can specify up to 30 event types in a single request.
+         * <p>The types of system events. You can specify up to 30 event types in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceExpiration.Stop</p>
          */
         public Builder instanceEventType(java.util.List < String > instanceEventType) {
             this.putQueryParameter("InstanceEventType", instanceEventType);
@@ -345,7 +357,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. You can specify up to 100 instance IDs in a single request.
+         * <p>The IDs of the instances. You can specify up to 100 instance IDs in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -372,10 +387,11 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The page number. The value must be a positive integer.
-         * <p>
+         * <p>The page number. The value must be a positive integer.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -384,10 +400,11 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -396,7 +413,11 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -423,12 +444,15 @@ public class DescribeInstancesFullStatusRequest extends Request {
         }
 
         /**
-         * The lifecycle status of the instance. Valid values:
-         * <p>
+         * <p>The lifecycle status of the instance. Valid values:</p>
+         * <ul>
+         * <li>Starting</li>
+         * <li>Running</li>
+         * <li>Stopped</li>
+         * </ul>
          * 
-         * *   Starting
-         * *   Running
-         * *   Stopped
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -443,6 +467,12 @@ public class DescribeInstancesFullStatusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesFullStatusRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesFullStatusRequest</p>
+     */
     public static class EventPublishTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private String end;
@@ -482,7 +512,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
             private String start; 
 
             /**
-             * The end of the time range during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The end of the time range during which system events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-07T00:00:00Z</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -490,7 +523,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
             }
 
             /**
-             * The beginning of the time range during which system events are published. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The beginning of the time range during which system events are published. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-30T00:00:00Z</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -504,6 +540,12 @@ public class DescribeInstancesFullStatusRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesFullStatusRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesFullStatusRequest</p>
+     */
     public static class NotBefore extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private String end;
@@ -543,7 +585,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
             private String start; 
 
             /**
-             * The end of the time range during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The end of the time range during which O&amp;M tasks related to scheduled system events are executed. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-11-30T00:00:00Z</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -551,7 +596,10 @@ public class DescribeInstancesFullStatusRequest extends Request {
             }
 
             /**
-             * The beginning of the time range during which O\&M tasks related to scheduled system events are executed. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * <p>The beginning of the time range during which O&amp;M tasks related to scheduled system events are executed. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-07T00:00:00Z</p>
              */
             public Builder start(String start) {
                 this.start = start;

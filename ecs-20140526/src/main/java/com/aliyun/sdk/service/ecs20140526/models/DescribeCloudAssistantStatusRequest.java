@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudAssistantStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudAssistantStatusRequest</p>
@@ -217,7 +218,10 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1iudwa5b1tqa****</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -226,12 +230,12 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. If you specify **InstanceId**, this parameter does not take effect.
-         * <p>
+         * <p>The maximum number of entries per page. If you specify <strong>InstanceId</strong>, this parameter does not take effect.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -240,7 +244,10 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -249,12 +256,15 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The operating system type of the instance. Valid values:
-         * <p>
+         * <p>The operating system type of the instance. Valid values:</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * <li>FreeBSD</li>
+         * </ul>
          * 
-         * *   Windows
-         * *   Linux
-         * *   FreeBSD
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder OSType(String OSType) {
             this.putQueryParameter("OSType", OSType);
@@ -281,12 +291,12 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -295,10 +305,11 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The number of entries per page. If you specify **InstanceId**, this parameter does not take effect. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of entries per page. If you specify <strong>InstanceId</strong>, this parameter does not take effect. Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -307,7 +318,11 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call [DescribeRegions](~~25609~~) to query the most recent region list.
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

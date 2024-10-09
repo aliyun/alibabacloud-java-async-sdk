@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticMetricSetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosticMetricSetsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * A collection of diagnostic metrics.
+         * <p>A collection of diagnostic metrics.</p>
          */
         public Builder metricSets(java.util.List < MetricSets> metricSets) {
             this.metricSets = metricSets;
@@ -69,7 +70,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The query token returned in this call.
+         * <p>The query token returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +81,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosticMetricSetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosticMetricSetsResponseBody</p>
+     */
     public static class MetricSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -177,7 +190,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The description of the diagnostic metric set.
+             * <p>The description of the diagnostic metric set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connection issue diagnostics</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -185,7 +201,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the diagnostic metrics.
+             * <p>The IDs of the diagnostic metrics.</p>
              */
             public Builder metricIds(java.util.List < String > metricIds) {
                 this.metricIds = metricIds;
@@ -193,7 +209,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the diagnostic metric set.
+             * <p>The ID of the diagnostic metric set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dms-bp17p0qwtr72zmu*****</p>
              */
             public Builder metricSetId(String metricSetId) {
                 this.metricSetId = metricSetId;
@@ -201,7 +220,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the diagnostic metric set.
+             * <p>The name of the diagnostic metric set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>connection issue diagnostics</p>
              */
             public Builder metricSetName(String metricSetName) {
                 this.metricSetName = metricSetName;
@@ -209,7 +231,10 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type supported by the diagnostic metric set.
+             * <p>The resource type supported by the diagnostic metric set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -217,11 +242,14 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the diagnostic metric set. Valid values:
-             * <p>
+             * <p>The type of the diagnostic metric set. Valid values:</p>
+             * <ul>
+             * <li>User: user-defined diagnostic metric set</li>
+             * <li>Common: common diagnostic metric set</li>
+             * </ul>
              * 
-             * *   User: user-defined diagnostic metric set
-             * *   Common: common diagnostic metric set
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder type(String type) {
                 this.type = type;

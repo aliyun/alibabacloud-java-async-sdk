@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedHostAutoRenewRequest} extends {@link RequestModel}
  *
  * <p>DescribeDedicatedHostAutoRenewRequest</p>
@@ -148,7 +149,11 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).
+         * <p>The ID of the dedicated host. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-bp165p6xk2tlw61e****,dh-bp1f9vxmno****</p>
          */
         public Builder dedicatedHostIds(String dedicatedHostIds) {
             this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
@@ -175,7 +180,11 @@ public class DescribeDedicatedHostAutoRenewRequest extends Request {
         }
 
         /**
-         * The ID of the region where the dedicated host resides.
+         * <p>The ID of the region where the dedicated host resides.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

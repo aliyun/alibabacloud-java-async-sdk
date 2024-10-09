@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachClassicLinkVpcRequest} extends {@link RequestModel}
  *
  * <p>DetachClassicLinkVpcRequest</p>
@@ -149,7 +150,11 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * The ID of the classic network-type instance.
+         * <p>The ID of the classic network-type instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -167,7 +172,11 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * The region ID of the classic network-type instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the classic network-type instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +203,11 @@ public class DetachClassicLinkVpcRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the instance is linked.
+         * <p>The ID of the VPC to which the instance is linked.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp67acfmxazb4p****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

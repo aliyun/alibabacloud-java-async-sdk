@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDedicatedHostClusterRequest} extends {@link RequestModel}
  *
  * <p>DeleteDedicatedHostClusterRequest</p>
@@ -148,7 +149,11 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host cluster.
+         * <p>The ID of the dedicated host cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-bp12wlf6am0vz9v2****</p>
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -175,7 +180,11 @@ public class DeleteDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

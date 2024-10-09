@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTasksResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +109,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +120,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the task.
+         * <p>The region ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -121,7 +131,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the tasks.
+         * <p>Details about the tasks.</p>
          */
         public Builder taskSet(TaskSet taskSet) {
             this.taskSet = taskSet;
@@ -137,7 +150,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTasksResponseBody</p>
+     */
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -249,7 +271,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-24T12:50Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -257,7 +282,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was completed.
+             * <p>The time when the task was completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-24T12:50Z</p>
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -265,7 +293,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp1i8huqm5u7****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -273,7 +304,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task can be canceled.
+             * <p>Indicates whether the task can be canceled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportCancel(String supportCancel) {
                 this.supportCancel = supportCancel;
@@ -281,7 +315,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ImportImage</p>
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -289,7 +326,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-bp1hvgwromzv32iq****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -297,7 +337,10 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the task.
+             * <p>The state of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -311,6 +354,12 @@ public class DescribeTasksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTasksResponseBody</p>
+     */
     public static class TaskSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Task")
         private java.util.List < Task> task;

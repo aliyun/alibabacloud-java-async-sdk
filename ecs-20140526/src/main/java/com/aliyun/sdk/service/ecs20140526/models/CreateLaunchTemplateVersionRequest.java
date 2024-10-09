@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLaunchTemplateVersionRequest} extends {@link RequestModel}
  *
  * <p>CreateLaunchTemplateVersionRequest</p>
@@ -759,12 +760,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The automatic release time of the instance. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
-         * <p>
+         * <p>The automatic release time of the instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <ul>
+         * <li>If the value of <code>ss</code> is not <code>00</code>, the time is automatically rounded down to the nearest minute based on the value of <code>mm</code>.</li>
+         * <li>The specified time must be at least 30 minutes later than the current time.</li>
+         * <li>The specified time can be at most three years later than the current time.</li>
+         * </ul>
          * 
-         * *   If the value of `ss` is not `00`, the time is automatically rounded down to the nearest minute based on the value of `mm`.
-         * *   The specified time must be at least 30 minutes later than the current time.
-         * *   The specified time can be at most three years later than the current time.
+         * <strong>example:</strong>
+         * <p>2018-01-01T12:05:00Z</p>
          */
         public Builder autoReleaseTime(String autoReleaseTime) {
             this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
@@ -773,13 +777,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. This parameter is valid only if `InstanceChargeType` is set to `PrePaid`. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the instance. This parameter is valid only if <code>InstanceChargeType</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -788,12 +794,12 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The auto-renewal period of the instance. Valid values:
-         * <p>
+         * <p>The auto-renewal period of the instance. Valid values:</p>
+         * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -802,11 +808,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The performance mode of the burstable instance. Valid values:
-         * <p>
+         * <p>The performance mode of the burstable instance. Valid values:</p>
+         * <ul>
+         * <li>Standard: the standard mode. For more information, see the &quot;Standard mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>Unlimited: the unlimited mode. For more information, see the &quot;Unlimited mode&quot; section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * </ul>
          * 
-         * *   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).
-         * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](~~59977~~).
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder creditSpecification(String creditSpecification) {
             this.putQueryParameter("CreditSpecification", creditSpecification);
@@ -815,7 +824,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The data disks.
+         * <p>The data disks.</p>
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
@@ -824,15 +833,18 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable release protection for the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable release protection for the instance. This parameter specifies whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * >  This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -841,7 +853,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the deployment set to which to deploy the instance.
+         * <p>The ID of the deployment set to which to deploy the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1brhwhoqinyjd6****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -850,7 +865,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The description of the instance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -859,7 +877,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the operating system configuration of the instance.
+         * <p>Specifies whether to enable the operating system configuration of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableVmOsConfig(Boolean enableVmOsConfig) {
             this.putQueryParameter("EnableVmOsConfig", enableVmOsConfig);
@@ -868,12 +889,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The hostname of the instance.
-         * <p>
+         * <p>The hostname of the instance.</p>
+         * <ul>
+         * <li>The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).</li>
+         * <li>For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).</li>
+         * <li>For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</li>
+         * </ul>
          * 
-         * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
-         * *   For Windows instances, the hostname must be 2 to 15 characters in length and cannot contain periods (.) or contain only digits. It can contain letters, digits, and hyphens (-).
-         * *   For instances that run other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
+         * <strong>example:</strong>
+         * <p>testHostName</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -882,7 +906,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the image to use to create the Elastic Compute Service (ECS) instance. You can call the [DescribeImages](~~25534~~) operation to query available images.
+         * <p>The ID of the image to use to create the Elastic Compute Service (ECS) instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>win2008r2_64_ent_sp1_en-us_40G_alibase_20170915.vhd</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -891,10 +918,13 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The source of the image.
-         * <p>
+         * <p>The source of the image.</p>
+         * <blockquote>
+         * <p>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * </blockquote>
          * 
-         * > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder imageOwnerAlias(String imageOwnerAlias) {
             this.putQueryParameter("ImageOwnerAlias", imageOwnerAlias);
@@ -903,11 +933,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that your account has sufficient credits. Otherwise, an <code>InvalidPayMethod</code> error is returned.</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   PrePaid: subscription. If you set this parameter to PrePaid, make sure that your account has sufficient credits. Otherwise, an `InvalidPayMethod` error is returned.
-         * *   PostPaid: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -916,10 +949,11 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The instance name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
-         * <p>
+         * <p>The instance name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). The default value of this parameter is the <code>InstanceId</code> value.</p>
+         * <p>When you create multiple ECS instances at a time, you can batch configure sequential names for the instances. The instance names can contain square brackets ([]) and commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</p>
          * 
-         * When you create multiple ECS instances at a time, you can batch configure sequential names for the instances. The instance names can contain square brackets (\[]) and commas (,). For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
+         * <strong>example:</strong>
+         * <p>k8s-node-[1,4]-alibabacloud</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -928,7 +962,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent list of instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -937,13 +974,17 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The billing method for network usage. Default value: PayByTraffic. Valid values:
-         * <p>
+         * <p>The billing method for network usage. Default value: PayByTraffic. Valid values:</p>
+         * <ul>
+         * <li>PayByBandwidth: pay-by-bandwidth</li>
+         * <li>PayByTraffic: pay-by-traffic</li>
+         * </ul>
+         * <blockquote>
+         * <p>When the <strong>pay-by-traffic</strong> billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * </blockquote>
          * 
-         * *   PayByBandwidth: pay-by-bandwidth
-         * *   PayByTraffic: pay-by-traffic
-         * 
-         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -952,11 +993,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
-         * <p>
+         * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
+         * <ul>
+         * <li>When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</li>
+         * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter range from 1 to the <code>InternetMaxBandwidthOut</code> value and the default value is the <code>InternetMaxBandwidthOut</code> value.</li>
+         * </ul>
          * 
-         * *   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.
-         * *   If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter range from 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
@@ -965,7 +1009,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
+         * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -974,11 +1021,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to create an I/O optimized instance. Valid values:
-         * <p>
+         * <p>Specifies whether to create an I/O optimized instance. Valid values:</p>
+         * <ul>
+         * <li>none: The instance is not I/O optimized.</li>
+         * <li>optimized: creates an I/O optimized instance.</li>
+         * </ul>
          * 
-         * *   none: The instance is not I/O optimized.
-         * *   optimized: creates an I/O optimized instance.
+         * <strong>example:</strong>
+         * <p>optimized</p>
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -987,7 +1037,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The number of IPv6 addresses to randomly generate for the primary elastic network interface (ENI). Valid values: 1 to 10.
+         * <p>The number of IPv6 addresses to randomly generate for the primary elastic network interface (ENI). Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -996,11 +1049,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The name of the key pair to bind to the instance.
-         * <p>
+         * <p>The name of the key pair to bind to the instance.</p>
+         * <ul>
+         * <li>For Windows instances, this parameter is ignored The <code>Password</code> parameter is valid even if the KeyPairName parameter is specified.</li>
+         * <li>For Linux instances, the password-based logon method is disabled by default.</li>
+         * </ul>
          * 
-         * *   For Windows instances, this parameter is ignored The `Password` parameter is valid even if the KeyPairName parameter is specified.
-         * *   For Linux instances, the password-based logon method is disabled by default.
+         * <strong>example:</strong>
+         * <p>testKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -1009,7 +1065,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation. You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.
+         * <p>The ID of the launch template. For more information, call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation. You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-m5eiaupmvm2op9d****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -1018,7 +1077,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the launch template. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testLaunchTemplateName</p>
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -1027,7 +1089,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The information of the elastic network interfaces (ENIs).
+         * <p>The information of the elastic network interfaces (ENIs).</p>
          */
         public Builder networkInterface(java.util.List < NetworkInterface> networkInterface) {
             this.putQueryParameter("NetworkInterface", networkInterface);
@@ -1036,11 +1098,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li>classic: classic network</li>
+         * <li>vpc: VPC</li>
+         * </ul>
          * 
-         * *   classic: classic network
-         * *   vpc: VPC
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -1067,15 +1132,18 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the password that is preconfigured in the image. Valid values:
-         * <p>
+         * <p>Specifies whether to use the password that is preconfigured in the image. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> If you specify PasswordInherit, you must leave Password empty and make sure that a password is preconfigured for the image.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * >  If you specify PasswordInherit, you must leave Password empty and make sure that a password is preconfigured for the image.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder passwordInherit(Boolean passwordInherit) {
             this.putQueryParameter("PasswordInherit", passwordInherit);
@@ -1084,7 +1152,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The subscription period of the instance. Unit: months. This parameter is valid and required only when `InstanceChargeType` is set to `PrePaid`. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         * <p>The subscription period of the instance. Unit: months. This parameter is valid and required only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -1093,10 +1164,11 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The unit of the subscription period. Valid values:
-         * <p>
+         * <p>The unit of the subscription period. Valid values:</p>
+         * <p>Month (default)</p>
          * 
-         * Month (default)
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -1105,10 +1177,11 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The private IP address to assign to the instance.
-         * <p>
+         * <p>The private IP address to assign to the instance.</p>
+         * <p>To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the <code>VSwitchId</code> parameter.</p>
          * 
-         * To assign a private IP address to an instance of the VPC type, make sure that the IP address is an idle IP address within the CIDR block of the vSwitch specified by the `VSwitchId` parameter.
+         * <strong>example:</strong>
+         * <p><code>10.1.**.**</code></p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -1117,7 +1190,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The name of the instance Resource Access Management (RAM) role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.
+         * <p>The name of the instance Resource Access Management (RAM) role. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRamRoleName</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -1126,7 +1202,11 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -1135,7 +1215,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the instance.
+         * <p>The ID of the resource group to which to assign the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1162,11 +1245,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable security hardening for the operating system. Valid values:
-         * <p>
+         * <p>Specifies whether to enable security hardening for the operating system. Valid values:</p>
+         * <ul>
+         * <li>Active: Security hardening is enabled. This value is applicable only to public images.</li>
+         * <li>Deactive: Security hardening is disabled. This value is available to all types of images.</li>
+         * </ul>
          * 
-         * *   Active: Security hardening is enabled. This value is applicable only to public images.
-         * *   Deactive: Security hardening is disabled. This value is available to all types of images.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
             this.putQueryParameter("SecurityEnhancementStrategy", securityEnhancementStrategy);
@@ -1175,10 +1261,13 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which to assign the instance. Instances within the same security group can access each other.
-         * <p>
+         * <p>The ID of the security group to which to assign the ECS instance created based on the launch template version. Instances in the same security group can access each other.</p>
+         * <blockquote>
+         * <p> You cannot specify <code>SecurityGroupId</code> and <code>SecurityGroupIds.N</code> in the same request.</p>
+         * </blockquote>
          * 
-         * > The `SecurityGroupId` parameter and the `SecurityGroupIds.N` parameter are mutually exclusive.
+         * <strong>example:</strong>
+         * <p>sg-bp15ed6xe1yxeycg****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1187,10 +1276,13 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of security group N to which to assign the instance. The valid values of N depend on the maximum number of security groups to which the instance can belong. For more information, see [Quantity limits](~~25412~~).
-         * <p>
+         * <p>The ID of security group N to which to assign the instance. The valid values of N depend on the maximum number of security groups to which the instance can belong. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Quantity limits</a>.</p>
+         * <blockquote>
+         * <p>The <code>SecurityGroupId</code> parameter and the <code>SecurityGroupIds.N</code> parameter are mutually exclusive.</p>
+         * </blockquote>
          * 
-         * > The `SecurityGroupId` parameter and the `SecurityGroupIds.N` parameter are mutually exclusive.
+         * <strong>example:</strong>
+         * <p>sg-bp15ed6xe1yxeycg7****</p>
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -1199,15 +1291,18 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:
-         * <p>
+         * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * </ul>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+         * </blockquote>
          * 
-         * *   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
-         * *   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
-         * 
-         * Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
-         * 
-         * >  This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -1216,7 +1311,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the preemptible instance. A maximum of three decimal places are allowed.
+         * <p>The maximum hourly price of the preemptible instance. A maximum of three decimal places are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.97</p>
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -1225,12 +1323,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The preemption policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Default value: NoSpot. Valid values:
-         * <p>
+         * <p>The preemption policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Default value: NoSpot. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+         * </ul>
          * 
-         * *   NoSpot: The instance is created as a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.
-         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -1239,7 +1340,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The tags to add to the instance, disks, and primary ENI.
+         * <p>The tags to add to the ECS instance, disks, and primary elastic network interface (ENI) created based on the launch template version.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1248,7 +1349,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.
+         * <p>The user data of the instance. The user data must be encoded in Base64. The maximum size of raw data is 32 KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZWNobyBoZWxsbyBl****</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -1257,7 +1361,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which to connect the instance. This parameter is required if you specify the VpcId parameter.
+         * <p>The ID of the vSwitch to which to connect the instance. This parameter is required if you specify the VpcId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1s5fnvk4gn2tws0****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1266,7 +1373,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The description of the launch template version. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the launch template version. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testVersionDescription</p>
          */
         public Builder versionDescription(String versionDescription) {
             this.putQueryParameter("VersionDescription", versionDescription);
@@ -1275,7 +1385,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC) in which to create the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp12433upq1y5scen****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1284,7 +1397,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the instance belongs.
+         * <p>The ID of the zone to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1299,6 +1415,12 @@ public class CreateLaunchTemplateVersionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLaunchTemplateVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLaunchTemplateVersionRequest</p>
+     */
     public static class SystemDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
@@ -1446,7 +1568,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             private Integer size; 
 
             /**
-             * The ID of the automatic snapshot policy to apply to the system disk.
+             * <p>The ID of the automatic snapshot policy to apply to the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-bp1dgzpaxwc4load****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -1454,11 +1579,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the performance burst feature. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the performance burst feature. Valid values:</p>
+             * <ul>
+             * <li>true: encrypts the disk.</li>
+             * <li>false: does not enable the performance burst feature.</li>
+             * </ul>
              * 
-             * *   true: encrypts the disk.
-             * *   false: does not enable the performance burst feature.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1466,17 +1594,19 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The category of the system disk. Valid values:
-             * <p>
+             * <p>The category of the system disk. Valid values:</p>
+             * <ul>
+             * <li>cloud: basic disk.</li>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_auto: Enterprise SSD (ESSD) AutoPL disk.</li>
+             * <li>cloud_essd: ESSD. You can use <code>SystemDisk.PerformanceLevel</code> to set the performance level of the ESSD to use as the system disk.</li>
+             * <li>cloud_essd_entry: ESSD Entry disk.</li>
+             * </ul>
+             * <p>For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.</p>
              * 
-             * *   cloud: basic disk.
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
-             * *   cloud_auto: Enterprise SSD (ESSD) AutoPL disk.
-             * *   cloud_essd: ESSD. You can use `SystemDisk.PerformanceLevel` to set the performance level of the ESSD to use as the system disk.
-             * *   cloud_essd_entry: ESSD Entry disk.
-             * 
-             * For non-I/O optimized instances of retired instance types, the default value is cloud. For other types of instances, the default value is cloud_efficiency.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1484,13 +1614,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * Specifies whether to release the system disk when the instance is released. Valid values:
-             * <p>
+             * <p>Specifies whether to release the system disk when the instance is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -1498,7 +1630,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The description of the system disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+             * <p>The description of the system disk. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testSystemDiskDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1506,7 +1641,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * <p>The name of the system disk. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssdSystem</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -1514,15 +1652,18 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt the system disk. Valid values:
-             * <p>
+             * <p>Specifies whether to encrypt the system disk. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false</p>
+             * <blockquote>
+             * <p>You cannot encrypt system disks when you create instances in Hong Kong Zone D or Singapore Zone A.</p>
+             * </blockquote>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: false
-             * 
-             * > You cannot encrypt system disks when you create instances in Hong Kong Zone D or Singapore Zone A.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -1530,7 +1671,12 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * >  This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>30000</p>
              */
             public Builder iops(Integer iops) {
                 this.iops = iops;
@@ -1538,15 +1684,17 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to be used as the system disk. Default value: PL0. Valid values:
-             * <p>
+             * <p>The performance level of the ESSD to be used as the system disk. Default value: PL0. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1554,12 +1702,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
-             * <p>
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
+             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+             * <blockquote>
+             * <p>This parameter is available only if you set the Category parameter to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+             * </blockquote>
              * 
-             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
-             * 
-             * > This parameter is available only if you set the Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -1567,13 +1717,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The size of the system disk. Unit: GiB. Valid values:
-             * <p>
+             * <p>The size of the system disk. Unit: GiB. Valid values:</p>
+             * <ul>
+             * <li>Valid values if you set SystemDisk.Category to cloud: 20 to 500.</li>
+             * <li>Valid values if you set SystemDisk.Category to other disk categories: 20 to 2048.</li>
+             * </ul>
+             * <p>The value of this parameter must be at least 20 and greater than or equal to the size of the image.</p>
              * 
-             * *   Valid values if you set SystemDisk.Category to cloud: 20 to 500.
-             * *   Valid values if you set SystemDisk.Category to other disk categories: 20 to 2048.
-             * 
-             * The value of this parameter must be at least 20 and greater than or equal to the size of the image.
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1587,6 +1739,12 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLaunchTemplateVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLaunchTemplateVersionRequest</p>
+     */
     public static class DataDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
@@ -1746,7 +1904,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             private String snapshotId; 
 
             /**
-             * The ID of the automatic snapshot policy to apply to data disk N.
+             * <p>The ID of the automatic snapshot policy to apply to data disk N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-bp67acfmxazb4p****</p>
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -1754,11 +1915,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the performance burst feature for data disk N. Valid values:
-             * <p>
+             * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1766,17 +1930,19 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The category of data disk N. Valid values:
-             * <p>
+             * <p>The category of data disk N. Valid values:</p>
+             * <ul>
+             * <li>cloud: basic disk.</li>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_auto: ESSD AutoPL disk.</li>
+             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud_essd_entry: ESSD Entry disk.</li>
+             * </ul>
+             * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
              * 
-             * *   cloud: basic disk.
-             * *   cloud_efficiency: ultra disk.
-             * *   cloud_ssd: standard SSD.
-             * *   cloud_auto: ESSD AutoPL disk.
-             * *   cloud_essd: ESSD.
-             * *   cloud_essd_entry: ESSD Entry disk.
-             * 
-             * For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1784,13 +1950,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * Specifies whether to release data disk N when the instance is released. Valid values:
-             * <p>
+             * <p>Specifies whether to release data disk N when the instance is released. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -1798,7 +1966,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The description of data disk N. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+             * <p>The description of data disk N. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDataDiskDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1806,13 +1977,17 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The mount point of data disk N. The mount points are named based on the number of data disks:
-             * <p>
+             * <p>The mount point of data disk N. The mount points are named based on the number of data disks:</p>
+             * <ul>
+             * <li>1st to 25th data disks: /dev/xvd<code>[b-z]</code>.</li>
+             * <li>From the 26th data disk on: /dev/xvd<code>[aa-zz]</code>. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> to change the category and size of data disk N created based on the image.</p>
+             * </blockquote>
              * 
-             * *   1st to 25th data disks: /dev/xvd`[b-z]`.
-             * *   From the 26th data disk on: /dev/xvd`[aa-zz]`. For example, the 26th data disk is named /dev/xvdaa, the 27th data disk is named /dev/xvdab, and so on.
-             * 
-             * >  This parameter is applicable to scenarios in which a full image is used to create instances. A full image is an image that contains an operating system, application software, and business data. For these scenarios, you can set the parameter to the mount point of data disk N contained in the full image and modify `DataDisk.N.Size` and `DataDisk.N.Category` to change the category and size of data disk N created based on the image.
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -1820,7 +1995,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
+             * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDataDiskName</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -1828,7 +2006,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt data disk N.
+             * <p>Specifies whether to encrypt data disk N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -1836,15 +2017,17 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to use as data disk N. The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:
-             * <p>
+             * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
+             * <ul>
+             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * </ul>
+             * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
-             * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
-             * *   PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.
-             * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
-             * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
-             * 
-             * For information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1852,12 +2035,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
-             * <p>
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+             * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+             * <blockquote>
+             * <p> This parameter is available only if you set DiskCategory to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+             * </blockquote>
              * 
-             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
-             * 
-             * >  This parameter is available only if you set DiskCategory to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+             * <strong>example:</strong>
+             * <p>50000</p>
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -1865,27 +2050,31 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:
-             * <p>
+             * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+             * <ul>
+             * <li><p>Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.</p>
+             * </li>
+             * <li><p>Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.</p>
+             * </li>
+             * <li><p>Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.</p>
+             * </li>
+             * <li><p>Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the <code>DataDisk.N.PerformanceLevel</code> value.</p>
+             * <ul>
+             * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL0: 1 to 32768.</li>
+             * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL1: 20 to 32768.</li>
+             * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL2: 461 to 32768.</li>
+             * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.</li>
+             * </ul>
+             * </li>
+             * <li><p>Valid values if you set DataDisk.N.Category to cloud_auto: 1 to 32768.</p>
+             * </li>
+             * <li><p>Valid values if you set DataDisk.N.Category to cloud_essd_entry: 10 to 32768.</p>
+             * </li>
+             * </ul>
+             * <p>The value of this parameter must be greater than or equal to the size of the snapshot specified by <code>SnapshotId</code>.</p>
              * 
-             * *   Valid values if you set DataDisk.N.Category to cloud: 5 to 2000.
-             * 
-             * *   Valid values if you set DataDisk.N.Category to cloud_efficiency: 20 to 32768.
-             * 
-             * *   Valid values if you set DataDisk.N.Category to cloud_ssd: 20 to 32768.
-             * 
-             * *   Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.
-             * 
-             *     *   Valid values if you set DataDisk.N.PerformanceLevel to PL0: 1 to 32768.
-             *     *   Valid values if you set DataDisk.N.PerformanceLevel to PL1: 20 to 32768.
-             *     *   Valid values if you set DataDisk.N.PerformanceLevel to PL2: 461 to 32768.
-             *     *   Valid values if you set DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.
-             * 
-             * *   Valid values if you set DataDisk.N.Category to cloud_auto: 1 to 32768.
-             * 
-             * *   Valid values if you set DataDisk.N.Category to cloud_essd_entry: 10 to 32768.
-             * 
-             * The value of this parameter must be greater than or equal to the size of the snapshot specified by `SnapshotId`.
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1893,10 +2082,11 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. When `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot.
-             * <p>
+             * <p>The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16. When <code>DataDisk.N.SnapshotId</code> is specified, <code>DataDisk.N.Size</code> is ignored. The data disk is created with the size of the specified snapshot.</p>
+             * <p>Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.</p>
              * 
-             * Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+             * <strong>example:</strong>
+             * <p>s-bp17441ohwka0yuh****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -1910,6 +2100,12 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLaunchTemplateVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLaunchTemplateVersionRequest</p>
+     */
     public static class NetworkInterface extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -2021,7 +2217,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             private String vSwitchId; 
 
             /**
-             * The description of the secondary ENI. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`. The value of N in `NetworkInterface.N` cannot be greater than 1.
+             * <p>The description of the secondary ENI. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testNetworkInterfaceDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2029,15 +2228,16 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The type of ENI N. Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * <p>
+             * <p>The type of ENI N. Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Primary</li>
+             * <li>Secondary</li>
+             * </ul>
+             * <p>Default value: Secondary.</p>
              * 
-             * Valid values:
-             * 
-             * *   Primary
-             * *   Secondary
-             * 
-             * Default value: Secondary.
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2045,7 +2245,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The name of the secondary ENI. The value of N in `NetworkInterface.N` cannot be greater than 1.
+             * <p>The name of the secondary ENI. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testNetworkInterfaceName</p>
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
@@ -2053,11 +2256,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The communication mode of the primary ENI. Valid values:
-             * <p>
+             * <p>The communication mode of the primary ENI. Valid values:</p>
+             * <ul>
+             * <li>Standard: uses the TCP communication mode.</li>
+             * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+             * </ul>
              * 
-             * *   Standard: uses the TCP communication mode.
-             * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -2065,7 +2271,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The primary private IP address of the secondary ENI. The value of N in `NetworkInterface.N` cannot be greater than 1.
+             * <p>The primary private IP address of the secondary ENI. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>192.168.**.**</code></p>
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -2073,10 +2282,13 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The ID of the security group to which to assign the secondary ENI. The security groups of the secondary ENI and of the instance must belong to the same VPC. The value of N in `NetworkInterface.N` cannot be greater than 1.
-             * <p>
+             * <p>The ID of the security group to which to assign the secondary ENI. The security groups of the secondary ENI and of the instance must belong to the same VPC. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+             * <blockquote>
+             * <p> You cannot specify both <code>NetworkInterface.N.SecurityGroupId</code> and <code>NetworkInterface.N.SecurityGroupIds.N</code>.</p>
+             * </blockquote>
              * 
-             * >  You cannot specify both `NetworkInterface.N.SecurityGroupId` and `NetworkInterface.N.SecurityGroupIds.N`.
+             * <strong>example:</strong>
+             * <p>sg-bp15ed6xe1yxeycg****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2084,10 +2296,13 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in `SecurityGroupIds.N` vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~). The value of N in `NetworkInterface.N` cannot be greater than 1.
-             * <p>
+             * <p>The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in <code>SecurityGroupIds.N</code> vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+             * <blockquote>
+             * <p> You cannot specify both <code>NetworkInterface.N.SecurityGroupId</code> and <code>NetworkInterface.N.SecurityGroupIds.N</code>.</p>
+             * </blockquote>
              * 
-             * >  You cannot specify both `NetworkInterface.N.SecurityGroupId` and `NetworkInterface.N.SecurityGroupIds.N`.
+             * <strong>example:</strong>
+             * <p>sg-bp67acfmxazb4p****</p>
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -2095,7 +2310,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch to which to connect the secondary ENI. The instance and the secondary ENI must reside in the same zone of the same VPC, but they can be connected to different vSwitches. The value of N in `NetworkInterface.N` cannot be greater than 1.
+             * <p>The ID of the vSwitch to which to connect the secondary ENI. The instance and the secondary ENI must reside in the same zone of the same VPC, but they can be connected to different vSwitches. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1s5fnvk4gn2tws0****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2109,6 +2327,12 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateLaunchTemplateVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLaunchTemplateVersionRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -2148,7 +2372,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <p>The key of tag N to add to the ECS instance, disks, and primary ENI created based on the launch template version. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2156,7 +2383,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the instance, disks, and primary ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+             * <p>The value of tag N to add to the ECS instance, disks, and primary ENI created based on the launch template version. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

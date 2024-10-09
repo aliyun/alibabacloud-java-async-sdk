@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDeploymentSetAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDeploymentSetAttributeRequest</p>
@@ -176,7 +177,11 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the deployment set.
+         * <p>The ID of the deployment set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1frxuzdg87zh4p****</p>
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);
@@ -185,7 +190,10 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the deployment set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <p>The new name of the deployment set. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DeploymentSetTestName</p>
          */
         public Builder deploymentSetName(String deploymentSetName) {
             this.putQueryParameter("DeploymentSetName", deploymentSetName);
@@ -194,7 +202,10 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the deployment set. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
+         * <p>The new description of the deployment set. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -221,7 +232,11 @@ public class ModifyDeploymentSetAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

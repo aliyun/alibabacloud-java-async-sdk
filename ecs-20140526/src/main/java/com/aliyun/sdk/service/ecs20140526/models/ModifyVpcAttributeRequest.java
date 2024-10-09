@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpcAttributeRequest</p>
@@ -252,7 +253,7 @@ public class ModifyVpcAttributeRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDemandsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDemandsResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The demands in the region.
+         * <p>The demands in the region.</p>
          */
         public Builder demands(Demands demands) {
             this.demands = demands;
@@ -105,7 +106,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -129,7 +139,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of queried demands.
+         * <p>The number of queried demands.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDemandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDemandsResponseBody</p>
+     */
     public static class SupplyInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
@@ -225,7 +247,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             private String supplyStatus; 
 
             /**
-             * The number of delivered instances.
+             * <p>The number of delivered instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -233,7 +258,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * 需求单对应的私有池ID。
+             * <p>需求单对应的私有池ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-bp1fv8sbhelbzjwx****</p>
              */
             public Builder privatePoolId(String privatePoolId) {
                 this.privatePoolId = privatePoolId;
@@ -241,7 +269,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The end of the time range during which the filed resources are delivered and available. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-03T15:00:00Z</p>
              */
             public Builder supplyEndTime(String supplyEndTime) {
                 this.supplyEndTime = supplyEndTime;
@@ -249,7 +280,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range during which the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The beginning of the time range during which the filed resources are delivered and available. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-01T14:00:00Z</p>
              */
             public Builder supplyStartTime(String supplyStartTime) {
                 this.supplyStartTime = supplyStartTime;
@@ -257,11 +291,14 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The delivery status of the filed resource. Valid values:
-             * <p>
+             * <p>The delivery status of the filed resource. Valid values:</p>
+             * <ul>
+             * <li>Delivered: The filed resource is delivered.</li>
+             * <li>Delivering: The filed resource is being delivered.</li>
+             * </ul>
              * 
-             * *   Delivered: The filed resource is delivered.
-             * *   Delivering: The filed resource is being delivered.
+             * <strong>example:</strong>
+             * <p>Delivering</p>
              */
             public Builder supplyStatus(String supplyStatus) {
                 this.supplyStatus = supplyStatus;
@@ -275,6 +312,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDemandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDemandsResponseBody</p>
+     */
     public static class SupplyInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupplyInfo")
         private java.util.List < SupplyInfo> supplyInfo;
@@ -316,6 +359,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDemandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDemandsResponseBody</p>
+     */
     public static class Demand extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableAmount")
         private Integer availableAmount;
@@ -559,7 +608,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The number of available instances.
+             * <p>The number of available instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder availableAmount(Integer availableAmount) {
                 this.availableAmount = availableAmount;
@@ -567,7 +619,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The feedback on the rejected demands.
+             * <p>The feedback on the rejected demands.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-for-comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -575,7 +630,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances to be delivered.
+             * <p>The number of instances to be delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder deliveringAmount(Integer deliveringAmount) {
                 this.deliveringAmount = deliveringAmount;
@@ -583,7 +641,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the demand.
+             * <p>The description of the demand.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-DemandDescription</p>
              */
             public Builder demandDescription(String demandDescription) {
                 this.demandDescription = demandDescription;
@@ -591,7 +652,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the demand.
+             * <p>The ID of the demand.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ed-bp11n21kq00sl71p****</p>
              */
             public Builder demandId(String demandId) {
                 this.demandId = demandId;
@@ -599,7 +663,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the demand.
+             * <p>The name of the demand.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-node-demand</p>
              */
             public Builder demandName(String demandName) {
                 this.demandName = demandName;
@@ -607,15 +674,18 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the demand or filed resources. Valid values:
-             * <p>
+             * <p>The status of the demand or filed resources. Valid values:</p>
+             * <ul>
+             * <li>Creating: The demand is being created.</li>
+             * <li>Active: The filed resources are being supplied.</li>
+             * <li>Expired: The demand has expired.</li>
+             * <li>Finished: The filed resources are consumed.</li>
+             * <li>Refused: The demand is rejected. To view the reason for rejection, see the <code>Comment</code> parameter.</li>
+             * <li>Cancelled: The demand is canceled. After the demand is canceled, the delivery status of the resources becomes invalid.</li>
+             * </ul>
              * 
-             * *   Creating: The demand is being created.
-             * *   Active: The filed resources are being supplied.
-             * *   Expired: The demand has expired.
-             * *   Finished: The filed resources are consumed.
-             * *   Refused: The demand is rejected. To view the reason for rejection, see the `Comment` parameter.
-             * *   Cancelled: The demand is canceled. After the demand is canceled, the delivery status of the resources becomes invalid.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder demandStatus(String demandStatus) {
                 this.demandStatus = demandStatus;
@@ -623,7 +693,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the demand was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the demand was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-26T12:00:00Z</p>
              */
             public Builder demandTime(String demandTime) {
                 this.demandTime = demandTime;
@@ -631,7 +704,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The expected end time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The expected end time for the purchase of the filed resources. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-03-03T15:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -639,11 +715,14 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the filed resources. Valid values:
-             * <p>
+             * <p>The billing method of the filed resources. Valid values:</p>
+             * <ul>
+             * <li>Prepaid: subscription.</li>
+             * <li>Postpaid: pay-as-you-go.</li>
+             * </ul>
              * 
-             * *   Prepaid: subscription.
-             * *   Postpaid: pay-as-you-go.
+             * <strong>example:</strong>
+             * <p>Prepaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -651,7 +730,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the filed instance.
+             * <p>The instance type of the filed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g6.xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -659,7 +741,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family of the filed instance.
+             * <p>The instance family of the filed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g6</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -667,7 +752,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The usage duration of the filed resources.
+             * <p>The usage duration of the filed resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -675,13 +763,16 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the usage duration of the filed resources. Valid values:
-             * <p>
+             * <p>The unit of the usage duration of the filed resources. Valid values:</p>
+             * <ul>
+             * <li>Hour</li>
+             * <li>Day</li>
+             * <li></li>
+             * <li>Month</li>
+             * </ul>
              * 
-             * *   Hour
-             * *   Day
-             * *
-             * *   Month
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -689,7 +780,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The expected start time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The expected start time for the purchase of the filed resources. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-02-27T12:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -697,7 +791,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The delivery status of the filed resources.
+             * <p>The delivery status of the filed resources.</p>
              */
             public Builder supplyInfos(SupplyInfos supplyInfos) {
                 this.supplyInfos = supplyInfos;
@@ -705,7 +799,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of filed instances.
+             * <p>The number of filed instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder totalAmount(Integer totalAmount) {
                 this.totalAmount = totalAmount;
@@ -713,7 +810,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of consumed instances.
+             * <p>The number of consumed instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -721,7 +821,10 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the filed resource resides.
+             * <p>The ID of the zone where the filed resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -735,6 +838,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDemandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDemandsResponseBody</p>
+     */
     public static class Demands extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Demand")
         private java.util.List < Demand> demand;

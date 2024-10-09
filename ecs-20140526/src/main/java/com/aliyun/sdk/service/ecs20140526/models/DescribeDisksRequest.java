@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDisksRequest} extends {@link RequestModel}
  *
  * <p>DescribeDisksRequest</p>
@@ -550,7 +551,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The attribute value. Set the value to IOPS, which indicates the maximum IOPS of the disk.
+         * <p>The attribute value. Set the value to IOPS, which indicates the maximum IOPS of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IOPS</p>
          */
         public Builder additionalAttributes(java.util.List < String > additionalAttributes) {
             this.putQueryParameter("AdditionalAttributes", additionalAttributes);
@@ -559,7 +563,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy that is applied to the cloud disk.
+         * <p>The ID of the automatic snapshot policy that is applied to the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-m5e2w2jutw8bv31****</p>
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("AutoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -568,24 +575,26 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The category of the disk. Valid values:
-         * <p>
+         * <p>The category of the disk. Valid values:</p>
+         * <ul>
+         * <li>all: all disk categories</li>
+         * <li>cloud: basic disk</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_essd: Enterprise SSD (ESSD)</li>
+         * <li>cloud_auto: ESSD AutoPL disk</li>
+         * <li>local_ssd_pro: I/O-intensive local disk</li>
+         * <li>local_hdd_pro: throughput-intensive local disk</li>
+         * <li>cloud_essd_entry: ESSD Entry disk</li>
+         * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</li>
+         * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</li>
+         * <li>ephemeral: retired local disk</li>
+         * <li>ephemeral_ssd: retired local SSD</li>
+         * </ul>
+         * <p>Default value: all.</p>
          * 
-         * *   all: all disk categories
-         * *   cloud: basic disk
-         * *   cloud_efficiency: ultra disk
-         * *   cloud_ssd: standard SSD
-         * *   cloud_essd: Enterprise SSD (ESSD)
-         * *   cloud_auto: ESSD AutoPL disk
-         * *   local_ssd_pro: I/O-intensive local disk
-         * *   local_hdd_pro: throughput-intensive local disk
-         * *   cloud_essd_entry: ESSD Entry disk
-         * *   elastic_ephemeral_disk_standard: standard elastic ephemeral disk
-         * *   elastic_ephemeral_disk_premium: premium elastic ephemeral disk
-         * *   ephemeral: retired local disk
-         * *   ephemeral_ssd: retired local SSD
-         * 
-         * Default value: all.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -594,13 +603,15 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the automatic snapshots of the cloud disk after the disk is released.
-         * <p>
+         * <p>Specifies whether to delete the automatic snapshots of the cloud disk after the disk is released.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteAutoSnapshot(Boolean deleteAutoSnapshot) {
             this.putQueryParameter("DeleteAutoSnapshot", deleteAutoSnapshot);
@@ -609,13 +620,15 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether the disk is released when the associated instance is released. Valid values:
-         * <p>
+         * <p>Specifies whether the disk is released when the associated instance is released. Valid values:</p>
+         * <ul>
+         * <li>true: The disk is released when the associated instance is released.</li>
+         * <li>false: The disk is retained as a pay-as-you-go data disk when the associated instance is released.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: The disk is released when the associated instance is released.
-         * *   false: The disk is retained as a pay-as-you-go data disk when the associated instance is released.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -624,11 +637,14 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The billing method of the disk. Valid values:
-         * <p>
+         * <p>The billing method of the disk. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * </ul>
          * 
-         * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder diskChargeType(String diskChargeType) {
             this.putQueryParameter("DiskChargeType", diskChargeType);
@@ -637,7 +653,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The IDs of cloud disks, local disks, or elastic ephemeral disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).
+         * <p>The IDs of cloud disks, local disks, or elastic ephemeral disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d-bp67acfmxazb4p****&quot;, &quot;d-bp67acfmxazb4g****&quot;, … &quot;d-bp67acfmxazb4d****&quot;]</p>
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -646,7 +665,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The name of the disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <p>The name of the disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDiskName</p>
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -655,16 +677,19 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The type of the disk. Valid values:
-         * <p>
+         * <p>The type of the disk. Valid values:</p>
+         * <ul>
+         * <li>all: system disk and data disk</li>
+         * <li>system: system disk</li>
+         * <li>data: data disk</li>
+         * </ul>
+         * <p>Default value: all.</p>
+         * <blockquote>
+         * <p> Elastic ephemeral disks cannot be used as system disks.</p>
+         * </blockquote>
          * 
-         * *   all: system disk and data disk
-         * *   system: system disk
-         * *   data: data disk
-         * 
-         * Default value: all.
-         * 
-         * >  Elastic ephemeral disks cannot be used as system disks.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -673,13 +698,15 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The systems checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * <p>Default value: false</p>
          * 
-         * *   true: performs only a dry run. The systems checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-         * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -688,13 +715,17 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the automatic snapshot policy feature for the cloud disk.
-         * <p>
+         * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p>By default, the automatic snapshot policy feature is enabled for cloud disks that are already created. Additionally, only the automatic snapshot policy needs to be applied to a cloud disk before you can use the automatic snapshot policy.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
-         * 
-         * > By default, the automatic snapshot policy feature is enabled for cloud disks that are already created. Additionally, only the automatic snapshot policy needs to be applied to a cloud disk before you can use the automatic snapshot policy.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
             this.putQueryParameter("EnableAutoSnapshot", enableAutoSnapshot);
@@ -703,13 +734,15 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether an automatic snapshot policy is applied to the cloud disk.
-         * <p>
+         * <p>Specifies whether an automatic snapshot policy is applied to the cloud disk.</p>
+         * <ul>
+         * <li>true: An automatic snapshot policy is applied to the cloud disk.</li>
+         * <li>false: No automatic snapshot policy is applied to the cloud disk.</li>
+         * </ul>
+         * <p>Default value: false</p>
          * 
-         * *   true: An automatic snapshot policy is applied to the cloud disk.
-         * *   false: No automatic snapshot policy is applied to the cloud disk.
-         * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAutomatedSnapshotPolicy(Boolean enableAutomatedSnapshotPolicy) {
             this.putQueryParameter("EnableAutomatedSnapshotPolicy", enableAutomatedSnapshotPolicy);
@@ -718,7 +751,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether the disk is a Shared Block Storage device.
+         * <p>Specifies whether the disk is a Shared Block Storage device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableShared(Boolean enableShared) {
             this.putQueryParameter("EnableShared", enableShared);
@@ -727,13 +763,15 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether to query only encrypted cloud disks.
-         * <p>
+         * <p>Specifies whether to query only encrypted cloud disks.</p>
+         * <ul>
+         * <li>true: queries only encrypted cloud disks.</li>
+         * <li>false: does not query encrypted cloud disks.</li>
+         * </ul>
+         * <p>Default value: false</p>
          * 
-         * *   true: queries only encrypted cloud disks.
-         * *   false: does not query encrypted cloud disks.
-         * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -742,7 +780,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the Elastic Compute Service (ECS) instance to which the disk is attached.
+         * <p>The ID of the Elastic Compute Service (ECS) instance to which the disk is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4q****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -751,7 +792,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the Key Management Service (KMS) key that is used by the cloud disk.
+         * <p>The ID of the Key Management Service (KMS) key that is used by the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -760,13 +804,16 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The reason why the disk is locked. Valid values:
-         * <p>
+         * <p>The reason why the disk is locked. Valid values:</p>
+         * <ul>
+         * <li>financial: The disk is locked due to overdue payments.</li>
+         * <li>security: The disk is locked due to security reasons.</li>
+         * <li>recycling: The preemptible instance is locked and pending release.</li>
+         * <li>dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.</li>
+         * </ul>
          * 
-         * *   financial: The disk is locked due to overdue payments.
-         * *   security: The disk is locked due to security reasons.
-         * *   recycling: The preemptible instance is locked and pending release.
-         * *   dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.
+         * <strong>example:</strong>
+         * <p>recycling</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -775,13 +822,15 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Valid values: 10 to 500.
-         * <p>
+         * <p>The maximum number of entries per page. Valid values: 10 to 500.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If you do not specify this parameter or you set this parameter to a value less than 10, the default value is 10.</li>
+         * <li>If you set this parameter to a value greater than 500, the default value is 500.</li>
+         * </ul>
          * 
-         * Default value:
-         * 
-         * *   If you do not specify this parameter or you set this parameter to a value less than 10, the default value is 10.
-         * *   If you set this parameter to a value greater than 500, the default value is 500.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -790,14 +839,16 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether the multi-attach feature is enabled for the disk. Valid values:
-         * <p>
+         * <p>Specifies whether the multi-attach feature is enabled for the disk. Valid values:</p>
+         * <ul>
+         * <li>Disabled: The multi-attach feature is not enabled for the disk.</li>
+         * <li>Enabled: The multi-attach feature is enabled for the disk.</li>
+         * <li>LegacyShared: Shared Block Storage devices are queried.</li>
+         * </ul>
+         * <p>The multi-attach feature is available to select users. To use this feature, <a href="https://workorder-intl.console.aliyun.com/console.htm#/ticket/list">submit a ticket</a>.</p>
          * 
-         * *   Disabled: The multi-attach feature is not enabled for the disk.
-         * *   Enabled: The multi-attach feature is enabled for the disk.
-         * *   LegacyShared: Shared Block Storage devices are queried.
-         * 
-         * The multi-attach feature is available to select users. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/console.htm#/ticket/list).
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder multiAttach(String multiAttach) {
             this.putQueryParameter("MultiAttach", multiAttach);
@@ -806,10 +857,11 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value that was returned in the last call to this operation.
-         * <p>
+         * <p>The query token. Set the value to the <code>NextToken</code> value that was returned in the last call to this operation.</p>
+         * <p>For more information about how to check the responses returned by this operation, see the preceding &quot;Description&quot; section.</p>
          * 
-         * For more information about how to check the responses returned by this operation, see the preceding "Description" section.
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -836,12 +888,12 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -850,12 +902,12 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page.
-         * <p>
+         * <p>The number of entries to return per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -864,17 +916,20 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether the disk is removable. Valid values:
-         * <p>
+         * <p>Specifies whether the disk is removable. Valid values:</p>
+         * <ul>
+         * <li>true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.</li>
+         * <li>false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.</li>
+         * </ul>
+         * <p>The <code>Portable</code> attribute of the following types of disks is <code>false</code>, and these types of disks share the same lifecycle with their associated instances:</p>
+         * <ul>
+         * <li>Local disks</li>
+         * <li>Local SSDs</li>
+         * <li>Subscription data disks</li>
+         * </ul>
          * 
-         * *   true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.
-         * *   false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.
-         * 
-         * The `Portable` attribute of the following types of disks is `false`, and these types of disks share the same lifecycle with their associated instances:
-         * 
-         * *   Local disks
-         * *   Local SSDs
-         * *   Subscription data disks
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder portable(Boolean portable) {
             this.putQueryParameter("Portable", portable);
@@ -883,7 +938,11 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The region ID of the disk. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -892,10 +951,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the disk belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The ID of the resource group to which the disk belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p> Resources in the default resource group are displayed in the response regardless of the value specified for this parameter.</p>
+         * </blockquote>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of the value specified for this parameter.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -922,7 +984,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot from which you create the cloud disk.
+         * <p>The ID of the snapshot from which you create the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp67acfmxazb4p****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -931,18 +996,20 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The status of the disk. For more information, see [Disk states](~~25689~~). Valid values:
-         * <p>
+         * <p>The status of the disk. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk states</a>. Valid values:</p>
+         * <ul>
+         * <li>In_use</li>
+         * <li>Available</li>
+         * <li>Attaching</li>
+         * <li>Detaching</li>
+         * <li>Creating</li>
+         * <li>ReIniting</li>
+         * <li>All</li>
+         * </ul>
+         * <p>Default value: All.</p>
          * 
-         * *   In_use
-         * *   Available
-         * *   Attaching
-         * *   Detaching
-         * *   Creating
-         * *   ReIniting
-         * *   All
-         * 
-         * Default value: All.
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -951,7 +1018,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The tags of the disk.
+         * <p>The tags of the disk.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -960,7 +1027,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -975,6 +1045,12 @@ public class DescribeDisksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDisksRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1014,7 +1090,10 @@ public class DescribeDisksRequest extends Request {
             private String value; 
 
             /**
-             * The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the specified time.
+             * <p>The key of filter 1 used to query resources. Set the value to <code>CreationStartTime</code>. You can specify a time by setting both <code>Filter.1.Key</code> and <code>Filter.1.Value</code> to query resources that were created after the specified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreationStartTime</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1022,7 +1101,10 @@ public class DescribeDisksRequest extends Request {
             }
 
             /**
-             * The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+             * <p>The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify the <code>Filter.1.Key</code> parameter. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-05T22:40Z</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1036,6 +1118,12 @@ public class DescribeDisksRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1075,10 +1163,11 @@ public class DescribeDisksRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the disk. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N of the disk. Valid values of N: 1 to 20.</p>
+             * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1086,7 +1175,10 @@ public class DescribeDisksRequest extends Request {
             }
 
             /**
-             * The value of tag N of the disk. Valid values of N: 1 to 20.
+             * <p>The value of tag N of the disk. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

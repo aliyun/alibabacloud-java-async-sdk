@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPrepayInstanceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyPrepayInstanceSpecRequest</p>
@@ -312,20 +313,20 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</p>
+         * <ul>
+         * <li><p>true: enables automatic payment.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set <code>AutoPay</code> to <code>false</code> to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+         * </li>
+         * <li><p>false: disables automatic payment. An order is generated but no payment is made.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: true.</p>
+         * <p>When <code>OperatorType</code> is set to <code>downgrade</code>, <code>AutoPay</code> is ignored.</p>
          * 
-         * *   true: enables automatic payment.
-         * 
-         *     **
-         * 
-         *     **Note** Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.
-         * 
-         * *   false: disables automatic payment. An order is generated but no payment is made.
-         * 
-         * Default value: true.
-         * 
-         * When `OperatorType` is set to `downgrade`, `AutoPay` is ignored.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -334,7 +335,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. This value allows only ASCII characters and is up to 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)
+         * <p>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. This value allows only ASCII characters and is up to 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence of a request?</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -343,7 +347,9 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * >  This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          */
         public Builder disk(java.util.List < Disk> disk) {
             this.putQueryParameter("Disk", disk);
@@ -352,7 +358,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The end time of the temporary change. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The end time of the temporary change. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-01T12:05Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -361,7 +370,11 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -370,7 +383,11 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The new instance type. For information about available instance types, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation.
+         * <p>The new instance type. For information about available instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -379,22 +396,22 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether cross-cluster instance type upgrades are supported. Valid values:
-         * <p>
+         * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <p>When you set <code>MigrateAcrossZone</code> to <code>true</code> and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
+         * <p>Instance that resides in the classic network:</p>
+         * <ul>
+         * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd* such as vda and vdb.</li>
+         * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, the private IP address of the instance changes.</li>
+         * </ul>
+         * <p>Instance that resides in a virtual private cloud (VPC): For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd* such as vda and vdb.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * When you set `MigrateAcrossZone` to `true` and you upgrade the instance type of an instance based on the returned information, take note of the following items:
-         * 
-         * Instance that resides in the classic network:
-         * 
-         * *   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
-         * *   For [instance families available for purchase](~~25378~~), the private IP address of the instance changes.
-         * 
-         * Instance that resides in a virtual private cloud (VPC): For retired instance types, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder migrateAcrossZone(Boolean migrateAcrossZone) {
             this.putQueryParameter("MigrateAcrossZone", migrateAcrossZone);
@@ -403,7 +420,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * >  This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -412,15 +434,20 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The type of the change to the instance. Valid values:
-         * <p>
+         * <p>The type of the change to the instance. Valid values:</p>
+         * <blockquote>
+         * <p> This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.</p>
+         * </blockquote>
+         * <ul>
+         * <li>upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.</li>
+         * <li>downgrade: downgrades the instance type. When the new instance type specified by the <code>InstanceType</code> parameter has lower specifications than the current instance type, set <code>OperatorType</code> to downgrade.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.</p>
+         * </blockquote>
          * 
-         * >  This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.
-         * 
-         * *   upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.
-         * *   downgrade: downgrades the instance type. When the new instance type specified by the `InstanceType` parameter has lower specifications than the current instance type, set `OperatorType` to downgrade.
-         * 
-         * >  You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.
+         * <strong>example:</strong>
+         * <p>upgrade</p>
          */
         public Builder operatorType(String operatorType) {
             this.putQueryParameter("OperatorType", operatorType);
@@ -447,7 +474,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The restart time of the instance. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>The restart time of the instance. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-01T12:05Z</p>
          */
         public Builder rebootTime(String rebootTime) {
             this.putQueryParameter("RebootTime", rebootTime);
@@ -456,15 +486,18 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to restart the instance immediately after the instance type is changed. Valid values:
-         * <p>
+         * <p>Specifies whether to restart the instance immediately after the instance type is changed. Valid values:</p>
+         * <ul>
+         * <li>true: restart the instance immediately after the instance type is changed.</li>
+         * <li>false: does not restart the instance immediately after the instance type is changed.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> If the instance is in the <strong>Stopping</strong> state, the instance status remains unchanged and no operations are performed after the instance type is change regardless of whether you set the <code>RebootWhenFinished</code> parameter to true.</p>
+         * </blockquote>
          * 
-         * *   true: restart the instance immediately after the instance type is changed.
-         * *   false: does not restart the instance immediately after the instance type is changed.
-         * 
-         * Default value: false.
-         * 
-         * >  If the instance is in the **Stopping** state, the instance status remains unchanged and no operations are performed after the instance type is change regardless of whether you set the `RebootWhenFinished` parameter to true.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder rebootWhenFinished(Boolean rebootWhenFinished) {
             this.putQueryParameter("RebootWhenFinished", rebootWhenFinished);
@@ -473,7 +506,11 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -506,6 +543,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyPrepayInstanceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPrepayInstanceSpecRequest</p>
+     */
     public static class SystemDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -533,13 +576,17 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private String category; 
 
             /**
-             * The new category of the system disk. Valid values:
-             * <p>
+             * <p>The new category of the system disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: utra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect on an instance only when you change from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an instance type in an <a href="https://help.aliyun.com/document_detail/25378.html">instance family available for purchase</a> and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.</p>
+             * </blockquote>
              * 
-             * *   cloud_efficiency: utra disk
-             * *   cloud_ssd: standard SSD
-             * 
-             * >  This parameter takes effect on an instance only when you change from a [retired instance type](~~55263~~) to an instance type in an [instance family available for purchase](~~25378~~) and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -553,6 +600,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyPrepayInstanceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyPrepayInstanceSpecRequest</p>
+     */
     public static class Disk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -604,7 +657,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             private String performanceLevel; 
 
             /**
-             * >  This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -612,7 +670,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             }
 
             /**
-             * >  This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -620,7 +683,12 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             }
 
             /**
-             * >  This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;

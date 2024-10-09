@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewElasticityAssurancesResponseBody} extends {@link TeaModel}
  *
  * <p>RenewElasticityAssurancesResponseBody</p>
@@ -61,7 +62,10 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the renewal order.
+         * <p>The ID of the renewal order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>182372800****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -69,7 +73,7 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the elasticity assurances.
+         * <p>The IDs of the elasticity assurances.</p>
          */
         public Builder privatePoolOptionsIdSet(PrivatePoolOptionsIdSet privatePoolOptionsIdSet) {
             this.privatePoolOptionsIdSet = privatePoolOptionsIdSet;
@@ -77,7 +81,10 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RenewElasticityAssurancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>RenewElasticityAssurancesResponseBody</p>
+     */
     public static class PrivatePoolOptionsIdSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivatePoolOptionsId")
         private java.util.List < String > privatePoolOptionsId;

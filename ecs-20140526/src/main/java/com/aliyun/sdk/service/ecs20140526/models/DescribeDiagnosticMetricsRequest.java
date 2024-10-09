@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticMetricsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosticMetricsRequest</p>
@@ -134,7 +135,10 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -143,7 +147,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The ID of diagnostic metric.
+         * <p>The ID of diagnostic metric.</p>
          */
         public Builder metricIds(java.util.List < String > metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
@@ -152,13 +156,15 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 100.
-         * <p>
+         * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If this parameter is left empty, the default value is 10.</li>
+         * <li>If this parameter is set to a value greater than 100, the default value is 100.</li>
+         * </ul>
          * 
-         * Default value:
-         * 
-         * *   If this parameter is left empty, the default value is 10.
-         * *   If this parameter is set to a value greater than 100, the default value is 100.
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -167,7 +173,11 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The IDs of diagnostic metrics.
+         * <p>The IDs of diagnostic metrics.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +186,10 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.
+         * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

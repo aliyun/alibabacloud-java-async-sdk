@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignIpv6AddressesResponseBody} extends {@link TeaModel}
  *
  * <p>AssignIpv6AddressesResponseBody</p>
@@ -73,7 +74,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IPv6 prefixes of the ENI.
+         * <p>The IPv6 prefixes of the ENI.</p>
          */
         public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
             this.ipv6PrefixSets = ipv6PrefixSets;
@@ -81,7 +82,7 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv6 addresses assigned to the ENI.
+         * <p>The IPv6 addresses assigned to the ENI.</p>
          */
         public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
             this.ipv6Sets = ipv6Sets;
@@ -89,7 +90,10 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The ENI ID.
+         * <p>The ENI ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp1iqejowblx6h8j****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
@@ -97,7 +101,10 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +117,12 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssignIpv6AddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignIpv6AddressesResponseBody</p>
+     */
     public static class Ipv6PrefixSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Prefix")
         private java.util.List < String > ipv6Prefix;
@@ -151,6 +164,12 @@ public class AssignIpv6AddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssignIpv6AddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignIpv6AddressesResponseBody</p>
+     */
     public static class Ipv6Sets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private java.util.List < String > ipv6Address;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeActivationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeActivationsResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The activation codes and their usage information.
+         * <p>The activation codes and their usage information.</p>
          */
         public Builder activationList(java.util.List < ActivationList> activationList) {
             this.activationList = activationList;
@@ -105,7 +106,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,7 +117,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +128,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F74625134</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeActivationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeActivationsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -189,7 +211,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the activation code.
+             * <p>The tag key of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -197,7 +222,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the activation code.
+             * <p>The tag value of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -211,6 +239,12 @@ public class DescribeActivationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeActivationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeActivationsResponseBody</p>
+     */
     public static class ActivationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivationId")
         private String activationId;
@@ -370,7 +404,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             private Long timeToLiveInHours; 
 
             /**
-             * The ID of the activation code.
+             * <p>The ID of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -378,7 +415,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the activation code was created.
+             * <p>The time when the activation code was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-20T06:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -386,7 +426,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that were deregistered.
+             * <p>The number of instances that were deregistered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deregisteredCount(Integer deregisteredCount) {
                 this.deregisteredCount = deregisteredCount;
@@ -394,7 +437,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the activation code.
+             * <p>The description of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -402,7 +448,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the activation code is disabled.
+             * <p>Indicates whether the activation code is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -410,7 +459,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of times that the activation code can be used to register managed instances.
+             * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -418,7 +470,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The default instance name prefix.
+             * <p>The default instance name prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-InstanceName</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -426,7 +481,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of hosts that are allowed to use the activation code.
+             * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
@@ -434,7 +492,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that were registered.
+             * <p>The number of instances that were registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder registeredCount(Integer registeredCount) {
                 this.registeredCount = registeredCount;
@@ -442,7 +503,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the activation code belongs.
+             * <p>The ID of the resource group to which the activation code belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-123******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -450,7 +514,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the activation code.
+             * <p>The tags of the activation code.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -458,7 +522,10 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the activation code. Unit: hours.
+             * <p>The validity period of the activation code. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder timeToLiveInHours(Long timeToLiveInHours) {
                 this.timeToLiveInHours = timeToLiveInHours;

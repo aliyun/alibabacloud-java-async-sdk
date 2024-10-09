@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedHostTypesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDedicatedHostTypesRequest</p>
@@ -161,7 +162,10 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         }
 
         /**
-         * The dedicated host type. For more information, see [Dedicated host types](~~68564~~).
+         * <p>The dedicated host type. For more information, see <a href="https://help.aliyun.com/document_detail/68564.html">Dedicated host types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddh.sn1ne</p>
          */
         public Builder dedicatedHostType(String dedicatedHostType) {
             this.putQueryParameter("DedicatedHostType", dedicatedHostType);
@@ -188,7 +192,11 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -215,7 +223,10 @@ public class DescribeDedicatedHostTypesRequest extends Request {
         }
 
         /**
-         * The ECS instance family supported by the dedicated host type.
+         * <p>The ECS instance family supported by the dedicated host type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.sn1ne</p>
          */
         public Builder supportedInstanceTypeFamily(String supportedInstanceTypeFamily) {
             this.putQueryParameter("SupportedInstanceTypeFamily", supportedInstanceTypeFamily);

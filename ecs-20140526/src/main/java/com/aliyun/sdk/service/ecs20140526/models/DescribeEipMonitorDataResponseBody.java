@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEipMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEipMonitorDataResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEipMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipMonitorDataResponseBody</p>
+     */
     public static class EipMonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipBandwidth")
         private Integer eipBandwidth;
@@ -211,6 +218,12 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEipMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipMonitorDataResponseBody</p>
+     */
     public static class EipMonitorDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipMonitorData")
         private java.util.List < EipMonitorData> eipMonitorData;

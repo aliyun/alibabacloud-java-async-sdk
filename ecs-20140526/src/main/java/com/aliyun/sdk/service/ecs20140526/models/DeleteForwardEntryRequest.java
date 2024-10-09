@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteForwardEntryRequest} extends {@link RequestModel}
  *
  * <p>DeleteForwardEntryRequest</p>
@@ -140,7 +141,7 @@ public class DeleteForwardEntryRequest extends Request {
         } 
 
         /**
-         * ForwardEntryId.
+         * <p>This parameter is required.</p>
          */
         public Builder forwardEntryId(String forwardEntryId) {
             this.putQueryParameter("ForwardEntryId", forwardEntryId);
@@ -149,7 +150,7 @@ public class DeleteForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardTableId.
+         * <p>This parameter is required.</p>
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -176,7 +177,7 @@ public class DeleteForwardEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

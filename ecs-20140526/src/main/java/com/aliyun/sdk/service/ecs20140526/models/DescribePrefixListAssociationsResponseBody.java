@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrefixListAssociationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePrefixListAssociationsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
          */
         public Builder prefixListAssociations(PrefixListAssociations prefixListAssociations) {
             this.prefixListAssociations = prefixListAssociations;
@@ -77,7 +81,10 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the resources that are associated with the prefix list.
+         * <p>Details about the resources that are associated with the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePrefixListAssociationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePrefixListAssociationsResponseBody</p>
+     */
     public static class PrefixListAssociation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
@@ -129,7 +142,10 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The type of the resource.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp11ujym6xsff6l0****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -151,6 +167,12 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePrefixListAssociationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePrefixListAssociationsResponseBody</p>
+     */
     public static class PrefixListAssociations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrefixListAssociation")
         private java.util.List < PrefixListAssociation> prefixListAssociation;

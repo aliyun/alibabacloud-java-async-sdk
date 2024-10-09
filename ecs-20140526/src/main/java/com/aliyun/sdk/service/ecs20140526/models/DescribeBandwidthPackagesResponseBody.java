@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBandwidthPackagesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBandwidthPackagesResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBandwidthPackagesResponseBody</p>
+     */
     public static class PublicIpAddresse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
@@ -191,6 +198,12 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBandwidthPackagesResponseBody</p>
+     */
     public static class PublicIpAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublicIpAddresse")
         private java.util.List < PublicIpAddresse> publicIpAddresse;
@@ -232,6 +245,12 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBandwidthPackagesResponseBody</p>
+     */
     public static class BandwidthPackage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private String bandwidth;
@@ -553,6 +572,12 @@ public class DescribeBandwidthPackagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBandwidthPackagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBandwidthPackagesResponseBody</p>
+     */
     public static class BandwidthPackages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPackage")
         private java.util.List < BandwidthPackage> bandwidthPackage;

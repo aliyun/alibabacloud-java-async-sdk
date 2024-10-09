@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccessPointsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointsResponseBody</p>
+     */
     public static class AccessPointType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
@@ -311,6 +318,12 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccessPointsResponseBody</p>
+     */
     public static class AccessPointSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointType")
         private java.util.List < AccessPointType> accessPointType;

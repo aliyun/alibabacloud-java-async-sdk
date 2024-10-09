@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticReportAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDiagnosticReportAttributesResponseBody</p>
@@ -181,7 +182,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * The extended attributes of the diagnostic report.
+         * <p>The extended attributes of the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;OfflineDiagReportStatus&quot;:&quot;CONFIRMED&quot;
+         * }</p>
          */
         public Builder attributes(String attributes) {
             this.attributes = attributes;
@@ -189,7 +195,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the diagnostic report was created.
+         * <p>The time when the diagnostic report was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-11T12:00:00Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -197,7 +206,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.
+         * <p>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-11T14:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -205,7 +217,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the diagnostic report was complete.
+         * <p>The time when the diagnostic report was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-11T14:00:00Z</p>
          */
         public Builder finishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
@@ -213,7 +228,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The results of all diagnostic metrics in the diagnostic metric set.
+         * <p>The results of all diagnostic metrics in the diagnostic metric set.</p>
          */
         public Builder metricResults(MetricResults metricResults) {
             this.metricResults = metricResults;
@@ -221,7 +236,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the diagnostic metric set.
+         * <p>The ID of the diagnostic metric set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dms-bp17p0qwtr72zmu*****</p>
          */
         public Builder metricSetId(String metricSetId) {
             this.metricSetId = metricSetId;
@@ -229,7 +247,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the diagnostic report, which is the unique identifier of the report.
+         * <p>The ID of the diagnostic report, which is the unique identifier of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-uf6i0tv2refv8wz*****</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -237,7 +258,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +269,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6i0tv2refv8wz*****</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -253,7 +280,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the resource. ResourceType can only be set to instance, which indicates that only instances are supported.
+         * <p>The type of the resource. ResourceType can only be set to instance, which indicates that only instances are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -261,14 +291,17 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:
-         * <p>
+         * <p>The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:</p>
+         * <ul>
+         * <li>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</li>
+         * <li>Normal: No exceptions were detected.</li>
+         * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
+         * <li>Warn: Diagnostic information was recorded and may indicate potential exceptions.</li>
+         * <li>Critical: Critical exceptions were detected.</li>
+         * </ul>
          * 
-         * *   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
-         * *   Normal: No exceptions were detected.
-         * *   Info: Diagnostic information was recorded and may be related to exceptions.
-         * *   Warn: Diagnostic information was recorded and may indicate potential exceptions.
-         * *   Critical: Critical exceptions were detected.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -276,7 +309,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the [CreateDiagnosticReport](~~442490~~) operation to create the diagnostic report.
+         * <p>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-11T12:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -284,12 +320,15 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the diagnostic report. Valid values:
-         * <p>
+         * <p>The state of the diagnostic report. Valid values:</p>
+         * <ul>
+         * <li>InProgress: The diagnostic is in progress.</li>
+         * <li>Finished: The diagnostic is complete.</li>
+         * <li>Failed: The diagnostic failed.</li>
+         * </ul>
          * 
-         * *   InProgress: The diagnostic is in progress.
-         * *   Finished: The diagnostic is complete.
-         * *   Failed: The diagnostic failed.
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -302,6 +341,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDiagnosticReportAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosticReportAttributesResponseBody</p>
+     */
     public static class Issue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Additional")
         private String additional;
@@ -365,7 +410,19 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             private String severity; 
 
             /**
-             * The additional data about the diagnosed issue. The value is a JSON string.
+             * <p>The additional data about the diagnosed issue. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;TotalPercent&quot;: 95,
+             *   &quot;TopUtilizationProcesses&quot;: [
+             *     {
+             *       &quot;Pid&quot;: &quot;1223&quot;,
+             *       &quot;CommandName&quot;: &quot;/usr/bin/mem.py&quot;,
+             *       &quot;PhysicalMemoryPercent&quot;: 50
+             *     }
+             *   ]
+             * }</p>
              */
             public Builder additional(String additional) {
                 this.additional = additional;
@@ -373,7 +430,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the diagnosed issue, which is the unique identifier of the issue.
+             * <p>The ID of the diagnosed issue, which is the unique identifier of the issue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GuestOS.CPU.HighUtiliz*****</p>
              */
             public Builder issueId(String issueId) {
                 this.issueId = issueId;
@@ -381,7 +441,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the diagnosed issue occurred.
+             * <p>The time when the diagnosed issue occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-11T14:00:00Z</p>
              */
             public Builder occurrenceTime(String occurrenceTime) {
                 this.occurrenceTime = occurrenceTime;
@@ -389,12 +452,15 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the diagnosed issue. Valid values:
-             * <p>
+             * <p>The severity level of the diagnosed issue. Valid values:</p>
+             * <ul>
+             * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
+             * <li>Warn: Diagnostic information was recorded and may indicate potential exceptions.</li>
+             * <li>Critical: Critical exceptions were detected.</li>
+             * </ul>
              * 
-             * *   Info: Diagnostic information was recorded and may be related to exceptions.
-             * *   Warn: Diagnostic information was recorded and may indicate potential exceptions.
-             * *   Critical: Critical exceptions were detected.
+             * <strong>example:</strong>
+             * <p>Info</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -408,6 +474,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDiagnosticReportAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosticReportAttributesResponseBody</p>
+     */
     public static class Issues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Issue")
         private java.util.List < Issue> issue;
@@ -449,6 +521,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDiagnosticReportAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosticReportAttributesResponseBody</p>
+     */
     public static class MetricResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Issues")
         private Issues issues;
@@ -524,7 +602,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The diagnosed issues.
+             * <p>The diagnosed issues.</p>
              */
             public Builder issues(Issues issues) {
                 this.issues = issues;
@@ -532,7 +610,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the diagnostic metric.
+             * <p>The category of the diagnostic metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPU</p>
              */
             public Builder metricCategory(String metricCategory) {
                 this.metricCategory = metricCategory;
@@ -540,7 +621,10 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the diagnostic metric.
+             * <p>The ID of the diagnostic metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GuestOS.WinFirewall</p>
              */
             public Builder metricId(String metricId) {
                 this.metricId = metricId;
@@ -548,15 +632,18 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the diagnostic metric. Valid values:
-             * <p>
+             * <p>The severity level of the diagnostic metric. Valid values:</p>
+             * <ul>
+             * <li>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</li>
+             * <li>Normal: No exceptions were detected.</li>
+             * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
+             * <li>NotSupport: The version of the guest operating system does support diagnosing the metric.</li>
+             * <li>Warn: Diagnostic information was recorded and may indicate potential exceptions.</li>
+             * <li>Critical: Critical exceptions were detected.</li>
+             * </ul>
              * 
-             * *   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
-             * *   Normal: No exceptions were detected.
-             * *   Info: Diagnostic information was recorded and may be related to exceptions.
-             * *   NotSupport: The version of the guest operating system does support diagnosing the metric.
-             * *   Warn: Diagnostic information was recorded and may indicate potential exceptions.
-             * *   Critical: Critical exceptions were detected.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -564,12 +651,15 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the diagnostic metric. Valid values:
-             * <p>
+             * <p>The state of the diagnostic metric. Valid values:</p>
+             * <ul>
+             * <li>InProgress.</li>
+             * <li>Finished.</li>
+             * <li>Failed.</li>
+             * </ul>
              * 
-             * *   InProgress.
-             * *   Finished.
-             * *   Failed.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -583,6 +673,12 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDiagnosticReportAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDiagnosticReportAttributesResponseBody</p>
+     */
     public static class MetricResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetricResult")
         private java.util.List < MetricResult> metricResult;

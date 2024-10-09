@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkInterfacesRequest} extends {@link RequestModel}
  *
  * <p>DescribeNetworkInterfacesRequest</p>
@@ -387,7 +388,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the ENI is attached.
+         * <p>The ID of the instance to which the ENI is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1e2l6djkndyuli****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -396,7 +400,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * An array that consists of the IPv6 address of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.
+         * <p>An array that consists of the IPv6 address of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:4321:180:1701:94c7:bc38:3bfa:****</p>
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -405,13 +412,15 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Valid values: 10 to 500.
-         * <p>
+         * <p>The maximum number of entries to return on each page. Valid values: 10 to 500.</p>
+         * <p>Default values:</p>
+         * <ul>
+         * <li>If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</li>
+         * <li>If this parameter is set to a value greater than 500, the default value is 500.</li>
+         * </ul>
          * 
-         * Default values:
-         * 
-         * *   If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.
-         * *   If this parameter is set to a value greater than 500, the default value is 500.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -420,7 +429,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * An array that consists of the IDs of the ENIs. You specify multiple ENI IDs. Valid values of N: 1 to 100.
+         * <p>An array that consists of the IDs of the ENIs. You specify multiple ENI IDs. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp125p95hhdhn3ot****</p>
          */
         public Builder networkInterfaceId(java.util.List < String > networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -429,7 +441,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The name of the ENI.
+         * <p>The name of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-eni-name</p>
          */
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
@@ -438,10 +453,11 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to this operation.
-         * <p>
+         * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to this operation.</p>
+         * <p>For more information about how to check the responses returned by this operation, see the preceding &quot;Description&quot; section.</p>
          * 
-         * For more information about how to check the responses returned by this operation, see the preceding "Description" section.
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -468,14 +484,15 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
-         * 
-         * >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -484,14 +501,15 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 1000.</p>
+         * <p>Default value: 10.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
+         * </blockquote>
          * 
-         * Valid values: 1 to 1000.
-         * 
-         * Default value: 10.
-         * 
-         * >  This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -500,7 +518,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The primary private IPv4 address of the ENI.
+         * <p>The primary private IPv4 address of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>192.168.**.**</code></p>
          */
         public Builder primaryIpAddress(String primaryIpAddress) {
             this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
@@ -509,7 +530,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.
+         * <p>An array that consists of the secondary private IPv4 addresses of the ENI. You can specify multiple secondary private IPv4 addresses. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>192.168.**.**</code></p>
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -518,7 +542,11 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -527,10 +555,13 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the ENI belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
-         * <p>
+         * <p>The ID of the resource group to which the ENI belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
+         * <blockquote>
+         * <p>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * </blockquote>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -557,11 +588,14 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the secondary ENI belongs.
-         * <p>
+         * <p>The ID of the security group to which the secondary ENI belongs.</p>
+         * <ul>
+         * <li>To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</li>
+         * <li>To query the details of primary ENIs based on the ID of a security group, call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation and specify the <code>SecurityGroupId</code> parameter.</li>
+         * </ul>
          * 
-         * *   To query the details of secondary ENIs based on the ID of a security group, specify this parameter.
-         * *   To query the details of primary ENIs based on the ID of a security group, call the [DescribeInstances](~~25506~~) operation and specify the `SecurityGroupId` parameter.
+         * <strong>example:</strong>
+         * <p>sg-bp144yr32sx6ndw****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -570,7 +604,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * Specifies whether the user of the ENI is an Alibaba Cloud service or a distributor.
+         * <p>Specifies whether the user of the ENI is an Alibaba Cloud service or a distributor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);
@@ -579,16 +616,18 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The state of the ENI. Valid values:
-         * <p>
+         * <p>The state of the ENI. Valid values:</p>
+         * <ul>
+         * <li>Available: The ENI is available.</li>
+         * <li>Attaching: The ENI is being attached to an instance.</li>
+         * <li>InUse: The ENI is attached to an instance.</li>
+         * <li>Detaching: The ENI is being detached from an instance.</li>
+         * <li>Deleting: The ENI is being deleted.</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that ENIs in all states are queried.</p>
          * 
-         * *   Available: The ENI is available.
-         * *   Attaching: The ENI is being attached to an instance.
-         * *   InUse: The ENI is attached to an instance.
-         * *   Detaching: The ENI is being detached from an instance.
-         * *   Deleting: The ENI is being deleted.
-         * 
-         * This parameter is empty by default, which indicates that ENIs in all states are queried.
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -597,7 +636,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The tags to use for query.
+         * <p>The tags to use for query.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -606,13 +645,15 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The type of the ENI. Valid values:
-         * <p>
+         * <p>The type of the ENI. Valid values:</p>
+         * <ul>
+         * <li>Primary</li>
+         * <li>Secondary</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
          * 
-         * *   Primary
-         * *   Secondary
-         * 
-         * This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.
+         * <strong>example:</strong>
+         * <p>Secondary</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -621,7 +662,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch with which the ENI is associated.
+         * <p>The ID of the vSwitch with which the ENI is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp16usj2p27htro3****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -630,7 +674,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.
+         * <p>The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp16usj2p27htro3****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -645,6 +692,12 @@ public class DescribeNetworkInterfacesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkInterfacesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfacesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -684,7 +737,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the ENI. Valid values of N: 1 to 20.
+             * <p>The key of tag N of the ENI. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -692,10 +748,11 @@ public class DescribeNetworkInterfacesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the ENI. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The value of tag N of the ENI. Valid values of N: 1 to 20.</p>
+             * <p>If a single tag is specified to query ENIs, up to 1,000 ENIs that have this tag can be returned. If multiple tags are specified to query ENIs, up to 1,000 ENIs that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * If a single tag is specified to query ENIs, up to 1,000 ENIs that have this tag can be returned. If multiple tags are specified to query ENIs, up to 1,000 ENIs that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

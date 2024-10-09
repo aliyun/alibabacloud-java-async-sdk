@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRouterInterfaceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyRouterInterfaceSpecRequest</p>
@@ -195,7 +196,7 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +223,7 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
         }
 
         /**
-         * RouterInterfaceId.
+         * <p>This parameter is required.</p>
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.putQueryParameter("RouterInterfaceId", routerInterfaceId);
@@ -231,7 +232,7 @@ public class ModifyRouterInterfaceSpecRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

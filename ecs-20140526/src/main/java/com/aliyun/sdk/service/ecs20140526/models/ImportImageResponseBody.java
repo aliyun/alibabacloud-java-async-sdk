@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ImportImageResponseBody} extends {@link TeaModel}
  *
  * <p>ImportImageResponseBody</p>
@@ -73,7 +74,10 @@ public class ImportImageResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The image ID.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp67acfmxazb4p****</p>
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -81,7 +85,10 @@ public class ImportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -89,7 +96,10 @@ public class ImportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class ImportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The image import task ID.
+         * <p>The image import task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-bp67acfmxazb4p****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

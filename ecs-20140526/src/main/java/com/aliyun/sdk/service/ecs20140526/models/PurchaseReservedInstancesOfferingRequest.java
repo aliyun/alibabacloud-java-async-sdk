@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PurchaseReservedInstancesOfferingRequest} extends {@link RequestModel}
  *
  * <p>PurchaseReservedInstancesOfferingRequest</p>
@@ -336,11 +337,14 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-renewal for the reserved instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
          * 
-         * *   true
-         * *   false (default)
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -349,12 +353,12 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.
-         * <p>
+         * <p>The auto-renewal term of the reserved instance. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
+         * <p>Valid values: 12 and 36.</p>
+         * <p>Default value when PeriodUnit is set to Year: 12.</p>
          * 
-         * Valid values: 12 and 36.
-         * 
-         * Default value when PeriodUnit is set to Year: 12.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -363,7 +367,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -372,10 +379,11 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The description of the reserved instance. The description can be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).
-         * <p>
+         * <p>The description of the reserved instance. The description can be 2 to 256 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
+         * <p>This parameter is left empty by default.</p>
          * 
-         * This parameter is left empty by default.
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -384,10 +392,11 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The number of pay-as-you-go instances of the same instance type that the reserved instance can match at the same time. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of pay-as-you-go instances of the same instance type that the reserved instance can match at the same time. Valid values: 1 to 50.</p>
+         * <p>For example, if you set the InstanceAmount parameter to 3 and the InstanceType parameter to ecs.g5.large, the reserved instance can be matched three ecs.g5.large pay-as-you-go instances at the same time.</p>
          * 
-         * For example, if you set the InstanceAmount parameter to 3 and the InstanceType parameter to ecs.g5.large, the reserved instance can be matched three ecs.g5.large pay-as-you-go instances at the same time.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder instanceAmount(Integer instanceAmount) {
             this.putQueryParameter("InstanceAmount", instanceAmount);
@@ -396,7 +405,11 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The type of the reserved instance. For more information, see [Instance family](~~25378~~).
+         * <p>The type of the reserved instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -405,14 +418,16 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The payment option of the reserved instance. Valid values:
-         * <p>
+         * <p>The payment option of the reserved instance. Valid values:</p>
+         * <ul>
+         * <li>No Upfront</li>
+         * <li>Partial Upfront</li>
+         * <li>All Upfront</li>
+         * </ul>
+         * <p>Default value: All Upfront.</p>
          * 
-         * *   No Upfront
-         * *   Partial Upfront
-         * *   All Upfront
-         * 
-         * Default value: All Upfront.
+         * <strong>example:</strong>
+         * <p>All Upfront</p>
          */
         public Builder offeringType(String offeringType) {
             this.putQueryParameter("OfferingType", offeringType);
@@ -439,12 +454,12 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The validity period of the reserved instance.
-         * <p>
+         * <p>The validity period of the reserved instance.</p>
+         * <p>Valid values: 1 and 3.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Valid values: 1 and 3.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -453,12 +468,12 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The unit of the validity period of the reserved instance.
-         * <p>
+         * <p>The unit of the validity period of the reserved instance.</p>
+         * <p>Valid value: Year.</p>
+         * <p>Default value: Year.</p>
          * 
-         * Valid value: Year.
-         * 
-         * Default value: Year.
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -467,13 +482,15 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The operating system of the image used by the instance. Valid values:
-         * <p>
+         * <p>The operating system of the image used by the instance. Valid values:</p>
+         * <ul>
+         * <li>Windows: Windows Server operating system</li>
+         * <li>Linux: Linux and UNIX-like operating system</li>
+         * </ul>
+         * <p>Default value: Linux.</p>
          * 
-         * *   Windows: Windows Server operating system
-         * *   Linux: Linux and UNIX-like operating system
-         * 
-         * Default value: Linux.
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -482,7 +499,11 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -491,7 +512,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the reserved instance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testReservedInstanceName</p>
          */
         public Builder reservedInstanceName(String reservedInstanceName) {
             this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
@@ -500,7 +524,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp199lyny9b3****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -527,13 +554,15 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The scope of reserved instance N. Valid values:
-         * <p>
+         * <p>The scope of reserved instance N. Valid values:</p>
+         * <ul>
+         * <li>Region: regional</li>
+         * <li>Zone: zonal</li>
+         * </ul>
+         * <p>Default value: Region.</p>
          * 
-         * *   Region: regional
-         * *   Zone: zonal
-         * 
-         * Default value: Region.
+         * <strong>example:</strong>
+         * <p>Zone</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -542,7 +571,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The time when the reserved instance takes effect. Specify the time in the [ISO 8601 standard](~~25696~~) in the `yyyy-MM-ddTHHZ` format. The time must be in UTC.
+         * <p>The time when the reserved instance takes effect. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <code>yyyy-MM-ddTHHZ</code> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-04T15Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -551,7 +583,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -560,7 +592,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. This parameter is required when `Scope` is set to `Zone`. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The zone ID of the instance. This parameter is required when <code>Scope</code> is set to <code>Zone</code>. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -575,6 +610,12 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PurchaseReservedInstancesOfferingRequest} extends {@link TeaModel}
+     *
+     * <p>PurchaseReservedInstancesOfferingRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -614,7 +655,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+             * <p>The key of tag N of the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -622,7 +666,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             }
 
             /**
-             * The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
+             * <p>The value of tag N of the reserved instance. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

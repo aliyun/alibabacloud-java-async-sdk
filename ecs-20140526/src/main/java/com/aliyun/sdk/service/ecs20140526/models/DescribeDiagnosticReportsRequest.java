@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiagnosticReportsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiagnosticReportsRequest</p>
@@ -162,13 +163,15 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 100.
-         * <p>
+         * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If this parameter is left empty, the default value is 10.</li>
+         * <li>If this parameter is set to a value greater than 100, the default value is 100.</li>
+         * </ul>
          * 
-         * Default value:
-         * 
-         * *   If this parameter is left empty, the default value is 10.
-         * *   If this parameter is set to a value greater than 100, the default value is 100.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -177,7 +180,10 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticReports operation. Leave this parameter empty the first time you call this operation.
+         * <p>The query token. Set the value to the <code>NextToken</code> value returned in the last call to the DescribeDiagnosticReports operation. Leave this parameter empty the first time you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -186,7 +192,11 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The region ID of the diagnostic report. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the diagnostic report. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +205,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The IDs of diagnostic reports. You can specify up to 100 report IDs.
+         * <p>The IDs of diagnostic reports. You can specify up to 100 report IDs.</p>
          */
         public Builder reportIds(java.util.List < String > reportIds) {
             this.putQueryParameter("ReportIds", reportIds);
@@ -204,7 +214,7 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The IDs of resources. You can specify up to 100 resource IDs.
+         * <p>The IDs of resources. You can specify up to 100 resource IDs.</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -213,14 +223,17 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The severity level of the diagnostic report. Valid values:
-         * <p>
+         * <p>The severity level of the diagnostic report. Valid values:</p>
+         * <ul>
+         * <li>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</li>
+         * <li>Normal: No exceptions are detected.</li>
+         * <li>Info: Diagnostic information is recorded and may be related to exceptions.</li>
+         * <li>Warn: Diagnostic information is recorded and may indicate exceptions.</li>
+         * <li>Critical: Critical exceptions are detected.</li>
+         * </ul>
          * 
-         * * Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
-         * * Normal: No exceptions are detected.
-         * * Info: Diagnostic information is recorded and may be related to exceptions.
-         * * Warn: Diagnostic information is recorded and may indicate exceptions.
-         * * Critical: Critical exceptions are detected.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -229,12 +242,15 @@ public class DescribeDiagnosticReportsRequest extends Request {
         }
 
         /**
-         * The state of the diagnostic report. Valid values:
-         * <p>
+         * <p>The state of the diagnostic report. Valid values:</p>
+         * <ul>
+         * <li>InProgress: The diagnostic is in progress.</li>
+         * <li>Failed: The diagnostic failed.</li>
+         * <li>Finished: The diagnostic is complete.</li>
+         * </ul>
          * 
-         * *   InProgress: The diagnostic is in progress.
-         * *   Failed: The diagnostic failed.
-         * *   Finished: The diagnostic is complete.
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

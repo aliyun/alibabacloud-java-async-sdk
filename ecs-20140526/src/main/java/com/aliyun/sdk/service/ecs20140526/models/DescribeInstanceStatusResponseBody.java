@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceStatusResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The status information of the instances.
+         * <p>The status information of the instances.</p>
          */
         public Builder instanceStatuses(InstanceStatuses instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
@@ -93,7 +94,10 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceStatusResponseBody</p>
+     */
     public static class InstanceStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -169,7 +188,10 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1j4i2jdf3owlhe****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -177,14 +199,17 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values:
-             * <p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>Pending: The instance is being created.</li>
+             * <li>Running: The instance is running.</li>
+             * <li>Starting: The instance is being started.</li>
+             * <li>Stopping: The instance is being stopped.</li>
+             * <li>Stopped: The instance is stopped.</li>
+             * </ul>
              * 
-             * *   Pending: The instance is being created.
-             * *   Running: The instance is running.
-             * *   Starting: The instance is being started.
-             * *   Stopping: The instance is being stopped.
-             * *   Stopped: The instance is stopped.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,6 +223,12 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceStatusResponseBody</p>
+     */
     public static class InstanceStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private java.util.List < InstanceStatus> instanceStatus;

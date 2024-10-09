@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDedicatedHostClusterAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyDedicatedHostClusterAttributeRequest</p>
@@ -176,7 +177,11 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host cluster.
+         * <p>The ID of the dedicated host cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-bp12wlf6am0vz9v2****</p>
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -185,7 +190,10 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the dedicated host cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. The name cannot contain `http://` or `https://`.
+         * <p>The new name of the dedicated host cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter. The name cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newClusterName</p>
          */
         public Builder dedicatedHostClusterName(String dedicatedHostClusterName) {
             this.putQueryParameter("DedicatedHostClusterName", dedicatedHostClusterName);
@@ -194,7 +202,10 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * The description of the dedicated host cluster. It must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
+         * <p>The description of the dedicated host cluster. It must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newClusterDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -221,7 +232,11 @@ public class ModifyDedicatedHostClusterAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host cluster. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the dedicated host cluster. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSnapshotRequest} extends {@link RequestModel}
  *
  * <p>CreateSnapshotRequest</p>
@@ -273,13 +274,17 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The category of the snapshot. Valid values:
-         * <p>
+         * <p>The category of the snapshot. Valid values:</p>
+         * <ul>
+         * <li>Standard: normal snapshot</li>
+         * <li>Flash: local snapshot</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
          * 
-         * *   Standard: normal snapshot
-         * *   Flash: local snapshot
-         * 
-         * >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -288,10 +293,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.
-         * <p>
+         * <p>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.</p>
+         * <p>This parameter is empty by default, which indicates that the snapshot is not automatically released.</p>
          * 
-         * This parameter is empty by default, which indicates that the snapshot is not automatically released.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -300,7 +306,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The cloud disk ID.
+         * <p>The cloud disk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -309,7 +318,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Creates a snapshot for a disk.
+         * <p>Creates a snapshot for a disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1s5fnvk4gn2tws0****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -318,15 +331,18 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the instant access feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the instant access feature. Valid values:</p>
+         * <ul>
+         * <li>true: enables the instant access feature. This feature can be enabled only for ESSDs.</li>
+         * <li>false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
          * 
-         * *   true: enables the instant access feature. This feature can be enabled only for ESSDs.
-         * *   false: does not enable the instant access feature. If InstantAccess is set to false, a normal snapshot is created.
-         * 
-         * Default value: false.
-         * 
-         * >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder instantAccess(Boolean instantAccess) {
             this.putQueryParameter("InstantAccess", instantAccess);
@@ -335,12 +351,14 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only when `InstantAccess` is set to true. Unit: days. Valid values: 1 to 65535.
-         * <p>
+         * <p>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only when <code>InstantAccess</code> is set to true. Unit: days. Valid values: 1 to 65535.</p>
+         * <p>By default, the value of this parameter is the same as that of <code>RetentionDays</code>.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
          * 
-         * By default, the value of this parameter is the same as that of `RetentionDays`.
-         * 
-         * >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
             this.putQueryParameter("InstantAccessRetentionDays", instantAccessRetentionDays);
@@ -367,13 +385,17 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The snapshot type. Valid values:
-         * <p>
+         * <p>The snapshot type. Valid values:</p>
+         * <ul>
+         * <li>Standard: normal snapshot</li>
+         * <li>Flash: local snapshot</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter will be removed in the future. We recommend that you use the <code>InstantAccess</code> parameter to ensure future compatibility. This parameter and the <code>InstantAccess</code> parameter cannot be specified at the same time. For more information, see the &quot;Description&quot; section of this topic.</p>
+         * </blockquote>
          * 
-         * *   Standard: normal snapshot
-         * *   Flash: local snapshot
-         * 
-         * > This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility. This parameter and the `InstantAccess` parameter cannot be specified at the same time. For more information, see the "Description" section of this topic.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -400,10 +422,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-         * <p>
+         * <p>The snapshot name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name cannot start with <code>auto</code> because snapshots whose names start with auto are recognized as automatic snapshots.</p>
          * 
-         * The name cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -412,10 +435,11 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-         * <p>
+         * <p>The name of the snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>It cannot start with <code>auto</code> because snapshots whose names start with auto are recognized as automatic snapshots.</p>
          * 
-         * It cannot start with `auto` because snapshots whose names start with auto are recognized as automatic snapshots.
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         public Builder snapshotName(String snapshotName) {
             this.putQueryParameter("SnapshotName", snapshotName);
@@ -424,7 +448,10 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The value of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)
+         * <p>The value of tag N that you want to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder storageLocationArn(String storageLocationArn) {
             this.putQueryParameter("StorageLocationArn", storageLocationArn);
@@ -433,7 +460,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The tags to add to the snapshot.
+         * <p>The tags to add to the snapshot.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -448,6 +475,12 @@ public class CreateSnapshotRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSnapshotRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSnapshotRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -487,7 +520,10 @@ public class CreateSnapshotRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -495,7 +531,10 @@ public class CreateSnapshotRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+             * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

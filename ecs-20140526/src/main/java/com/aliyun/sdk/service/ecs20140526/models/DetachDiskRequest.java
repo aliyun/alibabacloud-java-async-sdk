@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachDiskRequest} extends {@link RequestModel}
  *
  * <p>DetachDiskRequest</p>
@@ -162,19 +163,21 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the system disk or data disk when the instance from which you want to detach the disk is released. Valid values:
-         * <p>
+         * <p>Specifies whether to release the system disk or data disk when the instance from which you want to detach the disk is released. Valid values:</p>
+         * <ul>
+         * <li>true: releases the disk when the instance is released.</li>
+         * <li>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</li>
+         * </ul>
+         * <p>Default value: true.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>You cannot specify this parameter for disks for which the multi-attach feature is enabled.</li>
+         * <li>If a data disk is to be detached, the default value is <code>false</code>.</li>
+         * <li>If you want to detach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
+         * </ul>
          * 
-         * *   true: releases the disk when the instance is released.
-         * *   false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.
-         * 
-         * Default value: true.
-         * 
-         * Take note of the following items:
-         * 
-         * *   You cannot specify this parameter for disks for which the multi-attach feature is enabled.
-         * *   If a data disk is to be detached, the default value is `false`.
-         * *   If you want to detach an `elastic ephemeral disk`, you must set `DeleteWithInstance` to `true`.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -183,7 +186,11 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the disk that you want to detach.
+         * <p>The ID of the disk that you want to detach.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -192,7 +199,11 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance from which you want to detach the disk.
+         * <p>The ID of the ECS instance from which you want to detach the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

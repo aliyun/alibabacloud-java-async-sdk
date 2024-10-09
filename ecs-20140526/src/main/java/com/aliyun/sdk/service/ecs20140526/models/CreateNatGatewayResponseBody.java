@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNatGatewayResponseBody</p>
@@ -110,6 +111,12 @@ public class CreateNatGatewayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayResponseBody</p>
+     */
     public static class BandwidthPackageIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private java.util.List < String > bandwidthPackageId;
@@ -151,6 +158,12 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateNatGatewayResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayResponseBody</p>
+     */
     public static class ForwardTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardTableId")
         private java.util.List < String > forwardTableId;

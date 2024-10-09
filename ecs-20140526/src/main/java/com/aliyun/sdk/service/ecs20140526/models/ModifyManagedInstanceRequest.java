@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyManagedInstanceRequest} extends {@link RequestModel}
  *
  * <p>ModifyManagedInstanceRequest</p>
@@ -163,7 +164,11 @@ public class ModifyManagedInstanceRequest extends Request {
         }
 
         /**
-         * The new name of the managed instance. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with a special character or a digit. It can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:) and cannot start with `http://` or `https://`.
+         * <p>The new name of the managed instance. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with a special character or a digit. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:) and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mi-hz01nmcf****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -172,7 +177,11 @@ public class ModifyManagedInstanceRequest extends Request {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testInstanceName</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -199,7 +208,11 @@ public class ModifyManagedInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the managed instance.
+         * <p>The ID of the managed instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

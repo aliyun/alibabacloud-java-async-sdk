@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteImageRequest} extends {@link RequestModel}
  *
  * <p>DeleteImageRequest</p>
@@ -162,13 +163,15 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully delete the custom image. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully delete the custom image. Valid values:</p>
+         * <ul>
+         * <li>true: forcefully deletes the custom image, regardless of whether the image is being used by other instances.</li>
+         * <li>false: verifies that the custom image is not being used by other instances and then deletes the image.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: forcefully deletes the custom image, regardless of whether the image is being used by other instances.
-         * *   false: verifies that the image is not being used by other instances and then deletes the image.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -177,7 +180,11 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * The ID of the image. If the specified custom image does not exist, the request is ignored.
+         * <p>The ID of the image. If the specified custom image does not exist, the request is ignored.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp67acfmxazb4p****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -204,7 +211,11 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

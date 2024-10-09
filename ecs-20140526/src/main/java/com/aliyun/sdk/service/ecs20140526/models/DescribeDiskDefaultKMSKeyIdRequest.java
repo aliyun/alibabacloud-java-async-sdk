@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskDefaultKMSKeyIdRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiskDefaultKMSKeyIdRequest</p>
@@ -68,7 +69,11 @@ public class DescribeDiskDefaultKMSKeyIdRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The ID of the region. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

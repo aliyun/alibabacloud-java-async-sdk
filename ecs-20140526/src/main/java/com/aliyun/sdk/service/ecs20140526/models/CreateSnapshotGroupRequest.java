@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSnapshotGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateSnapshotGroupRequest</p>
@@ -264,7 +265,10 @@ public class CreateSnapshotGroupRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -273,7 +277,10 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -282,13 +289,12 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The ID of cloud disk N for which you want to create snapshots. You can specify multiple cloud disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 cloud disks whose total disk size does not exceed 32 TiB.
-         * <p>
-         * 
-         * Take note of the following items:
-         * 
-         * *   You cannot specify both DiskId.N and `ExcludeDiskId.N` in the same request.
-         * *   If `InstanceId` is set, you can use DiskId.N to specify only cloud disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify cloud disks attached to multiple instances.
+         * <p>The ID of cloud disk N for which you want to create snapshots. You can specify multiple cloud disk IDs across instances within the same zone. Valid values of N: 1 to 16. A single snapshot-consistent group can contain snapshots of up to 16 cloud disks whose total disk size does not exceed 32 TiB.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>You cannot specify both DiskId.N and <code>ExcludeDiskId.N</code> in the same request.</li>
+         * <li>If <code>InstanceId</code> is set, you can use DiskId.N to specify only cloud disks attached to the instance specified by InstanceId, and you cannot use DiskId.N to specify cloud disks attached to multiple instances.</li>
+         * </ul>
          */
         public Builder diskId(java.util.List < String > diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -297,12 +303,14 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The ID of cloud disk N for which you do not want to create snapshots. If this parameter is specified, the created snapshot-consistent group does not contain snapshots of the cloud disk. Valid values of N: 1 to 16.
-         * <p>
+         * <p>The ID of cloud disk N for which you do not want to create snapshots. If this parameter is specified, the created snapshot-consistent group does not contain snapshots of the cloud disk. Valid values of N: 1 to 16.</p>
+         * <p>This parameter is empty by default, which indicates that snapshots are created for all the disks of the instance.</p>
+         * <blockquote>
+         * <p>You cannot specify ExcludeDiskId.N and <code>DiskId.N</code> in the same request.</p>
+         * </blockquote>
          * 
-         * This parameter is empty by default, which indicates that snapshots are created for all the disks of the instance.
-         * 
-         * > You cannot specify ExcludeDiskId.N and `DiskId.N` in the same request.
+         * <strong>example:</strong>
+         * <p>d-j6cf7l0ewidb78lq****</p>
          */
         public Builder excludeDiskId(java.util.List < String > excludeDiskId) {
             this.putQueryParameter("ExcludeDiskId", excludeDiskId);
@@ -311,7 +319,10 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-j6ca469urv8ei629****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -320,15 +331,18 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the instant access feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the instant access feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder instantAccess(Boolean instantAccess) {
             this.putQueryParameter("InstantAccess", instantAccess);
@@ -337,14 +351,15 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.
-         * <p>
+         * <p>The number of days for which the instant access feature is available. Unit: days. Valid values: 1 to 65535.</p>
+         * <p>This parameter takes effect only when <code>InstantAccess</code> is set to true. The instant access feature is automatically disabled when the specified duration ends.</p>
+         * <p>This parameter is left empty by default, which indicates that the instant access feature is automatically disabled for snapshots when the snapshots are released.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</p>
+         * </blockquote>
          * 
-         * This parameter takes effect only when `InstantAccess` is set to true. The instant access feature is automatically disabled when the specified duration ends.
-         * 
-         * This parameter is left empty by default, which indicates that the instant access feature is automatically disabled for snapshots when the snapshots are released.
-         * 
-         * >  This parameter is no longer used. By default, new normal snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see [Use the instant access feature](~~193667~~).
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
             this.putQueryParameter("InstantAccessRetentionDays", instantAccessRetentionDays);
@@ -353,7 +368,10 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The name of the snapshot-consistent group. The name must be 2 to 128 characters in length. The name can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter and cannot start with `http://` or `https://`.
+         * <p>The name of the snapshot-consistent group. The name must be 2 to 128 characters in length. The name can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -380,7 +398,11 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -389,7 +411,10 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the snapshot-consistent group belongs.
+         * <p>The ID of the resource group to which the snapshot-consistent group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -416,7 +441,12 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable for public use.
+         * <blockquote>
+         * <p>This parameter is unavailable for public use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder storageLocationArn(String storageLocationArn) {
             this.putQueryParameter("StorageLocationArn", storageLocationArn);
@@ -425,7 +455,7 @@ public class CreateSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -440,6 +470,12 @@ public class CreateSnapshotGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSnapshotGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSnapshotGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -479,7 +515,10 @@ public class CreateSnapshotGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>The key of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -487,7 +526,10 @@ public class CreateSnapshotGroupRequest extends Request {
             }
 
             /**
-             * The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+             * <p>The value of tag N of the snapshot-consistent group. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecurityGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateSecurityGroupRequest</p>
@@ -245,7 +246,10 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -254,10 +258,11 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The description of the security group. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
-         * <p>
+         * <p>The description of the security group. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>By default, this parameter is left empty.</p>
          * 
-         * By default, this parameter is left empty.
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -284,7 +289,11 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -293,7 +302,10 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the security group belongs.
+         * <p>The ID of the resource group to which the security group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -320,7 +332,10 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (\_), periods (.), and hyphens (-).
+         * <p>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSecurityGroupName</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);
@@ -329,11 +344,14 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The type of the security group. Valid values:
-         * <p>
+         * <p>The type of the security group. Valid values:</p>
+         * <ul>
+         * <li>normal: basic security group.</li>
+         * <li>enterprise: advanced security group. For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</li>
+         * </ul>
          * 
-         * *   normal: basic security group.
-         * *   enterprise: advanced security group. For more information, see [Advanced security groups](~~120621~~).
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder securityGroupType(String securityGroupType) {
             this.putQueryParameter("SecurityGroupType", securityGroupType);
@@ -342,7 +360,10 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);
@@ -351,7 +372,7 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The tags to add to the security group.
+         * <p>The tags to add to the security group.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -360,10 +381,13 @@ public class CreateSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the VPC in which you want to create the security group.
-         * <p>
+         * <p>The ID of the VPC in which you want to create the security group.</p>
+         * <blockquote>
+         * <p>The VpcId parameter is required only if you want to create security groups of the VPC type. In regions that support the classic network, you can create security groups of the classic network type without the need to specify the VpcId parameter.</p>
+         * </blockquote>
          * 
-         * > The VpcId parameter is required only if you want to create security groups of the VPC type. In regions that support the classic network, you can create security groups of the classic network type without the need to specify the VpcId parameter.
+         * <strong>example:</strong>
+         * <p>vpc-bp1opxu1zkhn00gzv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -378,6 +402,12 @@ public class CreateSecurityGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSecurityGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSecurityGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -417,10 +447,11 @@ public class CreateSecurityGroupRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the security group.
-             * <p>
+             * <p>The key of tag N to add to the security group.</p>
+             * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -428,10 +459,11 @@ public class CreateSecurityGroupRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the security group.
-             * <p>
+             * <p>The value of tag N to add to the security group.</p>
+             * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

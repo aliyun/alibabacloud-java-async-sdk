@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommandsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCommandsRequest</p>
@@ -315,7 +316,10 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The ID of the command.
+         * <p>The ID of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz01272yr52****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -324,13 +328,15 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The encoding mode of the `CommandContent` and `Output` values in the response. Valid values:
-         * <p>
+         * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
+         * <ul>
+         * <li>PlainText: returns the original command content and command output.</li>
+         * <li>Base64: returns the Base64-encoded command content and command output.</li>
+         * </ul>
+         * <p>Default value: Base64.</p>
          * 
-         * *   PlainText: returns the original command content and command output.
-         * *   Base64: returns the Base64-encoded command content and command output.
-         * 
-         * Default value: Base64.
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -339,12 +345,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The description of the command.
-         * <p>
+         * <p>The description of the command.</p>
+         * <p>If you specify <code>Provider</code>, fuzzy search is supported by default.</p>
+         * <p>If you do not specify <code>Provider</code>, prefix-based fuzzy search is supported. For example, if you specify <code>test*</code>, all commands whose descriptions start with <code>test</code> are queried.</p>
          * 
-         * If you specify `Provider`, fuzzy search is supported by default.
-         * 
-         * If you do not specify `Provider`, prefix-based fuzzy search is supported. For example, if you specify `test*`, all commands whose descriptions start with `test` are queried.
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -353,13 +359,15 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query only the latest version of common commands when common commands are queried. This parameter does not affect the query for private commands.
-         * <p>
+         * <p>Specifies whether to query only the latest version of common commands when common commands are queried. This parameter does not affect the query for private commands.</p>
+         * <ul>
+         * <li>true: queries only the latest version of common commands.</li>
+         * <li>false: queries all versions of common commands.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: queries only the latest version of common commands.
-         * *   false: queries all versions of common commands.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder latest(Boolean latest) {
             this.putQueryParameter("Latest", latest);
@@ -368,12 +376,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -382,12 +390,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The name of the command.
-         * <p>
+         * <p>The name of the command.</p>
+         * <p>If you specify <code>Provider</code>, fuzzy search is supported by default.</p>
+         * <p>If you do not specify <code>Provider</code>, prefix-based fuzzy search is supported. For example, if you specify <code>command*</code>, all commands whose names start with <code>command</code> are queried.</p>
          * 
-         * If you specify `Provider`, fuzzy search is supported by default.
-         * 
-         * If you do not specify `Provider`, prefix-based fuzzy search is supported. For example, if you specify `command*`, all commands whose names start with `command` are queried.
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -396,7 +404,10 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -423,12 +434,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -437,12 +448,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -451,17 +462,22 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The provider of the common command. Take note of the following items:
-         * <p>
+         * <p>The provider of the common command. Take note of the following items:</p>
+         * <ul>
+         * <li><p>If you do not specify this parameter, all the commands that you created are queried.</p>
+         * </li>
+         * <li><p>If you set this parameter to <code>AlibabaCloud</code>, all the common commands provided by Alibaba Cloud are queried.</p>
+         * </li>
+         * <li><p>If you set this parameter to a specific provider, all the common commands provided by the provider are queried. Examples:</p>
+         * <ul>
+         * <li>If you set <code>Provider</code> to AlibabaCloud.ECS.GuestOS, all the common commands provided by <code>AlibabaCloud.ECS.GuestOS</code> are queried.</li>
+         * <li>If you set <code>Provider</code> to AlibabaCloud.ECS.GuestOSDiagnose, all the common commands provided by <code>AlibabaCloud.ECS.GuestOSDiagnose</code> are queried.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   If you do not specify this parameter, all the commands that you created are queried.
-         * 
-         * *   If you set this parameter to `AlibabaCloud`, all the common commands provided by Alibaba Cloud are queried.
-         * 
-         * *   If you set this parameter to a specific provider, all the common commands provided by the provider are queried. Examples:
-         * 
-         *     *   If you set `Provider` to AlibabaCloud.ECS.GuestOS, all the common commands provided by `AlibabaCloud.ECS.GuestOS` are queried.
-         *     *   If you set `Provider` to AlibabaCloud.ECS.GuestOSDiagnose, all the common commands provided by `AlibabaCloud.ECS.GuestOSDiagnose` are queried.
+         * <strong>example:</strong>
+         * <p>AlibabaCloud</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -470,7 +486,11 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -479,7 +499,10 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the command belongs.
+         * <p>The ID of the resource group to which the command belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -506,7 +529,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -515,12 +538,15 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The type of the command. Valid values:
-         * <p>
+         * <p>The type of the command. Valid values:</p>
+         * <ul>
+         * <li>RunBatScript: batch command, applicable to Windows instances</li>
+         * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances</li>
+         * <li>RunShellScript: shell command, applicable to Linux instances</li>
+         * </ul>
          * 
-         * *   RunBatScript: batch command, applicable to Windows instances
-         * *   RunPowerShellScript: PowerShell command, applicable to Windows instances
-         * *   RunShellScript: shell command, applicable to Linux instances
+         * <strong>example:</strong>
+         * <p>RunShellScript</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -535,6 +561,12 @@ public class DescribeCommandsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommandsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCommandsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -574,12 +606,12 @@ public class DescribeCommandsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -587,10 +619,11 @@ public class DescribeCommandsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>It can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

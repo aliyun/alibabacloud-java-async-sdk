@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLaunchTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLaunchTemplateResponseBody</p>
@@ -61,10 +62,11 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).
-         * <p>
+         * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
+         * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
          * 
-         * You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.
+         * <strong>example:</strong>
+         * <p>lt-bp1apo0bbbkuy0rj****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
@@ -72,7 +74,7 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The versions of the deleted launch template.
+         * <p>The versions of the deleted launch template.</p>
          */
         public Builder launchTemplateVersionNumbers(LaunchTemplateVersionNumbers launchTemplateVersionNumbers) {
             this.launchTemplateVersionNumbers = launchTemplateVersionNumbers;
@@ -80,7 +82,10 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,6 +98,12 @@ public class DeleteLaunchTemplateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteLaunchTemplateResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteLaunchTemplateResponseBody</p>
+     */
     public static class LaunchTemplateVersionNumbers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("versionNumbers")
         private java.util.List < Long > versionNumbers;

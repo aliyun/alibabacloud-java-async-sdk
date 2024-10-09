@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrefixListsRequest} extends {@link RequestModel}
  *
  * <p>DescribePrefixListsRequest</p>
@@ -204,13 +205,15 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The IP address family of the prefix list. Valid values:
-         * <p>
+         * <p>The IP address family of the prefix list. Valid values:</p>
+         * <ul>
+         * <li>IPv4</li>
+         * <li>IPv6</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that all prefix lists are queried.</p>
          * 
-         * *   IPv4
-         * *   IPv6
-         * 
-         * This parameter is empty by default, which indicates that all prefix lists are queried.
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder addressFamily(String addressFamily) {
             this.putQueryParameter("AddressFamily", addressFamily);
@@ -219,12 +222,12 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -233,7 +236,10 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixLists operation. Leave this parameter empty the first time you call this operation.
+         * <p>The query token. Set the value to the <code>NextToken</code> value returned in the previous call to the DescribePrefixLists operation. Leave this parameter empty the first time you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -260,7 +266,10 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The IDs of prefix list.
+         * <p>The IDs of prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-x1j1k5ykzqlixdcy****</p>
          */
         public Builder prefixListId(java.util.List < String > prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -269,7 +278,10 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The name of the prefix list.
+         * <p>The name of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrefixListNameSample</p>
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -278,7 +290,11 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

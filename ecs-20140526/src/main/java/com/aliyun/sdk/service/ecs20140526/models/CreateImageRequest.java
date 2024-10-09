@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageRequest} extends {@link RequestModel}
  *
  * <p>CreateImageRequest</p>
@@ -329,14 +330,16 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, you must use Architecture to specify the system architecture of the system disk. Valid values:
-         * <p>
+         * <p>The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, you must use Architecture to specify the system architecture of the system disk. Valid values:</p>
+         * <ul>
+         * <li>i386</li>
+         * <li>x86_64</li>
+         * <li>arm64</li>
+         * </ul>
+         * <p>Default value: x86_64.</p>
          * 
-         * *   i386
-         * *   x86\_64
-         * *   arm64
-         * 
-         * Default value: x86\_64.
+         * <strong>example:</strong>
+         * <p>x86_64</p>
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -345,16 +348,21 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The boot mode of the image. Valid values:
-         * <p>
+         * <p>The boot mode of the image. Valid values:</p>
+         * <ul>
+         * <li>BIOS: Basic Input/Output System (BIOS)</li>
+         * <li>UEFI: Unified Extensible Firmware Interface (UEFI)</li>
+         * <li>UEFI-Preferred: BIOS and UEFI</li>
+         * </ul>
+         * <blockquote>
+         * <p> Before you change the boot mode of an image, we recommend that you get familiar with the boot modes supported by the image to ensure that instances created from the image can start as expected. If you do not know which boot modes are supported by the image, we recommend that you use the image check feature to perform a check. For information about the image check feature, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a>.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p> For information about the UEFI-Preferred boot mode, see <a href="https://help.aliyun.com/document_detail/2244655.html">Best practices for ECS instance boot modes</a>.</p>
+         * </blockquote>
          * 
-         * *   BIOS: Basic Input/Output System (BIOS)
-         * *   UEFI: Unified Extensible Firmware Interface (UEFI)
-         * *   UEFI-Preferred: BIOS and UEFI
-         * 
-         * >  Before you change the boot mode of an image, we recommend that you get familiar with the boot modes supported by the image to ensure that instances created from the image can start as expected. If you do not know which boot modes are supported by the image, we recommend that you use the image check feature to perform a check. For information about the image check feature, see [Overview of image check](~~439819~~).
-         * 
-         * >  For information about the UEFI-Preferred boot mode, see [Best practices for ECS instance boot modes](~~2244655~~).
+         * <strong>example:</strong>
+         * <p>BIOS</p>
          */
         public Builder bootMode(String bootMode) {
             this.putQueryParameter("BootMode", bootMode);
@@ -363,7 +371,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -372,7 +383,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The image description. The description must be 2 to 256 characters in length and cannot start with [http:// or https://.](http://https://。)
+         * <p>The image description. The description must be 2 to 256 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImageTestDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -381,10 +395,13 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The mode in which to check the custom image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.
-         * <p>
+         * <p>The mode in which to check the custom image. If you do not specify this parameter, the image is not checked. Only the standard check mode is supported.</p>
+         * <blockquote>
+         * <p> This parameter is supported for most Linux and Windows operating system versions. For information about image check items and operating system limits for image check, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a> and <a href="https://help.aliyun.com/document_detail/475800.html">Operating system limits for image check</a>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is supported for most Linux and Windows operating system versions. For information about image check items and operating system limits for image check, see [Overview of image check](~~439819~~) and [Operating system limits for image check](~~475800~~).
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder detectionStrategy(String detectionStrategy) {
             this.putQueryParameter("DetectionStrategy", detectionStrategy);
@@ -393,7 +410,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The information about the custom image.
+         * <p>The information about the custom image.</p>
          */
         public Builder diskDeviceMapping(java.util.List < DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
@@ -402,7 +419,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the image family. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with acs: or aliyun. The name cannot contain http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou-daily-update</p>
          */
         public Builder imageFamily(String imageFamily) {
             this.putQueryParameter("ImageFamily", imageFamily);
@@ -411,7 +431,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The name of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the custom image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestCentOS</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -420,10 +443,13 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The image version.
-         * <p>
+         * <p>The image version.</p>
+         * <blockquote>
+         * <p>If you specify an instance by configuring <code>InstanceId</code>, and the instance uses an Alibaba Cloud Marketplace image or a custom image that is created from an Alibaba Cloud Marketplace image, you must leave this parameter empty or set this parameter to the value of ImageVersion of the instance.</p>
+         * </blockquote>
          * 
-         * > If you specify an instance by configuring `InstanceId`, and the instance uses an Alibaba Cloud Marketplace image or a custom image that is created from an Alibaba Cloud Marketplace image, you must leave this parameter empty or set this parameter to the value of ImageVersion of the instance.
+         * <strong>example:</strong>
+         * <p>2017011017</p>
          */
         public Builder imageVersion(String imageVersion) {
             this.putQueryParameter("ImageVersion", imageVersion);
@@ -432,7 +458,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1g6zv0ce8oghu7****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -459,37 +488,39 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The operating system distribution for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, use Platform to specify the operating system distribution for the system disk. Valid values:
-         * <p>
+         * <p>The operating system distribution for the system disk in the custom image. If you specify a data disk snapshot to create the system disk of the custom image, use Platform to specify the operating system distribution for the system disk. Valid values:</p>
+         * <ul>
+         * <li>Aliyun</li>
+         * <li>Anolis</li>
+         * <li>CentOS</li>
+         * <li>Ubuntu</li>
+         * <li>CoreOS</li>
+         * <li>SUSE</li>
+         * <li>Debian</li>
+         * <li>OpenSUSE</li>
+         * <li>FreeBSD</li>
+         * <li>RedHat</li>
+         * <li>Kylin</li>
+         * <li>UOS</li>
+         * <li>Fedora</li>
+         * <li>Fedora CoreOS</li>
+         * <li>CentOS Stream</li>
+         * <li>AlmaLinux</li>
+         * <li>Rocky Linux</li>
+         * <li>Gentoo</li>
+         * <li>Customized Linux</li>
+         * <li>Others Linux</li>
+         * <li>Windows Server 2022</li>
+         * <li>Windows Server 2019</li>
+         * <li>Windows Server 2016</li>
+         * <li>Windows Server 2012</li>
+         * <li>Windows Server 2008</li>
+         * <li>Windows Server 2003</li>
+         * </ul>
+         * <p>Default value: Others Linux.</p>
          * 
-         * *   Aliyun
-         * *   Anolis
-         * *   CentOS
-         * *   Ubuntu
-         * *   CoreOS
-         * *   SUSE
-         * *   Debian
-         * *   OpenSUSE
-         * *   FreeBSD
-         * *   RedHat
-         * *   Kylin
-         * *   UOS
-         * *   Fedora
-         * *   Fedora CoreOS
-         * *   CentOS Stream
-         * *   AlmaLinux
-         * *   Rocky Linux
-         * *   Gentoo
-         * *   Customized Linux
-         * *   Others Linux
-         * *   Windows Server 2022
-         * *   Windows Server 2019
-         * *   Windows Server 2016
-         * *   Windows Server 2012
-         * *   Windows Server 2008
-         * *   Windows Server 2003
-         * 
-         * Default value: Others Linux.
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -498,7 +529,11 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The region ID of the custom image that you want to create. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID of the custom image that you want to create. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -507,10 +542,13 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.
-         * <p>
+         * <p>The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.</p>
+         * <blockquote>
+         * <p> If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify <code>ResourceGroupId</code>, the <code>Forbbiden: User not authorized to operate on the specified resource</code> error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CreateImage operation again.</p>
+         * </blockquote>
          * 
-         * >  If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify `ResourceGroupId`, the `Forbbiden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CreateImage operation again.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -537,7 +575,10 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot that you want to use to create the custom image.
+         * <p>The ID of the snapshot that you want to use to create the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp17441ohwkdca0****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -546,7 +587,7 @@ public class CreateImageRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -561,6 +602,12 @@ public class CreateImageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateImageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageRequest</p>
+     */
     public static class DiskDeviceMapping extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
@@ -624,11 +671,14 @@ public class CreateImageRequest extends Request {
             private String snapshotId; 
 
             /**
-             * The device name of disk N in the custom image. Valid values:
-             * <p>
+             * <p>The device name of disk N in the custom image. Valid values:</p>
+             * <ul>
+             * <li>For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.</li>
+             * <li>For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.</li>
+             * </ul>
              * 
-             * *   For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.
-             * *   For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.
+             * <strong>example:</strong>
+             * <p>/dev/vdb</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -636,11 +686,14 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:
-             * <p>
+             * <p>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:</p>
+             * <ul>
+             * <li>system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.</li>
+             * <li>data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.</li>
+             * </ul>
              * 
-             * *   system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.
-             * *   data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -648,15 +701,20 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size vary based on the value of DiskDeviceMapping.N.SnapshotId.
-             * <p>
+             * <p>The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size vary based on the value of DiskDeviceMapping.N.SnapshotId.</p>
+             * <ul>
+             * <li><p>If no corresponding snapshot IDs are specified in the value of DiskDeviceMapping.N.SnapshotId, DiskDeviceMapping.N.Size has the following valid values and default values:</p>
+             * <ul>
+             * <li>For basic disks, the valid values range from 5 to 2000, and the default value is 5.</li>
+             * <li>For other disks, the valid values range from 20 to 32768, and the default value is 20.</li>
+             * </ul>
+             * </li>
+             * <li><p>If a corresponding snapshot ID is specified in the value of DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.</p>
+             * </li>
+             * </ul>
              * 
-             * *   If no corresponding snapshot IDs are specified in the value of DiskDeviceMapping.N.SnapshotId, DiskDeviceMapping.N.Size has the following valid values and default values:
-             * 
-             *     *   For basic disks, the valid values range from 5 to 2000, and the default value is 5.
-             *     *   For other disks, the valid values range from 20 to 32768, and the default value is 20.
-             * 
-             * *   If a corresponding snapshot ID is specified in the value of DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -664,7 +722,10 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * The ID of snapshot N to use to create the custom image.
+             * <p>The ID of snapshot N to use to create the custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bp17441ohwkdca0****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -678,6 +739,12 @@ public class CreateImageRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateImageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -717,7 +784,10 @@ public class CreateImageRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with `aliyun` or `acs:`. The tag key cannot contain `http://` or `https://`.
+             * <p>The key of tag N of the custom image. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -725,7 +795,10 @@ public class CreateImageRequest extends Request {
             }
 
             /**
-             * The value of tag N of the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
+             * <p>The value of tag N of the custom image. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ValueTest</p>
              */
             public Builder value(String value) {
                 this.value = value;

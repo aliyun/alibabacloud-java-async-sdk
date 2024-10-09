@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBandwidthLimitationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBandwidthLimitationResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the maximum public bandwidth.
+         * <p>Details about the maximum public bandwidth.</p>
          */
         public Builder bandwidths(Bandwidths bandwidths) {
             this.bandwidths = bandwidths;
@@ -57,7 +58,10 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBandwidthLimitationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBandwidthLimitationResponseBody</p>
+     */
     public static class Bandwidth extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
@@ -133,11 +143,14 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * The billing method for network usage. Valid values:
-             * <p>
+             * <p>The billing method for network usage. Valid values:</p>
+             * <ul>
+             * <li>PayByBandwidth</li>
+             * <li>PayByTraffic</li>
+             * </ul>
              * 
-             * *   PayByBandwidth
-             * *   PayByTraffic
+             * <strong>example:</strong>
+             * <p>PayByTraffic</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -145,7 +158,10 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum public bandwidth.
+             * <p>The maximum public bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -153,7 +169,10 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum public bandwidth.
+             * <p>The minimum public bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -161,7 +180,10 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the public bandwidth.
+             * <p>The unit of the public bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mbps</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -175,6 +197,12 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBandwidthLimitationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBandwidthLimitationResponseBody</p>
+     */
     public static class Bandwidths extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private java.util.List < Bandwidth> bandwidth;

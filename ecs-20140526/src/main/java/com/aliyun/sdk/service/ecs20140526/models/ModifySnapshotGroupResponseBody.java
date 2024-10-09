@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySnapshotGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ModifySnapshotGroupResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifySnapshotGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The new description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The new description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A00B5E55-76B7-42C8-8A80-AF10E980DCC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

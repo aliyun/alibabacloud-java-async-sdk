@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartTerminalSessionRequest} extends {@link RequestModel}
  *
  * <p>StartTerminalSessionRequest</p>
@@ -204,10 +205,13 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The command to run after the session is initiated. The command length cannot exceed 512 characters.
-         * <p>
+         * <p>The command to run after the session is initiated. The command length cannot exceed 512 characters.</p>
+         * <blockquote>
+         * <p> If you specify the <code>CommandLine</code> parameter, you cannot specify the <code>PortNumber</code> or <code>TargetServer</code> parameter.</p>
+         * </blockquote>
          * 
-         * >  If you specify the `CommandLine` parameter, you cannot specify the `PortNumber` or `TargetServer` parameter.
+         * <strong>example:</strong>
+         * <p>ssh <a href="mailto:root@192.168.0.246">root@192.168.0.246</a></p>
          */
         public Builder commandLine(String commandLine) {
             this.putQueryParameter("CommandLine", commandLine);
@@ -216,7 +220,8 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The instance IDs.
+         * <p>The instance IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -243,10 +248,11 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.
-         * <p>
+         * <p>The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.</p>
+         * <p>This parameter is empty by default, which indicates that no port is configured to forward data.</p>
          * 
-         * This parameter is empty by default, which indicates that no port is configured to forward data.
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder portNumber(Integer portNumber) {
             this.putQueryParameter("PortNumber", portNumber);
@@ -255,7 +261,11 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -282,10 +292,13 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).
-         * <p>
+         * <p>The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).</p>
+         * <blockquote>
+         * <p> If this parameter is not empty, <code>PortNumber</code> specifies the port number that is used by the managed instance to access the destination service in the VPC.</p>
+         * </blockquote>
          * 
-         * >  If this parameter is not empty, `PortNumber` specifies the port number that is used by the managed instance to access the destination service in the VPC.
+         * <strong>example:</strong>
+         * <p>192.168.0.246</p>
          */
         public Builder targetServer(String targetServer) {
             this.putQueryParameter("TargetServer", targetServer);
@@ -294,7 +307,10 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * The username used for connection establishment.
+         * <p>The username used for connection establishment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

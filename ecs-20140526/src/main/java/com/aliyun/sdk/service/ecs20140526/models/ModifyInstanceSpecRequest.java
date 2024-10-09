@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceSpecRequest</p>
@@ -306,22 +307,22 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether cross-cluster instance type upgrades are supported. Valid values:
-         * <p>
+         * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <p>When you set <code>AllowMigrateAcrossZone</code> to true and upgrade the instance based on the returned information, take note of the following items:</p>
+         * <p>Instance that resides in the classic network:</p>
+         * <ul>
+         * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (<code>cloud</code>) are identified as xvd* such as <strong>xvda</strong> and <strong>xvdb</strong>, and ultra disks (<code>cloud_efficiency</code>) and standard SSDs (<code>cloud_ssd</code>) are identified as vd* such as <strong>vda</strong> and <strong>vdb</strong>.</li>
+         * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</li>
+         * </ul>
+         * <p>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (<code>cloud</code>) are identified as xvd* such as <strong>xvda</strong> and <strong>xvdb</strong>, and ultra disks (<code>cloud_efficiency</code>) and standard SSDs (<code>cloud_ssd</code>) are identified as vd* such as <strong>vda</strong> and <strong>vdb</strong>.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * When you set `AllowMigrateAcrossZone` to true and upgrade the instance based on the returned information, take note of the following items:
-         * 
-         * Instance that resides in the classic network:
-         * 
-         * *   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (`cloud`) are identified as xvd\* such as **xvda** and **xvdb**, and ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified as vd\* such as **vda** and **vdb**.
-         * *   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.
-         * 
-         * Instance that resides in a virtual private cloud (VPC): For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (`cloud`) are identified as xvd\* such as **xvda** and **xvdb**, and ultra disks (`cloud_efficiency`) and standard SSDs (`cloud_ssd`) are identified as vd\* such as **vda** and **vdb**.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder allowMigrateAcrossZone(Boolean allowMigrateAcrossZone) {
             this.putQueryParameter("AllowMigrateAcrossZone", allowMigrateAcrossZone);
@@ -330,13 +331,15 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to submit an asynchronous request. Valid values:
-         * <p>
+         * <p>Specifies whether to submit an asynchronous request. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -345,7 +348,10 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -363,11 +369,14 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false (default): performs a dry run and performs the actual request.</li>
+         * </ul>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   false (default): performs a dry run and performs the actual request.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -376,7 +385,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -385,7 +398,10 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The new instance type. For more information, see [Overview of instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
+         * <p>The new instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -394,13 +410,17 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:
-         * <p>
+         * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
+         * <ul>
+         * <li>When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid value of this parameter ranges from 1 to 10 and the default value is 10.</li>
+         * <li>When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the <code>InternetMaxBandwidthOut</code> value and the default value is the <code>InternetMaxBandwidthOut</code> value.</li>
+         * </ul>
+         * <blockquote>
+         * <p>When the <strong>pay-by-traffic</strong> billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * </blockquote>
          * 
-         * *   When the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid value of this parameter ranges from 1 to 10 and the default value is 10.
-         * *   When the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the `InternetMaxBandwidthOut` value and the default value is the `InternetMaxBandwidthOut` value.
-         * 
-         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder internetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.putQueryParameter("InternetMaxBandwidthIn", internetMaxBandwidthIn);
@@ -409,10 +429,13 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.
-         * <p>
+         * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
+         * <blockquote>
+         * <p>When the <strong>pay-by-traffic</strong> billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * </blockquote>
          * 
-         * > When the **pay-by-traffic** billing method for network usage is used, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.putQueryParameter("InternetMaxBandwidthOut", internetMaxBandwidthOut);
@@ -421,13 +444,12 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * >  This parameter is not publicly available.
-         * <p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          * 
-         * Valid values:
-         * 
-         * *   Online
-         * *   Offline
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -478,6 +500,12 @@ public class ModifyInstanceSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceSpecRequest</p>
+     */
     public static class SystemDisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -505,13 +533,17 @@ public class ModifyInstanceSpecRequest extends Request {
             private String category; 
 
             /**
-             * The new category of the system disk. Valid values:
-             * <p>
+             * <p>The new category of the system disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect only when you upgrade a non-I/O optimized instance of <a href="https://help.aliyun.com/document_detail/55263.html">a retired instance type</a> to an I/O optimized instance of <a href="https://help.aliyun.com/document_detail/25378.html">an instance type available for purchase</a>.</p>
+             * </blockquote>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * 
-             * >  This parameter takes effect only when you upgrade a non-I/O optimized instance of [a retired instance type](~~55263~~) to an I/O optimized instance of [an instance type available for purchase](~~25378~~).
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -525,6 +557,12 @@ public class ModifyInstanceSpecRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyInstanceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceSpecRequest</p>
+     */
     public static class Temporary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -577,7 +615,12 @@ public class ModifyInstanceSpecRequest extends Request {
             private String startTime; 
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>hide</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -585,7 +628,12 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -593,7 +641,12 @@ public class ModifyInstanceSpecRequest extends Request {
             }
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>hide</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -607,6 +660,12 @@ public class ModifyInstanceSpecRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyInstanceSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceSpecRequest</p>
+     */
     public static class Disk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -658,13 +717,17 @@ public class ModifyInstanceSpecRequest extends Request {
             private String performanceLevel; 
 
             /**
-             * The new category of the system disk. Valid values:
-             * <p>
+             * <p>The new category of the system disk. Valid values:</p>
+             * <ul>
+             * <li>cloud_efficiency: ultra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter takes effect only when you upgrade a non-I/O optimized instance of <a href="https://help.aliyun.com/document_detail/55263.html">a retired instance type</a> to an I/O optimized instance of <a href="https://help.aliyun.com/document_detail/25378.html">an instance type available for purchase</a>.</p>
+             * </blockquote>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * 
-             * >  This parameter takes effect only when you upgrade a non-I/O optimized instance of [a retired instance type](~~55263~~) to an I/O optimized instance of [an instance type available for purchase](~~25378~~).
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;

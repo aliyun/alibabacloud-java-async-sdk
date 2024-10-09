@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagePipelineExecutionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImagePipelineExecutionsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the image creation task.
+         * <p>Details of the image creation task.</p>
          */
         public Builder imagePipelineExecution(ImagePipelineExecution imagePipelineExecution) {
             this.imagePipelineExecution = imagePipelineExecution;
@@ -93,7 +94,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries per page.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the "Usage notes" section in this topic.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. For information about how to use the returned value, see the &quot;Usage notes&quot; section in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned image components.
+         * <p>The total number of returned image components.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImagePipelineExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelineExecutionsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -169,7 +188,12 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -177,7 +201,12 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -191,6 +220,12 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagePipelineExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelineExecutionsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -232,6 +267,12 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagePipelineExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelineExecutionsResponseBody</p>
+     */
     public static class ImagePipelineExecutionSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -355,7 +396,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The time when the image creation task was created.
+             * <p>The time when the image creation task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-24T06:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -363,7 +407,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image creation task.
+             * <p>The ID of the image creation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exec-5fb8facb8ed7427c****</p>
              */
             public Builder executionId(String executionId) {
                 this.executionId = executionId;
@@ -371,7 +418,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp67acfmxazb4p****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -379,7 +429,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image template.
+             * <p>The ID of the image template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip-2ze5tsl5bp6nf2b3****</p>
              */
             public Builder imagePipelineId(String imagePipelineId) {
                 this.imagePipelineId = imagePipelineId;
@@ -387,7 +440,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The data returned.
+             * <p>The data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Create transition vpc &quot;vpc-2ze70rc7093j9idu6****&quot; success!</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -395,7 +451,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time of the image creation task.
+             * <p>The last modification time of the image creation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-25T06:00:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -403,7 +462,10 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -411,16 +473,19 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image creation task. Valid values:
-             * <p>
+             * <p>The status of the image creation task. Valid values:</p>
+             * <ul>
+             * <li>BUILDING</li>
+             * <li>DISTRIBUTING</li>
+             * <li>RELEASING</li>
+             * <li>SUCCESS</li>
+             * <li>FAILED</li>
+             * <li>CANCELLING</li>
+             * <li>CANCELLED</li>
+             * </ul>
              * 
-             * *   BUILDING
-             * *   DISTRIBUTING
-             * *   RELEASING
-             * *   SUCCESS
-             * *   FAILED
-             * *   CANCELLING
-             * *   CANCELLED
+             * <strong>example:</strong>
+             * <p>BUILDING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -428,7 +493,9 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -442,6 +509,12 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagePipelineExecutionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelineExecutionsResponseBody</p>
+     */
     public static class ImagePipelineExecution extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImagePipelineExecutionSet")
         private java.util.List < ImagePipelineExecutionSet> imagePipelineExecutionSet;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKeyPairsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information of the key pairs.
+         * <p>The information of the key pairs.</p>
          */
         public Builder keyPairs(KeyPairs keyPairs) {
             this.keyPairs = keyPairs;
@@ -93,7 +94,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of key pairs.
+         * <p>The total number of key pairs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyPairsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -169,7 +188,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the key pair.
+             * <p>The tag key of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -177,7 +199,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the key pair.
+             * <p>The tag value of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -191,6 +216,12 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyPairsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -232,6 +263,12 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyPairsResponseBody</p>
+     */
     public static class KeyPair extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -319,7 +356,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The time when the key pair was created.
+             * <p>The time when the key pair was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-04T08:33Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -327,7 +367,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The fingerprint of the key pair.
+             * <p>The fingerprint of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ABC1234567</p>
              */
             public Builder keyPairFingerPrint(String keyPairFingerPrint) {
                 this.keyPairFingerPrint = keyPairFingerPrint;
@@ -335,7 +378,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key pair.
+             * <p>The name of the key pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKeyPairName</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -343,7 +389,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the public key.
+             * <p>The content of the public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh-rsa****</p>
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;
@@ -351,7 +400,10 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-amnhr7u7c7hj****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -359,7 +411,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the key pair.
+             * <p>The tags of the key pair.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -373,6 +425,12 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeKeyPairsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyPairsResponseBody</p>
+     */
     public static class KeyPairs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyPair")
         private java.util.List < KeyPair> keyPair;

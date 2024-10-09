@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignIpv6AddressesRequest} extends {@link RequestModel}
  *
  * <p>AssignIpv6AddressesRequest</p>
@@ -219,7 +220,10 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -228,12 +232,14 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.
-         * <p>
+         * <p>The IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
+         * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::****</p>
+         * <blockquote>
+         * <p> You must specify <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but not both.</p>
+         * </blockquote>
          * 
-         * Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
-         * 
-         * >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.
+         * <strong>example:</strong>
+         * <p>2001:db8:1234:1a00::****</p>
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -242,10 +248,13 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
-         * <p>
+         * <p>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</p>
+         * <blockquote>
+         * <p> You must specify <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code>, but not both.</p>
+         * </blockquote>
          * 
-         * >  You must specify `Ipv6Addresses.N` or `Ipv6AddressCount`, but not both.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -254,10 +263,10 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.
-         * <p>
-         * 
-         * >  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.
+         * <p>The IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
+         * <blockquote>
+         * <p> To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
+         * </blockquote>
          */
         public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
@@ -266,10 +275,13 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.
-         * <p>
+         * <p>The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
+         * <blockquote>
+         * <p> To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</p>
+         * </blockquote>
          * 
-         * >  To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder ipv6PrefixCount(Integer ipv6PrefixCount) {
             this.putQueryParameter("Ipv6PrefixCount", ipv6PrefixCount);
@@ -278,7 +290,11 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ENI ID.
+         * <p>The ENI ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp1iqejowblx6h8j****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -305,7 +321,11 @@ public class AssignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

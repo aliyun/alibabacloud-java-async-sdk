@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupReferencesRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityGroupReferencesRequest</p>
@@ -166,7 +167,11 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
         }
 
         /**
-         * The region ID of the security group.
+         * <p>The region ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +198,11 @@ public class DescribeSecurityGroupReferencesRequest extends Request {
         }
 
         /**
-         * The IDs of N security groups that you want to query. Valid values of N: 1 to 10.
+         * <p>The IDs of N security groups that you want to query. Valid values of N: 1 to 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp14vtedjtobkvi****</p>
          */
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

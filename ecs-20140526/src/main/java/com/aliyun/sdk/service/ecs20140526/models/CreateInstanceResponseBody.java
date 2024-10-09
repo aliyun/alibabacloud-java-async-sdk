@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         private Float tradePrice; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -81,7 +85,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID. This parameter is returned only if `InstanceChargeType` is set to PrePaid.
+         * <p>The order ID. This parameter is returned only if <code>InstanceChargeType</code> is set to PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -89,7 +96,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The transaction price.
+         * <p>The transaction price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.165</p>
          */
         public Builder tradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;

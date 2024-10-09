@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVRoutersResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeVRoutersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVRoutersResponseBody</p>
+     */
     public static class RouteTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteTableId")
         private java.util.List < String > routeTableId;
@@ -171,6 +178,12 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVRoutersResponseBody</p>
+     */
     public static class VRouter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -332,6 +345,12 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVRoutersResponseBody</p>
+     */
     public static class VRouters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VRouter")
         private java.util.List < VRouter> vRouter;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticityAssuranceInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeElasticityAssuranceInstancesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the instances that match and use the elasticity assurance.
+         * <p>Details about the instances that match and use the elasticity assurance.</p>
          */
         public Builder elasticityAssuranceItem(ElasticityAssuranceItem elasticityAssuranceItem) {
             this.elasticityAssuranceItem = elasticityAssuranceItem;
@@ -93,7 +94,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The token used to start the next query.
+         * <p>The token used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticityAssuranceInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssuranceInstancesResponseBody</p>
+     */
     public static class InstanceIdSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -157,7 +176,10 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The instance ID
+             * <p>The instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -171,6 +193,12 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeElasticityAssuranceInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssuranceInstancesResponseBody</p>
+     */
     public static class ElasticityAssuranceItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceIdSet")
         private java.util.List < InstanceIdSet> instanceIdSet;

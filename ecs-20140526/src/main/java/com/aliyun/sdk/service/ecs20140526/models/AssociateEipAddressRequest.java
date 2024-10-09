@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateEipAddressRequest} extends {@link RequestModel}
  *
  * <p>AssociateEipAddressRequest</p>
@@ -153,7 +154,7 @@ public class AssociateEipAddressRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * <p>This parameter is required.</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -162,7 +163,7 @@ public class AssociateEipAddressRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

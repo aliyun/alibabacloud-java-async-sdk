@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationResultsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInvocationResultsRequest</p>
@@ -301,7 +302,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command.
+         * <p>The ID of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz0jdfwcsr****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -310,13 +314,15 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The encoding mode of the `CommandContent` and `Output` values in the response. Valid values:
-         * <p>
+         * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> values in the response. Valid values:</p>
+         * <ul>
+         * <li>PlainText: returns the original command content and command output.</li>
+         * <li>Base64: returns the Base64-encoded command content and command output.</li>
+         * </ul>
+         * <p>Default value: Base64.</p>
          * 
-         * *   PlainText: returns the original command content and command output.
-         * *   Base64: returns the Base64-encoded command content and command output.
-         * 
-         * Default value: Base64.
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -325,13 +331,15 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the results of historical scheduled executions. Valid values:
-         * <p>
+         * <p>Specifies whether to return the results of historical scheduled executions. Valid values:</p>
+         * <ul>
+         * <li>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</li>
+         * <li>false: does not return the results of historical scheduled executions.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).
-         * *   false: does not return the results of historical scheduled executions.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeHistory(Boolean includeHistory) {
             this.putQueryParameter("IncludeHistory", includeHistory);
@@ -340,7 +348,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1i7gg30r52z2em****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -349,7 +360,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the IDs of all command tasks.
+         * <p>The ID of the command task. You can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> operation to query the IDs of all command tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-hz0jdfwd9f****</p>
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -358,37 +372,46 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The execution status of the command task. Valid values:
-         * <p>
+         * <p>The execution status of the command task. Valid values:</p>
+         * <ul>
+         * <li><p>Running:</p>
+         * <ul>
+         * <li>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</li>
+         * <li>One-time task: If the command is being run on instances, the execution state is Running.</li>
+         * </ul>
+         * </li>
+         * <li><p>Finished:</p>
+         * <ul>
+         * <li>Scheduled task: The execution state can never be Finished.</li>
+         * <li>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>Success:</p>
+         * <ul>
+         * <li>One-time task: The execution is complete, and the exit code is 0.</li>
+         * <li>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</li>
+         * </ul>
+         * </li>
+         * <li><p>Failed:</p>
+         * <ul>
+         * <li>Scheduled task: The execution state can never be Failed.</li>
+         * <li>One-time task: The execution fails on all instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>PartialFailed:</p>
+         * <ul>
+         * <li>Scheduled task: The execution state can never be PartialFailed.</li>
+         * <li>One-time task: The execution fails on some instances.</li>
+         * </ul>
+         * </li>
+         * <li><p>Stopped: The task is stopped.</p>
+         * </li>
+         * <li><p>Stopping: The task is being stopped.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Running:
-         * 
-         *     *   Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.
-         *     *   One-time task: If the command is being run on instances, the execution state is Running.
-         * 
-         * *   Finished:
-         * 
-         *     *   Scheduled task: The execution state can never be Finished.
-         *     *   One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.
-         * 
-         * *   Success:
-         * 
-         *     *   One-time task: The execution is complete, and the exit code is 0.
-         *     *   Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.
-         * 
-         * *   Failed:
-         * 
-         *     *   Scheduled task: The execution state can never be Failed.
-         *     *   One-time task: The execution fails on all instances.
-         * 
-         * *   PartialFailed:
-         * 
-         *     *   Scheduled task: The execution state can never be PartialFailed.
-         *     *   One-time task: The execution fails on some instances.
-         * 
-         * *   Stopped: The task is stopped.
-         * 
-         * *   Stopping: The task is being stopped.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
@@ -397,12 +420,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -411,7 +434,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -438,12 +464,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -452,12 +478,12 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -466,7 +492,11 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -475,7 +505,10 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.
+         * <p>The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -502,7 +535,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The tags of the command task.
+         * <p>The tags of the command task.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -517,6 +550,12 @@ public class DescribeInvocationResultsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInvocationResultsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationResultsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -556,12 +595,12 @@ public class DescribeInvocationResultsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N of the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -569,10 +608,11 @@ public class DescribeInvocationResultsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N of the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

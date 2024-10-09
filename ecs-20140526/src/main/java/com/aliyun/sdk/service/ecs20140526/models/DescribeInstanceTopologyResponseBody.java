@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceTopologyResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private Topologys topologys; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the topology.
+         * <p>Details about the topology.</p>
          */
         public Builder topologys(Topologys topologys) {
             this.topologys = topologys;
@@ -70,6 +74,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Topology extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
@@ -109,7 +119,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the host where the ECS instance resides. This parameter is encrypted and cannot match the ID of the ECS instance. However, if the values of this parameter for different ECS instances are the same, the ECS instances reside on the same host.
+             * <p>The ID of the host where the ECS instance resides. This parameter is encrypted and cannot match the ID of the ECS instance. However, if the values of this parameter for different ECS instances are the same, the ECS instances reside on the same host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZWNobyBo****</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -117,7 +130,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -131,6 +147,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceTopologyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTopologyResponseBody</p>
+     */
     public static class Topologys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Topology")
         private java.util.List < Topology> topology;

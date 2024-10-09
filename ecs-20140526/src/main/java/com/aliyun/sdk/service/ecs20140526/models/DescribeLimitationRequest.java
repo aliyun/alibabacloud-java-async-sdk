@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLimitationRequest} extends {@link RequestModel}
  *
  * <p>DescribeLimitationRequest</p>
@@ -110,7 +111,7 @@ public class DescribeLimitationRequest extends Request {
         } 
 
         /**
-         * Limitation.
+         * <p>This parameter is required.</p>
          */
         public Builder limitation(String limitation) {
             this.putQueryParameter("Limitation", limitation);

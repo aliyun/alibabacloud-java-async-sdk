@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouterInterfacesRequest} extends {@link RequestModel}
  *
  * <p>DescribeRouterInterfacesRequest</p>
@@ -175,7 +176,7 @@ public class DescribeRouterInterfacesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,6 +209,12 @@ public class DescribeRouterInterfacesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouterInterfacesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeRouterInterfacesRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

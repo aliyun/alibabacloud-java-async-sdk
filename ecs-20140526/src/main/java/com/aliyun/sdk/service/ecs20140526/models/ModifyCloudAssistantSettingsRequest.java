@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCloudAssistantSettingsRequest} extends {@link RequestModel}
  *
  * <p>ModifyCloudAssistantSettingsRequest</p>
@@ -190,7 +191,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * The configurations for upgrading Cloud Assistant Agent.
+         * <p>The configurations for upgrading Cloud Assistant Agent.</p>
          */
         public Builder agentUpgradeConfig(AgentUpgradeConfig agentUpgradeConfig) {
             String agentUpgradeConfigShrink = shrink(agentUpgradeConfig, "AgentUpgradeConfig", "json");
@@ -200,7 +201,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * The configurations for delivering records to Object Storage Service (OSS).
+         * <p>The configurations for delivering records to Object Storage Service (OSS).</p>
          */
         public Builder ossDeliveryConfig(OssDeliveryConfig ossDeliveryConfig) {
             String ossDeliveryConfigShrink = shrink(ossDeliveryConfig, "OssDeliveryConfig", "json");
@@ -228,7 +229,11 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -255,11 +260,15 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * The Cloud Assistant feature. Valid values:
-         * <p>
+         * <p>The Cloud Assistant feature. Valid values:</p>
+         * <ul>
+         * <li>SessionManagerDelivery: the Session Record Delivery feature</li>
+         * <li>InvocationDelivery: the Operation Content and Result Delivery feature</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   SessionManagerDelivery: the Session Record Delivery feature
-         * *   InvocationDelivery: the Operation Content and Result Delivery feature
+         * <strong>example:</strong>
+         * <p>SessionManagerDelivery</p>
          */
         public Builder settingType(String settingType) {
             this.putQueryParameter("SettingType", settingType);
@@ -268,7 +277,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * The configurations for delivering records to Simple Log Service.
+         * <p>The configurations for delivering records to Simple Log Service.</p>
          */
         public Builder slsDeliveryConfig(SlsDeliveryConfig slsDeliveryConfig) {
             String slsDeliveryConfigShrink = shrink(slsDeliveryConfig, "SlsDeliveryConfig", "json");
@@ -284,6 +293,12 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCloudAssistantSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCloudAssistantSettingsRequest</p>
+     */
     public static class AgentUpgradeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindow")
         private java.util.List < String > allowedUpgradeWindow;
@@ -335,14 +350,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             private String timeZone; 
 
             /**
-             * The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The Coordinated Universal Time (UTC) time zone is used by default.
-             * <p>
-             * 
-             * Make sure that the upgrade windows specified by this parameter are not shorter than 1 hour.
-             * 
-             * Specify each upgrade window in the following format: \<Start time in the HH:mm format>-\<End time in the HH:mm format>.
-             * 
-             * For example, \[ "02:00-03:00", "05:00-06:00" ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.
+             * <p>The time windows during which Cloud Assistant Agent can be upgraded. The time windows can be accurate to minutes. The Coordinated Universal Time (UTC) time zone is used by default.</p>
+             * <p>Make sure that the upgrade windows specified by this parameter are not shorter than 1 hour.</p>
+             * <p>Specify each upgrade window in the following format: &lt;Start time in the HH:mm format&gt;-&lt;End time in the HH:mm format&gt;.</p>
+             * <p>For example, [ &quot;02:00-03:00&quot;, &quot;05:00-06:00&quot; ] specifies that Cloud Assistant Agent can be upgraded from 2:00:00 to 3:00:00 and from 5:00:00 to 6:00:00 every day in the UTC time zone.</p>
              */
             public Builder allowedUpgradeWindow(java.util.List < String > allowedUpgradeWindow) {
                 this.allowedUpgradeWindow = allowedUpgradeWindow;
@@ -350,10 +361,11 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable custom upgrade for Cloud Assistant Agent. If you set this parameter to false, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.
-             * <p>
+             * <p>Specifies whether to enable custom upgrade for Cloud Assistant Agent. If you set this parameter to false, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</p>
+             * <p>Default value: false.</p>
              * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -361,11 +373,14 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * The time zone of the time windows. Default value: UTC. You can specify a time zone in the following forms:
-             * <p>
+             * <p>The time zone of the time windows. Default value: UTC. You can specify a time zone in the following forms:</p>
+             * <ul>
+             * <li>The time zone name. Examples: Asia/Shanghai and America/Los_Angeles.</li>
+             * <li>The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). You cannot add leading zeros to the hour value.</li>
+             * </ul>
              * 
-             * *   The time zone name. Examples: Asia/Shanghai and America/Los_Angeles.
-             * *   The time offset from GMT. Examples: GMT+8:00 (UTC+8) and GMT-7:00 (UTC-7). You cannot add leading zeros to the hour value.
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -379,6 +394,12 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyCloudAssistantSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCloudAssistantSettingsRequest</p>
+     */
     public static class OssDeliveryConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
@@ -466,7 +487,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             private String prefix; 
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -474,7 +498,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * Specifies whether to deliver records to OSS. Default value: false.
+             * <p>Specifies whether to deliver records to OSS. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -482,11 +509,14 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * The OSS encryption algorithm. Valid values:
-             * <p>
+             * <p>The OSS encryption algorithm. Valid values:</p>
+             * <ul>
+             * <li>AES256</li>
+             * <li>SM4</li>
+             * </ul>
              * 
-             * *   AES256
-             * *   SM4
+             * <strong>example:</strong>
+             * <p>AES256</p>
              */
             public Builder encryptionAlgorithm(String encryptionAlgorithm) {
                 this.encryptionAlgorithm = encryptionAlgorithm;
@@ -494,7 +524,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * The ID of the customer master key (CMK) when EncryptionType is set to KMS.
+             * <p>The ID of the customer master key (CMK) when EncryptionType is set to KMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a807****7a70e</p>
              */
             public Builder encryptionKeyId(String encryptionKeyId) {
                 this.encryptionKeyId = encryptionKeyId;
@@ -502,12 +535,15 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * The OSS encryption method. Valid values:
-             * <p>
+             * <p>The OSS encryption method. Valid values:</p>
+             * <ul>
+             * <li>Inherit: the encryption method used by the specified bucket.</li>
+             * <li>OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</li>
+             * <li>KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).</li>
+             * </ul>
              * 
-             * *   Inherit: the encryption method used by the specified bucket.
-             * *   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).
-             * *   KMS: server-side encryption by using Key Management Service managed keys (SSE-KMS).
+             * <strong>example:</strong>
+             * <p>Inherit</p>
              */
             public Builder encryptionType(String encryptionType) {
                 this.encryptionType = encryptionType;
@@ -515,13 +551,15 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * The prefix of the OSS bucket directory. The prefix must meet the following requirements:
-             * <p>
+             * <p>The prefix of the OSS bucket directory. The prefix must meet the following requirements:</p>
+             * <ul>
+             * <li>The prefix can be up to 254 characters in length.</li>
+             * <li>The prefix cannot start with a forward slash (/) or a backslash (\).</li>
+             * </ul>
+             * <p>Note: If you do not need a directory prefix, specify a pair of double quotation marks (&quot;&quot;) for this parameter to clear the directory prefix that you specified.</p>
              * 
-             * *   The prefix can be up to 254 characters in length.
-             * *   The prefix cannot start with a forward slash (/) or a backslash (\\).
-             * 
-             * Note: If you do not need a directory prefix, specify a pair of double quotation marks ("") for this parameter to clear the directory prefix that you specified.
+             * <strong>example:</strong>
+             * <p>sessionmanager/audit</p>
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -535,6 +573,12 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyCloudAssistantSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCloudAssistantSettingsRequest</p>
+     */
     public static class SlsDeliveryConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
@@ -586,7 +630,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             private String projectName; 
 
             /**
-             * Specifies whether to deliver records to Simple Log Service. Default value: false.
+             * <p>Specifies whether to deliver records to Simple Log Service. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -594,7 +641,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * The name of the Logstore.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-logstore</p>
              */
             public Builder logstoreName(String logstoreName) {
                 this.logstoreName = logstoreName;
@@ -602,7 +652,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             }
 
             /**
-             * The name of the Simple Log Service project.
+             * <p>The name of the Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-project</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;

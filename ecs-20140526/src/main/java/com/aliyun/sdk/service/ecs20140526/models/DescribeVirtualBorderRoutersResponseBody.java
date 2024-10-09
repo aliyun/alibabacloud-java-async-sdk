@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVirtualBorderRoutersResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class VirtualBorderRouterType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
@@ -551,6 +558,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersResponseBody</p>
+     */
     public static class VirtualBorderRouterSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterType")
         private java.util.List < VirtualBorderRouterType> virtualBorderRouterType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleasePublicIpAddressRequest} extends {@link RequestModel}
  *
  * <p>ReleasePublicIpAddressRequest</p>
@@ -119,7 +120,12 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * <blockquote>
+         * <p>This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -128,7 +134,10 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -137,7 +146,11 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The public IP address of the instance.
+         * <p>The public IP address of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>121.40.**.**</code></p>
          */
         public Builder publicIpAddress(String publicIpAddress) {
             this.putQueryParameter("PublicIpAddress", publicIpAddress);
@@ -146,7 +159,10 @@ public class ReleasePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBandwidthPackagesRequest} extends {@link RequestModel}
  *
  * <p>DescribeBandwidthPackagesRequest</p>
@@ -221,7 +222,7 @@ public class DescribeBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

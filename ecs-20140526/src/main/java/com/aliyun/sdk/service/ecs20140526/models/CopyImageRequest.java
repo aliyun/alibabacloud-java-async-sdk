@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyImageRequest} extends {@link RequestModel}
  *
  * <p>CopyImageRequest</p>
@@ -261,7 +262,10 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The description of the image copy. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the image copy. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a description example.</p>
          */
         public Builder destinationDescription(String destinationDescription) {
             this.putQueryParameter("DestinationDescription", destinationDescription);
@@ -270,7 +274,10 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot contain `http://` or `https://`. The name cannot start with `acs:` or `aliyun`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the new image. The name must be 2 to 128 characters in length. The name must start with a letter and cannot contain <code>http://</code> or <code>https://</code>. The name cannot start with <code>acs:</code> or <code>aliyun</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YourImageName</p>
          */
         public Builder destinationImageName(String destinationImageName) {
             this.putQueryParameter("DestinationImageName", destinationImageName);
@@ -279,7 +286,10 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the destination region to which the source custom image is copied.
+         * <p>The ID of the destination region to which the source custom image is copied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -288,7 +298,12 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * <blockquote>
+         * <p>This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder encryptAlgorithm(String encryptAlgorithm) {
             this.putQueryParameter("EncryptAlgorithm", encryptAlgorithm);
@@ -297,13 +312,15 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * Specifies whether to encrypt the new image.
-         * <p>
+         * <p>Specifies whether to encrypt the new image.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putQueryParameter("Encrypted", encrypted);
@@ -312,7 +329,11 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the source custom image.
+         * <p>The ID of the source custom image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1h46wfpjsjastc****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -321,7 +342,10 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the key used to encrypt the image copy.
+         * <p>The ID of the key used to encrypt the image copy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e522b26d-abf6-4e0d-b5da-04b7******3c</p>
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -348,7 +372,11 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The region ID of the source custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the source custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -357,10 +385,13 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the new image. If you do not specify this parameter, the new image is assigned to the default resource group.
-         * <p>
+         * <p>The ID of the resource group to which to assign the new image. If you do not specify this parameter, the new image is assigned to the default resource group.</p>
+         * <blockquote>
+         * <p> If you call the CopyImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify <code>ResourceGroupId</code>, the <code>Forbidden: User not authorized to operate on the specified resource</code> error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CopyImage operation again.</p>
+         * </blockquote>
          * 
-         * >  If you call the CopyImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify `ResourceGroupId`, the `Forbidden: User not authorized to operate on the specified resource` error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CopyImage operation again.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -387,7 +418,7 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -402,6 +433,12 @@ public class CopyImageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CopyImageRequest} extends {@link TeaModel}
+     *
+     * <p>CopyImageRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -441,7 +478,10 @@ public class CopyImageRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the image copy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * <p>The key of tag N of the image copy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -449,7 +489,10 @@ public class CopyImageRequest extends Request {
             }
 
             /**
-             * The value of tag N of the image copy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.
+             * <p>The value of tag N of the image copy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

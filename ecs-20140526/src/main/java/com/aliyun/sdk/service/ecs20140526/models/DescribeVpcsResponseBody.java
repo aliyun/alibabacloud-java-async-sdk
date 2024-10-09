@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class UserCidrs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserCidr")
         private java.util.List < String > userCidr;
@@ -171,6 +178,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class VSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;
@@ -212,6 +225,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Vpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -453,6 +472,12 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcsResponseBody</p>
+     */
     public static class Vpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Vpc")
         private java.util.List < Vpc> vpc;

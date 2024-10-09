@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHaVipsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class AssociatedEipAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("associatedEipAddresse")
         private java.util.List < String > associatedEipAddresse;
@@ -171,6 +178,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class AssociatedInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("associatedInstance")
         private java.util.List < String > associatedInstance;
@@ -212,6 +225,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class HaVip extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociatedEipAddresses")
         private AssociatedEipAddresses associatedEipAddresses;
@@ -453,6 +472,12 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHaVipsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsResponseBody</p>
+     */
     public static class HaVips extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HaVip")
         private java.util.List < HaVip> haVip;

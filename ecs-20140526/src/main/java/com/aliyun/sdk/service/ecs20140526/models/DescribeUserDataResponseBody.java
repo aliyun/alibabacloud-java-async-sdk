@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserDataResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeUserDataResponseBody extends TeaModel {
         private String userData; 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp14bnftyqhxg9ij****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -81,7 +85,10 @@ public class DescribeUserDataResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -89,7 +96,10 @@ public class DescribeUserDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class DescribeUserDataResponseBody extends TeaModel {
         }
 
         /**
-         * The user data of the instance.
+         * <p>The user data of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZWNobyBoZWxsbyBlY321ABC</p>
          */
         public Builder userData(String userData) {
             this.userData = userData;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachInstanceRamRoleResponseBody} extends {@link TeaModel}
  *
  * <p>DetachInstanceRamRoleResponseBody</p>
@@ -85,7 +86,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the results of detaching instance RAM roles from the instances.
+         * <p>Details about the results of detaching instance RAM roles from the instances.</p>
          */
         public Builder detachInstanceRamRoleResults(DetachInstanceRamRoleResults detachInstanceRamRoleResults) {
             this.detachInstanceRamRoleResults = detachInstanceRamRoleResults;
@@ -93,7 +94,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The number of instances from which instance RAM roles failed to be detached.
+         * <p>The number of instances from which instance RAM roles failed to be detached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failCount(Integer failCount) {
             this.failCount = failCount;
@@ -101,7 +105,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance RAM role.
+         * <p>The name of the instance RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RamRoleTest</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.ramRoleName = ramRoleName;
@@ -109,7 +116,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances from which you attempted to detach instance RAM roles.
+         * <p>The total number of instances from which you attempted to detach instance RAM roles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetachInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachInstanceRamRoleResponseBody</p>
+     */
     public static class InstanceRamRoleSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -169,7 +188,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             private String ramRoleName; 
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -177,7 +199,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance RAM role.
+             * <p>The name of the instance RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RamRoleTest</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -191,6 +216,12 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetachInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachInstanceRamRoleResponseBody</p>
+     */
     public static class InstanceRamRoleSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceRamRoleSet")
         private java.util.List < InstanceRamRoleSet> instanceRamRoleSet;
@@ -232,6 +263,12 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetachInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachInstanceRamRoleResponseBody</p>
+     */
     public static class DetachInstanceRamRoleResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -307,7 +344,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Indicates whether the instance RAM role was detached. If 200 is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the "Error codes" section.
+             * <p>Indicates whether the instance RAM role was detached. If 200 is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the &quot;Error codes&quot; section.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -315,7 +355,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance from which you attempted to detach the instance RAM role.
+             * <p>The ID of the instance from which you attempted to detach the instance RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -323,7 +366,7 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the instance RAM role of the instance.
+             * <p>Details about the instance RAM role of the instance.</p>
              */
             public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
                 this.instanceRamRoleSets = instanceRamRoleSets;
@@ -331,7 +374,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance RAM role was detached. If success is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the "Error codes" section.
+             * <p>Indicates whether the instance RAM role was detached. If success is returned, the instance RAM role was detached. If any other value is returned, the instance RAM role failed to be detached. For more information, see the &quot;Error codes&quot; section.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -339,7 +385,10 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance RAM role was detached.
+             * <p>Indicates whether the instance RAM role was detached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -353,6 +402,12 @@ public class DetachInstanceRamRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetachInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachInstanceRamRoleResponseBody</p>
+     */
     public static class DetachInstanceRamRoleResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetachInstanceRamRoleResult")
         private java.util.List < DetachInstanceRamRoleResult> detachInstanceRamRoleResult;

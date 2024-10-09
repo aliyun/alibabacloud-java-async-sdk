@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAutoRenewAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceAutoRenewAttributeRequest</p>
@@ -189,10 +190,13 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. You can specify up to 100 subscription instance IDs in a single request. Separate multiple instance IDs with commas (,).
-         * <p>
+         * <p>The IDs of the instances. You can specify up to 100 subscription instance IDs in a single request. Separate multiple instance IDs with commas (,).</p>
+         * <blockquote>
+         * <p><code>InstanceId</code> and <code>RenewalStatus</code> cannot be empty at the same time.</p>
+         * </blockquote>
          * 
-         * > `InstanceId` and `RenewalStatus` cannot be empty at the same time.
+         * <strong>example:</strong>
+         * <p>i-bp18x3z4hc7bixhx****,i-bp1g6zv0ce8oghu7****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -219,12 +223,12 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -233,12 +237,12 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -247,7 +251,11 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -256,12 +264,15 @@ public class DescribeInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal state of the instance. Valid values:
-         * <p>
+         * <p>The auto-renewal state of the instance. Valid values:</p>
+         * <ul>
+         * <li>AutoRenewal: Auto-renewal is enabled for the instance.</li>
+         * <li>Normal: Auto-renewal is disabled for the instance.</li>
+         * <li>NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the <a href="https://help.aliyun.com/document_detail/52843.html">ModifyInstanceAutoRenewAttribute</a> operation to change its auto-renewal status to <code>Normal</code>. Then, you can manually renew the instance or enable auto-renewal for the instance.</li>
+         * </ul>
          * 
-         * *   AutoRenewal: Auto-renewal is enabled for the instance.
-         * *   Normal: Auto-renewal is disabled for the instance.
-         * *   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal status to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

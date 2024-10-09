@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeploymentSetSupportedInstanceTypeFamilyRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeploymentSetSupportedInstanceTypeFamilyRequest</p>
@@ -165,7 +166,11 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,14 +197,16 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         }
 
         /**
-         * The deployment strategy. Valid values:
-         * <p>
+         * <p>The deployment strategy. Valid values:</p>
+         * <ul>
+         * <li>Availability: high availability strategy</li>
+         * <li>AvailabilityGroup: high availability group strategy</li>
+         * <li>LowLatency: low latency strategy</li>
+         * </ul>
+         * <p>Default value: Availability.</p>
          * 
-         * *   Availability: high availability strategy
-         * *   AvailabilityGroup: high availability group strategy
-         * *   LowLatency: low latency strategy
-         * 
-         * Default value: Availability.
+         * <strong>example:</strong>
+         * <p>Availability</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);

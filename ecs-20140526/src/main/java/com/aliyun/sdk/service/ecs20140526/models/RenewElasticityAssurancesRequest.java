@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewElasticityAssurancesRequest} extends {@link RequestModel}
  *
  * <p>RenewElasticityAssurancesRequest</p>
@@ -211,13 +212,15 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -226,10 +229,11 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+         * <p>The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * 
-         * The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -256,13 +260,15 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The renewal duration. The unit of the renewal duration is determined by the `PeriodUnit` value. Valid values:
-         * <p>
+         * <p>The renewal duration. The unit of the renewal duration is determined by the <code>PeriodUnit</code> value. Valid values:</p>
+         * <ul>
+         * <li>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+         * <li>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>: 1, 2, and 3.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
          * 
-         * *   Valid values if you set `PeriodUnit` to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-         * *   Valid values if you set `PeriodUnit` to `Year`: 1, 2, and 3.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -271,13 +277,15 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The unit of the renewal duration. Valid values:
-         * <p>
+         * <p>The unit of the renewal duration. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>Default value: Year.</p>
          * 
-         * *   Month
-         * *   Year
-         * 
-         * Default value: Year.
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -286,10 +294,11 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The region ID of the elasticity assurance.
-         * <p>
+         * <p>The region ID of the elasticity assurance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2680071.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * 
-         * You can call the [DescribeRegions](~~2680071~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -322,6 +331,12 @@ public class RenewElasticityAssurancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RenewElasticityAssurancesRequest} extends {@link TeaModel}
+     *
+     * <p>RenewElasticityAssurancesRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private java.util.List < String > id;
@@ -349,12 +364,9 @@ public class RenewElasticityAssurancesRequest extends Request {
             private java.util.List < String > id; 
 
             /**
-             * The IDs of elasticity assurances.
-             * <p>
-             * 
-             * **Limits**: You can renew up to 20 elasticity assurances at a time.
-             * 
-             * You can call the [DescribeElasticityAssurances](~~2679748~~) operation to query the elasticity assurances that you purchased.
+             * <p>The IDs of elasticity assurances.</p>
+             * <p><strong>Limits</strong>: You can renew up to 20 elasticity assurances at a time.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2679748.html">DescribeElasticityAssurances</a> operation to query the elasticity assurances that you purchased.</p>
              */
             public Builder id(java.util.List < String > id) {
                 this.id = id;

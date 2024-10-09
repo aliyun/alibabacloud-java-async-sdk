@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachKeyPairRequest} extends {@link RequestModel}
  *
  * <p>AttachKeyPairRequest</p>
@@ -149,7 +150,11 @@ public class AttachKeyPairRequest extends Request {
         }
 
         /**
-         * The IDs of instances to which you want to bind the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).
+         * <p>The IDs of instances to which you want to bind the SSH key pair. The value can be a JSON array that consists of up to 50 instance IDs. Separate multiple instance IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-bp1gtjxuuvwj17zr****&quot;, &quot;i-bp17b7zrsbjwvmfy****&quot;, … &quot;i-bp1h6jmbefj1ytos****&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -158,7 +163,11 @@ public class AttachKeyPairRequest extends Request {
         }
 
         /**
-         * The name of the SSH key pair.
+         * <p>The name of the SSH key pair.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -176,7 +185,11 @@ public class AttachKeyPairRequest extends Request {
         }
 
         /**
-         * The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the SSH key pair. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

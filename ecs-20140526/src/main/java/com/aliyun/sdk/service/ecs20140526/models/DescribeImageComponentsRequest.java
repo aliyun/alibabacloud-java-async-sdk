@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageComponentsRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageComponentsRequest</p>
@@ -232,7 +233,10 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The IDs of image components. Valid values of N: 1 to 20.
+         * <p>The IDs of image components. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ic-bp67acfmxazb4p****</p>
          */
         public Builder imageComponentId(java.util.List < String > imageComponentId) {
             this.putQueryParameter("ImageComponentId", imageComponentId);
@@ -241,10 +245,11 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Valid values: 1 to 500.
-         * <p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -253,7 +258,10 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The name of the image component. You must specify an exact name to search for the image component.
+         * <p>The name of the image component. You must specify an exact name to search for the image component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testComponent</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -262,7 +270,10 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -271,11 +282,14 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The type of the image component. Valid values:
-         * <p>
+         * <p>The type of the image component. Valid values:</p>
+         * <ul>
+         * <li>SELF: the custom component that you created.</li>
+         * <li>ALIYUN: the system component provided by Alibaba Cloud.</li>
+         * </ul>
          * 
-         * *   SELF: the custom component that you created.
-         * *   ALIYUN: the system component provided by Alibaba Cloud.
+         * <strong>example:</strong>
+         * <p>SELF</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -302,7 +316,11 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The region ID of the image component. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the image component. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -311,10 +329,13 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * </blockquote>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -341,7 +362,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The tags of the image component.
+         * <p>The tags of the image component.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -356,6 +377,12 @@ public class DescribeImageComponentsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageComponentsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImageComponentsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -395,7 +422,10 @@ public class DescribeImageComponentsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: 1 to 20.
+             * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -403,7 +433,10 @@ public class DescribeImageComponentsRequest extends Request {
             }
 
             /**
-             * The value of tag N. Valid values of N: 1 to 20.
+             * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

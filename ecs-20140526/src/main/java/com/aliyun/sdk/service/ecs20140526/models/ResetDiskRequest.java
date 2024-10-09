@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetDiskRequest} extends {@link RequestModel}
  *
  * <p>ResetDiskRequest</p>
@@ -162,7 +163,11 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * The ID of the disk that you want to roll back.
+         * <p>The ID of the disk that you want to roll back.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp199lyny9b3****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -171,13 +176,15 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the validity of the request without actually making the request. Valid values:
-         * <p>
+         * <p>Specifies whether to check the validity of the request without actually making the request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.</li>
+         * </ul>
+         * <p>Default value: false</p>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and resource state limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, the rollback operation is performed.
-         * 
-         * Default value: false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -222,7 +229,11 @@ public class ResetDiskRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot that you want to use to roll back the disk.
+         * <p>The ID of the snapshot that you want to use to roll back the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp199lyny9b3****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

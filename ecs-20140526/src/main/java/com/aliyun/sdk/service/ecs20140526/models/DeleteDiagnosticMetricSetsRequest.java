@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDiagnosticMetricSetsRequest} extends {@link RequestModel}
  *
  * <p>DeleteDiagnosticMetricSetsRequest</p>
@@ -69,7 +70,8 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
         } 
 
         /**
-         * The ID of diagnostic metric set.
+         * <p>The ID of diagnostic metric set.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder metricSetIds(java.util.List < String > metricSetIds) {
             this.putQueryParameter("MetricSetIds", metricSetIds);
@@ -78,7 +80,11 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * The IDs of diagnostic metric sets. You can specify up to 10 set IDs.
+         * <p>The IDs of diagnostic metric sets. You can specify up to 10 set IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

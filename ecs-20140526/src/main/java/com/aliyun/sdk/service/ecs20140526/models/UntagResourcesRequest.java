@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -168,13 +169,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -201,7 +204,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +217,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. Valid values of N: 1 to 50.
+         * <p>The resource IDs. Valid values of N: 1 to 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph****</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -237,26 +248,30 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>instance: ECS instance</li>
+         * <li>disk: disk</li>
+         * <li>snapshot: snapshot</li>
+         * <li>image: image</li>
+         * <li>securitygroup: security group</li>
+         * <li>volume: storage volume</li>
+         * <li>eni: elastic network interface (ENI)</li>
+         * <li>ddh: dedicated host</li>
+         * <li>ddhcluster: dedicated host cluster</li>
+         * <li>keypair: SSH key pair</li>
+         * <li>launchtemplate: launch template</li>
+         * <li>reservedinstance: reserved instance</li>
+         * <li>snapshotpolicy: automatic snapshot policy</li>
+         * <li>elasticityassurance: elasticity assurance</li>
+         * <li>capacityreservation: capacity reservation</li>
+         * <li>command: Cloud Assistant command</li>
+         * <li>invocation: Cloud Assistant command execution result</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   instance: ECS instance
-         * *   disk: disk
-         * *   snapshot: snapshot
-         * *   image: image
-         * *   securitygroup: security group
-         * *   volume: storage volume
-         * *   eni: elastic network interface (ENI)
-         * *   ddh: dedicated host
-         * *   ddhcluster: dedicated host cluster
-         * *   keypair: SSH key pair
-         * *   launchtemplate: launch template
-         * *   reservedinstance: reserved instance
-         * *   snapshotpolicy: automatic snapshot policy
-         * *   elasticityassurance: elasticity assurance
-         * *   capacityreservation: capacity reservation
-         * *   command: Cloud Assistant command
-         * *   invocation: Cloud Assistant command execution result
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -265,7 +280,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys. Valid values of N: 1 to 20.
+         * <p>The tag keys. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

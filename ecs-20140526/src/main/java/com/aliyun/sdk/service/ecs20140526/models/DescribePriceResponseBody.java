@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePriceResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the prices and promotion rules.
+         * <p>The information about the prices and promotion rules.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -57,7 +58,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Rule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -109,7 +119,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the pricing rule.
+             * <p>The description of the pricing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Receive a 15% discount on a 1-year subscription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -117,7 +130,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the pricing rule.
+             * <p>The ID of the pricing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>587</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -131,6 +147,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class SubRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;
@@ -172,6 +194,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class DetailInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
@@ -247,7 +275,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>655.2</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -255,7 +286,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4368</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -263,14 +297,17 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name. Valid values:
-             * <p>
+             * <p>The resource name. Valid values:</p>
+             * <ul>
+             * <li>InstanceType</li>
+             * <li>bandwidth</li>
+             * <li>image</li>
+             * <li>SystemDisk</li>
+             * <li>DataDisk</li>
+             * </ul>
              * 
-             * *   InstanceType
-             * *   bandwidth
-             * *   image
-             * *   SystemDisk
-             * *   DataDisk
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -278,7 +315,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the pricing rules.
+             * <p>Details about the pricing rules.</p>
              */
             public Builder subRules(SubRules subRules) {
                 this.subRules = subRules;
@@ -286,7 +323,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3712.8</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -300,6 +340,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class DetailInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetailInfo")
         private java.util.List < DetailInfo> detailInfo;
@@ -341,6 +387,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Price extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -428,12 +480,12 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The currency unit.
-             * <p>
+             * <p>The currency unit.</p>
+             * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
+             * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
              * 
-             * Alibaba Cloud China site (aliyun.com): CNY.
-             * 
-             * Alibaba Cloud International site (alibabacloud.com): USD.
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -441,10 +493,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the price.
-             * <p>
-             * 
-             * >  This parameter is returned only when ResourceType is set to instance.
+             * <p>The information about the price.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when ResourceType is set to instance.</p>
+             * </blockquote>
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;
@@ -452,7 +504,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>655.2</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -460,7 +515,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4368</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -468,7 +526,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The hourly price of the reserved instance for which the No Upfront or Partial Upfront payment option is used.
+             * <p>The hourly price of the reserved instance for which the No Upfront or Partial Upfront payment option is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder reservedInstanceHourPrice(Float reservedInstanceHourPrice) {
                 this.reservedInstanceHourPrice = reservedInstanceHourPrice;
@@ -476,7 +537,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price of the order. The transaction price is equal to the original price minus the discount.
+             * <p>The transaction price of the order. The transaction price is equal to the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3712.8</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -490,6 +554,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class MarketplaceImagePrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -553,12 +623,12 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * The currency unit.
-             * <p>
+             * <p>The currency unit.</p>
+             * <p>China site (aliyun.com): CNY</p>
+             * <p>International site (alibabacloud.com): USD</p>
              * 
-             * China site (aliyun.com): CNY
-             * 
-             * International site (alibabacloud.com): USD
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -566,7 +636,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The discount.
+             * <p>The discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -574,7 +647,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The original price.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -582,7 +658,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The transaction price, which is equal to the original price minus the discount.
+             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -596,6 +675,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class RelatedPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MarketplaceImagePrice")
         private MarketplaceImagePrice marketplaceImagePrice;
@@ -623,7 +708,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private MarketplaceImagePrice marketplaceImagePrice; 
 
             /**
-             * The Alibaba Cloud Marketplace image price.
+             * <p>The Alibaba Cloud Marketplace image price.</p>
              */
             public Builder marketplaceImagePrice(MarketplaceImagePrice marketplaceImagePrice) {
                 this.marketplaceImagePrice = marketplaceImagePrice;
@@ -637,6 +722,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class RulesRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -676,7 +767,10 @@ public class DescribePriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the promotion rule.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Receive a 15% discount on a 1-year subscription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -684,7 +778,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the pricing rule.
+             * <p>The ID of the pricing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>587</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -698,6 +795,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < RulesRule> rule;
@@ -739,6 +842,12 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePriceResponseBody</p>
+     */
     public static class PriceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
@@ -790,7 +899,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Rules rules; 
 
             /**
-             * The price.
+             * <p>The price.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -798,7 +907,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The related price.
+             * <p>The related price.</p>
              */
             public Builder relatedPrice(RelatedPrice relatedPrice) {
                 this.relatedPrice = relatedPrice;
@@ -806,7 +915,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the promotion rules.
+             * <p>The information about the promotion rules.</p>
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;

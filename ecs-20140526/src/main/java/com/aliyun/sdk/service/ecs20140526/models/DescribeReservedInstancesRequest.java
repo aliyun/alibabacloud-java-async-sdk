@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReservedInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeReservedInstancesRequest</p>
@@ -293,13 +294,15 @@ public class DescribeReservedInstancesRequest extends Request {
         } 
 
         /**
-         * The allocation type. Valid values:
-         * <p>
+         * <p>The allocation type. Valid values:</p>
+         * <ul>
+         * <li>Normal: queries all reserved instances that belong to the current account.</li>
+         * <li>Shared: queries reserved instances that are shared between the main account and linked accounts.</li>
+         * </ul>
+         * <p>Default value: Normal.</p>
          * 
-         * *   Normal: queries all reserved instances that belong to the current account.
-         * *   Shared: queries reserved instances that are shared between the main account and linked accounts.
-         * 
-         * Default value: Normal.
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder allocationType(String allocationType) {
             this.putQueryParameter("AllocationType", allocationType);
@@ -308,7 +311,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The instance type. For more information, see [Instance families](~~25378~~).
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -317,7 +323,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The instance family. For more information, see [Instance families](~~25378~~).
+         * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5</p>
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -326,11 +335,14 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The reason why the instance is locked. Valid values:
-         * <p>
+         * <p>The reason why the instance is locked. Valid values:</p>
+         * <ul>
+         * <li>financial: You have an overdue payment in your account, or the reserved instance has expired.</li>
+         * <li>security: The reserved instance is locked for security reasons.</li>
+         * </ul>
          * 
-         * *   financial: You have an overdue payment in your account, or the reserved instance has expired.
-         * *   security: The reserved instance is locked for security reasons.
+         * <strong>example:</strong>
+         * <p>security</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -339,12 +351,15 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The payment option of the reserved instances. Valid values:
-         * <p>
+         * <p>The payment option of the reserved instances. Valid values:</p>
+         * <ul>
+         * <li>No Upfront</li>
+         * <li>Partial Upfront</li>
+         * <li>All Upfront</li>
+         * </ul>
          * 
-         * *   No Upfront
-         * *   Partial Upfront
-         * *   All Upfront
+         * <strong>example:</strong>
+         * <p>All Upfront</p>
          */
         public Builder offeringType(String offeringType) {
             this.putQueryParameter("OfferingType", offeringType);
@@ -371,10 +386,11 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -383,10 +399,11 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
-         * <p>
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -395,7 +412,11 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -404,7 +425,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The ID of reserved instance N. Valid values of N: 1 to 100.
+         * <p>The ID of reserved instance N. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-bpzhex2ulpzf53****</p>
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
@@ -413,7 +437,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The name of the reserved instance.
+         * <p>The name of the reserved instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testReservedInstanceName</p>
          */
         public Builder reservedInstanceName(String reservedInstanceName) {
             this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
@@ -440,13 +467,15 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The scope of the reserved instances. Valid values:
-         * <p>
+         * <p>The scope of the reserved instances. Valid values:</p>
+         * <ul>
+         * <li>Region</li>
+         * <li>Zone</li>
+         * </ul>
+         * <p>Default value: Region.</p>
          * 
-         * *   Region
-         * *   Zone
-         * 
-         * Default value: Region.
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -455,13 +484,16 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The status of reserved instance N. Valid values of N: 1 to 100. Valid values:
-         * <p>
+         * <p>The status of reserved instance N. Valid values of N: 1 to 100. Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Active</li>
+         * <li>Expired</li>
+         * <li>Updating</li>
+         * </ul>
          * 
-         * *   Creating
-         * *   Active
-         * *   Expired
-         * *   Updating
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(java.util.List < String > status) {
             this.putQueryParameter("Status", status);
@@ -470,7 +502,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The tags to add to the instances.
+         * <p>The tags to add to the instances.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -479,7 +511,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-z</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -494,6 +529,12 @@ public class DescribeReservedInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeReservedInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeReservedInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -533,10 +574,11 @@ public class DescribeReservedInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
-             * <p>
+             * <p>The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</p>
+             * <p>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -544,7 +586,10 @@ public class DescribeReservedInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs:.
+             * <p>The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs:.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

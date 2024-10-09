@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TerminateVirtualBorderRouterRequest} extends {@link RequestModel}
  *
  * <p>TerminateVirtualBorderRouterRequest</p>
@@ -180,7 +181,7 @@ public class TerminateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +217,7 @@ public class TerminateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * VbrId.
+         * <p>This parameter is required.</p>
          */
         public Builder vbrId(String vbrId) {
             this.putQueryParameter("VbrId", vbrId);

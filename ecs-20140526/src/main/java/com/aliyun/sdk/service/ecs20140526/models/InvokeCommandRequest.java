@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InvokeCommandRequest} extends {@link RequestModel}
  *
  * <p>InvokeCommandRequest</p>
@@ -372,7 +373,10 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -381,10 +385,14 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
-         * <p>
+         * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
+         * <blockquote>
+         * <p> Common Cloud Assistant commands can be run based on their names. For more information, see <a href="https://help.aliyun.com/document_detail/429635.html">View and run common Cloud Assistant commands</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Common Cloud Assistant commands can be run based on their names. For more information, see [View and run common Cloud Assistant commands](~~429635~~).
+         * <strong>example:</strong>
+         * <p>c-e996287206324975b5fbe1d****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -393,21 +401,25 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The ID of the container. Only 64-bit hexadecimal strings are supported. You can use container IDs that are prefixed with `docker://`, `containerd://`, or `cri-o://` to specify container runtimes.
-         * <p>
+         * <p>The ID of the container. Only 64-bit hexadecimal strings are supported. You can use container IDs that are prefixed with <code>docker://</code>, <code>containerd://</code>, or <code>cri-o://</code> to specify container runtimes.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li><p>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</p>
+         * </li>
+         * <li><p>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</p>
+         * <ul>
+         * <li>For information about how to query the version of Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</li>
+         * <li>For information about how to upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.</li>
+         * </ul>
+         * </li>
+         * <li><p>If this parameter is specified, the <code>Username</code> parameter that is specified in a request to call this operation and the <code>WorkingDir</code> parameter that is specified in a request to call the <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> operation do not take effect. You can run the command only in the default working directory of the container by using the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+         * </li>
+         * <li><p>If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to <code>#!/usr/bin/python</code> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+         * </li>
+         * </ul>
          * 
-         * Take note of the following items:
-         * 
-         * *   If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.
-         * 
-         * *   If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.
-         * 
-         *     *   For information about how to query the version of Cloud Assistant Agent, see [Install Cloud Assistant Agent](~~64921~~).
-         *     *   For information about how to upgrade Cloud Assistant Agent, see [Upgrade or disable upgrades for Cloud Assistant Agent](~~134383~~).
-         * 
-         * *   If this parameter is specified, the `Username` parameter that is specified in a request to call this operation and the `WorkingDir` parameter that is specified in a request to call the [CreateCommand](~~64844~~) operation do not take effect. You can run the command only in the default working directory of the container by using the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
-         * 
-         * *   If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to `#!/usr/bin/python` at the beginning of a script to specify a script interpreter. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
+         * <strong>example:</strong>
+         * <p>ab141ddfbacfe02d9dbc25966ed971536124527097398d419a6746873fea****</p>
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);
@@ -416,21 +428,25 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The name of the container.
-         * <p>
+         * <p>The name of the container.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li><p>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</p>
+         * </li>
+         * <li><p>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</p>
+         * <ul>
+         * <li>For information about how to query the version of Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</li>
+         * <li>For information about how to upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.</li>
+         * </ul>
+         * </li>
+         * <li><p>If this parameter is specified, the <code>Username</code> parameter that is specified in a request to call this operation and the <code>WorkingDir</code> parameter that is specified in a request to call the <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> operation do not take effect. You can run the command only in the default working directory of the container by using the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+         * </li>
+         * <li><p>If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to <code>#!/usr/bin/python</code> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+         * </li>
+         * </ul>
          * 
-         * Take note of the following items:
-         * 
-         * *   If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.
-         * 
-         * *   If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.
-         * 
-         *     *   For information about how to query the version of Cloud Assistant Agent, see [Install Cloud Assistant Agent](~~64921~~).
-         *     *   For information about how to upgrade Cloud Assistant Agent, see [Upgrade or disable upgrades for Cloud Assistant Agent](~~134383~~).
-         * 
-         * *   If this parameter is specified, the `Username` parameter that is specified in a request to call this operation and the `WorkingDir` parameter that is specified in a request to call the [CreateCommand](~~64844~~) operation do not take effect. You can run the command only in the default working directory of the container by using the default user of the container. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
-         * 
-         * *   If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to `#!/usr/bin/python` at the beginning of a script to specify a script interpreter. For more information, see [Use Cloud Assistant to run commands in containers](~~456641~~).
+         * <strong>example:</strong>
+         * <p>test-container</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -439,32 +455,33 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The schedule on which to run the command. You can configure a command to run at a fixed interval based on a rate expression, run only once at a specific time, or run at specific times based on a cron expression.
-         * <p>
-         * 
-         * *   To run a command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Specify the interval in the following format: `rate(<Execution interval value><Execution interval unit>)`. For example, specify `rate(5m)` to run the command every 5 minutes. When you specify an interval, take note of the following limits:
-         * 
-         *     *   The interval can be anywhere from 60 seconds to 7 days, but must be longer than the timeout period of the scheduled task.
-         *     *   The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. Each time the command is run, the system waits 3 minutes before the system runs the command again.
-         *     *   A task is not immediately executed after the task is created. For example, assume that you set the interval to 5 minutes for a task. The task begins to be executed 5 minutes after it is created.
-         * 
-         * *   To run a command only once at a specific time, specify a point in time and a time zone. Specify the point in time in the `at(yyyy-MM-dd HH:mm:ss <Time zone>)` format, which indicates `at(Year-Month-Day Hour:Minute:Second <Time zone>)`. If you do not specify a time zone, the Coordinated Universal Time (UTC) time zone is used by default. You can specify a time zone in the following forms:
-         * 
-         *     *   The time zone name. Examples: `Asia/Shanghai` and `America/Los_Angeles`.
-         *     *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.
-         *     *   The time zone abbreviation. Only UTC is supported.
-         * 
-         *     For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to `at(2022-06-06 13:15:30 Asia/Shanghai)`. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to `at(2022-06-06 13:15:30 GMT-7:00)`.
-         * 
-         * *   To run a command at specific times, use a cron expression to define the schedule. Specify a schedule in the `<Cron expression> <Time zone>` format. The cron expression is in the `<seconds> <minutes> <hours> <day of the month> <month> <day of the week> <year (optional)>` format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which you want to run the command is used by default. For more information about cron expressions, see [Cron expressions](~~64769~~). You can specify a time zone in the following forms:
-         * 
-         *     *   The time zone name. Examples: `Asia/Shanghai` and `America/Los_Angeles`.
-         *     *   The time offset from GMT. Examples: `GMT+8:00` (UTC+8) and `GMT-7:00` (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.
-         *     *   The time zone abbreviation. Only UTC is supported. For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to `0 15 10 ? * * 2022 Asia/Shanghai`. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to `0 0/30 10-11 * * ? 2022 GMT+8:00`. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to `0 0/5 14 * 10 ? 2022/2 UTC`.
-         * 
-         *     **
-         * 
-         *     **Note** The minimum interval must be 10 seconds or more and cannot be shorter than the timeout period of scheduled executions.
+         * <p>The schedule on which to run the command. You can configure a command to run at a fixed interval based on a rate expression, run only once at a specific time, or run at specific times based on a cron expression.</p>
+         * <ul>
+         * <li><p>To run a command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Specify the interval in the following format: <code>rate(&lt;Execution interval value&gt;&lt;Execution interval unit&gt;)</code>. For example, specify <code>rate(5m)</code> to run the command every 5 minutes. When you specify an interval, take note of the following limits:</p>
+         * <ul>
+         * <li>The interval can be anywhere from 60 seconds to 7 days, but must be longer than the timeout period of the scheduled task.</li>
+         * <li>The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, assume that you set the interval to 5 minutes and that it takes 2 minutes to run the command each time. Each time the command is run, the system waits 3 minutes before the system runs the command again.</li>
+         * <li>A task is not immediately executed after the task is created. For example, assume that you set the interval to 5 minutes for a task. The task begins to be executed 5 minutes after it is created.</li>
+         * </ul>
+         * </li>
+         * <li><p>To run a command only once at a specific time, specify a point in time and a time zone. Specify the point in time in the <code>at(yyyy-MM-dd HH:mm:ss &lt;Time zone&gt;)</code> format, which indicates <code>at(Year-Month-Day Hour:Minute:Second &lt;Time zone&gt;)</code>. If you do not specify a time zone, the Coordinated Universal Time (UTC) time zone is used by default. You can specify a time zone in the following forms:</p>
+         * <ul>
+         * <li>The time zone name. Examples: <code>Asia/Shanghai</code> and <code>America/Los_Angeles</code>.</li>
+         * <li>The time offset from GMT. Examples: <code>GMT+8:00</code> (UTC+8) and <code>GMT-7:00</code> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</li>
+         * <li>The time zone abbreviation. Only UTC is supported.</li>
+         * </ul>
+         * <p>For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to <code>at(2022-06-06 13:15:30 Asia/Shanghai)</code>. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to <code>at(2022-06-06 13:15:30 GMT-7:00)</code>.</p>
+         * </li>
+         * <li><p>To run a command at specific times, use a cron expression to define the schedule. Specify a schedule in the <code>&lt;Cron expression&gt; &lt;Time zone&gt;</code> format. The cron expression is in the <code>&lt;seconds&gt; &lt;minutes&gt; &lt;hours&gt; &lt;day of the month&gt; &lt;month&gt; &lt;day of the week&gt; &lt;year (optional)&gt;</code> format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zone of the instance on which you want to run the command is used by default. For more information about cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. You can specify a time zone in the following forms:</p>
+         * <ul>
+         * <li>The time zone name. Examples: <code>Asia/Shanghai</code> and <code>America/Los_Angeles</code>.</li>
+         * <li>The time offset from GMT. Examples: <code>GMT+8:00</code> (UTC+8) and <code>GMT-7:00</code> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</li>
+         * <li>The time zone abbreviation. Only UTC is supported. For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to <code>0 15 10 ? * * 2022 Asia/Shanghai</code>. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to <code>0 0/30 10-11 * * ? 2022 GMT+8:00</code>. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to <code>0 0/5 14 * 10 ? 2022/2 UTC</code>.</li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Note</strong> The minimum interval must be 10 seconds or more and cannot be shorter than the timeout period of scheduled executions.</p>
+         * </li>
+         * </ul>
          */
         public Builder frequency(String frequency) {
             this.putQueryParameter("Frequency", frequency);
@@ -473,10 +490,11 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The IDs of instances on which you want to run the command. You can specify up to 100 instance IDs in each request. Valid values of N: 1 to 100.
-         * <p>
+         * <p>The IDs of instances on which you want to run the command. You can specify up to 100 instance IDs in each request. Valid values of N: 1 to 100.</p>
+         * <p>You can apply for a quota increase in the Quota Center console. The quota name is Maximum number of instances supported for command execution.</p>
          * 
-         * You can apply for a quota increase in the Quota Center console. The quota name is Maximum number of instances supported for command execution.
+         * <strong>example:</strong>
+         * <p>i-bp185dy2o3o6n****</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -485,7 +503,10 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The launcher for script execution. The value cannot exceed 1 KB in length.
+         * <p>The launcher for script execution. The value cannot exceed 1 KB in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
          */
         public Builder launcher(String launcher) {
             this.putQueryParameter("Launcher", launcher);
@@ -512,15 +533,17 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The key-value pairs of custom parameters to be passed in when the custom parameter feature is enabled. Number of custom parameters: 0 to 10.
-         * <p>
+         * <p>The key-value pairs of custom parameters to be passed in when the custom parameter feature is enabled. Number of custom parameters: 0 to 10.</p>
+         * <ul>
+         * <li>Keys in a Map collection can be up to 64 characters in length, and cannot be empty strings.</li>
+         * <li>Values in a Map collection can be empty strings.</li>
+         * <li>The size of the Base64-encoded custom parameters and original command content cannot exceed 18 KB.</li>
+         * <li>The custom parameter names specified in the value of Parameters must be included in the custom parameters specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</li>
+         * </ul>
+         * <p>If you want to disable the custom parameter feature, you can leave this parameter empty.</p>
          * 
-         * *   Keys in a Map collection can be up to 64 characters in length, and cannot be empty strings.
-         * *   Values in a Map collection can be empty strings.
-         * *   The size of the Base64-encoded custom parameters and original command content cannot exceed 18 KB.
-         * *   The custom parameter names specified in the value of Parameters must be included in the custom parameters specified when you created the command. You can use empty strings to represent the parameters that are not passed in.
-         * 
-         * If you want to disable the custom parameter feature, you can leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyv******aRY&quot;}</p>
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -530,7 +553,11 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -539,23 +566,26 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The mode in which you want to run the command. Valid values:
-         * <p>
+         * <p>The mode in which you want to run the command. Valid values:</p>
+         * <ul>
+         * <li>Once: runs the command immediately.</li>
+         * <li>Period: runs the command based on a schedule. If you set this parameter to <code>Period</code>, you must also configure the <code>Frequency</code> parameter.</li>
+         * <li>NextRebootOnly: runs the command the next time the instance is started.</li>
+         * <li>EveryReboot: runs the command every time the instance is started.</li>
+         * </ul>
+         * <p>Default values:</p>
+         * <ul>
+         * <li>If you do not specify <code>Frequency</code>, the default value is <code>Once</code>.</li>
+         * <li>If you specify <code>Frequency</code>, <code>Period</code> is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.</li>
+         * </ul>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/64838.html">StopInvocation</a> operation to stop the pending or scheduled executions of the command.</li>
+         * <li>If you set this parameter to <code>Period</code> or <code>EveryReboot</code>, you can call the <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with <code>IncludeHistory</code> set to true to query the results of historical scheduled executions.</li>
+         * </ul>
          * 
-         * *   Once: runs the command immediately.
-         * *   Period: runs the command based on a schedule. If you set this parameter to `Period`, you must also configure the `Frequency` parameter.
-         * *   NextRebootOnly: runs the command the next time the instance is started.
-         * *   EveryReboot: runs the command every time the instance is started.
-         * 
-         * Default values:
-         * 
-         * *   If you do not specify `Frequency`, the default value is `Once`.
-         * *   If you specify `Frequency`, `Period` is used as the value of RepeatMode regardless of whether RepeatMode is set to Period.
-         * 
-         * Take note of the following items:
-         * 
-         * *   You can call the [StopInvocation](~~64838~~) operation to stop the pending or scheduled executions of the command.
-         * *   If you set this parameter to `Period` or `EveryReboot`, you can call the [DescribeInvocationResults](~~64845~~) operation with `IncludeHistory` set to true to query the results of historical scheduled executions.
+         * <strong>example:</strong>
+         * <p>Once</p>
          */
         public Builder repeatMode(String repeatMode) {
             this.putQueryParameter("RepeatMode", repeatMode);
@@ -564,11 +594,14 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the command executions. When you set this parameter, take note of the following items:
-         * <p>
+         * <p>The ID of the resource group to which to assign the command executions. When you set this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>The instances specified by InstanceId.N must belong to the specified resource group.</li>
+         * <li>After the command is run, you can call the <a href="https://help.aliyun.com/document_detail/64840.html">DescribeInvocations</a> or <a href="https://help.aliyun.com/document_detail/64845.html">DescribeInvocationResults</a> operation with ResourceGroupId set to query the execution results in the specified resource group.</li>
+         * </ul>
          * 
-         * *   The instances specified by InstanceId.N must belong to the specified resource group.
-         * *   After the command is run, you can call the [DescribeInvocations](~~64840~~) or [DescribeInvocationResults](~~64845~~) operation with ResourceGroupId set to query the execution results in the specified resource group.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -595,7 +628,7 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The tags of the instance. If you do not specify InstanceId.N, the command is run on the instances that have the specified tags.
+         * <p>The tags of the instance. If you do not specify InstanceId.N, the command is run on the instances that have the specified tags.</p>
          */
         public Builder resourceTag(java.util.List < ResourceTag> resourceTag) {
             this.putQueryParameter("ResourceTag", resourceTag);
@@ -604,7 +637,7 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The tags of the command.
+         * <p>The tags of the command.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -613,11 +646,14 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * Specifies how to stop the command task when a command execution is manually stopped or times out. Valid values:
-         * <p>
+         * <p>Specifies how to stop the command task when a command execution is manually stopped or times out. Valid values:</p>
+         * <ul>
+         * <li>Process: stops the process of the command.</li>
+         * <li>ProcessTree: stops the process tree of the command. In this case, the process of the command and all subprocesses of the process are stopped.</li>
+         * </ul>
          * 
-         * *   Process: stops the process of the command.
-         * *   ProcessTree: stops the process tree of the command. In this case, the process of the command and all subprocesses of the process are stopped.
+         * <strong>example:</strong>
+         * <p>ProcessTree</p>
          */
         public Builder terminationMode(String terminationMode) {
             this.putQueryParameter("TerminationMode", terminationMode);
@@ -626,7 +662,12 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * >  This parameter is no longer used and does not take effect.
+         * <blockquote>
+         * <p> This parameter is no longer used and does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder timed(Boolean timed) {
             this.putQueryParameter("Timed", timed);
@@ -635,13 +676,16 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The timeout period for the command execution. Unit: seconds.
-         * <p>
+         * <p>The timeout period for the command execution. Unit: seconds.</p>
+         * <ul>
+         * <li>The timeout period cannot be less than 10 seconds.</li>
+         * <li>A timeout error occurs if the command cannot be run because the process slows down or because a specific module or Cloud Assistant Agent does not exist. When the specified timeout period ends, the command process is forcefully terminated.</li>
+         * <li>If you do not specify this parameter, the timeout period that is specified when the command is created is used.</li>
+         * <li>This timeout period is applicable only to this execution. The timeout period of the command is not modified.</li>
+         * </ul>
          * 
-         * *   The timeout period cannot be less than 10 seconds.
-         * *   A timeout error occurs if the command cannot be run because the process slows down or because a specific module or Cloud Assistant Agent does not exist. When the specified timeout period ends, the command process is forcefully terminated.
-         * *   If you do not specify this parameter, the timeout period that is specified when the command is created is used.
-         * *   This timeout period is applicable only to this execution. The timeout period of the command is not modified.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -650,13 +694,15 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The username to use to run the command on the ECS instances. The username cannot exceed 255 characters in length.
-         * <p>
+         * <p>The username to use to run the command on the ECS instances. The username cannot exceed 255 characters in length.</p>
+         * <ul>
+         * <li>For Linux instances, the root username is used by default.</li>
+         * <li>For Windows instances, the System username is used by default.</li>
+         * </ul>
+         * <p>You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see <a href="https://help.aliyun.com/document_detail/203771.html">Run Cloud Assistant commands as a regular user</a>.</p>
          * 
-         * *   For Linux instances, the root username is used by default.
-         * *   For Windows instances, the System username is used by default.
-         * 
-         * You can also specify other usernames that already exist in the instances to run the command. For security purposes, we recommend that you run Cloud Assistant commands as a regular user. For more information, see [Run Cloud Assistant commands as a regular user](~~203771~~).
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);
@@ -665,12 +711,14 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * The name of the password to use to run the command on a Windows instance. The name cannot exceed 255 characters in length.
-         * <p>
+         * <p>The name of the password to use to run the command on a Windows instance. The name cannot exceed 255 characters in length.</p>
+         * <p>If you do not want to use the default System user to run the command on Windows instances, specify both WindowsPasswordName and <code>Username</code>. To mitigate the risk of password leaks, the password is stored in plaintext in CloudOps Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Manage encryption parameters</a> and <a href="https://help.aliyun.com/document_detail/203771.html">Run Cloud Assistant commands as a regular user</a>.</p>
+         * <blockquote>
+         * <p> If you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify WindowsPasswordName.</p>
+         * </blockquote>
          * 
-         * If you do not want to use the default System user to run the command on Windows instances, specify both WindowsPasswordName and `Username`. To mitigate the risk of password leaks, the password is stored in plaintext in CloudOps Orchestration Service (OOS) Parameter Store, and only the name of the password is passed in by using WindowsPasswordName. For more information, see [Manage encryption parameters](~~186828~~) and [Run Cloud Assistant commands as a regular user](~~203771~~).
-         * 
-         * >  If you use the root username for Linux instances or the System username for Windows instances to run the command, you do not need to specify WindowsPasswordName.
+         * <strong>example:</strong>
+         * <p>axtSecretPassword</p>
          */
         public Builder windowsPasswordName(String windowsPasswordName) {
             this.putQueryParameter("WindowsPasswordName", windowsPasswordName);
@@ -685,6 +733,12 @@ public class InvokeCommandRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link InvokeCommandRequest} extends {@link TeaModel}
+     *
+     * <p>InvokeCommandRequest</p>
+     */
     public static class ResourceTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -724,15 +778,17 @@ public class InvokeCommandRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the instance.
-             * <p>
+             * <p>The key of tag N of the instance.</p>
+             * <p>Take note of the following items:</p>
+             * <ul>
+             * <li>This parameter and InstanceId.N are mutually exclusive.</li>
+             * <li>Valid values of N: 1 to 10. The tag key cannot be an empty string.</li>
+             * <li>The number of instances that have the specified tags cannot exceed 100. If more than 100 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 100 instances.</li>
+             * <li>The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</li>
+             * </ul>
              * 
-             * Take note of the following items:
-             * 
-             * *   This parameter and InstanceId.N are mutually exclusive.
-             * *   Valid values of N: 1 to 10. The tag key cannot be an empty string.
-             * *   The number of instances that have the specified tags cannot exceed 100. If more than 100 instances have the specified tags, we recommend that you use batch tags such as batch: b1 to group the instances into batches of up to 100 instances.
-             * *   The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -740,14 +796,16 @@ public class InvokeCommandRequest extends Request {
             }
 
             /**
-             * The value of tag N of the instance.
-             * <p>
+             * <p>The value of tag N of the instance.</p>
+             * <p>Take note of the following items:</p>
+             * <ul>
+             * <li>Valid values of N: 1 to 10.</li>
+             * <li>The tag value can be an empty string.</li>
+             * <li>The tag value can be up to 128 characters in length and cannot contain http:// or https://.</li>
+             * </ul>
              * 
-             * Take note of the following items:
-             * 
-             * *   Valid values of N: 1 to 10.
-             * *   The tag value can be an empty string.
-             * *   The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -761,6 +819,12 @@ public class InvokeCommandRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link InvokeCommandRequest} extends {@link TeaModel}
+     *
+     * <p>InvokeCommandRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -800,12 +864,12 @@ public class InvokeCommandRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N to add to the command task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -813,10 +877,11 @@ public class InvokeCommandRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the command task. Valid values of N: 1 to 20. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N to add to the command task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

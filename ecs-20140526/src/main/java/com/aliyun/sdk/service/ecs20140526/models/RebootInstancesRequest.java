@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootInstancesRequest} extends {@link RequestModel}
  *
  * <p>RebootInstancesRequest</p>
@@ -190,13 +191,15 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * The batch operation mode. Valid values:
-         * <p>
+         * <p>The batch operation mode. Valid values:</p>
+         * <ul>
+         * <li>AllTogether: In this mode, if all instances are restarted, a success message is returned. If an instance fails the verification, all instances fail to be restarted and an error message is returned.</li>
+         * <li>SuccessFirst: In this mode, each instance is restarted separately. The response contains the operation results of each instance.</li>
+         * </ul>
+         * <p>Default value: AllTogether.</p>
          * 
-         * *   AllTogether: In this mode, if all instances are restarted, a success message is returned. If an instance fails the verification, all instances fail to be restarted and an error message is returned.
-         * *   SuccessFirst: In this mode, each instance is restarted separately. The response contains the operation results of each instance.
-         * 
-         * Default value: AllTogether.
+         * <strong>example:</strong>
+         * <p>AllTogether</p>
          */
         public Builder batchOptimization(String batchOptimization) {
             this.putQueryParameter("BatchOptimization", batchOptimization);
@@ -205,16 +208,20 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned regardless of whether the request passes the dry run.</p>
+         * </blockquote>
+         * <ul>
+         * <li>false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
-         * 
-         * >  If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
-         * 
-         * *   false: performs a dry run and sends the request. If the request passes the dry run, the instance is restarted.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -223,13 +230,15 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully restart the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully restart the instance. Valid values:</p>
+         * <ul>
+         * <li>true: forcefully restarts the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the instance is lost.</li>
+         * <li>false: normally restarts the instance.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: forcefully restarts the instance. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the instance is lost.
-         * *   false: normally restarts the instance.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceReboot(Boolean forceReboot) {
             this.putQueryParameter("ForceReboot", forceReboot);
@@ -238,7 +247,11 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * The instance IDs. You can specify up to 100 instance IDs.
+         * <p>The instance IDs. You can specify up to 100 instance IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -265,7 +278,11 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnapshotGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteSnapshotGroupRequest</p>
@@ -143,7 +144,11 @@ public class DeleteSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +175,11 @@ public class DeleteSnapshotGroupRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot-consistent group. You can call the [DescribeSnapshotGroups](~~210940~~) operation to query the IDs of one or more snapshot-consistent groups.
+         * <p>The ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> operation to query the IDs of one or more snapshot-consistent groups.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssg-j6c9lpuyxo2uxxny****</p>
          */
         public Builder snapshotGroupId(String snapshotGroupId) {
             this.putQueryParameter("SnapshotGroupId", snapshotGroupId);

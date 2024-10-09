@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstanceRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstanceRequest</p>
@@ -175,11 +176,14 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is released.</li>
+         * </ul>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   false (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is released.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -188,13 +192,15 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully release the instance in the **Running** (`Running`) state. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully release the instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
+         * <ul>
+         * <li>true: forcefully releases the instance in the <strong>Running</strong> (<code>Running</code>) state. This operation is equivalent to the power-off operation. Cache data that is not written to persistent storage will be lost.</li>
+         * <li>false: normally releases the instance. This value take effects only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: forcefully releases the instance in the **Running** (`Running`) state. This operation is equivalent to the power-off operation. Cache data that is not written to persistent storage will be lost.
-         * *   false: normally releases the instance. This value take effects only if the instance is in the **Stopped** (`Stopped`) state.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -203,7 +209,11 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1g6zv0ce8oghu7****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -248,13 +258,15 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the expired subscription instance. Valid values:
-         * <p>
+         * <p>Specifies whether to release the expired subscription instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder terminateSubscription(Boolean terminateSubscription) {
             this.putQueryParameter("TerminateSubscription", terminateSubscription);

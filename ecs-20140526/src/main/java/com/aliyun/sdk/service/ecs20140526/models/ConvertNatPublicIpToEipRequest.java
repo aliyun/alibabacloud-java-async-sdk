@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConvertNatPublicIpToEipRequest} extends {@link RequestModel}
  *
  * <p>ConvertNatPublicIpToEipRequest</p>
@@ -134,7 +135,11 @@ public class ConvertNatPublicIpToEipRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose public IP address you want to convert into an EIP.
+         * <p>The ID of the instance whose public IP address you want to convert into an EIP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp171jr36ge2ulvk****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -152,7 +157,11 @@ public class ConvertNatPublicIpToEipRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

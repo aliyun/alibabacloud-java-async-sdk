@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyElasticityAssuranceRequest} extends {@link RequestModel}
  *
  * <p>ModifyElasticityAssuranceRequest</p>
@@ -16,8 +17,16 @@ public class ModifyElasticityAssuranceRequest extends Request {
     private PrivatePoolOptions privatePoolOptions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceAmount")
+    private Integer instanceAmount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -43,7 +52,9 @@ public class ModifyElasticityAssuranceRequest extends Request {
     private ModifyElasticityAssuranceRequest(Builder builder) {
         super(builder);
         this.privatePoolOptions = builder.privatePoolOptions;
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.instanceAmount = builder.instanceAmount;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -72,10 +83,24 @@ public class ModifyElasticityAssuranceRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return instanceAmount
+     */
+    public Integer getInstanceAmount() {
+        return this.instanceAmount;
     }
 
     /**
@@ -115,7 +140,9 @@ public class ModifyElasticityAssuranceRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyElasticityAssuranceRequest, Builder> {
         private PrivatePoolOptions privatePoolOptions; 
+        private String clientToken; 
         private String description; 
+        private Integer instanceAmount; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -129,7 +156,9 @@ public class ModifyElasticityAssuranceRequest extends Request {
         private Builder(ModifyElasticityAssuranceRequest request) {
             super(request);
             this.privatePoolOptions = request.privatePoolOptions;
+            this.clientToken = request.clientToken;
             this.description = request.description;
+            this.instanceAmount = request.instanceAmount;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -147,11 +176,32 @@ public class ModifyElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * InstanceAmount.
+         */
+        public Builder instanceAmount(Integer instanceAmount) {
+            this.putQueryParameter("InstanceAmount", instanceAmount);
+            this.instanceAmount = instanceAmount;
             return this;
         }
 
@@ -174,7 +224,11 @@ public class ModifyElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -207,6 +261,12 @@ public class ModifyElasticityAssuranceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyElasticityAssuranceRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyElasticityAssuranceRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -247,7 +307,11 @@ public class ModifyElasticityAssuranceRequest extends Request {
             private String name; 
 
             /**
-             * The ID of the elasticity assurance.
+             * <p>The ID of the elasticity assurance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-bp67acfmxazb4****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -255,7 +319,10 @@ public class ModifyElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * <p>The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eapTestName</p>
              */
             public Builder name(String name) {
                 this.name = name;

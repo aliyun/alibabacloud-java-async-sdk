@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelImagePipelineExecutionRequest} extends {@link RequestModel}
  *
  * <p>CancelImagePipelineExecutionRequest</p>
@@ -162,7 +163,11 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The ID of the image build task.
+         * <p>The ID of the image build task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-5fb8facb8ed7427c****</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -189,7 +194,11 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The region ID of the image build task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the image build task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +225,9 @@ public class CancelImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated.
+         * <blockquote>
+         * <p>This parameter is deprecated.</p>
+         * </blockquote>
          */
         public Builder templateTag(java.util.List < TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
@@ -231,6 +242,12 @@ public class CancelImagePipelineExecutionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CancelImagePipelineExecutionRequest} extends {@link TeaModel}
+     *
+     * <p>CancelImagePipelineExecutionRequest</p>
+     */
     public static class TemplateTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -270,7 +287,12 @@ public class CancelImagePipelineExecutionRequest extends Request {
             private String value; 
 
             /**
-             * >  This parameter is deprecated.
+             * <blockquote>
+             * <p> This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -278,7 +300,12 @@ public class CancelImagePipelineExecutionRequest extends Request {
             }
 
             /**
-             * >  This parameter is deprecated.
+             * <blockquote>
+             * <p> This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder value(String value) {
                 this.value = value;

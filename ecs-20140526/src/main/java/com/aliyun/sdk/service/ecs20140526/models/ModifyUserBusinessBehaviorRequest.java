@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUserBusinessBehaviorRequest} extends {@link RequestModel}
  *
  * <p>ModifyUserBusinessBehaviorRequest</p>
@@ -207,7 +208,7 @@ public class ModifyUserBusinessBehaviorRequest extends Request {
         }
 
         /**
-         * statusKey.
+         * <p>This parameter is required.</p>
          */
         public Builder statusKey(String statusKey) {
             this.putQueryParameter("statusKey", statusKey);
@@ -216,7 +217,7 @@ public class ModifyUserBusinessBehaviorRequest extends Request {
         }
 
         /**
-         * statusValue.
+         * <p>This parameter is required.</p>
          */
         public Builder statusValue(String statusValue) {
             this.putQueryParameter("statusValue", statusValue);

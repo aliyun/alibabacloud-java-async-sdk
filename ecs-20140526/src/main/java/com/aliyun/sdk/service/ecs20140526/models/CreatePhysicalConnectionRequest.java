@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePhysicalConnectionRequest} extends {@link RequestModel}
  *
  * <p>CreatePhysicalConnectionRequest</p>
@@ -281,7 +282,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * AccessPointId.
+         * <p>This parameter is required.</p>
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -317,7 +318,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * LineOperator.
+         * <p>This parameter is required.</p>
          */
         public Builder lineOperator(String lineOperator) {
             this.putQueryParameter("LineOperator", lineOperator);
@@ -353,7 +354,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * PeerLocation.
+         * <p>This parameter is required.</p>
          */
         public Builder peerLocation(String peerLocation) {
             this.putQueryParameter("PeerLocation", peerLocation);
@@ -380,7 +381,7 @@ public class CreatePhysicalConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

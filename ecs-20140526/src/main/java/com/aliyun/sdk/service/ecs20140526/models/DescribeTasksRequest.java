@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeTasksRequest</p>
@@ -246,7 +247,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The end point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>The end point of the time period for which to query created tasks. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-23T15:16:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -273,12 +277,12 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Page start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Page start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -287,12 +291,12 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -301,7 +305,11 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,12 +318,12 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The ID of resource N that is associated with the task. Valid values of N: 1 to 100.
-         * <p>
-         * 
-         * *   If TaskAction is set to ImportImage or ExportImage, set the resource ID to an image ID.
-         * *   If TaskAction is set to RedeployInstance, set the resource ID to an Elastic Compute Service (ECS) instance ID.
-         * *   If TaskAction is set to ModifyDiskSpec, set the resource ID to a disk ID.
+         * <p>The ID of resource N that is associated with the task. Valid values of N: 1 to 100.</p>
+         * <ul>
+         * <li>If TaskAction is set to ImportImage or ExportImage, set the resource ID to an image ID.</li>
+         * <li>If TaskAction is set to RedeployInstance, set the resource ID to an Elastic Compute Service (ECS) instance ID.</li>
+         * <li>If TaskAction is set to ModifyDiskSpec, set the resource ID to a disk ID.</li>
+         * </ul>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -342,7 +350,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The start point of the time period for which to query created tasks. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+         * <p>The start point of the time period for which to query created tasks. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-23T15:10:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -351,13 +362,16 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The name of the operation that generates the task. Valid values:
-         * <p>
+         * <p>The name of the operation that generates the task. Valid values:</p>
+         * <ul>
+         * <li>ImportImage</li>
+         * <li>ExportImage</li>
+         * <li>RedeployInstance</li>
+         * <li>ModifyDiskSpec</li>
+         * </ul>
          * 
-         * *   ImportImage
-         * *   ExportImage
-         * *   RedeployInstance
-         * *   ModifyDiskSpec
+         * <strong>example:</strong>
+         * <p>ImportImage</p>
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);
@@ -366,7 +380,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The ID of the task. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).
+         * <p>The ID of the task. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-bp1hvgwromzv32iq****,t-bp179lofu2pv768w****</p>
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -375,16 +392,19 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The state of the task. Valid values:
-         * <p>
+         * <p>The state of the task. Valid values:</p>
+         * <ul>
+         * <li>Finished</li>
+         * <li>Processing</li>
+         * <li>Failed</li>
+         * </ul>
+         * <p>This parameter is empty by default.</p>
+         * <blockquote>
+         * <p> The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.</p>
+         * </blockquote>
          * 
-         * *   Finished
-         * *   Processing
-         * *   Failed
-         * 
-         * This parameter is empty by default.
-         * 
-         * >  The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);

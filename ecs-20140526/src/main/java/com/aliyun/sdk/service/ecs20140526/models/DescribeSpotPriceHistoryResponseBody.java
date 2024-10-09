@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSpotPriceHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSpotPriceHistoryResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         private SpotPrices spotPrices; 
 
         /**
-         * The instance type of the preemptible instance.
+         * <p>The instance type of the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         public Builder currency(String currency) {
             this.currency = currency;
@@ -81,7 +85,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The network type of the preemptible instance.
+         * <p>The network type of the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder nextOffset(Integer nextOffset) {
             this.nextOffset = nextOffset;
@@ -89,7 +96,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The instance type of the preemptible instance.
+         * <p>The instance type of the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID of the preemptible instance.
+         * <p>The zone ID of the preemptible instance.</p>
          */
         public Builder spotPrices(SpotPrices spotPrices) {
             this.spotPrices = spotPrices;
@@ -110,6 +120,12 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSpotPriceHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSpotPriceHistoryResponseBody</p>
+     */
     public static class SpotPriceType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -209,7 +225,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The instance type of the preemptible instance.
+             * <p>The instance type of the preemptible instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -217,7 +236,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the price history of the preemptible instance.
+             * <p>Details about the price history of the preemptible instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>optimized</p>
              */
             public Builder ioOptimized(String ioOptimized) {
                 this.ioOptimized = ioOptimized;
@@ -225,7 +247,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the price history of a preemptible instance within the last 30 days.
+             * <p>Queries the price history of a preemptible instance within the last 30 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -233,7 +258,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.
+             * <p>The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.354</p>
              */
             public Builder originPrice(Float originPrice) {
                 this.originPrice = originPrice;
@@ -241,7 +269,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.
+             * <p>The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.036</p>
              */
             public Builder spotPrice(Float spotPrice) {
                 this.spotPrice = spotPrice;
@@ -249,12 +280,12 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The currency unit of the price.
-             * <p>
+             * <p>The currency unit of the price.</p>
+             * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
+             * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
              * 
-             * Alibaba Cloud China site (aliyun.com): CNY.
-             * 
-             * Alibaba Cloud International site (alibabacloud.com): USD.
+             * <strong>example:</strong>
+             * <p>2019-11-19T06:00:00Z</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -262,7 +293,10 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * <p>The ID of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -276,6 +310,12 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSpotPriceHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSpotPriceHistoryResponseBody</p>
+     */
     public static class SpotPrices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpotPriceType")
         private java.util.List < SpotPriceType> spotPriceType;

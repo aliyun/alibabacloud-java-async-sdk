@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateEipAddressResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateEipAddressResponseBody</p>

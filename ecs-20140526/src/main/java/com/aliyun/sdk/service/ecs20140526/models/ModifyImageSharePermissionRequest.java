@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageSharePermissionRequest} extends {@link RequestModel}
  *
  * <p>ModifyImageSharePermissionRequest</p>
@@ -204,7 +205,10 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of Alibaba Cloud account N to which you want to share the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.
+         * <p>The ID of Alibaba Cloud account N to which you want to share the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder addAccount(java.util.List < String > addAccount) {
             this.putQueryParameter("AddAccount", addAccount);
@@ -213,7 +217,11 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the custom image.
+         * <p>The ID of the custom image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp18ygjuqnwhechc****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -222,13 +230,15 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * Specifies whether to publish or unpublish a community image. Valid values:
-         * <p>
+         * <p>Specifies whether to publish or unpublish a community image. Valid values:</p>
+         * <ul>
+         * <li>true: publishes the custom image as a community image.</li>
+         * <li>false: unpublishes a community image. The unpublish operation takes effect only on community images.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: publishes the custom image as a community image.
-         * *   false: unpublishes a community image. The unpublish operation takes effect only on community images.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isPublic(Boolean isPublic) {
             this.putQueryParameter("IsPublic", isPublic);
@@ -237,7 +247,12 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder launchPermission(String launchPermission) {
             this.putQueryParameter("LaunchPermission", launchPermission);
@@ -264,7 +279,11 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The region ID of the custom image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,7 +292,10 @@ public class ModifyImageSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.
+         * <p>The ID of Alibaba Cloud account N from which you want to unshare the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder removeAccount(java.util.List < String > removeAccount) {
             this.putQueryParameter("RemoveAccount", removeAccount);

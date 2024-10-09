@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>StartInstancesResponseBody</p>
@@ -49,7 +50,7 @@ public class StartInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the ECS instance, such as the status of each instance before and after the operation is called and the operation results.
+         * <p>The information about the ECS instance, such as the status of each instance before and after the operation is called and the operation results.</p>
          */
         public Builder instanceResponses(InstanceResponses instanceResponses) {
             this.instanceResponses = instanceResponses;
@@ -57,7 +58,10 @@ public class StartInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class StartInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartInstancesResponseBody</p>
+     */
     public static class InstanceResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -145,7 +155,10 @@ public class StartInstancesResponseBody extends TeaModel {
             private String previousStatus; 
 
             /**
-             * The error code that is returned for the operation on the ECS instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
+             * <p>The error code that is returned for the operation on the ECS instance. The value 200 indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section in this topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -153,7 +166,10 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance after the operation is called.
+             * <p>The status of the ECS instance after the operation is called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Starting</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -161,7 +177,10 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -169,7 +188,10 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned for the operation on the ECS instance. The value success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
+             * <p>The error message that is returned for the operation on the ECS instance. The value success indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section in this topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -177,7 +199,10 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance before the operation is called.
+             * <p>The status of the ECS instance before the operation is called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stopped</p>
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;
@@ -191,6 +216,12 @@ public class StartInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StartInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartInstancesResponseBody</p>
+     */
     public static class InstanceResponses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceResponse")
         private java.util.List < InstanceResponse> instanceResponse;

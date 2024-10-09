@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAttachmentAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAttachmentAttributesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the private pools that the instances match.
+         * <p>Details about the private pools that the instances match.</p>
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -93,7 +94,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAttachmentAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttachmentAttributesResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -181,7 +200,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             private String privatePoolOptionsMatchCriteria; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -189,7 +211,10 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the private pool. If the value of `PrivatePoolOptionsMatchCriteria` is `Open`, the value of PrivatePoolOptionsId is the ID of the private pool that is automatically matched to the instance.
+             * <p>The ID of the private pool. If the value of <code>PrivatePoolOptionsMatchCriteria</code> is <code>Open</code>, the value of PrivatePoolOptionsId is the ID of the private pool that is automatically matched to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-bp67acfmxazb4****</p>
              */
             public Builder privatePoolOptionsId(String privatePoolOptionsId) {
                 this.privatePoolOptionsId = privatePoolOptionsId;
@@ -197,12 +222,15 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The match mode of the private pool. Valid values:
-             * <p>
+             * <p>The match mode of the private pool. Valid values:</p>
+             * <ul>
+             * <li>Open: open private pool. Instances automatically match an open private pool.</li>
+             * <li>Target: specified private pool. Instances match a specified private pool.</li>
+             * <li>None: no private pool. Instances do not use private pools.</li>
+             * </ul>
              * 
-             * *   Open: open private pool. Instances automatically match an open private pool.
-             * *   Target: specified private pool. Instances match a specified private pool.
-             * *   None: no private pool. Instances do not use private pools.
+             * <strong>example:</strong>
+             * <p>Open</p>
              */
             public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
                 this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
@@ -216,6 +244,12 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAttachmentAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttachmentAttributesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;

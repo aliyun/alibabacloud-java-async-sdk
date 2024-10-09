@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDiagnosticMetricSetRequest} extends {@link RequestModel}
  *
  * <p>ModifyDiagnosticMetricSetRequest</p>
@@ -150,7 +151,10 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The new description of the diagnostic metric set.
+         * <p>The new description of the diagnostic metric set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection diagnostics</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -159,7 +163,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The ID of diagnostic metric N.
+         * <p>The ID of diagnostic metric N.</p>
          */
         public Builder metricIds(java.util.List < String > metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
@@ -168,7 +172,11 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The ID of the diagnostic metric set.
+         * <p>The ID of the diagnostic metric set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dms-uf6i0tv2refv8wz*****</p>
          */
         public Builder metricSetId(String metricSetId) {
             this.putQueryParameter("MetricSetId", metricSetId);
@@ -177,7 +185,10 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The new name of the diagnostic metric set.
+         * <p>The new name of the diagnostic metric set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remoteConnectError</p>
          */
         public Builder metricSetName(String metricSetName) {
             this.putQueryParameter("MetricSetName", metricSetName);
@@ -186,7 +197,11 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The region ID of the diagnostic metric set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the diagnostic metric set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +210,10 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

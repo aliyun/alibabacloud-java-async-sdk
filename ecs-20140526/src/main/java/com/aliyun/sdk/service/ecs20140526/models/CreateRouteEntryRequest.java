@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouteEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateRouteEntryRequest</p>
@@ -204,7 +205,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * DestinationCidrBlock.
+         * <p>This parameter is required.</p>
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -285,7 +286,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * RouteTableId.
+         * <p>This parameter is required.</p>
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -300,6 +301,12 @@ public class CreateRouteEntryRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateRouteEntryRequest} extends {@link TeaModel}
+     *
+     * <p>CreateRouteEntryRequest</p>
+     */
     public static class NextHopList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;

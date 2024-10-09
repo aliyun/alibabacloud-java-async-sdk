@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrefixListAttributesRequest} extends {@link RequestModel}
  *
  * <p>DescribePrefixListAttributesRequest</p>
@@ -166,7 +167,11 @@ public class DescribePrefixListAttributesRequest extends Request {
         }
 
         /**
-         * The time when the prefix list was created.
+         * <p>The time when the prefix list was created.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-x1j1k5ykzqlixdcy****</p>
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -175,7 +180,11 @@ public class DescribePrefixListAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the prefix list.
+         * <p>The ID of the prefix list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

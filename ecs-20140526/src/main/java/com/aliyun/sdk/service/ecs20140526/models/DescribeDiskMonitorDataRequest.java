@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDiskMonitorDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDiskMonitorDataRequest</p>
@@ -177,7 +178,11 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The disk ID.
+         * <p>The disk ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1bq5g3dxxo1x4o****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -186,7 +191,11 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-07-23T12:09:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -213,14 +222,16 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:
-         * <p>
+         * <p>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li>60</li>
+         * <li>600</li>
+         * <li>3600</li>
+         * </ul>
+         * <p>Default value: 60.</p>
          * 
-         * *   60
-         * *   600
-         * *   3600
-         * 
-         * Default value: 60.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -247,7 +258,11 @@ public class DescribeDiskMonitorDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-07-23T12:07:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

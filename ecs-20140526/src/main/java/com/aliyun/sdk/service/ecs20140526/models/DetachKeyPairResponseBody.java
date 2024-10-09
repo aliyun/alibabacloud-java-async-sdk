@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>DetachKeyPairResponseBody</p>
@@ -85,7 +86,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The number of instances from which the SSH key pair failed to be unbound.
+         * <p>The number of instances from which the SSH key pair failed to be unbound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failCount(String failCount) {
             this.failCount = failCount;
@@ -93,7 +97,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the key pair.
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -101,7 +108,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The result set of the unbind operation.
+         * <p>The result set of the unbind operation.</p>
          */
         public Builder results(Results results) {
             this.results = results;
@@ -117,7 +127,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances from which you want to unbind the SSH key pair.
+         * <p>The total number of instances from which you want to unbind the SSH key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DetachKeyPairResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetachKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachKeyPairResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -193,7 +212,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The operation status code that is returned. 200 indicates that the operation is successful.
+             * <p>The operation status code that is returned. 200 indicates that the operation is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -201,7 +223,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1d6tsvznfghy7y****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -209,7 +234,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the operation. For example, if the value of `Code` is 200, the value of `Message` is `successful`.
+             * <p>The result of the operation. For example, if the value of <code>Code</code> is 200, the value of <code>Message</code> is <code>successful</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -217,7 +245,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation is successful.
+             * <p>Indicates whether the operation is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(String success) {
                 this.success = success;
@@ -231,6 +262,12 @@ public class DetachKeyPairResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetachKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetachKeyPairResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;

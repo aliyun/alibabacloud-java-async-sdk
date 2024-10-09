@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeDiskRequest} extends {@link RequestModel}
  *
  * <p>ResizeDiskRequest</p>
@@ -176,10 +177,13 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * The ID of the order.
-         * <p>
+         * <p>The ID of the order.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when you resize subscription disks.</p>
+         * </blockquote>
          * 
-         * > This parameter is returned only when you resize subscription disks.
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -188,7 +192,11 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * The ID of the disk. You can call the [DescribeDisks](~~25514~~) operation to query available disk IDs.
+         * <p>The ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query available disk IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -197,46 +205,58 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * The new disk capacity. Unit: GiB. Valid values:
-         * <p>
+         * <p>The new disk capacity. Unit: GiB. Valid values:</p>
+         * <ul>
+         * <li><p>System disk:</p>
+         * <ul>
+         * <li><p>Basic disk (cloud): 20 to 500.</p>
+         * </li>
+         * <li><p>ESSD (cloud_essd): Valid values vary based on the performance level of the ESSD. To query the performance level of an ESSD, call the DescribeDisks operation to query disk information and check the PerformanceLevel value in the response.</p>
+         * <ul>
+         * <li>PL0 ESSD: 1 to 2048.</li>
+         * <li>PL1 ESSD: 20 to 2048.</li>
+         * <li>PL2 ESSD: 461 to 2048.</li>
+         * <li>PL3 ESSD: 1261 to 2048.</li>
+         * </ul>
+         * </li>
+         * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 2048.</p>
+         * </li>
+         * <li><p>Other disk categories: 20 to 2048.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>Data disk:</p>
+         * <ul>
+         * <li><p>Ultra disk (cloud_efficiency): 20 to 32768.</p>
+         * </li>
+         * <li><p>Standard SSD (cloud_ssd): 20 to 32768.</p>
+         * </li>
+         * <li><p>ESSD (cloud_essd): Valid values vary based on the performance level of the ESSD.`` To query the performance level of an ESSD, call the <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> operation to query disk information and check the <code>PerformanceLevel</code> value in the response.</p>
+         * <ul>
+         * <li>PL0 ESSD: 1 to 32768.</li>
+         * <li>PL1 ESSD: 20 to 32768.</li>
+         * <li>PL2 ESSD: 461 to 32768.</li>
+         * <li>PL3 ESSD: 1261 to 32768.</li>
+         * </ul>
+         * </li>
+         * <li><p>Basic disk (cloud): 5 to 2000.</p>
+         * </li>
+         * <li><p>ESSD AutoPL disk (cloud_auto): 1 to 32768.</p>
+         * </li>
+         * <li><p>Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.</p>
+         * </li>
+         * <li><p>Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> The new disk capacity must be larger than the original disk capacity.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   System disk:
-         * 
-         *     *   Basic disk (cloud): 20 to 500.
-         * 
-         *     *   ESSD (cloud_essd): Valid values vary based on the performance level of the ESSD. To query the performance level of an ESSD, call the DescribeDisks operation to query disk information and check the PerformanceLevel value in the response.
-         * 
-         *         *   PL0 ESSD: 1 to 2048.
-         *         *   PL1 ESSD: 20 to 2048.
-         *         *   PL2 ESSD: 461 to 2048.
-         *         *   PL3 ESSD: 1261 to 2048.
-         * 
-         *     *   ESSD AutoPL disk (cloud_auto): 1 to 2048.
-         * 
-         *     *   Other disk categories: 20 to 2048.
-         * 
-         * *   Data disk:
-         * 
-         *     *   Ultra disk (cloud_efficiency): 20 to 32768.
-         * 
-         *     *   Standard SSD (cloud_ssd): 20 to 32768.
-         * 
-         *     *   ESSD (cloud_essd): Valid values vary based on the performance level of the ESSD.`` To query the performance level of an ESSD, call the [DescribeDisks](~~25514~~) operation to query disk information and check the `PerformanceLevel` value in the response.
-         * 
-         *         *   PL0 ESSD: 1 to 32768.
-         *         *   PL1 ESSD: 20 to 32768.
-         *         *   PL2 ESSD: 461 to 32768.
-         *         *   PL3 ESSD: 1261 to 32768.
-         * 
-         *     *   Basic disk (cloud): 5 to 2000.
-         * 
-         *     *   ESSD AutoPL disk (cloud_auto): 1 to 32768.
-         * 
-         *     *   Standard elastic ephemeral disk (elastic_ephemeral_disk_standard): 64 to 8192.
-         * 
-         *     *   Premium elastic ephemeral disk (elastic_ephemeral_disk_premium): 64 to 8192.
-         * 
-         * >  The new disk capacity must be larger than the original disk capacity.
+         * <strong>example:</strong>
+         * <p>1900</p>
          */
         public Builder newSize(Integer newSize) {
             this.putQueryParameter("NewSize", newSize);
@@ -281,11 +301,14 @@ public class ResizeDiskRequest extends Request {
         }
 
         /**
-         * The method that you want to use to resize the disk. Valid values:
-         * <p>
+         * <p>The method that you want to use to resize the disk. Valid values:</p>
+         * <ul>
+         * <li>offline (default): resizes the disk offline. After you resize a disk offline, you must restart the associated instance in the ECS console or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the resizing operation to take effect. For information about how to restart an ECS instance in the ECS console, see <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a>.</li>
+         * <li>online: resizes the disk online. After you resize a disk online, the resizing operation immediately takes effect. You do not need to restart the associated instance. You can resize ultra disks, standard SSDs, Enterprise SSDs (ESSDs), and elastic ephemeral disks online.</li>
+         * </ul>
          * 
-         * *   offline (default): resizes the disk offline. After you resize a disk offline, you must restart the associated instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the resizing operation to take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](~~25440~~).
-         * *   online: resizes the disk online. After you resize a disk online, the resizing operation immediately takes effect. You do not need to restart the associated instance. You can resize ultra disks, standard SSDs, Enterprise SSDs (ESSDs), and elastic ephemeral disks online.
+         * <strong>example:</strong>
+         * <p>offline</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

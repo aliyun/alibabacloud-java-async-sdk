@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClustersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClustersResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClustersResponseBody</p>
+     */
     public static class Cluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -111,6 +118,12 @@ public class DescribeClustersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClustersResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cluster")
         private java.util.List < Cluster> cluster;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDisksFullStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeDisksFullStatusRequest</p>
@@ -282,7 +283,10 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The ID of EBS device N. Valid values of N: 1 to 100.
+         * <p>The ID of EBS device N. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4p****</p>
          */
         public Builder diskId(java.util.List < String > diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -291,7 +295,10 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The ID of event N. Valid values of N: 1 to 100.
+         * <p>The ID of event N. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-bp67acfmxazb4p****</p>
          */
         public Builder eventId(java.util.List < String > eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -300,13 +307,16 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The event type of the EBS device. Valid values:
-         * <p>
+         * <p>The event type of the EBS device. Valid values:</p>
+         * <ul>
+         * <li>Degraded: The performance of the EBS device is degraded.</li>
+         * <li>SeverelyDegraded: The performance of the EBS device is severely degraded.</li>
+         * <li>Stalled: The performance of the EBS device is severely affected.</li>
+         * <li>ErrorDetected: The local disk is damaged.</li>
+         * </ul>
          * 
-         * *   Degraded: The performance of the EBS device is degraded.
-         * *   SeverelyDegraded: The performance of the EBS device is severely degraded.
-         * *   Stalled: The performance of the EBS device is severely affected.
-         * *   ErrorDetected: The local disk is damaged.
+         * <strong>example:</strong>
+         * <p>Stalled</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -315,14 +325,17 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The health status of the EBS device. Valid values:
-         * <p>
+         * <p>The health status of the EBS device. Valid values:</p>
+         * <ul>
+         * <li>Impaired: The EBS device is damaged.</li>
+         * <li>Warning: The performance of the EBS device is degraded.</li>
+         * <li>Initializing: The EBS device is being initialized.</li>
+         * <li>InsufficientData: The status cannot be determined due to insufficient data.</li>
+         * <li>NotApplicable: The EBS device cannot be used.</li>
+         * </ul>
          * 
-         * *   Impaired: The EBS device is damaged.
-         * *   Warning: The performance of the EBS device is degraded.
-         * *   Initializing: The EBS device is being initialized.
-         * *   InsufficientData: The status cannot be determined due to insufficient data.
-         * *   NotApplicable: The EBS device cannot be used.
+         * <strong>example:</strong>
+         * <p>Warning</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -349,10 +362,11 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. The value must be a positive integer.
-         * <p>
+         * <p>The page number. Pages start from page 1. The value must be a positive integer.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -361,10 +375,11 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -373,7 +388,11 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the EBS device. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the EBS device. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -382,7 +401,10 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the EBS device belongs. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
+         * <p>The ID of the resource group to which the EBS device belongs. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2kkmhmhs****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -409,15 +431,18 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The lifecycle status of the EBS device. For more information, see [Disk status](~~25689~~). Valid values:
-         * <p>
+         * <p>The lifecycle status of the EBS device. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status</a>. Valid values:</p>
+         * <ul>
+         * <li>In_use: The EBS device is in use.</li>
+         * <li>Available: The EBS device can be attached.</li>
+         * <li>Attaching: The EBS device is being attached.</li>
+         * <li>Detaching: The EBS device is being detached.</li>
+         * <li>Creating: The EBS device is being created.</li>
+         * <li>ReIniting: The EBS device is being initialized.</li>
+         * </ul>
          * 
-         * *   In_use: The EBS device is in use.
-         * *   Available: The EBS device can be attached.
-         * *   Attaching: The EBS device is being attached.
-         * *   Detaching: The EBS device is being detached.
-         * *   Creating: The EBS device is being created.
-         * *   ReIniting: The EBS device is being initialized.
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -426,7 +451,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The tags to add to the EBS device.
+         * <p>The tags to add to the EBS device.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -441,6 +466,12 @@ public class DescribeDisksFullStatusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDisksFullStatusRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksFullStatusRequest</p>
+     */
     public static class EventTime extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private String end;
@@ -480,10 +511,11 @@ public class DescribeDisksFullStatusRequest extends Request {
             private String start; 
 
             /**
-             * The end of the time range to query occurred events.
-             * <p>
+             * <p>The end of the time range to query occurred events.</p>
+             * <p>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
              * 
-             * Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+             * <strong>example:</strong>
+             * <p>2018-05-08T02:48:52Z</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -491,10 +523,11 @@ public class DescribeDisksFullStatusRequest extends Request {
             }
 
             /**
-             * The beginning of the time range to query occurred events.
-             * <p>
+             * <p>The beginning of the time range to query occurred events.</p>
+             * <p>Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
              * 
-             * Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+             * <strong>example:</strong>
+             * <p>2018-05-06T02:43:10Z</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -508,6 +541,12 @@ public class DescribeDisksFullStatusRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksFullStatusRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksFullStatusRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -547,10 +586,11 @@ public class DescribeDisksFullStatusRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the EBS device. A key-value pair consists of a key specified by the Tag.N.Key parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N to add to the EBS device. A key-value pair consists of a key specified by the Tag.N.Key parameter and a value specified by the <code>Tag.N.Value</code> parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</p>
+             * <p>Up to 1,000 resources with the specified tags can be returned in the response.</p>
              * 
-             * Up to 1,000 resources with the specified tags can be returned in the response.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -558,7 +598,10 @@ public class DescribeDisksFullStatusRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the Tag.N.Value parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
+             * <p>The value of tag N to add to the EBS device. A key-value pair consists of a key specified by the <code>Tag.N.Key</code> parameter and a value specified by the Tag.N.Value parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

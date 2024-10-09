@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeploymentSetsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDeploymentSetsRequest</p>
@@ -246,7 +247,10 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The IDs of deployment sets. The value can be a JSON array that consists of deployment set IDs in the format of `["ds-xxxxxxxxx", "ds-yyyyyyyyy", ... "ds-zzzzzzzzz"]`. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).
+         * <p>The IDs of deployment sets. The value can be a JSON array that consists of deployment set IDs in the format of <code>[&quot;ds-xxxxxxxxx&quot;, &quot;ds-yyyyyyyyy&quot;, ... &quot;ds-zzzzzzzzz&quot;]</code>. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ds-bp67acfmxazb4ph****&quot;, &quot;ds-bp67acfmxazb4pi****&quot;, … &quot;ds-bp67acfmxazb4pj****&quot;]</p>
          */
         public Builder deploymentSetIds(String deploymentSetIds) {
             this.putQueryParameter("DeploymentSetIds", deploymentSetIds);
@@ -255,7 +259,10 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDeploymentSetName</p>
          */
         public Builder deploymentSetName(String deploymentSetName) {
             this.putQueryParameter("DeploymentSetName", deploymentSetName);
@@ -264,7 +271,12 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * >  This parameter is deprecated.
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -273,7 +285,12 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * >  This parameter is deprecated.
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -282,7 +299,12 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * >  This parameter is deprecated.
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -309,12 +331,12 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -323,12 +345,12 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -337,7 +359,11 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -364,11 +390,14 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The deployment strategy. Valid values:
-         * <p>
+         * <p>The deployment strategy. Valid values:</p>
+         * <ul>
+         * <li>Availability: high availability strategy</li>
+         * <li>AvailabilityGroup: high availability group strategy</li>
+         * </ul>
          * 
-         * *   Availability: high availability strategy
-         * *   AvailabilityGroup: high availability group strategy
+         * <strong>example:</strong>
+         * <p>Availability</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupReferencesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityGroupReferencesResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         private SecurityGroupReferences securityGroupReferences; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the references to the specified security groups.
+         * <p>Details about the references to the specified security groups.</p>
          */
         public Builder securityGroupReferences(SecurityGroupReferences securityGroupReferences) {
             this.securityGroupReferences = securityGroupReferences;
@@ -70,6 +74,12 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupReferencesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupReferencesResponseBody</p>
+     */
     public static class ReferencingSecurityGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
@@ -109,7 +119,10 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the security group belongs.
+             * <p>The ID of the Alibaba Cloud account to which the security group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -117,7 +130,10 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp67acfmxazb4j****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -131,6 +147,12 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupReferencesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupReferencesResponseBody</p>
+     */
     public static class ReferencingSecurityGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReferencingSecurityGroup")
         private java.util.List < ReferencingSecurityGroup> referencingSecurityGroup;
@@ -172,6 +194,12 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupReferencesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupReferencesResponseBody</p>
+     */
     public static class SecurityGroupReference extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReferencingSecurityGroups")
         private ReferencingSecurityGroups referencingSecurityGroups;
@@ -211,7 +239,7 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             private String securityGroupId; 
 
             /**
-             * Details about the security groups whose rules are referencing the specified security groups.
+             * <p>Details about the security groups whose rules are referencing the specified security groups.</p>
              */
             public Builder referencingSecurityGroups(ReferencingSecurityGroups referencingSecurityGroups) {
                 this.referencingSecurityGroups = referencingSecurityGroups;
@@ -219,7 +247,10 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the specified security group.
+             * <p>The ID of the specified security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp67acfmxazb4p****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -233,6 +264,12 @@ public class DescribeSecurityGroupReferencesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupReferencesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupReferencesResponseBody</p>
+     */
     public static class SecurityGroupReferences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupReference")
         private java.util.List < SecurityGroupReference> securityGroupReference;

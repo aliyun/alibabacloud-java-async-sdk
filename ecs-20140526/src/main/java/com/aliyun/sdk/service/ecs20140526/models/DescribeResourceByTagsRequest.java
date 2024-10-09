@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourceByTagsRequest} extends {@link RequestModel}
  *
  * <p>DescribeResourceByTagsRequest</p>
@@ -185,10 +186,11 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -197,10 +199,11 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -209,7 +212,11 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,21 +243,23 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>instance: Elastic Compute Service (ECS) instance</li>
+         * <li>disk: disk</li>
+         * <li>snapshot: snapshot</li>
+         * <li>image: image</li>
+         * <li>securitygroup: security group</li>
+         * <li>volume: storage volume</li>
+         * <li>eni: elastic network interface (ENI)</li>
+         * <li>ddh: dedicated host</li>
+         * <li>keypair: SSH key pair</li>
+         * <li>launchtemplate: launch template</li>
+         * </ul>
+         * <p>All the preceding values must be lowercase.</p>
          * 
-         * *   instance: Elastic Compute Service (ECS) instance
-         * *   disk: disk
-         * *   snapshot: snapshot
-         * *   image: image
-         * *   securitygroup: security group
-         * *   volume: storage volume
-         * *   eni: elastic network interface (ENI)
-         * *   ddh: dedicated host
-         * *   keypair: SSH key pair
-         * *   launchtemplate: launch template
-         * 
-         * All the preceding values must be lowercase.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -259,7 +268,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -274,6 +283,12 @@ public class DescribeResourceByTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeResourceByTagsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeResourceByTagsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -313,7 +328,10 @@ public class DescribeResourceByTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.
+             * <p>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -321,7 +339,10 @@ public class DescribeResourceByTagsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.
+             * <p>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

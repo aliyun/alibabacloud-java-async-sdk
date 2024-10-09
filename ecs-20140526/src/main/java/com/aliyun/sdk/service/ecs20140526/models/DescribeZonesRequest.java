@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeZonesRequest} extends {@link RequestModel}
  *
  * <p>DescribeZonesRequest</p>
@@ -189,14 +190,16 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The natural language that is used to filter responses. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
-         * <p>
+         * <p>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</p>
+         * <ul>
+         * <li>zh-CN</li>
+         * <li>en-US</li>
+         * <li>ja</li>
+         * </ul>
+         * <p>Default value: zh-CN.</p>
          * 
-         * *   zh-CN
-         * *   en-US
-         * *   ja
-         * 
-         * Default value: zh-CN.
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -205,13 +208,15 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The billing method of resources. For more information, see [Billing overview](~~25398~~). Valid values:
-         * <p>
+         * <p>The billing method of resources. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
-         * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
-         * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -238,7 +243,11 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -265,14 +274,16 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The bidding policy for pay-as-you-go instances. You can specify this parameter when the `InstanceChargeType` parameter is set to PostPaid. For more information, see [Preemptible instances](~~52088~~). Valid values:
-         * <p>
+         * <p>The bidding policy for pay-as-you-go instances. You can specify this parameter when the <code>InstanceChargeType</code> parameter is set to PostPaid. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Preemptible instances</a>. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instances are regular pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The instances are preemptible instances with user-defined maximum hourly prices.</li>
+         * <li>SpotAsPriceGo: The instances are preemptible instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The instances are regular pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The instances are preemptible instances with user-defined maximum hourly prices.
-         * *   SpotAsPriceGo: The instances are preemptible instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -281,13 +292,15 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * Specifies whether to display detailed information.
-         * <p>
+         * <p>Specifies whether to display detailed information.</p>
+         * <ul>
+         * <li>true: displays detailed information.</li>
+         * <li>false: does not display detailed information.</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
-         * *   true: displays detailed information.
-         * *   false: does not display detailed information.
-         * 
-         * Default value: true.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder verbose(Boolean verbose) {
             this.putQueryParameter("Verbose", verbose);

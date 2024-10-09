@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudAssistantSettingsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudAssistantSettingsRequest</p>
@@ -166,7 +167,11 @@ public class DescribeCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +198,8 @@ public class DescribeCloudAssistantSettingsRequest extends Request {
         }
 
         /**
-         * The Cloud Assistant configurations.
+         * <p>The Cloud Assistant configurations.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder settingType(java.util.List < String > settingType) {
             this.putQueryParameter("SettingType", settingType);

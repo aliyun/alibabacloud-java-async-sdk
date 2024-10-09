@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSnapshotMonitorDataResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitoring data of snapshot sizes.
+         * <p>The monitoring data of snapshot sizes.</p>
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -57,7 +58,10 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F8163A8-F5DE-47A2-A572-4E062D223E09</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSnapshotMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotMonitorDataResponseBody</p>
+     */
     public static class DataPoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
@@ -109,7 +119,10 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The total size of snapshots. Unit: bytes.
+             * <p>The total size of snapshots. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>243036848128</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -117,7 +130,10 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that corresponds to a snapshot size.
+             * <p>The timestamp that corresponds to a snapshot size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-05-10T04:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -131,6 +147,12 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSnapshotMonitorDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSnapshotMonitorDataResponseBody</p>
+     */
     public static class MonitorData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataPoint")
         private java.util.List < DataPoint> dataPoint;

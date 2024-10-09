@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateForwardEntryRequest} extends {@link RequestModel}
  *
  * <p>CreateForwardEntryRequest</p>
@@ -200,7 +201,7 @@ public class CreateForwardEntryRequest extends Request {
         } 
 
         /**
-         * ExternalIp.
+         * <p>This parameter is required.</p>
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -209,7 +210,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ExternalPort.
+         * <p>This parameter is required.</p>
          */
         public Builder externalPort(String externalPort) {
             this.putQueryParameter("ExternalPort", externalPort);
@@ -218,7 +219,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * ForwardTableId.
+         * <p>This parameter is required.</p>
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -227,7 +228,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * <p>This parameter is required.</p>
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -236,7 +237,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * <p>This parameter is required.</p>
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -245,7 +246,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * <p>This parameter is required.</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -272,7 +273,7 @@ public class CreateForwardEntryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

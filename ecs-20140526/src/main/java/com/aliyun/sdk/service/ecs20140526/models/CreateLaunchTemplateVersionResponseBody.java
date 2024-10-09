@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLaunchTemplateVersionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLaunchTemplateVersionResponseBody</p>
@@ -61,10 +62,11 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the launch template. For more information, see [DescribeLaunchTemplates](~~73759~~).
-         * <p>
+         * <p>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</p>
+         * <p>You must specify <code>LaunchTemplateId</code> or <code>LaunchTemplateName</code> to specify a launch template.</p>
          * 
-         * You must specify `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template.
+         * <strong>example:</strong>
+         * <p>lt-bp1apo0bbbkuy0rj****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
@@ -72,7 +74,10 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The version number of the launch template.
+         * <p>The number of the created version of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
             this.launchTemplateVersionNumber = launchTemplateVersionNumber;
@@ -80,7 +85,10 @@ public class CreateLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DExxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

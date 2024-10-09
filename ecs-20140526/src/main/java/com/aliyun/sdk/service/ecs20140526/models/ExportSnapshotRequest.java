@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportSnapshotRequest} extends {@link RequestModel}
  *
  * <p>ExportSnapshotRequest</p>
@@ -140,7 +141,7 @@ public class ExportSnapshotRequest extends Request {
         } 
 
         /**
-         * OssBucket.
+         * <p>This parameter is required.</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -158,7 +159,7 @@ public class ExportSnapshotRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +195,7 @@ public class ExportSnapshotRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>This parameter is required.</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

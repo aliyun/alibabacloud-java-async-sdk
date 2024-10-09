@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
  *
  * <p>AssignPrivateIpAddressesResponseBody</p>
@@ -49,7 +50,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the ENI and the secondary private IP addresses that are assigned to the ENI.
+         * <p>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</p>
          */
         public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
             this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
@@ -57,7 +58,10 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignPrivateIpAddressesResponseBody</p>
+     */
     public static class Ipv4PrefixSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4Prefixes")
         private java.util.List < String > ipv4Prefixes;
@@ -111,6 +121,12 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignPrivateIpAddressesResponseBody</p>
+     */
     public static class PrivateIpSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private java.util.List < String > privateIpAddress;
@@ -152,6 +168,12 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AssignPrivateIpAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssignPrivateIpAddressesResponseBody</p>
+     */
     public static class AssignedPrivateIpAddressesSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ipv4PrefixSet")
         private Ipv4PrefixSet ipv4PrefixSet;
@@ -203,7 +225,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             private PrivateIpSet privateIpSet; 
 
             /**
-             * Details about the assigned IPv4 prefixes.
+             * <p>Details about the assigned IPv4 prefixes.</p>
              */
             public Builder ipv4PrefixSet(Ipv4PrefixSet ipv4PrefixSet) {
                 this.ipv4PrefixSet = ipv4PrefixSet;
@@ -211,7 +233,10 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ENI ID.
+             * <p>The ENI ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-bp125p95hhdhn3ot****</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -219,7 +244,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The secondary private IP addresses that are assigned to the ENI.
+             * <p>The secondary private IP addresses that are assigned to the ENI.</p>
              */
             public Builder privateIpSet(PrivateIpSet privateIpSet) {
                 this.privateIpSet = privateIpSet;

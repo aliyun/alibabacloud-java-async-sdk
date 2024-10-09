@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyReservedInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyReservedInstancesResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
         private ReservedInstanceIdSets reservedInstanceIdSets; 
 
         /**
-         * Details about the reserved instance.
+         * <p>Details about the reserved instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ED9E4A5F-FF4D-4C96-BE80-6B4227060DD7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the reserved instances.
+         * <p>The IDs of the reserved instances.</p>
          */
         public Builder reservedInstanceIdSets(ReservedInstanceIdSets reservedInstanceIdSets) {
             this.reservedInstanceIdSets = reservedInstanceIdSets;
@@ -70,6 +74,12 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyReservedInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyReservedInstancesResponseBody</p>
+     */
     public static class ReservedInstanceIdSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReservedInstanceId")
         private java.util.List < String > reservedInstanceId;

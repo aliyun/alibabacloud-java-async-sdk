@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteImageComponentRequest} extends {@link RequestModel}
  *
  * <p>DeleteImageComponentRequest</p>
@@ -148,7 +149,11 @@ public class DeleteImageComponentRequest extends Request {
         }
 
         /**
-         * The ID of the image component.
+         * <p>The ID of the image component.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ic-bp67acfmxazb4p****</p>
          */
         public Builder imageComponentId(String imageComponentId) {
             this.putQueryParameter("ImageComponentId", imageComponentId);
@@ -175,7 +180,11 @@ public class DeleteImageComponentRequest extends Request {
         }
 
         /**
-         * The region ID of the image component. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the image component. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

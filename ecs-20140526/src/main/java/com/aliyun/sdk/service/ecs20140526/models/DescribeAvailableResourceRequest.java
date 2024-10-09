@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeAvailableResourceRequest</p>
@@ -345,10 +346,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).
-         * <p>
+         * <p>The number of vCPUs of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * <p>The Cores parameter takes effect only when the DestinationResource parameter is set to InstanceType.</p>
          * 
-         * The Cores parameter takes effect only when the DestinationResource parameter is set to InstanceType.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -357,15 +359,18 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The category of the data disk. Valid values:
-         * <p>
+         * <p>The category of the data disk. Valid values:</p>
+         * <ul>
+         * <li>cloud: basic disk</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>ephemeral_ssd: local SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * <li>cloud_auto: ESSD AutoPL disk</li>
+         * </ul>
          * 
-         * *   cloud: basic disk
-         * *   cloud_efficiency: ultra disk
-         * *   cloud_ssd: standard SSD
-         * *   ephemeral_ssd: local SSD
-         * *   cloud_essd: ESSD
-         * *   cloud_auto: ESSD AutoPL disk
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder dataDiskCategory(String dataDiskCategory) {
             this.putQueryParameter("DataDiskCategory", dataDiskCategory);
@@ -374,7 +379,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host.
+         * <p>The ID of the dedicated host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dh-bp165p6xk2tlw61e****</p>
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -383,18 +391,21 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The resource type to query. Valid values:
-         * <p>
+         * <p>The resource type to query. Valid values:</p>
+         * <ul>
+         * <li>Zone: zone.</li>
+         * <li>IoOptimized: I/O optimized resource.</li>
+         * <li>InstanceType: instance type.</li>
+         * <li>SystemDisk: system disk.</li>
+         * <li>DataDisk: data disk.</li>
+         * <li>Network: network type.</li>
+         * <li>ddh: dedicated host.</li>
+         * </ul>
+         * <p>For more information about how to configure the DestinationResource parameter, see the <strong>Description</strong> section of this topic.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   Zone: zone.
-         * *   IoOptimized: I/O optimized resource.
-         * *   InstanceType: instance type.
-         * *   SystemDisk: system disk.
-         * *   DataDisk: data disk.
-         * *   Network: network type.
-         * *   ddh: dedicated host.
-         * 
-         * For more information about how to configure the DestinationResource parameter, see the **Description** section of this topic.
+         * <strong>example:</strong>
+         * <p>InstanceType</p>
          */
         public Builder destinationResource(String destinationResource) {
             this.putQueryParameter("DestinationResource", destinationResource);
@@ -403,13 +414,15 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The billing method of the resource. For more information, see [Billing overview](~~25398~~). Valid values:
-         * <p>
+         * <p>The billing method of the resource. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
-         * *   PrePaid: subscription.
-         * *   PostPaid: pay-as-you-go.
-         * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -418,10 +431,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The instance types. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list.
-         * <p>
+         * <p>The instance types. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+         * <p>For more information about how to configure the InstanceType parameter, see the <strong>Description</strong> section of this topic.</p>
          * 
-         * For more information about how to configure the InstanceType parameter, see the **Description** section of this topic.
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -430,13 +444,15 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance is an I/O optimized instance. Valid values:
-         * <p>
+         * <p>Specifies whether the instance is an I/O optimized instance. Valid values:</p>
+         * <ul>
+         * <li>none: The instance is a non-I/O optimized instance.</li>
+         * <li>optimized: The instance is an I/O optimized instance.</li>
+         * </ul>
+         * <p>Default value: optimized.</p>
          * 
-         * *   none: The instance is a non-I/O optimized instance.
-         * *   optimized: The instance is an I/O optimized instance.
-         * 
-         * Default value: optimized.
+         * <strong>example:</strong>
+         * <p>optimized</p>
          */
         public Builder ioOptimized(String ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -445,10 +461,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The memory size of the instance type. Unit: GiB. For more information, see [Instance families](~~25378~~).
-         * <p>
+         * <p>The memory size of the instance type. Unit: GiB. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * <p>The Memory parameter takes effect only when the DestinationResource parameter is set to InstanceType.</p>
          * 
-         * The Memory parameter takes effect only when the DestinationResource parameter is set to InstanceType.
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -457,11 +474,14 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The network type of the cluster. Valid values:
-         * <p>
+         * <p>The network type of the cluster. Valid values:</p>
+         * <ul>
+         * <li>vpc</li>
+         * <li>classic</li>
+         * </ul>
          * 
-         * *   vpc
-         * *   classic
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder networkCategory(String networkCategory) {
             this.putQueryParameter("NetworkCategory", networkCategory);
@@ -488,7 +508,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region for which to query resources. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region for which to query resources. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -515,13 +539,16 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>instance: ECS instance.</li>
+         * <li>disk: cloud disk.</li>
+         * <li>reservedinstance: reserved instance.</li>
+         * <li>ddh: dedicated host.</li>
+         * </ul>
          * 
-         * *   instance: ECS instance.
-         * *   disk: cloud disk.
-         * *   reservedinstance: reserved instance.
-         * *   ddh: dedicated host.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -530,11 +557,14 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The scope of the reserved instance. Valid values:
-         * <p>
+         * <p>The scope of the reserved instance. Valid values:</p>
+         * <ul>
+         * <li>Region: regional.</li>
+         * <li>Zone: zonal.</li>
+         * </ul>
          * 
-         * *   Region: regional.
-         * *   Zone: zonal.
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -543,15 +573,18 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:
-         * <p>
+         * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * </ul>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
+         * </blockquote>
          * 
-         * *   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
-         * *   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
-         * 
-         * Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
-         * 
-         * >  This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -560,16 +593,17 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The bidding policy for pay-as-you-go instances. Valid values:
-         * <p>
+         * <p>The bidding policy for pay-as-you-go instances. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instance is a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
+         * <p>The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
          * 
-         * *   NoSpot: The instance is a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
-         * 
-         * Default value: NoSpot.
-         * 
-         * The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -578,19 +612,22 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The category of the system disk. Valid values:
-         * <p>
+         * <p>The category of the system disk. Valid values:</p>
+         * <ul>
+         * <li>cloud: basic disk</li>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>ephemeral_ssd: local SSD</li>
+         * <li>cloud_essd: Enterprise SSD (ESSD)</li>
+         * <li>cloud_auto: ESSD AutoPL disk</li>
+         * </ul>
+         * <p>Default value: cloud_efficiency.</p>
+         * <blockquote>
+         * <p> This parameter must be specified when ResourceType is set to instance and DestinationResource is set to DataDisk. If you do not specify this parameter, the default value takes effect.</p>
+         * </blockquote>
          * 
-         * *   cloud: basic disk
-         * *   cloud_efficiency: ultra disk
-         * *   cloud_ssd: standard SSD
-         * *   ephemeral_ssd: local SSD
-         * *   cloud_essd: Enterprise SSD (ESSD)
-         * *   cloud_auto: ESSD AutoPL disk
-         * 
-         * Default value: cloud_efficiency.
-         * 
-         * >  This parameter must be specified when ResourceType is set to instance and DestinationResource is set to DataDisk. If you do not specify this parameter, the default value takes effect.
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder systemDiskCategory(String systemDiskCategory) {
             this.putQueryParameter("SystemDiskCategory", systemDiskCategory);
@@ -599,10 +636,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the zone where the instance resides.
-         * <p>
+         * <p>The ID of the zone where the instance resides.</p>
+         * <p>This parameter is empty by default. When this parameter is empty, the system returns resources that match the other criteria in all zones within the region specified by <code>RegionId</code>.</p>
          * 
-         * This parameter is empty by default. When this parameter is empty, the system returns resources that match the other criteria in all zones within the region specified by `RegionId`.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

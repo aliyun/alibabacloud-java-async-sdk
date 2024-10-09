@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityGroupAttributeResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * The description of the security group.
+         * <p>The description of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -141,11 +145,14 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The access control policy of the security group. Valid values:
-         * <p>
+         * <p>The access control policy of the security group. Valid values:</p>
+         * <ul>
+         * <li>Accept: All instances in the security group can communicate with each other.</li>
+         * <li>Drop: All instances in the security group are isolated from each other.</li>
+         * </ul>
          * 
-         * *   Accept: All instances in the security group can communicate with each other.
-         * *   Drop: All instances in the security group are isolated from each other.
+         * <strong>example:</strong>
+         * <p>Accept</p>
          */
         public Builder innerAccessPolicy(String innerAccessPolicy) {
             this.innerAccessPolicy = innerAccessPolicy;
@@ -153,7 +160,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If the return value of this parameter is empty when you specify `MaxResults` and `NextToken` for a paged query, no more results are to be returned.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If the return value of this parameter is empty when you specify <code>MaxResults</code> and <code>NextToken</code> for a paged query, no more results are to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -161,7 +171,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the security group rules.
+         * <p>Details about the security group rules.</p>
          */
         public Builder permissions(Permissions permissions) {
             this.permissions = permissions;
@@ -169,7 +179,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -177,7 +190,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,7 +201,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the destination security group.
+         * <p>The ID of the destination security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1gxw6bznjjvhu3****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -193,7 +212,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the destination security group.
+         * <p>The name of the destination security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecurityGroupName Sample</p>
          */
         public Builder securityGroupName(String securityGroupName) {
             this.securityGroupName = securityGroupName;
@@ -201,7 +223,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC. If a VPC ID is returned, the network type of the security group is VPC. If no VPC ID is returned, the network type of the security group is classic network.
+         * <p>The ID of the VPC. If a VPC ID is returned, the network type of the security group is VPC. If no VPC ID is returned, the network type of the security group is classic network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1opxu1zkhn00gzv****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -214,6 +239,12 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupAttributeResponseBody</p>
+     */
     public static class Permission extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -517,7 +548,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             private String sourcePrefixListName; 
 
             /**
-             * The time when the security group rule was created. The time is displayed in UTC.
+             * <p>The time when the security group rule was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-12-12T07:28:38Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -525,7 +559,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the security group.
+             * <p>The description of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description Sample 01</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -533,7 +570,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The destination CIDR block for outbound access control.
+             * <p>The destination CIDR block for outbound access control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder destCidrIp(String destCidrIp) {
                 this.destCidrIp = destCidrIp;
@@ -541,7 +581,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination security group for outbound access control.
+             * <p>The ID of the destination security group for outbound access control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1czdx84jd88i7v****</p>
              */
             public Builder destGroupId(String destGroupId) {
                 this.destGroupId = destGroupId;
@@ -549,7 +592,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination security group.
+             * <p>The name of the destination security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDestGroupName</p>
              */
             public Builder destGroupName(String destGroupName) {
                 this.destGroupName = destGroupName;
@@ -557,7 +603,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the destination security group belongs.
+             * <p>The ID of the Alibaba Cloud account to which the destination security group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder destGroupOwnerAccount(String destGroupOwnerAccount) {
                 this.destGroupOwnerAccount = destGroupOwnerAccount;
@@ -565,7 +614,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination prefix list for outbound access control.
+             * <p>The ID of the destination prefix list for outbound access control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-x1j1k5ykzqlixabc****</p>
              */
             public Builder destPrefixListId(String destPrefixListId) {
                 this.destPrefixListId = destPrefixListId;
@@ -573,7 +625,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination prefix list.
+             * <p>The name of the destination prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DestPrefixListName Sample</p>
              */
             public Builder destPrefixListName(String destPrefixListName) {
                 this.destPrefixListName = destPrefixListName;
@@ -581,7 +636,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The direction in which the security group rule is applied.
+             * <p>The direction in which the security group rule is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ingress</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -589,7 +647,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The transport layer protocol.
+             * <p>The transport layer protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -597,7 +658,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IPv6 CIDR block.
+             * <p>The destination IPv6 CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001:db8:1233:1a00::***</p>
              */
             public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
                 this.ipv6DestCidrIp = ipv6DestCidrIp;
@@ -605,7 +669,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The source IPv6 CIDR block.
+             * <p>The source IPv6 CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001:db8:1234:1a00::***</p>
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -613,7 +680,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The network type.
+             * <p>The network type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>intranet</p>
              */
             public Builder nicType(String nicType) {
                 this.nicType = nicType;
@@ -621,7 +691,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The access control policy.
+             * <p>The access control policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -629,7 +702,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The port range.
+             * <p>The port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80/80</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -637,7 +713,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the rule.
+             * <p>The priority of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -645,7 +724,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group rule.
+             * <p>The ID of the security group rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgr-bp12kewq32dfwrdi****</p>
              */
             public Builder securityGroupRuleId(String securityGroupRuleId) {
                 this.securityGroupRuleId = securityGroupRuleId;
@@ -653,7 +735,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The source CIDR block for inbound access control.
+             * <p>The source CIDR block for inbound access control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -661,7 +746,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The source security group for inbound access control.
+             * <p>The source security group for inbound access control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp12kc4rqohaf2js****</p>
              */
             public Builder sourceGroupId(String sourceGroupId) {
                 this.sourceGroupId = sourceGroupId;
@@ -669,7 +757,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source security group.
+             * <p>The name of the source security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testSourceGroupName1</p>
              */
             public Builder sourceGroupName(String sourceGroupName) {
                 this.sourceGroupName = sourceGroupName;
@@ -677,7 +768,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the source security group belongs.
+             * <p>The ID of the Alibaba Cloud account to which the source security group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder sourceGroupOwnerAccount(String sourceGroupOwnerAccount) {
                 this.sourceGroupOwnerAccount = sourceGroupOwnerAccount;
@@ -685,7 +779,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The source port range.
+             * <p>The source port range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80/80</p>
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
@@ -693,7 +790,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source prefix list for inbound access control.
+             * <p>The ID of the source prefix list for inbound access control.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-x1j1k5ykzqlixdcy****</p>
              */
             public Builder sourcePrefixListId(String sourcePrefixListId) {
                 this.sourcePrefixListId = sourcePrefixListId;
@@ -701,7 +801,10 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source prefix list.
+             * <p>The name of the source prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SourcePrefixListName Sample</p>
              */
             public Builder sourcePrefixListName(String sourcePrefixListName) {
                 this.sourcePrefixListName = sourcePrefixListName;
@@ -715,6 +818,12 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityGroupAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityGroupAttributeResponseBody</p>
+     */
     public static class Permissions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Permission")
         private java.util.List < Permission> permission;

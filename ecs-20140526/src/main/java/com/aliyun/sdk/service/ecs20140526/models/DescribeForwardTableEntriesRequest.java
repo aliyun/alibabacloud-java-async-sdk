@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeForwardTableEntriesRequest} extends {@link RequestModel}
  *
  * <p>DescribeForwardTableEntriesRequest</p>
@@ -177,7 +178,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * ForwardTableId.
+         * <p>This parameter is required.</p>
          */
         public Builder forwardTableId(String forwardTableId) {
             this.putQueryParameter("ForwardTableId", forwardTableId);
@@ -222,7 +223,7 @@ public class DescribeForwardTableEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePhysicalConnectionsResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
     public static class PhysicalConnectionType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
@@ -511,6 +518,12 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsResponseBody</p>
+     */
     public static class PhysicalConnectionSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PhysicalConnectionType")
         private java.util.List < PhysicalConnectionType> physicalConnectionType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeElasticityAssuranceInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeElasticityAssuranceInstancesRequest</p>
@@ -185,12 +186,12 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -199,7 +200,10 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * The token used to start the query. Set the value to the NextToken value obtained from the response to the preceding request.
+         * <p>The token used to start the query. Set the value to the NextToken value obtained from the response to the preceding request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -226,7 +230,11 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the elasticity assurance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the elasticity assurance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,6 +267,12 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeElasticityAssuranceInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeElasticityAssuranceInstancesRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -287,7 +301,11 @@ public class DescribeElasticityAssuranceInstancesRequest extends Request {
             private String id; 
 
             /**
-             * The ID of the elasticity assurance.
+             * <p>The ID of the elasticity assurance.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eap-bp67acfmxazb4****</p>
              */
             public Builder id(String id) {
                 this.id = id;

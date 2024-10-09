@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyHaVipAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyHaVipAttributeRequest</p>
@@ -171,7 +172,7 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * HaVipId.
+         * <p>This parameter is required.</p>
          */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
@@ -198,7 +199,7 @@ public class ModifyHaVipAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

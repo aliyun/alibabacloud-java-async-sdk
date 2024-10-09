@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudAssistantSettingsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudAssistantSettingsResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         private SlsDeliveryConfigs slsDeliveryConfigs; 
 
         /**
-         * The configurations for upgrading Cloud Assistant Agent.
+         * <p>The configurations for upgrading Cloud Assistant Agent.</p>
          */
         public Builder agentUpgradeConfig(AgentUpgradeConfig agentUpgradeConfig) {
             this.agentUpgradeConfig = agentUpgradeConfig;
@@ -81,7 +82,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations for delivering items to Object Storage Service (OSS).
+         * <p>The configurations for delivering items to Object Storage Service (OSS).</p>
          */
         public Builder ossDeliveryConfigs(OssDeliveryConfigs ossDeliveryConfigs) {
             this.ossDeliveryConfigs = ossDeliveryConfigs;
@@ -89,7 +90,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +101,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations for delivering items to Simple Log Service.
+         * <p>The configurations for delivering items to Simple Log Service.</p>
          */
         public Builder slsDeliveryConfigs(SlsDeliveryConfigs slsDeliveryConfigs) {
             this.slsDeliveryConfigs = slsDeliveryConfigs;
@@ -110,6 +114,12 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudAssistantSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantSettingsResponseBody</p>
+     */
     public static class AllowedUpgradeWindows extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindow")
         private java.util.List < String > allowedUpgradeWindow;
@@ -151,6 +161,12 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudAssistantSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantSettingsResponseBody</p>
+     */
     public static class AgentUpgradeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedUpgradeWindows")
         private AllowedUpgradeWindows allowedUpgradeWindows;
@@ -202,7 +218,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * The time windows during which Cloud Assistant Agent can be upgraded.
+             * <p>The time windows during which Cloud Assistant Agent can be upgraded.</p>
              */
             public Builder allowedUpgradeWindows(AllowedUpgradeWindows allowedUpgradeWindows) {
                 this.allowedUpgradeWindows = allowedUpgradeWindows;
@@ -210,7 +226,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether custom upgrade is enabled for Cloud Assistant Agent. If the value is false or empty, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.
+             * <p>Indicates whether custom upgrade is enabled for Cloud Assistant Agent. If the value is false or empty, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -218,7 +237,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the time windows.
+             * <p>The time zone of the time windows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -232,6 +254,12 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudAssistantSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantSettingsResponseBody</p>
+     */
     public static class OssDeliveryConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
@@ -331,7 +359,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             private String prefix; 
 
             /**
-             * The name of the OSS bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-bucket</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -339,11 +370,14 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of items to be delivered. Valid values:
-             * <p>
+             * <p>The type of items to be delivered. Valid values:</p>
+             * <ul>
+             * <li>SessionManager: session records.</li>
+             * <li>Invocation: task execution records.</li>
+             * </ul>
              * 
-             * *   SessionManager: session records.
-             * *   Invocation: task execution records.
+             * <strong>example:</strong>
+             * <p>SessionManager</p>
              */
             public Builder deliveryType(String deliveryType) {
                 this.deliveryType = deliveryType;
@@ -351,7 +385,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to deliver the specified items to OSS.
+             * <p>Indicates whether to deliver the specified items to OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -359,11 +396,14 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS encryption algorithm. Valid values:
-             * <p>
+             * <p>The OSS encryption algorithm. Valid values:</p>
+             * <ul>
+             * <li>AES256</li>
+             * <li>SM4</li>
+             * </ul>
              * 
-             * *   AES256
-             * *   SM4
+             * <strong>example:</strong>
+             * <p>AES256</p>
              */
             public Builder encryptionAlgorithm(String encryptionAlgorithm) {
                 this.encryptionAlgorithm = encryptionAlgorithm;
@@ -371,7 +411,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the customer master key (CMK) when EncryptionType is set to KMS.
+             * <p>The ID of the customer master key (CMK) when EncryptionType is set to KMS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a807****7a70e</p>
              */
             public Builder encryptionKeyId(String encryptionKeyId) {
                 this.encryptionKeyId = encryptionKeyId;
@@ -379,12 +422,15 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS encryption method. Valid values:
-             * <p>
+             * <p>The OSS encryption method. Valid values:</p>
+             * <ul>
+             * <li>Inherit: the encryption method used by the specified bucket.</li>
+             * <li>OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).</li>
+             * <li>KMS: server-side encryption with Key Management Service (SSE-KMS).</li>
+             * </ul>
              * 
-             * *   Inherit: the encryption method used by the specified bucket.
-             * *   OssManaged: server-side encryption by using OSS-managed keys (SSE-OSS).
-             * *   KMS: server-side encryption with Key Management Service (SSE-KMS).
+             * <strong>example:</strong>
+             * <p>Inherit</p>
              */
             public Builder encryptionType(String encryptionType) {
                 this.encryptionType = encryptionType;
@@ -392,7 +438,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the OSS bucket directory.
+             * <p>The prefix of the OSS bucket directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sessionmanager/audit</p>
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -406,6 +455,12 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudAssistantSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantSettingsResponseBody</p>
+     */
     public static class OssDeliveryConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OssDeliveryConfig")
         private java.util.List < OssDeliveryConfig> ossDeliveryConfig;
@@ -447,6 +502,12 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudAssistantSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantSettingsResponseBody</p>
+     */
     public static class SlsDeliveryConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeliveryType")
         private String deliveryType;
@@ -510,11 +571,14 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             private String projectName; 
 
             /**
-             * The type of items to be delivered. Valid values:
-             * <p>
+             * <p>The type of items to be delivered. Valid values:</p>
+             * <ul>
+             * <li>SessionManager: session records.</li>
+             * <li>Invocation: task execution records.</li>
+             * </ul>
              * 
-             * *   SessionManager: session records.
-             * *   Invocation: task execution records.
+             * <strong>example:</strong>
+             * <p>SessionManager</p>
              */
             public Builder deliveryType(String deliveryType) {
                 this.deliveryType = deliveryType;
@@ -522,7 +586,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to deliver the specified items to Simple Log Service.
+             * <p>Indicates whether to deliver the specified items to Simple Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -530,7 +597,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore.
+             * <p>The name of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-logstore</p>
              */
             public Builder logstoreName(String logstoreName) {
                 this.logstoreName = logstoreName;
@@ -538,7 +608,10 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Simple Log Service project.
+             * <p>The name of the Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-project</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -552,6 +625,12 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCloudAssistantSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantSettingsResponseBody</p>
+     */
     public static class SlsDeliveryConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlsDeliveryConfig")
         private java.util.List < SlsDeliveryConfig> slsDeliveryConfig;

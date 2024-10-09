@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeactivateRouterInterfaceResponse} extends {@link TeaModel}
  *
  * <p>DeactivateRouterInterfaceResponse</p>

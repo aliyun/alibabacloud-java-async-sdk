@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDedicatedHostsResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the dedicated hosts.
+         * <p>Details about the dedicated hosts.</p>
          */
         public Builder dedicatedHosts(DedicatedHosts dedicatedHosts) {
             this.dedicatedHosts = dedicatedHosts;
@@ -105,7 +106,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. If the return value of this parameter is empty when you specify MaxResults and NextToken for a paged query, no more results are to be returned.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. If the return value of this parameter is empty when you specify MaxResults and NextToken for a paged query, no more results are to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e71d8a535bd9cc11</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -113,7 +117,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -121,7 +128,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7654525A-9964-4ABB-8BCD-98F8835E809A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of dedicated hosts.
+         * <p>The total number of dedicated hosts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class SocketCapacity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableMemory")
         private Float availableMemory;
@@ -225,7 +247,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer totalVcpu; 
 
             /**
-             * The amount of available memory. Unit: GiB.
+             * <p>The amount of available memory. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65</p>
              */
             public Builder availableMemory(Float availableMemory) {
                 this.availableMemory = availableMemory;
@@ -233,7 +258,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available vCPUs.
+             * <p>The number of available vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder availableVcpu(Integer availableVcpu) {
                 this.availableVcpu = availableVcpu;
@@ -241,7 +269,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The socket ID.
+             * <p>The socket ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder socketId(Integer socketId) {
                 this.socketId = socketId;
@@ -249,7 +280,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of memory. Unit: GiB.
+             * <p>The total amount of memory. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -257,7 +291,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vCPUs.
+             * <p>The total number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder totalVcpu(Integer totalVcpu) {
                 this.totalVcpu = totalVcpu;
@@ -271,6 +308,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class SocketCapacities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SocketCapacity")
         private java.util.List < SocketCapacity> socketCapacity;
@@ -312,6 +355,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class Capacity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableLocalStorage")
         private Integer availableLocalStorage;
@@ -447,7 +496,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer totalVgpus; 
 
             /**
-             * The amount of available space on the local disks. Unit: GiB
+             * <p>The amount of available space on the local disks. Unit: GiB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65</p>
              */
             public Builder availableLocalStorage(Integer availableLocalStorage) {
                 this.availableLocalStorage = availableLocalStorage;
@@ -455,7 +507,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of available memory. Unit: GiB.
+             * <p>The amount of available memory. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder availableMemory(Float availableMemory) {
                 this.availableMemory = availableMemory;
@@ -463,7 +518,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available vCPUs.
+             * <p>The number of available vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder availableVcpus(Integer availableVcpus) {
                 this.availableVcpus = availableVcpus;
@@ -471,7 +529,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available vGPUs.
+             * <p>The number of available vGPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder availableVgpus(Integer availableVgpus) {
                 this.availableVgpus = availableVgpus;
@@ -479,7 +540,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of local disks.
+             * <p>The category of local disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i2</p>
              */
             public Builder localStorageCategory(String localStorageCategory) {
                 this.localStorageCategory = localStorageCategory;
@@ -487,7 +551,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The socket capacities.
+             * <p>The socket capacities.</p>
              */
             public Builder socketCapacities(SocketCapacities socketCapacities) {
                 this.socketCapacities = socketCapacities;
@@ -495,7 +559,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of local disks. Unit: GiB.
+             * <p>The total capacity of local disks. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder totalLocalStorage(Integer totalLocalStorage) {
                 this.totalLocalStorage = totalLocalStorage;
@@ -503,7 +570,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of memory. Unit: GiB.
+             * <p>The total amount of memory. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -511,7 +581,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vCPUs.
+             * <p>The total number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder totalVcpus(Integer totalVcpus) {
                 this.totalVcpus = totalVcpus;
@@ -519,7 +592,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vGPUs.
+             * <p>The total number of vGPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalVgpus(Integer totalVgpus) {
                 this.totalVgpus = totalVgpus;
@@ -533,6 +609,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class HostDetailInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
@@ -560,7 +642,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+             * <p>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -574,6 +659,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -637,7 +728,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String socketId; 
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp14ot0ykf8w13a1****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -645,7 +739,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance owner.
+             * <p>The ID of the ECS instance owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128************0</p>
              */
             public Builder instanceOwnerId(Long instanceOwnerId) {
                 this.instanceOwnerId = instanceOwnerId;
@@ -653,7 +750,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type of the ECS instance that was created on the dedicated host.
+             * <p>The instance type of the ECS instance that was created on the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -661,7 +761,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the socket to which the ECS instance belongs.
+             * <p>The ID of the socket to which the ECS instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0,1</p>
              */
             public Builder socketId(String socketId) {
                 this.socketId = socketId;
@@ -675,6 +778,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
@@ -716,6 +825,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class NetworkAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlbUdpTimeout")
         private Integer slbUdpTimeout;
@@ -755,7 +870,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer udpTimeout; 
 
             /**
-             * The timeout period of the UDP session that is established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Only 60 is returned.
+             * <p>The timeout period of the UDP session that is established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Only 60 is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder slbUdpTimeout(Integer slbUdpTimeout) {
                 this.slbUdpTimeout = slbUdpTimeout;
@@ -763,7 +881,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Only 60 is returned.
+             * <p>The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Only 60 is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -777,6 +898,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class OperationLock extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
@@ -804,11 +931,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The reason why the dedicated host was locked. Valid values:
-             * <p>
+             * <p>The reason why the dedicated host was locked. Valid values:</p>
+             * <ul>
+             * <li>financial: The dedicated host was locked due to overdue payments.</li>
+             * <li>security: The dedicated host was locked due to security reasons.</li>
+             * </ul>
              * 
-             * *   financial: The dedicated host was locked due to overdue payments.
-             * *   security: The dedicated host was locked due to security reasons.
+             * <strong>example:</strong>
+             * <p>financial</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -822,6 +952,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationLock")
         private java.util.List < OperationLock> operationLock;
@@ -863,6 +999,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class SupportedCustomInstanceTypeFamilies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedCustomInstanceTypeFamily")
         private java.util.List < String > supportedCustomInstanceTypeFamily;
@@ -904,6 +1046,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class SupportedInstanceTypeFamilies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypeFamily")
         private java.util.List < String > supportedInstanceTypeFamily;
@@ -945,6 +1093,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class SupportedInstanceTypesList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypesList")
         private java.util.List < String > supportedInstanceTypesList;
@@ -986,6 +1140,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -1025,7 +1185,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the dedicated host.
+             * <p>The tag key of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1033,7 +1196,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the dedicated host.
+             * <p>The tag value of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1047,6 +1213,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -1088,6 +1260,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class DedicatedHost extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionOnMaintenance")
         private String actionOnMaintenance;
@@ -1499,13 +1677,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The policy used to migrate the ECS instances deployed on the dedicated host when the dedicated host fails. Valid values:
-             * <p>
+             * <p>The policy used to migrate the ECS instances deployed on the dedicated host when the dedicated host fails. Valid values:</p>
+             * <ul>
+             * <li>Migrate: The instances are migrated to another physical machine. Instances that are not in the Stopped state when the dedicated host fails are restarted.</li>
+             * <li>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</li>
+             * </ul>
+             * <p>If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.</p>
              * 
-             * *   Migrate: The instances are migrated to another physical machine. Instances that are not in the Stopped state when the dedicated host fails are restarted.
-             * *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.
-             * 
-             * If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.
+             * <strong>example:</strong>
+             * <p>Migrate</p>
              */
             public Builder actionOnMaintenance(String actionOnMaintenance) {
                 this.actionOnMaintenance = actionOnMaintenance;
@@ -1513,13 +1693,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the dedicated host is added to the resource pool for automatic deployment. Valid values:
-             * <p>
+             * <p>Indicates whether the dedicated host is added to the resource pool for automatic deployment. Valid values:</p>
+             * <ul>
+             * <li>on: The dedicated host is added to the resource pool for automatic deployment.</li>
+             * <li>off: The dedicated host is not added to the resource pool for automatic deployment.</li>
+             * </ul>
+             * <p>For information about automatic deployment, see the &quot;Automatic deployment&quot; section in <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</p>
              * 
-             * *   on: The dedicated host is added to the resource pool for automatic deployment.
-             * *   off: The dedicated host is not added to the resource pool for automatic deployment.
-             * 
-             * For information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder autoPlacement(String autoPlacement) {
                 this.autoPlacement = autoPlacement;
@@ -1527,7 +1709,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The automatic release time of the dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+             * <p>The automatic release time of the dedicated host. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-01-01T12:00Z</p>
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -1535,7 +1720,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance specifications of the dedicated host.
+             * <p>The performance specifications of the dedicated host.</p>
              */
             public Builder capacity(Capacity capacity) {
                 this.capacity = capacity;
@@ -1543,7 +1728,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the dedicated host.
+             * <p>The billing method of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prepaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1551,7 +1739,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical cores per CPU.
+             * <p>The number of physical cores per CPU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -1559,7 +1750,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU overcommit ratio.Valid values: 1 to 5.
+             * <p>The CPU overcommit ratio.Valid values: 1 to 5.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpuOverCommitRatio(Float cpuOverCommitRatio) {
                 this.cpuOverCommitRatio = cpuOverCommitRatio;
@@ -1567,7 +1761,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the dedicated host was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+             * <p>The time when the dedicated host was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-01-01T12:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1575,7 +1772,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated host cluster to which the dedicated host belongs.
+             * <p>The ID of the dedicated host cluster to which the dedicated host belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc-bp12wlf6am0vz9v2****</p>
              */
             public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
                 this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -1583,7 +1783,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated host.
+             * <p>The ID of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dh-bp165p6xk2tlw61e****</p>
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -1591,7 +1794,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dedicated host.
+             * <p>The name of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyDDHTestName</p>
              */
             public Builder dedicatedHostName(String dedicatedHostName) {
                 this.dedicatedHostName = dedicatedHostName;
@@ -1599,7 +1805,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated host owner.
+             * <p>The ID of the dedicated host owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100************7</p>
              */
             public Builder dedicatedHostOwnerId(Long dedicatedHostOwnerId) {
                 this.dedicatedHostOwnerId = dedicatedHostOwnerId;
@@ -1607,7 +1816,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dedicated host.
+             * <p>The type of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddh.g5</p>
              */
             public Builder dedicatedHostType(String dedicatedHostType) {
                 this.dedicatedHostType = dedicatedHostType;
@@ -1615,7 +1827,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the dedicated host.
+             * <p>The description of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this-is-my-DDH</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1623,7 +1838,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the subscription dedicated host. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.
+             * <p>The expiration time of the subscription dedicated host. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01T12:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1631,7 +1849,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The GPU model.
+             * <p>The GPU model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gpu</p>
              */
             public Builder GPUSpec(String GPUSpec) {
                 this.GPUSpec = GPUSpec;
@@ -1639,7 +1860,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+             * <p>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
              */
             public Builder hostDetailInfo(HostDetailInfo hostDetailInfo) {
                 this.hostDetailInfo = hostDetailInfo;
@@ -1647,7 +1868,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instances that were created on the dedicated host.
+             * <p>The ECS instances that were created on the dedicated host.</p>
              */
             public Builder instances(Instances instances) {
                 this.instances = instances;
@@ -1655,7 +1876,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The machine code of the dedicated host.
+             * <p>The machine code of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12aaa123456ff19dec12345d3026e****</p>
              */
             public Builder machineId(String machineId) {
                 this.machineId = machineId;
@@ -1663,7 +1887,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The network attributes of the dedicated host.
+             * <p>The network attributes of the dedicated host.</p>
              */
             public Builder networkAttributes(NetworkAttributes networkAttributes) {
                 this.networkAttributes = networkAttributes;
@@ -1671,7 +1895,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The reasons why the resources of the dedicated host were locked.
+             * <p>The reasons why the resources of the dedicated host were locked.</p>
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
@@ -1679,7 +1903,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical GPUs.
+             * <p>The number of physical GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder physicalGpus(Integer physicalGpus) {
                 this.physicalGpus = physicalGpus;
@@ -1687,7 +1914,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the dedicated host.
+             * <p>The region ID of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1695,7 +1925,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the dedicated host belongs.
+             * <p>The ID of the resource group to which the dedicated host belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek3b6jzp66****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1703,11 +1936,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the subscription duration. Valid values:
-             * <p>
+             * <p>The unit of the subscription duration. Valid values:</p>
+             * <ul>
+             * <li>Month</li>
+             * <li>Year</li>
+             * </ul>
              * 
-             * *   Month
-             * *   Year
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder saleCycle(String saleCycle) {
                 this.saleCycle = saleCycle;
@@ -1723,7 +1959,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical CPUs.
+             * <p>The number of physical CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder sockets(Integer sockets) {
                 this.sockets = sockets;
@@ -1731,12 +1970,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the dedicated host. Valid values:
-             * <p>
+             * <p>The status of the dedicated host. Valid values:</p>
+             * <ul>
+             * <li>Available: The dedicated host is running as expected.</li>
+             * <li>UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.</li>
+             * <li>PermanentFailure: The dedicated host has permanent failures and is unavailable.</li>
+             * </ul>
              * 
-             * *   Available: The dedicated host is running as expected.
-             * *   UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.
-             * *   PermanentFailure: The dedicated host has permanent failures and is unavailable.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1744,7 +1986,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom ECS instance families that are supported by the dedicated host.
+             * <p>The custom ECS instance families that are supported by the dedicated host.</p>
              */
             public Builder supportedCustomInstanceTypeFamilies(SupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies) {
                 this.supportedCustomInstanceTypeFamilies = supportedCustomInstanceTypeFamilies;
@@ -1752,7 +1994,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance families that are supported by the dedicated host.
+             * <p>The ECS instance families that are supported by the dedicated host.</p>
              */
             public Builder supportedInstanceTypeFamilies(SupportedInstanceTypeFamilies supportedInstanceTypeFamilies) {
                 this.supportedInstanceTypeFamilies = supportedInstanceTypeFamilies;
@@ -1760,7 +2002,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance types that are supported by the dedicated host.
+             * <p>The ECS instance types that are supported by the dedicated host.</p>
              */
             public Builder supportedInstanceTypesList(SupportedInstanceTypesList supportedInstanceTypesList) {
                 this.supportedInstanceTypesList = supportedInstanceTypesList;
@@ -1768,7 +2010,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the dedicated host.
+             * <p>The tags of the dedicated host.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1776,7 +2018,10 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the dedicated host.
+             * <p>The zone ID of the dedicated host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1790,6 +2035,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class DedicatedHosts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHost")
         private java.util.List < DedicatedHost> dedicatedHost;

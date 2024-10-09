@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTaskAttributeResponseBody</p>
@@ -181,7 +182,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The time when the task was created.
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-11-23T02:13Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -189,7 +193,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of failed tasks.
+         * <p>The number of failed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -197,7 +204,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the task was complete.
+         * <p>The time when the task was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-11-23T02:19Z</p>
          */
         public Builder finishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
@@ -205,7 +215,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of OperationProgress data of each subtask.
+         * <p>An array consisting of OperationProgress data of each subtask.</p>
          */
         public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
             this.operationProgressSet = operationProgressSet;
@@ -213,7 +223,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the task.
+         * <p>The region ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -221,7 +234,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -229,7 +245,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of completed tasks.
+         * <p>The number of completed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -237,11 +256,14 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the task can be canceled ([CancelTask](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask)). Valid values: 
-         * <p>
+         * <p>Indicates whether the task can be canceled (<a href="https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask">CancelTask</a>). Valid values: </p>
+         * <ul>
+         * <li>true: The task can be canceled.</li>
+         * <li>false: The task cannot be canceled.</li>
+         * </ul>
          * 
-         * - true: The task can be canceled.
-         * - false: The task cannot be canceled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportCancel(String supportCancel) {
             this.supportCancel = supportCancel;
@@ -249,7 +271,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The operation name of the task.
+         * <p>The operation name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExportImage</p>
          */
         public Builder taskAction(String taskAction) {
             this.taskAction = taskAction;
@@ -257,7 +282,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-ce946ntx4wr****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -265,7 +293,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The progress of the task.
+         * <p>The progress of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         public Builder taskProcess(String taskProcess) {
             this.taskProcess = taskProcess;
@@ -273,7 +304,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the task.
+         * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
@@ -281,7 +315,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -294,6 +331,12 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTaskAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskAttributeResponseBody</p>
+     */
     public static class RelatedItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -333,7 +376,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the related item.
+             * <p>The name of the related item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSSObject</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -341,7 +387,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the related item.
+             * <p>The value of the related item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MYOSSPRE_m-23f8tcp***_t-23ym6mv***.vhd</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -355,6 +404,12 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTaskAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskAttributeResponseBody</p>
+     */
     public static class RelatedItemSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelatedItem")
         private java.util.List < RelatedItem> relatedItem;
@@ -396,6 +451,12 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTaskAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskAttributeResponseBody</p>
+     */
     public static class OperationProgress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -459,7 +520,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             private RelatedItemSet relatedItemSet; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ParameterInvalid</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -467,7 +531,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified RegionId parameter is invalid.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -475,7 +542,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the operation.
+             * <p>The status of the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -483,7 +553,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of RelatedItem data.
+             * <p>An array consisting of RelatedItem data.</p>
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;
@@ -497,6 +567,12 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTaskAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskAttributeResponseBody</p>
+     */
     public static class OperationProgressSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationProgress")
         private java.util.List < OperationProgress> operationProgress;

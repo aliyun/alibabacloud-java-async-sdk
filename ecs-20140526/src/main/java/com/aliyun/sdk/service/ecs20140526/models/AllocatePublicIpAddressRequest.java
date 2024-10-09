@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocatePublicIpAddressRequest} extends {@link RequestModel}
  *
  * <p>AllocatePublicIpAddressRequest</p>
@@ -161,7 +162,11 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which you want to assign a public IP address.
+         * <p>The ID of the instance to which you want to assign a public IP address.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1gtjxuuvwj17zr****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +175,10 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.
+         * <p>The public IP address. If you leave this parameter empty, the system randomly assigns a public IP address to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>112.124.**.**</code></p>
          */
         public Builder ipAddress(String ipAddress) {
             this.putQueryParameter("IpAddress", ipAddress);
@@ -215,10 +223,13 @@ public class AllocatePublicIpAddressRequest extends Request {
         }
 
         /**
-         * The virtual LAN (VLAN) ID of the instance.
-         * <p>
+         * <p>The virtual LAN (VLAN) ID of the instance.</p>
+         * <blockquote>
+         * <p>This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+         * </blockquote>
          * 
-         * > This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder vlanId(String vlanId) {
             this.putQueryParameter("VlanId", vlanId);

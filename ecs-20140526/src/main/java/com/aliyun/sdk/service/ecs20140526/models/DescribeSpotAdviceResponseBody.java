@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSpotAdviceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSpotAdviceResponseBody</p>
@@ -61,10 +62,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about preemptible instances in the zones of the specified region.
-         * <p>
-         * 
-         * >  The return values are sorted based on the historical percentages of average preemptible instance prices relative to pay-as-you-go instance prices for instance types.
+         * <p>Details about preemptible instances in the zones of the specified region.</p>
+         * <blockquote>
+         * <p> The return values are sorted based on the historical percentages of average preemptible instance prices relative to pay-as-you-go instance prices for instance types.</p>
+         * </blockquote>
          */
         public Builder availableSpotZones(AvailableSpotZones availableSpotZones) {
             this.availableSpotZones = availableSpotZones;
@@ -72,7 +73,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -80,7 +84,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,6 +100,12 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSpotAdviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSpotAdviceResponseBody</p>
+     */
     public static class AvailableSpotResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AverageSpotDiscount")
         private Integer averageSpotDiscount;
@@ -156,10 +169,11 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             private Float interruptionRate; 
 
             /**
-             * The percentage of the average preemptible instance price relative to the pay-as-you-go instance price in the previous 30 days. Unit: %. Valid values: 1 to 100.
-             * <p>
+             * <p>The percentage of the average preemptible instance price relative to the pay-as-you-go instance price in the previous 30 days. Unit: %. Valid values: 1 to 100.</p>
+             * <p>You can calculate the average preemptible instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average preemptible instance price in the previous 30 days is 0.2.</p>
              * 
-             * You can calculate the average preemptible instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average preemptible instance price in the previous 30 days is 0.2.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder averageSpotDiscount(Integer averageSpotDiscount) {
                 this.averageSpotDiscount = averageSpotDiscount;
@@ -167,7 +181,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -175,13 +192,16 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The release rate range of preemptible instances in the previous 30 days, which corresponds to the `InterruptionRate` value. Valid values:
-             * <p>
+             * <p>The release rate range of preemptible instances in the previous 30 days, which corresponds to the <code>InterruptionRate</code> value. Valid values:</p>
+             * <ul>
+             * <li>0-3%</li>
+             * <li>3-5%</li>
+             * <li>5-10%</li>
+             * <li>10-100%</li>
+             * </ul>
              * 
-             * *   0-3%
-             * *   3-5%
-             * *   5-10%
-             * *   10-100%
+             * <strong>example:</strong>
+             * <p>0-3%</p>
              */
             public Builder interruptRateDesc(String interruptRateDesc) {
                 this.interruptRateDesc = interruptRateDesc;
@@ -189,7 +209,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The average release rate of preemptible instances in the previous 30 days. Unit: %.
+             * <p>The average release rate of preemptible instances in the previous 30 days. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder interruptionRate(Float interruptionRate) {
                 this.interruptionRate = interruptionRate;
@@ -203,6 +226,12 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSpotAdviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSpotAdviceResponseBody</p>
+     */
     public static class AvailableSpotResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableSpotResource")
         private java.util.List < AvailableSpotResource> availableSpotResource;
@@ -244,6 +273,12 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSpotAdviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSpotAdviceResponseBody</p>
+     */
     public static class AvailableSpotZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableSpotResources")
         private AvailableSpotResources availableSpotResources;
@@ -283,7 +318,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Details about preemptible instances in the previous 30 days, including the release rate of preemptible instances and percentages of average preemptible instance prices relative to pay-as-you-go instance prices.
+             * <p>Details about preemptible instances in the previous 30 days, including the release rate of preemptible instances and percentages of average preemptible instance prices relative to pay-as-you-go instance prices.</p>
              */
             public Builder availableSpotResources(AvailableSpotResources availableSpotResources) {
                 this.availableSpotResources = availableSpotResources;
@@ -291,7 +326,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -305,6 +343,12 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSpotAdviceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSpotAdviceResponseBody</p>
+     */
     public static class AvailableSpotZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableSpotZone")
         private java.util.List < AvailableSpotZone> availableSpotZone;

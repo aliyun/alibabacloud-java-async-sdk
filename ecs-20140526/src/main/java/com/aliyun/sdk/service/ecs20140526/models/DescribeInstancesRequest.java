@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstancesRequest</p>
@@ -662,13 +663,16 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The additional attributes. Valid values of N: 1 to 20. Valid values:
-         * <p>
+         * <p>The additional attributes. Valid values of N: 1 to 20. Valid values:</p>
+         * <ul>
+         * <li>META_OPTIONS: instance metadata</li>
+         * <li>DDH_CLUSTER: dedicated host cluster</li>
+         * <li>NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI</li>
+         * <li>CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance</li>
+         * </ul>
          * 
-         * *   META_OPTIONS: instance metadata
-         * *   DDH_CLUSTER: dedicated host cluster
-         * *   NETWORK_PRIMARY_ENI_IP: secondary IP address associated with the primary ENI
-         * *   CPU_OPTIONS_TOPOLOGY_TYPE: CPU topology type of the instance
+         * <strong>example:</strong>
+         * <p>META_OPTIONS</p>
          */
         public Builder additionalAttributes(java.util.List < String > additionalAttributes) {
             this.putQueryParameter("AdditionalAttributes", additionalAttributes);
@@ -677,7 +681,12 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * >  This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deviceAvailable(Boolean deviceAvailable) {
             this.putQueryParameter("DeviceAvailable", deviceAvailable);
@@ -686,13 +695,15 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -701,7 +712,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The elastic IP addresses (EIPs) of instances. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
+         * <p>The elastic IP addresses (EIPs) of instances. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;42.1.1.<strong>&quot;, &quot;42.1.2.</strong>&quot;, … &quot;42.1.10.**&quot;]</p>
          */
         public Builder eipAddresses(String eipAddresses) {
             this.putQueryParameter("EipAddresses", eipAddresses);
@@ -710,7 +724,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the high-performance computing (HPC) cluster to which the instance belongs.
+         * <p>The ID of the high-performance computing (HPC) cluster to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hpc-bp67acfmxazb4p****</p>
          */
         public Builder hpcClusterId(String hpcClusterId) {
             this.putQueryParameter("HpcClusterId", hpcClusterId);
@@ -719,15 +736,18 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the access channel is enabled for instance metadata. Valid values:
-         * <p>
+         * <p>Specifies whether the access channel is enabled for instance metadata. Valid values:</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * <p>Default value: enabled.</p>
+         * <blockquote>
+         * <p> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Access instance metadata</a>.</p>
+         * </blockquote>
          * 
-         * *   enabled
-         * *   disabled
-         * 
-         * Default value: enabled.
-         * 
-         * >  For information about instance metadata, see [Access instance metadata](~~49122~~).
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder httpEndpoint(String httpEndpoint) {
             this.putQueryParameter("HttpEndpoint", httpEndpoint);
@@ -736,7 +756,12 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * >  This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
@@ -745,15 +770,18 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:
-         * <p>
+         * <p>Specifies whether the security hardening mode (IMDSv2) is forcefully used to access instance metadata. Valid values:</p>
+         * <ul>
+         * <li>optional: The security hardening mode (IMDSv2) is not forcefully used.</li>
+         * <li>required: The security hardening mode (IMDSv2) is forcefully used. After you set this parameter to required, you cannot access instance metadata in normal mode.</li>
+         * </ul>
+         * <p>Default value: optional.</p>
+         * <blockquote>
+         * <p> For information about modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Access instance metadata</a>.</p>
+         * </blockquote>
          * 
-         * *   optional: The security hardening mode (IMDSv2) is not forcefully used.
-         * *   required: The security hardening mode (IMDSv2) is forcefully used. After you set this parameter to required, you cannot access instance metadata in normal mode.
-         * 
-         * Default value: optional.
-         * 
-         * >  For information about modes of accessing instance metadata, see [Access instance metadata](~~150575~~).
+         * <strong>example:</strong>
+         * <p>optional</p>
          */
         public Builder httpTokens(String httpTokens) {
             this.putQueryParameter("HttpTokens", httpTokens);
@@ -762,7 +790,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp67acfmxazb4p****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -771,7 +802,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The internal IP addresses of instances located in the classic network. This parameter is valid when InstanceNetworkType is set to classic. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
+         * <p>The internal IP addresses of instances located in the classic network. This parameter is valid when InstanceNetworkType is set to classic. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;10.1.1.1&quot;, &quot;10.1.2.1&quot;, … &quot;10.1.10.1&quot;]</p>
          */
         public Builder innerIpAddresses(String innerIpAddresses) {
             this.putQueryParameter("InnerIpAddresses", innerIpAddresses);
@@ -780,11 +814,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
          * 
-         * *   PostPaid: pay-as-you-go
-         * *   PrePaid: subscription
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -793,7 +830,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).
+         * <p>The ID of the instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-bp67acfmxazb4p****&quot;, &quot;i-bp67acfmxazb4p****&quot;, … &quot;i-bp67acfmxazb4p****&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -802,7 +842,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The name of the instance. Fuzzy search with asterisk (\*) wildcard characters is supported.
+         * <p>The name of the instance. Fuzzy search with asterisk (*) wildcard characters is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -811,11 +854,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The network type of the instance. Valid values:
-         * <p>
+         * <p>The network type of the instance. Valid values:</p>
+         * <ul>
+         * <li>classic</li>
+         * <li>vpc</li>
+         * </ul>
          * 
-         * *   classic
-         * *   vpc
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -824,7 +870,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The instance type of the instance.
+         * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -833,7 +882,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The instance family of the instance.
+         * <p>The instance family of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5</p>
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -842,13 +894,17 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The billing method for network usage. Valid values:
-         * <p>
+         * <p>The billing method for network usage. Valid values:</p>
+         * <ul>
+         * <li>PayByBandwidth</li>
+         * <li>PayByTraffic</li>
+         * </ul>
+         * <blockquote>
+         * <p> When the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the <strong>pay-by-bandwidth</strong> billing method for network usage.</p>
+         * </blockquote>
          * 
-         * *   PayByBandwidth
-         * *   PayByTraffic
-         * 
-         * >  When the **pay-by-traffic** billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios in which demands exceed resource supplies, the maximum bandwidths may not be reached. If you want guaranteed bandwidths for your instance, use the **pay-by-bandwidth** billing method for network usage.
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -857,11 +913,14 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the instance is an I/O optimized instance. Valid values:
-         * <p>
+         * <p>Specifies whether the instance is an I/O optimized instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ioOptimized(Boolean ioOptimized) {
             this.putQueryParameter("IoOptimized", ioOptimized);
@@ -870,7 +929,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The IPv6 addresses assigned to elastic network interfaces (ENIs).
+         * <p>The IPv6 addresses assigned to elastic network interfaces (ENIs).</p>
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -879,7 +938,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The name of the SSH key pair bound to the instance.
+         * <p>The name of the SSH key pair bound to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyPairNameTest</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -888,14 +950,17 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The reason why the instance is locked. Valid values:
-         * <p>
+         * <p>The reason why the instance is locked. Valid values:</p>
+         * <ul>
+         * <li>financial: The instance is locked due to overdue payments.</li>
+         * <li>security: The instance is locked due to security reasons.</li>
+         * <li>recycling: The preemptible instance is locked and pending release.</li>
+         * <li>dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.</li>
+         * <li>refunded: The instance is locked because a refund is made for the instance.</li>
+         * </ul>
          * 
-         * *   financial: The instance is locked due to overdue payments.
-         * *   security: The instance is locked due to security reasons.
-         * *   recycling: The preemptible instance is locked and pending release.
-         * *   dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.
-         * *   refunded: The instance is locked because a refund is made for the instance.
+         * <strong>example:</strong>
+         * <p>security</p>
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -904,13 +969,15 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Valid values: 1 to 100.
-         * <p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value:</p>
+         * <ul>
+         * <li>If you do not specify this parameter or if you set this parameter to a value that is smaller than 10, the default value is 10.</li>
+         * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+         * </ul>
          * 
-         * Default value:
-         * 
-         * *   If you do not specify this parameter or if you set this parameter to a value that is smaller than 10, the default value is 10.
-         * *   If you set this parameter to a value that is greater than 100, the default value is 100.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -919,7 +986,12 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * >  This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needSaleCycle(Boolean needSaleCycle) {
             this.putQueryParameter("NeedSaleCycle", needSaleCycle);
@@ -928,7 +1000,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -955,12 +1030,12 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -969,12 +1044,12 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -983,7 +1058,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The private IP addresses of instances located in a VPC. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
+         * <p>The private IP addresses of instances located in a VPC. This parameter is valid when InstanceNetworkType is set to vpc. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;172.16.1.1&quot;, &quot;172.16.2.1&quot;, … &quot;172.16.10.1&quot;]</p>
          */
         public Builder privateIpAddresses(String privateIpAddresses) {
             this.putQueryParameter("PrivateIpAddresses", privateIpAddresses);
@@ -992,7 +1070,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The public IP addresses of instances. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
+         * <p>The public IP addresses of instances. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;42.1.1.<strong>&quot;, &quot;42.1.2.</strong>&quot;, … &quot;42.1.10.**&quot;]</p>
          */
         public Builder publicIpAddresses(String publicIpAddresses) {
             this.putQueryParameter("PublicIpAddresses", publicIpAddresses);
@@ -1001,7 +1082,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The remote direct memory access (RDMA) IP addresses of the instance in the HPC cluster.
+         * <p>The remote direct memory access (RDMA) IP addresses of the instance in the HPC cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.10.102</p>
          */
         public Builder rdmaIpAddresses(String rdmaIpAddresses) {
             this.putQueryParameter("RdmaIpAddresses", rdmaIpAddresses);
@@ -1010,7 +1094,11 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -1019,10 +1107,13 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The ID of the resource group to which the instance belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * </blockquote>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1049,7 +1140,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the instance belongs.
+         * <p>The ID of the security group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1058,14 +1152,17 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The status of the instance. Valid values:
-         * <p>
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>Pending: The instance is being created.</li>
+         * <li>Running: The instance is running.</li>
+         * <li>Starting: The instance is being started.</li>
+         * <li>Stopping: The instance is being stopped.</li>
+         * <li>Stopped: The instance is stopped.</li>
+         * </ul>
          * 
-         * *   Pending: The instance is being created.
-         * *   Running: The instance is running.
-         * *   Starting: The instance is being started.
-         * *   Stopping: The instance is being stopped.
-         * *   Stopped: The instance is stopped.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -1074,7 +1171,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The tags of the instance.
+         * <p>The tags of the instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1083,7 +1180,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp67acfmxazb4p****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1092,7 +1192,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC).
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-bp67acfmxazb4p****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1101,7 +1204,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance.
+         * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1116,6 +1222,12 @@ public class DescribeInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1155,7 +1267,10 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of filter 1 used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the specified time.
+             * <p>The key of filter 1 used to query resources. Set the value to <code>CreationStartTime</code>. You can specify a time by setting both <code>Filter.1.Key</code> and <code>Filter.1.Value</code> to query resources that were created after the specified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreationStartTime</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1163,7 +1278,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify `Filter.1.Key`. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+             * <p>The value of filter 1 used to query resources. Set the value to a time. If you specify this parameter, you must also specify <code>Filter.1.Key</code>. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-05T22:40Z</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1177,6 +1295,12 @@ public class DescribeInstancesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1216,10 +1340,11 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the instance. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N of the instance. Valid values of N: 1 to 20.</p>
+             * <p>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1227,7 +1352,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the instance. Valid values of N: 1 to 20.
+             * <p>The value of tag N of the instance. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

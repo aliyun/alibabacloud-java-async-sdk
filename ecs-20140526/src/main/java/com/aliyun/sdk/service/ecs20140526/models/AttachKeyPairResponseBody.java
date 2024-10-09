@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>AttachKeyPairResponseBody</p>
@@ -85,7 +86,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The number of instances to which the SSH key pair fails to be bound.
+         * <p>The number of instances to which the SSH key pair fails to be bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failCount(String failCount) {
             this.failCount = failCount;
@@ -93,7 +97,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the SSH key pair.
+         * <p>The name of the SSH key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -101,7 +108,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * An array that contains the results of the operation.
+         * <p>An array that contains the results of the operation.</p>
          */
         public Builder results(Results results) {
             this.results = results;
@@ -117,7 +127,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances to which the SSH key pair is bound.
+         * <p>The total number of instances to which the SSH key pair is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class AttachKeyPairResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AttachKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachKeyPairResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -193,7 +212,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The operation status code returned. 200 indicates that the operation was successful.
+             * <p>The operation status code returned. 200 indicates that the operation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -201,7 +223,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-m5eg7be9ndloji64****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -209,7 +234,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The operation information returned. When the value of Code is 200, the value of Message is successful.
+             * <p>The operation information returned. When the value of Code is 200, the value of Message is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -217,7 +245,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request was successful.
+             * <p>Indicates whether the request was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(String success) {
                 this.success = success;
@@ -231,6 +262,12 @@ public class AttachKeyPairResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AttachKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachKeyPairResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;

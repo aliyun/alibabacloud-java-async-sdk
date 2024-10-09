@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRegionsRequest</p>
@@ -160,14 +161,16 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The natural language that is used to filter responses. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
-         * <p>
+         * <p>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese</li>
+         * <li>en-US: English</li>
+         * <li>ja: Japanese</li>
+         * </ul>
+         * <p>Default value: zh-CN.</p>
          * 
-         * *   zh-CN: Chinese
-         * *   en-US: English
-         * *   ja: Japanese
-         * 
-         * Default value: zh-CN.
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -176,13 +179,17 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The billing method of instances. For more information, see [Billing overview](~~25398~~). Valid values:
-         * <p>
+         * <p>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.</li>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>SpotWithPriceLimit: preemptible instance for which a maximum hourly price is specified.</li>
+         * <li>SpotAsPriceGo: preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
-         * *   PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.
-         * *   PostPaid: pay-as-you-go.
-         * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -227,15 +234,17 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The resource type. Valid value:
-         * <p>
+         * <p>The type of resource. Valid values:</p>
+         * <ul>
+         * <li>instance: Elastic Compute Service (ECS) instance</li>
+         * <li>disk: disk</li>
+         * <li>reservedinstance: reserved instance</li>
+         * <li>scu: storage capacity unit (SCU)</li>
+         * </ul>
+         * <p>Default value: instance.</p>
          * 
-         * *   instance: Elastic Compute Service (ECS) instance
-         * *   disk: disk
-         * *   reservedinstance: reserved instance
-         * *   scu: storage capacity unit (SCU)
-         * 
-         * Default value: instance.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceScreenshotRequest} extends {@link RequestModel}
  *
  * <p>GetInstanceScreenshotRequest</p>
@@ -162,7 +163,11 @@ public class GetInstanceScreenshotRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1gbz20g229bvu5****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -189,7 +194,11 @@ public class GetInstanceScreenshotRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,10 +225,11 @@ public class GetInstanceScreenshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to wake up the hibernated instance.
-         * <p>
+         * <p>Specifies whether to wake up the hibernated instance.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder wakeUp(Boolean wakeUp) {
             this.putQueryParameter("WakeUp", wakeUp);

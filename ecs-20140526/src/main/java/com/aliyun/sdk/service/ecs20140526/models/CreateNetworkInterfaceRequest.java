@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkInterfaceRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkInterfaceRequest</p>
@@ -542,7 +543,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is no longer used.
+         * <blockquote>
+         * <p>This parameter is no longer used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -551,7 +557,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -560,7 +569,9 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * >  This parameter is not publicly available.
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
@@ -569,11 +580,14 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the ENI when the associated instance is released. Valid values:
-         * <p>
+         * <p>Specifies whether to release the ENI when the associated instance is released. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteOnRelease(Boolean deleteOnRelease) {
             this.putQueryParameter("DeleteOnRelease", deleteOnRelease);
@@ -582,10 +596,11 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The description of the ENI. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-         * <p>
+         * <p>The description of the ENI. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>This parameter is empty by default.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -594,7 +609,9 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * >  This parameter is unavailable.
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
          */
         public Builder enhancedNetwork(EnhancedNetwork enhancedNetwork) {
             this.putQueryParameter("EnhancedNetwork", enhancedNetwork);
@@ -603,13 +620,15 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The type of the ENI. Valid values:
-         * <p>
+         * <p>The type of the ENI. Valid values:</p>
+         * <ul>
+         * <li>Secondary: secondary ENI.</li>
+         * <li>Trunk: trunk ENI. This value is in invitational preview.</li>
+         * </ul>
+         * <p>Default value: Secondary.</p>
          * 
-         * *   Secondary: secondary ENI.
-         * *   Trunk: trunk ENI. This value is in invitational preview.
-         * 
-         * Default value: Secondary.
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -618,10 +637,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.
-         * <p>
-         * 
-         * >  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.
+         * <p>IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
+         * <blockquote>
+         * <p> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
+         * </blockquote>
          */
         public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
@@ -630,10 +649,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The number of IPv4 prefixes to assign to the ENI. Valid values: 1 to 10.
-         * <p>
+         * <p>The number of IPv4 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
+         * <blockquote>
+         * <p> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
+         * </blockquote>
          * 
-         * >  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
             this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);
@@ -642,12 +664,14 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.
-         * <p>
+         * <p>IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</p>
+         * <p>Example: Ipv6Address.1=2001:db8:1234:1a00::****</p>
+         * <blockquote>
+         * <p> To assign IPv6 addresses to the ENI, you must specify the <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code> parameter, but not both.</p>
+         * </blockquote>
          * 
-         * Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
-         * 
-         * >  To assign IPv6 addresses to the ENI, you must specify the `Ipv6Addresses.N` or `Ipv6AddressCount` parameter, but not both.
+         * <strong>example:</strong>
+         * <p>2001:db8:1234:1a00::****</p>
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -656,10 +680,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
-         * <p>
+         * <p>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</p>
+         * <blockquote>
+         * <p> To assign IPv6 addresses to the ENI, you must specify the <code>Ipv6Addresses.N</code> or <code>Ipv6AddressCount</code> parameter, but not both.</p>
+         * </blockquote>
          * 
-         * >  To assign IPv6 addresses to the ENI, you must specify the `Ipv6Addresses.N` or `Ipv6AddressCount` parameter, but not both.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -668,10 +695,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.
-         * <p>
-         * 
-         * >  To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.
+         * <p>IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
+         * <blockquote>
+         * <p> To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.</p>
+         * </blockquote>
          */
         public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
@@ -680,10 +707,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.
-         * <p>
+         * <p>The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.</p>
+         * <blockquote>
+         * <p> To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.</p>
+         * </blockquote>
          * 
-         * >  To assign IPv6 prefixes to the ENI, you must specify the Ipv6Prefix.N or Ipv6PrefixCount parameter, but not both.
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder ipv6PrefixCount(Integer ipv6PrefixCount) {
             this.putQueryParameter("Ipv6PrefixCount", ipv6PrefixCount);
@@ -692,10 +722,11 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The name of the ENI. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
-         * <p>
+         * <p>The name of the ENI. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>This parameter is left empty by default.</p>
          * 
-         * This parameter is left empty by default.
+         * <strong>example:</strong>
+         * <p>testNetworkInterfaceName</p>
          */
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
@@ -704,7 +735,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The communication settings of the ENI.
+         * <p>The communication settings of the ENI.</p>
          */
         public Builder networkInterfaceTrafficConfig(NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
             this.putQueryParameter("NetworkInterfaceTrafficConfig", networkInterfaceTrafficConfig);
@@ -713,15 +744,18 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The communication mode of the ENI. Valid values:
-         * <p>
+         * <p>The communication mode of the ENI. Valid values:</p>
+         * <ul>
+         * <li>Standard: uses the TCP communication mode.</li>
+         * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+         * </ul>
+         * <blockquote>
+         * <p> ENIs in RDMA mode can be attached only to instances of the instance types that support ERIs. The number of ENIs in RDMA mode that are attached to an instance cannot exceed the maximum number of ENIs that the instance type supports. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a> and <a href="https://help.aliyun.com/document_detail/336853.html">Configure eRDMA on an enterprise-level instance</a>.</p>
+         * </blockquote>
+         * <p>Default value: Standard.</p>
          * 
-         * *   Standard: uses the TCP communication mode.
-         * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
-         * 
-         * >  ENIs in RDMA mode can be attached only to instances of the instance types that support ERIs. The number of ENIs in RDMA mode that are attached to an instance cannot exceed the maximum number of ENIs that the instance type supports. For more information, see [Overview of ECS instance families](~~25378~~) and [Configure eRDMA on an enterprise-level instance](~~336853~~).
-         * 
-         * Default value: Standard.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
             this.putQueryParameter("NetworkInterfaceTrafficMode", networkInterfaceTrafficMode);
@@ -748,10 +782,11 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The primary private IP address of the ENI.
-         * <p>
+         * <p>The primary private IP address of the ENI.</p>
+         * <p>The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is assigned from within the vSwitch CIDR block at random.</p>
          * 
-         * The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is assigned from within the vSwitch CIDR block at random.
+         * <strong>example:</strong>
+         * <p><code>172.17.**.**</code></p>
          */
         public Builder primaryIpAddress(String primaryIpAddress) {
             this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
@@ -760,10 +795,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * Secondary private IP addresses to assign to the ENI. The IP addresses must be idle IP addresses in the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.
-         * <p>
+         * <p>Secondary private IP addresses to assign to the ENI. The IP addresses must be idle IP addresses in the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.</p>
+         * <blockquote>
+         * <p> To assign secondary private IP addresses to the ENI, you can specify the <code>PrivateIpAddress.N</code> or <code>SecondaryPrivateIpAddressCount</code> parameter, but not both.</p>
+         * </blockquote>
          * 
-         * >  To assign secondary private IP addresses to the ENI, you can specify the `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` parameter, but not both.
+         * <strong>example:</strong>
+         * <p><code>172.17.**.**</code></p>
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -772,12 +810,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The number of queues supported by the ENI. Valid values: 1 to 2048.
-         * <p>
+         * <p>The number of queues supported by the ENI. Valid values: 1 to 2048.</p>
+         * <p>When you attach the ENI to an instance, make sure that the value of this parameter is less than the maximum number of queues per ENI that is allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and then check the return value of <code>MaximumQueueNumberPerEni</code>.</p>
+         * <p>This parameter is left empty by default. If you do not specify this parameter, the default number of queues per ENI for the instance type of an instance is used when you attach the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and then check the return value of <code>SecondaryEniQueueNumber</code>.</p>
          * 
-         * When you attach the ENI to an instance, make sure that the value of this parameter is less than the maximum number of queues per ENI that is allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `MaximumQueueNumberPerEni`.
-         * 
-         * This parameter is left empty by default. If you do not specify this parameter, the default number of queues per ENI for the instance type of an instance is used when you attach the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `SecondaryEniQueueNumber`.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder queueNumber(Integer queueNumber) {
             this.putQueryParameter("QueueNumber", queueNumber);
@@ -786,7 +824,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p>This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder queuePairNumber(Integer queuePairNumber) {
             this.putQueryParameter("QueuePairNumber", queuePairNumber);
@@ -795,7 +838,11 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The region in which to create the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region in which to create the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -804,7 +851,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which you want to assign the ENI. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
+         * <p>The ID of the resource group to which you want to assign the ENI. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the most recent resource group list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -831,13 +881,15 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The receive (Rx) queue depth of the ENI.
-         * <p>
+         * <p>The receive (Rx) queue depth of the ENI.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>The Rx queue depth of an ENI must be the same as the Tx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+         * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+         * </ul>
          * 
-         * Take note of the following items:
-         * 
-         * *   The Rx queue depth of an ENI must be the same as the Tx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
-         * *   A larger Rx queue depth yields higher inbound throughput but consumes more memory.
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder rxQueueSize(Integer rxQueueSize) {
             this.putQueryParameter("RxQueueSize", rxQueueSize);
@@ -846,7 +898,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The number of private IP addresses to be assigned by ECS. Valid values: 1 to 49.
+         * <p>The number of private IP addresses to be assigned by ECS. Valid values: 1 to 49.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
             this.putQueryParameter("SecondaryPrivateIpAddressCount", secondaryPrivateIpAddressCount);
@@ -855,10 +910,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.
-         * <p>
+         * <p>The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.</p>
+         * <blockquote>
+         * <p>You must specify <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code> but not both.</p>
+         * </blockquote>
          * 
-         * > You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.
+         * <strong>example:</strong>
+         * <p>sg-bp1fg655nh68xyz9i****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -867,10 +925,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The IDs of security groups to which to assign the ENI. The security groups and the ENI must belong to the same VPC. The valid values of N are determined based on the maximum number of security groups to which an ENI can be assigned. For more information, see [Limits](~~25412~~).
-         * <p>
+         * <p>The IDs of security groups to which to assign the ENI. The security groups and the ENI must belong to the same VPC. The valid values of N are determined based on the maximum number of security groups to which an ENI can be assigned. For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</p>
+         * <blockquote>
+         * <p> You must specify <code>SecurityGroupId</code> or <code>SecurityGroupIds.N</code> but not both.</p>
+         * </blockquote>
          * 
-         * >  You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.
+         * <strong>example:</strong>
+         * <p>sg-bp1fg655nh68xyz9i****</p>
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -879,7 +940,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The tags to add to the ENI.
+         * <p>The tags to add to the ENI.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -888,13 +949,15 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The transmit (Tx) queue depth of the ENI.
-         * <p>
+         * <p>The transmit (Tx) queue depth of the ENI.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+         * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+         * </ul>
          * 
-         * Take note of the following items:
-         * 
-         * *   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
-         * *   A larger Tx queue depth yields higher outbound throughput but consumes more memory.
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder txQueueSize(Integer txQueueSize) {
             this.putQueryParameter("TxQueueSize", txQueueSize);
@@ -903,7 +966,11 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.
+         * <p>The ID of the vSwitch with which to associate the ENI. Private IP addresses are assigned to the ENI from within the CIDR block of the vSwitch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1s5fnvk4gn2tws03****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -912,7 +979,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is no longer used.
+         * <blockquote>
+         * <p>This parameter is no longer used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder visible(Boolean visible) {
             this.putQueryParameter("Visible", visible);
@@ -927,6 +999,12 @@ public class CreateNetworkInterfaceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNetworkInterfaceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkInterfaceRequest</p>
+     */
     public static class ConnectionTrackingConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TcpClosedAndTimeWaitTimeout")
         private Integer tcpClosedAndTimeWaitTimeout;
@@ -978,7 +1056,12 @@ public class CreateNetworkInterfaceRequest extends Request {
             private Integer udpTimeout; 
 
             /**
-             * >  This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder tcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
                 this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
@@ -986,7 +1069,12 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * >  This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>910</p>
              */
             public Builder tcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
                 this.tcpEstablishedTimeout = tcpEstablishedTimeout;
@@ -994,7 +1082,12 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * >  This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -1008,6 +1101,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateNetworkInterfaceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkInterfaceRequest</p>
+     */
     public static class EnhancedNetwork extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableSriov")
         private Boolean enableSriov;
@@ -1035,7 +1134,12 @@ public class CreateNetworkInterfaceRequest extends Request {
             private Boolean enableSriov; 
 
             /**
-             * >  This parameter is not publicly available.
+             * <blockquote>
+             * <p> This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSriov(Boolean enableSriov) {
                 this.enableSriov = enableSriov;
@@ -1049,6 +1153,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateNetworkInterfaceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkInterfaceRequest</p>
+     */
     public static class NetworkInterfaceTrafficConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
         private String networkInterfaceTrafficMode;
@@ -1124,7 +1234,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             private Integer txQueueSize; 
 
             /**
-             * The communication mode of the ENI.
+             * <p>The communication mode of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HighPerformance</p>
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -1132,7 +1245,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * The number of queues supported by the ENI.
+             * <p>The number of queues supported by the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder queueNumber(Integer queueNumber) {
                 this.queueNumber = queueNumber;
@@ -1140,7 +1256,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * The number of queues supported by the ERI.
+             * <p>The number of queues supported by the ERI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder queuePairNumber(Integer queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;
@@ -1148,7 +1267,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * The receive (Rx) queue depth of the ENI.
+             * <p>The receive (Rx) queue depth of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder rxQueueSize(Integer rxQueueSize) {
                 this.rxQueueSize = rxQueueSize;
@@ -1156,7 +1278,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * The transmit (Tx) queue depth of the ENI.
+             * <p>The transmit (Tx) queue depth of the ENI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder txQueueSize(Integer txQueueSize) {
                 this.txQueueSize = txQueueSize;
@@ -1170,6 +1295,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateNetworkInterfaceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNetworkInterfaceRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -1209,7 +1340,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain `http://` or `https://`.
+             * <p>The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1217,7 +1351,10 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * <p>The value of tag N to add to the ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceChargeTypeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceChargeTypeResponseBody</p>
@@ -61,7 +62,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the charges for the order.
+         * <p>Details about the charges for the order.</p>
          */
         public Builder feeOfInstances(FeeOfInstances feeOfInstances) {
             this.feeOfInstances = feeOfInstances;
@@ -69,7 +70,10 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The order ID.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20413515388****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -77,7 +81,10 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B61C08E5-403A-46A2-96C1-F7B1216DB10C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceChargeTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceChargeTypeResponseBody</p>
+     */
     public static class FeeOfInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
@@ -141,12 +154,12 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The unit of currency for the bill.
-             * <p>
+             * <p>The unit of currency for the bill.</p>
+             * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
+             * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
              * 
-             * Alibaba Cloud China site (aliyun.com): CNY.
-             * 
-             * Alibaba Cloud International site (alibabacloud.com): USD.
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -154,7 +167,10 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The cost value.
+             * <p>The cost value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fee(String fee) {
                 this.fee = fee;
@@ -162,7 +178,10 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -176,6 +195,12 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyInstanceChargeTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceChargeTypeResponseBody</p>
+     */
     public static class FeeOfInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeeOfInstance")
         private java.util.List < FeeOfInstance> feeOfInstance;

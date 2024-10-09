@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyNetworkInterfaceAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyNetworkInterfaceAttributeRequest</p>
@@ -78,6 +79,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     private java.util.List < String > securityGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDestCheck")
+    private Boolean sourceDestCheck;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TxQueueSize")
     private Integer txQueueSize;
 
@@ -99,6 +104,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.rxQueueSize = builder.rxQueueSize;
         this.securityGroupId = builder.securityGroupId;
+        this.sourceDestCheck = builder.sourceDestCheck;
         this.txQueueSize = builder.txQueueSize;
     }
 
@@ -228,6 +234,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
     }
 
     /**
+     * @return sourceDestCheck
+     */
+    public Boolean getSourceDestCheck() {
+        return this.sourceDestCheck;
+    }
+
+    /**
      * @return txQueueSize
      */
     public Integer getTxQueueSize() {
@@ -251,6 +264,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         private Long resourceOwnerId; 
         private Integer rxQueueSize; 
         private java.util.List < String > securityGroupId; 
+        private Boolean sourceDestCheck; 
         private Integer txQueueSize; 
 
         private Builder() {
@@ -275,6 +289,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.rxQueueSize = request.rxQueueSize;
             this.securityGroupId = request.securityGroupId;
+            this.sourceDestCheck = request.sourceDestCheck;
             this.txQueueSize = request.txQueueSize;
         } 
 
@@ -288,7 +303,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * >  This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
@@ -297,11 +314,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the ENI when the associated instance is released. Valid values:
-         * <p>
+         * <p>Specifies whether to release the ENI when the associated instance is released. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteOnRelease(Boolean deleteOnRelease) {
             this.putQueryParameter("DeleteOnRelease", deleteOnRelease);
@@ -310,10 +330,11 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The description of the ENI. The description must be 2 to 255 characters in length and cannot start with [http:// or https://](http://https://。).
-         * <p>
+         * <p>The description of the ENI. The description must be 2 to 255 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
+         * <p>This parameter is left empty by default.</p>
          * 
-         * This parameter is left empty by default.
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -322,7 +343,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * <p>This parameter is not publicly available.</p>
          */
         public Builder enhancedNetwork(EnhancedNetwork enhancedNetwork) {
             this.putQueryParameter("EnhancedNetwork", enhancedNetwork);
@@ -331,7 +352,11 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp67acfmxazb4p****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -340,10 +365,11 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The name of the ENI. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
-         * <p>
+         * <p>The name of the ENI. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
+         * <p>This parameter is left empty by default.</p>
          * 
-         * This parameter is left empty by default.
+         * <strong>example:</strong>
+         * <p>eniTestName</p>
          */
         public Builder networkInterfaceName(String networkInterfaceName) {
             this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
@@ -352,7 +378,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The communication parameters of the ENI.
+         * <p>The communication parameters of the ENI.</p>
          */
         public Builder networkInterfaceTrafficConfig(NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
             this.putQueryParameter("NetworkInterfaceTrafficConfig", networkInterfaceTrafficConfig);
@@ -379,12 +405,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The number of queues supported by the ENI. Valid values: 1 to 2048.
-         * <p>
+         * <p>The number of queues supported by the ENI. Valid values: 1 to 2048.</p>
+         * <ul>
+         * <li>You can change only the number of queues supported by the secondary ENI.</li>
+         * <li>You can change the number of queues supported by the secondary ENI only when the ENI is in the <code>Available</code> state or the ENI is attached (<code>InUse</code>) to an instance that is in the <code>Stopped</code> state.</li>
+         * <li>The number of queues supported by the secondary ENI cannot exceed the maximum number of queues that the instance allows for each ENI. The total number of queues for all ENIs on the instance cannot exceed the queue quota that the instance allows. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the values of <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> in the response.</li>
+         * </ul>
          * 
-         * *   You can change only the number of queues supported by the secondary ENI.
-         * *   You can change the number of queues supported by the secondary ENI only when the ENI is in the `Available` state or the ENI is attached (`InUse`) to an instance that is in the `Stopped` state.
-         * *   The number of queues supported by the secondary ENI cannot exceed the maximum number of queues that the instance allows for each ENI. The total number of queues for all ENIs on the instance cannot exceed the queue quota that the instance allows. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and check the values of `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` in the response.
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder queueNumber(Integer queueNumber) {
             this.putQueryParameter("QueueNumber", queueNumber);
@@ -393,7 +422,11 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -420,13 +453,15 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The receive (Rx) queue depth of the ENI.
-         * <p>
+         * <p>The receive (Rx) queue depth of the ENI.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+         * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+         * </ul>
          * 
-         * Take note of the following items:
-         * 
-         * *   The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
-         * *   A larger Rx queue depth yields higher inbound throughput but consumes more memory.
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder rxQueueSize(Integer rxQueueSize) {
             this.putQueryParameter("RxQueueSize", rxQueueSize);
@@ -435,11 +470,11 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and removed from the original security groups.
-         * <p>
-         * 
-         * *   The valid values of N vary based on the maximum number of security groups to which an ENI can be added. For more information, see the [Security group limits](~~25412#SecurityGroupQuota~~) section of the "Limits and quotas" topic.
-         * *   The new security groups take effect after a short delay.
+         * <p>The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and removed from the original security groups.</p>
+         * <ul>
+         * <li>The valid values of N vary based on the maximum number of security groups to which an ENI can be added. For more information, see the <a href="~~25412#SecurityGroupQuota~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+         * <li>The new security groups take effect after a short delay.</li>
+         * </ul>
          */
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -448,13 +483,24 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The Tx queue depth of the ENI.
-         * <p>
+         * SourceDestCheck.
+         */
+        public Builder sourceDestCheck(Boolean sourceDestCheck) {
+            this.putQueryParameter("SourceDestCheck", sourceDestCheck);
+            this.sourceDestCheck = sourceDestCheck;
+            return this;
+        }
+
+        /**
+         * <p>The Tx queue depth of the ENI.</p>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+         * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+         * </ul>
          * 
-         * Take note of the following items:
-         * 
-         * *   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
-         * *   A larger Tx queue depth yields higher outbound throughput but consumes more memory.
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         public Builder txQueueSize(Integer txQueueSize) {
             this.putQueryParameter("TxQueueSize", txQueueSize);
@@ -469,6 +515,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyNetworkInterfaceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyNetworkInterfaceAttributeRequest</p>
+     */
     public static class ConnectionTrackingConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TcpClosedAndTimeWaitTimeout")
         private Integer tcpClosedAndTimeWaitTimeout;
@@ -520,7 +572,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Integer udpTimeout; 
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder tcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
                 this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
@@ -528,7 +585,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>910</p>
              */
             public Builder tcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
                 this.tcpEstablishedTimeout = tcpEstablishedTimeout;
@@ -536,7 +598,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -550,6 +617,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyNetworkInterfaceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyNetworkInterfaceAttributeRequest</p>
+     */
     public static class EnhancedNetwork extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableSriov")
         private Boolean enableSriov;
@@ -577,7 +650,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Boolean enableSriov; 
 
             /**
-             * This parameter is not publicly available.
+             * <p>This parameter is not publicly available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSriov(Boolean enableSriov) {
                 this.enableSriov = enableSriov;
@@ -591,6 +667,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyNetworkInterfaceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyNetworkInterfaceAttributeRequest</p>
+     */
     public static class NetworkInterfaceTrafficConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkInterfaceTrafficMode")
         private String networkInterfaceTrafficMode;
@@ -666,17 +748,21 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Integer txQueueSize; 
 
             /**
-             * The communication mode of the ENI. Valid values:
-             * <p>
+             * <p>The communication mode of the ENI. Valid values:</p>
+             * <ul>
+             * <li>Standard: uses the TCP communication mode.</li>
+             * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+             * </ul>
+             * <p>When the ENI is in the InUse state, take note of the following items:</p>
+             * <ul>
+             * <li>The total number of ERIs attached to the instance cannot exceed the ERI quota for the instance type. To query the ERI quota for an instance type, call the DescribeInstanceTypes operation and check the EriQuantity value in the response.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              * 
-             * *   Standard: uses the TCP communication mode.
-             * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
-             * 
-             * When the ENI is in the InUse state, take note of the following items:
-             * 
-             * *   The total number of ERIs attached to the instance cannot exceed the ERI quota for the instance type. To query the ERI quota for an instance type, call the DescribeInstanceTypes operation and check the EriQuantity value in the response.
-             * 
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <strong>example:</strong>
+             * <p>HighPerformance</p>
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -684,13 +770,17 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * The number of queues supported by the ENI. When the ENI is in the InUse state, take note of the following items:
-             * <p>
+             * <p>The number of queues supported by the ENI. When the ENI is in the InUse state, take note of the following items:</p>
+             * <ul>
+             * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI for the instance type.</li>
+             * <li>The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, call the DescribeInstanceTypes operation and check the MaximumQueueNumberPerEnig and TotalEniQueueQuantity values in the response.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              * 
-             * *   The value of this parameter cannot exceed the maximum number of queues allowed per ENI for the instance type.
-             * *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, call the DescribeInstanceTypes operation and check the MaximumQueueNumberPerEnig and TotalEniQueueQuantity values in the response.
-             * 
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder queueNumber(Integer queueNumber) {
                 this.queueNumber = queueNumber;
@@ -698,12 +788,16 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * The number of queues supported by the ERI. When the ERI is in the InUse state, take note of the following items:
-             * <p>
+             * <p>The number of queues supported by the ERI. When the ERI is in the InUse state, take note of the following items:</p>
+             * <ul>
+             * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ERI for the instance type. To query the maximum number of queues allowed per ERI for an instance type, call the DescribeInstanceTypes operation and check the QueuePairNumber value in the response.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              * 
-             * *   The value of this parameter cannot exceed the maximum number of queues allowed per ERI for the instance type. To query the maximum number of queues allowed per ERI for an instance type, call the DescribeInstanceTypes operation and check the QueuePairNumber value in the response.
-             * 
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder queuePairNumber(Integer queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;
@@ -711,15 +805,18 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * The receive (Rx) queue depth of the ENI.
-             * <p>
+             * <p>The receive (Rx) queue depth of the ENI.</p>
+             * <p>Take note of the following items:</p>
+             * <ul>
+             * <li>The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+             * <li>A larger Rx queue depth yields higher inbound throughput but consumes more memory.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              * 
-             * Take note of the following items:
-             * 
-             * *   The Rx queue depth of an ENI must be the same as the transmit (Tx) queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
-             * *   A larger Rx queue depth yields higher inbound throughput but consumes more memory.
-             * 
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder rxQueueSize(Integer rxQueueSize) {
                 this.rxQueueSize = rxQueueSize;
@@ -727,15 +824,18 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * The Tx queue depth of the ENI.
-             * <p>
+             * <p>The Tx queue depth of the ENI.</p>
+             * <p>Take note of the following items:</p>
+             * <ul>
+             * <li>The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.</li>
+             * <li>A larger Tx queue depth yields higher outbound throughput but consumes more memory.</li>
+             * </ul>
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              * 
-             * Take note of the following items:
-             * 
-             * *   The Tx queue depth of an ENI must be the same as the Rx queue depth of the ENI. Valid values: powers of 2 in the range of 8192 to 16384.
-             * *   A larger Tx queue depth yields higher outbound throughput but consumes more memory.
-             * 
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <strong>example:</strong>
+             * <p>8192</p>
              */
             public Builder txQueueSize(Integer txQueueSize) {
                 this.txQueueSize = txQueueSize;

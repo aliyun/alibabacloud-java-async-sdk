@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeForwardTableEntriesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeForwardTableEntriesResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeForwardTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeForwardTableEntriesResponseBody</p>
+     */
     public static class ForwardTableEntry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private String externalIp;
@@ -311,6 +318,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeForwardTableEntriesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeForwardTableEntriesResponseBody</p>
+     */
     public static class ForwardTableEntries extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardTableEntry")
         private java.util.List < ForwardTableEntry> forwardTableEntry;

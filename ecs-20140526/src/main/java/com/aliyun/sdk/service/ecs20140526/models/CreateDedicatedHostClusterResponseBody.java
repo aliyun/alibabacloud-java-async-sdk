@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDedicatedHostClusterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDedicatedHostClusterResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateDedicatedHostClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the dedicated host cluster.
+         * <p>The ID of the dedicated host cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-bp12wlf6bw0vz9v2****</p>
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.dedicatedHostClusterId = dedicatedHostClusterId;
@@ -57,7 +61,10 @@ public class CreateDedicatedHostClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2A664A6-2933-4C64-88AE-5033D003****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

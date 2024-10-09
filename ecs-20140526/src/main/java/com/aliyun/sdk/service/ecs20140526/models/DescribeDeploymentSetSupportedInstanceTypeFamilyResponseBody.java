@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
         private String requestId; 
 
         /**
-         * The instance families that support the deployment strategy.
+         * <p>The instance families that support the deployment strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.i2g,ecs.i1,ecs.i2ne,ecs.i2gne</p>
          */
         public Builder instanceTypeFamilies(String instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -57,7 +61,10 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody extend
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B7DB-A3DC7DE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

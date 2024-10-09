@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelPhysicalConnectionRequest} extends {@link RequestModel}
  *
  * <p>CancelPhysicalConnectionRequest</p>
@@ -180,7 +181,7 @@ public class CancelPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * PhysicalConnectionId.
+         * <p>This parameter is required.</p>
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -189,7 +190,7 @@ public class CancelPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

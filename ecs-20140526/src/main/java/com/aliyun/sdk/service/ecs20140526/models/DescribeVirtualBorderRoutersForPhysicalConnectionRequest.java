@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualBorderRoutersForPhysicalConnectionRequest} extends {@link RequestModel}
  *
  * <p>DescribeVirtualBorderRoutersForPhysicalConnectionRequest</p>
@@ -190,7 +191,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
         }
 
         /**
-         * PhysicalConnectionId.
+         * <p>This parameter is required.</p>
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -199,7 +200,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,6 +233,12 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Re
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersForPhysicalConnectionRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersForPhysicalConnectionRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

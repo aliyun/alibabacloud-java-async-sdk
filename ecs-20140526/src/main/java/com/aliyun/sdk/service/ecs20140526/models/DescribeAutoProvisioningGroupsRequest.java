@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoProvisioningGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoProvisioningGroupsRequest</p>
@@ -209,7 +210,10 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the auto provisioning group. You can specify up to 20 IDs.
+         * <p>The ID of the auto provisioning group. You can specify up to 20 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apg-sn54avj8htgvtyh8****</p>
          */
         public Builder autoProvisioningGroupId(java.util.List < String > autoProvisioningGroupId) {
             this.putQueryParameter("AutoProvisioningGroupId", autoProvisioningGroupId);
@@ -218,7 +222,10 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * The name of the auto provisioning group.
+         * <p>The name of the auto provisioning group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testAutoProvisioningGroupName</p>
          */
         public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
             this.putQueryParameter("AutoProvisioningGroupName", autoProvisioningGroupName);
@@ -227,7 +234,10 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * The status of the auto provisioning group.
+         * <p>The status of the auto provisioning group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder autoProvisioningGroupStatus(java.util.List < String > autoProvisioningGroupStatus) {
             this.putQueryParameter("AutoProvisioningGroupStatus", autoProvisioningGroupStatus);
@@ -254,12 +264,12 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -268,12 +278,12 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -282,7 +292,11 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the auto provisioning group.
+         * <p>The region ID of the auto provisioning group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -291,7 +305,10 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the auto provisioning group belongs.
+         * <p>The ID of the resource group to which the auto provisioning group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -318,7 +335,7 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
         }
 
         /**
-         * The tags that are added to the auto provisioning group.
+         * <p>The tags that are added to the auto provisioning group.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -333,6 +350,12 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -372,10 +395,11 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that is added to the auto provisioning group.
-             * <p>
+             * <p>The key of tag N that is added to the auto provisioning group.</p>
+             * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * 
-             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -383,10 +407,11 @@ public class DescribeAutoProvisioningGroupsRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the auto provisioning group.
-             * <p>
+             * <p>The value of tag N that is added to the auto provisioning group.</p>
+             * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
-             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

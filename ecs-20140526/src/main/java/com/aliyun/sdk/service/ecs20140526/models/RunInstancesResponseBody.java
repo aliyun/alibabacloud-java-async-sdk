@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>RunInstancesResponseBody</p>
@@ -73,7 +74,7 @@ public class RunInstancesResponseBody extends TeaModel {
         private Float tradePrice; 
 
         /**
-         * The IDs of the instances (`InstanceIdSet`).
+         * <p>The IDs of the instances (<code>InstanceIdSet</code>).</p>
          */
         public Builder instanceIdSets(InstanceIdSets instanceIdSets) {
             this.instanceIdSets = instanceIdSets;
@@ -81,7 +82,10 @@ public class RunInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order. This parameter is returned only when `InstanceChargeType` is set to PrePaid.
+         * <p>The ID of the order. This parameter is returned only when <code>InstanceChargeType</code> is set to PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -89,7 +93,10 @@ public class RunInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class RunInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The transaction price.
+         * <p>The transaction price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.165</p>
          */
         public Builder tradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;
@@ -110,6 +120,12 @@ public class RunInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RunInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>RunInstancesResponseBody</p>
+     */
     public static class InstanceIdSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceIdSet")
         private java.util.List < String > instanceIdSet;

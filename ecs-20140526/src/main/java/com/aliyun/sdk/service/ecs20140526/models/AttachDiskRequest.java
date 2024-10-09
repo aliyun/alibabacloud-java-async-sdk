@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachDiskRequest} extends {@link RequestModel}
  *
  * <p>AttachDiskRequest</p>
@@ -232,12 +233,14 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to attach the disk as a system disk.
-         * <p>
+         * <p>Specifies whether to attach the disk as a system disk.</p>
+         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> You can set <code>Bootable</code> to true only if the instance does not have a system disk.</p>
+         * </blockquote>
          * 
-         * Default value: false.
-         * 
-         * >  You can set `Bootable` to true only if the instance does not have a system disk.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder bootable(Boolean bootable) {
             this.putQueryParameter("Bootable", bootable);
@@ -246,19 +249,21 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the disk when the instance is released.
-         * <p>
+         * <p>Specifies whether to release the disk when the instance is released.</p>
+         * <ul>
+         * <li>true: releases the disk when the instance is released.</li>
+         * <li>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>If <code>OperationLocks</code> in the DescribeInstances response contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set <code>DeleteWithInstance</code> to <code>false</code>, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.</li>
+         * <li>If you want to attach an <code>elastic ephemeral disk</code>, you must set <code>DeleteWithInstance</code> to <code>true</code>.</li>
+         * <li>This parameter is unavailable for disks for which the multi-attach feature is enabled.</li>
+         * </ul>
          * 
-         * *   true: releases the disk when the instance is released.
-         * *   false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.
-         * 
-         * Default value: false.
-         * 
-         * When you specify this parameter, take note of the following items:
-         * 
-         * *   If `OperationLocks` in the DescribeInstances response contains `"LockReason" : "security"` for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set `DeleteWithInstance` to `false`, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.
-         * *   If you want to attach an `elastic ephemeral disk`, you must set `DeleteWithInstance` to `true`.
-         * *   This parameter is unavailable for disks for which the multi-attach feature is enabled.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -267,10 +272,13 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * The device name of the disk.
-         * <p>
+         * <p>The device name of the disk.</p>
+         * <blockquote>
+         * <p> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * </blockquote>
          * 
-         * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+         * <strong>example:</strong>
+         * <p>testDeviceName</p>
          */
         public Builder device(String device) {
             this.putQueryParameter("Device", device);
@@ -279,10 +287,14 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the disk. The disk specified by `DiskId` and the instance specified by `InstanceId` must reside in the same zone.
-         * <p>
+         * <p>The ID of the disk. The disk specified by <code>DiskId</code> and the instance specified by <code>InstanceId</code> must reside in the same zone.</p>
+         * <blockquote>
+         * <p> For more information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  For more information about the limits on attaching a data disk and a system disk, see the "Usage notes" section of this topic.
+         * <strong>example:</strong>
+         * <p>d-bp1j4l5axzdy6ftk****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -291,13 +303,15 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully attach the disk to the instance.
-         * <p>
+         * <p>Specifies whether to forcefully attach the disk to the instance.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -306,7 +320,11 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which you want to attach the disk.
+         * <p>The ID of the instance to which you want to attach the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1dq5lozx5f4pmd****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -315,11 +333,14 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * The name of the SSH key pair that you bind to the Linux instance when you attach the system disk.
-         * <p>
+         * <p>The name of the SSH key pair that you bind to the Linux instance when you attach the system disk.</p>
+         * <ul>
+         * <li>Windows instances do not support logons based on SSH key pairs. The <code>Password</code> parameter takes effect even if the KeyPairName parameter is specified.</li>
+         * <li>For Linux instances, the username and password-based logon method is disabled by default.</li>
+         * </ul>
          * 
-         * *   Windows instances do not support logons based on SSH key pairs. The `Password` parameter takes effect even if the KeyPairName parameter is specified.
-         * *   For Linux instances, the username and password-based logon method is disabled by default.
+         * <strong>example:</strong>
+         * <p>KeyPairTestName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -346,14 +367,16 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * The password that is set when you attach the system disk. The password is applicable only to the administrator and root users. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:
-         * <p>
+         * <p>The password that is set when you attach the system disk. The password is applicable only to the administrator and root users. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
+         * <pre><code>()`~!@#$%^&amp;*-_+=|{}[]:;\&quot;&lt;&gt;,.?/
+         * </code></pre>
+         * <p>For Windows instances, passwords cannot start with a forward slash (/).</p>
+         * <blockquote>
+         * <p>If <code>Password</code> is configured, we recommend that you send requests over HTTPS to prevent password leaks.</p>
+         * </blockquote>
          * 
-         *     ()`~!@#$%^&*-_+=|{}[]:;\"<>,.?/
-         * 
-         * For Windows instances, passwords cannot start with a forward slash (/).
-         * 
-         * > If `Password` is configured, we recommend that you send requests over HTTPS to prevent password leaks.
+         * <strong>example:</strong>
+         * <p>EcsV587!</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

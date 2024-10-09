@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCapacityReservationInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCapacityReservationInstancesRequest</p>
@@ -185,7 +186,10 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -194,7 +198,10 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the capacity reservation.
+         * <p>The ID of the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -221,12 +228,13 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,6 +267,12 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCapacityReservationInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationInstancesRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -287,7 +301,11 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
             private String id; 
 
             /**
-             * The token used to start the next query.
+             * <p>The token used to start the next query.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-bp67acfmxazb4****</p>
              */
             public Builder id(String id) {
                 this.id = id;

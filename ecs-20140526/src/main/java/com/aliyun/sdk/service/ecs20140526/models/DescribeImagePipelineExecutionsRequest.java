@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagePipelineExecutionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeImagePipelineExecutionsRequest</p>
@@ -218,7 +219,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the image creation task.
+         * <p>The ID of the image creation task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exec-5fb8facb8ed7427c****</p>
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -227,7 +231,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the image template.
+         * <p>The ID of the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip-2ze5tsl5bp6nf2b3****</p>
          */
         public Builder imagePipelineId(String imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -236,10 +243,11 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Valid values: 1 to 500.
-         * <p>
+         * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -248,7 +256,10 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -275,7 +286,11 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -302,18 +317,22 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:
-         * <p>
+         * <p>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: <code>BUILDING,DISTRIBUTING</code>. Valid values:</p>
+         * <ul>
+         * <li>BUILDING</li>
+         * <li>DISTRIBUTING</li>
+         * <li>RELEASING</li>
+         * <li>SUCCESS</li>
+         * <li>FAILED</li>
+         * <li>CANCELLING</li>
+         * <li>CANCELLED</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you want to query the image creation tasks in all states, specify all values.</p>
+         * </blockquote>
          * 
-         * *   BUILDING
-         * *   DISTRIBUTING
-         * *   RELEASING
-         * *   SUCCESS
-         * *   FAILED
-         * *   CANCELLING
-         * *   CANCELLED
-         * 
-         * > If you want to query the image creation tasks in all states, specify all values.
+         * <strong>example:</strong>
+         * <p>BUILDING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -322,7 +341,9 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * > This parameter is not publicly available.
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -337,6 +358,12 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImagePipelineExecutionsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelineExecutionsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -376,7 +403,12 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -384,7 +416,12 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder value(String value) {
                 this.value = value;

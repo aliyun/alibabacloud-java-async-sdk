@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImagePipelinesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the image templates.
+         * <p>Details about the image templates.</p>
          */
         public Builder imagePipeline(ImagePipeline imagePipeline) {
             this.imagePipeline = imagePipeline;
@@ -93,7 +94,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the return value, see the "Usage notes" section of this topic.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the return value, see the &quot;Usage notes&quot; section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of image templates returned.
+         * <p>The total number of image templates returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
     public static class AddAccounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddAccount")
         private java.util.List < String > addAccount;
@@ -171,6 +190,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -210,7 +235,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -218,7 +246,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -232,6 +263,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -273,6 +310,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
     public static class ToRegionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ToRegionId")
         private java.util.List < String > toRegionId;
@@ -314,6 +357,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
     public static class ImagePipelineSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddAccounts")
         private AddAccounts addAccounts;
@@ -533,7 +582,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template.
+             * <p>The IDs of Alibaba Cloud accounts to which to share the image that will be created based on the image template.</p>
              */
             public Builder addAccounts(AddAccounts addAccounts) {
                 this.addAccounts = addAccounts;
@@ -541,11 +590,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The source image.
-             * <p>
+             * <p>The source image.</p>
+             * <ul>
+             * <li>When <code>BaseImageType</code> is set to IMAGE, the value of this parameter is the ID of a custom image.</li>
+             * <li>When <code>BaseImageType</code> is set to IMAGE_FAMILY, the value of this parameter is the name of an image family.</li>
+             * </ul>
              * 
-             * *   When `BaseImageType` is set to IMAGE, the value of this parameter is the ID of a custom image.
-             * *   When `BaseImageType` is set to IMAGE_FAMILY, the value of this parameter is the name of an image family.
+             * <strong>example:</strong>
+             * <p>m-bp67acfmxazb4p****</p>
              */
             public Builder baseImage(String baseImage) {
                 this.baseImage = baseImage;
@@ -553,11 +605,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source image. Valid values:
-             * <p>
+             * <p>The type of the source image. Valid values:</p>
+             * <ul>
+             * <li>IMAGE: custom image</li>
+             * <li>IMAGE_FAMILY: image family</li>
+             * </ul>
              * 
-             * *   IMAGE: custom image
-             * *   IMAGE_FAMILY: image family
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder baseImageType(String baseImageType) {
                 this.baseImageType = baseImageType;
@@ -565,7 +620,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the image template.
+             * <p>The content of the image template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FROM IMAGE:m-bp67acfmxazb4p****</p>
              */
             public Builder buildContent(String buildContent) {
                 this.buildContent = buildContent;
@@ -573,7 +631,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image template was created.
+             * <p>The time when the image template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-24T06:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -581,7 +642,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to release the intermediate instance when the image fails to be created.
+             * <p>Indicates whether to release the intermediate instance when the image fails to be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteInstanceOnFailure(Boolean deleteInstanceOnFailure) {
                 this.deleteInstanceOnFailure = deleteInstanceOnFailure;
@@ -589,7 +653,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image template.
+             * <p>The description of the image template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -597,7 +664,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name prefix of the image to be created based on the image template.
+             * <p>The name prefix of the image to be created based on the image template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testImageName</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -605,7 +675,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image template.
+             * <p>The ID of the image template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip-2ze5tsl5bp6nf2b3****</p>
              */
             public Builder imagePipelineId(String imagePipelineId) {
                 this.imagePipelineId = imagePipelineId;
@@ -613,7 +686,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g6.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -621,7 +697,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the outbound public bandwidth for the intermediate instance. Unit: Mbit/s.
+             * <p>The size of the outbound public bandwidth for the intermediate instance. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder internetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -629,7 +708,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image template.
+             * <p>The name of the image template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testImagePipeline</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -637,7 +719,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -645,7 +730,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The system disk size of the intermediate instance. Unit: GiB
+             * <p>The system disk size of the intermediate instance. Unit: GiB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -653,7 +741,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the image template.
+             * <p>The tags of the image template.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -661,7 +749,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of regions to which to distribute the image that will be created based on the image template.
+             * <p>The IDs of regions to which to distribute the image that will be created based on the image template.</p>
              */
             public Builder toRegionIds(ToRegionIds toRegionIds) {
                 this.toRegionIds = toRegionIds;
@@ -669,7 +757,10 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch in the virtual private cloud (VPC).
+             * <p>The ID of the vSwitch in the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp67acfmxazb4p****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -683,6 +774,12 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagePipelinesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesResponseBody</p>
+     */
     public static class ImagePipeline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImagePipelineSet")
         private java.util.List < ImagePipelineSet> imagePipelineSet;

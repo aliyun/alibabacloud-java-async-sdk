@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyManagedInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyManagedInstanceResponseBody</p>
@@ -49,7 +50,7 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the managed instance.
+         * <p>The name of the managed instance.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -57,7 +58,10 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the managed instance.
+         * <p>Details of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyManagedInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyManagedInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -117,7 +127,10 @@ public class ModifyManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the managed instance.
+             * <p>The ID of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testInstanceName</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

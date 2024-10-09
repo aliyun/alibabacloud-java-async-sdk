@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNatGatewayRequest} extends {@link RequestModel}
  *
  * <p>CreateNatGatewayRequest</p>
@@ -182,7 +183,7 @@ public class CreateNatGatewayRequest extends Request {
         } 
 
         /**
-         * BandwidthPackage.
+         * <p>This parameter is required.</p>
          */
         public Builder bandwidthPackage(java.util.List < BandwidthPackage> bandwidthPackage) {
             this.putQueryParameter("BandwidthPackage", bandwidthPackage);
@@ -236,7 +237,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -263,7 +264,7 @@ public class CreateNatGatewayRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -278,6 +279,12 @@ public class CreateNatGatewayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNatGatewayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateNatGatewayRequest</p>
+     */
     public static class BandwidthPackage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;

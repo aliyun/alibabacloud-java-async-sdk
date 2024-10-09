@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReservedInstanceAutoRenewAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeReservedInstanceAutoRenewAttributeResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
         private ReservedInstanceRenewAttributes reservedInstanceRenewAttributes; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
         }
 
         /**
-         * Details about the auto-renewal settings of the reserved instances.
+         * <p>Details about the auto-renewal settings of the reserved instances.</p>
          */
         public Builder reservedInstanceRenewAttributes(ReservedInstanceRenewAttributes reservedInstanceRenewAttributes) {
             this.reservedInstanceRenewAttributes = reservedInstanceRenewAttributes;
@@ -70,6 +74,12 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
 
     } 
 
+    /**
+     * 
+     * {@link DescribeReservedInstanceAutoRenewAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReservedInstanceAutoRenewAttributeResponseBody</p>
+     */
     public static class ReservedInstanceRenewAttribute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
@@ -133,7 +143,10 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             private String reservedInstanceId; 
 
             /**
-             * The auto-renewal duration.
+             * <p>The auto-renewal duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -141,10 +154,11 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             }
 
             /**
-             * The unit of the auto-renewal duration.
-             * <p>
+             * <p>The unit of the auto-renewal duration.</p>
+             * <p>Valid values: Year and Month.</p>
              * 
-             * Valid values: Year and Month.
+             * <strong>example:</strong>
+             * <p>Month</p>
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -152,11 +166,14 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             }
 
             /**
-             * The auto-renewal status of the reserved instance. Valid values:
-             * <p>
+             * <p>The auto-renewal status of the reserved instance. Valid values:</p>
+             * <ul>
+             * <li>AutoRenewal: The reserved instance is automatically renewed.</li>
+             * <li>Normal: You must manually renew the reserved instance.</li>
+             * </ul>
              * 
-             * *   AutoRenewal: The reserved instance is automatically renewed.
-             * *   Normal: You must manually renew the reserved instance.
+             * <strong>example:</strong>
+             * <p>AutoRenewal</p>
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;
@@ -164,7 +181,10 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             }
 
             /**
-             * The ID of the reserved instance.
+             * <p>The ID of the reserved instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecsri-ajdfaj****</p>
              */
             public Builder reservedInstanceId(String reservedInstanceId) {
                 this.reservedInstanceId = reservedInstanceId;
@@ -178,6 +198,12 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeReservedInstanceAutoRenewAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReservedInstanceAutoRenewAttributeResponseBody</p>
+     */
     public static class ReservedInstanceRenewAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReservedInstanceRenewAttribute")
         private java.util.List < ReservedInstanceRenewAttribute> reservedInstanceRenewAttribute;

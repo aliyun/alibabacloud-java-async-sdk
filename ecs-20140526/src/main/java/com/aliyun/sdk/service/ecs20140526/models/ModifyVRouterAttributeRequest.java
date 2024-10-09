@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVRouterAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyVRouterAttributeRequest</p>
@@ -206,7 +207,7 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * VRouterId.
+         * <p>This parameter is required.</p>
          */
         public Builder vRouterId(String vRouterId) {
             this.putQueryParameter("VRouterId", vRouterId);

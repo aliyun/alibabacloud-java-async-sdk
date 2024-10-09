@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkInterfaceAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeNetworkInterfaceAttributeRequest</p>
@@ -176,12 +177,14 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The attribute of the ENI. Valid value:
-         * <p>
+         * <p>The attribute of the ENI. Valid value:</p>
+         * <p>attachment: attachment information about the ENI</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          * 
-         * attachment: attachment information about the ENI
-         * 
-         * >  This parameter is in invitational preview and is not publicly available.
+         * <strong>example:</strong>
+         * <p>attachment</p>
          */
         public Builder attribute(String attribute) {
             this.putQueryParameter("Attribute", attribute);
@@ -190,7 +193,11 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp67acfmxazb4p****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -217,7 +224,11 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,7 +255,9 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * >  This parameter is unavailable.
+         * <blockquote>
+         * <p> This parameter is unavailable.</p>
+         * </blockquote>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -259,6 +272,12 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNetworkInterfaceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeNetworkInterfaceAttributeRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -298,7 +317,12 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
             private String value; 
 
             /**
-             * >  This parameter is unavailable.
+             * <blockquote>
+             * <p> This parameter is unavailable.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -306,7 +330,12 @@ public class DescribeNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * >  This parameter is unavailable.
+             * <blockquote>
+             * <p> This parameter is unavailable.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

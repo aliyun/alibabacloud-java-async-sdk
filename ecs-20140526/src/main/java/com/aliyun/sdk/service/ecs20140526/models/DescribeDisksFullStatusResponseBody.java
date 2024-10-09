@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDisksFullStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDisksFullStatusResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The collection of full status information of the EBS devices.
+         * <p>The collection of full status information of the EBS devices.</p>
          */
         public Builder diskFullStatusSet(DiskFullStatusSet diskFullStatusSet) {
             this.diskFullStatusSet = diskFullStatusSet;
@@ -93,7 +94,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of EBS devices for which full status information is returned.
+         * <p>The total number of EBS devices for which full status information is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDisksFullStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksFullStatusResponseBody</p>
+     */
     public static class EventType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -169,7 +188,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the event type.
+             * <p>The code of the event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -177,13 +199,16 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event type. Valid values:
-             * <p>
+             * <p>The name of the event type. Valid values:</p>
+             * <ul>
+             * <li>Degraded: The performance of the EBS device is degraded.</li>
+             * <li>SeverelyDegraded: The performance of the EBS device is severely degraded.</li>
+             * <li>Stalled: The performance of the EBS device is severely affected.</li>
+             * <li>ErrorDetected: The local disk is damaged.</li>
+             * </ul>
              * 
-             * *   Degraded: The performance of the EBS device is degraded.
-             * *   SeverelyDegraded: The performance of the EBS device is severely degraded.
-             * *   Stalled: The performance of the EBS device is severely affected.
-             * *   ErrorDetected: The local disk is damaged.
+             * <strong>example:</strong>
+             * <p>Stalled</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -197,6 +222,12 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksFullStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksFullStatusResponseBody</p>
+     */
     public static class DiskEventType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventEndTime")
         private String eventEndTime;
@@ -272,7 +303,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String impactLevel; 
 
             /**
-             * The time when the event ended.
+             * <p>The time when the event ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-06T02:48:52Z</p>
              */
             public Builder eventEndTime(String eventEndTime) {
                 this.eventEndTime = eventEndTime;
@@ -280,7 +314,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * <p>The ID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e-bp67acfmxazb4p****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -288,7 +325,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event occurred.
+             * <p>The time when the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-08T02:43:10Z</p>
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -296,7 +336,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event.
+             * <p>The type of the event.</p>
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -304,7 +344,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The impact level of the event.
+             * <p>The impact level of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -318,6 +361,12 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksFullStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksFullStatusResponseBody</p>
+     */
     public static class DiskEventSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskEventType")
         private java.util.List < DiskEventType> diskEventType;
@@ -359,6 +408,12 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksFullStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksFullStatusResponseBody</p>
+     */
     public static class HealthStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -398,7 +453,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the health status of the EBS device.
+             * <p>The code of the health status of the EBS device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -406,7 +464,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the health status of the EBS device.
+             * <p>The name of the health status of the EBS device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Impaired</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -420,6 +481,12 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksFullStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksFullStatusResponseBody</p>
+     */
     public static class Status extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
@@ -459,7 +526,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The code of the lifecycle status of the EBS device.
+             * <p>The code of the lifecycle status of the EBS device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>129</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -467,7 +537,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the lifecycle status of the EBS device.
+             * <p>The name of the lifecycle status of the EBS device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -481,6 +554,12 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksFullStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksFullStatusResponseBody</p>
+     */
     public static class DiskFullStatusType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
@@ -568,12 +647,14 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             private Status status; 
 
             /**
-             * The name of the EBS device that is attached to an instance. Example: /dev/xvdb.
-             * <p>
+             * <p>The name of the EBS device that is attached to an instance. Example: /dev/xvdb.</p>
+             * <p>This parameter has a value only when the value of <code>Status</code> is <code>In_use</code>.</p>
+             * <blockquote>
+             * <p>This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.</p>
+             * </blockquote>
              * 
-             * This parameter has a value only when the value of `Status` is `In_use`.
-             * 
-             * > This parameter will be deprecated in the future. To ensure future compatibility, we recommend that you do not use this parameter.
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -581,7 +662,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The events about the EBS device.
+             * <p>The events about the EBS device.</p>
              */
             public Builder diskEventSet(DiskEventSet diskEventSet) {
                 this.diskEventSet = diskEventSet;
@@ -589,7 +670,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The EBS device ID.
+             * <p>The EBS device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp67acfmxazb4p****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -597,7 +681,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The health status of the EBS device.
+             * <p>The health status of the EBS device.</p>
              */
             public Builder healthStatus(HealthStatus healthStatus) {
                 this.healthStatus = healthStatus;
@@ -605,7 +689,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -613,7 +700,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle status of the EBS device.
+             * <p>The lifecycle status of the EBS device.</p>
              */
             public Builder status(Status status) {
                 this.status = status;
@@ -627,6 +714,12 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDisksFullStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDisksFullStatusResponseBody</p>
+     */
     public static class DiskFullStatusSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskFullStatusType")
         private java.util.List < DiskFullStatusType> diskFullStatusType;

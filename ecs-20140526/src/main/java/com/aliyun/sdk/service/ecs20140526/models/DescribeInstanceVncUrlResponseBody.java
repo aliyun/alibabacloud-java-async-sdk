@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceVncUrlResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceVncUrlResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
         private String vncUrl; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,10 +61,13 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The VNC logon address.
-         * <p>
+         * <p>The VNC logon address.</p>
+         * <blockquote>
+         * <p> **The address returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful call, the address expires and you must recall the operation to obtain a new address.</p>
+         * </blockquote>
          * 
-         * >  **The address returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful call, the address expires and you must recall the operation to obtain a new address.
+         * <strong>example:</strong>
+         * <p>wss%3A%2F%2Fhz01-vncproxy.aliyun.com%2Fwebsockify%2F%3Fs%3DDvh%252FIA%252BYc73gWO48cBx2gBxUDVzaAnSKr74pq30mzqUYgeUMcB%252FbkNixDxdEA996</p>
          */
         public Builder vncUrl(String vncUrl) {
             this.vncUrl = vncUrl;

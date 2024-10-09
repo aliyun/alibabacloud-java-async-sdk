@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLaunchTemplateVersionRequest} extends {@link RequestModel}
  *
  * <p>DeleteLaunchTemplateVersionRequest</p>
@@ -176,7 +177,11 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The version numbers of the launch template.
+         * <p>The version numbers of the launch template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder deleteVersion(java.util.List < Long > deleteVersion) {
             this.putQueryParameter("DeleteVersion", deleteVersion);
@@ -185,7 +190,10 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The ID of the launch template. For more information, call the [DescribeLaunchTemplates](~~73759~~) operation.
+         * <p>The ID of the launch template. For more information, call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lt-bp1apo0bbbkuy0rj****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -194,7 +202,10 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The name of the launch template.
+         * <p>The name of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testLaunchTemplateName</p>
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -221,7 +232,11 @@ public class DeleteLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The region ID of the launch template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

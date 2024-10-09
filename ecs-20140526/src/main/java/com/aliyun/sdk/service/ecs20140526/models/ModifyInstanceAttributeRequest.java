@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceAttributeRequest</p>
@@ -338,13 +339,15 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The performance mode of the burstable instance. Valid values:
-         * <p>
+         * <p>The performance mode of the burstable instance. Valid values:</p>
+         * <ul>
+         * <li>Standard</li>
+         * <li>Unlimited</li>
+         * </ul>
+         * <p>For more information about the performance modes of burstable instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>.</p>
          * 
-         * *   Standard
-         * *   Unlimited
-         * 
-         * For more information about the performance modes of burstable instances, see [Overview](~~59977~~).
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder creditSpecification(String creditSpecification) {
             this.putQueryParameter("CreditSpecification", creditSpecification);
@@ -353,10 +356,13 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance.
-         * <p>
+         * <p>The release protection attribute of the instance. This parameter specifies whether you can use the ECS console or call the <a href="https://help.aliyun.com/document_detail/25507.html">DeleteInstance</a> operation to release the instance.</p>
+         * <blockquote>
+         * <p> This parameter is applicable only to pay-as-you-go instances. The release protection attribute can protect instances against manual releases, but not against automatic releases.</p>
+         * </blockquote>
          * 
-         * >  This parameter is applicable only to pay-as-you-go instances. The release protection attribute can protect instances against manual releases, but not against automatic releases.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -365,7 +371,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The description of the instance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the instance. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testInstanceDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -374,13 +383,15 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTU and jumbo frames</a>.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * You can enable the Jumbo Frames feature only for specific instance types. For more information, see [MTU and jumbo frames](~~200512~~).
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableJumboFrame(Boolean enableJumboFrame) {
             this.putQueryParameter("EnableJumboFrame", enableJumboFrame);
@@ -389,16 +400,19 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The hostname of the instance. Take note of the following items:
-         * <p>
+         * <p>The hostname of the instance. Take note of the following items:</p>
+         * <ul>
+         * <li>When you change the hostname of the instance, the instance cannot be in the Creating (<code>Pending</code>) or Starting (<code>Starting</code>) state. Otherwise, the new hostname and the configurations in <code>/etc/hosts</code> may not take effect. You can call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation to query the status of the instance.</li>
+         * <li>After you change the hostname, you must call the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the new hostname to take effect.</li>
+         * </ul>
+         * <p>The following limits apply to the hostnames of instances that run different operating systems:</p>
+         * <ul>
+         * <li>For Windows Server, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+         * <li>For other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). The hostname cannot contain consecutive periods (.) or hyphens (-). The hostname cannot start or end with a period (.) or a hyphen (-).</li>
+         * </ul>
          * 
-         * *   When you change the hostname of the instance, the instance cannot be in the Creating (`Pending`) or Starting (`Starting`) state. Otherwise, the new hostname and the configurations in `/etc/hosts` may not take effect. You can call the [DescribeInstances](~~25506~~) operation to query the status of the instance.
-         * *   After you change the hostname, you must call the [RebootInstance](~~25502~~) operation for the new hostname to take effect.
-         * 
-         * The following limits apply to the hostnames of instances that run different operating systems:
-         * 
-         * *   For Windows Server, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.
-         * *   For other operating systems such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-). The hostname cannot contain consecutive periods (.) or hyphens (-). The hostname cannot start or end with a period (.) or a hyphen (-).
+         * <strong>example:</strong>
+         * <p>testHostName</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -407,7 +421,11 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -416,7 +434,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testInstanceName</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -425,7 +446,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The number of queues supported by the primary ENI.
+         * <p>The number of queues supported by the primary ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder networkInterfaceQueueNumber(Integer networkInterfaceQueueNumber) {
             this.putQueryParameter("NetworkInterfaceQueueNumber", networkInterfaceQueueNumber);
@@ -452,14 +476,16 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:
-         * <p>
+         * <p>The password of the instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</p>
+         * <pre><code>( ) ` ~ ! @ # $ % ^ &amp; * - _ + = | { } [ ] : ; \&quot; &lt; &gt; , . ? /
+         * </code></pre>
+         * <p>The password of a Windows instance cannot start with a forward slash (/).</p>
+         * <blockquote>
+         * <p> For security reasons, we recommend that you use HTTPS to send requests if <code>Password</code> is specified.</p>
+         * </blockquote>
          * 
-         *     ( ) ` ~ ! @ # $ % ^ & * - _ + = | { } [ ] : ; \" < > , . ? /
-         * 
-         * The password of a Windows instance cannot start with a forward slash (/).
-         * 
-         * >  For security reasons, we recommend that you use HTTPS to send requests if `Password` is specified.
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -468,7 +494,9 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * >  This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          */
         public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
             this.putQueryParameter("PrivateDnsNameOptions", privateDnsNameOptions);
@@ -477,7 +505,12 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * >  This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder recyclable(Boolean recyclable) {
             this.putQueryParameter("Recyclable", recyclable);
@@ -486,7 +519,9 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * >  This parameter is in invitational preview and is not publicly available.
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          */
         public Builder remoteConnectionOptions(RemoteConnectionOptions remoteConnectionOptions) {
             this.putQueryParameter("RemoteConnectionOptions", remoteConnectionOptions);
@@ -513,15 +548,18 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The IDs of replacement security groups.
-         * <p>
+         * <p>The IDs of replacement security groups.</p>
+         * <ul>
+         * <li>All security group IDs must be unique.</li>
+         * <li>The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, add the IDs of the current security groups to the list.</li>
+         * <li>You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.</li>
+         * <li>The security groups and the instance must belong to the same VPC.</li>
+         * <li>The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section in the &quot;Limits and quotas&quot; topic.</li>
+         * <li>New security groups become valid for the instance after a short delay.</li>
+         * </ul>
          * 
-         * *   All security group IDs must be unique.
-         * *   The instance is moved from the current security groups to the replacement security groups. If you want the instance to remain in the current security groups, add the IDs of the current security groups to the list.
-         * *   You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.
-         * *   The security groups and the instance must belong to the same VPC.
-         * *   The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section in the "Limits and quotas" topic.
-         * *   New security groups become valid for the instance after a short delay.
+         * <strong>example:</strong>
+         * <p>sg-bp15ed6xe1yxeycg7o****</p>
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -530,10 +568,11 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The user data of the instance. The user data must be encoded in Base64.
-         * <p>
+         * <p>The user data of the instance. The user data must be encoded in Base64.</p>
+         * <p>The maximum size of the raw data before encoding is 32 KB. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then, you can decode and decrypt the information in the same way within the instance.</p>
          * 
-         * The maximum size of the raw data before encoding is 32 KB. We recommend that you do not pass in confidential information such as passwords and private keys in plaintext. If you must pass in confidential information, we recommend that you encrypt and Base64-encode the information before you pass it in. Then, you can decode and decrypt the information in the same way within the instance.
+         * <strong>example:</strong>
+         * <p>ZWNobyBoZWxsbyBlY3Mh</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -548,6 +587,12 @@ public class ModifyInstanceAttributeRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceAttributeRequest</p>
+     */
     public static class CpuOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TopologyType")
         private String topologyType;
@@ -575,19 +620,23 @@ public class ModifyInstanceAttributeRequest extends Request {
             private String topologyType; 
 
             /**
-             * The CPU topology type of the instance. Valid values:
-             * <p>
+             * <p>The CPU topology type of the instance. Valid values:</p>
+             * <ul>
+             * <li><code>ContinuousCoreToHTMapping</code>: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.</li>
+             * <li><code>DiscreteCoreToHTMapping</code>: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.</li>
+             * </ul>
+             * <p>By default, this parameter is left empty.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>This parameter is supported only by specific instance families. For information about the supported instance families, see <a href="https://help.aliyun.com/document_detail/2636059.html">View and modify CPU topologies</a>.</p>
+             * </li>
+             * <li><p>Before you specify this parameter, make sure that the instance is in the Stopped (<code>Stopped</code>) state.</p>
+             * </li>
+             * </ul>
              * 
-             * *   `ContinuousCoreToHTMapping`: The Hyper-Threading (HT) technology allows continuous threads to run on the same core in the CPU topology of the instance.
-             * *   `DiscreteCoreToHTMapping`: The HT technology allows discrete threads to run on the same core in the CPU topology of the instance.
-             * 
-             * By default, this parameter is left empty.
-             * 
-             * > 
-             * 
-             * *   This parameter is supported only by specific instance families. For information about the supported instance families, see [View and modify CPU topologies](~~2636059~~).
-             * 
-             * *   Before you specify this parameter, make sure that the instance is in the Stopped (`Stopped`) state.
+             * <strong>example:</strong>
+             * <p>DiscreteCoreToHTMapping</p>
              */
             public Builder topologyType(String topologyType) {
                 this.topologyType = topologyType;
@@ -601,6 +650,12 @@ public class ModifyInstanceAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyInstanceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceAttributeRequest</p>
+     */
     public static class PrivateDnsNameOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableInstanceIdDnsAAAARecord")
         private Boolean enableInstanceIdDnsAAAARecord;
@@ -676,7 +731,12 @@ public class ModifyInstanceAttributeRequest extends Request {
             private String hostnameType; 
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
                 this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
@@ -684,7 +744,12 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
                 this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
@@ -692,7 +757,12 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableIpDnsARecord(Boolean enableIpDnsARecord) {
                 this.enableIpDnsARecord = enableIpDnsARecord;
@@ -700,7 +770,12 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
                 this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
@@ -708,7 +783,12 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder hostnameType(String hostnameType) {
                 this.hostnameType = hostnameType;
@@ -722,6 +802,12 @@ public class ModifyInstanceAttributeRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ModifyInstanceAttributeRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceAttributeRequest</p>
+     */
     public static class RemoteConnectionOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
@@ -761,7 +847,12 @@ public class ModifyInstanceAttributeRequest extends Request {
             private String type; 
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>hide</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -769,7 +860,12 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * >  This parameter is in invitational preview and is not publicly available.
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>hide</p>
              */
             public Builder type(String type) {
                 this.type = type;

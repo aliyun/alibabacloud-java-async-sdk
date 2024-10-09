@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLaunchTemplateVersionsRequest} extends {@link RequestModel}
  *
  * <p>DescribeLaunchTemplateVersionsRequest</p>
@@ -259,7 +260,10 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the default version.
+         * <p>Specifies whether to query the default version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder defaultVersion(Boolean defaultVersion) {
             this.putQueryParameter("DefaultVersion", defaultVersion);
@@ -268,13 +272,15 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the configurations of the launch template. Valid values:
-         * <p>
+         * <p>Specifies whether to query the configurations of the launch template. Valid values:</p>
+         * <ul>
+         * <li>true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</li>
+         * <li>false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
-         * *   true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.
-         * *   false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.
-         * 
-         * Default value: true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder detailFlag(Boolean detailFlag) {
             this.putQueryParameter("DetailFlag", detailFlag);
@@ -283,10 +289,11 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The ID of the launch template.
-         * <p>
+         * <p>The ID of the launch template.</p>
+         * <p>You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
          * 
-         * You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.
+         * <strong>example:</strong>
+         * <p>lt-bp168lnahrdwl39p****</p>
          */
         public Builder launchTemplateId(String launchTemplateId) {
             this.putQueryParameter("LaunchTemplateId", launchTemplateId);
@@ -295,7 +302,10 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The name of the launch template.
+         * <p>The name of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testLaunchTemplateName</p>
          */
         public Builder launchTemplateName(String launchTemplateName) {
             this.putQueryParameter("LaunchTemplateName", launchTemplateName);
@@ -304,7 +314,10 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * Version N of the launch template.
+         * <p>Version N of the launch template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder launchTemplateVersion(java.util.List < Long > launchTemplateVersion) {
             this.putQueryParameter("LaunchTemplateVersion", launchTemplateVersion);
@@ -313,7 +326,10 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The maximum version number in the version range to query.
+         * <p>The maximum version number in the version range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxVersion(Long maxVersion) {
             this.putQueryParameter("MaxVersion", maxVersion);
@@ -322,7 +338,10 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The minimum version number in the version range to query.
+         * <p>The minimum version number in the version range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minVersion(Long minVersion) {
             this.putQueryParameter("MinVersion", minVersion);
@@ -349,12 +368,12 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
+         * <p>The number of the page to return.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -363,10 +382,11 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -375,10 +395,12 @@ public class DescribeLaunchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * The region ID of the launch template.
-         * <p>
+         * <p>The region ID of the launch template.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

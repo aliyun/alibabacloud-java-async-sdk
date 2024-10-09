@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySnapshotGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifySnapshotGroupRequest</p>
@@ -153,7 +154,10 @@ public class ModifySnapshotGroupRequest extends Request {
         } 
 
         /**
-         * The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. It can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). It must start with a letter or a digit and cannot start with `http://` or `https://`.
+         * <p>The new name of the snapshot-consistent group. The name must be 2 to 128 characters in length. It can contain letters, digits, periods (.), underscores (_), hyphens (-), and colons (:). It must start with a letter or a digit and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is new description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -162,7 +166,10 @@ public class ModifySnapshotGroupRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot-consistent group. You can call the [DescribeSnapshotGroups](~~210940~~) operation to query the IDs of one or more snapshot-consistent groups.
+         * <p>The ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/210940.html">DescribeSnapshotGroups</a> operation to query the IDs of one or more snapshot-consistent groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName02</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -189,7 +196,11 @@ public class ModifySnapshotGroupRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifySnapshotGroup**.
+         * <p>The operation that you want to perform. Set the value to <strong>ModifySnapshotGroup</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +227,11 @@ public class ModifySnapshotGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the snapshot-consistent group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the snapshot-consistent group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssg-j6ciyh3k52qp7ovm****</p>
          */
         public Builder snapshotGroupId(String snapshotGroupId) {
             this.putQueryParameter("SnapshotGroupId", snapshotGroupId);

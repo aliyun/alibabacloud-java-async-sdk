@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PurchaseStorageCapacityUnitRequest} extends {@link RequestModel}
  *
  * <p>PurchaseStorageCapacityUnitRequest</p>
@@ -252,10 +253,11 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         } 
 
         /**
-         * The number of SCUs that you want to purchase. Valid values: 1 to 20.
-         * <p>
+         * <p>The number of SCUs that you want to purchase. Valid values: 1 to 20.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -264,7 +266,11 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5210, 10240, 20480, and 52100.
+         * <p>The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5210, 10240, 20480, and 52100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder capacity(Integer capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -273,7 +279,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -282,7 +291,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The description of the SCU. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the SCU. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScuPurchaseDemo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -291,7 +303,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The source of the request. The value is automatically set to OpenAPI and does not need to be changed. Default value: OpenAPI.
+         * <p>The source of the request. The value is automatically set to OpenAPI and does not need to be changed. Default value: OpenAPI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
          */
         public Builder fromApp(String fromApp) {
             this.putQueryParameter("FromApp", fromApp);
@@ -300,7 +315,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScuPurchaseDemo</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -327,13 +345,15 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The validity period of the SCU. Valid values:
-         * <p>
+         * <p>The validity period of the SCU. Valid values:</p>
+         * <ul>
+         * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, and 6.</li>
+         * <li>Valid values when PeriodUnit is set to Year: 1, 3, and 5.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
          * 
-         * *   Valid values when PeriodUnit is set to Month: 1, 2, 3, and 6.
-         * *   Valid values when PeriodUnit is set to Year: 1, 3, and 5.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -342,13 +362,15 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The unit of the validity period of the SCU. Valid values:
-         * <p>
+         * <p>The unit of the validity period of the SCU. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>Default value: Month.</p>
          * 
-         * *   Month
-         * *   Year
-         * 
-         * Default value: Month.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -357,7 +379,11 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to purchase the SCU. The purchased SCU can offset the bills of pay-as-you-go disks that reside in the specified region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region in which to purchase the SCU. The purchased SCU can offset the bills of pay-as-you-go disks that reside in the specified region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -384,10 +410,11 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The time at which the SCU takes effect. The time can be up to six months from the creation time of the SCU. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.
-         * <p>
+         * <p>The time at which the SCU takes effect. The time can be up to six months from the creation time of the SCU. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.</p>
+         * <p>This parameter is left empty by default, which indicates that the SCU takes effect immediately after it is created.</p>
          * 
-         * This parameter is left empty by default, which indicates that the SCU takes effect immediately after it is created.
+         * <strong>example:</strong>
+         * <p>2020-09-09T02:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -396,7 +423,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -411,6 +438,12 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link PurchaseStorageCapacityUnitRequest} extends {@link TeaModel}
+     *
+     * <p>PurchaseStorageCapacityUnitRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -450,7 +483,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the SCU. N is the identifier of the tag key that you specify. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <p>The key of tag N to add to the SCU. N is the identifier of the tag key that you specify. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -458,7 +494,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
             }
 
             /**
-             * The value of tag N. N is the identifier of the tag value that you specify and corresponds to the N in `Tag.N.Key`. Valid values: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
+             * <p>The value of tag N. N is the identifier of the tag value that you specify and corresponds to the N in <code>Tag.N.Key</code>. Valid values: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

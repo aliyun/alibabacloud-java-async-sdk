@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoProvisioningGroupsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the auto provisioning groups.
+         * <p>Details about the auto provisioning groups.</p>
          */
         public Builder autoProvisioningGroups(AutoProvisioningGroups autoProvisioningGroups) {
             this.autoProvisioningGroups = autoProvisioningGroups;
@@ -93,7 +94,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page returned.
+         * <p>The number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>745CEC9F-0DD7-4451-9FE7-8B752F39****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of queried auto provisioning groups.
+         * <p>The number of queried auto provisioning groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class LaunchTemplateConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -205,7 +224,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private Float weightedCapacity; 
 
             /**
-             * The instance type that is specified in the extended configuration.
+             * <p>The instance type that is specified in the extended configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.g5.large</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -213,7 +235,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum price of the instance type specified in the extended configuration.
+             * <p>The maximum price of the instance type specified in the extended configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxPrice(Float maxPrice) {
                 this.maxPrice = maxPrice;
@@ -221,7 +246,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the instance type specified in the extended configuration. A value of 0 indicates the highest priority.
+             * <p>The priority of the instance type specified in the extended configuration. A value of 0 indicates the highest priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Float priority) {
                 this.priority = priority;
@@ -229,7 +257,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch specified in the extended configuration.
+             * <p>The ID of the vSwitch specified in the extended configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-sn5bsitu4lfzgc5o7****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -237,7 +268,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the instance type specified in the extended configuration.
+             * <p>The weight of the instance type specified in the extended configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder weightedCapacity(Float weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;
@@ -251,6 +285,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class LaunchTemplateConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LaunchTemplateConfig")
         private java.util.List < LaunchTemplateConfig> launchTemplateConfig;
@@ -292,6 +332,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class PayAsYouGoOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
@@ -319,13 +365,17 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String allocationStrategy; 
 
             /**
-             * The policy for creating pay-as-you-go instances. Valid values:
-             * <p>
+             * <p>The policy for creating pay-as-you-go instances. Valid values:</p>
+             * <ul>
+             * <li>lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.</li>
+             * <li>prioritized: priority-based policy. This policy indicates that instances are created based on the priority specified by the LaunchTemplateConfig.N.Priority parameter.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.</p>
+             * </blockquote>
              * 
-             * *   lowest-price: cost optimization policy. This policy indicates that lowest-cost instance types are used to create instances.
-             * *   prioritized: priority-based policy. This policy indicates that instances are created based on the priority specified by the LaunchTemplateConfig.N.Priority parameter.
-             * 
-             * >  The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.
+             * <strong>example:</strong>
+             * <p>prioritized</p>
              */
             public Builder allocationStrategy(String allocationStrategy) {
                 this.allocationStrategy = allocationStrategy;
@@ -339,6 +389,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class SpotOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationStrategy")
         private String allocationStrategy;
@@ -390,11 +446,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private Integer instancePoolsToUseCount; 
 
             /**
-             * The policy for creating preemptible instances. Valid values:
-             * <p>
+             * <p>The policy for creating preemptible instances. Valid values:</p>
+             * <ul>
+             * <li>lowest-price: cost optimization policy. This policy indicates that the lowest-priced instance type is used to create instances.</li>
+             * <li>diversified: balanced distribution policy. This policy indicates that instances are created evenly across multiple zones specified in the extended configuration.</li>
+             * </ul>
              * 
-             * *   lowest-price: cost optimization policy. This policy indicates that the lowest-priced instance type is used to create instances.
-             * *   diversified: balanced distribution policy. This policy indicates that instances are created evenly across multiple zones specified in the extended configuration.
+             * <strong>example:</strong>
+             * <p>diversified</p>
              */
             public Builder allocationStrategy(String allocationStrategy) {
                 this.allocationStrategy = allocationStrategy;
@@ -402,11 +461,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The action to be performed after the excess preemptible instances are stopped. Valid values:
-             * <p>
+             * <p>The action to be performed after the excess preemptible instances are stopped. Valid values:</p>
+             * <ul>
+             * <li>stop: retains the excess preemptible instances in the stopped state.</li>
+             * <li>terminate: releases the excess preemptible instances.</li>
+             * </ul>
              * 
-             * *   stop: retains the excess preemptible instances in the stopped state.
-             * *   terminate: releases the excess preemptible instances.
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder instanceInterruptionBehavior(String instanceInterruptionBehavior) {
                 this.instanceInterruptionBehavior = instanceInterruptionBehavior;
@@ -414,10 +476,13 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that the auto provisioning group creates by selecting the instance type of the lowest price.
-             * <p>
+             * <p>The number of instances that the auto provisioning group creates by selecting the instance type of the lowest price.</p>
+             * <blockquote>
+             * <p> This parameter is set when the auto provisioning group is created, and cannot be modified.</p>
+             * </blockquote>
              * 
-             * >  This parameter is set when the auto provisioning group is created, and cannot be modified.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instancePoolsToUseCount(Integer instancePoolsToUseCount) {
                 this.instancePoolsToUseCount = instancePoolsToUseCount;
@@ -431,6 +496,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -470,10 +541,11 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of tag N that is added to the auto provisioning group.
-             * <p>
+             * <p>The key of tag N that is added to the auto provisioning group.</p>
+             * <p>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * 
-             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -481,10 +553,11 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N that is added to the auto provisioning group.
-             * <p>
+             * <p>The value of tag N that is added to the auto provisioning group.</p>
+             * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</p>
              * 
-             * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -498,6 +571,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -539,6 +618,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class TargetCapacitySpecification extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultTargetCapacityType")
         private String defaultTargetCapacityType;
@@ -602,11 +687,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private Float totalTargetCapacity; 
 
             /**
-             * The type of supplemental instances. When the sum of the `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` values is less than the `TotalTargetCapacity` value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:
-             * <p>
+             * <p>The type of supplemental instances. When the sum of the <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> values is less than the <code>TotalTargetCapacity</code> value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:</p>
+             * <ul>
+             * <li>PayAsYouGo: pay-as-you-go instances.</li>
+             * <li>Spot: preemptible instances.</li>
+             * </ul>
              * 
-             * *   PayAsYouGo: pay-as-you-go instances.
-             * *   Spot: preemptible instances.
+             * <strong>example:</strong>
+             * <p>Spot</p>
              */
             public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
                 this.defaultTargetCapacityType = defaultTargetCapacityType;
@@ -614,7 +702,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The target capacity of pay-as-you-go instances that the auto provisioning group provisions.
+             * <p>The target capacity of pay-as-you-go instances that the auto provisioning group provisions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder payAsYouGoTargetCapacity(Float payAsYouGoTargetCapacity) {
                 this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
@@ -622,7 +713,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The target capacity of preemptible instances that the auto provisioning group provisions.
+             * <p>The target capacity of preemptible instances that the auto provisioning group provisions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder spotTargetCapacity(Float spotTargetCapacity) {
                 this.spotTargetCapacity = spotTargetCapacity;
@@ -630,12 +724,15 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The target capacity of the auto provisioning group. The capacity consists of the following parts:
-             * <p>
+             * <p>The target capacity of the auto provisioning group. The capacity consists of the following parts:</p>
+             * <ul>
+             * <li>PayAsYouGoTargetCapacity</li>
+             * <li>SpotTargetCapacity</li>
+             * <li>The supplemental capacity besides instance capacities specified by PayAsYouGoTargetCapacity and SpotTargetCapacity.</li>
+             * </ul>
              * 
-             * *   PayAsYouGoTargetCapacity
-             * *   SpotTargetCapacity
-             * *   The supplemental capacity besides instance capacities specified by PayAsYouGoTargetCapacity and SpotTargetCapacity.
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder totalTargetCapacity(Float totalTargetCapacity) {
                 this.totalTargetCapacity = totalTargetCapacity;
@@ -649,6 +746,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class AutoProvisioningGroup extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroupId")
         private String autoProvisioningGroupId;
@@ -916,7 +1019,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             private String validUntil; 
 
             /**
-             * The ID of the auto provisioning group.
+             * <p>The ID of the auto provisioning group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apg-sn54avj8htgvtyh8****</p>
              */
             public Builder autoProvisioningGroupId(String autoProvisioningGroupId) {
                 this.autoProvisioningGroupId = autoProvisioningGroupId;
@@ -924,7 +1030,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the auto provisioning group.
+             * <p>The name of the auto provisioning group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsDocTest</p>
              */
             public Builder autoProvisioningGroupName(String autoProvisioningGroupName) {
                 this.autoProvisioningGroupName = autoProvisioningGroupName;
@@ -932,11 +1041,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The delivery type of the auto provisioning group. Valid values:
-             * <p>
+             * <p>The delivery type of the auto provisioning group. Valid values:</p>
+             * <ul>
+             * <li>request: one-time delivery. When the auto provisioning group is started, it delivers instances only once. If the instances fail to be delivered, the auto provisioning group does not retry the delivery.</li>
+             * <li>maintain: continuous delivery. When the auto provisioning group is started, it attempts to deliver instances that meet the target capacity and monitors the real-time capacity. If the target capacity of the auto provisioning group is not reached, the auto provisioning group continues to create instances until the target capacity is reached.</li>
+             * </ul>
              * 
-             * *   request: one-time delivery. When the auto provisioning group is started, it delivers instances only once. If the instances fail to be delivered, the auto provisioning group does not retry the delivery.
-             * *   maintain: continuous delivery. When the auto provisioning group is started, it attempts to deliver instances that meet the target capacity and monitors the real-time capacity. If the target capacity of the auto provisioning group is not reached, the auto provisioning group continues to create instances until the target capacity is reached.
+             * <strong>example:</strong>
+             * <p>maintain</p>
              */
             public Builder autoProvisioningGroupType(String autoProvisioningGroupType) {
                 this.autoProvisioningGroupType = autoProvisioningGroupType;
@@ -944,7 +1056,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the auto provisioning group was created.
+             * <p>The time when the auto provisioning group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-01T15:10:20Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -952,11 +1067,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to release the scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:
-             * <p>
+             * <p>Indicates whether to release the scaled-in instances when the real-time capacity of the auto provisioning group exceeds the target capacity and the group is triggered to scale in. Valid values:</p>
+             * <ul>
+             * <li>termination: releases the scaled-in instances.</li>
+             * <li>no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.</li>
+             * </ul>
              * 
-             * *   termination: releases the scaled-in instances.
-             * *   no-termination: only removes the scaled-in instances from the auto provisioning group but does not release the instances.
+             * <strong>example:</strong>
+             * <p>termination</p>
              */
             public Builder excessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
                 this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
@@ -964,7 +1082,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the extended configurations.
+             * <p>Details about the extended configurations.</p>
              */
             public Builder launchTemplateConfigs(LaunchTemplateConfigs launchTemplateConfigs) {
                 this.launchTemplateConfigs = launchTemplateConfigs;
@@ -972,7 +1090,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the launch template associated with the auto provisioning group.
+             * <p>The ID of the launch template associated with the auto provisioning group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lt-bp1fgzds4bdogu03****</p>
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -980,7 +1101,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the launch template associated with the auto provisioning group.
+             * <p>The version of the launch template associated with the auto provisioning group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder launchTemplateVersion(String launchTemplateVersion) {
                 this.launchTemplateVersion = launchTemplateVersion;
@@ -988,12 +1112,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum price of preemptible instances in the auto provisioning group.
-             * <p>
+             * <p>The maximum price of preemptible instances in the auto provisioning group.</p>
+             * <blockquote>
+             * <p> When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used.</p>
+             * </blockquote>
+             * <p>The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.</p>
              * 
-             * >  When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used.
-             * 
-             * The LaunchTemplateConfig.N.Priority parameter is set when the auto provisioning group is created, and cannot be modified.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxSpotPrice(Float maxSpotPrice) {
                 this.maxSpotPrice = maxSpotPrice;
@@ -1001,7 +1127,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The policies related to pay-as-you-go instances.
+             * <p>The policies related to pay-as-you-go instances.</p>
              */
             public Builder payAsYouGoOptions(PayAsYouGoOptions payAsYouGoOptions) {
                 this.payAsYouGoOptions = payAsYouGoOptions;
@@ -1009,7 +1135,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the auto provisioning group.
+             * <p>The region ID of the auto provisioning group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1017,7 +1146,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the auto provisioning group belongs.
+             * <p>The ID of the resource group to which the auto provisioning group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1025,7 +1157,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The policy related to preemptible instances.
+             * <p>The policy related to preemptible instances.</p>
              */
             public Builder spotOptions(SpotOptions spotOptions) {
                 this.spotOptions = spotOptions;
@@ -1033,13 +1165,16 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The overall status of instance scheduling in the auto provisioning group. Valid values:
-             * <p>
+             * <p>The overall status of instance scheduling in the auto provisioning group. Valid values:</p>
+             * <ul>
+             * <li>fulfilled: Scheduling was complete and the instances were delivered.</li>
+             * <li>pending-fulfillment: The instances were being created.</li>
+             * <li>pending-termination: The instances were being removed.</li>
+             * <li>error: An exception occurred during scheduling and the instances were not delivered.</li>
+             * </ul>
              * 
-             * *   fulfilled: Scheduling was complete and the instances were delivered.
-             * *   pending-fulfillment: The instances were being created.
-             * *   pending-termination: The instances were being removed.
-             * *   error: An exception occurred during scheduling and the instances were not delivered.
+             * <strong>example:</strong>
+             * <p>fulfilled</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1047,14 +1182,17 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the auto provisioning group. Valid values:
-             * <p>
+             * <p>The status of the auto provisioning group. Valid values:</p>
+             * <ul>
+             * <li>submitted: The auto provisioning group was created but did not execute scheduling tasks.</li>
+             * <li>active: The auto provisioning group was executing scheduling tasks.</li>
+             * <li>deleted: The auto provisioning group was deleted.</li>
+             * <li>delete-running: The auto provisioning group was being deleted.</li>
+             * <li>modifying: The auto provisioning group was being modified.</li>
+             * </ul>
              * 
-             * *   submitted: The auto provisioning group was created but did not execute scheduling tasks.
-             * *   active: The auto provisioning group was executing scheduling tasks.
-             * *   deleted: The auto provisioning group was deleted.
-             * *   delete-running: The auto provisioning group was being deleted.
-             * *   modifying: The auto provisioning group was being modified.
+             * <strong>example:</strong>
+             * <p>submitted</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1062,7 +1200,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the auto provisioning group.
+             * <p>The tags that are added to the auto provisioning group.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1070,7 +1208,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The settings of the target capacity of the auto provisioning group.
+             * <p>The settings of the target capacity of the auto provisioning group.</p>
              */
             public Builder targetCapacitySpecification(TargetCapacitySpecification targetCapacitySpecification) {
                 this.targetCapacitySpecification = targetCapacitySpecification;
@@ -1078,11 +1216,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:
-             * <p>
+             * <p>Indicates whether to release instances in the auto provisioning group when the auto provisioning group is deleted. Valid values:</p>
+             * <ul>
+             * <li>true: releases the instances.</li>
+             * <li>false: only removes the instances from the auto provisioning group but does not release the instances.</li>
+             * </ul>
              * 
-             * *   true: releases the instances.
-             * *   false: only removes the instances from the auto provisioning group but does not release the instances.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder terminateInstances(Boolean terminateInstances) {
                 this.terminateInstances = terminateInstances;
@@ -1090,11 +1231,14 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to release instances in the auto provisioning group when the group expires. Valid values:
-             * <p>
+             * <p>Indicates whether to release instances in the auto provisioning group when the group expires. Valid values:</p>
+             * <ul>
+             * <li>true: releases the instances.</li>
+             * <li>false: only removes the instances from the auto provisioning group but does not release the instances.</li>
+             * </ul>
              * 
-             * *   true: releases the instances.
-             * *   false: only removes the instances from the auto provisioning group but does not release the instances.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder terminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
                 this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
@@ -1102,7 +1246,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the auto provisioning group is started. The provisioning group is effective until the point in time specified by `ValidUntil`.
+             * <p>The time at which the auto provisioning group is started. The provisioning group is effective until the point in time specified by <code>ValidUntil</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-04-01T15:10:20Z</p>
              */
             public Builder validFrom(String validFrom) {
                 this.validFrom = validFrom;
@@ -1110,7 +1257,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `ValidFrom` parameter is the validity period of the auto provisioning group.
+             * <p>The time at which the auto provisioning group expires. The period of time between this point in time and the point in time specified by the <code>ValidFrom</code> parameter is the validity period of the auto provisioning group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-01T15:10:20Z</p>
              */
             public Builder validUntil(String validUntil) {
                 this.validUntil = validUntil;
@@ -1124,6 +1274,12 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutoProvisioningGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutoProvisioningGroupsResponseBody</p>
+     */
     public static class AutoProvisioningGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoProvisioningGroup")
         private java.util.List < AutoProvisioningGroup> autoProvisioningGroup;

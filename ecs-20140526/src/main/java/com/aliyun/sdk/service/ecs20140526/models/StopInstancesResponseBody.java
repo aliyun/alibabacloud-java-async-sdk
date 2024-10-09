@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>StopInstancesResponseBody</p>
@@ -49,7 +50,7 @@ public class StopInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance-specific responses, which contain the status of each instance before and after the operation was called and the results of the operation.
+         * <p>The instance-specific responses, which contain the status of each instance before and after the operation was called and the results of the operation.</p>
          */
         public Builder instanceResponses(InstanceResponses instanceResponses) {
             this.instanceResponses = instanceResponses;
@@ -57,7 +58,10 @@ public class StopInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C488B66-B819-4D14-8711-C4EAAA13AC01</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class StopInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StopInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>StopInstancesResponseBody</p>
+     */
     public static class InstanceResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -145,7 +155,10 @@ public class StopInstancesResponseBody extends TeaModel {
             private String previousStatus; 
 
             /**
-             * The error code returned for the instance. A return value of 200 indicates that the operation was successful. For more information, see the "Error codes" section of this topic.
+             * <p>The error code returned for the instance. A return value of 200 indicates that the operation was successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -153,7 +166,10 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The current status of the instance.
+             * <p>The current status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stopping</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -161,7 +177,10 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -169,7 +188,10 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned for the instance. A return value of success indicates that the operation was successful. For more information, see the "Error codes" section of this topic.
+             * <p>The error message returned for the instance. A return value of success indicates that the operation was successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -177,7 +199,10 @@ public class StopInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance before the operation was called.
+             * <p>The status of the instance before the operation was called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;
@@ -191,6 +216,12 @@ public class StopInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link StopInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>StopInstancesResponseBody</p>
+     */
     public static class InstanceResponses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceResponse")
         private java.util.List < InstanceResponse> instanceResponse;

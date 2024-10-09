@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTagsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTagsRequest</p>
@@ -204,7 +205,12 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * > This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.
+         * <blockquote>
+         * <p>This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -222,12 +228,12 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Page starts from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Page starts from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -236,12 +242,12 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -250,7 +256,11 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -259,7 +269,10 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The ID of the resource to which the tags are added. If the resource is an instance, the value of this parameter is the ID of the instance.
+         * <p>The ID of the resource to which the tags are added. If the resource is an instance, the value of this parameter is the ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-946ntx4wr****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -286,23 +299,25 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The type of the resource to which the tags are added. Valid values:
-         * <p>
+         * <p>The type of the resource to which the tags are added. Valid values:</p>
+         * <ul>
+         * <li>instance: Elastic Compute Service (ECS) instance.</li>
+         * <li>disk: disk.</li>
+         * <li>snapshot: snapshot.</li>
+         * <li>image: image.</li>
+         * <li>securitygroup: security group.</li>
+         * <li>volume: storage volume.</li>
+         * <li>eni: elastic network interface (ENI).</li>
+         * <li>ddh: dedicated host.</li>
+         * <li>keypair: SSH key pair.</li>
+         * <li>launchtemplate: launch template.</li>
+         * <li>reservedinstance: reserved instance.</li>
+         * <li>snapshotpolicy: automatic snapshot policy.</li>
+         * </ul>
+         * <p>All values must be in lowercase letters.</p>
          * 
-         * *   instance: Elastic Compute Service (ECS) instance.
-         * *   disk: disk.
-         * *   snapshot: snapshot.
-         * *   image: image.
-         * *   securitygroup: security group.
-         * *   volume: storage volume.
-         * *   eni: elastic network interface (ENI).
-         * *   ddh: dedicated host.
-         * *   keypair: SSH key pair.
-         * *   launchtemplate: launch template.
-         * *   reservedinstance: reserved instance.
-         * *   snapshotpolicy: automatic snapshot policy.
-         * 
-         * All values must be in lowercase letters.
+         * <strong>example:</strong>
+         * <p>snapshot</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -311,7 +326,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -326,6 +341,12 @@ public class DescribeTagsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTagsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeTagsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -365,7 +386,10 @@ public class DescribeTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。)
+             * <p>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -373,7 +397,10 @@ public class DescribeTagsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain [http:// or https://.](http://https://。)
+             * <p>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <a href="http://https://%E3%80%82">http:// or https://.</a></p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

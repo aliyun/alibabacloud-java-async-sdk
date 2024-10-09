@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEipAddressesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEipAddressesResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEipAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipAddressesResponseBody</p>
+     */
     public static class LockReason extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
@@ -171,6 +178,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEipAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipAddressesResponseBody</p>
+     */
     public static class OperationLocks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LockReason")
         private java.util.List < LockReason> lockReason;
@@ -212,6 +225,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEipAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipAddressesResponseBody</p>
+     */
     public static class EipAddress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
@@ -493,6 +512,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEipAddressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEipAddressesResponseBody</p>
+     */
     public static class EipAddresses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EipAddress")
         private java.util.List < EipAddress> eipAddress;

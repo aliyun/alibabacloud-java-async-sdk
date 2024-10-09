@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachInstanceRamRoleResponseBody} extends {@link TeaModel}
  *
  * <p>AttachInstanceRamRoleResponseBody</p>
@@ -85,7 +86,7 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the results of attaching the instance RAM role.
+         * <p>Details about the results of attaching the instance RAM role.</p>
          */
         public Builder attachInstanceRamRoleResults(AttachInstanceRamRoleResults attachInstanceRamRoleResults) {
             this.attachInstanceRamRoleResults = attachInstanceRamRoleResults;
@@ -93,7 +94,10 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The number of instances to which the instance RAM role failed to be attached.
+         * <p>The number of instances to which the instance RAM role failed to be attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failCount(Integer failCount) {
             this.failCount = failCount;
@@ -101,7 +105,10 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the instance RAM role.
+         * <p>The name of the instance RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRamRoleName</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.ramRoleName = ramRoleName;
@@ -109,7 +116,10 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9553E4C-6C3A-4D66-AE79-9835AF705639</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances to which you attempted to attach the instance RAM role.
+         * <p>The total number of instances to which you attempted to attach the instance RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AttachInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachInstanceRamRoleResponseBody</p>
+     */
     public static class AttachInstanceRamRoleResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -193,7 +212,10 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Indicates whether the instance RAM role was attached. If the instance RAM role was attached, 200 is returned. If the instance RAM role failed to be attached, any other value is returned. For more information, see the "Error codes" section.
+             * <p>Indicates whether the instance RAM role was attached. If the instance RAM role was attached, 200 is returned. If the instance RAM role failed to be attached, any other value is returned. For more information, see the &quot;Error codes&quot; section.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -201,7 +223,10 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp10ws62o04ubhvi****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -209,7 +234,10 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance RAM role was attached. If the instance RAM role was attached, success is returned. If the instance RAM role failed to be attached, any other value is returned. For more information, see the "Error codes" section.
+             * <p>Indicates whether the instance RAM role was attached. If the instance RAM role was attached, success is returned. If the instance RAM role failed to be attached, any other value is returned. For more information, see the &quot;Error codes&quot; section.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -217,7 +245,10 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance RAM role was attached.
+             * <p>Indicates whether the instance RAM role was attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -231,6 +262,12 @@ public class AttachInstanceRamRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AttachInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachInstanceRamRoleResponseBody</p>
+     */
     public static class AttachInstanceRamRoleResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachInstanceRamRoleResult")
         private java.util.List < AttachInstanceRamRoleResult> attachInstanceRamRoleResult;

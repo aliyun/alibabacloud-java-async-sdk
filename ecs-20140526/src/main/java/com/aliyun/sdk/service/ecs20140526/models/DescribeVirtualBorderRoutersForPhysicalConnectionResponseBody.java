@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody</p>
+     */
     public static class VirtualBorderRouterForPhysicalConnectionType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivationTime")
         private String activationTime;
@@ -311,6 +318,12 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody exten
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualBorderRoutersForPhysicalConnectionResponseBody</p>
+     */
     public static class VirtualBorderRouterForPhysicalConnectionSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VirtualBorderRouterForPhysicalConnectionType")
         private java.util.List < VirtualBorderRouterForPhysicalConnectionType> virtualBorderRouterForPhysicalConnectionType;

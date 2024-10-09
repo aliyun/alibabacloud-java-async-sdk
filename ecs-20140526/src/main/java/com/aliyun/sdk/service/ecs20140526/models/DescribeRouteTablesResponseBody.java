@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRouteTablesResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class NextHop extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Integer enabled;
@@ -231,6 +238,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class NextHops extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NextHop")
         private java.util.List < NextHop> nextHop;
@@ -272,6 +285,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class RouteEntry extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
@@ -433,6 +452,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class RouteEntrys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteEntry")
         private java.util.List < RouteEntry> routeEntry;
@@ -474,6 +499,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class RouteTable extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -615,6 +646,12 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRouteTablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRouteTablesResponseBody</p>
+     */
     public static class RouteTables extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteTable")
         private java.util.List < RouteTable> routeTable;

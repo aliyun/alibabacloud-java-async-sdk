@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClassicLinkInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeClassicLinkInstancesRequest</p>
@@ -175,7 +176,10 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID. You can specify a maximum of 100 instance IDs in a single request. Separate the instance IDs with commas (,).
+         * <p>The instance ID. You can specify a maximum of 100 instance IDs in a single request. Separate the instance IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1a5zr3u7nq9cxh****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -193,10 +197,11 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -205,10 +210,11 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -217,7 +223,11 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -244,7 +254,10 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).
+         * <p>The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see <a href="https://help.aliyun.com/document_detail/65413.html">Establish a ClassicLink connection</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1vwnn14rqpyiczj****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

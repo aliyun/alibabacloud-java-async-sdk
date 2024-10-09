@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUserBusinessBehaviorResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyUserBusinessBehaviorResponseBody</p>

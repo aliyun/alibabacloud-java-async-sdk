@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewInstanceRequest} extends {@link RequestModel}
  *
  * <p>RenewInstanceRequest</p>
@@ -189,7 +190,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -198,12 +202,14 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The synchronized expiration date. Set the value to a synchronized expiration date that you specified. Otherwise, the call fails. If you configure this parameter, your instance will be renewed to the specified synchronized expiration date. Valid values: 1 to 28.
-         * <p>
+         * <p>The synchronized expiration date. Set the value to a synchronized expiration date that you specified. Otherwise, the call fails. If you configure this parameter, your instance will be renewed to the specified synchronized expiration date. Valid values: 1 to 28.</p>
+         * <p>For information about how to synchronize the expiration dates of instances, see <a href="https://help.aliyun.com/document_detail/108486.html">Synchronize the expiration dates of subscription instances</a>.</p>
+         * <blockquote>
+         * <p>The renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) and <code>ExpectedRenewDay</code> are mutually exclusive.</p>
+         * </blockquote>
          * 
-         * For information about how to synchronize the expiration dates of instances, see [Synchronize the expiration dates of subscription instances](~~108486~~).
-         * 
-         * > The renewal period-related parameter pair (`Period` and `PeriodUnit`) and `ExpectedRenewDay` are mutually exclusive.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder expectedRenewDay(Integer expectedRenewDay) {
             this.putQueryParameter("ExpectedRenewDay", expectedRenewDay);
@@ -212,7 +218,11 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance that you want to renew.
+         * <p>The ID of the instance that you want to renew.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -239,12 +249,14 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The renewal period of the subscription instance. If `DedicatedHostId` is specified, the value of Period cannot exceed the subscription period of the specified dedicated host.
-         * <p>
+         * <p>The renewal period of the subscription instance. If <code>DedicatedHostId</code> is specified, the value of Period cannot exceed the subscription period of the specified dedicated host.</p>
+         * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
+         * <blockquote>
+         * <p>The renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) and <code>ExpectedRenewDay</code> are mutually exclusive.</p>
+         * </blockquote>
          * 
-         * Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.
-         * 
-         * > The renewal period-related parameter pair (`Period` and `PeriodUnit`) and `ExpectedRenewDay` are mutually exclusive.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -253,12 +265,12 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * The unit of the renewal period. Valid values:
-         * <p>
+         * <p>The unit of the renewal period. Valid values:</p>
+         * <p>Month</p>
+         * <p>Default value: Month.</p>
          * 
-         * Month
-         * 
-         * Default value: Month.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);

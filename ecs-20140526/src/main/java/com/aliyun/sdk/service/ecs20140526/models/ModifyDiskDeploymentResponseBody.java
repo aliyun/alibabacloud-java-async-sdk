@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDiskDeploymentResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDiskDeploymentResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyDiskDeploymentResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D69846D9-F17F-51C0-8AC6-B4B71777****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ModifyDiskDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the disk migration task.
+         * <p>The ID of the disk migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-bp67acfmxazb4p****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

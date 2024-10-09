@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreatePrefixListResponseBody} extends {@link TeaModel}
  *
  * <p>CreatePrefixListResponseBody</p>
@@ -49,7 +50,10 @@ public class CreatePrefixListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the prefix list.
+         * <p>The ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-x1j1k5ykzqlixdcy****</p>
          */
         public Builder prefixListId(String prefixListId) {
             this.prefixListId = prefixListId;
@@ -57,7 +61,10 @@ public class CreatePrefixListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

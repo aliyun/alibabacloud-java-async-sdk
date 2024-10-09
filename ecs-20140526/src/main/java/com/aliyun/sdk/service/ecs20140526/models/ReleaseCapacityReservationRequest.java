@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseCapacityReservationRequest} extends {@link RequestModel}
  *
  * <p>ReleaseCapacityReservationRequest</p>
@@ -170,7 +171,10 @@ public class ReleaseCapacityReservationRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Set the value to false. This indicates that the system directly releases the capacity reservation.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Set the value to false. This indicates that the system directly releases the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -197,7 +201,11 @@ public class ReleaseCapacityReservationRequest extends Request {
         }
 
         /**
-         * The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,6 +238,12 @@ public class ReleaseCapacityReservationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ReleaseCapacityReservationRequest} extends {@link TeaModel}
+     *
+     * <p>ReleaseCapacityReservationRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -258,7 +272,11 @@ public class ReleaseCapacityReservationRequest extends Request {
             private String id; 
 
             /**
-             * The ID of the capacity reservation.
+             * <p>The ID of the capacity reservation.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-bp67acfmxazb4****</p>
              */
             public Builder id(String id) {
                 this.id = id;

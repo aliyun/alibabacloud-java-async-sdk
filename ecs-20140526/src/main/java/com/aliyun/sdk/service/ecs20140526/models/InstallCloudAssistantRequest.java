@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallCloudAssistantRequest} extends {@link RequestModel}
  *
  * <p>InstallCloudAssistantRequest</p>
@@ -148,7 +149,11 @@ public class InstallCloudAssistantRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1iudwa5b1tqa****</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -175,7 +180,11 @@ public class InstallCloudAssistantRequest extends Request {
         }
 
         /**
-         * The IDs of instances. You can specify up to 50 instance IDs in a single request.
+         * <p>The IDs of instances. You can specify up to 50 instance IDs in a single request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

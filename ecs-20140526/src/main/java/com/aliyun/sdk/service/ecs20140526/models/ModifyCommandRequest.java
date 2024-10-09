@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCommandRequest} extends {@link RequestModel}
  *
  * <p>ModifyCommandRequest</p>
@@ -218,7 +219,12 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * >  This parameter is no longer used and does not take effect.
+         * <blockquote>
+         * <p> This parameter is no longer used and does not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -227,7 +233,11 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
+         * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz01272yr52****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -236,7 +246,10 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The command description. The description supports all character sets and can be up to 512 characters in length.
+         * <p>The command description. The description supports all character sets and can be up to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -245,7 +258,10 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The command name. The name supports all character sets and can be up to 128 characters in length.
+         * <p>The command name. The name supports all character sets and can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-CommandName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -272,7 +288,11 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the command. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,7 +319,10 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The maximum timeout period for the command to be run on the instance. Unit: seconds. When a command cannot run within the specified time range, the command times out. Then, the command process is forcibly terminated by canceling the process ID (PID) of the command.
+         * <p>The maximum timeout period for the command to be run on the instance. Unit: seconds. When a command cannot run within the specified time range, the command times out. Then, the command process is forcibly terminated by canceling the process ID (PID) of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -308,7 +331,10 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * The working directory of the command. The value can be up to 200 characters in length.
+         * <p>The working directory of the command. The value can be up to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/</p>
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);

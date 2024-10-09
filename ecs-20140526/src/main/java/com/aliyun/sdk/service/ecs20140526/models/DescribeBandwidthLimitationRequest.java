@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBandwidthLimitationRequest} extends {@link RequestModel}
  *
  * <p>DescribeBandwidthLimitationRequest</p>
@@ -204,13 +205,15 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
-         * <p>
+         * <p>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
-         * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
-         * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -219,7 +222,11 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The instance type. For information about the values, see [Overview of ECS instance families](~~25378~~).
+         * <p>The instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -228,14 +235,16 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * Specifies the operation for which to query the maximum public bandwidth. Valid values:
-         * <p>
+         * <p>Specifies the operation for which to query the maximum public bandwidth. Valid values:</p>
+         * <ul>
+         * <li>Upgrade: upgrades the public bandwidth.</li>
+         * <li>Downgrade: downgrades the public bandwidth.</li>
+         * <li>Create: creates an ECS instance.</li>
+         * </ul>
+         * <p>Default value: Create.</p>
          * 
-         * *   Upgrade: upgrades the public bandwidth.
-         * *   Downgrade: downgrades the public bandwidth.
-         * *   Create: creates an ECS instance.
-         * 
-         * Default value: Create.
+         * <strong>example:</strong>
+         * <p>Upgrade</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -262,7 +271,11 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -271,10 +284,13 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The resource ID.
-         * <p>
+         * <p>The resource ID.</p>
+         * <blockquote>
+         * <p> This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph***</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -301,16 +317,19 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The bidding policy for the pay-as-you-go instance. Valid values:
-         * <p>
+         * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instance is a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
+         * <blockquote>
+         * <p> The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.</p>
+         * </blockquote>
          * 
-         * *   NoSpot: The instance is a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
-         * 
-         * Default value: NoSpot.
-         * 
-         * >  The SpotStrategy parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);

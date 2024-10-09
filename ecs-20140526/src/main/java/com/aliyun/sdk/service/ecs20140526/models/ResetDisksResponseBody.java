@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetDisksResponseBody} extends {@link TeaModel}
  *
  * <p>ResetDisksResponseBody</p>
@@ -49,7 +50,7 @@ public class ResetDisksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the rollback operation.
+         * <p>Details about the rollback operation.</p>
          */
         public Builder operationProgressSet(OperationProgressSet operationProgressSet) {
             this.operationProgressSet = operationProgressSet;
@@ -57,7 +58,10 @@ public class ResetDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D66C85C-AA97-4A00-B0ED-2D9A80FE782C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ResetDisksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ResetDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ResetDisksResponseBody</p>
+     */
     public static class RelatedItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -109,7 +119,10 @@ public class ResetDisksResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The resource name.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SnapshotId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -117,7 +130,10 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-j6cdofbycydvg7ey****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +147,12 @@ public class ResetDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ResetDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ResetDisksResponseBody</p>
+     */
     public static class RelatedItemSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RelatedItem")
         private java.util.List < RelatedItem> relatedItem;
@@ -172,6 +194,12 @@ public class ResetDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ResetDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ResetDisksResponseBody</p>
+     */
     public static class OperationProgress extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -235,10 +263,11 @@ public class ResetDisksResponseBody extends TeaModel {
             private RelatedItemSet relatedItemSet; 
 
             /**
-             * The error code that is returned if the request failed. This parameter is empty if the request is successful.
-             * <p>
+             * <p>The error code that is returned if the request failed. This parameter is empty if the request is successful.</p>
+             * <p>For information about error codes and error messages, see <a href="https://error-center.alibabacloud.com/status/product/Ecs">Service error codes</a>.</p>
              * 
-             * For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -246,10 +275,11 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned if the request failed. This parameter is empty if the request is successful.
-             * <p>
+             * <p>The error message that is returned if the request failed. This parameter is empty if the request is successful.</p>
+             * <p>For information about error codes and error messages, see <a href="https://error-center.alibabacloud.com/status/product/Ecs">Service error codes</a>.</p>
              * 
-             * For information about error codes and error messages, see [Service error codes](https://error-center.alibabacloud.com/status/product/Ecs).
+             * <strong>example:</strong>
+             * <p>testErrorMsg</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -257,7 +287,10 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the request is successful. If the request is successful, Success is returned. If the request failed, an error code and an error message are returned.
+             * <p>Indicates whether the request is successful. If the request is successful, Success is returned. If the request failed, an error code and an error message are returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -265,7 +298,7 @@ public class ResetDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the resources.
+             * <p>Details about the resources.</p>
              */
             public Builder relatedItemSet(RelatedItemSet relatedItemSet) {
                 this.relatedItemSet = relatedItemSet;
@@ -279,6 +312,12 @@ public class ResetDisksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ResetDisksResponseBody} extends {@link TeaModel}
+     *
+     * <p>ResetDisksResponseBody</p>
+     */
     public static class OperationProgressSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationProgress")
         private java.util.List < OperationProgress> operationProgress;

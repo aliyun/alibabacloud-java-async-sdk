@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePrefixListsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePrefixListsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The query token returned in this call. If the return value is empty, no more data is returned.
+         * <p>The query token returned in this call. If the return value is empty, no more data is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the prefix lists.
+         * <p>Details about the prefix lists.</p>
          */
         public Builder prefixLists(PrefixLists prefixLists) {
             this.prefixLists = prefixLists;
@@ -77,7 +81,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribePrefixListsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePrefixListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePrefixListsResponseBody</p>
+     */
     public static class PrefixList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressFamily")
         private String addressFamily;
@@ -189,11 +202,14 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             private String prefixListName; 
 
             /**
-             * The IP address family of the prefix list. Valid values:
-             * <p>
+             * <p>The IP address family of the prefix list. Valid values:</p>
+             * <ul>
+             * <li>IPv4</li>
+             * <li>IPv6</li>
+             * </ul>
              * 
-             * *   IPv4
-             * *   IPv6
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder addressFamily(String addressFamily) {
                 this.addressFamily = addressFamily;
@@ -201,7 +217,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of associated resources.
+             * <p>The number of associated resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder associationCount(Integer associationCount) {
                 this.associationCount = associationCount;
@@ -209,7 +228,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the prefix list was created.
+             * <p>The time when the prefix list was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-02-20T07:11Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -217,7 +239,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the prefix list.
+             * <p>The description of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +250,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of entries that the prefix list can contain.
+             * <p>The maximum number of entries that the prefix list can contain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxEntries(Integer maxEntries) {
                 this.maxEntries = maxEntries;
@@ -233,7 +261,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the prefix list.
+             * <p>The ID of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl-x1j1k5ykzqlixdcy****</p>
              */
             public Builder prefixListId(String prefixListId) {
                 this.prefixListId = prefixListId;
@@ -241,7 +272,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the prefix list.
+             * <p>The name of the prefix list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrefixListNameSample</p>
              */
             public Builder prefixListName(String prefixListName) {
                 this.prefixListName = prefixListName;
@@ -255,6 +289,12 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePrefixListsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePrefixListsResponseBody</p>
+     */
     public static class PrefixLists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrefixList")
         private java.util.List < PrefixList> prefixList;

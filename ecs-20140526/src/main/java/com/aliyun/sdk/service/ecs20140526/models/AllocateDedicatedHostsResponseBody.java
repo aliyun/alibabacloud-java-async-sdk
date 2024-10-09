@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AllocateDedicatedHostsResponseBody} extends {@link TeaModel}
  *
  * <p>AllocateDedicatedHostsResponseBody</p>
@@ -49,7 +50,7 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the dedicated hosts.
+         * <p>The IDs of the dedicated hosts.</p>
          */
         public Builder dedicatedHostIdSets(DedicatedHostIdSets dedicatedHostIdSets) {
             this.dedicatedHostIdSets = dedicatedHostIdSets;
@@ -57,7 +58,10 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2A664A6-2933-4C64-88AE-5033D003****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AllocateDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>AllocateDedicatedHostsResponseBody</p>
+     */
     public static class DedicatedHostIdSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private java.util.List < String > dedicatedHostId;

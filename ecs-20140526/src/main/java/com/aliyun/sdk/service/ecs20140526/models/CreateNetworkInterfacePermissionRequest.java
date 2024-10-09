@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkInterfacePermissionRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkInterfacePermissionRequest</p>
@@ -178,7 +179,11 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
+         * <p>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder accountId(Long accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -187,7 +192,11 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp14v2sdd3v8htln****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -214,10 +223,12 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The permission on the ENI. Valid values:
-         * <p>
+         * <p>The permission on the ENI. Valid values:</p>
+         * <p>InstanceAttach: the permission to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.</p>
+         * <p>This parameter is required.</p>
          * 
-         * InstanceAttach: the permission to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.
+         * <strong>example:</strong>
+         * <p>InstanceAttach</p>
          */
         public Builder permission(String permission) {
             this.putQueryParameter("Permission", permission);
@@ -226,7 +237,11 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

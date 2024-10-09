@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCapacityReservationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCapacityReservationsRequest</p>
@@ -283,13 +284,15 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
+         * </ul>
+         * <p>Default value: PostPaid.</p>
          * 
-         * *   PostPaid: pay-as-you-go.
-         * *   PrePaid: subscription.
-         * 
-         * Default value: PostPaid.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -298,7 +301,10 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The instance type.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -307,12 +313,12 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -321,7 +327,10 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of the NextToken parameter.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of the NextToken parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -348,14 +357,16 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The operating system of the instance. Valid values:
-         * <p>
+         * <p>The operating system of the instance. Valid values:</p>
+         * <ul>
+         * <li>windows: Windows operating systems.</li>
+         * <li>linux: Linux operating systems.</li>
+         * <li>all: all operating system types.</li>
+         * </ul>
+         * <p>Default value: all.</p>
          * 
-         * *   windows: Windows operating systems.
-         * *   linux: Linux operating systems.
-         * *   all: all operating system types.
-         * 
-         * Default value: all.
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -364,7 +375,11 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -373,10 +388,13 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the capacity reservation belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The ID of the resource group to which the capacity reservation belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+         * </blockquote>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -403,17 +421,19 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The state of the capacity reservation. Valid values:
-         * <p>
+         * <p>The state of the capacity reservation. Valid values:</p>
+         * <ul>
+         * <li>All: All states.</li>
+         * <li>Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.</li>
+         * <li>Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.</li>
+         * <li>Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.</li>
+         * <li>Active: The capacity reservation is in effect.</li>
+         * <li>Released: The capacity reservation has been released manually or automatically when it expired.</li>
+         * </ul>
+         * <p>Default value: Active.</p>
          * 
-         * *   All: All states.
-         * *   Pending: The capacity reservation is being initialized. Scheduled capacity reservations enter the Pending state after they are created.
-         * *   Preparing: The capacity reservation is being prepared. Scheduled capacity reservations are in the Preparing state while resources are being provisioned.
-         * *   Prepared: The capacity reservation is to take effect. After resources are provisioned, scheduled capacity reservations remain in the Prepared state until they take effect.
-         * *   Active: The capacity reservation is in effect.
-         * *   Released: The capacity reservation has been released manually or automatically when it expired.
-         * 
-         * Default value: Active.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -422,7 +442,7 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -431,7 +451,10 @@ public class DescribeCapacityReservationsRequest extends Request {
         }
 
         /**
-         * The zone ID of the capacity reservation.
+         * <p>The zone ID of the capacity reservation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -446,6 +469,12 @@ public class DescribeCapacityReservationsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCapacityReservationsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsRequest</p>
+     */
     public static class PrivatePoolOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ids")
         private String ids;
@@ -473,7 +502,10 @@ public class DescribeCapacityReservationsRequest extends Request {
             private String ids; 
 
             /**
-             * The IDs of capacity reservations. The value can be a JSON array that consists of up to 100 capacity reservation IDs. Separate the IDs with commas (,).
+             * <p>The IDs of capacity reservations. The value can be a JSON array that consists of up to 100 capacity reservation IDs. Separate the IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;crp-bp1gubrkqutenqdd****&quot;, &quot;crp-bp67acfmxazb5****&quot;]</p>
              */
             public Builder ids(String ids) {
                 this.ids = ids;
@@ -487,6 +519,12 @@ public class DescribeCapacityReservationsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCapacityReservationsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCapacityReservationsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -526,10 +564,11 @@ public class DescribeCapacityReservationsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+             * <p>If you specify a single tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources with the specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
              * 
-             * If you specify a single tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -537,7 +576,10 @@ public class DescribeCapacityReservationsRequest extends Request {
             }
 
             /**
-             * The value of tag N. Valid values of N: 1 to 20.
+             * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

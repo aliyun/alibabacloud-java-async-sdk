@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLaunchTemplateVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLaunchTemplateVersionResponseBody</p>
@@ -49,7 +50,7 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The versions of the launch template.
+         * <p>The deleted launch template versions.</p>
          */
         public Builder launchTemplateVersions(LaunchTemplateVersions launchTemplateVersions) {
             this.launchTemplateVersions = launchTemplateVersions;
@@ -57,7 +58,10 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteLaunchTemplateVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteLaunchTemplateVersionResponseBody</p>
+     */
     public static class LaunchTemplateVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LaunchTemplateId")
         private String launchTemplateId;
@@ -109,7 +119,10 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
             private Long launchTemplateVersionNumber; 
 
             /**
-             * The ID of the launch template.
+             * <p>The ID of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lt-m5eiaupmvm2op9d****</p>
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -117,7 +130,10 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the launch template.
+             * <p>The version number of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder launchTemplateVersionNumber(Long launchTemplateVersionNumber) {
                 this.launchTemplateVersionNumber = launchTemplateVersionNumber;
@@ -131,6 +147,12 @@ public class DeleteLaunchTemplateVersionResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DeleteLaunchTemplateVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteLaunchTemplateVersionResponseBody</p>
+     */
     public static class LaunchTemplateVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LaunchTemplateVersion")
         private java.util.List < LaunchTemplateVersion> launchTemplateVersion;

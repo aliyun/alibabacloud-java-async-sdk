@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEipMonitorDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeEipMonitorDataRequest</p>
@@ -168,7 +169,7 @@ public class DescribeEipMonitorDataRequest extends Request {
         } 
 
         /**
-         * AllocationId.
+         * <p>This parameter is required.</p>
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -177,7 +178,7 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -240,7 +241,7 @@ public class DescribeEipMonitorDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

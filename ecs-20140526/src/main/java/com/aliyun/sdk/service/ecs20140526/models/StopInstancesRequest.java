@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstancesRequest} extends {@link RequestModel}
  *
  * <p>StopInstancesRequest</p>
@@ -204,13 +205,15 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The batch operation mode. Valid values:
-         * <p>
+         * <p>The batch operation mode. Valid values:</p>
+         * <ul>
+         * <li>AllTogether: In this mode, if all instances are stopped, a success message is returned. If an instance fails the verification, all instances fail to stop and an error message is returned.</li>
+         * <li>SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.</li>
+         * </ul>
+         * <p>Default value: AllTogether.</p>
          * 
-         * *   AllTogether: In this mode, if all instances are stopped, a success message is returned. If an instance fails the verification, all instances fail to stop and an error message is returned.
-         * *   SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.
-         * 
-         * Default value: AllTogether.
+         * <strong>example:</strong>
+         * <p>AllTogether</p>
          */
         public Builder batchOptimization(String batchOptimization) {
             this.putQueryParameter("BatchOptimization", batchOptimization);
@@ -219,16 +222,20 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set <code>BatchOptimization</code> to <code>SuccessFirst</code> and <code>DryRun</code> to true, only <code>DRYRUN.SUCCESS</code> is returned, regardless of whether the request passes the dry run.</p>
+         * </blockquote>
+         * <ul>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, instances are stopped.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
-         * 
-         * >  If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned, regardless of whether the request passes the dry run.
-         * 
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, instances are stopped.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -237,13 +244,15 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully stop instances. Valid values:
-         * <p>
+         * <p>Specifies whether to forcefully stop instances. Valid values:</p>
+         * <ul>
+         * <li>true. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on instances is lost.</li>
+         * <li>false.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on instances is lost.
-         * *   false.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -252,7 +261,11 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of instances.
+         * <p>The IDs of instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -279,7 +292,11 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -306,13 +323,15 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The stop mode of the pay-as-you-go instance. Valid values:
-         * <p>
+         * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
+         * <ul>
+         * <li>StopCharging: economical mode. For information about how <code>StopCharging</code> takes effect, see the &quot;Prerequisites&quot; section in <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</li>
+         * <li>KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for it.</li>
+         * </ul>
+         * <p>Default value: If the prerequisites required for enabling economical mode are met and you have enabled the mode in the ECS console, the default value is <a href="~~63353#default~~">StopCharging</a>. For more information, see the &quot;Enable economical mode&quot; section in <code>Economical mode</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
          * 
-         * *   StopCharging: economical mode. For information about how `StopCharging` takes effect, see the "Prerequisites" section in [Economical mode](~~63353~~).
-         * *   KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for it.
-         * 
-         * Default value: If the prerequisites required for enabling economical mode are met and you have enabled the mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.
+         * <strong>example:</strong>
+         * <p>KeepCharging</p>
          */
         public Builder stoppedMode(String stoppedMode) {
             this.putQueryParameter("StoppedMode", stoppedMode);

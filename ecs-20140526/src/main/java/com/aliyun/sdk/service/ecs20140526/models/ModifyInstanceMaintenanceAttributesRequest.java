@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceMaintenanceAttributesRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceMaintenanceAttributesRequest</p>
@@ -189,12 +190,15 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The maintenance action. Valid values:
-         * <p>
+         * <p>The maintenance action. Valid values:</p>
+         * <ul>
+         * <li>Stop: stops the instance.</li>
+         * <li>AutoRecover: automatically recovers the instance.</li>
+         * <li>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</li>
+         * </ul>
          * 
-         * *   Stop: stops the instance.
-         * *   AutoRecover: automatically recovers the instance.
-         * *   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.
+         * <strong>example:</strong>
+         * <p>AutoRecover</p>
          */
         public Builder actionOnMaintenance(String actionOnMaintenance) {
             this.putQueryParameter("ActionOnMaintenance", actionOnMaintenance);
@@ -203,7 +207,10 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The ID of instance N. Valid values of N: 1 to 100.
+         * <p>The ID of instance N. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4ph****</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +219,7 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The maintenance windows.
+         * <p>The maintenance windows.</p>
          */
         public Builder maintenanceWindow(java.util.List < MaintenanceWindow> maintenanceWindow) {
             this.putQueryParameter("MaintenanceWindow", maintenanceWindow);
@@ -221,13 +228,15 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * Specifies whether to send an event notification before maintenance. Valid values:
-         * <p>
+         * <p>Specifies whether to send an event notification before maintenance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
             this.putQueryParameter("NotifyOnMaintenance", notifyOnMaintenance);
@@ -254,7 +263,11 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -287,6 +300,12 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyInstanceMaintenanceAttributesRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyInstanceMaintenanceAttributesRequest</p>
+     */
     public static class MaintenanceWindow extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -326,7 +345,10 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             private String startTime; 
 
             /**
-             * The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
+             * <p>The end time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <code>HH:mm:ss</code> format. The time must be in UTC+8. Set the value of N to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -334,7 +356,10 @@ public class ModifyInstanceMaintenanceAttributesRequest extends Request {
             }
 
             /**
-             * The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the `HH:mm:ss` format. The time must be in UTC+8. Set the value of N to 1.
+             * <p>The start time of the maintenance window. The time must be on the hour. You must configure both StartTime and EndTime. The value of EndTime must be 1 to 23 hours later than the value of StartTime. Specify the time in the <code>HH:mm:ss</code> format. The time must be in UTC+8. Set the value of N to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

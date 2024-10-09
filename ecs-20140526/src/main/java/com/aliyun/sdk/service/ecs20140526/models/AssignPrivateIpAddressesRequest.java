@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssignPrivateIpAddressesRequest} extends {@link RequestModel}
  *
  * <p>AssignPrivateIpAddressesRequest</p>
@@ -219,7 +220,10 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -228,10 +232,10 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.
-         * <p>
-         * 
-         * >  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.
+         * <p>The IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.</p>
+         * <blockquote>
+         * <p> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
+         * </blockquote>
          */
         public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
@@ -240,10 +244,13 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The number of IPv4 prefixes to be randomly generated for the ENI. Valid values: 1 to 10.
-         * <p>
+         * <p>The number of IPv4 prefixes to be randomly generated for the ENI. Valid values: 1 to 10.</p>
+         * <blockquote>
+         * <p> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</p>
+         * </blockquote>
          * 
-         * >  To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
             this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);
@@ -252,7 +259,11 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp67acfmxazb4p****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -279,13 +290,15 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * Secondary private IP address N to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:
-         * <p>
+         * <p>Secondary private IP address N to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:</p>
+         * <ul>
+         * <li>When the ENI is in the Available (<code>Available</code>) state, the valid values of N are 1 to 50.</li>
+         * <li>When the ENI is in the InUse (<code>InUse</code>) state, the valid values of N are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * </ul>
+         * <p>To assign secondary private IP addresses to the ENI, you must specify <code>PrivateIpAddress.N</code> or <code>SecondaryPrivateIpAddressCount</code> but not both.</p>
          * 
-         * *   When the ENI is in the Available (`Available`) state, the valid values of N are 1 to 50.
-         * *   When the ENI is in the InUse (`InUse`) state, the valid values of N are subject to the instance type. For more information, see [Overview of instance families](~~25378~~).
-         * 
-         * To assign secondary private IP addresses to the ENI, you must specify `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` but not both.
+         * <strong>example:</strong>
+         * <p><code>10.1.**.**</code></p>
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -294,7 +307,11 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -321,10 +338,11 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The number of private IP addresses to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI.
-         * <p>
+         * <p>The number of private IP addresses to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI.</p>
+         * <p>To assign secondary private IP addresses to the ENI, you must specify <code>PrivateIpAddress.N</code> or <code>SecondaryPrivateIpAddressCount</code> but not both.</p>
          * 
-         * To assign secondary private IP addresses to the ENI, you must specify `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` but not both.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
             this.putQueryParameter("SecondaryPrivateIpAddressCount", secondaryPrivateIpAddressCount);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNatGatewaysResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewaysResponseBody</p>
+     */
     public static class BandwidthPackageIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private java.util.List < String > bandwidthPackageId;
@@ -171,6 +178,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewaysResponseBody</p>
+     */
     public static class ForwardTableIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ForwardTableId")
         private java.util.List < String > forwardTableId;
@@ -212,6 +225,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewaysResponseBody</p>
+     */
     public static class NatGateway extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BandwidthPackageIds")
         private BandwidthPackageIds bandwidthPackageIds;
@@ -473,6 +492,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeNatGatewaysResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNatGatewaysResponseBody</p>
+     */
     public static class NatGateways extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NatGateway")
         private java.util.List < NatGateway> natGateway;

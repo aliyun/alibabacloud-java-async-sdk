@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDiskDeploymentRequest} extends {@link RequestModel}
  *
  * <p>ModifyDiskDeploymentRequest</p>
@@ -189,10 +190,11 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * The new disk category. The parameter can be used only when you migrate a disk between dedicated block storage clusters. Only ESSDs can be created in dedicated block storage clusters. Set this parameter to cloud_essd.
-         * <p>
+         * <p>The new disk category. The parameter can be used only when you migrate a disk between dedicated block storage clusters. Only ESSDs can be created in dedicated block storage clusters. Set this parameter to cloud_essd.</p>
+         * <p>This parameter is empty by default, which indicates that the disk category is not changed.</p>
          * 
-         * This parameter is empty by default, which indicates that the disk category is not changed.
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder diskCategory(String diskCategory) {
             this.putQueryParameter("DiskCategory", diskCategory);
@@ -201,7 +203,11 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * The ID of the disk.
+         * <p>The ID of the disk.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp131n0q38u3a4zi****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -210,13 +216,15 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
-         * *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -243,13 +251,15 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * The new performance level of the ESSD. The parameter can be used only when you migrate data between dedicated block storage clusters. Valid values:
-         * <p>
+         * <p>The new performance level of the ESSD. The parameter can be used only when you migrate data between dedicated block storage clusters. Valid values:</p>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50000 random read/write IOPS.</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that the performance level is not modified.</p>
          * 
-         * *   PL0: A single ESSD can deliver up to 10000 random read/write IOPS.
-         * *   PL1: A single ESSD can deliver up to 50000 random read/write IOPS.
-         * 
-         * This parameter is empty by default, which indicates that the performance level is not modified.
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder performanceLevel(String performanceLevel) {
             this.putQueryParameter("PerformanceLevel", performanceLevel);
@@ -276,13 +286,15 @@ public class ModifyDiskDeploymentRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated block storage cluster.
-         * <p>
+         * <p>The ID of the dedicated block storage cluster.</p>
+         * <ul>
+         * <li>When you migrate a disk to a dedicated block storage cluster, the StorageClusterId parameter must be specified.</li>
+         * <li>When you migrate a disk to a public block storage cluster, the StorageClusterId parameter must be left empty.</li>
+         * </ul>
+         * <p>This parameter is empty by default, which indicates that the disk is migrated to a public block storage cluster.</p>
          * 
-         * *   When you migrate a disk to a dedicated block storage cluster, the StorageClusterId parameter must be specified.
-         * *   When you migrate a disk to a public block storage cluster, the StorageClusterId parameter must be left empty.
-         * 
-         * This parameter is empty by default, which indicates that the disk is migrated to a public block storage cluster.
+         * <strong>example:</strong>
+         * <p>dbsc-cn-c4d2uea****</p>
          */
         public Builder storageClusterId(String storageClusterId) {
             this.putQueryParameter("StorageClusterId", storageClusterId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLaunchTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLaunchTemplatesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the launch template.
+         * <p>The queried launch templates.</p>
          */
         public Builder launchTemplateSets(LaunchTemplateSets launchTemplateSets) {
             this.launchTemplateSets = launchTemplateSets;
@@ -93,7 +94,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of launch templates.
+         * <p>The total number of launch templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE12CBA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the launch templates.
+         * <p>The information about the launch templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLaunchTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLaunchTemplatesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -169,7 +188,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * <p>The tag value of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -177,7 +199,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of tag N of the launch template.
+             * <p>The tag key of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -191,6 +216,12 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLaunchTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLaunchTemplatesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -232,6 +263,12 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLaunchTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLaunchTemplatesResponseBody</p>
+     */
     public static class LaunchTemplateSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -355,7 +392,11 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The ID of the resource group to which the launch template belongs.
+             * <p>The time when the launch template was created.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-14T14:18:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -363,7 +404,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version number of the launch template.
+             * <p>The ID of the Alibaba Cloud account that created the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -371,7 +415,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the launch template was modified.
+             * <p>The time when the launch template was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultVersionNumber(Long defaultVersionNumber) {
                 this.defaultVersionNumber = defaultVersionNumber;
@@ -379,7 +426,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the launch template.
+             * <p>The tags of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder latestVersionNumber(Long latestVersionNumber) {
                 this.latestVersionNumber = latestVersionNumber;
@@ -387,7 +437,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the launch template was created.
+             * <p>The time when the launch template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lt-m5e3ofjr1zn1aw7q****</p>
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -395,7 +448,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The default version number of the launch template.
+             * <p>The default version number of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wd-152630748****</p>
              */
             public Builder launchTemplateName(String launchTemplateName) {
                 this.launchTemplateName = launchTemplateName;
@@ -403,7 +459,11 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the launch template.
+             * <p>The time when a version was added to or deleted from the launch template.</p>
+             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-14T14:18:00Z</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -411,7 +471,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the launch template.
+             * <p>The creator of the launch template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -419,7 +482,10 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the launch template.
+             * <p>The tags of the launch template.</p>
+             * <blockquote>
+             * <p> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</p>
+             * </blockquote>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -433,6 +499,12 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLaunchTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLaunchTemplatesResponseBody</p>
+     */
     public static class LaunchTemplateSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LaunchTemplateSet")
         private java.util.List < LaunchTemplateSet> launchTemplateSet;

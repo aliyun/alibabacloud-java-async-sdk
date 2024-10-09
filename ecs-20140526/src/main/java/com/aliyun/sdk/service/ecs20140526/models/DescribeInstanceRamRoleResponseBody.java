@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRamRoleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceRamRoleResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the instance RAM roles.
+         * <p>Details about the instance RAM roles.</p>
          */
         public Builder instanceRamRoleSets(InstanceRamRoleSets instanceRamRoleSets) {
             this.instanceRamRoleSets = instanceRamRoleSets;
@@ -81,7 +82,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the instance RAM role.
+         * <p>The region ID of the instance RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -89,7 +93,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instance RAM roles returned.
+         * <p>The total number of instance RAM roles returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +120,12 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRamRoleResponseBody</p>
+     */
     public static class InstanceRamRoleSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -149,7 +165,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
             private String ramRoleName; 
 
             /**
-             * The ID of the instance
+             * <p>The ID of the instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp67acfmxazb4p****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -157,7 +176,10 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance RAM role.
+             * <p>The name of the instance RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EcsServiceRole-EcsDocGuideTest</p>
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -171,6 +193,12 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceRamRoleResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRamRoleResponseBody</p>
+     */
     public static class InstanceRamRoleSets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceRamRoleSet")
         private java.util.List < InstanceRamRoleSet> instanceRamRoleSet;

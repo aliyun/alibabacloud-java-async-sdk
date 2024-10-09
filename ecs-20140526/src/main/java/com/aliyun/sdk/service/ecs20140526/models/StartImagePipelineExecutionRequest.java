@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartImagePipelineExecutionRequest} extends {@link RequestModel}
  *
  * <p>StartImagePipelineExecutionRequest</p>
@@ -176,7 +177,10 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.** For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -185,7 +189,11 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The ID of the image template.
+         * <p>The ID of the image template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip-2ze5tsl5bp6nf2b3****</p>
          */
         public Builder imagePipelineId(String imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -212,7 +220,11 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -239,7 +251,9 @@ public class StartImagePipelineExecutionRequest extends Request {
         }
 
         /**
-         * > This parameter is deprecated.
+         * <blockquote>
+         * <p>This parameter is deprecated.</p>
+         * </blockquote>
          */
         public Builder templateTag(java.util.List < TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
@@ -254,6 +268,12 @@ public class StartImagePipelineExecutionRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartImagePipelineExecutionRequest} extends {@link TeaModel}
+     *
+     * <p>StartImagePipelineExecutionRequest</p>
+     */
     public static class TemplateTag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -293,7 +313,12 @@ public class StartImagePipelineExecutionRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is deprecated.
+             * <blockquote>
+             * <p>This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -301,7 +326,12 @@ public class StartImagePipelineExecutionRequest extends Request {
             }
 
             /**
-             * > This parameter is deprecated.
+             * <blockquote>
+             * <p>This parameter is deprecated.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder value(String value) {
                 this.value = value;

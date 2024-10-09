@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSnapshotMonitorDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeSnapshotMonitorDataRequest</p>
@@ -191,13 +192,15 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * The category of the snapshot. Valid values:
-         * <p>
+         * <p>The category of the snapshot. Valid values:</p>
+         * <ul>
+         * <li>Standard: normal snapshot</li>
+         * <li>Flash: local snapshot</li>
+         * </ul>
+         * <p>Default value: Standard.</p>
          * 
-         * *   Standard: normal snapshot
-         * *   Flash: local snapshot
-         * 
-         * Default value: Standard.
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -206,7 +209,11 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-10T03:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -233,14 +240,16 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:
-         * <p>
+         * <p>The interval at which to query the monitoring data of snapshot sizes. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li>60</li>
+         * <li>600</li>
+         * <li>3600</li>
+         * </ul>
+         * <p>Default value: 60.</p>
          * 
-         * *   60
-         * *   600
-         * *   3600
-         * 
-         * Default value: 60.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -249,7 +258,11 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -276,7 +289,11 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.
+         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-10T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

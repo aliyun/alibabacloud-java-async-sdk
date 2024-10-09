@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDeploymentSetRequest} extends {@link RequestModel}
  *
  * <p>CreateDeploymentSetRequest</p>
@@ -245,7 +246,10 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
+         * <p>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -254,7 +258,10 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
+         * <p>The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDeploymentSetName</p>
          */
         public Builder deploymentSetName(String deploymentSetName) {
             this.putQueryParameter("DeploymentSetName", deploymentSetName);
@@ -263,13 +270,15 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The emergency solution to use in the situation where instances in the deployment set cannot be evenly distributed to different zones due to resource insufficiency after the instances failover. Valid values:
-         * <p>
+         * <p>The emergency solution to use in the situation where instances in the deployment set cannot be evenly distributed to different zones due to resource insufficiency after the instances failover. Valid values:</p>
+         * <ul>
+         * <li>CancelMembershipAndStart: removes the instances from the deployment set and starts the instances immediately after they are failed over.</li>
+         * <li>KeepStopped: leaves the instances in the Stopped state and starts them after resources are replenished.</li>
+         * </ul>
+         * <p>Default value: CancelMembershipAndStart.</p>
          * 
-         * *   CancelMembershipAndStart: removes the instances from the deployment set and starts the instances immediately after they are failed over.
-         * *   KeepStopped: leaves the instances in the Stopped state and starts them after resources are replenished.
-         * 
-         * Default value: CancelMembershipAndStart.
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -278,7 +287,12 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * >  This parameter is deprecated.
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -287,7 +301,12 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * >  This parameter is deprecated.
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -296,13 +315,15 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The deployment strategy. Valid values:
-         * <p>
+         * <p>The deployment strategy. Valid values:</p>
+         * <ul>
+         * <li>Availability: high availability strategy.</li>
+         * <li>AvailabilityGroup: high availability group strategy.</li>
+         * </ul>
+         * <p>Default value: Availability.</p>
          * 
-         * *   Availability: high availability strategy.
-         * *   AvailabilityGroup: high availability group strategy.
-         * 
-         * Default value: Availability.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder groupCount(Long groupCount) {
             this.putQueryParameter("GroupCount", groupCount);
@@ -311,7 +332,10 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CancelMembershipAndStart</p>
          */
         public Builder onUnableToRedeployFailedInstance(String onUnableToRedeployFailedInstance) {
             this.putQueryParameter("OnUnableToRedeployFailedInstance", onUnableToRedeployFailedInstance);
@@ -338,7 +362,11 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * Creates a deployment set in a specific region.
+         * <p>Creates a deployment set in a specific region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -365,14 +393,16 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The deployment strategy. Valid values:
-         * <p>
+         * <p>The deployment strategy. Valid values:</p>
+         * <ul>
+         * <li>Availability: high availability strategy</li>
+         * <li>AvailabilityGroup: high availability group strategy</li>
+         * <li>LowLatency: low latency strategy</li>
+         * </ul>
+         * <p>Default value: Availability.</p>
          * 
-         * *   Availability: high availability strategy
-         * *   AvailabilityGroup: high availability group strategy
-         * *   LowLatency: low latency strategy
-         * 
-         * Default value: Availability.
+         * <strong>example:</strong>
+         * <p>Availability</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);

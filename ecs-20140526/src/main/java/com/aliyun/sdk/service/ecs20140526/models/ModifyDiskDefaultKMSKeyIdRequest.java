@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDiskDefaultKMSKeyIdRequest} extends {@link RequestModel}
  *
  * <p>ModifyDiskDefaultKMSKeyIdRequest</p>
@@ -83,7 +84,11 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends Request {
         } 
 
         /**
-         * KMSKeyId.
+         * <p>The ID of the new KMS key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -92,7 +97,11 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

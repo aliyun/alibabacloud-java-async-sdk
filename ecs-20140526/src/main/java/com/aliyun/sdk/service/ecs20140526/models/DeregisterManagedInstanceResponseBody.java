@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeregisterManagedInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DeregisterManagedInstanceResponseBody</p>
@@ -49,7 +50,7 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The managed instance.
+         * <p>The managed instance.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -57,7 +58,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F74942176</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeregisterManagedInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeregisterManagedInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivationId")
         private String activationId;
@@ -253,7 +263,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * The activation code ID.
+             * <p>The activation code ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ECEEE12-56F1-4FBC-9AB1-890F7494****</p>
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -261,7 +274,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of Cloud Assistant Agent.
+             * <p>The version number of Cloud Assistant Agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.0.102</p>
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -269,7 +285,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname of the managed instance.
+             * <p>The hostname of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-Hostname</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -277,7 +296,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The managed instance ID.
+             * <p>The managed instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mi-hz01axdfas****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -285,7 +307,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the managed instance.
+             * <p>The name of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-InstanceName-001</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -293,7 +318,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the managed instance.
+             * <p>The public IP address of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>47.8.**.**</code></p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -301,7 +329,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address of the managed instance.
+             * <p>The internal IP address of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>10.0.**.**</code></p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -309,7 +340,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that Cloud Assistant tasks were executed on the managed instance.
+             * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder invocationCount(Long invocationCount) {
                 this.invocationCount = invocationCount;
@@ -317,7 +351,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Cloud Assistant task was last executed.
+             * <p>The time when the Cloud Assistant task was last executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-20T09:00:40Z</p>
              */
             public Builder lastInvokedTime(String lastInvokedTime) {
                 this.lastInvokedTime = lastInvokedTime;
@@ -325,7 +362,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The machine code of the managed instance.
+             * <p>The machine code of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e03231b37ab14e53b5795ad625fc****</p>
              */
             public Builder machineId(String machineId) {
                 this.machineId = machineId;
@@ -333,7 +373,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the managed instance.
+             * <p>The operating system type of the managed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -341,7 +384,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The version information about the operating system.
+             * <p>The version information about the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux_#38~18.04.1-Ubuntu SMP Wed Jan 6 18:26:30 UTC 2021_x86_64</p>
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -349,7 +395,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the managed instance was registered.
+             * <p>The time when the managed instance was registered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-20T08:57:56Z</p>
              */
             public Builder registrationTime(String registrationTime) {
                 this.registrationTime = registrationTime;
@@ -357,7 +406,10 @@ public class DeregisterManagedInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the managed instance belongs.
+             * <p>The ID of the resource group to which the managed instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-123******</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevokeSecurityGroupRequest} extends {@link RequestModel}
  *
  * <p>RevokeSecurityGroupRequest</p>
@@ -415,7 +416,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -424,7 +428,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Description` to specify the rule description.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Description</code> to specify the rule description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -433,7 +440,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.DestCidrIp</code> to specify the destination IPv4 CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         public Builder destCidrIp(String destCidrIp) {
             this.putQueryParameter("DestCidrIp", destCidrIp);
@@ -442,7 +452,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the protocol.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.IpProtocol</code> to specify the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -451,7 +464,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6DestCidrIp</code> to specify the destination IPv6 CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001:db8:1233:1a00::***</p>
          */
         public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
             this.putQueryParameter("Ipv6DestCidrIp", ipv6DestCidrIp);
@@ -460,7 +476,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Ipv6SourceCidrIp</code> to specify the source IPv6 CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001:db8:1234:1a00::***</p>
          */
         public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
             this.putQueryParameter("Ipv6SourceCidrIp", ipv6SourceCidrIp);
@@ -469,7 +488,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.NicType` to specify the network interface type.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.NicType</code> to specify the network interface type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>intranet</p>
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -496,7 +518,7 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * Security group rule N. Valid values of N: 1 to 100.
+         * <p>Security group rule N. Valid values of N: 1 to 100.</p>
          */
         public Builder permissions(java.util.List < Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -505,7 +527,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to allow inbound access.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Policy</code> to specify whether to allow inbound access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -514,7 +539,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.PortRange` to specify the range of destination ports.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.PortRange</code> to specify the range of destination ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/200</p>
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -523,7 +551,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.Priority</code> to specify the rule priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -532,7 +563,11 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -559,7 +594,11 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4p****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -568,7 +607,7 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the security group rules. Valid values of N: 1 to 100.
+         * <p>The IDs of the security group rules. Valid values of N: 1 to 100.</p>
          */
         public Builder securityGroupRuleId(java.util.List < String > securityGroupRuleId) {
             this.putQueryParameter("SecurityGroupRuleId", securityGroupRuleId);
@@ -577,7 +616,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.SourceCidrIp</code> to specify the source IPv4 CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);
@@ -586,7 +628,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourceGroupId` to specify the ID of the source security group.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.SourceGroupId</code> to specify the ID of the source security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxa123b****</p>
          */
         public Builder sourceGroupId(String sourceGroupId) {
             this.putQueryParameter("SourceGroupId", sourceGroupId);
@@ -595,7 +640,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourceGroupOwnerAccount` to specify the Alibaba Cloud account that manages the source security group.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.SourceGroupOwnerAccount</code> to specify the Alibaba Cloud account that manages the source security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></p>
          */
         public Builder sourceGroupOwnerAccount(String sourceGroupOwnerAccount) {
             this.putQueryParameter("SourceGroupOwnerAccount", sourceGroupOwnerAccount);
@@ -604,7 +652,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourceGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the source security group.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.SourceGroupOwnerId</code> to specify the ID of the Alibaba Cloud account that manages the source security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678910</p>
          */
         public Builder sourceGroupOwnerId(Long sourceGroupOwnerId) {
             this.putQueryParameter("SourceGroupOwnerId", sourceGroupOwnerId);
@@ -613,7 +664,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.SourcePortRange</code> to specify the range of source ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80/80</p>
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);
@@ -622,7 +676,10 @@ public class RevokeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourcePrefixListId` to specify the ID of the source prefix list.
+         * <p>This parameter is deprecated. Use <code>Permissions.N.SourcePrefixListId</code> to specify the ID of the source prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-x1j1k5ykzqlixdcy****</p>
          */
         public Builder sourcePrefixListId(String sourcePrefixListId) {
             this.putQueryParameter("SourcePrefixListId", sourcePrefixListId);
@@ -637,6 +694,12 @@ public class RevokeSecurityGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link RevokeSecurityGroupRequest} extends {@link TeaModel}
+     *
+     * <p>RevokeSecurityGroupRequest</p>
+     */
     public static class Permissions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -832,10 +895,11 @@ public class RevokeSecurityGroupRequest extends Request {
             private String sourcePrefixListId; 
 
             /**
-             * The description of the security group rule. The description must be 1 to 512 characters in length.
-             * <p>
+             * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -843,12 +907,12 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.
-             * <p>
+             * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * This parameter is used to support quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder destCidrIp(String destCidrIp) {
                 this.destCidrIp = destCidrIp;
@@ -856,17 +920,19 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The protocol. The values of this parameter are case-insensitive. Valid values:
-             * <p>
+             * <p>The protocol. The values of this parameter are case-insensitive. Valid values:</p>
+             * <ul>
+             * <li>TCP.</li>
+             * <li>UDP.</li>
+             * <li>ICMP.</li>
+             * <li>ICMPv6.</li>
+             * <li>GRE.</li>
+             * <li>ALL: All protocols are supported.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * *   TCP.
-             * *   UDP.
-             * *   ICMP.
-             * *   ICMPv6.
-             * *   GRE.
-             * *   ALL: All protocols are supported.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
@@ -874,14 +940,15 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.
-             * <p>
+             * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>Valid values of N: 1 to 100.</p>
+             * <blockquote>
+             * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+             * </blockquote>
              * 
-             * This parameter is used to support quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-             * 
-             * Valid values of N: 1 to 100.
-             * 
-             * >  This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and `DestCidrIp` in the same request.
+             * <strong>example:</strong>
+             * <p>2001:db8:1233:1a00::***</p>
              */
             public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
                 this.ipv6DestCidrIp = ipv6DestCidrIp;
@@ -889,12 +956,14 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.
-             * <p>
+             * <p>The source IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
+             * <p>Valid values of N: 1 to 100.</p>
+             * <blockquote>
+             * <p> This parameter is valid only for Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>SourceCidrIp</code> in the same request.</p>
+             * </blockquote>
              * 
-             * Valid values of N: 1 to 100.
-             * 
-             * >  This parameter is valid only for Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and `SourceCidrIp` in the same request.
+             * <strong>example:</strong>
+             * <p>2001:db8:1234:1a00::***</p>
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -902,19 +971,18 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:
-             * <p>
+             * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</p>
+             * <ul>
+             * <li>internet: public NIC.</li>
+             * <li>intranet: internal NIC.</li>
+             * </ul>
+             * <p>If the security group resides in a VPC, this parameter is set to intranet by default and cannot be modified.</p>
+             * <p>If you specify only <code>SourceGroupId</code> when you remove access control configurations between security groups, you must set this parameter to intranet.</p>
+             * <p>Default value: internet.</p>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * *   internet: public NIC.
-             * *   intranet: internal NIC.
-             * 
-             * If the security group resides in a VPC, this parameter is set to intranet by default and cannot be modified.
-             * 
-             * If you specify only `SourceGroupId` when you remove access control configurations between security groups, you must set this parameter to intranet.
-             * 
-             * Default value: internet.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>intranet</p>
              */
             public Builder nicType(String nicType) {
                 this.nicType = nicType;
@@ -922,15 +990,16 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The action of the security group rule. Valid values:
-             * <p>
+             * <p>The action of the security group rule. Valid values:</p>
+             * <ul>
+             * <li>accept: allows inbound access.</li>
+             * <li>drop: denies inbound access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
+             * </ul>
+             * <p>Default value: accept.</p>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * *   accept: allows inbound access.
-             * *   drop: denies inbound access and returns no responses. In this case, the request times out or the connection cannot be established.
-             * 
-             * Default value: accept.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>accept</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -938,15 +1007,17 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The range of destination port numbers for the protocols specified in the security group rule. Valid values:
-             * <p>
+             * <p>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <ul>
+             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
+             * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
+             * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.
-             * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
-             * *   If you set IpProtocol to GRE, the port number range is -1/-1.
-             * *   If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>1/200</p>
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -954,12 +1025,12 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.
-             * <p>
+             * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
+             * <p>Default value: 1.</p>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * Default value: 1.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -967,10 +1038,11 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The source IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.
-             * <p>
+             * <p>The source IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>10.0.0.0/8</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -978,19 +1050,21 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The ID of the source security group that is specified in the security group rule.
-             * <p>
+             * <p>The ID of the source security group that is specified in the security group rule.</p>
+             * <ul>
+             * <li>You must specify at least one of the following parameters: <code>SourceGroupId</code>, <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, and <code>SourcePrefixListId</code>.</li>
+             * <li>If you specify <code>SourceGroupId</code> but do not specify <code>SourceCidrIp</code> or <code>Ipv6SourceCidrIp</code>, you must set NicType to intranet.</li>
+             * <li>If you specify both <code>SourceGroupId</code> and <code>SourceCidrIp</code>, <code>SourceCidrIp</code> takes precedence.</li>
+             * </ul>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>In advanced security groups, security groups cannot be used as authorization objects.</li>
+             * <li>In each basic security group, up to 20 security groups can be used as authorization objects in security group rules.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * *   You must specify at least one of the following parameters: `SourceGroupId`, `SourceCidrIp`, `Ipv6SourceCidrIp`, and `SourcePrefixListId`.
-             * *   If you specify `SourceGroupId` but do not specify `SourceCidrIp` or `Ipv6SourceCidrIp`, you must set NicType to intranet.
-             * *   If you specify both `SourceGroupId` and `SourceCidrIp`, `SourceCidrIp` takes precedence.
-             * 
-             * When you specify this parameter, take note of the following items:
-             * 
-             * *   In advanced security groups, security groups cannot be used as authorization objects.
-             * *   In each basic security group, up to 20 security groups can be used as authorization objects in security group rules.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>sg-bp67acfmxa123b****</p>
              */
             public Builder sourceGroupId(String sourceGroupId) {
                 this.sourceGroupId = sourceGroupId;
@@ -998,13 +1072,15 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The Alibaba Cloud account that manages the source security group specified in the security group rule.
-             * <p>
+             * <p>The Alibaba Cloud account that manages the source security group specified in the security group rule.</p>
+             * <ul>
+             * <li>If both <code>SourceGroupOwnerAccount</code> and <code>SourceGroupOwnerId</code> are empty, access control on another security group in your Alibaba Cloud account is removed.</li>
+             * <li>If you specify <code>SourceCidrIp</code>, <code>SourceGroupOwnerAccount</code> is ignored.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * *   If both `SourceGroupOwnerAccount` and `SourceGroupOwnerId` are empty, access control on another security group in your Alibaba Cloud account is removed.
-             * *   If you specify `SourceCidrIp`, `SourceGroupOwnerAccount` is ignored.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p><a href="mailto:Test@aliyun.com">Test@aliyun.com</a></p>
              */
             public Builder sourceGroupOwnerAccount(String sourceGroupOwnerAccount) {
                 this.sourceGroupOwnerAccount = sourceGroupOwnerAccount;
@@ -1012,13 +1088,15 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that manages the source security group specified in the security group rule.
-             * <p>
+             * <p>The ID of the Alibaba Cloud account that manages the source security group specified in the security group rule.</p>
+             * <ul>
+             * <li>If both <code>SourceGroupOwnerId</code> and <code>SourceGroupOwnerAccount</code> are empty, access control on another security group in your Alibaba Cloud account is removed.</li>
+             * <li>If you specify <code>SourceCidrIp</code>, <code>SourceGroupOwnerId</code> is ignored.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * *   If both `SourceGroupOwnerId` and `SourceGroupOwnerAccount` are empty, access control on another security group in your Alibaba Cloud account is removed.
-             * *   If you specify `SourceCidrIp`, `SourceGroupOwnerId` is ignored.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>12345678910</p>
              */
             public Builder sourceGroupOwnerId(Long sourceGroupOwnerId) {
                 this.sourceGroupOwnerId = sourceGroupOwnerId;
@@ -1026,17 +1104,18 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The range of source port numbers for the protocols specified in the security group rule. Valid values:
-             * <p>
+             * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
+             * <ul>
+             * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
+             * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
+             * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
+             * </ul>
+             * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.
-             * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
-             * *   If you set IpProtocol to GRE, the port number range is -1/-1.
-             * *   If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.
-             * 
-             * This parameter is used to support quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>80/80</p>
              */
             public Builder sourcePortRange(String sourcePortRange) {
                 this.sourcePortRange = sourcePortRange;
@@ -1044,15 +1123,16 @@ public class RevokeSecurityGroupRequest extends Request {
             }
 
             /**
-             * The ID of the source prefix list of the security group rule. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
-             * <p>
+             * <p>The ID of the source prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
+             * <p>When you specify this parameter, take note of the following items:</p>
+             * <ul>
+             * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+             * <li>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</li>
+             * </ul>
+             * <p>Valid values of N: 1 to 100.</p>
              * 
-             * When you specify this parameter, take note of the following items:
-             * 
-             * *   If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section of the "Limits and quotas" topic.
-             * *   If you specify `SourceCidrIp`, `Ipv6SourceCidrIp`, or `SourceGroupId`, this parameter is ignored.
-             * 
-             * Valid values of N: 1 to 100.
+             * <strong>example:</strong>
+             * <p>pl-x1j1k5ykzqlixdcy****</p>
              */
             public Builder sourcePrefixListId(String sourcePrefixListId) {
                 this.sourcePrefixListId = sourcePrefixListId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityGroupAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityGroupAttributeRequest</p>
@@ -205,14 +206,16 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The direction in which the security group rule is applied. Valid values:
-         * <p>
+         * <p>The direction in which the security group rule is applied. Valid values:</p>
+         * <ul>
+         * <li>egress: outbound</li>
+         * <li>ingress: inbound</li>
+         * <li>all: outbound and inbound</li>
+         * </ul>
+         * <p>Default value: all.</p>
          * 
-         * *   egress: outbound
-         * *   ingress: inbound
-         * *   all: outbound and inbound
-         * 
-         * Default value: all.
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -221,13 +224,15 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <ul>
+         * <li>Minimum value: 10.</li>
+         * <li>Maximum value: 1000.</li>
+         * </ul>
+         * <p>Default value: 500.</p>
          * 
-         * *   Minimum value: 10.
-         * *   Maximum value: 1000.
-         * 
-         * Default value: 500.
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -236,7 +241,10 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -245,23 +253,24 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The network interface controller (NIC) type of the security group rule.
-         * <p>
+         * <p>The network interface controller (NIC) type of the security group rule.</p>
+         * <ul>
+         * <li><p>Valid values for rules of security groups in the classic network:</p>
+         * <ul>
+         * <li>internet (default)</li>
+         * <li>intranet</li>
+         * </ul>
+         * <p>**</p>
+         * <p><strong>Note</strong> You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.</p>
+         * </li>
+         * <li><p>When the security group is in a virtual private cloud (VPC), set the value to intranet, which is the default value for rules of security groups in VPCs.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> If you set this parameter to internet or leave this parameter empty, a value of intranet is automatically used.</p>
+         * </li>
+         * </ul>
          * 
-         * *   Valid values for rules of security groups in the classic network:
-         * 
-         *     *   internet (default)
-         *     *   intranet
-         * 
-         *     **
-         * 
-         *     **Note** You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.
-         * 
-         * *   When the security group is in a virtual private cloud (VPC), set the value to intranet, which is the default value for rules of security groups in VPCs.
-         * 
-         *     **
-         * 
-         *     **Note** If you set this parameter to internet or leave this parameter empty, a value of intranet is automatically used.
+         * <strong>example:</strong>
+         * <p>intranet</p>
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -288,7 +297,11 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -315,7 +328,11 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1gxw6bznjjvhu3****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

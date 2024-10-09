@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRenewalPriceRequest} extends {@link RequestModel}
  *
  * <p>DescribeRenewalPriceRequest</p>
@@ -204,12 +205,14 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The synchronized expiration date. If you specify this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.
-         * <p>
+         * <p>The synchronized expiration date. If you specify this parameter, the price for renewing a specified instance to the specified synchronized expiration date is queried. Valid values: 1 to 28.</p>
+         * <p>For information about how to synchronize the expiration dates of instances, see <a href="https://help.aliyun.com/document_detail/108486.html">Synchronize the expiration dates of instances</a>.</p>
+         * <blockquote>
+         * <p>The renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) and the <code>ExpectedRenewDay</code> parameter are mutually exclusive.</p>
+         * </blockquote>
          * 
-         * For information about how to synchronize the expiration dates of instances, see [Synchronize the expiration dates of instances](~~108486~~).
-         * 
-         * > The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder expectedRenewDay(Integer expectedRenewDay) {
             this.putQueryParameter("ExpectedRenewDay", expectedRenewDay);
@@ -236,15 +239,18 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The renewal period. Valid values:
-         * <p>
+         * <p>The renewal period. Valid values:</p>
+         * <ul>
+         * <li>Valid values when the <code>PriceUnit</code> parameter is set to <code>Month</code>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+         * <li>Valid values when the <code>PriceUnit</code> parameter is set to <code>Year</code>: 1, 2, 3.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * <blockquote>
+         * <p>The renewal period-related parameter pair (<code>Period</code> and <code>PeriodUnit</code>) and the <code>ExpectedRenewDay</code> parameter are mutually exclusive.</p>
+         * </blockquote>
          * 
-         * *   Valid values when the `PriceUnit` parameter is set to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
-         * *   Valid values when the `PriceUnit` parameter is set to `Year`: 1, 2, 3.
-         * 
-         * Default value: 1.
-         * 
-         * > The renewal period-related parameter pair (`Period` and `PeriodUnit`) and the `ExpectedRenewDay` parameter are mutually exclusive.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -253,13 +259,15 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The unit of the renewal period. Valid values:
-         * <p>
+         * <p>The unit of the renewal period. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * <p>Default value: Month.</p>
          * 
-         * *   Month
-         * *   Year
-         * 
-         * Default value: Month.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder priceUnit(String priceUnit) {
             this.putQueryParameter("PriceUnit", priceUnit);
@@ -268,7 +276,11 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,7 +289,11 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The ID of the resource. If the `ResourceType` parameter is set to`  instance `, the value of the `ResourceId` parameter is the ID of the specified instance.``
+         * <p>The ID of the resource. If the <code>ResourceType</code> parameter is set to<code> instance</code>, the value of the <code>ResourceId</code> parameter is the ID of the specified instance.``</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1f2o4ldh8l29zv****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -304,10 +320,11 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The type of the resource. Set the value to instance.
-         * <p>
+         * <p>The type of the resource. Set the value to instance.</p>
+         * <p>Default value: instance.</p>
          * 
-         * Default value: instance.
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

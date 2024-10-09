@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeManagedInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeManagedInstancesRequest</p>
@@ -287,7 +288,10 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the activation code.
+         * <p>The ID of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F7494****</p>
          */
         public Builder activationId(String activationId) {
             this.putQueryParameter("ActivationId", activationId);
@@ -296,7 +300,10 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The ID of managed instance N. Valid values of N: 1 to 50.
+         * <p>The ID of managed instance N. Valid values of N: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mi-hz018jrc1o0****</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -305,7 +312,10 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The internal or public IP address of the managed instance.
+         * <p>The internal or public IP address of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>192.168.**.**</code></p>
          */
         public Builder instanceIp(String instanceIp) {
             this.putQueryParameter("InstanceIp", instanceIp);
@@ -314,7 +324,10 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The name of the managed instance.
+         * <p>The name of the managed instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-webapp-server</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -323,12 +336,12 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page.
-         * <p>
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -337,7 +350,10 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -346,12 +362,15 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The operating system type of the managed instance. Valid values:
-         * <p>
+         * <p>The operating system type of the managed instance. Valid values:</p>
+         * <ul>
+         * <li>windows</li>
+         * <li>linux</li>
+         * <li>FreeBSD</li>
+         * </ul>
          * 
-         * *   windows
-         * *   linux
-         * *   FreeBSD
+         * <strong>example:</strong>
+         * <p>windows</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -378,12 +397,12 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -392,12 +411,12 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -406,10 +425,12 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).
-         * <p>
+         * <p>The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
-         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -418,7 +439,10 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the managed instance belongs.
+         * <p>The ID of the resource group to which the managed instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-123******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -445,7 +469,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The tags of the managed instance.
+         * <p>The tags of the managed instance.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -460,6 +484,12 @@ public class DescribeManagedInstancesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeManagedInstancesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeManagedInstancesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -499,12 +529,12 @@ public class DescribeManagedInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-             * <p>
+             * <p>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+             * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</p>
+             * <p>The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -512,10 +542,11 @@ public class DescribeManagedInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.
-             * <p>
+             * <p>The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

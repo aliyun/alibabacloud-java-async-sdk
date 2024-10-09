@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachNetworkInterfaceRequest} extends {@link RequestModel}
  *
  * <p>DetachNetworkInterfaceRequest</p>
@@ -177,10 +178,14 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the trunk ENI.
-         * <p>
+         * <p>The ID of the trunk ENI.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable for use.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  This parameter is unavailable for use.
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -189,7 +194,11 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the instance
+         * <p>The ID of the instance</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp67acfmxazb4p****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -216,7 +225,11 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,7 +256,10 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-f8zapqwj1v1j4ia3****</p>
          */
         public Builder trunkNetworkInstanceId(String trunkNetworkInstanceId) {
             this.putQueryParameter("TrunkNetworkInstanceId", trunkNetworkInstanceId);

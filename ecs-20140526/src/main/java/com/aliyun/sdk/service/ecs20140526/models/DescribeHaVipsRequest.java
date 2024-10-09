@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHaVipsRequest} extends {@link RequestModel}
  *
  * <p>DescribeHaVipsRequest</p>
@@ -154,7 +155,7 @@ public class DescribeHaVipsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * <p>This parameter is required.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -199,7 +200,7 @@ public class DescribeHaVipsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,6 +233,12 @@ public class DescribeHaVipsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHaVipsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeHaVipsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

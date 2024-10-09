@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateActivationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateActivationResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateActivationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The value of the activation code. The value is returned only once after the CreateActivation operation is called and cannot be queried afterward. Properly save the return value.
+         * <p>The value of the activation code. The value is returned only once after the CreateActivation operation is called and cannot be queried afterward. Properly save the return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a-hz0ch3SwhOlE1234+Xo32lAZC****</p>
          */
         public Builder activationCode(String activationCode) {
             this.activationCode = activationCode;
@@ -69,7 +73,10 @@ public class CreateActivationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the activation code.
+         * <p>The ID of the activation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
          */
         public Builder activationId(String activationId) {
             this.activationId = activationId;
@@ -77,7 +84,10 @@ public class CreateActivationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F1234****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

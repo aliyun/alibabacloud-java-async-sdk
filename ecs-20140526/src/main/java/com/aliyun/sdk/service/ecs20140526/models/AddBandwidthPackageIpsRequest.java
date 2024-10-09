@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBandwidthPackageIpsRequest} extends {@link RequestModel}
  *
  * <p>AddBandwidthPackageIpsRequest</p>
@@ -154,7 +155,7 @@ public class AddBandwidthPackageIpsRequest extends Request {
         } 
 
         /**
-         * BandwidthPackageId.
+         * <p>This parameter is required.</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -172,7 +173,7 @@ public class AddBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * IpCount.
+         * <p>This parameter is required.</p>
          */
         public Builder ipCount(String ipCount) {
             this.putQueryParameter("IpCount", ipCount);
@@ -199,7 +200,7 @@ public class AddBandwidthPackageIpsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

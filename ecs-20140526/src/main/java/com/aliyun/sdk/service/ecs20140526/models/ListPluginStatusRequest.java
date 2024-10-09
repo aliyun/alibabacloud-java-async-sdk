@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPluginStatusRequest} extends {@link RequestModel}
  *
  * <p>ListPluginStatusRequest</p>
@@ -217,7 +218,7 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -226,12 +227,12 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. 
-         * <p>
+         * <p>The maximum number of entries per page. </p>
+         * <p>Valid values: 1 to 50. </p>
+         * <p>Default value: 10.</p>
          * 
-         * Valid values: 1 to 50. 
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -240,16 +241,18 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.
-         * <p>
+         * <p>The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.</p>
+         * <ul>
+         * <li><p>If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> If this parameter is not specified, only a single instance ID can be specified.</p>
+         * </li>
+         * <li><p>If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.</p>
+         * </li>
+         * </ul>
          * 
-         * *   If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.
-         * 
-         *     **
-         * 
-         *     **Note** If this parameter is not specified, only a single instance ID can be specified.
-         * 
-         * *   If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.
+         * <strong>example:</strong>
+         * <p>testPluginName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -258,7 +261,10 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -285,11 +291,14 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
-         * *   Pages start from page 1.
-         * *   Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -298,11 +307,14 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Valid values: 1 to 50.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Valid values: 1 to 50.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -311,7 +323,11 @@ public class ListPluginStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

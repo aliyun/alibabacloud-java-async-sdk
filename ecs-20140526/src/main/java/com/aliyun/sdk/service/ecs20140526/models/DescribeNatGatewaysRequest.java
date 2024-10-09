@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNatGatewaysRequest} extends {@link RequestModel}
  *
  * <p>DescribeNatGatewaysRequest</p>
@@ -212,7 +213,7 @@ public class DescribeNatGatewaysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

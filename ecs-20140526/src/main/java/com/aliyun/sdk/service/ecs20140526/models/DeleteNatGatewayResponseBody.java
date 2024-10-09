@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNatGatewayResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteNatGatewayResponseBody</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EipFillProductRequest} extends {@link RequestModel}
  *
  * <p>EipFillProductRequest</p>
@@ -192,7 +193,7 @@ public class EipFillProductRequest extends Request {
         }
 
         /**
-         * data.
+         * <p>This parameter is required.</p>
          */
         public Builder data(String data) {
             this.putQueryParameter("data", data);

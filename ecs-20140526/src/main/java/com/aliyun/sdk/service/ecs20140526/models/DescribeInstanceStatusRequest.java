@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceStatusRequest</p>
@@ -204,7 +205,10 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The cluster ID of the instances.
+         * <p>The cluster ID of the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cls-bp67acfmxazb4p****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -213,7 +217,10 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. When you use this parameter to specify multiple instance IDs, separate the IDs with commas(,). Example: `InstanceId.1=i-bp1j4i2jdf3owlhe****, InstanceId.2=i-bp1j4i2jdf3o1234****`.
+         * <p>The IDs of the instances. When you use this parameter to specify multiple instance IDs, separate the IDs with commas(,). Example: <code>InstanceId.1=i-bp1j4i2jdf3owlhe****, InstanceId.2=i-bp1j4i2jdf3o1234****</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1j4i2jdf3owlhe****</p>
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -240,12 +247,12 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -254,10 +261,11 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 50.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,7 +274,11 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -293,7 +305,10 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The zone ID of the instances. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * <p>The zone ID of the instances. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-d</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

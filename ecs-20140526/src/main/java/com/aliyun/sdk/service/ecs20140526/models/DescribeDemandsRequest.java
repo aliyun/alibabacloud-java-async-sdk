@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDemandsRequest} extends {@link RequestModel}
  *
  * <p>DescribeDemandsRequest</p>
@@ -265,7 +266,10 @@ public class DescribeDemandsRequest extends Request {
         } 
 
         /**
-         * The ID of the demand. If this parameter is specified, other optional request parameters are ignored.
+         * <p>The ID of the demand. If this parameter is specified, other optional request parameters are ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed-bp11n21kq00sl71p****</p>
          */
         public Builder demandId(String demandId) {
             this.putQueryParameter("DemandId", demandId);
@@ -274,15 +278,18 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The status of the demand or filed resources. Valid values:
-         * <p>
+         * <p>The status of the demand or filed resources. Valid values:</p>
+         * <ul>
+         * <li>Creating: The demand is being created.</li>
+         * <li>Active: The filed resources are being supplied.</li>
+         * <li>Expired: The demand has expired.</li>
+         * <li>Finished: The filed resources are consumed.</li>
+         * <li>Refused: The demand is rejected. To view the reason for rejection, see the <code>Comment</code> parameter in the response.</li>
+         * <li>Cancelled: The demand is canceled.</li>
+         * </ul>
          * 
-         * *   Creating: The demand is being created.
-         * *   Active: The filed resources are being supplied.
-         * *   Expired: The demand has expired.
-         * *   Finished: The filed resources are consumed.
-         * *   Refused: The demand is rejected. To view the reason for rejection, see the `Comment` parameter in the response.
-         * *   Cancelled: The demand is canceled.
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         public Builder demandStatus(java.util.List < String > demandStatus) {
             this.putQueryParameter("DemandStatus", demandStatus);
@@ -291,11 +298,14 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The source of the instance. Valid values:
-         * <p>
+         * <p>The source of the instance. Valid values:</p>
+         * <ul>
+         * <li>Custom: filed on your own.</li>
+         * <li>System (default): filed by Alibaba Cloud.</li>
+         * </ul>
          * 
-         * *   Custom: filed on your own.
-         * *   System (default): filed by Alibaba Cloud.
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder demandType(String demandType) {
             this.putQueryParameter("DemandType", demandType);
@@ -304,11 +314,14 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values: Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
          * 
-         * *   true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.
-         * *   false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -317,11 +330,14 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go.</li>
+         * <li>PrePaid: subscription.</li>
+         * </ul>
          * 
-         * *   PostPaid: pay-as-you-go.
-         * *   PrePaid: subscription.
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -330,7 +346,10 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The instance type of the instance.
+         * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6.xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -339,7 +358,10 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The instance family of the instance.
+         * <p>The instance family of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6</p>
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -366,10 +388,11 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -378,10 +401,11 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
-         * <p>
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -390,7 +414,11 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -417,7 +445,7 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -426,7 +454,10 @@ public class DescribeDemandsRequest extends Request {
         }
 
         /**
-         * The zone ID of the resource. You can call the [DescribeZones](~~25610~~) operation to query the most recent region list.
+         * <p>The zone ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -441,6 +472,12 @@ public class DescribeDemandsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDemandsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeDemandsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -480,7 +517,12 @@ public class DescribeDemandsRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -488,7 +530,12 @@ public class DescribeDemandsRequest extends Request {
             }
 
             /**
-             * > This parameter is not publicly available.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

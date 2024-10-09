@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnapshotRequest} extends {@link RequestModel}
  *
  * <p>DeleteSnapshotRequest</p>
@@ -147,13 +148,15 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to force delete the snapshot that has been used to create disks. Valid values:
-         * <p>
+         * <p>Specifies whether to force delete the snapshot that has been used to create disks. Valid values:</p>
+         * <ul>
+         * <li>true: force deletes the snapshot. After the snapshot is force deleted, the disks created from the snapshot cannot be re-initialized.</li>
+         * <li>false: does not force delete the snapshot.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: force deletes the snapshot. After the snapshot is force deleted, the disks created from the snapshot cannot be re-initialized.
-         * *   false: does not force delete the snapshot.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -198,7 +201,11 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * The snapshot ID.
+         * <p>The snapshot ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1c0doj0taqyzzl****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

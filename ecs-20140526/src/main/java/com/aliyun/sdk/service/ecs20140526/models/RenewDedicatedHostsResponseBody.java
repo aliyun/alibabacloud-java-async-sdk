@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RenewDedicatedHostsResponseBody} extends {@link TeaModel}
  *
  * <p>RenewDedicatedHostsResponseBody</p>
@@ -37,7 +38,10 @@ public class RenewDedicatedHostsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2A4EA075-CB5B-41B7-B0EB-70D339F6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

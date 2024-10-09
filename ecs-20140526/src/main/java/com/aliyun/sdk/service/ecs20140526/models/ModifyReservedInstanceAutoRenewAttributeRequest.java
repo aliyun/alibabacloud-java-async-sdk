@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyReservedInstanceAutoRenewAttributeRequest} extends {@link RequestModel}
  *
  * <p>ModifyReservedInstanceAutoRenewAttributeRequest</p>
@@ -207,10 +208,11 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal cycle.
-         * <p>
+         * <p>The auto-renewal cycle.</p>
+         * <p>Valid values: 1 and 3.</p>
          * 
-         * Valid values: 1 and 3.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -219,10 +221,11 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The unit of the auto-renewal duration.
-         * <p>
+         * <p>The unit of the auto-renewal duration.</p>
+         * <p>Valid values: Year and Month.</p>
          * 
-         * Valid values: Year and Month.
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -231,7 +234,11 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the reserved instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the reserved instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -240,11 +247,14 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically renew the reserved instances. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically renew the reserved instances. Valid values:</p>
+         * <ul>
+         * <li>AutoRenewal: automatically renews the reserved instances.</li>
+         * <li>Normal: manually renews the reserved instances.</li>
+         * </ul>
          * 
-         * *   AutoRenewal: automatically renews the reserved instances.
-         * *   Normal: manually renews the reserved instances.
+         * <strong>example:</strong>
+         * <p>AutoRenewal</p>
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);
@@ -253,7 +263,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The IDs of the reserved instances.
+         * <p>The IDs of the reserved instances.</p>
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);

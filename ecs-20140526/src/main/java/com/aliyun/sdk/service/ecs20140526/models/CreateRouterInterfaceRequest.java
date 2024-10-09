@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateRouterInterfaceRequest} extends {@link RequestModel}
  *
  * <p>CreateRouterInterfaceRequest</p>
@@ -508,7 +509,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * OppositeRegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder oppositeRegionId(String oppositeRegionId) {
             this.putQueryParameter("OppositeRegionId", oppositeRegionId);
@@ -571,7 +572,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -598,7 +599,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>This parameter is required.</p>
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -607,7 +608,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * RouterId.
+         * <p>This parameter is required.</p>
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);
@@ -616,7 +617,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * RouterType.
+         * <p>This parameter is required.</p>
          */
         public Builder routerType(String routerType) {
             this.putQueryParameter("RouterType", routerType);
@@ -625,7 +626,7 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * Spec.
+         * <p>This parameter is required.</p>
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

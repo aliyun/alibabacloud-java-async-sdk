@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableActivationResponseBody} extends {@link TeaModel}
  *
  * <p>DisableActivationResponseBody</p>
@@ -49,7 +50,7 @@ public class DisableActivationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The time when the activation code was created.
+         * <p>The time when the activation code was created.</p>
          */
         public Builder activation(Activation activation) {
             this.activation = activation;
@@ -57,7 +58,10 @@ public class DisableActivationResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the activation code and its usage information.
+         * <p>Details about the activation code and its usage information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ECEEE12-56F1-4FBC-9AB1-890F74942176</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DisableActivationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DisableActivationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DisableActivationResponseBody</p>
+     */
     public static class Activation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivationId")
         private String activationId;
@@ -213,7 +223,10 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that were deregistered.
+             * <p>The number of instances that were deregistered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-20T06:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -221,7 +234,10 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of times that the activation code can be used to register managed instances.
+             * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deregisteredCount(Integer deregisteredCount) {
                 this.deregisteredCount = deregisteredCount;
@@ -229,7 +245,10 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of registered instances.
+             * <p>The number of registered instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -237,7 +256,10 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the hosts that can use the activation code.
+             * <p>The IP addresses of the hosts that can use the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -245,7 +267,10 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the activation code.
+             * <p>The description of the activation code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -253,7 +278,10 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the activation code is disabled.
+             * <p>Indicates whether the activation code is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-InstanceName</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -261,7 +289,10 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the activation code. Unit: hours.
+             * <p>The validity period of the activation code. Unit: hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.0.0/0</p>
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
@@ -269,7 +300,10 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The default prefix of the instance name.
+             * <p>The default prefix of the instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder registeredCount(Integer registeredCount) {
                 this.registeredCount = registeredCount;
@@ -277,7 +311,10 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The activation code ID.
+             * <p>The activation code ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder timeToLiveInHours(Long timeToLiveInHours) {
                 this.timeToLiveInHours = timeToLiveInHours;

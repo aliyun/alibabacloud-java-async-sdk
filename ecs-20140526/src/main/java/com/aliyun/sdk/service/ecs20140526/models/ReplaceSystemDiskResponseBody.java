@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReplaceSystemDiskResponseBody} extends {@link TeaModel}
  *
  * <p>ReplaceSystemDiskResponseBody</p>
@@ -49,7 +50,10 @@ public class ReplaceSystemDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the new system disk.
+         * <p>The ID of the new system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4ph****</p>
          */
         public Builder diskId(String diskId) {
             this.diskId = diskId;
@@ -57,7 +61,10 @@ public class ReplaceSystemDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

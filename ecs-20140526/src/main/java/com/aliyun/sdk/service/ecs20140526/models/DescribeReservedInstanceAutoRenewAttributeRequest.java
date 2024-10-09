@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReservedInstanceAutoRenewAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeReservedInstanceAutoRenewAttributeRequest</p>
@@ -165,7 +166,11 @@ public class DescribeReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the reserved instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the reserved instances. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +179,7 @@ public class DescribeReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The IDs of the reserved instances.
+         * <p>The IDs of the reserved instances.</p>
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSpotAdviceRequest} extends {@link RequestModel}
  *
  * <p>DescribeSpotAdviceRequest</p>
@@ -250,7 +251,10 @@ public class DescribeSpotAdviceRequest extends Request {
         } 
 
         /**
-         * The number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).
+         * <p>The number of vCPUs of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -259,7 +263,10 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The number of GPUs that a GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).
+         * <p>The number of GPUs that a GPU-accelerated instance has. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/108496.html">GPU-accelerated compute optimized instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder gpuAmount(Integer gpuAmount) {
             this.putQueryParameter("GpuAmount", gpuAmount);
@@ -268,15 +275,17 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The GPU type. Valid values:
-         * <p>
+         * <p>The GPU type. Valid values:</p>
+         * <ul>
+         * <li>NVIDIA P4</li>
+         * <li>NVIDIA T4</li>
+         * <li>NVIDIA P100</li>
+         * <li>NVIDIA V100</li>
+         * </ul>
+         * <p>This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see <a href="https://help.aliyun.com/document_detail/108496.html">GPU-accelerated compute-optimized and vGPU-accelerated instance families</a>.</p>
          * 
-         * *   NVIDIA P4
-         * *   NVIDIA T4
-         * *   NVIDIA P100
-         * *   NVIDIA V100
-         * 
-         * This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute-optimized and vGPU-accelerated instance families](~~108496~~).
+         * <strong>example:</strong>
+         * <p>NVIDIA T4</p>
          */
         public Builder gpuSpec(String gpuSpec) {
             this.putQueryParameter("GpuSpec", gpuSpec);
@@ -285,14 +294,16 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The level of the instance family. Valid values:
-         * <p>
+         * <p>The level of the instance family. Valid values:</p>
+         * <ul>
+         * <li>EntryLevel.</li>
+         * <li>EnterpriseLevel.</li>
+         * <li>CreditEntryLevel. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * </ul>
+         * <p>This parameter is left empty by default, which indicates that instance families at all levels are queried.</p>
          * 
-         * *   EntryLevel.
-         * *   EnterpriseLevel.
-         * *   CreditEntryLevel. For more information, see [Overview of burstable instances](~~59977~~).
-         * 
-         * This parameter is left empty by default, which indicates that instance families at all levels are queried.
+         * <strong>example:</strong>
+         * <p>EntryLevel</p>
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
@@ -301,7 +312,10 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The instance family. For more information, see [Instance families](~~25378~~).
+         * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5</p>
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -310,7 +324,10 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The instance types. You can specify up to 10 instance types.
+         * <p>The instance types. You can specify up to 10 instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5.large</p>
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -319,7 +336,10 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The memory size of the instance type. Unit: GiB. For more information, see [Instance families](~~25378~~).
+         * <p>The memory size of the instance type. Unit: GiB. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -328,7 +348,10 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The minimum number of vCPUs of the instance type. For more information, see [Instance families](~~25378~~).
+         * <p>The minimum number of vCPUs of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minCores(Integer minCores) {
             this.putQueryParameter("MinCores", minCores);
@@ -337,7 +360,10 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The minimum memory size of the instance type. For more information, see [Instance families](~~25378~~).
+         * <p>The minimum memory size of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder minMemory(Float minMemory) {
             this.putQueryParameter("MinMemory", minMemory);
@@ -364,7 +390,11 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -391,10 +421,11 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The zone ID.
-         * <p>
+         * <p>The zone ID.</p>
+         * <p>This parameter is left empty by default, which indicates that all zones in the specified region are queried.</p>
          * 
-         * This parameter is left empty by default, which indicates that all zones in the specified region are queried.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

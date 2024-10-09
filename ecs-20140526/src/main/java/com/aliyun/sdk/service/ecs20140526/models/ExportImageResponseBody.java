@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportImageResponseBody} extends {@link TeaModel}
  *
  * <p>ExportImageResponseBody</p>
@@ -61,7 +62,10 @@ public class ExportImageResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -69,7 +73,10 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8B26B44-0189-443E-9816-D951F596****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task that is used to export the custom image.
+         * <p>The ID of the task that is used to export the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tsk-bp67acfmxazb4p****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

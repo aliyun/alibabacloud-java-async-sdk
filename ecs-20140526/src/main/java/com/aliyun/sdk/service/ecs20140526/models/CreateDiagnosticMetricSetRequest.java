@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDiagnosticMetricSetRequest} extends {@link RequestModel}
  *
  * <p>CreateDiagnosticMetricSetRequest</p>
@@ -137,7 +138,10 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * testDescription
+         * <p>testDescription</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the request.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -146,7 +150,8 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The ID of diagnostic metric.
+         * <p>The ID of diagnostic metric.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder metricIds(java.util.List < String > metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
@@ -155,7 +160,10 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * my_dms
+         * <p>my_dms</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</p>
          */
         public Builder metricSetName(String metricSetName) {
             this.putQueryParameter("MetricSetName", metricSetName);
@@ -164,10 +172,12 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
+         * <p>The type of the resource.</p>
+         * <p>Default value: instance.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Default value: instance.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -176,7 +186,11 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The name of the diagnostic metric set.
+         * <p>The name of the diagnostic metric set.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

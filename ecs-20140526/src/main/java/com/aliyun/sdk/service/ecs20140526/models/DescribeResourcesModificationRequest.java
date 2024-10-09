@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeResourcesModificationRequest} extends {@link RequestModel}
  *
  * <p>DescribeResourcesModificationRequest</p>
@@ -261,7 +262,7 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The conditions.
+         * <p>The conditions.</p>
          */
         public Builder conditions(java.util.List < String > conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -270,7 +271,10 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The number of vCPUs of the instance type. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.
+         * <p>The number of vCPUs of the instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -279,11 +283,15 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>InstanceType</li>
+         * <li>SystemDisk</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   InstanceType
-         * *   SystemDisk
+         * <strong>example:</strong>
+         * <p>InstanceType</p>
          */
         public Builder destinationResource(String destinationResource) {
             this.putQueryParameter("DestinationResource", destinationResource);
@@ -292,7 +300,10 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The instance type. For more information, see [Overview of instance families](~~25378~~). You can also call the [DescribeInstanceTypes](~~25620~~) operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. You can also call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list. This parameter must be specified when DestinationResource is set to SystemDisk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -301,7 +312,10 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The memory size of the instance type. Unit: GiB. For information about the values, see [Overview of instance families](~~25378~~). This parameter takes effect only when DestinationResource is set to InstanceType.
+         * <p>The memory size of the instance type. Unit: GiB. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. This parameter takes effect only when DestinationResource is set to InstanceType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -310,22 +324,26 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * Specifies whether cross-cluster instance type upgrades are supported. Valid values:
-         * <p>
+         * <p>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <p>When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:</p>
+         * <ul>
+         * <li><p>Instance that resides in the classic network:</p>
+         * <ul>
+         * <li>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd* such as vda and vdb.</li>
+         * <li>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</li>
+         * </ul>
+         * </li>
+         * <li><p>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd* such as vda and vdb.</p>
+         * </li>
+         * </ul>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
-         * 
-         * When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:
-         * 
-         * *   Instance that resides in the classic network:
-         * 
-         *     *   For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
-         *     *   For [instance families available for purchase](~~25378~~), when the instance type of an instance is changed, the private IP address of the instance changes.
-         * 
-         * *   Instance that resides in a virtual private cloud (VPC): For [retired instance types](~~55263~~), when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder migrateAcrossZone(Boolean migrateAcrossZone) {
             this.putQueryParameter("MigrateAcrossZone", migrateAcrossZone);
@@ -334,19 +352,23 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The operation of changing resource configurations.
-         * <p>
+         * <p>The operation of changing resource configurations.</p>
+         * <ul>
+         * <li><p>Valid values for subscription resources:</p>
+         * <ul>
+         * <li>Upgrade: upgrades resources.</li>
+         * <li>Downgrade: downgrades resources.</li>
+         * <li>RenewDowngrade: renews and downgrades resources.</li>
+         * <li>RenewModify: renews an expired instance and changes its configurations.</li>
+         * </ul>
+         * </li>
+         * <li><p>Set the value to Upgrade for pay-as-you-go resources.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: Upgrade.</p>
          * 
-         * *   Valid values for subscription resources:
-         * 
-         *     *   Upgrade: upgrades resources.
-         *     *   Downgrade: downgrades resources.
-         *     *   RenewDowngrade: renews and downgrades resources.
-         *     *   RenewModify: renews an expired instance and changes its configurations.
-         * 
-         * *   Set the value to Upgrade for pay-as-you-go resources.
-         * 
-         * Default value: Upgrade.
+         * <strong>example:</strong>
+         * <p>Upgrade</p>
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -373,7 +395,11 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -382,7 +408,11 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The ID of the resource. For example, when DestinationResource is set to InstanceType, this parameter can be interpreted as InstanceId.
+         * <p>The ID of the resource. For example, when DestinationResource is set to InstanceType, this parameter can be interpreted as InstanceId.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -409,7 +439,10 @@ public class DescribeResourcesModificationRequest extends Request {
         }
 
         /**
-         * The zone ID.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

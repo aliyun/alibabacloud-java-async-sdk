@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStorageSetDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStorageSetDetailsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the disks or Shared Block Storage devices in the storage set.
+         * <p>Details about the disks or Shared Block Storage devices in the storage set.</p>
          */
         public Builder disks(Disks disks) {
             this.disks = disks;
@@ -93,7 +94,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49765E79-0D5D-4451-B3AE-580A20831846</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of storage sets.
+         * <p>The total number of storage sets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStorageSetDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageSetDetailsResponseBody</p>
+     */
     public static class Disk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -241,7 +260,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The category of the disk or Shared Block Storage device.
+             * <p>The category of the disk or Shared Block Storage device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -249,7 +271,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the disk or Shared Block Storage device was created.
+             * <p>The time when the disk or Shared Block Storage device was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-06-01T00:00:00Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -257,7 +282,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disk or Shared Block Storage device.
+             * <p>The ID of the disk or Shared Block Storage device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp67acfmxazb4p****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -265,7 +293,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the disk or Shared Block Storage device.
+             * <p>The name of the disk or Shared Block Storage device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDiskName</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -273,7 +304,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The region to which the disk or Shared Block Storage device belongs.
+             * <p>The region to which the disk or Shared Block Storage device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -281,7 +315,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the storage set.
+             * <p>The ID of the storage set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ss-bp67acfmxazb4p****</p>
              */
             public Builder storageSetId(String storageSetId) {
                 this.storageSetId = storageSetId;
@@ -289,7 +326,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of partitions in the storage set.
+             * <p>The number of partitions in the storage set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder storageSetPartitionNumber(Integer storageSetPartitionNumber) {
                 this.storageSetPartitionNumber = storageSetPartitionNumber;
@@ -297,7 +337,10 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The zone to which the disk or Shared Block Storage device belongs.
+             * <p>The zone to which the disk or Shared Block Storage device belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -311,6 +354,12 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStorageSetDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStorageSetDetailsResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disk")
         private java.util.List < Disk> disk;

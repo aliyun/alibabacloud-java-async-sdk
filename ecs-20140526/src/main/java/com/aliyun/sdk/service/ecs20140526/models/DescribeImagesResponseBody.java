@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImagesResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information of the images.
+         * <p>The information of the images.</p>
          */
         public Builder images(Images images) {
             this.images = images;
@@ -105,7 +106,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number returned.
+         * <p>The page number returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +117,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +128,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the image.
+         * <p>The region ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -129,7 +139,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66189103-EDB2-43E2-BB60-BFF2B62F4EB8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of images.
+         * <p>The total number of images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -213,7 +235,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Nvme</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -221,7 +246,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk that the check item may have.
+             * <p>The risk that the check item may have.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NVMe.NotInstallded</p>
              */
             public Builder riskCode(String riskCode) {
                 this.riskCode = riskCode;
@@ -229,13 +257,15 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the risk that the check item of the imported custom image has. If the check item is at risk, this parameter is returned. If the check item is not at risk, this parameter is not returned.
-             * <p>
+             * <p>The severity of the risk that the check item of the imported custom image has. If the check item is at risk, this parameter is returned. If the check item is not at risk, this parameter is not returned.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>High: The check item is a high-risk item that may affect the startup of the instance. We recommend that you handle the risk.</li>
+             * <li>Medium: The check item is a medium-risk item that may affect the startup performance or configurations of the instance. We recommend that you handle the risk.</li>
+             * </ul>
              * 
-             * Valid values:
-             * 
-             * *   High: The check item is a high-risk item that may affect the startup of the instance. We recommend that you handle the risk.
-             * *   Medium: The check item is a medium-risk item that may affect the startup performance or configurations of the instance. We recommend that you handle the risk.
+             * <strong>example:</strong>
+             * <p>High</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -243,7 +273,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The result of the check item.
+             * <p>The result of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Supported</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -257,6 +290,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
@@ -298,6 +337,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class DetectionOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
         private Items items;
@@ -337,7 +382,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The check items.
+             * <p>The check items.</p>
              */
             public Builder items(Items items) {
                 this.items = items;
@@ -345,11 +390,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the image check task. Valid values:
-             * <p>
+             * <p>The state of the image check task. Valid values:</p>
+             * <ul>
+             * <li>Processing</li>
+             * <li>Finished</li>
+             * </ul>
              * 
-             * *   Processing
-             * *   Finished
+             * <strong>example:</strong>
+             * <p>Processing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -363,6 +411,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class DiskDeviceMapping extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
@@ -486,10 +540,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The device name of the disk. Example: /dev/xvdb.
-             * <p>
+             * <p>The device name of the disk. Example: /dev/xvdb.</p>
              * 
-             * >  This parameter will be removed in the future. To ensure compatibility, we recommend that you use other parameters.
+             * <strong>example:</strong>
+             * <p>/dev/xvda</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -497,7 +551,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The format of the image.
+             * <p>The format of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qcow2</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -505,7 +562,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) bucket that contains the imported image file.
+             * <p>The Object Storage Service (OSS) bucket that contains the imported image file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testEcsImport</p>
              */
             public Builder importOSSBucket(String importOSSBucket) {
                 this.importOSSBucket = importOSSBucket;
@@ -513,7 +573,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS object that corresponds to the imported image file.
+             * <p>The OSS object that corresponds to the imported image file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imageImport</p>
              */
             public Builder importOSSObject(String importOSSObject) {
                 this.importOSSObject = importOSSObject;
@@ -521,7 +584,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the image copy task.
+             * <p>The progress of the image copy task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -529,7 +595,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining time of the image copy task. Unit: seconds.
+             * <p>The remaining time of the image copy task. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>233</p>
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -537,7 +606,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the disk. Unit: GiB.
+             * <p>The size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -545,7 +617,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * <p>The ID of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bp17ot2q7x72ggtw****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -553,7 +628,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image.
+             * <p>The type of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -567,6 +645,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class DiskDeviceMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskDeviceMapping")
         private java.util.List < DiskDeviceMapping> diskDeviceMapping;
@@ -608,6 +692,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class Features extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NvmeSupport")
         private String nvmeSupport;
@@ -635,11 +725,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String nvmeSupport; 
 
             /**
-             * Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:
-             * <p>
+             * <p>Indicates whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</p>
+             * <ul>
+             * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+             * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+             * </ul>
              * 
-             * *   supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.
-             * *   unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.
+             * <strong>example:</strong>
+             * <p>supported</p>
              */
             public Builder nvmeSupport(String nvmeSupport) {
                 this.nvmeSupport = nvmeSupport;
@@ -653,6 +746,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -692,7 +791,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the image.
+             * <p>The tag key of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DTS</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -700,7 +802,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the image.
+             * <p>The tag value of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Oracle</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -714,6 +819,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
@@ -755,6 +866,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class Image extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
@@ -1154,12 +1271,15 @@ public class DescribeImagesResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * The architecture of the image. Valid values:
-             * <p>
+             * <p>The architecture of the image. Valid values:</p>
+             * <ul>
+             * <li>i386</li>
+             * <li>x86_64</li>
+             * <li>arm64</li>
+             * </ul>
              * 
-             * *   i386
-             * *   x86\_64
-             * *   arm64
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -1167,11 +1287,16 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The boot mode of the image. Valid values:
-             * <p>
+             * <p>The boot mode of the image. Valid values:</p>
+             * <ul>
+             * <li>BIOS: Basic Input/Output System (BIOS)</li>
+             * <li>UEFI: Unified Extensible Firmware Interface (UEFI)</li>
+             * <li>UEFI-Preferred: BIOS and UEFI</li>
+             * </ul>
+             * <p>For information about the image boot modes, see <a href="~~2244655#b9caa9b8bb1wf~~">Image boot modes</a>.</p>
              * 
-             * *   BIOS: Basic Input/Output System (BIOS)
-             * *   UEFI: Unified Extensible Firmware Interface (UEFI)
+             * <strong>example:</strong>
+             * <p>BIOS</p>
              */
             public Builder bootMode(String bootMode) {
                 this.bootMode = bootMode;
@@ -1179,7 +1304,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image was created.
+             * <p>The time when the image was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-11-15T06:07:05Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1187,7 +1315,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image.
+             * <p>The description of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Archive log for Oracle</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1195,7 +1326,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the check performed on the image.
+             * <p>Details about the check performed on the image.</p>
              */
             public Builder detectionOptions(DetectionOptions detectionOptions) {
                 this.detectionOptions = detectionOptions;
@@ -1203,7 +1334,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The mappings between disks and snapshots in the image.
+             * <p>The mappings between disks and snapshots in the image.</p>
              */
             public Builder diskDeviceMappings(DiskDeviceMappings diskDeviceMappings) {
                 this.diskDeviceMappings = diskDeviceMappings;
@@ -1211,7 +1342,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The attributes of the image.
+             * <p>The attributes of the image.</p>
              */
             public Builder features(Features features) {
                 this.features = features;
@@ -1219,7 +1350,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image family.
+             * <p>The name of the image family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou-daily-update</p>
              */
             public Builder imageFamily(String imageFamily) {
                 this.imageFamily = imageFamily;
@@ -1227,7 +1361,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp1g7004ksh0oeuc****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1235,7 +1372,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testImageName</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1243,13 +1383,16 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the image. Valid values:
-             * <p>
+             * <p>The source of the image. Valid values:</p>
+             * <ul>
+             * <li>system: a public image provided by Alibaba Cloud</li>
+             * <li>self: a custom image that you created</li>
+             * <li>others: a shared image from another Alibaba Cloud account or a community image published by another Alibaba Cloud account</li>
+             * <li>marketplace: an Alibaba Cloud Marketplace image</li>
+             * </ul>
              * 
-             * *   system: a public image provided by Alibaba Cloud
-             * *   self: a custom image that you created
-             * *   others: a shared image from another Alibaba Cloud account or a community image published by another Alibaba Cloud account
-             * *   marketplace: an Alibaba Cloud Marketplace image
+             * <strong>example:</strong>
+             * <p>self</p>
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -1257,7 +1400,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only if you query shared images or community images.
+             * <p>The ID of the Alibaba Cloud account to which the image belongs. This parameter takes effect only if you query shared images or community images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890</p>
              */
             public Builder imageOwnerId(Long imageOwnerId) {
                 this.imageOwnerId = imageOwnerId;
@@ -1265,7 +1411,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image.
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -1273,7 +1422,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image is a copy of another image.
+             * <p>Indicates whether the image is a copy of another image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isCopied(Boolean isCopied) {
                 this.isCopied = isCopied;
@@ -1281,11 +1433,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values:
-             * <p>
+             * <p>Indicates whether the image is publicly available. Publicly available images include public images provided by Alibaba Cloud and custom images published as community images. Valid values:</p>
+             * <ul>
+             * <li>true: The image is publicly available.</li>
+             * <li>false: The image is publicly unavailable.</li>
+             * </ul>
              * 
-             * *   true: The image is publicly available.
-             * *   false: The image is publicly unavailable.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPublic(Boolean isPublic) {
                 this.isPublic = isPublic;
@@ -1293,7 +1448,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the custom image was shared to other Alibaba Cloud accounts.
+             * <p>Indicates whether the custom image was shared to other Alibaba Cloud accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSelfShared(String isSelfShared) {
                 this.isSelfShared = isSelfShared;
@@ -1301,7 +1459,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether you accepted the Terms of Service of the image service that corresponds to the product code.
+             * <p>Indicates whether you accepted the Terms of Service of the image service that corresponds to the product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isSubscribed(Boolean isSubscribed) {
                 this.isSubscribed = isSubscribed;
@@ -1309,7 +1470,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image supports cloud-init.
+             * <p>Indicates whether the image supports cloud-init.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSupportCloudinit(Boolean isSupportCloudinit) {
                 this.isSupportCloudinit = isSupportCloudinit;
@@ -1317,7 +1481,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image can be used on I/O optimized instances.
+             * <p>Indicates whether the image can be used on I/O optimized instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSupportIoOptimized(Boolean isSupportIoOptimized) {
                 this.isSupportIoOptimized = isSupportIoOptimized;
@@ -1325,11 +1492,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image supports logons of non-root users. Valid values:
-             * <p>
+             * <p>Indicates whether the image supports logons of non-root users. Valid values:</p>
+             * <ul>
+             * <li>true: The image supports logons of non-root users.</li>
+             * <li>false: The image does not support logons of non-root users.</li>
+             * </ul>
              * 
-             * *   true: The image supports logons of non-root users.
-             * *   false: The image does not support logons of non-root users.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder loginAsNonRootSupported(Boolean loginAsNonRootSupported) {
                 this.loginAsNonRootSupported = loginAsNonRootSupported;
@@ -1337,7 +1507,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the operating system in Chinese.
+             * <p>The display name of the operating system in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows Server 2016 Datacenter Edition 64-bit (Simplified Chinese)</p>
              */
             public Builder OSName(String OSName) {
                 this.OSName = OSName;
@@ -1345,7 +1518,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the operating system in English.
+             * <p>The display name of the operating system in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows Server  2016 Data Center Edition 64bit Chinese Edition</p>
              */
             public Builder OSNameEn(String OSNameEn) {
                 this.OSNameEn = OSNameEn;
@@ -1353,11 +1529,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
-             * <p>
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li>windows</li>
+             * <li>linux</li>
+             * </ul>
              * 
-             * *   windows
-             * *   linux
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -1365,7 +1544,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system platform.
+             * <p>The operating system platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows Server 2016</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -1373,7 +1555,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Marketplace product code of the image.
+             * <p>The Alibaba Cloud Marketplace product code of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test000****</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -1381,7 +1566,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The creation progress of the image. Unit: percent (%).
+             * <p>The creation progress of the image. Unit: percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1389,7 +1577,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the image belongs.
+             * <p>The ID of the resource group to which the image belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1397,7 +1588,13 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image. Unit: GiB.
+             * <p>The size of the image. Unit: GiB.</p>
+             * <blockquote>
+             * <p> If the image contains data disk snapshots, this parameter indicates only the size of the system disk snapshot contained in the image.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1405,13 +1602,16 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the image. Valid values:
-             * <p>
+             * <p>The state of the image. Valid values:</p>
+             * <ul>
+             * <li>UnAvailable: The image is unavailable.</li>
+             * <li>Available: The image is available.</li>
+             * <li>Creating: The image is being created.</li>
+             * <li>CreateFailed: The image failed to be created.</li>
+             * </ul>
              * 
-             * *   UnAvailable: The image is unavailable.
-             * *   Available: The image is available.
-             * *   Creating: The image is being created.
-             * *   CreateFailed: The image failed to be created.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1419,7 +1619,10 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the supplier that published the community image.
+             * <p>The name of the supplier that published the community image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestName</p>
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -1427,7 +1630,7 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the image.
+             * <p>The tags of the image.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1435,11 +1638,14 @@ public class DescribeImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image was used to create ECS instances. Valid values:
-             * <p>
+             * <p>Indicates whether the image was used to create ECS instances. Valid values:</p>
+             * <ul>
+             * <li>instance: The image was used to create one or more ECS instances.</li>
+             * <li>none: The image was not used to create ECS instances.</li>
+             * </ul>
              * 
-             * *   instance: The image was used to create one or more ECS instances.
-             * *   none: The image was not used to create ECS instances.
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -1453,6 +1659,12 @@ public class DescribeImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImagesResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;

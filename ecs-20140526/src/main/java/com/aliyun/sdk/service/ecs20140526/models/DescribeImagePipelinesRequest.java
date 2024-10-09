@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImagePipelinesRequest} extends {@link RequestModel}
  *
  * <p>DescribeImagePipelinesRequest</p>
@@ -218,7 +219,10 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The IDs of image templates. Valid values of N: 1 to 20.
+         * <p>The IDs of image templates. Valid values of N: 1 to 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip-2ze5tsl5bp6nf2b3****</p>
          */
         public Builder imagePipelineId(java.util.List < String > imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -227,10 +231,11 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 500.
-         * <p>
+         * <p>The number of entries per page. Valid values: 1 to 500.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -239,7 +244,10 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The name of the image template.
+         * <p>The name of the image template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImagePipeline</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -248,7 +256,10 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -275,7 +286,11 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The region ID of the image template. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the image template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -284,10 +299,13 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
-         * <p>
+         * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <blockquote>
+         * <p> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+         * </blockquote>
          * 
-         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -314,7 +332,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The tags of the image template.
+         * <p>The tags of the image template.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -329,6 +347,12 @@ public class DescribeImagePipelinesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImagePipelinesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImagePipelinesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -368,7 +392,10 @@ public class DescribeImagePipelinesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: 1 to 20.
+             * <p>The key of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -376,7 +403,10 @@ public class DescribeImagePipelinesRequest extends Request {
             }
 
             /**
-             * The value of tag N. Valid values of N: 1 to 20.
+             * <p>The value of tag N. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

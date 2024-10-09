@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVSwitchRequest} extends {@link RequestModel}
  *
  * <p>CreateVSwitchRequest</p>
@@ -196,7 +197,7 @@ public class CreateVSwitchRequest extends Request {
         } 
 
         /**
-         * CidrBlock.
+         * <p>This parameter is required.</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -277,7 +278,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>This parameter is required.</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -286,7 +287,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>This parameter is required.</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

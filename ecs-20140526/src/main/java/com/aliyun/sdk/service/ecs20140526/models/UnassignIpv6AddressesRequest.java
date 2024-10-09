@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnassignIpv6AddressesRequest} extends {@link RequestModel}
  *
  * <p>UnassignIpv6AddressesRequest</p>
@@ -176,7 +177,10 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * IPv6 address N to unassign. Valid values of N: 1 to 10.
+         * <p>IPv6 address N to unassign. Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001:db8:1234:1a00::***</p>
          */
         public Builder ipv6Address(java.util.List < String > ipv6Address) {
             this.putQueryParameter("Ipv6Address", ipv6Address);
@@ -185,7 +189,7 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * IPv6 prefix N to unassign. Valid values of N: 1 to 10.
+         * <p>IPv6 prefix N to unassign. Valid values of N: 1 to 10.</p>
          */
         public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
@@ -194,7 +198,11 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * <p>The ID of the ENI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp14v2sdd3v8ht****</p>
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -221,7 +229,11 @@ public class UnassignIpv6AddressesRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

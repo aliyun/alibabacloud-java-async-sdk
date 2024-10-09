@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AcceptInquiredSystemEventResponseBody} extends {@link TeaModel}
  *
  * <p>AcceptInquiredSystemEventResponseBody</p>
@@ -37,7 +38,10 @@ public class AcceptInquiredSystemEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4DD56CA6-6D75-4D33-BE34-E4A44EBE1C3D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageSupportInstanceTypesRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageSupportInstanceTypesRequest</p>
@@ -161,11 +162,14 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The scenario in which you want to use the image. Valid values:
-         * <p>
+         * <p>The scenario in which you want to use the image. Valid values:</p>
+         * <ul>
+         * <li>CreateEcs (default): instance creation</li>
+         * <li>ChangeOS: replacement of the system disk or operating system</li>
+         * </ul>
          * 
-         * - CreateEcs (default): instance creation
-         * - ChangeOS: replacement of the system disk or operating system
+         * <strong>example:</strong>
+         * <p>CreateEcs</p>
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -174,7 +178,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The number of vCPUs of the instance type.
+         * <p>The number of vCPUs of the instance type.</p>
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -183,7 +187,10 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-o6w3gy99qf89rkga****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -201,7 +208,11 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * Details about the instance types that are supported by the image.
+         * <p>Details about the instance types that are supported by the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,6 +245,12 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageSupportInstanceTypesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeImageSupportInstanceTypesRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -273,7 +290,10 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             private String value; 
 
             /**
-             * Filter N used to filter instance types.
+             * <p>Filter N used to filter instance types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imageId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,7 +301,10 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-o6w3gy99qf89rkga****</p>
              */
             public Builder value(String value) {
                 this.value = value;

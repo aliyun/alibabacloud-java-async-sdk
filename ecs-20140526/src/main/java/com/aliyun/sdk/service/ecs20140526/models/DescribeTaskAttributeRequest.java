@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskAttributeRequest} extends {@link RequestModel}
  *
  * <p>DescribeTaskAttributeRequest</p>
@@ -143,7 +144,11 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +175,11 @@ public class DescribeTaskAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the task. You can call the [DescribeTasks](~~25622~~) operation to query the list of task IDs.
+         * <p>The ID of the task. You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the list of task IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-ce946ntx4wr****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

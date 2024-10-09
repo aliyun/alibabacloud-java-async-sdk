@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePhysicalConnectionsRequest} extends {@link RequestModel}
  *
  * <p>DescribePhysicalConnectionsRequest</p>
@@ -235,7 +236,7 @@ public class DescribePhysicalConnectionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,6 +278,12 @@ public class DescribePhysicalConnectionsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePhysicalConnectionsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribePhysicalConnectionsRequest</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
