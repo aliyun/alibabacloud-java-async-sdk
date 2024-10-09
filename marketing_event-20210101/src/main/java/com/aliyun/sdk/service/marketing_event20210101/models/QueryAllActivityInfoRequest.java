@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAllActivityInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryAllActivityInfoRequest</p>
@@ -54,7 +55,7 @@ public class QueryAllActivityInfoRequest extends Request {
         } 
 
         /**
-         * ActivityId.
+         * <p>This parameter is required.</p>
          */
         public Builder activityId(String activityId) {
             this.putQueryParameter("ActivityId", activityId);

@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link FindGuestCredentialsRecordResponse} extends {@link TeaModel}
+ * {@link AddSumRecordFlowPopResponse} extends {@link TeaModel}
  *
- * <p>FindGuestCredentialsRecordResponse</p>
+ * <p>AddSumRecordFlowPopResponse</p>
  */
-public class FindGuestCredentialsRecordResponse extends Response {
+public class AddSumRecordFlowPopResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class FindGuestCredentialsRecordResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private FindGuestCredentialsRecordResponseBody body;
+    private AddSumRecordFlowPopResponseBody body;
 
-    private FindGuestCredentialsRecordResponse(BuilderImpl builder) {
+    private AddSumRecordFlowPopResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static FindGuestCredentialsRecordResponse create() {
+    public static AddSumRecordFlowPopResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class FindGuestCredentialsRecordResponse extends Response {
     /**
      * @return body
      */
-    public FindGuestCredentialsRecordResponseBody getBody() {
+    public AddSumRecordFlowPopResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<FindGuestCredentialsRecordResponse, Builder> {
+    public interface Builder extends Response.Builder<AddSumRecordFlowPopResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(FindGuestCredentialsRecordResponseBody body);
+        Builder body(AddSumRecordFlowPopResponseBody body);
 
         @Override
-        FindGuestCredentialsRecordResponse build();
+        AddSumRecordFlowPopResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<FindGuestCredentialsRecordResponse, Builder>
+            extends Response.BuilderImpl<AddSumRecordFlowPopResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private FindGuestCredentialsRecordResponseBody body; 
+        private AddSumRecordFlowPopResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(FindGuestCredentialsRecordResponse response) {
+        private BuilderImpl(AddSumRecordFlowPopResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class FindGuestCredentialsRecordResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(FindGuestCredentialsRecordResponseBody body) {
+        public Builder body(AddSumRecordFlowPopResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public FindGuestCredentialsRecordResponse build() {
-            return new FindGuestCredentialsRecordResponse(this);
+        public AddSumRecordFlowPopResponse build() {
+            return new AddSumRecordFlowPopResponse(this);
         } 
 
     } 

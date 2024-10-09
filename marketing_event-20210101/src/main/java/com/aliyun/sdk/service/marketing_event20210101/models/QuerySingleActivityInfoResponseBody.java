@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySingleActivityInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySingleActivityInfoResponseBody</p>
@@ -130,6 +131,12 @@ public class QuerySingleActivityInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QuerySingleActivityInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QuerySingleActivityInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityId")
         private Long activityId;

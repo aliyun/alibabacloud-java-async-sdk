@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FindGuestTicketRecordResponseBody} extends {@link TeaModel}
  *
  * <p>FindGuestTicketRecordResponseBody</p>
@@ -130,6 +131,12 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FindGuestTicketRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindGuestTicketRecordResponseBody</p>
+     */
     public static class LevelOneOwner extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerEmpIdOrTelephone")
         private String ownerEmpIdOrTelephone;
@@ -211,6 +218,12 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindGuestTicketRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindGuestTicketRecordResponseBody</p>
+     */
     public static class LevelThreeOwner extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerEmpIdOrTelephone")
         private String ownerEmpIdOrTelephone;
@@ -292,6 +305,12 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindGuestTicketRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindGuestTicketRecordResponseBody</p>
+     */
     public static class LevelTwoOwner extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerEmpIdOrTelephone")
         private String ownerEmpIdOrTelephone;
@@ -373,6 +392,12 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindGuestTicketRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindGuestTicketRecordResponseBody</p>
+     */
     public static class ChannelLevelInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelId")
         private Long channelId;
@@ -554,6 +579,12 @@ public class FindGuestTicketRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindGuestTicketRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindGuestTicketRecordResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChannelLevelInfo")
         private ChannelLevelInfo channelLevelInfo;

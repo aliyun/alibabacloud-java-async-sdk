@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SyncSignInInfoRequest} extends {@link RequestModel}
  *
  * <p>SyncSignInInfoRequest</p>
@@ -69,7 +70,7 @@ public class SyncSignInInfoRequest extends Request {
         } 
 
         /**
-         * ActivityId.
+         * <p>This parameter is required.</p>
          */
         public Builder activityId(String activityId) {
             this.putQueryParameter("ActivityId", activityId);
@@ -78,7 +79,7 @@ public class SyncSignInInfoRequest extends Request {
         }
 
         /**
-         * QRCode.
+         * <p>This parameter is required.</p>
          */
         public Builder QRCode(String QRCode) {
             this.putQueryParameter("QRCode", QRCode);
