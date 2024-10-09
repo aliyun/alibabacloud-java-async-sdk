@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CredentialVerifyResponseBody} extends {@link TeaModel}
  *
  * <p>CredentialVerifyResponseBody</p>
@@ -110,12 +111,18 @@ public class CredentialVerifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CredentialVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CredentialVerifyResponseBody</p>
+     */
     public static class VlResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         @com.aliyun.core.annotation.NameInMap("VlContent")
-        private java.util.Map < String, ? > vlContent;
+        private String vlContent;
 
         private VlResult(Builder builder) {
             this.success = builder.success;
@@ -140,13 +147,13 @@ public class CredentialVerifyResponseBody extends TeaModel {
         /**
          * @return vlContent
          */
-        public java.util.Map < String, ? > getVlContent() {
+        public String getVlContent() {
             return this.vlContent;
         }
 
         public static final class Builder {
             private Boolean success; 
-            private java.util.Map < String, ? > vlContent; 
+            private String vlContent; 
 
             /**
              * Success.
@@ -159,7 +166,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             /**
              * VlContent.
              */
-            public Builder vlContent(java.util.Map < String, ? > vlContent) {
+            public Builder vlContent(String vlContent) {
                 this.vlContent = vlContent;
                 return this;
             }
@@ -171,6 +178,12 @@ public class CredentialVerifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CredentialVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CredentialVerifyResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaterialInfo")
         private String materialInfo;

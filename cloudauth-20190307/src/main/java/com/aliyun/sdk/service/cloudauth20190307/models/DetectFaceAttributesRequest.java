@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectFaceAttributesRequest} extends {@link RequestModel}
  *
  * <p>DetectFaceAttributesRequest</p>
@@ -100,7 +101,10 @@ public class DetectFaceAttributesRequest extends Request {
         }
 
         /**
-         * MaterialValue.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</a></p>
          */
         public Builder materialValue(String materialValue) {
             this.putBodyParameter("MaterialValue", materialValue);

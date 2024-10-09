@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyMaterialRequest} extends {@link RequestModel}
  *
  * <p>VerifyMaterialRequest</p>
@@ -179,7 +180,10 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39ecf51e-2f81-4dc5-90ee-ff86125b****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -188,7 +192,10 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RPMinTest</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -197,7 +204,10 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * FaceImageUrl.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg">http://image-demo.img-cn-hangzhou.aliyuncs.com/example.jpg</a></p>
          */
         public Builder faceImageUrl(String faceImageUrl) {
             this.putQueryParameter("FaceImageUrl", faceImageUrl);
@@ -224,7 +234,10 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * IdCardNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02343218901123****</p>
          */
         public Builder idCardNumber(String idCardNumber) {
             this.putQueryParameter("IdCardNumber", idCardNumber);
@@ -233,7 +246,7 @@ public class VerifyMaterialRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

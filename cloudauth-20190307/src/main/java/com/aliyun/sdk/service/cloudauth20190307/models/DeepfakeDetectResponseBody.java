@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeepfakeDetectResponseBody} extends {@link TeaModel}
  *
  * <p>DeepfakeDetectResponseBody</p>
@@ -89,7 +90,10 @@ public class DeepfakeDetectResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class DeepfakeDetectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeepfakeDetectResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeepfakeDetectResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private String result;

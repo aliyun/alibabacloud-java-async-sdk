@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Mobile3MetaSimpleVerifyRequest} extends {@link RequestModel}
  *
  * <p>Mobile3MetaSimpleVerifyRequest</p>

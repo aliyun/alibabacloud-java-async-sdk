@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageQueryWhiteListSettingResponseBody} extends {@link TeaModel}
  *
  * <p>PageQueryWhiteListSettingResponseBody</p>
@@ -165,7 +166,10 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,6 +214,12 @@ public class PageQueryWhiteListSettingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PageQueryWhiteListSettingResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageQueryWhiteListSettingResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertNo")
         private String certNo;

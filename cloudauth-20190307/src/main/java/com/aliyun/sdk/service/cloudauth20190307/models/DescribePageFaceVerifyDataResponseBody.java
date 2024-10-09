@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePageFaceVerifyDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePageFaceVerifyDataResponseBody</p>
@@ -210,6 +211,12 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePageFaceVerifyDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePageFaceVerifyDataResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;

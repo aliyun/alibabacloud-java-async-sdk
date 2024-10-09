@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaceVerifyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFaceVerifyResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFaceVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaceVerifyResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceRisk")
         private String deviceRisk;

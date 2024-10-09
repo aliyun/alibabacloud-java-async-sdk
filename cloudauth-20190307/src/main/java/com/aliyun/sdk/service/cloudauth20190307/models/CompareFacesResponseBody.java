@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompareFacesResponseBody} extends {@link TeaModel}
  *
  * <p>CompareFacesResponseBody</p>
@@ -130,6 +131,12 @@ public class CompareFacesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CompareFacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CompareFacesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfidenceThresholds")
         private String confidenceThresholds;

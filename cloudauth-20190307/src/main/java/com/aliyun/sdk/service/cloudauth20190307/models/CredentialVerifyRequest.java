@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CredentialVerifyRequest} extends {@link RequestModel}
  *
  * <p>CredentialVerifyRequest</p>
@@ -391,6 +392,12 @@ public class CredentialVerifyRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CredentialVerifyRequest} extends {@link TeaModel}
+     *
+     * <p>CredentialVerifyRequest</p>
+     */
     public static class MerchantDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;

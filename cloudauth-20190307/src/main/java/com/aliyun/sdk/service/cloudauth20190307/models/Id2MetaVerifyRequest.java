@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Id2MetaVerifyRequest} extends {@link RequestModel}
  *
  * <p>Id2MetaVerifyRequest</p>

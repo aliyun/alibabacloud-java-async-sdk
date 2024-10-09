@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VehicleInsureQueryResponseBody} extends {@link TeaModel}
  *
  * <p>VehicleInsureQueryResponseBody</p>
@@ -110,6 +111,12 @@ public class VehicleInsureQueryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VehicleInsureQueryResponseBody} extends {@link TeaModel}
+     *
+     * <p>VehicleInsureQueryResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;

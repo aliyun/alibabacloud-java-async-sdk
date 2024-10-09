@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VehicleMetaVerifyV2Response} extends {@link TeaModel}
  *
  * <p>VehicleMetaVerifyV2Response</p>

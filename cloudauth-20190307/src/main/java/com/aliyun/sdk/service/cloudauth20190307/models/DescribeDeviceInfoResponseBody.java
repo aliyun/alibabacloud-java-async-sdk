@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDeviceInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDeviceInfoResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDeviceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceInfoResponseBody</p>
+     */
     public static class DeviceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginDay")
         private String beginDay;
@@ -251,6 +258,12 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDeviceInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDeviceInfoResponseBody</p>
+     */
     public static class DeviceInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeviceInfo")
         private java.util.List < DeviceInfo> deviceInfo;

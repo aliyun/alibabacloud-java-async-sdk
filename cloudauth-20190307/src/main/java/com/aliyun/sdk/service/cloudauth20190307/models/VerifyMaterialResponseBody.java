@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyMaterialResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyMaterialResponseBody</p>
@@ -150,6 +151,12 @@ public class VerifyMaterialResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyMaterialResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyMaterialResponseBody</p>
+     */
     public static class IdCardInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -371,6 +378,12 @@ public class VerifyMaterialResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link VerifyMaterialResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyMaterialResponseBody</p>
+     */
     public static class Material extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaceGlobalUrl")
         private String faceGlobalUrl;

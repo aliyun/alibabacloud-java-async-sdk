@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVerifySettingRequest} extends {@link RequestModel}
  *
  * <p>CreateVerifySettingRequest</p>
@@ -126,7 +127,7 @@ public class CreateVerifySettingRequest extends Request {
         } 
 
         /**
-         * BizName.
+         * <p>This parameter is required.</p>
          */
         public Builder bizName(String bizName) {
             this.putQueryParameter("BizName", bizName);
@@ -135,7 +136,10 @@ public class CreateVerifySettingRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserRegister</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -171,7 +175,10 @@ public class CreateVerifySettingRequest extends Request {
         }
 
         /**
-         * Solution.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RPBasic</p>
          */
         public Builder solution(String solution) {
             this.putQueryParameter("Solution", solution);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSmartStatisticsPageListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSmartStatisticsPageListResponseBody</p>
@@ -150,6 +151,12 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSmartStatisticsPageListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSmartStatisticsPageListResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Date")
         private String date;

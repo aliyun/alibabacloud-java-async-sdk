@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CompareFaceVerifyResponseBody} extends {@link TeaModel}
  *
  * <p>CompareFaceVerifyResponseBody</p>
@@ -110,6 +111,12 @@ public class CompareFaceVerifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CompareFaceVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>CompareFaceVerifyResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertifyId")
         private String certifyId;

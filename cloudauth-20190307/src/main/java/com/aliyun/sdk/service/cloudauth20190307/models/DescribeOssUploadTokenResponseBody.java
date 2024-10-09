@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOssUploadTokenResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeOssUploadTokenResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeOssUploadTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOssUploadTokenResponseBody</p>
+     */
     public static class OssUploadToken extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;

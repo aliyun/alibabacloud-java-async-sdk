@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AIGCFaceVerify  AIGCFaceVerifyRequest
+     * @return AIGCFaceVerifyResponse
+     */
     @Override
     public CompletableFuture<AIGCFaceVerifyResponse> aIGCFaceVerify(AIGCFaceVerifyRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BankMetaVerify  BankMetaVerifyRequest
+     * @return BankMetaVerifyResponse
+     */
     @Override
     public CompletableFuture<BankMetaVerifyResponse> bankMetaVerify(BankMetaVerifyRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CompareFaceVerify  CompareFaceVerifyRequest
+     * @return CompareFaceVerifyResponse
+     */
     @Override
     public CompletableFuture<CompareFaceVerifyResponse> compareFaceVerify(CompareFaceVerifyRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CompareFaces  CompareFacesRequest
+     * @return CompareFacesResponse
+     */
     @Override
     public CompletableFuture<CompareFacesResponse> compareFaces(CompareFacesRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAuthKey  CreateAuthKeyRequest
+     * @return CreateAuthKeyResponse
+     */
     @Override
     public CompletableFuture<CreateAuthKeyResponse> createAuthKey(CreateAuthKeyRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVerifySetting  CreateVerifySettingRequest
+     * @return CreateVerifySettingResponse
+     */
     @Override
     public CompletableFuture<CreateVerifySettingResponse> createVerifySetting(CreateVerifySettingRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CredentialVerify  CredentialVerifyRequest
+     * @return CredentialVerifyResponse
+     */
     @Override
     public CompletableFuture<CredentialVerifyResponse> credentialVerify(CredentialVerifyRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeepfakeDetect  DeepfakeDetectRequest
+     * @return DeepfakeDetectResponse
+     */
     @Override
     public CompletableFuture<DeepfakeDetectResponse> deepfakeDetect(DeepfakeDetectRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDeviceInfo  DescribeDeviceInfoRequest
+     * @return DescribeDeviceInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeDeviceInfoResponse> describeDeviceInfo(DescribeDeviceInfoRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFaceVerify  DescribeFaceVerifyRequest
+     * @return DescribeFaceVerifyResponse
+     */
     @Override
     public CompletableFuture<DescribeFaceVerifyResponse> describeFaceVerify(DescribeFaceVerifyRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeOssUploadToken  DescribeOssUploadTokenRequest
+     * @return DescribeOssUploadTokenResponse
+     */
     @Override
     public CompletableFuture<DescribeOssUploadTokenResponse> describeOssUploadToken(DescribeOssUploadTokenRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePageFaceVerifyData  DescribePageFaceVerifyDataRequest
+     * @return DescribePageFaceVerifyDataResponse
+     */
     @Override
     public CompletableFuture<DescribePageFaceVerifyDataResponse> describePageFaceVerifyData(DescribePageFaceVerifyDataRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSmartStatisticsPageList  DescribeSmartStatisticsPageListRequest
+     * @return DescribeSmartStatisticsPageListResponse
+     */
     @Override
     public CompletableFuture<DescribeSmartStatisticsPageListResponse> describeSmartStatisticsPageList(DescribeSmartStatisticsPageListRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVerifyResult  DescribeVerifyResultRequest
+     * @return DescribeVerifyResultResponse
+     */
     @Override
     public CompletableFuture<DescribeVerifyResultResponse> describeVerifyResult(DescribeVerifyResultRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVerifySDK  DescribeVerifySDKRequest
+     * @return DescribeVerifySDKResponse
+     */
     @Override
     public CompletableFuture<DescribeVerifySDKResponse> describeVerifySDK(DescribeVerifySDKRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVerifyToken  DescribeVerifyTokenRequest
+     * @return DescribeVerifyTokenResponse
+     */
     @Override
     public CompletableFuture<DescribeVerifyTokenResponse> describeVerifyToken(DescribeVerifyTokenRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DetectFaceAttributes  DetectFaceAttributesRequest
+     * @return DetectFaceAttributesResponse
+     */
     @Override
     public CompletableFuture<DetectFaceAttributesResponse> detectFaceAttributes(DetectFaceAttributesRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Id2MetaVerify  Id2MetaVerifyRequest
+     * @return Id2MetaVerifyResponse
+     */
     @Override
     public CompletableFuture<Id2MetaVerifyResponse> id2MetaVerify(Id2MetaVerifyRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InitFaceVerify  InitFaceVerifyRequest
+     * @return InitFaceVerifyResponse
+     */
     @Override
     public CompletableFuture<InitFaceVerifyResponse> initFaceVerify(InitFaceVerifyRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InsertWhiteListSetting  InsertWhiteListSettingRequest
+     * @return InsertWhiteListSettingResponse
+     */
     @Override
     public CompletableFuture<InsertWhiteListSettingResponse> insertWhiteListSetting(InsertWhiteListSettingRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of LivenessFaceVerify  LivenessFaceVerifyRequest
+     * @return LivenessFaceVerifyResponse
+     */
     @Override
     public CompletableFuture<LivenessFaceVerifyResponse> livenessFaceVerify(LivenessFaceVerifyRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Mobile3MetaDetailVerify  Mobile3MetaDetailVerifyRequest
+     * @return Mobile3MetaDetailVerifyResponse
+     */
     @Override
     public CompletableFuture<Mobile3MetaDetailVerifyResponse> mobile3MetaDetailVerify(Mobile3MetaDetailVerifyRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Mobile3MetaSimpleVerify  Mobile3MetaSimpleVerifyRequest
+     * @return Mobile3MetaSimpleVerifyResponse
+     */
     @Override
     public CompletableFuture<Mobile3MetaSimpleVerifyResponse> mobile3MetaSimpleVerify(Mobile3MetaSimpleVerifyRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MobileDetect  MobileDetectRequest
+     * @return MobileDetectResponse
+     */
     @Override
     public CompletableFuture<MobileDetectResponse> mobileDetect(MobileDetectRequest request) {
         try {
@@ -375,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MobileOnlineStatus  MobileOnlineStatusRequest
+     * @return MobileOnlineStatusResponse
+     */
     @Override
     public CompletableFuture<MobileOnlineStatusResponse> mobileOnlineStatus(MobileOnlineStatusRequest request) {
         try {
@@ -389,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MobileOnlineTime  MobileOnlineTimeRequest
+     * @return MobileOnlineTimeResponse
+     */
     @Override
     public CompletableFuture<MobileOnlineTimeResponse> mobileOnlineTime(MobileOnlineTimeRequest request) {
         try {
@@ -403,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyDeviceInfo  ModifyDeviceInfoRequest
+     * @return ModifyDeviceInfoResponse
+     */
     @Override
     public CompletableFuture<ModifyDeviceInfoResponse> modifyDeviceInfo(ModifyDeviceInfoRequest request) {
         try {
@@ -417,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PageQueryWhiteListSetting  PageQueryWhiteListSettingRequest
+     * @return PageQueryWhiteListSettingResponse
+     */
     @Override
     public CompletableFuture<PageQueryWhiteListSettingResponse> pageQueryWhiteListSetting(PageQueryWhiteListSettingRequest request) {
         try {
@@ -431,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveWhiteListSetting  RemoveWhiteListSettingRequest
+     * @return RemoveWhiteListSettingResponse
+     */
     @Override
     public CompletableFuture<RemoveWhiteListSettingResponse> removeWhiteListSetting(RemoveWhiteListSettingRequest request) {
         try {
@@ -445,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of Vehicle5ItemQuery  Vehicle5ItemQueryRequest
+     * @return Vehicle5ItemQueryResponse
+     */
     @Override
     public CompletableFuture<Vehicle5ItemQueryResponse> vehicle5ItemQuery(Vehicle5ItemQueryRequest request) {
         try {
@@ -459,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VehicleInsureQuery  VehicleInsureQueryRequest
+     * @return VehicleInsureQueryResponse
+     */
     @Override
     public CompletableFuture<VehicleInsureQueryResponse> vehicleInsureQuery(VehicleInsureQueryRequest request) {
         try {
@@ -473,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VehicleMetaVerify  VehicleMetaVerifyRequest
+     * @return VehicleMetaVerifyResponse
+     */
     @Override
     public CompletableFuture<VehicleMetaVerifyResponse> vehicleMetaVerify(VehicleMetaVerifyRequest request) {
         try {
@@ -487,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VehicleMetaVerifyV2  VehicleMetaVerifyV2Request
+     * @return VehicleMetaVerifyV2Response
+     */
     @Override
     public CompletableFuture<VehicleMetaVerifyV2Response> vehicleMetaVerifyV2(VehicleMetaVerifyV2Request request) {
         try {
@@ -501,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VehicleQuery  VehicleQueryRequest
+     * @return VehicleQueryResponse
+     */
     @Override
     public CompletableFuture<VehicleQueryResponse> vehicleQuery(VehicleQueryRequest request) {
         try {
@@ -515,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyMaterial  VerifyMaterialRequest
+     * @return VerifyMaterialResponse
+     */
     @Override
     public CompletableFuture<VerifyMaterialResponse> verifyMaterial(VerifyMaterialRequest request) {
         try {

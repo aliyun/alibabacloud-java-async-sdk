@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVerifyResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeVerifyResultRequest</p>
@@ -69,7 +70,10 @@ public class DescribeVerifyResultRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39ecf51e-2f81-4dc5-90ee-ff86125b****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -78,7 +82,10 @@ public class DescribeVerifyResultRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FVBioOnlyTest</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);

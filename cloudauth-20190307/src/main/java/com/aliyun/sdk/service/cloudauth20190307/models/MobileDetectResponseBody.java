@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link MobileDetectResponseBody} extends {@link TeaModel}
  *
  * <p>MobileDetectResponseBody</p>
@@ -110,6 +111,12 @@ public class MobileDetectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link MobileDetectResponseBody} extends {@link TeaModel}
+     *
+     * <p>MobileDetectResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
@@ -231,6 +238,12 @@ public class MobileDetectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link MobileDetectResponseBody} extends {@link TeaModel}
+     *
+     * <p>MobileDetectResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeCount")
         private String chargeCount;

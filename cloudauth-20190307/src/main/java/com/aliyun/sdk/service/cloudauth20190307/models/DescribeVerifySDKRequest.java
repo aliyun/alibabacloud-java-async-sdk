@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVerifySDKRequest} extends {@link RequestModel}
  *
  * <p>DescribeVerifySDKRequest</p>
@@ -54,7 +55,10 @@ public class DescribeVerifySDKRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1KQMcnLd4m37LN2D0F0WCD</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VehicleMetaVerifyResponseBody} extends {@link TeaModel}
  *
  * <p>VehicleMetaVerifyResponseBody</p>
@@ -89,7 +90,10 @@ public class VehicleMetaVerifyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FC3D6AC-9FED-4311-8DA7-C4BF4*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class VehicleMetaVerifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VehicleMetaVerifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>VehicleMetaVerifyResponseBody</p>
+     */
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;

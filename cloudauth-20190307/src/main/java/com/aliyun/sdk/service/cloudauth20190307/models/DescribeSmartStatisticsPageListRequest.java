@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSmartStatisticsPageListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSmartStatisticsPageListRequest</p>
@@ -128,7 +129,10 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -137,7 +141,10 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-16 23:59:59 +0800</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -146,7 +153,10 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +165,10 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36**01</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -173,7 +186,10 @@ public class DescribeSmartStatisticsPageListRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-11-01 00:00:00 +0800</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetectFaceAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DetectFaceAttributesResponseBody</p>
@@ -130,6 +131,12 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DetectFaceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectFaceAttributesResponseBody</p>
+     */
     public static class Headpose extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PitchAngle")
         private Float pitchAngle;
@@ -211,6 +218,12 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetectFaceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectFaceAttributesResponseBody</p>
+     */
     public static class Smiling extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
@@ -272,6 +285,12 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetectFaceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectFaceAttributesResponseBody</p>
+     */
     public static class FaceAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Blur")
         private Float blur;
@@ -453,6 +472,12 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetectFaceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectFaceAttributesResponseBody</p>
+     */
     public static class FaceRect extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
@@ -554,6 +579,12 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetectFaceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectFaceAttributesResponseBody</p>
+     */
     public static class FaceAttributesDetectInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaceAttributes")
         private FaceAttributes faceAttributes;
@@ -615,6 +646,12 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetectFaceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectFaceAttributesResponseBody</p>
+     */
     public static class FaceInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaceAttributesDetectInfo")
         private java.util.List < FaceAttributesDetectInfo> faceAttributesDetectInfo;
@@ -656,6 +693,12 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DetectFaceAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DetectFaceAttributesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FaceInfos")
         private FaceInfos faceInfos;
