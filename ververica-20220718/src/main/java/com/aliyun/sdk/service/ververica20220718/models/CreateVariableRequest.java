@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVariableRequest} extends {@link RequestModel}
  *
  * <p>CreateVariableRequest</p>
@@ -84,7 +85,11 @@ public class CreateVariableRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +98,8 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * The parameter that is used to create the variable.
+         * <p>The parameter that is used to create the variable.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(Variable body) {
             this.putBodyParameter("body", body);
@@ -102,7 +108,11 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bda1c4a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

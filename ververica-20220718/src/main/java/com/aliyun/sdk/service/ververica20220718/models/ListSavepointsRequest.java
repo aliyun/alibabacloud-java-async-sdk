@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSavepointsRequest} extends {@link RequestModel}
  *
  * <p>ListSavepointsRequest</p>
@@ -126,7 +127,11 @@ public class ListSavepointsRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -135,7 +140,10 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * The deployment ID. This parameter is optional.
+         * <p>The deployment ID. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88a8fc49-e090-430a-85d8-3ee8c79c****</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.putQueryParameter("deploymentId", deploymentId);
@@ -144,7 +152,10 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * The job ID. This parameter is optional.
+         * <p>The job ID. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99a8fc49-e090-430a-85d8-3ee8c79c****</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("jobId", jobId);
@@ -153,7 +164,10 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * The page number. Minimum value: 1. Default value: 1.
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -162,7 +176,10 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -171,7 +188,11 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

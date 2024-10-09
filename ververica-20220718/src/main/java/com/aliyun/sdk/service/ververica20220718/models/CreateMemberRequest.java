@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMemberRequest} extends {@link RequestModel}
  *
  * <p>CreateMemberRequest</p>
@@ -83,7 +84,11 @@ public class CreateMemberRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-gs3rgla9-default</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -92,7 +97,7 @@ public class CreateMemberRequest extends Request {
         }
 
         /**
-         * The mappings between the ID and permissions of the member.
+         * <p>The mappings between the ID and permissions of the member.</p>
          */
         public Builder body(Member body) {
             this.putBodyParameter("body", body);
@@ -101,7 +106,11 @@ public class CreateMemberRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca84d539167d4d</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

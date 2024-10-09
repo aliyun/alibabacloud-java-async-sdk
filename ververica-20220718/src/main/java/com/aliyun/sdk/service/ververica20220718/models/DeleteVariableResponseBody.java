@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVariableResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteVariableResponseBody</p>
@@ -85,9 +86,13 @@ public class DeleteVariableResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * *   If the value of success was false, an error code was returned.
-         * <p>
-         * *   If the value of success was true, a null value was returned.
+         * <ul>
+         * <li>If the value of success was false, an error code was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -95,9 +100,13 @@ public class DeleteVariableResponseBody extends TeaModel {
         }
 
         /**
-         * *   If the value of success was false, an error message was returned.
-         * <p>
-         * *   If the value of success was true, a null value was returned.
+         * <ul>
+         * <li>If the value of success was false, an error message was returned.</li>
+         * <li>If the value of success was true, a null value was returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -105,7 +114,10 @@ public class DeleteVariableResponseBody extends TeaModel {
         }
 
         /**
-         * The value was fixed to 200.
+         * <p>The value was fixed to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -113,7 +125,10 @@ public class DeleteVariableResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +136,10 @@ public class DeleteVariableResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

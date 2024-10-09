@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSessionClustersRequest} extends {@link RequestModel}
  *
  * <p>ListSessionClustersRequest</p>
@@ -69,7 +70,10 @@ public class ListSessionClustersRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -78,7 +82,10 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

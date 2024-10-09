@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFolderRequest} extends {@link RequestModel}
  *
  * <p>DeleteFolderRequest</p>
@@ -84,7 +85,10 @@ public class DeleteFolderRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +97,10 @@ public class DeleteFolderRequest extends Request {
         }
 
         /**
-         * folderId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13803</p>
          */
         public Builder folderId(String folderId) {
             this.putPathParameter("folderId", folderId);
@@ -102,7 +109,10 @@ public class DeleteFolderRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c96306e2b****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

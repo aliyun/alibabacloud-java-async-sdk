@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Variable} extends {@link TeaModel}
  *
  * <p>Variable</p>
@@ -84,7 +85,10 @@ public class Variable extends TeaModel {
         }
 
         /**
-         * kind.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Plain</p>
          */
         public Builder kind(String kind) {
             this.kind = kind;
@@ -92,7 +96,10 @@ public class Variable extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>variableName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -100,7 +107,10 @@ public class Variable extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>variableValue</p>
          */
         public Builder value(String value) {
             this.value = value;

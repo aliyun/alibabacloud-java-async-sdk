@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopJobRequest} extends {@link RequestModel}
  *
  * <p>StopJobRequest</p>
@@ -99,7 +100,11 @@ public class StopJobRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -108,7 +113,11 @@ public class StopJobRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88a8fc49-e090-430a-85d8-3ee8c79c****</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);
@@ -117,7 +126,8 @@ public class StopJobRequest extends Request {
         }
 
         /**
-         * The parameter that is used to stop the job.
+         * <p>The parameter that is used to stop the job.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(StopJobRequestBody body) {
             this.putBodyParameter("body", body);
@@ -126,7 +136,11 @@ public class StopJobRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-ververica20220718</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.8</version>
   <packaging>jar</packaging>
   <name>alibabacloud-ververica20220718</name>
   <description>Alibaba Cloud ververica (20220718) Async SDK for Java

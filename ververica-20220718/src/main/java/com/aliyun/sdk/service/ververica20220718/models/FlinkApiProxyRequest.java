@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FlinkApiProxyRequest} extends {@link RequestModel}
  *
  * <p>FlinkApiProxyRequest</p>
@@ -114,7 +115,11 @@ public class FlinkApiProxyRequest extends Request {
         } 
 
         /**
-         * The path of the Flink UI.
+         * <p>The path of the Flink UI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/jobs/4df35f8e54554b23bf7dcd38a151****</p>
          */
         public Builder flinkApiPath(String flinkApiPath) {
             this.putQueryParameter("flinkApiPath", flinkApiPath);
@@ -123,7 +128,11 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -132,7 +141,11 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * <p>The resource ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a27a3aa-c5b9-4dc1-8c86-be57d2d6****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("resourceId", resourceId);
@@ -141,11 +154,15 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
-         * <p>
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>jobs</li>
+         * <li>sessionclusters</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   jobs
-         * *   sessionclusters
+         * <strong>example:</strong>
+         * <p>jobs</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -154,7 +171,11 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

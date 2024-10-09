@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLineageInfoRequest} extends {@link RequestModel}
  *
  * <p>GetLineageInfoRequest</p>
@@ -68,7 +69,7 @@ public class GetLineageInfoRequest extends Request {
         } 
 
         /**
-         * The parameters about the lineage information.
+         * <p>The parameters about the lineage information.</p>
          */
         public Builder body(GetLineageInfoParams body) {
             this.putBodyParameter("body", body);
@@ -77,7 +78,11 @@ public class GetLineageInfoRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>710d6a64d8****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

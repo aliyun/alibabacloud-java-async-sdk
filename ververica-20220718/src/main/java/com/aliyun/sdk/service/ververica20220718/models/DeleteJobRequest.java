@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteJobRequest} extends {@link RequestModel}
  *
  * <p>DeleteJobRequest</p>
@@ -84,7 +85,11 @@ public class DeleteJobRequest extends Request {
         } 
 
         /**
-         * The namespace ID.
+         * <p>The namespace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +98,11 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5af678c0-7db0-4650-94c2-d2604f0a****</p>
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);
@@ -102,7 +111,11 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

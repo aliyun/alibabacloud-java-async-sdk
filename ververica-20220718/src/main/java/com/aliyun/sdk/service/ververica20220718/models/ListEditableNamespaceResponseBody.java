@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListEditableNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>ListEditableNamespaceResponseBody</p>
@@ -150,6 +151,12 @@ public class ListEditableNamespaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListEditableNamespaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListEditableNamespaceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("editableNamespaces")
         private java.util.List < EditableNamespace > editableNamespaces;

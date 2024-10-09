@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDatabasesRequest} extends {@link RequestModel}
  *
  * <p>GetDatabasesRequest</p>
@@ -98,7 +99,10 @@ public class GetDatabasesRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -107,7 +111,10 @@ public class GetDatabasesRequest extends Request {
         }
 
         /**
-         * catalogName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paimon</p>
          */
         public Builder catalogName(String catalogName) {
             this.putPathParameter("catalogName", catalogName);
@@ -125,7 +132,10 @@ public class GetDatabasesRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

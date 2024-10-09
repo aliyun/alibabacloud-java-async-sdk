@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopJobRequestBody} extends {@link TeaModel}
  *
  * <p>StopJobRequestBody</p>
@@ -38,7 +39,10 @@ public class StopJobRequestBody extends TeaModel {
         private String stopStrategy; 
 
         /**
-         * stopStrategy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NONE</p>
          */
         public Builder stopStrategy(String stopStrategy) {
             this.stopStrategy = stopStrategy;

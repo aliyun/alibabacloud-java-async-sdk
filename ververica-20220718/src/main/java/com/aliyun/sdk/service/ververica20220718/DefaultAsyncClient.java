@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of ApplyScheduledPlan  ApplyScheduledPlanRequest
+     * @return ApplyScheduledPlanResponse
+     */
     @Override
     public CompletableFuture<ApplyScheduledPlanResponse> applyScheduledPlan(ApplyScheduledPlanRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDeployment  CreateDeploymentRequest
+     * @return CreateDeploymentResponse
+     */
     @Override
     public CompletableFuture<CreateDeploymentResponse> createDeployment(CreateDeploymentRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDeploymentDraft  CreateDeploymentDraftRequest
+     * @return CreateDeploymentDraftResponse
+     */
     @Override
     public CompletableFuture<CreateDeploymentDraftResponse> createDeploymentDraft(CreateDeploymentDraftRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDeploymentTarget  CreateDeploymentTargetRequest
+     * @return CreateDeploymentTargetResponse
+     */
     @Override
     public CompletableFuture<CreateDeploymentTargetResponse> createDeploymentTarget(CreateDeploymentTargetRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFolder  CreateFolderRequest
+     * @return CreateFolderResponse
+     */
     @Override
     public CompletableFuture<CreateFolderResponse> createFolder(CreateFolderRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMember  CreateMemberRequest
+     * @return CreateMemberResponse
+     */
     @Override
     public CompletableFuture<CreateMemberResponse> createMember(CreateMemberRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSavepoint  CreateSavepointRequest
+     * @return CreateSavepointResponse
+     */
     @Override
     public CompletableFuture<CreateSavepointResponse> createSavepoint(CreateSavepointRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateScheduledPlan  CreateScheduledPlanRequest
+     * @return CreateScheduledPlanResponse
+     */
     @Override
     public CompletableFuture<CreateScheduledPlanResponse> createScheduledPlan(CreateScheduledPlanRequest request) {
         try {
@@ -151,6 +183,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSessionCluster  CreateSessionClusterRequest
+     * @return CreateSessionClusterResponse
+     */
     @Override
     public CompletableFuture<CreateSessionClusterResponse> createSessionCluster(CreateSessionClusterRequest request) {
         try {
@@ -165,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUdfArtifact  CreateUdfArtifactRequest
+     * @return CreateUdfArtifactResponse
+     */
     @Override
     public CompletableFuture<CreateUdfArtifactResponse> createUdfArtifact(CreateUdfArtifactRequest request) {
         try {
@@ -179,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVariable  CreateVariableRequest
+     * @return CreateVariableResponse
+     */
     @Override
     public CompletableFuture<CreateVariableResponse> createVariable(CreateVariableRequest request) {
         try {
@@ -193,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomConnector  DeleteCustomConnectorRequest
+     * @return DeleteCustomConnectorResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomConnectorResponse> deleteCustomConnector(DeleteCustomConnectorRequest request) {
         try {
@@ -207,6 +255,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDeployment  DeleteDeploymentRequest
+     * @return DeleteDeploymentResponse
+     */
     @Override
     public CompletableFuture<DeleteDeploymentResponse> deleteDeployment(DeleteDeploymentRequest request) {
         try {
@@ -221,6 +273,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDeploymentDraft  DeleteDeploymentDraftRequest
+     * @return DeleteDeploymentDraftResponse
+     */
     @Override
     public CompletableFuture<DeleteDeploymentDraftResponse> deleteDeploymentDraft(DeleteDeploymentDraftRequest request) {
         try {
@@ -235,6 +291,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDeploymentTarget  DeleteDeploymentTargetRequest
+     * @return DeleteDeploymentTargetResponse
+     */
     @Override
     public CompletableFuture<DeleteDeploymentTargetResponse> deleteDeploymentTarget(DeleteDeploymentTargetRequest request) {
         try {
@@ -249,6 +309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFolder  DeleteFolderRequest
+     * @return DeleteFolderResponse
+     */
     @Override
     public CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request) {
         try {
@@ -263,6 +327,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteJob  DeleteJobRequest
+     * @return DeleteJobResponse
+     */
     @Override
     public CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request) {
         try {
@@ -277,6 +345,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMember  DeleteMemberRequest
+     * @return DeleteMemberResponse
+     */
     @Override
     public CompletableFuture<DeleteMemberResponse> deleteMember(DeleteMemberRequest request) {
         try {
@@ -291,6 +363,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSavepoint  DeleteSavepointRequest
+     * @return DeleteSavepointResponse
+     */
     @Override
     public CompletableFuture<DeleteSavepointResponse> deleteSavepoint(DeleteSavepointRequest request) {
         try {
@@ -305,6 +381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteScheduledPlan  DeleteScheduledPlanRequest
+     * @return DeleteScheduledPlanResponse
+     */
     @Override
     public CompletableFuture<DeleteScheduledPlanResponse> deleteScheduledPlan(DeleteScheduledPlanRequest request) {
         try {
@@ -319,6 +399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSessionCluster  DeleteSessionClusterRequest
+     * @return DeleteSessionClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteSessionClusterResponse> deleteSessionCluster(DeleteSessionClusterRequest request) {
         try {
@@ -333,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUdfArtifact  DeleteUdfArtifactRequest
+     * @return DeleteUdfArtifactResponse
+     */
     @Override
     public CompletableFuture<DeleteUdfArtifactResponse> deleteUdfArtifact(DeleteUdfArtifactRequest request) {
         try {
@@ -347,6 +435,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUdfFunction  DeleteUdfFunctionRequest
+     * @return DeleteUdfFunctionResponse
+     */
     @Override
     public CompletableFuture<DeleteUdfFunctionResponse> deleteUdfFunction(DeleteUdfFunctionRequest request) {
         try {
@@ -361,6 +453,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVariable  DeleteVariableRequest
+     * @return DeleteVariableResponse
+     */
     @Override
     public CompletableFuture<DeleteVariableResponse> deleteVariable(DeleteVariableRequest request) {
         try {
@@ -375,6 +471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeployDeploymentDraftAsync  DeployDeploymentDraftAsyncRequest
+     * @return DeployDeploymentDraftAsyncResponse
+     */
     @Override
     public CompletableFuture<DeployDeploymentDraftAsyncResponse> deployDeploymentDraftAsync(DeployDeploymentDraftAsyncRequest request) {
         try {
@@ -389,6 +489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteSqlStatement  ExecuteSqlStatementRequest
+     * @return ExecuteSqlStatementResponse
+     */
     @Override
     public CompletableFuture<ExecuteSqlStatementResponse> executeSqlStatement(ExecuteSqlStatementRequest request) {
         try {
@@ -403,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FlinkApiProxy  FlinkApiProxyRequest
+     * @return FlinkApiProxyResponse
+     */
     @Override
     public CompletableFuture<FlinkApiProxyResponse> flinkApiProxy(FlinkApiProxyRequest request) {
         try {
@@ -417,6 +525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateResourcePlanWithFlinkConfAsync  GenerateResourcePlanWithFlinkConfAsyncRequest
+     * @return GenerateResourcePlanWithFlinkConfAsyncResponse
+     */
     @Override
     public CompletableFuture<GenerateResourcePlanWithFlinkConfAsyncResponse> generateResourcePlanWithFlinkConfAsync(GenerateResourcePlanWithFlinkConfAsyncRequest request) {
         try {
@@ -431,6 +543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAppliedScheduledPlan  GetAppliedScheduledPlanRequest
+     * @return GetAppliedScheduledPlanResponse
+     */
     @Override
     public CompletableFuture<GetAppliedScheduledPlanResponse> getAppliedScheduledPlan(GetAppliedScheduledPlanRequest request) {
         try {
@@ -445,6 +561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCatalogs  GetCatalogsRequest
+     * @return GetCatalogsResponse
+     */
     @Override
     public CompletableFuture<GetCatalogsResponse> getCatalogs(GetCatalogsRequest request) {
         try {
@@ -459,6 +579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDatabases  GetDatabasesRequest
+     * @return GetDatabasesResponse
+     */
     @Override
     public CompletableFuture<GetDatabasesResponse> getDatabases(GetDatabasesRequest request) {
         try {
@@ -473,6 +597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDeployDeploymentDraftResult  GetDeployDeploymentDraftResultRequest
+     * @return GetDeployDeploymentDraftResultResponse
+     */
     @Override
     public CompletableFuture<GetDeployDeploymentDraftResultResponse> getDeployDeploymentDraftResult(GetDeployDeploymentDraftResultRequest request) {
         try {
@@ -487,6 +615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDeployment  GetDeploymentRequest
+     * @return GetDeploymentResponse
+     */
     @Override
     public CompletableFuture<GetDeploymentResponse> getDeployment(GetDeploymentRequest request) {
         try {
@@ -501,6 +633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDeploymentDraft  GetDeploymentDraftRequest
+     * @return GetDeploymentDraftResponse
+     */
     @Override
     public CompletableFuture<GetDeploymentDraftResponse> getDeploymentDraft(GetDeploymentDraftRequest request) {
         try {
@@ -515,6 +651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDeploymentDraftLock  GetDeploymentDraftLockRequest
+     * @return GetDeploymentDraftLockResponse
+     */
     @Override
     public CompletableFuture<GetDeploymentDraftLockResponse> getDeploymentDraftLock(GetDeploymentDraftLockRequest request) {
         try {
@@ -529,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetEvents  GetEventsRequest
+     * @return GetEventsResponse
+     */
     @Override
     public CompletableFuture<GetEventsResponse> getEvents(GetEventsRequest request) {
         try {
@@ -543,6 +687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFolder  GetFolderRequest
+     * @return GetFolderResponse
+     */
     @Override
     public CompletableFuture<GetFolderResponse> getFolder(GetFolderRequest request) {
         try {
@@ -557,6 +705,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetGenerateResourcePlanResult  GetGenerateResourcePlanResultRequest
+     * @return GetGenerateResourcePlanResultResponse
+     */
     @Override
     public CompletableFuture<GetGenerateResourcePlanResultResponse> getGenerateResourcePlanResult(GetGenerateResourcePlanResultRequest request) {
         try {
@@ -571,6 +723,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHotUpdateJobResult  GetHotUpdateJobResultRequest
+     * @return GetHotUpdateJobResultResponse
+     */
     @Override
     public CompletableFuture<GetHotUpdateJobResultResponse> getHotUpdateJobResult(GetHotUpdateJobResultRequest request) {
         try {
@@ -585,6 +741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetJob  GetJobRequest
+     * @return GetJobResponse
+     */
     @Override
     public CompletableFuture<GetJobResponse> getJob(GetJobRequest request) {
         try {
@@ -599,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLatestJobStartLog  GetLatestJobStartLogRequest
+     * @return GetLatestJobStartLogResponse
+     */
     @Override
     public CompletableFuture<GetLatestJobStartLogResponse> getLatestJobStartLog(GetLatestJobStartLogRequest request) {
         try {
@@ -613,6 +777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLineageInfo  GetLineageInfoRequest
+     * @return GetLineageInfoResponse
+     */
     @Override
     public CompletableFuture<GetLineageInfoResponse> getLineageInfo(GetLineageInfoRequest request) {
         try {
@@ -627,6 +795,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMember  GetMemberRequest
+     * @return GetMemberResponse
+     */
     @Override
     public CompletableFuture<GetMemberResponse> getMember(GetMemberRequest request) {
         try {
@@ -641,6 +813,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSavepoint  GetSavepointRequest
+     * @return GetSavepointResponse
+     */
     @Override
     public CompletableFuture<GetSavepointResponse> getSavepoint(GetSavepointRequest request) {
         try {
@@ -655,6 +831,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSessionCluster  GetSessionClusterRequest
+     * @return GetSessionClusterResponse
+     */
     @Override
     public CompletableFuture<GetSessionClusterResponse> getSessionCluster(GetSessionClusterRequest request) {
         try {
@@ -669,6 +849,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTables  GetTablesRequest
+     * @return GetTablesResponse
+     */
     @Override
     public CompletableFuture<GetTablesResponse> getTables(GetTablesRequest request) {
         try {
@@ -683,6 +867,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUdfArtifacts  GetUdfArtifactsRequest
+     * @return GetUdfArtifactsResponse
+     */
     @Override
     public CompletableFuture<GetUdfArtifactsResponse> getUdfArtifacts(GetUdfArtifactsRequest request) {
         try {
@@ -697,6 +885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HotUpdateJob  HotUpdateJobRequest
+     * @return HotUpdateJobResponse
+     */
     @Override
     public CompletableFuture<HotUpdateJobResponse> hotUpdateJob(HotUpdateJobRequest request) {
         try {
@@ -711,6 +903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCustomConnectors  ListCustomConnectorsRequest
+     * @return ListCustomConnectorsResponse
+     */
     @Override
     public CompletableFuture<ListCustomConnectorsResponse> listCustomConnectors(ListCustomConnectorsRequest request) {
         try {
@@ -725,6 +921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDeploymentDrafts  ListDeploymentDraftsRequest
+     * @return ListDeploymentDraftsResponse
+     */
     @Override
     public CompletableFuture<ListDeploymentDraftsResponse> listDeploymentDrafts(ListDeploymentDraftsRequest request) {
         try {
@@ -739,6 +939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDeploymentTargets  ListDeploymentTargetsRequest
+     * @return ListDeploymentTargetsResponse
+     */
     @Override
     public CompletableFuture<ListDeploymentTargetsResponse> listDeploymentTargets(ListDeploymentTargetsRequest request) {
         try {
@@ -753,6 +957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListDeployments  ListDeploymentsRequest
+     * @return ListDeploymentsResponse
+     */
     @Override
     public CompletableFuture<ListDeploymentsResponse> listDeployments(ListDeploymentsRequest request) {
         try {
@@ -767,6 +975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEditableNamespace  ListEditableNamespaceRequest
+     * @return ListEditableNamespaceResponse
+     */
     @Override
     public CompletableFuture<ListEditableNamespaceResponse> listEditableNamespace(ListEditableNamespaceRequest request) {
         try {
@@ -781,6 +993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListEngineVersionMetadata  ListEngineVersionMetadataRequest
+     * @return ListEngineVersionMetadataResponse
+     */
     @Override
     public CompletableFuture<ListEngineVersionMetadataResponse> listEngineVersionMetadata(ListEngineVersionMetadataRequest request) {
         try {
@@ -795,6 +1011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListJobs  ListJobsRequest
+     * @return ListJobsResponse
+     */
     @Override
     public CompletableFuture<ListJobsResponse> listJobs(ListJobsRequest request) {
         try {
@@ -809,6 +1029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMembers  ListMembersRequest
+     * @return ListMembersResponse
+     */
     @Override
     public CompletableFuture<ListMembersResponse> listMembers(ListMembersRequest request) {
         try {
@@ -823,6 +1047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSavepoints  ListSavepointsRequest
+     * @return ListSavepointsResponse
+     */
     @Override
     public CompletableFuture<ListSavepointsResponse> listSavepoints(ListSavepointsRequest request) {
         try {
@@ -837,6 +1065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListScheduledPlan  ListScheduledPlanRequest
+     * @return ListScheduledPlanResponse
+     */
     @Override
     public CompletableFuture<ListScheduledPlanResponse> listScheduledPlan(ListScheduledPlanRequest request) {
         try {
@@ -851,6 +1083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListScheduledPlanExecutedHistory  ListScheduledPlanExecutedHistoryRequest
+     * @return ListScheduledPlanExecutedHistoryResponse
+     */
     @Override
     public CompletableFuture<ListScheduledPlanExecutedHistoryResponse> listScheduledPlanExecutedHistory(ListScheduledPlanExecutedHistoryRequest request) {
         try {
@@ -865,6 +1101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSessionClusters  ListSessionClustersRequest
+     * @return ListSessionClustersResponse
+     */
     @Override
     public CompletableFuture<ListSessionClustersResponse> listSessionClusters(ListSessionClustersRequest request) {
         try {
@@ -879,6 +1119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVariables  ListVariablesRequest
+     * @return ListVariablesResponse
+     */
     @Override
     public CompletableFuture<ListVariablesResponse> listVariables(ListVariablesRequest request) {
         try {
@@ -893,6 +1137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RegisterCustomConnector  RegisterCustomConnectorRequest
+     * @return RegisterCustomConnectorResponse
+     */
     @Override
     public CompletableFuture<RegisterCustomConnectorResponse> registerCustomConnector(RegisterCustomConnectorRequest request) {
         try {
@@ -907,6 +1155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RegisterUdfFunction  RegisterUdfFunctionRequest
+     * @return RegisterUdfFunctionResponse
+     */
     @Override
     public CompletableFuture<RegisterUdfFunctionResponse> registerUdfFunction(RegisterUdfFunctionRequest request) {
         try {
@@ -922,9 +1174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI StartJob is deprecated, please use ververica::2022-07-18::StartJobWithParams instead.  * @param request  the request parameters of StartJob  StartJobRequest
+     * @return StartJobResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<StartJobResponse> startJob(StartJobRequest request) {
         try {
@@ -939,6 +1192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartJobWithParams  StartJobWithParamsRequest
+     * @return StartJobWithParamsResponse
+     */
     @Override
     public CompletableFuture<StartJobWithParamsResponse> startJobWithParams(StartJobWithParamsRequest request) {
         try {
@@ -953,6 +1210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartSessionCluster  StartSessionClusterRequest
+     * @return StartSessionClusterResponse
+     */
     @Override
     public CompletableFuture<StartSessionClusterResponse> startSessionCluster(StartSessionClusterRequest request) {
         try {
@@ -967,6 +1228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopApplyScheduledPlan  StopApplyScheduledPlanRequest
+     * @return StopApplyScheduledPlanResponse
+     */
     @Override
     public CompletableFuture<StopApplyScheduledPlanResponse> stopApplyScheduledPlan(StopApplyScheduledPlanRequest request) {
         try {
@@ -981,6 +1246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopJob  StopJobRequest
+     * @return StopJobResponse
+     */
     @Override
     public CompletableFuture<StopJobResponse> stopJob(StopJobRequest request) {
         try {
@@ -995,6 +1264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopSessionCluster  StopSessionClusterRequest
+     * @return StopSessionClusterResponse
+     */
     @Override
     public CompletableFuture<StopSessionClusterResponse> stopSessionCluster(StopSessionClusterRequest request) {
         try {
@@ -1009,6 +1282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDeployment  UpdateDeploymentRequest
+     * @return UpdateDeploymentResponse
+     */
     @Override
     public CompletableFuture<UpdateDeploymentResponse> updateDeployment(UpdateDeploymentRequest request) {
         try {
@@ -1023,6 +1300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDeploymentDraft  UpdateDeploymentDraftRequest
+     * @return UpdateDeploymentDraftResponse
+     */
     @Override
     public CompletableFuture<UpdateDeploymentDraftResponse> updateDeploymentDraft(UpdateDeploymentDraftRequest request) {
         try {
@@ -1037,6 +1318,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateDeploymentTarget  UpdateDeploymentTargetRequest
+     * @return UpdateDeploymentTargetResponse
+     */
     @Override
     public CompletableFuture<UpdateDeploymentTargetResponse> updateDeploymentTarget(UpdateDeploymentTargetRequest request) {
         try {
@@ -1051,6 +1336,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFolder  UpdateFolderRequest
+     * @return UpdateFolderResponse
+     */
     @Override
     public CompletableFuture<UpdateFolderResponse> updateFolder(UpdateFolderRequest request) {
         try {
@@ -1065,6 +1354,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMember  UpdateMemberRequest
+     * @return UpdateMemberResponse
+     */
     @Override
     public CompletableFuture<UpdateMemberResponse> updateMember(UpdateMemberRequest request) {
         try {
@@ -1079,6 +1372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateScheduledPlan  UpdateScheduledPlanRequest
+     * @return UpdateScheduledPlanResponse
+     */
     @Override
     public CompletableFuture<UpdateScheduledPlanResponse> updateScheduledPlan(UpdateScheduledPlanRequest request) {
         try {
@@ -1093,6 +1390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSessionCluster  UpdateSessionClusterRequest
+     * @return UpdateSessionClusterResponse
+     */
     @Override
     public CompletableFuture<UpdateSessionClusterResponse> updateSessionCluster(UpdateSessionClusterRequest request) {
         try {
@@ -1107,6 +1408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateUdfArtifact  UpdateUdfArtifactRequest
+     * @return UpdateUdfArtifactResponse
+     */
     @Override
     public CompletableFuture<UpdateUdfArtifactResponse> updateUdfArtifact(UpdateUdfArtifactRequest request) {
         try {
@@ -1121,6 +1426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidateSqlStatement  ValidateSqlStatementRequest
+     * @return ValidateSqlStatementResponse
+     */
     @Override
     public CompletableFuture<ValidateSqlStatementResponse> validateSqlStatement(ValidateSqlStatementRequest request) {
         try {

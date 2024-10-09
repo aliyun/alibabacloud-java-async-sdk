@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeploymentsRequest} extends {@link RequestModel}
  *
  * <p>ListDeploymentsRequest</p>
@@ -50,6 +51,10 @@ public class ListDeploymentsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sortName")
+    private String sortName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -69,6 +74,7 @@ public class ListDeploymentsRequest extends Request {
         this.name = builder.name;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
+        this.sortName = builder.sortName;
         this.status = builder.status;
         this.workspace = builder.workspace;
     }
@@ -150,6 +156,13 @@ public class ListDeploymentsRequest extends Request {
     }
 
     /**
+     * @return sortName
+     */
+    public String getSortName() {
+        return this.sortName;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -173,6 +186,7 @@ public class ListDeploymentsRequest extends Request {
         private String name; 
         private Integer pageIndex; 
         private Integer pageSize; 
+        private String sortName; 
         private String status; 
         private String workspace; 
 
@@ -191,12 +205,17 @@ public class ListDeploymentsRequest extends Request {
             this.name = request.name;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
+            this.sortName = request.sortName;
             this.status = request.status;
             this.workspace = request.workspace;
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -205,7 +224,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The ID of the user who creates the deployment.
+         * <p>The ID of the user who creates the deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183899668*******</p>
          */
         public Builder creator(String creator) {
             this.putQueryParameter("creator", creator);
@@ -214,13 +236,15 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The execution mode of the deployment.
-         * <p>
+         * <p>The execution mode of the deployment.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>BATCH</li>
+         * <li>STREAMING</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   BATCH
-         * *   STREAMING
+         * <strong>example:</strong>
+         * <p>STREAMING</p>
          */
         public Builder executionMode(String executionMode) {
             this.putQueryParameter("executionMode", executionMode);
@@ -229,7 +253,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The tag key.
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder labelKey(String labelKey) {
             this.putQueryParameter("labelKey", labelKey);
@@ -238,7 +265,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The tag value. Separate multiple values with semicolon (;).
+         * <p>The tag value. Separate multiple values with semicolon (;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1,value2</p>
          */
         public Builder labelValueArray(String labelValueArray) {
             this.putQueryParameter("labelValueArray", labelValueArray);
@@ -247,7 +277,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The ID of the user who modifies the deployment.
+         * <p>The ID of the user who modifies the deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183899668*******</p>
          */
         public Builder modifier(String modifier) {
             this.putQueryParameter("modifier", modifier);
@@ -256,7 +289,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The name of the deployment.
+         * <p>The name of the deployment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vvp_ds_0522</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -265,7 +301,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The page number. Minimum value: 1. Default value: 1.
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -274,7 +313,10 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -283,16 +325,27 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The latest status of the deployment.
-         * <p>
+         * sortName.
+         */
+        public Builder sortName(String sortName) {
+            this.putQueryParameter("sortName", sortName);
+            this.sortName = sortName;
+            return this;
+        }
+
+        /**
+         * <p>The latest status of the deployment.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CANCELLED</li>
+         * <li>FAILED</li>
+         * <li>RUNNING</li>
+         * <li>TRANSITIONING</li>
+         * <li>FINISHED</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   CANCELLED
-         * *   FAILED
-         * *   RUNNING
-         * *   TRANSITIONING
-         * *   FINISHED
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -301,7 +354,11 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

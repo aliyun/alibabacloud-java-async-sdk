@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Member} extends {@link TeaModel}
  *
  * <p>Member</p>
@@ -50,7 +51,10 @@ public class Member extends TeaModel {
         private String role; 
 
         /**
-         * member.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user: 181319557522****</p>
          */
         public Builder member(String member) {
             this.member = member;

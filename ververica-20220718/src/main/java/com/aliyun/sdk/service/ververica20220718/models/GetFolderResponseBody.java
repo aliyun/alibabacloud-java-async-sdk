@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFolderResponseBody} extends {@link TeaModel}
  *
  * <p>GetFolderResponseBody</p>
@@ -97,7 +98,7 @@ public class GetFolderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data structure of the folder.
+         * <p>The data structure of the folder.</p>
          */
         public Builder data(Folder data) {
             this.data = data;

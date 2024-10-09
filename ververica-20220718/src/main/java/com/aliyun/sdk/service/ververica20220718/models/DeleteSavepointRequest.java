@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSavepointRequest} extends {@link RequestModel}
  *
  * <p>DeleteSavepointRequest</p>
@@ -84,7 +85,11 @@ public class DeleteSavepointRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +98,11 @@ public class DeleteSavepointRequest extends Request {
         }
 
         /**
-         * The ID of the savepoint that you want to delete.
+         * <p>The ID of the savepoint that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>907a8f0e-4f6c-412b-8a5e-7d4a065b****</p>
          */
         public Builder savepointId(String savepointId) {
             this.putPathParameter("savepointId", savepointId);
@@ -102,7 +111,11 @@ public class DeleteSavepointRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomConnectorRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomConnectorRequest</p>
@@ -84,7 +85,11 @@ public class DeleteCustomConnectorRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-flink-bigdata-default</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +98,11 @@ public class DeleteCustomConnectorRequest extends Request {
         }
 
         /**
-         * The name of the custom connector.
+         * <p>The name of the custom connector.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql-test</p>
          */
         public Builder connectorName(String connectorName) {
             this.putPathParameter("connectorName", connectorName);
@@ -102,7 +111,11 @@ public class DeleteCustomConnectorRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RegisterUdfFunctionRequest} extends {@link RequestModel}
  *
  * <p>RegisterUdfFunctionRequest</p>
@@ -114,7 +115,11 @@ public class RegisterUdfFunctionRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -123,7 +128,11 @@ public class RegisterUdfFunctionRequest extends Request {
         }
 
         /**
-         * The name of the class that corresponds to the UDF.
+         * <p>The name of the class that corresponds to the UDF.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orderRank</p>
          */
         public Builder className(String className) {
             this.putQueryParameter("className", className);
@@ -132,7 +141,11 @@ public class RegisterUdfFunctionRequest extends Request {
         }
 
         /**
-         * The name of the UDF. In most cases, the name of the UDF is the same as the class name. You can specify a name for the UDF.
+         * <p>The name of the UDF. In most cases, the name of the UDF is the same as the class name. You can specify a name for the UDF.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orderRank</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("functionName", functionName);
@@ -141,7 +154,11 @@ public class RegisterUdfFunctionRequest extends Request {
         }
 
         /**
-         * The name of the JAR or Python file that corresponds to the UDF.
+         * <p>The name of the JAR or Python file that corresponds to the UDF.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-udf</p>
          */
         public Builder udfArtifactName(String udfArtifactName) {
             this.putQueryParameter("udfArtifactName", udfArtifactName);
@@ -150,7 +167,11 @@ public class RegisterUdfFunctionRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

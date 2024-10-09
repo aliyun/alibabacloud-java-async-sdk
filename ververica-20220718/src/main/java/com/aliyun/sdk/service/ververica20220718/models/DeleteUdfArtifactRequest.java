@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUdfArtifactRequest} extends {@link RequestModel}
  *
  * <p>DeleteUdfArtifactRequest</p>
@@ -84,7 +85,10 @@ public class DeleteUdfArtifactRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +97,10 @@ public class DeleteUdfArtifactRequest extends Request {
         }
 
         /**
-         * udfArtifactName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>check</p>
          */
         public Builder udfArtifactName(String udfArtifactName) {
             this.putPathParameter("udfArtifactName", udfArtifactName);
@@ -102,7 +109,10 @@ public class DeleteUdfArtifactRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

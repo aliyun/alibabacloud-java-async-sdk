@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHotUpdateJobResultRequest} extends {@link RequestModel}
  *
  * <p>GetHotUpdateJobResultRequest</p>
@@ -84,7 +85,10 @@ public class GetHotUpdateJobResultRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +97,10 @@ public class GetHotUpdateJobResultRequest extends Request {
         }
 
         /**
-         * jobHotUpdateId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123hashd****</p>
          */
         public Builder jobHotUpdateId(String jobHotUpdateId) {
             this.putPathParameter("jobHotUpdateId", jobHotUpdateId);
@@ -102,7 +109,10 @@ public class GetHotUpdateJobResultRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

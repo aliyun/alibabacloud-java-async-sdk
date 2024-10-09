@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Log4jLogger} extends {@link TeaModel}
  *
  * <p>Log4jLogger</p>

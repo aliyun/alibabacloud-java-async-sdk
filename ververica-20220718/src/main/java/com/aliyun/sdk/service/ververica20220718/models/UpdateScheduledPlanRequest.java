@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateScheduledPlanRequest} extends {@link RequestModel}
  *
  * <p>UpdateScheduledPlanRequest</p>
@@ -98,7 +99,10 @@ public class UpdateScheduledPlanRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -107,7 +111,10 @@ public class UpdateScheduledPlanRequest extends Request {
         }
 
         /**
-         * scheduledPlanId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f420c2e7-6d3f-4683-81d0-3ea8585*****</p>
          */
         public Builder scheduledPlanId(String scheduledPlanId) {
             this.putPathParameter("scheduledPlanId", scheduledPlanId);
@@ -125,7 +132,10 @@ public class UpdateScheduledPlanRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

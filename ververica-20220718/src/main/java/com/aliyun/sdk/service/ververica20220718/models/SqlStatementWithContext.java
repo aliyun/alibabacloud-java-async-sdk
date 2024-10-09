@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SqlStatementWithContext} extends {@link TeaModel}
  *
  * <p>SqlStatementWithContext</p>
@@ -95,7 +96,7 @@ public class SqlStatementWithContext extends TeaModel {
         }
 
         /**
-         * batchMode.
+         * <p>This parameter is required.</p>
          */
         public Builder batchMode(Boolean batchMode) {
             this.batchMode = batchMode;
@@ -111,7 +112,7 @@ public class SqlStatementWithContext extends TeaModel {
         }
 
         /**
-         * statement.
+         * <p>This parameter is required.</p>
          */
         public Builder statement(String statement) {
             this.statement = statement;

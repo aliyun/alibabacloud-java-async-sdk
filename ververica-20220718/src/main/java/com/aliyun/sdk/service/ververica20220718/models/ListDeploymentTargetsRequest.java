@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeploymentTargetsRequest} extends {@link RequestModel}
  *
  * <p>ListDeploymentTargetsRequest</p>
@@ -98,7 +99,11 @@ public class ListDeploymentTargetsRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -107,7 +112,10 @@ public class ListDeploymentTargetsRequest extends Request {
         }
 
         /**
-         * The page number. Minimum value: 1. Default value: 1.
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -116,7 +124,10 @@ public class ListDeploymentTargetsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -125,7 +136,11 @@ public class ListDeploymentTargetsRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

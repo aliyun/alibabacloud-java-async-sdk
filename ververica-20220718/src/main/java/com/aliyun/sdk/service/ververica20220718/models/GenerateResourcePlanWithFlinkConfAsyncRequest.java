@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateResourcePlanWithFlinkConfAsyncRequest} extends {@link RequestModel}
  *
  * <p>GenerateResourcePlanWithFlinkConfAsyncRequest</p>
@@ -98,7 +99,11 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -107,7 +112,11 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         }
 
         /**
-         * The deployment ID, which is the unique identifier of the deployment.
+         * <p>The deployment ID, which is the unique identifier of the deployment.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>737d0921-c5ac-47fc-9ba9-07a1e0b4****</p>
          */
         public Builder deploymentId(String deploymentId) {
             this.putPathParameter("deploymentId", deploymentId);
@@ -116,7 +125,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         }
 
         /**
-         * The Flink configuration that is used to generate a resource plan.
+         * <p>The Flink configuration that is used to generate a resource plan.</p>
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);
@@ -125,7 +134,11 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

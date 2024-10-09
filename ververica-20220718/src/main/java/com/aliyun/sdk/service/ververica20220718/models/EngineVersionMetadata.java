@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EngineVersionMetadata} extends {@link TeaModel}
  *
  * <p>EngineVersionMetadata</p>
@@ -63,7 +64,10 @@ public class EngineVersionMetadata extends TeaModel {
         private String status; 
 
         /**
-         * engineVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vvr-6.0.0-flink-1.15</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -79,7 +83,10 @@ public class EngineVersionMetadata extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STABLE</p>
          */
         public Builder status(String status) {
             this.status = status;

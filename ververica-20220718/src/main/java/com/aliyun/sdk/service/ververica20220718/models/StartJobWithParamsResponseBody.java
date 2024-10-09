@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartJobWithParamsResponseBody} extends {@link TeaModel}
  *
  * <p>StartJobWithParamsResponseBody</p>
@@ -97,7 +98,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The details of the job of the deployment returned.
+         * <p>The details of the job of the deployment returned.</p>
          */
         public Builder data(Job data) {
             this.data = data;
@@ -105,7 +106,10 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.
+         * <p>If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,10 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.
+         * <p>If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +128,10 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.
+         * <p>The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -129,7 +139,10 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

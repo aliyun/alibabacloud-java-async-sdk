@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUdfArtifactRequest} extends {@link RequestModel}
  *
  * <p>UpdateUdfArtifactRequest</p>
@@ -99,7 +100,11 @@ public class UpdateUdfArtifactRequest extends Request {
         } 
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -108,7 +113,11 @@ public class UpdateUdfArtifactRequest extends Request {
         }
 
         /**
-         * The name of the JAR file of the UDF.
+         * <p>The name of the JAR file of the UDF.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-udf</p>
          */
         public Builder udfArtifactName(String udfArtifactName) {
             this.putPathParameter("udfArtifactName", udfArtifactName);
@@ -117,7 +126,8 @@ public class UpdateUdfArtifactRequest extends Request {
         }
 
         /**
-         * The details of the JAR file of the UDF.
+         * <p>The details of the JAR file of the UDF.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder body(UdfArtifact body) {
             this.putBodyParameter("body", body);
@@ -126,7 +136,11 @@ public class UpdateUdfArtifactRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * <p>The workspace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a14bd5d90a****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

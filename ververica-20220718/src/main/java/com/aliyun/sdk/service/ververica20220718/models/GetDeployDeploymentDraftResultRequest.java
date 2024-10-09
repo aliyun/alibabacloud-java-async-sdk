@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDeployDeploymentDraftResultRequest} extends {@link RequestModel}
  *
  * <p>GetDeployDeploymentDraftResultRequest</p>
@@ -84,7 +85,10 @@ public class GetDeployDeploymentDraftResultRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +97,10 @@ public class GetDeployDeploymentDraftResultRequest extends Request {
         }
 
         /**
-         * ticketId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88a8fc49-e090-430a-85d8-3ee8c79c****</p>
          */
         public Builder ticketId(String ticketId) {
             this.putPathParameter("ticketId", ticketId);
@@ -102,7 +109,10 @@ public class GetDeployDeploymentDraftResultRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>710d6a64d8****</p>
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

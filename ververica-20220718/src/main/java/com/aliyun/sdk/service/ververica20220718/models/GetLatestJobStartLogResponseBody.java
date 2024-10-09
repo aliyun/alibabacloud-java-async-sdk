@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLatestJobStartLogResponseBody} extends {@link TeaModel}
  *
  * <p>GetLatestJobStartLogResponseBody</p>
@@ -97,7 +98,10 @@ public class GetLatestJobStartLogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * If the value of success was false, the latest logs of the deployment were returned. If the value of success was true, a null value was returned.
+         * <p>If the value of success was false, the latest logs of the deployment were returned. If the value of success was true, a null value was returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;[main] INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------\n2024-05-22 11:46:39,871 [main] INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint&quot;</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -105,7 +109,10 @@ public class GetLatestJobStartLogResponseBody extends TeaModel {
         }
 
         /**
-         * If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.
+         * <p>If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +120,10 @@ public class GetLatestJobStartLogResponseBody extends TeaModel {
         }
 
         /**
-         * If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.
+         * <p>If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +131,10 @@ public class GetLatestJobStartLogResponseBody extends TeaModel {
         }
 
         /**
-         * The status code returned. The value was fixed to 200.
+         * <p>The status code returned. The value was fixed to 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -129,7 +142,10 @@ public class GetLatestJobStartLogResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +153,10 @@ public class GetLatestJobStartLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
