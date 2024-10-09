@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSnapshotRequest} extends {@link RequestModel}
  *
  * <p>DeleteSnapshotRequest</p>
@@ -83,7 +84,10 @@ public class DeleteSnapshotRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,7 +96,11 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * The region ID of the snapshot.
+         * <p>The region ID of the snapshot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +109,11 @@ public class DeleteSnapshotRequest extends Request {
         }
 
         /**
-         * The snapshot ID.
+         * <p>The snapshot ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp16oazlsold4dks****</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

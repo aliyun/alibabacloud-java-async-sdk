@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceStatusResponseBody</p>
@@ -85,7 +86,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
          */
         public Builder instanceStatuses(java.util.List < InstanceStatuses> instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
@@ -93,7 +94,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListInstanceStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceStatusResponseBody</p>
+     */
     public static class InstanceStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -169,7 +188,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the simple application server.
+             * <p>The ID of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a9a6474b935d41bcb531250bb5d****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -177,17 +199,20 @@ public class ListInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the simple application server. Valid values:
-             * <p>
+             * <p>The status of the simple application server. Valid values:</p>
+             * <ul>
+             * <li>Pending</li>
+             * <li>Starting</li>
+             * <li>Running</li>
+             * <li>Stopping</li>
+             * <li>Stopped</li>
+             * <li>Resetting</li>
+             * <li>Upgrading</li>
+             * <li>Disabled</li>
+             * </ul>
              * 
-             * *   Pending
-             * *   Starting
-             * *   Running
-             * *   Stopping
-             * *   Stopped
-             * *   Resetting
-             * *   Upgrading
-             * *   Disabled
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

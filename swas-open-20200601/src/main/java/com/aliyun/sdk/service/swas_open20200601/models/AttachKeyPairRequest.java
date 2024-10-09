@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachKeyPairRequest} extends {@link RequestModel}
  *
  * <p>AttachKeyPairRequest</p>
@@ -98,7 +99,10 @@ public class AttachKeyPairRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +111,8 @@ public class AttachKeyPairRequest extends Request {
         }
 
         /**
-         * The IDs of simple application servers. You can specify a maximum of 50 IDs of simple application servers.
+         * <p>The IDs of simple application servers. You can specify a maximum of 50 IDs of simple application servers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -116,7 +121,11 @@ public class AttachKeyPairRequest extends Request {
         }
 
         /**
-         * The name of the key pair that you want to bind to the simple application server. The name must be 2 to 64 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with http:// or https://.
+         * <p>The name of the key pair that you want to bind to the simple application server. The name must be 2 to 64 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with http:// or https://.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_gin</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -125,7 +134,11 @@ public class AttachKeyPairRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

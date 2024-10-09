@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityAgentStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityAgentStatusResponseBody</p>
@@ -49,12 +50,15 @@ public class DescribeSecurityAgentStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of the Security Center agent. Valid values:
-         * <p>
+         * <p>The status of the Security Center agent. Valid values:</p>
+         * <ul>
+         * <li>pause: The Security Center agent suspends protection for your server.</li>
+         * <li>online: The Security Center agent is protecting your server.</li>
+         * <li>offline: The Security Center agent does not protect your server.</li>
+         * </ul>
          * 
-         * *   pause: The Security Center agent suspends protection for your server.
-         * *   online: The Security Center agent is protecting your server.
-         * *   offline: The Security Center agent does not protect your server.
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder clientStatus(String clientStatus) {
             this.clientStatus = clientStatus;
@@ -62,7 +66,10 @@ public class DescribeSecurityAgentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

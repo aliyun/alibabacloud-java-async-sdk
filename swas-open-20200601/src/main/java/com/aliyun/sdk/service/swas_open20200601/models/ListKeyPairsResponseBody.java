@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKeyPairsResponseBody} extends {@link TeaModel}
  *
  * <p>ListKeyPairsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the queried AccessKey pairs.
+         * <p>Details about the queried AccessKey pairs.</p>
          */
         public Builder keyPairs(java.util.List < KeyPairs> keyPairs) {
             this.keyPairs = keyPairs;
@@ -93,7 +94,10 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListKeyPairsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListKeyPairsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListKeyPairsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKeyPairsResponseBody</p>
+     */
     public static class KeyPairs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -193,7 +212,10 @@ public class ListKeyPairsResponseBody extends TeaModel {
             private String publicKey; 
 
             /**
-             * The time when the AccessKey pair was created.
+             * <p>The time when the AccessKey pair was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-06T02:28Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -201,7 +223,7 @@ public class ListKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of simple application servers. A maximum of 50 IDs of simple application servers can be returned.
+             * <p>The IDs of simple application servers. A maximum of 50 IDs of simple application servers can be returned.</p>
              */
             public Builder instanceIds(java.util.List < String > instanceIds) {
                 this.instanceIds = instanceIds;
@@ -209,7 +231,10 @@ public class ListKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the AccessKey pair. The name must be 2 to 64 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter and cannot start with http:// or https://.
+             * <p>The name of the AccessKey pair. The name must be 2 to 64 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter and cannot start with http:// or https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKeyPairName</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -217,7 +242,10 @@ public class ListKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the public key.
+             * <p>The content of the public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbO5Govwhb0iHzoMYKkIQxjlHyHH8nxFsW6KF5saxgYhOwdeIpWngpi+/NDWQKvuOnXFFDh/o3eJJkh3rqP+RlMggt4HLQWOd9TS0f4/cgbAzud1caW9PnankCr****</p>
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;

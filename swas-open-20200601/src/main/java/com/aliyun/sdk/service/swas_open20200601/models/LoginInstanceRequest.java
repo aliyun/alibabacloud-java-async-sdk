@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LoginInstanceRequest} extends {@link RequestModel}
  *
  * <p>LoginInstanceRequest</p>
@@ -111,7 +112,11 @@ public class LoginInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ae7106e68eb4402b0dcbd48a9de****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,11 +125,14 @@ public class LoginInstanceRequest extends Request {
         }
 
         /**
-         * The password that corresponds to the username.
-         * <p>
+         * <p>The password that corresponds to the username.</p>
+         * <ul>
+         * <li>For a Linux server, you do not need to enter a password.</li>
+         * <li>For a Windows server, enter the password that you set. If you have not set a password for the simple application server, set a password. For more information, see <a href="https://help.aliyun.com/document_detail/60055.html">Reset the password</a>.</li>
+         * </ul>
          * 
-         * *   For a Linux server, you do not need to enter a password.
-         * *   For a Windows server, enter the password that you set. If you have not set a password for the simple application server, set a password. For more information, see [Reset the password](~~60055~~).
+         * <strong>example:</strong>
+         * <p>Test****</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -133,7 +141,17 @@ public class LoginInstanceRequest extends Request {
         }
 
         /**
-         * Port.
+         * <p>Remote login instance port number:</p>
+         * <ul>
+         * <li>Linux Server: Default is 22.</li>
+         * <li>Windows Server: Default is 3389.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you need to connect to the server using a custom port, you must first modify the server&quot;s default remote port. For more information, see <a href="https://help.aliyun.com/document_detail/2807402.html">Set a custom port to connect to a simple application server</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3389</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -142,7 +160,11 @@ public class LoginInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,11 +173,14 @@ public class LoginInstanceRequest extends Request {
         }
 
         /**
-         * The username of the simple application server.
-         * <p>
+         * <p>The username of the simple application server.</p>
+         * <ul>
+         * <li>For a Linux server, you do not need to enter a username.</li>
+         * <li>For a Windows server, the default username <code>administrator</code> is used.</li>
+         * </ul>
          * 
-         * *   For a Linux server, you do not need to enter a username.
-         * *   For a Windows server, the default username `administrator` is used.
+         * <strong>example:</strong>
+         * <p>administrator</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

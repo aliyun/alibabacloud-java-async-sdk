@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudAssistantAttributesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudAssistantAttributesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The Command Assistant information.
+         * <p>The Command Assistant information.</p>
          */
         public Builder cloudAssistant(java.util.List < CloudAssistant> cloudAssistant) {
             this.cloudAssistant = cloudAssistant;
@@ -93,7 +94,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudAssistantAttributesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantAttributesResponseBody</p>
+     */
     public static class CloudAssistant extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveTaskCount")
         private Long activeTaskCount;
@@ -253,7 +272,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             private Boolean supportSessionManager; 
 
             /**
-             * The number of active tasks in Command Assistant.
+             * <p>The number of active tasks in Command Assistant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder activeTaskCount(Long activeTaskCount) {
                 this.activeTaskCount = activeTaskCount;
@@ -261,12 +283,12 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Command Assistant is running. Valid values:
-             * <p>
+             * <p>Indicates whether Command Assistant is running. Valid values:</p>
+             * <p>true: Heartbeats are detected in the last 2 minutes.</p>
+             * <p>false: Heartbeats are not detected in the last 2 minutes.</p>
              * 
-             * true: Heartbeats are detected in the last 2 minutes.
-             * 
-             * false: Heartbeats are not detected in the last 2 minutes.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cloudAssistantStatus(String cloudAssistantStatus) {
                 this.cloudAssistantStatus = cloudAssistantStatus;
@@ -274,7 +296,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the Command Assistant agent. Null is returned if the Command Assistant agent is not installed or is not running.
+             * <p>The version number of the Command Assistant agent. Null is returned if the Command Assistant agent is not installed or is not running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.0.106</p>
              */
             public Builder cloudAssistantVersion(String cloudAssistantVersion) {
                 this.cloudAssistantVersion = cloudAssistantVersion;
@@ -282,7 +307,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the simple application server.
+             * <p>The ID of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85dbe3e7cc7b49e1a3df4af3bfa4ebbf</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -290,7 +318,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of completed tasks in Command Assistant.
+             * <p>The number of completed tasks in Command Assistant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder invocationCount(Long invocationCount) {
                 this.invocationCount = invocationCount;
@@ -298,7 +329,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last heartbeat of Command Assistant was detected. The value is updated every minute on average. The interval can be 55, 60, or 65 seconds.
+             * <p>The time when the last heartbeat of Command Assistant was detected. The value is updated every minute on average. The interval can be 55, 60, or 65 seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15T09:00:00Z</p>
              */
             public Builder lastHeartbeatTime(String lastHeartbeatTime) {
                 this.lastHeartbeatTime = lastHeartbeatTime;
@@ -306,7 +340,10 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when commands were last run.
+             * <p>The time when commands were last run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15T08:00:00Z</p>
              */
             public Builder lastInvokedTime(String lastInvokedTime) {
                 this.lastInvokedTime = lastInvokedTime;
@@ -314,12 +351,15 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The OS type of the simple application server. Valid values:
-             * <p>
+             * <p>The OS type of the simple application server. Valid values:</p>
+             * <ul>
+             * <li>Windows</li>
+             * <li>Linux</li>
+             * <li>FreeBSD</li>
+             * </ul>
              * 
-             * *   Windows
-             * *   Linux
-             * *   FreeBSD
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -327,12 +367,12 @@ public class DescribeCloudAssistantAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Command Assistant supports session management. If Command Assistant does not support session management, the version of the Command Assistant agent is too earlier. We recommend that you update your Command Assistant agent to the latest version.
-             * <p>
+             * <p>Indicates whether Command Assistant supports session management. If Command Assistant does not support session management, the version of the Command Assistant agent is too earlier. We recommend that you update your Command Assistant agent to the latest version.</p>
+             * <p>To use the session management feature, you must make sure that the version of your Command Assistant agent meets one of the following requirements:</p>
+             * <p>If your simple application server runs Linux, the version of the Command Assistant agent on the server must be 2.2.3.189 or later. If your simple application server runs Windows, the version of the Command Assistant agent on the server must be 2.1.3.189 or later.</p>
              * 
-             * To use the session management feature, you must make sure that the version of your Command Assistant agent meets one of the following requirements:
-             * 
-             * If your simple application server runs Linux, the version of the Command Assistant agent on the server must be 2.2.3.189 or later. If your simple application server runs Windows, the version of the Command Assistant agent on the server must be 2.1.3.189 or later.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportSessionManager(Boolean supportSessionManager) {
                 this.supportSessionManager = supportSessionManager;

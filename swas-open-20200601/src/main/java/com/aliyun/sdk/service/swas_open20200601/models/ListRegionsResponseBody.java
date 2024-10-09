@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The regions.
+         * <p>The regions.</p>
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -121,7 +131,10 @@ public class ListRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -129,7 +142,10 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the region.
+             * <p>The endpoint of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swas.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -137,7 +153,10 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFirewallTemplateApplyResultsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFirewallTemplateApplyResultsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         private java.util.List < Data> data; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 20.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +130,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -130,6 +143,12 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFirewallTemplateApplyResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFirewallTemplateApplyResultsResponseBody</p>
+     */
     public static class InstanceApplyResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -169,7 +188,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the simple application server.
+             * <p>The ID of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33774babccc84003a2b1ad47e8001233</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -177,13 +199,16 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of applying the firewall template to the simple application servers. Valid values:
-             * <p>
+             * <p>The status of applying the firewall template to the simple application servers. Valid values:</p>
+             * <ul>
+             * <li>Running: The firewall template is being applied to the simple application servers.</li>
+             * <li>Failed: The firewall template is applied to none of the simple application servers.</li>
+             * <li>Success: The firewall template is applied to all the simple application servers.</li>
+             * <li>PartFailed: The firewall template fails to be applied to some simple application servers.</li>
+             * </ul>
              * 
-             * *   Running: The firewall template is being applied to the simple application servers.
-             * *   Failed: The firewall template is applied to none of the simple application servers.
-             * *   Success: The firewall template is applied to all the simple application servers.
-             * *   PartFailed: The firewall template fails to be applied to some simple application servers.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -197,6 +222,12 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFirewallTemplateApplyResultsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFirewallTemplateApplyResultsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -296,7 +327,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             private String totalCount; 
 
             /**
-             * The time when the firewall template was applied to the simple application servers.
+             * <p>The time when the firewall template was applied to the simple application servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tue May 14 11:53:07 CST 2024</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -304,7 +338,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of simple application servers to which the firewall template fails to apply.
+             * <p>The total number of simple application servers to which the firewall template fails to apply.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failedCount(String failedCount) {
                 this.failedCount = failedCount;
@@ -312,7 +349,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the firewall template.
+             * <p>The ID of the firewall template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ft-bcf1a7hrdq717****</p>
              */
             public Builder firewallTemplateId(String firewallTemplateId) {
                 this.firewallTemplateId = firewallTemplateId;
@@ -320,7 +360,7 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The result of applying the firewall template to the simple application servers.
+             * <p>The result of applying the firewall template to the simple application servers.</p>
              */
             public Builder instanceApplyResults(java.util.List < InstanceApplyResults> instanceApplyResults) {
                 this.instanceApplyResults = instanceApplyResults;
@@ -328,13 +368,16 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of applying the template to all simple application servers. Valid values:
-             * <p>
+             * <p>The status of applying the template to all simple application servers. Valid values:</p>
+             * <ul>
+             * <li>Running: The firewall template is being applied to simple application servers.</li>
+             * <li>Failed: The firewall template is applied to none of simple application servers.</li>
+             * <li>Success: The firewall template is applied to all simple application servers.</li>
+             * <li>PartFailed: The firewall template fails to be applied to some simple application servers.</li>
+             * </ul>
              * 
-             * *   Running: The firewall template is being applied to simple application servers.
-             * *   Failed: The firewall template is applied to none of simple application servers.
-             * *   Success: The firewall template is applied to all simple application servers.
-             * *   PartFailed: The firewall template fails to be applied to some simple application servers.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -342,7 +385,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the execution to apply the template.
+             * <p>The ID of the execution to apply the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aft-ikgt0bynitvs3****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -350,7 +396,10 @@ public class DescribeFirewallTemplateApplyResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

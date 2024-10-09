@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInvocationResultResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The execution results.
+         * <p>The execution results.</p>
          */
         public Builder invocationResult(InvocationResult invocationResult) {
             this.invocationResult = invocationResult;
@@ -57,7 +58,10 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInvocationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationResultResponseBody</p>
+     */
     public static class InvocationResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -217,26 +227,29 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The error code that is returned if the command failed to be sent or executed.
-             * <p>
+             * <p>The error code that is returned if the command failed to be sent or executed.</p>
+             * <ul>
+             * <li>If this parameter is empty, the command is executed normally.</li>
+             * <li>InstanceNotExists: The specified server does not exist or is released.</li>
+             * <li>InstanceReleased: The server was released while the command was being executed on the server.</li>
+             * <li>InstanceNotRunning: The server is not in the Running state while the command is being executed.</li>
+             * <li>CommandNotApplicable: The command is not applicable to the specified server.</li>
+             * <li>AccountNotExists: The specified account does not exist.</li>
+             * <li>DirectoryNotExists: The specified directory does not exist.</li>
+             * <li>BadCronExpression: The specified cron expression for the execution schedule is invalid.</li>
+             * <li>ClientNotRunning: The Cloud Assistant client is not running.</li>
+             * <li>ClientNotResponse: The Cloud Assistant client does not respond.</li>
+             * <li>ClientIsUpgrading: The Cloud Assistant client is being upgraded.</li>
+             * <li>ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.</li>
+             * <li>DeliveryTimeout: Command sending times out.</li>
+             * <li>ExecutionTimeout: The execution times out.</li>
+             * <li>ExecutionException: An exception occurs while the command is being executed.</li>
+             * <li>ExecutionInterrupted: The execution is interrupted.</li>
+             * <li>ExitCodeNonzero: The execution is complete, but the exit code is not 0.</li>
+             * </ul>
              * 
-             * *   If this parameter is empty, the command is executed normally.
-             * *   InstanceNotExists: The specified server does not exist or is released.
-             * *   InstanceReleased: The server was released while the command was being executed on the server.
-             * *   InstanceNotRunning: The server is not in the Running state while the command is being executed.
-             * *   CommandNotApplicable: The command is not applicable to the specified server.
-             * *   AccountNotExists: The specified account does not exist.
-             * *   DirectoryNotExists: The specified directory does not exist.
-             * *   BadCronExpression: The specified cron expression for the execution schedule is invalid.
-             * *   ClientNotRunning: The Cloud Assistant client is not running.
-             * *   ClientNotResponse: The Cloud Assistant client does not respond.
-             * *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
-             * *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
-             * *   DeliveryTimeout: Command sending times out.
-             * *   ExecutionTimeout: The execution times out.
-             * *   ExecutionException: An exception occurs while the command is being executed.
-             * *   ExecutionInterrupted: The execution is interrupted.
-             * *   ExitCodeNonzero: The execution is complete, but the exit code is not 0.
+             * <strong>example:</strong>
+             * <p>InstanceNotExists</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -244,26 +257,29 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned when the command is not successfully sent or executed. Valid values:
-             * <p>
+             * <p>The error message returned when the command is not successfully sent or executed. Valid values:</p>
+             * <ul>
+             * <li>If this parameter is empty, the command is executed normally.</li>
+             * <li>the specified instance does not exists: The specified server does not exist or is released.</li>
+             * <li>the instance has released when create task: The server was released while the command was being executed on the server.</li>
+             * <li>the instance is not running when create task: The server is not in the Running state while the command is being executed.</li>
+             * <li>the command is not applicable: The command is not applicable to the specified server.</li>
+             * <li>the specified account does not exists: The specified account does not exist.</li>
+             * <li>the specified directory does not exists: The specified directory does not exist.</li>
+             * <li>the cron job expression is invalid: The specified cron expression is invalid.</li>
+             * <li>the aliyun service is not running on the instance: The Cloud Assistance client is not running.</li>
+             * <li>the aliyun service in the instance does not response: The Cloud Assistant client does not respond to your request.</li>
+             * <li>the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.</li>
+             * <li>the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.</li>
+             * <li>the command delivery has been timeout: Command sending times out.</li>
+             * <li>the command execution has been timeout: The execution times out.</li>
+             * <li>the command execution got an exception: An exception occurs while the command is being executed.</li>
+             * <li>the command execution has been interrupted: The execution is interrupted.</li>
+             * <li>the command execution exit code is not zero: The execution is complete, and the exit code is not 0.</li>
+             * </ul>
              * 
-             * *   If this parameter is empty, the command is executed normally.
-             * *   the specified instance does not exists: The specified server does not exist or is released.
-             * *   the instance has released when create task: The server was released while the command was being executed on the server.
-             * *   the instance is not running when create task: The server is not in the Running state while the command is being executed.
-             * *   the command is not applicable: The command is not applicable to the specified server.
-             * *   the specified account does not exists: The specified account does not exist.
-             * *   the specified directory does not exists: The specified directory does not exist.
-             * *   the cron job expression is invalid: The specified cron expression is invalid.
-             * *   the aliyun service is not running on the instance: The Cloud Assistance client is not running.
-             * *   the aliyun service in the instance does not response: The Cloud Assistant client does not respond to your request.
-             * *   the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.
-             * *   the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.
-             * *   the command delivery has been timeout: Command sending times out.
-             * *   the command execution has been timeout: The execution times out.
-             * *   the command execution got an exception: An exception occurs while the command is being executed.
-             * *   the command execution has been interrupted: The execution is interrupted.
-             * *   the command execution exit code is not zero: The execution is complete, and the exit code is not 0.
+             * <strong>example:</strong>
+             * <p>the specified instance does not exists</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -271,11 +287,14 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The exit code of the command.
-             * <p>
+             * <p>The exit code of the command.</p>
+             * <ul>
+             * <li>For Linux instances, the exit code is the exit code of the shell command.</li>
+             * <li>For Windows instances, the exit code is the exit code of the batch or PowerShell command.</li>
+             * </ul>
              * 
-             * *   For Linux instances, the exit code is the exit code of the shell command.
-             * *   For Windows instances, the exit code is the exit code of the batch or PowerShell command.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Long exitCode) {
                 this.exitCode = exitCode;
@@ -283,7 +302,10 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution ended.
+             * <p>The time when the execution ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-11T06:37:17Z</p>
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -291,7 +313,10 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the simple application server.
+             * <p>The ID of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ace0706b2ac4454d984295a94213****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -299,20 +324,23 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the execution progress. Valid values:
-             * <p>
+             * <p>The status of the execution progress. Valid values:</p>
+             * <ul>
+             * <li>Pending: The command is being verified or sent.</li>
+             * <li>Invalid: The specified command type or parameter is invalid.</li>
+             * <li>Aborted: The command fails to be sent to the server. To send a command to a server, make sure that the server is in the Running state and the command can be sent within 1 minute.</li>
+             * <li>Running: The command is being executed on the server.</li>
+             * <li>Success: The execution is completed, and the exit code is 0.</li>
+             * <li>Failed: The execution is completed, and the exit code is not 0.</li>
+             * <li>Error: The execution cannot proceed due to an exception.</li>
+             * <li>Timeout: The execution times out.</li>
+             * <li>Cancelled: The execution is canceled, and the command is not executed.</li>
+             * <li>Stopping: The command in the Running state is being stopped.</li>
+             * <li>Terminated: The command is terminated while it is being executed.</li>
+             * </ul>
              * 
-             * *   Pending: The command is being verified or sent.
-             * *   Invalid: The specified command type or parameter is invalid.
-             * *   Aborted: The command fails to be sent to the server. To send a command to a server, make sure that the server is in the Running state and the command can be sent within 1 minute.
-             * *   Running: The command is being executed on the server.
-             * *   Success: The execution is completed, and the exit code is 0.
-             * *   Failed: The execution is completed, and the exit code is not 0.
-             * *   Error: The execution cannot proceed due to an exception.
-             * *   Timeout: The execution times out.
-             * *   Cancelled: The execution is canceled, and the command is not executed.
-             * *   Stopping: The command in the Running state is being stopped.
-             * *   Terminated: The command is terminated while it is being executed.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -320,7 +348,10 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The execution ID.
+             * <p>The execution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-bj02prjje65****</p>
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
@@ -328,13 +359,16 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the execution. Valid values:
-             * <p>
+             * <p>The status of the execution. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Finished</li>
+             * <li>Failed</li>
+             * <li>Stopped</li>
+             * </ul>
              * 
-             * *   Running
-             * *   Finished
-             * *   Failed
-             * *   Stopped
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
@@ -342,7 +376,10 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The username who executes the command on the simple application server.
+             * <p>The username who executes the command on the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder invokeUser(String invokeUser) {
                 this.invokeUser = invokeUser;
@@ -350,7 +387,10 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The command output.
+             * <p>The command output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YWRtaW4K</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -358,7 +398,10 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the execution started.
+             * <p>The time when the execution started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-11T06:37:16Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

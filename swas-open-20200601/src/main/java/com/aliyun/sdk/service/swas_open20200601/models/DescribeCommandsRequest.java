@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommandsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCommandsRequest</p>
@@ -167,7 +168,10 @@ public class DescribeCommandsRequest extends Request {
         } 
 
         /**
-         * The command ID.
+         * <p>The command ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-sh02yh0932w****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -176,7 +180,10 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The command name. Fuzzy match is not supported.
+         * <p>The command name. Fuzzy match is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -185,12 +192,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -199,12 +206,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,11 +220,15 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The provider of the common command. Take note of the following items:
-         * <p>
+         * <p>The provider of the common command. Take note of the following items:</p>
+         * <ul>
+         * <li>If you set this parameter to <code>AlibabaCloud</code>, all the common commands provided by Alibaba Cloud are queried.</li>
+         * <li>If you set this parameter to <code>User</code>, all the custom commands created by you are queried.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you set this parameter to `AlibabaCloud`, all the common commands provided by Alibaba Cloud are queried.
-         * *   If you set this parameter to `User`, all the custom commands created by you are queried.
+         * <strong>example:</strong>
+         * <p>AlibabaCloud</p>
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -226,7 +237,11 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,7 +250,10 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bti7cf7****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -244,7 +262,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The tags that are bound to the command.
+         * <p>The tags that are bound to the command.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -253,12 +271,15 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The language type of the command. Valid values:
-         * <p>
+         * <p>The language type of the command. Valid values:</p>
+         * <ul>
+         * <li>RunBatScript: batch command, applicable to Windows instances</li>
+         * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances</li>
+         * <li>RunShellScript: shell command, applicable to Linux instances</li>
+         * </ul>
          * 
-         * *   RunBatScript: batch command, applicable to Windows instances
-         * *   RunPowerShellScript: PowerShell command, applicable to Windows instances
-         * *   RunShellScript: shell command, applicable to Linux instances
+         * <strong>example:</strong>
+         * <p>RunShellScript</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -273,6 +294,12 @@ public class DescribeCommandsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommandsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCommandsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -312,7 +339,10 @@ public class DescribeCommandsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the command. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+             * <p>The tag key of the command. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -320,7 +350,10 @@ public class DescribeCommandsRequest extends Request {
             }
 
             /**
-             * The tag value of the command. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.
+             * <p>The tag value of the command. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

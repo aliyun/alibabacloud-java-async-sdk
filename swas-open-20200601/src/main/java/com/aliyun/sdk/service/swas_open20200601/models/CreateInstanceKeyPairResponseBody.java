@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInstanceKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInstanceKeyPairResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateInstanceKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The fingerprint of the key pair.
+         * <p>The fingerprint of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>If2K1ItazA4GlKkWCEhdRj8Wd6czAvK9*****</p>
          */
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
@@ -81,7 +85,10 @@ public class CreateInstanceKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the key pair.
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceshi</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -89,7 +96,10 @@ public class CreateInstanceKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The private key.
+         * <p>The private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder privateKey(String privateKey) {
             this.privateKey = privateKey;
@@ -97,7 +107,10 @@ public class CreateInstanceKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

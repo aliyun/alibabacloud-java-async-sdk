@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommandRequest} extends {@link RequestModel}
  *
  * <p>CreateCommandRequest</p>
@@ -183,14 +184,18 @@ public class CreateCommandRequest extends Request {
         } 
 
         /**
-         * The command content. When you specify this parameter, take note of the following items:
-         * <p>
+         * <p>The command content. When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>When <code>EnableParameter</code> is set to true, the custom parameter feature is enabled, and you can configure custom parameters in the command based on the following rules:</li>
+         * <li>Define custom parameters in the {{}} format. Within <code>{{}}</code>, the spaces and line feeds before and after the parameter names are ignored.</li>
+         * <li>You can specify up to 20 custom parameters.</li>
+         * <li>The name of a custom parameter can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive.</li>
+         * <li>The name of a custom parameter cannot exceed 64 bytes in length.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   When `EnableParameter` is set to true, the custom parameter feature is enabled, and you can configure custom parameters in the command based on the following rules:
-         * *   Define custom parameters in the {{}} format. Within `{{}}`, the spaces and line feeds before and after the parameter names are ignored.
-         * *   You can specify up to 20 custom parameters.
-         * *   The name of a custom parameter can contain only letters, digits, underscores (\_), and hyphens (-). The name is case-insensitive.
-         * *   The name of a custom parameter cannot exceed 64 bytes in length.
+         * <strong>example:</strong>
+         * <p>ifconfig -s</p>
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -199,7 +204,10 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * The description of the command. The description supports all character sets and can be up to 512 characters in length.
+         * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,10 +216,11 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to use custom parameters in the command.
-         * <p>
+         * <p>Specifies whether to use custom parameters in the command.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableParameter(Boolean enableParameter) {
             this.putQueryParameter("EnableParameter", enableParameter);
@@ -220,7 +229,11 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * The name of the command. The name supports all character sets and can be up to 128 characters in length.
+         * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -229,7 +242,11 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +255,10 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bti7cf7****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -247,7 +267,7 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the command. You can specify up to 20 tags.
+         * <p>The tags that you want to add to the command. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -256,12 +276,12 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * The timeout period for the command execution on the instance.
-         * <p>
+         * <p>The timeout period for the command execution on the instance.</p>
+         * <p>If a command execution task times out, Command Assistant forcefully terminates the task process. Valid values: 10 to 86400. Unit: seconds. The period of 86400 seconds is equal to 24 hours.</p>
+         * <p>Default value: 60.</p>
          * 
-         * If a command execution task times out, Command Assistant forcefully terminates the task process. Valid values: 10 to 86400. Unit: seconds. The period of 86400 seconds is equal to 24 hours.
-         * 
-         * Default value: 60.
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -270,12 +290,16 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * The language type of the command. Valid values:
-         * <p>
+         * <p>The language type of the command. Valid values:</p>
+         * <ul>
+         * <li>RunBatScript: batch command, applicable to Windows instances</li>
+         * <li>RunPowerShellScript: PowerShell command, applicable to Windows instances</li>
+         * <li>RunShellScript: shell command, applicable to Linux instances</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   RunBatScript: batch command, applicable to Windows instances
-         * *   RunPowerShellScript: PowerShell command, applicable to Windows instances
-         * *   RunShellScript: shell command, applicable to Linux instances
+         * <strong>example:</strong>
+         * <p>RunShellScript</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -284,13 +308,15 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * The working directory of the command on the ECS instance.
-         * <p>
+         * <p>The working directory of the command on the ECS instance.</p>
+         * <p>Default values:</p>
+         * <ul>
+         * <li>For a Linux instance, the default value is the home directory of the root user, which is the <code>/root</code> directory.</li>
+         * <li>For a Windows instance, the default value is the directory where the Cloud Assistant client process resides. Example: <code>C:\Windows\System32</code>.</li>
+         * </ul>
          * 
-         * Default values:
-         * 
-         * *   For a Linux instance, the default value is the home directory of the root user, which is the `/root` directory.
-         * *   For a Windows instance, the default value is the directory where the Cloud Assistant client process resides. Example: `C:\Windows\System32`.
+         * <strong>example:</strong>
+         * <p>/root/</p>
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);
@@ -305,6 +331,12 @@ public class CreateCommandRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCommandRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCommandRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -344,10 +376,11 @@ public class CreateCommandRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that you want to add to the command. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N that you want to add to the command. Valid values of N: 1 to 20.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -355,10 +388,11 @@ public class CreateCommandRequest extends Request {
             }
 
             /**
-             * The value of tag N that you want to add to the command. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The value of tag N that you want to add to the command. Valid values of N: 1 to 20.</p>
+             * <p>The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
              * 
-             * The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

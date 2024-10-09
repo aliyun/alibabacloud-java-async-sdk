@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>CreateKeyPairResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the key pair. The name must be 2 to 64 characters in length and can contain letters, digits, colons (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.
+         * <p>The name of the key pair. The name must be 2 to 64 characters in length and can contain letters, digits, colons (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyPairName</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -69,7 +73,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The private key of the key pair. The PEM-encoded private key is in PKCS#8 format.
+         * <p>The private key of the key pair. The PEM-encoded private key is in PKCS#8 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</p>
          */
         public Builder privateKeyBody(String privateKeyBody) {
             this.privateKeyBody = privateKeyBody;
@@ -77,7 +84,10 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

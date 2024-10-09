@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RunCommandResponseBody} extends {@link TeaModel}
  *
  * <p>RunCommandResponseBody</p>
@@ -49,7 +50,10 @@ public class RunCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The execution ID.
+         * <p>The execution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-hz02p9545t6****</p>
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
@@ -57,7 +61,10 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

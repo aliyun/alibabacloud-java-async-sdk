@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceVncUrlResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceVncUrlResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
         private String vncUrl; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The VNC connection address of the server.
+         * <p>The VNC connection address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wss%3A%2F%2Fhz01-vncproxy.aliyun.com%2Fwebsockify%2F%3Fs%3Dwz3L8wEMO6KMt7%252FXInEMtKVubBB%252F7rv055kOm8eUOD%252*****YlmsKjOfz6</p>
          */
         public Builder vncUrl(String vncUrl) {
             this.vncUrl = vncUrl;

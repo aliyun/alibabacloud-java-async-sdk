@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListImagesResponseBody</p>
@@ -49,11 +50,11 @@ public class ListImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The OS type of the image. Valid values:
-         * <p>
-         * 
-         * *   Linux
-         * *   Windows
+         * <p>The OS type of the image. Valid values:</p>
+         * <ul>
+         * <li>Linux</li>
+         * <li>Windows</li>
+         * </ul>
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -61,7 +62,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -74,6 +78,12 @@ public class ListImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImagesResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -149,7 +159,7 @@ public class ListImagesResponseBody extends TeaModel {
             private String platform; 
 
             /**
-             * The description of the image.
+             * <p>The description of the image.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -157,7 +167,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>794c230fd3e64ea19f83f4d7a0ad****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -165,7 +178,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WordPress-4.8.1</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -173,12 +189,15 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image. Valid values:
-             * <p>
+             * <p>The type of the image. Valid values:</p>
+             * <ul>
+             * <li>system</li>
+             * <li>app</li>
+             * <li>custom</li>
+             * </ul>
              * 
-             * *   system
-             * *   app
-             * *   custom
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -186,11 +205,14 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the image. Valid values:
-             * <p>
+             * <p>The operating system type of the image. Valid values:</p>
+             * <ul>
+             * <li>Linux</li>
+             * <li>Windows</li>
+             * </ul>
              * 
-             * *   Linux
-             * *   Windows
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;

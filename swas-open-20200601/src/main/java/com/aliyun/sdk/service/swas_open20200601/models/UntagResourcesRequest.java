@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -126,7 +127,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags. This parameter takes effect only when TagKey.N is not specified. Valid values: true and false. Default value: false.
+         * <p>Specifies whether to remove all tags. This parameter takes effect only when TagKey.N is not specified. Valid values: true and false. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -135,7 +139,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~).
+         * <p>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -144,7 +151,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +164,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can specify up to 50 resource IDs.
+         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -162,15 +174,19 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>instance</li>
+         * <li>snapshot</li>
+         * <li>customimage</li>
+         * <li>command</li>
+         * <li>firewallrule</li>
+         * <li>disk</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   instance
-         * *   snapshot
-         * *   customimage
-         * *   command
-         * *   firewallrule
-         * *   disk
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -179,7 +195,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The key of tag N. Valid values of N: 1 to 20.
+         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

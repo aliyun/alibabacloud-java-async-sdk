@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFirewallTemplateRulesApplyResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFirewallTemplateRulesApplyResultResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
         private java.util.List < Data> data; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,6 +74,12 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFirewallTemplateRulesApplyResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFirewallTemplateRulesApplyResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -169,7 +179,10 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
             private Boolean success; 
 
             /**
-             * The error codes when the firewall template rule fails to be applied.
+             * <p>The error codes when the firewall template rule fails to be applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -177,7 +190,10 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
             }
 
             /**
-             * The error message that is displayed when the firewall template rule fails to be applied.
+             * <p>The error message that is displayed when the firewall template rule fails to be applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An error occurred while processing your request.</p>
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;
@@ -185,10 +201,13 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
             }
 
             /**
-             * The port range. Valid values: 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: `1024/1055`, which indicates that the port range of 1024 to 1055.
-             * <p>
+             * <p>The port range. Valid values: 1 to 65535. Specify a port range in the format of &lt;start port number&gt;/&lt;end port number&gt;. Example: <code>1024/1055</code>, which indicates that the port range of 1024 to 1055.</p>
+             * <blockquote>
+             * <p> If you set RuleProtocol to ICMP, you must set Port to -1/-1.</p>
+             * </blockquote>
              * 
-             * >  If you set RuleProtocol to ICMP, you must set Port to -1/-1.
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -196,7 +215,10 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
             }
 
             /**
-             * The remarks of the firewall rule.
+             * <p>The remarks of the firewall rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -204,13 +226,16 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
             }
 
             /**
-             * The transport layer protocol that the rule supports. Valid values:
-             * <p>
+             * <p>The transport layer protocol that the rule supports. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>TCP+UDP</li>
+             * <li>ICMP</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
-             * *   TCP+UDP
-             * *   ICMP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ruleProtocol(String ruleProtocol) {
                 this.ruleProtocol = ruleProtocol;
@@ -218,7 +243,10 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
             }
 
             /**
-             * The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.
+             * <p>The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119.145.XX.XX</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -226,13 +254,16 @@ public class DescribeFirewallTemplateRulesApplyResultResponseBody extends TeaMod
             }
 
             /**
-             * The status of applying the firewall template rule to the simple application servers.
-             * <p>
+             * <p>The status of applying the firewall template rule to the simple application servers.</p>
+             * <ul>
+             * <li>Pending: The template rule does not start to be applied to the simple application servers.</li>
+             * <li>Applying: The template rule is being applied to the simple application servers.</li>
+             * <li>Success: The template rule is successfully applied to the simple application servers.</li>
+             * <li>PartFailed: The template rule fails to be applied to some simple application servers.</li>
+             * </ul>
              * 
-             * *   Pending: The template rule does not start to be applied to the simple application servers.
-             * *   Applying: The template rule is being applied to the simple application servers.
-             * *   Success: The template rule is successfully applied to the simple application servers.
-             * *   PartFailed: The template rule fails to be applied to some simple application servers.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

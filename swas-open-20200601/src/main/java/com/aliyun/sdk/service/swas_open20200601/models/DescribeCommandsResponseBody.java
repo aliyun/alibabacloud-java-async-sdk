@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommandsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCommandsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried commands.
+         * <p>The queried commands.</p>
          */
         public Builder commands(java.util.List < Commands> commands) {
             this.commands = commands;
@@ -93,7 +94,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of commands.
+         * <p>The total number of commands.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeCommandsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommandsResponseBody</p>
+     */
     public static class ParameterDefinitions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
@@ -205,7 +224,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private Boolean required; 
 
             /**
-             * The default value of the custom parameter.
+             * <p>The default value of the custom parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aliyun-client-assist.oss-accelerate.aliyuncs.com/linux/aliyun_assist_latest.rpm">https://aliyun-client-assist.oss-accelerate.aliyuncs.com/linux/aliyun_assist_latest.rpm</a></p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -213,7 +235,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the custom parameter.
+             * <p>The description of the custom parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Command Assistant Agent Installation Package Path</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -221,7 +246,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom parameter.
+             * <p>The name of the custom parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DownloadUrl</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -229,7 +257,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The valid values of the custom parameter.
+             * <p>The valid values of the custom parameter.</p>
              */
             public Builder possibleValues(java.util.List < String > possibleValues) {
                 this.possibleValues = possibleValues;
@@ -237,13 +265,15 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the custom parameter is required. Valid values:
-             * <p>
+             * <p>Indicates whether the custom parameter is required. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -257,6 +287,12 @@ public class DescribeCommandsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommandsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -296,7 +332,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the command.
+             * <p>The tag key of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,7 +343,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the command.
+             * <p>The tag value of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -318,6 +360,12 @@ public class DescribeCommandsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommandsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommandsResponseBody</p>
+     */
     public static class Commands extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommandContent")
         private String commandContent;
@@ -501,7 +549,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             private String workingDir; 
 
             /**
-             * The content of the command.
+             * <p>The content of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cat /etc/ssh/sshd_config</p>
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
@@ -509,7 +560,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The command ID.
+             * <p>The command ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-gov1k1tqwi9****</p>
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -517,7 +571,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the command was created.
+             * <p>The time when the command was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-05T06:38:53Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -525,7 +582,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the command.
+             * <p>The description of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -533,7 +593,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the custom parameter feature is enabled for the command.
+             * <p>Indicates whether the custom parameter feature is enabled for the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableParameter(Boolean enableParameter) {
                 this.enableParameter = enableParameter;
@@ -541,7 +604,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the command.
+             * <p>The name of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -549,7 +615,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the custom parameter.
+             * <p>Details of the custom parameter.</p>
              */
             public Builder parameterDefinitions(java.util.List < ParameterDefinitions> parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
@@ -557,7 +623,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom parameter names that are parsed from the command content specified when the command was created. The custom parameter names are returned in the list format. If the custom parameter feature is disabled, an empty list is returned.
+             * <p>The custom parameter names that are parsed from the command content specified when the command was created. The custom parameter names are returned in the list format. If the custom parameter feature is disabled, an empty list is returned.</p>
              */
             public Builder parameterNames(java.util.List < String > parameterNames) {
                 this.parameterNames = parameterNames;
@@ -565,7 +631,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The provider of the command.
+             * <p>The provider of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -573,7 +642,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2bti7cf7****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -581,7 +653,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are bound to the command.
+             * <p>The tags that are bound to the command.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -589,7 +661,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the command.
+             * <p>The timeout period of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -597,7 +672,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the command.
+             * <p>The type of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RunShellScript</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -605,7 +683,10 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The execution path of the command.
+             * <p>The execution path of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;

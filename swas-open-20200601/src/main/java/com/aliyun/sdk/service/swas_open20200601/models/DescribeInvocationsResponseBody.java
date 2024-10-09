@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInvocationsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The command name.
+         * <p>The command name.</p>
          */
         public Builder invocations(java.util.List < Invocations> invocations) {
             this.invocations = invocations;
@@ -93,7 +94,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInvocationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInvocationsResponseBody</p>
+     */
     public static class Invocations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommandContent")
         private String commandContent;
@@ -241,7 +260,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private java.util.Map < String, ? > parameters; 
 
             /**
-             * The content of the command, which is Base64-encoded.
+             * <p>The content of the command, which is Base64-encoded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bHM=</p>
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
@@ -249,7 +271,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the command.
+             * <p>The name of the command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testname</p>
              */
             public Builder commandName(String commandName) {
                 this.commandName = commandName;
@@ -257,12 +282,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the command. Valid values:
-             * <p>
+             * <p>The type of the command. Valid values:</p>
+             * <ul>
+             * <li>RunBatScript: batch command (applicable to Windows instances).</li>
+             * <li>RunPowerShellScript: PowerShell command (applicable to Windows instances).</li>
+             * <li>RunShellScript: shell command (applicable to Linux instances).</li>
+             * </ul>
              * 
-             * *   RunBatScript: batch command (applicable to Windows instances).
-             * *   RunPowerShellScript: PowerShell command (applicable to Windows instances).
-             * *   RunShellScript: shell command (applicable to Linux instances).
+             * <strong>example:</strong>
+             * <p>RunShellScript</p>
              */
             public Builder commandType(String commandType) {
                 this.commandType = commandType;
@@ -270,7 +298,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the command was created.
+             * <p>The time when the command was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-11T06:37:16Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -278,20 +309,23 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the command. Valid values:
-             * <p>
+             * <p>The status of the command. Valid values:</p>
+             * <ul>
+             * <li>Pending: The command is being verified or sent.</li>
+             * <li>Invalid: The specified command type or parameter is invalid.</li>
+             * <li>Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.</li>
+             * <li>Running: The command is being run on the instance.</li>
+             * <li>Success: The command finishes running, and the exit code is 0.</li>
+             * <li>Failed: The command finishes running, but the exit code is not 0.</li>
+             * <li>Error: The running of the command cannot proceed due to an exception.</li>
+             * <li>Timeout: The running of the command times out.</li>
+             * <li>Cancelled: The running is canceled, and the command is not run.</li>
+             * <li>Stopping: The command that is running is being stopped.</li>
+             * <li>Terminated: The command is terminated while it is being run.</li>
+             * </ul>
              * 
-             * *   Pending: The command is being verified or sent.
-             * *   Invalid: The specified command type or parameter is invalid.
-             * *   Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.
-             * *   Running: The command is being run on the instance.
-             * *   Success: The command finishes running, and the exit code is 0.
-             * *   Failed: The command finishes running, but the exit code is not 0.
-             * *   Error: The running of the command cannot proceed due to an exception.
-             * *   Timeout: The running of the command times out.
-             * *   Cancelled: The running is canceled, and the command is not run.
-             * *   Stopping: The command that is running is being stopped.
-             * *   Terminated: The command is terminated while it is being run.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -299,7 +333,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command task.
+             * <p>The ID of the command task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-hz02p9545t6****</p>
              */
             public Builder invokeId(String invokeId) {
                 this.invokeId = invokeId;
@@ -307,13 +344,16 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the command. Valid values:
-             * <p>
+             * <p>The status of the command. Valid values:</p>
+             * <ul>
+             * <li>Running: The command is running.</li>
+             * <li>Finished: The command finishes running.</li>
+             * <li>Failed: The running of the command failed.</li>
+             * <li>Stopped: The running is stopped.</li>
+             * </ul>
              * 
-             * *   Running: The command is running.
-             * *   Finished: The command finishes running.
-             * *   Failed: The running of the command failed.
-             * *   Stopped: The running is stopped.
+             * <strong>example:</strong>
+             * <p>Finished</p>
              */
             public Builder invokeStatus(String invokeStatus) {
                 this.invokeStatus = invokeStatus;
@@ -321,7 +361,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * The custom parameters in the command. If no custom parameter exists in the command, the default value is {}.
+             * <p>The custom parameters in the command. If no custom parameter exists in the command, the default value is {}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder parameters(java.util.Map < String, ? > parameters) {
                 this.parameters = parameters;

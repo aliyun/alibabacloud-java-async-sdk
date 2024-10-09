@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomImageShareAccountsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomImageShareAccountsResponseBody</p>
@@ -85,7 +86,7 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the shared custom images.
+         * <p>The information about the shared custom images.</p>
          */
         public Builder imageShareUsers(java.util.List < ImageShareUsers> imageShareUsers) {
             this.imageShareUsers = imageShareUsers;
@@ -93,7 +94,10 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomImageShareAccountsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomImageShareAccountsResponseBody</p>
+     */
     public static class ImageShareUsers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SharedTime")
         private String sharedTime;
@@ -169,7 +188,10 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * The time when the custom image is shared.
+             * <p>The time when the custom image is shared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-15 13:59:21.0</p>
              */
             public Builder sharedTime(String sharedTime) {
                 this.sharedTime = sharedTime;
@@ -177,7 +199,10 @@ public class ListCustomImageShareAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account whose custom image is shared.
+             * <p>The ID of the Alibaba Cloud account whose custom image is shared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125111425233****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

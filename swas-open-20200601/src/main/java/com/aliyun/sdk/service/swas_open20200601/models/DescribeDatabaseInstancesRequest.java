@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabaseInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeDatabaseInstancesRequest</p>
@@ -96,7 +97,10 @@ public class DescribeDatabaseInstancesRequest extends Request {
         } 
 
         /**
-         * The IDs of the Simple Database Service instances. The value can be a JSON array that consists of up to 100 Simple Database Service instance IDs. Separate multiple instance IDs with commas (,).
+         * <p>The IDs of the Simple Database Service instances. The value can be a JSON array that consists of up to 100 Simple Database Service instance IDs. Separate multiple instance IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;swasdb-xxx******&quot;,&quot;swasdb-yyy******&quot;]</p>
          */
         public Builder databaseInstanceIds(String databaseInstanceIds) {
             this.putQueryParameter("DatabaseInstanceIds", databaseInstanceIds);
@@ -105,12 +109,12 @@ public class DescribeDatabaseInstancesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -119,12 +123,12 @@ public class DescribeDatabaseInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -133,7 +137,11 @@ public class DescribeDatabaseInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the Simple Database Service instances.
+         * <p>The region ID of the Simple Database Service instances.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

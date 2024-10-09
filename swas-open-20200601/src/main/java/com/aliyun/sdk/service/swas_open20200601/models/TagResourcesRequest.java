@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -113,7 +114,10 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~).
+         * <p>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -122,7 +126,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +139,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs. You can specify up to 50 resource IDs.
+         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -140,15 +149,19 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Valid values:
-         * <p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>instance</li>
+         * <li>snapshot</li>
+         * <li>customimage</li>
+         * <li>command</li>
+         * <li>firewallrule</li>
+         * <li>disk</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   instance
-         * *   snapshot
-         * *   customimage
-         * *   command
-         * *   firewallrule
-         * *   disk
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -157,7 +170,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags. You can specify up to 20 tags.
+         * <p>The list of tags. You can specify up to 20 tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -172,6 +186,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -211,10 +231,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that you want to add to the simple application server. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N that you want to add to a resource.</p>
+             * <p>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * 
-             * You cannot specify an empty string as a tag key. A tag key can be up to 64 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -222,10 +243,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of tag N that you want to add to the simple application server. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The value of tag N that you want to add to a resource.</p>
+             * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
              * 
-             * You can specify an empty string as a tag value. A tag value can be up to 64 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

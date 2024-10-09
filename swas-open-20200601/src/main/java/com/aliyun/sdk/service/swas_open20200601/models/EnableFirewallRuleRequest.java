@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableFirewallRuleRequest} extends {@link RequestModel}
  *
  * <p>EnableFirewallRuleRequest</p>
@@ -126,7 +127,10 @@ public class EnableFirewallRuleRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -135,7 +139,11 @@ public class EnableFirewallRuleRequest extends Request {
         }
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ad1ae67295445f598017499dc****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -144,7 +152,11 @@ public class EnableFirewallRuleRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +165,10 @@ public class EnableFirewallRuleRequest extends Request {
         }
 
         /**
-         * The remarks of the firewall rule.
+         * <p>The remarks of the firewall rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -162,7 +177,11 @@ public class EnableFirewallRuleRequest extends Request {
         }
 
         /**
-         * The ID of the firewall rule.
+         * <p>The ID of the firewall rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eeea34d9867b4d55a4ff8d5fcfbd****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -171,7 +190,10 @@ public class EnableFirewallRuleRequest extends Request {
         }
 
         /**
-         * The IP address or CIDR block that is allowed in the firewall policy.
+         * <p>The IP address or CIDR block that is allowed in the firewall policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.147.33.**</p>
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);

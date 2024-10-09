@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFirewallRulesRequest} extends {@link RequestModel}
  *
  * <p>ListFirewallRulesRequest</p>
@@ -127,7 +128,10 @@ public class ListFirewallRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the firewall rule.
+         * <p>The ID of the firewall rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a16263ab0f541288312a15fa64280de</p>
          */
         public Builder firewallRuleId(String firewallRuleId) {
             this.putQueryParameter("FirewallRuleId", firewallRuleId);
@@ -136,7 +140,11 @@ public class ListFirewallRulesRequest extends Request {
         }
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ace0706b2ac4454d984295a94213****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,12 +153,12 @@ public class ListFirewallRulesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -159,12 +167,12 @@ public class ListFirewallRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -173,7 +181,11 @@ public class ListFirewallRulesRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server.
+         * <p>The region ID of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +194,7 @@ public class ListFirewallRulesRequest extends Request {
         }
 
         /**
-         * The tags of the firewall rule.
+         * <p>The tags of the firewall rule.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -197,6 +209,12 @@ public class ListFirewallRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListFirewallRulesRequest} extends {@link TeaModel}
+     *
+     * <p>ListFirewallRulesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -236,7 +254,10 @@ public class ListFirewallRulesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.
+             * <p>The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -244,7 +265,10 @@ public class ListFirewallRulesRequest extends Request {
             }
 
             /**
-             * The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.
+             * <p>The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFirewallRulesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFirewallRulesResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateFirewallRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the firewall rules that you created.
+         * <p>The IDs of the firewall rules that you created.</p>
          */
         public Builder firewallRuleIds(java.util.List < String > firewallRuleIds) {
             this.firewallRuleIds = firewallRuleIds;
@@ -57,7 +58,10 @@ public class CreateFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

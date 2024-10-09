@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotsRequest} extends {@link RequestModel}
  *
  * <p>ListSnapshotsRequest</p>
@@ -168,7 +169,10 @@ public class ListSnapshotsRequest extends Request {
         } 
 
         /**
-         * The disk ID.
+         * <p>The disk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp14wq0149cpp2xy****</p>
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -177,7 +181,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ad1ae67295445f598017499dc****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -186,10 +193,11 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,10 +206,11 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
-         * <p>
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -210,7 +219,11 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server that corresponds to the snapshots.
+         * <p>The region ID of the simple application server that corresponds to the snapshots.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -219,7 +232,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bti7cf7****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -228,7 +244,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The snapshot IDs. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple snapshot IDs with commas (,).
+         * <p>The snapshot IDs. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple snapshot IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;s-bp16oazlsold4dks****&quot;, &quot;s-bp16oazlsold4abc****&quot;]</p>
          */
         public Builder snapshotIds(String snapshotIds) {
             this.putQueryParameter("SnapshotIds", snapshotIds);
@@ -237,11 +256,14 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the source disk. Valid values:
-         * <p>
+         * <p>The type of the source disk. Valid values:</p>
+         * <ul>
+         * <li>system: system disk.</li>
+         * <li>data: data disk.</li>
+         * </ul>
          * 
-         * *   system: system disk.
-         * *   data: data disk.
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);
@@ -250,7 +272,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * Tag N that you want to add to the snapshot.
+         * <p>Tag N that you want to add to the snapshot.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -265,6 +287,12 @@ public class ListSnapshotsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListSnapshotsRequest} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -304,7 +332,10 @@ public class ListSnapshotsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that you want to add to the snapshot. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+             * <p>The key of tag N that you want to add to the snapshot. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,7 +343,10 @@ public class ListSnapshotsRequest extends Request {
             }
 
             /**
-             * The value of tag N that you want to add to the snapshot. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.
+             * <p>The value of tag N that you want to add to the snapshot. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

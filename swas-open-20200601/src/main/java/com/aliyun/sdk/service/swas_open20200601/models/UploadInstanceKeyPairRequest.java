@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadInstanceKeyPairRequest} extends {@link RequestModel}
  *
  * <p>UploadInstanceKeyPairRequest</p>
@@ -111,7 +112,10 @@ public class UploadInstanceKeyPairRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -120,7 +124,11 @@ public class UploadInstanceKeyPairRequest extends Request {
         }
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ad1ae67295445f598017499dc****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,7 +137,10 @@ public class UploadInstanceKeyPairRequest extends Request {
         }
 
         /**
-         * The name of the key pair.
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_gin</p>
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -138,7 +149,10 @@ public class UploadInstanceKeyPairRequest extends Request {
         }
 
         /**
-         * The public key.
+         * <p>The public key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID5aQ5bM0Am3mWe+upjSXqisUT4DLR6ExwvA0***** <strong>@</strong>.com</p>
          */
         public Builder publicKey(String publicKey) {
             this.putQueryParameter("PublicKey", publicKey);
@@ -147,7 +161,11 @@ public class UploadInstanceKeyPairRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

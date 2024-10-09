@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCommandAttributeRequest} extends {@link RequestModel}
  *
  * <p>UpdateCommandAttributeRequest</p>
@@ -125,7 +126,11 @@ public class UpdateCommandAttributeRequest extends Request {
         } 
 
         /**
-         * The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
+         * <p>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-sh02yh0932w****</p>
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -134,7 +139,10 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * The description of the command. The description supports all character sets and can be up to 512 characters in length.
+         * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -143,7 +151,10 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * The name of the command. The name supports all character sets and can be up to 128 characters in length.
+         * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -152,7 +163,11 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +176,10 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * The maximum timeout period for the command execution on the ECS instance. Unit: seconds. When a command that you created cannot be run, the command execution times out. When the execution times out, the command process is forcefully terminated and the PID of the command is canceled. Default value: 60.
+         * <p>The maximum timeout period for the command execution on the ECS instance. Unit: seconds. When a command that you created cannot be run, the command execution times out. When the execution times out, the command process is forcefully terminated and the PID of the command is canceled. Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -170,7 +188,10 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * The working directory of the command. The directory can be up to 200 characters in length.
+         * <p>The working directory of the command. The directory can be up to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/</p>
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);

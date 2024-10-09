@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallCloudAssistantRequest} extends {@link RequestModel}
  *
  * <p>InstallCloudAssistantRequest</p>
@@ -69,7 +70,8 @@ public class InstallCloudAssistantRequest extends Request {
         } 
 
         /**
-         * The IDs of the simple application servers.
+         * <p>The IDs of the simple application servers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -79,7 +81,11 @@ public class InstallCloudAssistantRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application servers. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application servers. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

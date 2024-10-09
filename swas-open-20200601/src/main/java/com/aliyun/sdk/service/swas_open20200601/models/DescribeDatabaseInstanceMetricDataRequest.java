@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabaseInstanceMetricDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeDatabaseInstanceMetricDataRequest</p>
@@ -114,7 +115,11 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         } 
 
         /**
-         * The ID of the Simple Database Service instance.
+         * <p>The ID of the Simple Database Service instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db-38263fa955774501a2ae1bdaed6f****</p>
          */
         public Builder databaseInstanceId(String databaseInstanceId) {
             this.putQueryParameter("DatabaseInstanceId", databaseInstanceId);
@@ -123,10 +128,14 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
-         * <p>
+         * <p>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The time displayed in the Simple Application Server console is in the format of UTC+8.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The time displayed in the Simple Application Server console is in the format of UTC+8.
+         * <strong>example:</strong>
+         * <p>2022-09-07T04:04Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -135,13 +144,17 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         }
 
         /**
-         * The name of the metric. Valid values:
-         * <p>
+         * <p>The name of the metric. Valid values:</p>
+         * <ul>
+         * <li>MySQL_MemCpuUsage: The CPU utilization and memory usage of the instance within the entire operating system.</li>
+         * <li>MySQL_DetailedSpaceUsage: The total space usage, data space, log space, temporary space, and system space of the instance.</li>
+         * <li>MySQL_Sessions : The total number of active connections.</li>
+         * <li>MySQL_IOPS: The IOPS of the instance.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   MySQL_MemCpuUsage: The CPU utilization and memory usage of the instance within the entire operating system.
-         * *   MySQL_DetailedSpaceUsage: The total space usage, data space, log space, temporary space, and system space of the instance.
-         * *   MySQL_Sessions : The total number of active connections.
-         * *   MySQL_IOPS: The IOPS of the instance.
+         * <strong>example:</strong>
+         * <p>MySQL_MemCpuUsage</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -150,7 +163,11 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         }
 
         /**
-         * The region ID of the Simple Database Service instance. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the Simple Database Service instance. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -159,10 +176,14 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
-         * <p>
+         * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p>The time displayed in the Simple Application Server console is in the format of UTC+8.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The time displayed in the Simple Application Server console is in the format of UTC+8.
+         * <strong>example:</strong>
+         * <p>2022-09-06T04:04Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDisksRequest} extends {@link RequestModel}
  *
  * <p>ListDisksRequest</p>
@@ -154,7 +155,10 @@ public class ListDisksRequest extends Request {
         } 
 
         /**
-         * The IDs of the disks. The value can be a JSON array that consists of up to 100 disk IDs. Separate multiple disk IDs with commas (,).
+         * <p>The IDs of the disks. The value can be a JSON array that consists of up to 100 disk IDs. Separate multiple disk IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d-bp14wq0149cpp2x****&quot;, &quot;d-bp14wq0149cpp2y****&quot;]</p>
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -163,13 +167,15 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The disk type. Valid values:
-         * <p>
+         * <p>The disk type. Valid values:</p>
+         * <ul>
+         * <li>system: system disk</li>
+         * <li>data: data disk</li>
+         * </ul>
+         * <p>By default, system disks and data disks are both queried.</p>
          * 
-         * *   system: system disk
-         * *   data: data disk
-         * 
-         * By default, system disks and data disks are both queried.
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -178,7 +184,10 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ad1ae67295445f598017499dc****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,10 +196,11 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -199,12 +209,12 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -213,7 +223,11 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The region ID of the disks.
+         * <p>The region ID of the disks.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +236,10 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bti7cf7****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -231,7 +248,7 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The tags that are added to the disks.
+         * <p>The tags that are added to the disks.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -246,6 +263,12 @@ public class ListDisksRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListDisksRequest} extends {@link TeaModel}
+     *
+     * <p>ListDisksRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -285,7 +308,10 @@ public class ListDisksRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. The tag key can be up to 64 characters in length. Valid values of N: 1 to 20.
+             * <p>The tag key. The tag key can be up to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -293,7 +319,10 @@ public class ListDisksRequest extends Request {
             }
 
             /**
-             * The tag value. The tag value can be up to 64 characters in length. Valid values of N: 1 to 20.
+             * <p>The tag value. The tag value can be up to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

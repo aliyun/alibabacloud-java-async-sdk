@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInvocationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInvocationsRequest</p>
@@ -111,7 +112,11 @@ public class DescribeInvocationsRequest extends Request {
         } 
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3a658ca270df4df39f22e289b338****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,12 +125,15 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The status of the command execution. Valid values:
-         * <p>
+         * <p>The status of the command execution. Valid values:</p>
+         * <ul>
+         * <li>Running: The command is being executed.</li>
+         * <li>Finished: The execution is complete.</li>
+         * <li>Failed: The execution fails.</li>
+         * </ul>
          * 
-         * *   Running: The command is being executed.
-         * *   Finished: The execution is complete.
-         * *   Failed: The execution fails.
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder invokeStatus(String invokeStatus) {
             this.putQueryParameter("InvokeStatus", invokeStatus);
@@ -134,12 +142,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -148,12 +156,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -162,7 +170,11 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

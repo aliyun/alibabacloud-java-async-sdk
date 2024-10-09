@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachKeyPairResponseBody} extends {@link TeaModel}
  *
  * <p>AttachKeyPairResponseBody</p>
@@ -73,7 +74,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The total number of simple application servers to which the key pair failed to be bound.
+         * <p>The total number of simple application servers to which the key pair failed to be bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder failCount(Integer failCount) {
             this.failCount = failCount;
@@ -81,7 +85,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The results.
+         * <p>The results.</p>
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -97,7 +104,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of simple application servers to which the key pair is bound.
+         * <p>The total number of simple application servers to which the key pair is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +120,12 @@ public class AttachKeyPairResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AttachKeyPairResponseBody} extends {@link TeaModel}
+     *
+     * <p>AttachKeyPairResponseBody</p>
+     */
     public static class Results extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -173,7 +189,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The HTTP status code.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -181,7 +200,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The simple application server ID.
+             * <p>The simple application server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aa6e71ddb35c46679bc4753d6219d604</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -189,7 +211,10 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * The response message.
+             * <p>The response message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -197,11 +222,14 @@ public class AttachKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the key pair is bound to the simple application server successfully. Valid values:
-             * <p>
+             * <p>Indicates whether the key pair is bound to the simple application server successfully. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(String success) {
                 this.success = success;

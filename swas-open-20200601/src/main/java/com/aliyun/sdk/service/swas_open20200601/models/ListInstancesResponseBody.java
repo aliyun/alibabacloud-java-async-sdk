@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstancesResponseBody</p>
@@ -85,7 +86,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the simple application servers.
+         * <p>Details about the simple application servers.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -93,7 +94,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class DiskTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +216,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
@@ -362,12 +393,15 @@ public class ListInstancesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The category of the disk. Valid values:
-             * <p>
+             * <p>The category of the disk. Valid values:</p>
+             * <ul>
+             * <li>ESSD: ESSD of PL0</li>
+             * <li>SSD: standard SSD</li>
+             * <li>CLOUD_EFFICIENCY: an ultra disk.</li>
+             * </ul>
              * 
-             * *   ESSD: ESSD of PL0
-             * *   SSD: standard SSD
-             * *   CLOUD_EFFICIENCY: an ultra disk.
+             * <strong>example:</strong>
+             * <p>ESSD</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -375,7 +409,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the simple application server was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the simple application server was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-24T02:20:10Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -383,7 +420,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The device name of the disk after the disk is attached to the simple application server.
+             * <p>The device name of the disk after the disk is attached to the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/xvda</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -391,7 +431,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the disk.
+             * <p>The billing method of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder diskChargeType(String diskChargeType) {
                 this.diskChargeType = diskChargeType;
@@ -399,7 +442,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The disk ID.
+             * <p>The disk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp14wq0149cpp2x****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -407,7 +453,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The disk name.
+             * <p>The disk name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SystemDisk</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -415,7 +464,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the disk.
+             * <p>The tags that are added to the disk.</p>
              */
             public Builder diskTags(java.util.List < DiskTags> diskTags) {
                 this.diskTags = diskTags;
@@ -423,11 +472,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The disk type. Valid values:
-             * <p>
+             * <p>The disk type. Valid values:</p>
+             * <ul>
+             * <li>system: system disk</li>
+             * <li>data: data disk</li>
+             * </ul>
              * 
-             * *   system: system disk
-             * *   data: data disk
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -435,7 +487,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -443,7 +498,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the disk.
+             * <p>The remarks of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -451,7 +509,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the disk belongs.
+             * <p>The ID of the resource group to which the disk belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2bti7cf7****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -459,7 +520,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The disk size. Unit: GB.
+             * <p>The disk size. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -467,15 +531,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the disk. Valid values:
-             * <p>
+             * <p>The status of the disk. Valid values:</p>
+             * <ul>
+             * <li>ReIniting: The disk is being initialized.</li>
+             * <li>Creating: The disk is being created.</li>
+             * <li>In_use: The disk is in use.</li>
+             * <li>Available: The disk can be attached.</li>
+             * <li>Attaching: The disk is being attached.</li>
+             * <li>Detaching: The disk is being detached.</li>
+             * </ul>
              * 
-             * *   ReIniting: The disk is being initialized.
-             * *   Creating: The disk is being created.
-             * *   In_use: The disk is in use.
-             * *   Available: The disk can be attached.
-             * *   Attaching: The disk is being attached.
-             * *   Detaching: The disk is being detached.
+             * <strong>example:</strong>
+             * <p>In_use</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -489,6 +556,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Image extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageContact")
         private String imageContact;
@@ -576,7 +649,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String osType; 
 
             /**
-             * The image provider.
+             * <p>The image provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://selfs****e.console.aliyun.com/ticket/createIndex">https://selfs****e.console.aliyun.com/ticket/createIndex</a></p>
              */
             public Builder imageContact(String imageContact) {
                 this.imageContact = imageContact;
@@ -584,7 +660,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image icon.
+             * <p>The URL of the image icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alicdn.com/imgextra/i3/O****1vdh9651ReKqWNMI2I_!!6000000002136****-24-24.svg">https://img.alicdn.com/imgextra/i3/O****1vdh9651ReKqWNMI2I_!!6000000002136****-24-24.svg</a></p>
              */
             public Builder imageIconUrl(String imageIconUrl) {
                 this.imageIconUrl = imageIconUrl;
@@ -592,7 +671,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-custom-1686536882356</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -600,12 +682,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image. Valid values:
-             * <p>
+             * <p>The type of the image. Valid values:</p>
+             * <ul>
+             * <li>system</li>
+             * <li>app</li>
+             * <li>custom</li>
+             * </ul>
              * 
-             * *   system
-             * *   app
-             * *   custom
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -613,7 +698,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag.
+             * <p>The image tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V3.5</p>
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -621,7 +709,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The OS.
+             * <p>The OS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -635,6 +726,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class ResourceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
@@ -722,7 +819,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private Double memory; 
 
             /**
-             * The bandwidth of the server.
+             * <p>The bandwidth of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -730,7 +830,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs of the simple application server.
+             * <p>The number of vCPUs of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -738,12 +841,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the disk. Valid values:
-             * <p>
+             * <p>The category of the disk. Valid values:</p>
+             * <ul>
+             * <li>ESSD: enhanced SSD (ESSD) of PL0</li>
+             * <li>SSD: standard SSD</li>
+             * <li>CLOUD_EFFICIENCY: ultra disk</li>
+             * </ul>
              * 
-             * *   ESSD: enhanced SSD (ESSD) of PL0
-             * *   SSD: standard SSD
-             * *   CLOUD_EFFICIENCY: ultra disk
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder diskCategory(String diskCategory) {
                 this.diskCategory = diskCategory;
@@ -751,7 +857,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The disk size.
+             * <p>The disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -759,11 +868,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of the traffic.
-             * <p>
+             * <p>The amount of the traffic.</p>
+             * <ul>
+             * <li>A value of 0 indicates the traffic amount of a bandwidth-based simple application server.</li>
+             * <li>A non-zero value indicates the traffic amount of a data transfer plan-based simple application server.</li>
+             * </ul>
              * 
-             * *   A value of 0 indicates the traffic amount of a bandwidth-based simple application server.
-             * *   A non-zero value indicates the traffic amount of a data transfer plan-based simple application server.
+             * <strong>example:</strong>
+             * <p>818</p>
              */
             public Builder flow(Double flow) {
                 this.flow = flow;
@@ -771,7 +883,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the server.
+             * <p>The memory size of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder memory(Double memory) {
                 this.memory = memory;
@@ -785,6 +900,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -824,7 +945,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the simple application server.
+             * <p>The tag key of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -832,7 +956,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the simple application server.
+             * <p>The tag value of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -846,6 +973,12 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
@@ -1125,12 +1258,15 @@ public class ListInstancesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The status of the server. Valid values:
-             * <p>
+             * <p>The status of the server. Valid values:</p>
+             * <ul>
+             * <li>Normal: The server is normal.</li>
+             * <li>Expired: The server expires.</li>
+             * <li>Overdue: The payment of the server is overdue.</li>
+             * </ul>
              * 
-             * *   Normal: The server is normal.
-             * *   Expired: The server expires.
-             * *   Overdue: The payment of the server is overdue.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -1138,7 +1274,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the simple application server.
+             * <p>The billing method of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1146,7 +1285,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the simple application server uses a bundle plan.
+             * <p>Indicates whether the simple application server uses a bundle plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder combination(Boolean combination) {
                 this.combination = combination;
@@ -1154,7 +1296,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the simple application server that uses a bundle plan.
+             * <p>The ID of the simple application server that uses a bundle plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com-f6c9a22****45b5b8de68ad608af1ba</p>
              */
             public Builder combinationInstanceId(String combinationInstanceId) {
                 this.combinationInstanceId = combinationInstanceId;
@@ -1162,7 +1307,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the simple application server was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the simple application server was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-08T05:31:06Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1170,12 +1318,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The DDoS protection status of the server. Valid values:
-             * <p>
+             * <p>The DDoS protection status of the server. Valid values:</p>
+             * <ul>
+             * <li>Normal: The DDoS protection status of the server is normal.</li>
+             * <li>BlackHole: The server is in blackhole filtering.</li>
+             * <li>Defense: The server is being scrubbed.</li>
+             * </ul>
              * 
-             * *   Normal: The DDoS protection status of the server is normal.
-             * *   BlackHole: The server is in blackhole filtering.
-             * *   Defense: The server is being scrubbed.
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder ddosStatus(String ddosStatus) {
                 this.ddosStatus = ddosStatus;
@@ -1183,12 +1334,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the server is disabled. Valid values:
-             * <p>
+             * <p>The reason why the server is disabled. Valid values:</p>
+             * <ul>
+             * <li>FINANCIAL: The server is locked due to overdue payments.</li>
+             * <li>SECURITY: The server is locked for security reasons.</li>
+             * <li>EXPIRED: The server is expired.</li>
+             * </ul>
              * 
-             * *   FINANCIAL: The server is locked due to overdue payments.
-             * *   SECURITY: The server is locked for security reasons.
-             * *   EXPIRED: The server is expired.
+             * <strong>example:</strong>
+             * <p>EXPIRED</p>
              */
             public Builder disableReason(String disableReason) {
                 this.disableReason = disableReason;
@@ -1196,7 +1350,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The disks that are attached to the simple application server.
+             * <p>The disks that are attached to the simple application server.</p>
              */
             public Builder disks(java.util.List < Disks> disks) {
                 this.disks = disks;
@@ -1204,7 +1358,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the simple application server expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the simple application server expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-08T16:00:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1212,7 +1369,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the image.
+             * <p>The description of the image.</p>
              */
             public Builder image(Image image) {
                 this.image = image;
@@ -1220,7 +1377,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe9c66133a9d4688872869726b52****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1228,7 +1388,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the simple application server.
+             * <p>The private IP address of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.26.XX.XX</p>
              */
             public Builder innerIpAddress(String innerIpAddress) {
                 this.innerIpAddress = innerIpAddress;
@@ -1236,7 +1399,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the simple application server.
+             * <p>The ID of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2ad1ae67295445f598017499dc****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1244,7 +1410,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the simple application server.
+             * <p>The name of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-InstanceName</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1252,7 +1421,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance plan.
+             * <p>The ID of the instance plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swas.s2.c2m2s50b4t08</p>
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -1260,7 +1432,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42.1.XX.XX</p>
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -1268,7 +1443,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1276,7 +1454,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the server belongs.
+             * <p>The ID of the resource group to which the server belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekz7jmhg5s****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1284,7 +1465,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the resource.
+             * <p>The specifications of the resource.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {
                 this.resourceSpec = resourceSpec;
@@ -1292,17 +1473,20 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the simple application server. Valid values:
-             * <p>
+             * <p>The status of the simple application server. Valid values:</p>
+             * <ul>
+             * <li>Pending: The server is being prepared.</li>
+             * <li>Starting: The server is being started.</li>
+             * <li>Running: The server is running.</li>
+             * <li>Stopping: The server is being stopped.</li>
+             * <li>Stopped: The server is stopped.</li>
+             * <li>Resetting: The server is being reset.</li>
+             * <li>Upgrading: The server is being upgraded.</li>
+             * <li>Disabled: The server is not available.</li>
+             * </ul>
              * 
-             * *   Pending: The server is being prepared.
-             * *   Starting: The server is being started.
-             * *   Running: The server is running.
-             * *   Stopping: The server is being stopped.
-             * *   Stopped: The server is stopped.
-             * *   Resetting: The server is being reset.
-             * *   Upgrading: The server is being upgraded.
-             * *   Disabled: The server is not available.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1310,7 +1494,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the simple application server.
+             * <p>The tags that are added to the simple application server.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1318,7 +1502,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The universally unique identifier (UUID) of the simple application server.
+             * <p>The universally unique identifier (UUID) of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>41f30524-5df7-49c9-9c6e-32****489001</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

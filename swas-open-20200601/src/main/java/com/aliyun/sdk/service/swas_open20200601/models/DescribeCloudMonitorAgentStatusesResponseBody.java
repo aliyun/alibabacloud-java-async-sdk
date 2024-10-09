@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudMonitorAgentStatusesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudMonitorAgentStatusesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the Cloud Monitor agent was automatically installed on the simple application server.
+         * <p>Indicates whether the Cloud Monitor agent was automatically installed on the simple application server.</p>
          */
         public Builder instanceStatusList(java.util.List < InstanceStatusList> instanceStatusList) {
             this.instanceStatusList = instanceStatusList;
@@ -57,7 +58,10 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E1FEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudMonitorAgentStatusesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudMonitorAgentStatusesResponseBody</p>
+     */
     public static class InstanceStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoInstall")
         private Boolean autoInstall;
@@ -121,11 +131,14 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Indicates whether the Cloud Monitor agent was automatically installed on the simple application server. Valid values:
-             * <p>
+             * <p>Indicates whether the Cloud Monitor agent was automatically installed on the simple application server. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * - true
-             * - false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoInstall(Boolean autoInstall) {
                 this.autoInstall = autoInstall;
@@ -133,7 +146,10 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the simple application server.
+             * <p>The ID of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c854dc6f07e74953830bb5808d0****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -141,15 +157,18 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * The running status of the Cloud Monitoring plug-in. Possible values are:
-             * <p>
+             * <p>The running status of the Cloud Monitoring plug-in. Possible values are:</p>
+             * <ul>
+             * <li>running: Cloud Monitoring plug-in running.</li>
+             * <li>stopped: Cloud Monitoring plug-in stopped.</li>
+             * <li>installing: Cloud Monitoring plug-in installing.</li>
+             * <li>install_faild: Cloud Monitoring plug-in installation failed.</li>
+             * <li>abnormal: Cloud Monitoring plug-in installation abnormal.</li>
+             * <li>not_installed: Cloud Monitoring plug-in not installed.</li>
+             * </ul>
              * 
-             * - running: Cloud Monitoring plug-in running.
-             * - stopped: Cloud Monitoring plug-in stopped.
-             * - installing: Cloud Monitoring plug-in installing.
-             * - install_faild: Cloud Monitoring plug-in installation failed.
-             * - abnormal: Cloud Monitoring plug-in installation abnormal.
-             * - not_installed: Cloud Monitoring plug-in not installed.
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;

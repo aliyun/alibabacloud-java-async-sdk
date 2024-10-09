@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstancesTrafficPackagesRequest} extends {@link RequestModel}
  *
  * <p>ListInstancesTrafficPackagesRequest</p>
@@ -69,7 +70,11 @@ public class ListInstancesTrafficPackagesRequest extends Request {
         } 
 
         /**
-         * The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).
+         * <p>The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;2ad1ae67295445f598017499dc******&quot;,&quot;2ad1ae67295445f598017499dc******&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -78,7 +83,11 @@ public class ListInstancesTrafficPackagesRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application servers. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application servers. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

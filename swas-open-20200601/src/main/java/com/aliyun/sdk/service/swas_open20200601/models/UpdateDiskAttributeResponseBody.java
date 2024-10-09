@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateDiskAttributeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateDiskAttributeResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateDiskAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28D****534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstancePasswordsSettingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstancePasswordsSettingResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
         private Boolean vncPasswordSetting; 
 
         /**
-         * Indicates whether a logon password is set for the simple application server.
+         * <p>Indicates whether a logon password is set for the simple application server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder instancePasswordSetting(Boolean instancePasswordSetting) {
             this.instancePasswordSetting = instancePasswordSetting;
@@ -69,7 +73,10 @@ public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether a VNC connection password is set.
+         * <p>Indicates whether a VNC connection password is set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder vncPasswordSetting(Boolean vncPasswordSetting) {
             this.vncPasswordSetting = vncPasswordSetting;

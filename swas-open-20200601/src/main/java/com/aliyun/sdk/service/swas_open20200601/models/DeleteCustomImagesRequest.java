@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomImagesRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomImagesRequest</p>
@@ -83,7 +84,10 @@ public class DeleteCustomImagesRequest extends Request {
         } 
 
         /**
-         * The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~)
+         * <p>The client token that you want to use to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <strong>token</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">Ensure idempotence</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,7 +96,11 @@ public class DeleteCustomImagesRequest extends Request {
         }
 
         /**
-         * The ID of the custom image. The value can be a JSON array that consists of up to 15 image IDs. Separate multiple image IDs with commas (,).
+         * <p>The ID of the custom image. The value can be a JSON array that consists of up to 15 image IDs. Separate multiple image IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;m-2zehv38jjmwva1ee****&quot;, &quot;m-bp1hj0zhmheyq2kz****&quot;]</p>
          */
         public Builder imageIds(String imageIds) {
             this.putQueryParameter("ImageIds", imageIds);
@@ -101,7 +109,11 @@ public class DeleteCustomImagesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFirewallRulesRequest} extends {@link RequestModel}
  *
  * <p>CreateFirewallRulesRequest</p>
@@ -111,7 +112,10 @@ public class CreateFirewallRulesRequest extends Request {
         } 
 
         /**
-         * The client token.
+         * <p>The client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -120,7 +124,7 @@ public class CreateFirewallRulesRequest extends Request {
         }
 
         /**
-         * Details about the firewall rules.
+         * <p>Details about the firewall rules.</p>
          */
         public Builder firewallRules(java.util.List < FirewallRules> firewallRules) {
             String firewallRulesShrink = shrink(firewallRules, "FirewallRules", "json");
@@ -130,7 +134,11 @@ public class CreateFirewallRulesRequest extends Request {
         }
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ace0706b2ac4454d984295a94213****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -139,7 +147,11 @@ public class CreateFirewallRulesRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +160,7 @@ public class CreateFirewallRulesRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the firewall. You can specify up to 20 tags.
+         * <p>The tags that you want to add to the firewall. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -163,6 +175,12 @@ public class CreateFirewallRulesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFirewallRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFirewallRulesRequest</p>
+     */
     public static class FirewallRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
@@ -226,11 +244,14 @@ public class CreateFirewallRulesRequest extends Request {
             private String sourceCidrIp; 
 
             /**
-             * The port number.
-             * <p>
+             * <p>The port number.</p>
+             * <ul>
+             * <li>When the transport layer protocol is TCP and/or UDP, the port number range is 1 to 65535. Specify a port range in the format of &lt;Start port number&gt;/&lt;End port number&gt;. Example: 1/200.</li>
+             * <li>When the transport layer protocol is ICMP, the port number range is -1/-1, which indicates all ports.</li>
+             * </ul>
              * 
-             * *   When the transport layer protocol is TCP and/or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
-             * *   When the transport layer protocol is ICMP, the port number range is -1/-1, which indicates all ports.
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -238,7 +259,10 @@ public class CreateFirewallRulesRequest extends Request {
             }
 
             /**
-             * The description of the firewall rule.
+             * <p>The description of the firewall rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -246,13 +270,16 @@ public class CreateFirewallRulesRequest extends Request {
             }
 
             /**
-             * The transport layer protocol. Valid values:
-             * <p>
+             * <p>The transport layer protocol. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>TCP+UDP</li>
+             * <li>ICMP</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
-             * *   TCP+UDP
-             * *   ICMP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ruleProtocol(String ruleProtocol) {
                 this.ruleProtocol = ruleProtocol;
@@ -260,7 +287,10 @@ public class CreateFirewallRulesRequest extends Request {
             }
 
             /**
-             * The IP address or CIDR block that is allowed in the firewall rule.
+             * <p>The IP address or CIDR block that is allowed in the firewall rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.101.XX.XX</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -274,6 +304,12 @@ public class CreateFirewallRulesRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateFirewallRulesRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFirewallRulesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -313,10 +349,11 @@ public class CreateFirewallRulesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The tag key. Valid values of N: 1 to 20.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -324,10 +361,11 @@ public class CreateFirewallRulesRequest extends Request {
             }
 
             /**
-             * The tag value. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The tag value. Valid values of N: 1 to 20.</p>
+             * <p>The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
              * 
-             * The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

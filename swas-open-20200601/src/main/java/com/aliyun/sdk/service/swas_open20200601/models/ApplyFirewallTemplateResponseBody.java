@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyFirewallTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyFirewallTemplateResponseBody</p>
@@ -49,7 +50,10 @@ public class ApplyFirewallTemplateResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ApplyFirewallTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the execution to apply the template.
+         * <p>The ID of the execution to apply the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aft-ikgt0bynitvs3****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

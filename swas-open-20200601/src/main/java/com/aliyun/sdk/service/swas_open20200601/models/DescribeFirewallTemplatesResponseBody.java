@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFirewallTemplatesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFirewallTemplatesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the queried firewall templates.
+         * <p>The information about the queried firewall templates.</p>
          */
         public Builder firewallTemplates(java.util.List < FirewallTemplates> firewallTemplates) {
             this.firewallTemplates = firewallTemplates;
@@ -93,12 +94,12 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +107,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 20.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +118,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +129,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -135,6 +145,12 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFirewallTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFirewallTemplatesResponseBody</p>
+     */
     public static class FirewallTemplateRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FirewallTemplateRuleId")
         private String firewallTemplateRuleId;
@@ -210,7 +226,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             private String sourceCidrIp; 
 
             /**
-             * The ID of the firewall template rule.
+             * <p>The ID of the firewall template rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eeea34d9867b4d55a4ff8d5fcfbd****</p>
              */
             public Builder firewallTemplateRuleId(String firewallTemplateRuleId) {
                 this.firewallTemplateRuleId = firewallTemplateRuleId;
@@ -218,10 +237,13 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The port range. Valid values: 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: `1024/1055`, which indicates that the port range of 1024 to 1055.
-             * <p>
+             * <p>The port range. Valid values: 1 to 65535. Specify a port range in the format of &lt;start port number&gt;/&lt;end port number&gt;. Example: <code>1024/1055</code>, which indicates that the port range of 1024 to 1055.</p>
+             * <blockquote>
+             * <p> If you set RuleProtocol to ICMP, you must set Port to -1/-1.</p>
+             * </blockquote>
              * 
-             * >  If you set RuleProtocol to ICMP, you must set Port to -1/-1.
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -229,7 +251,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the firewall template rule.
+             * <p>The remarks of the firewall template rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -237,13 +262,16 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The transport layer protocol that the rule supports. Valid values:
-             * <p>
+             * <p>The transport layer protocol that the rule supports. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>TCP+UDP</li>
+             * <li>ICMP</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
-             * *   TCP+UDP
-             * *   ICMP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ruleProtocol(String ruleProtocol) {
                 this.ruleProtocol = ruleProtocol;
@@ -251,7 +279,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.
+             * <p>The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>119.145.XX.XX</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -265,6 +296,12 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFirewallTemplatesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFirewallTemplatesResponseBody</p>
+     */
     public static class FirewallTemplates extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -352,10 +389,13 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The time when the firewall template was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
-             * <p>
+             * <p>The time when the firewall template was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> The time displayed in the Simple Application Server console is in the format of UTC+8.</p>
+             * </blockquote>
              * 
-             * >  The time displayed in the Simple Application Server console is in the format of UTC+8.
+             * <strong>example:</strong>
+             * <p>2024-04-29T02:01:38Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -363,7 +403,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the firewall template was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the firewall template was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-10T02:10:14Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -371,7 +414,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the firewall template.
+             * <p>The description of the firewall template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -379,7 +425,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the firewall template.
+             * <p>The ID of the firewall template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ft-bcf1a7hrdq717****</p>
              */
             public Builder firewallTemplateId(String firewallTemplateId) {
                 this.firewallTemplateId = firewallTemplateId;
@@ -387,7 +436,7 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the firewall template rules.
+             * <p>The details of the firewall template rules.</p>
              */
             public Builder firewallTemplateRules(java.util.List < FirewallTemplateRules> firewallTemplateRules) {
                 this.firewallTemplateRules = firewallTemplateRules;
@@ -395,7 +444,10 @@ public class DescribeFirewallTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the firewall template.
+             * <p>The name of the firewall template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;

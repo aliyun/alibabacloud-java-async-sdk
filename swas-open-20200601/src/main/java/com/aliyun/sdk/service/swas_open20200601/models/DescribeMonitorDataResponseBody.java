@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMonitorDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMonitorDataResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The monitoring data.
+         * <p>The monitoring data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;
@@ -81,7 +85,10 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nOc1nj4M9UaAZ/I8db***</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,16 +96,15 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.
-         * <p>
+         * <p>The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.</p>
+         * <blockquote>
+         * </blockquote>
+         * <p>If MetricName is set to FLOW_USED, the value of Period is 3600 (one hour).</p>
+         * <p>**</p>
+         * <hr>
          * 
-         * > 
-         * 
-         * If MetricName is set to FLOW_USED, the value of Period is 3600 (one hour).
-         * 
-         * **
-         * 
-         * ****
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(String period) {
             this.period = period;
@@ -106,7 +112,10 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

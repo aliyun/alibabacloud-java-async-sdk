@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCustomImageRequest} extends {@link RequestModel}
  *
  * <p>CreateCustomImageRequest</p>
@@ -168,7 +169,10 @@ public class CreateCustomImageRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +181,10 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * The ID of the data disk snapshot.
+         * <p>The ID of the data disk snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-acscasca****</p>
          */
         public Builder dataSnapshotId(String dataSnapshotId) {
             this.putQueryParameter("DataSnapshotId", dataSnapshotId);
@@ -186,7 +193,10 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * The description of the custom image.
+         * <p>The description of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -195,7 +205,11 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * The name of the custom image. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter or a digit. This parameter is empty by default.
+         * <p>The name of the custom image. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or a digit. This parameter is empty by default.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customImage-test</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -204,7 +218,11 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * The ID of the simple application server.
+         * <p>The ID of the simple application server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ace0706b2ac4454d984295a94213****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -213,7 +231,11 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * The region ID of the database. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the database. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +244,10 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bti7cf7****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -231,7 +256,10 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * The ID of the system disk snapshot.
+         * <p>The ID of the system disk snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-acscasca****</p>
          */
         public Builder systemSnapshotId(String systemSnapshotId) {
             this.putQueryParameter("SystemSnapshotId", systemSnapshotId);
@@ -240,7 +268,7 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the custom image. You can specify up to 20 tags.
+         * <p>The tags that you want to add to the custom image. You can specify up to 20 tags.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -255,6 +283,12 @@ public class CreateCustomImageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateCustomImageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateCustomImageRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -294,10 +328,11 @@ public class CreateCustomImageRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that you want to add to the custom image. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The key of tag N that you want to add to the custom image. Valid values of N: 1 to 20.</p>
+             * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -305,10 +340,11 @@ public class CreateCustomImageRequest extends Request {
             }
 
             /**
-             * The value of tag N that you want to add to the custom image. Valid values of N: 1 to 20.
-             * <p>
+             * <p>The value of tag N that you want to add to the custom image. Valid values of N: 1 to 20.</p>
+             * <p>The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
              * 
-             * The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

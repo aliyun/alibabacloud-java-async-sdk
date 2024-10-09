@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomImagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCustomImagesResponseBody</p>
@@ -85,7 +86,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The array of queried custom images.
+         * <p>The array of queried custom images.</p>
          */
         public Builder customImages(java.util.List < CustomImages> customImages) {
             this.customImages = customImages;
@@ -93,7 +94,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomImagesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the custom image.
+             * <p>The tag key of the custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the custom image.
+             * <p>The tag value of the custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +216,12 @@ public class ListCustomImagesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCustomImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCustomImagesResponseBody</p>
+     */
     public static class CustomImages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateInstances")
         private java.util.List < String > createInstances;
@@ -231,8 +262,20 @@ public class ListCustomImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("RequiredDataDiskSize")
+        private Integer requiredDataDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("RequiredSystemDiskSize")
+        private Integer requiredSystemDiskSize;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceImageName")
+        private String sourceImageName;
+
+        @com.aliyun.core.annotation.NameInMap("SourceImageVersion")
+        private String sourceImageVersion;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -263,7 +306,11 @@ public class ListCustomImagesResponseBody extends TeaModel {
             this.name = builder.name;
             this.osType = builder.osType;
             this.regionId = builder.regionId;
+            this.requiredDataDiskSize = builder.requiredDataDiskSize;
+            this.requiredSystemDiskSize = builder.requiredSystemDiskSize;
             this.resourceGroupId = builder.resourceGroupId;
+            this.sourceImageName = builder.sourceImageName;
+            this.sourceImageVersion = builder.sourceImageVersion;
             this.status = builder.status;
             this.systemSnapshotId = builder.systemSnapshotId;
             this.systemSnapshotName = builder.systemSnapshotName;
@@ -371,10 +418,38 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return requiredDataDiskSize
+         */
+        public Integer getRequiredDataDiskSize() {
+            return this.requiredDataDiskSize;
+        }
+
+        /**
+         * @return requiredSystemDiskSize
+         */
+        public Integer getRequiredSystemDiskSize() {
+            return this.requiredSystemDiskSize;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        /**
+         * @return sourceImageName
+         */
+        public String getSourceImageName() {
+            return this.sourceImageName;
+        }
+
+        /**
+         * @return sourceImageVersion
+         */
+        public String getSourceImageVersion() {
+            return this.sourceImageVersion;
         }
 
         /**
@@ -426,7 +501,11 @@ public class ListCustomImagesResponseBody extends TeaModel {
             private String name; 
             private String osType; 
             private String regionId; 
+            private Integer requiredDataDiskSize; 
+            private Integer requiredSystemDiskSize; 
             private String resourceGroupId; 
+            private String sourceImageName; 
+            private String sourceImageVersion; 
             private String status; 
             private String systemSnapshotId; 
             private String systemSnapshotName; 
@@ -434,7 +513,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * CreateInstances.
+             * <p>The Information about instances created using the image.</p>
              */
             public Builder createInstances(java.util.List < String > createInstances) {
                 this.createInstances = createInstances;
@@ -442,7 +521,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.
+             * <p>The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-09T02:28:06Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -450,7 +532,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data disk snapshot.
+             * <p>The ID of the data disk snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bp19rn9u8eqzlfb***</p>
              */
             public Builder dataSnapshotId(String dataSnapshotId) {
                 this.dataSnapshotId = dataSnapshotId;
@@ -458,7 +543,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data disk snapshot.
+             * <p>The name of the data disk snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data disk snapshot</p>
              */
             public Builder dataSnapshotName(String dataSnapshotName) {
                 this.dataSnapshotName = dataSnapshotName;
@@ -466,7 +554,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the custom image.
+             * <p>The description of the custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-custom-image</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -474,7 +565,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom image.
+             * <p>The ID of the custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp1e79zktg26n2b***</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -482,7 +576,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the custom image is shared to Elastic Compute Service (ECS).
+             * <p>Indicates whether the custom image is shared to Elastic Compute Service (ECS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder inShare(Boolean inShare) {
                 this.inShare = inShare;
@@ -490,7 +587,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * InShareUser.
+             * <p>Whether the custom image is cross-account shared.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder inShareUser(Boolean inShareUser) {
                 this.inShareUser = inShareUser;
@@ -498,7 +598,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the simple application server.
+             * <p>The ID of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2d06ee0520b44de1ae88d4be****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -506,7 +609,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the simple application server.
+             * <p>The name of the simple application server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>swas-asdf23***</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -514,7 +620,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom image.
+             * <p>The name of the custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hua</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -522,7 +631,26 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The type of the operating system.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>Linux</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- -->
+             * </li>
+             * <li><p>Windows</p>
+             * <!-- -->
+             * 
+             * <!-- -->
+             * 
+             * <!-- --></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -530,7 +658,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -538,7 +669,26 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * RequiredDataDiskSize.
+             */
+            public Builder requiredDataDiskSize(Integer requiredDataDiskSize) {
+                this.requiredDataDiskSize = requiredDataDiskSize;
+                return this;
+            }
+
+            /**
+             * RequiredSystemDiskSize.
+             */
+            public Builder requiredSystemDiskSize(Integer requiredSystemDiskSize) {
+                this.requiredSystemDiskSize = requiredSystemDiskSize;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm2h2lvp3ublq</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -546,7 +696,26 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the custom image.
+             * SourceImageName.
+             */
+            public Builder sourceImageName(String sourceImageName) {
+                this.sourceImageName = sourceImageName;
+                return this;
+            }
+
+            /**
+             * SourceImageVersion.
+             */
+            public Builder sourceImageVersion(String sourceImageVersion) {
+                this.sourceImageVersion = sourceImageVersion;
+                return this;
+            }
+
+            /**
+             * <p>The status of the custom image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -554,7 +723,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the system disk snapshot.
+             * <p>The ID of the system disk snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bp1h173hj21puxb***</p>
              */
             public Builder systemSnapshotId(String systemSnapshotId) {
                 this.systemSnapshotId = systemSnapshotId;
@@ -562,7 +734,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the system disk snapshot.
+             * <p>The name of the system disk snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system disk snapshot</p>
              */
             public Builder systemSnapshotName(String systemSnapshotName) {
                 this.systemSnapshotName = systemSnapshotName;
@@ -570,7 +745,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the custom image.
+             * <p>The tags of the custom image.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -578,7 +753,10 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The Primary Alibaba Cloud account ID of the image owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180185828710****</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

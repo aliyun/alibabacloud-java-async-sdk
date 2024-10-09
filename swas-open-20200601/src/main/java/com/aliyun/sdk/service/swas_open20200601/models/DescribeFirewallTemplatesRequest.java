@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFirewallTemplatesRequest} extends {@link RequestModel}
  *
  * <p>DescribeFirewallTemplatesRequest</p>
@@ -110,7 +111,7 @@ public class DescribeFirewallTemplatesRequest extends Request {
         } 
 
         /**
-         * The IDs of the firewall templates.
+         * <p>The IDs of the firewall templates.</p>
          */
         public Builder firewallTemplateId(java.util.List < String > firewallTemplateId) {
             this.putQueryParameter("FirewallTemplateId", firewallTemplateId);
@@ -119,7 +120,10 @@ public class DescribeFirewallTemplatesRequest extends Request {
         }
 
         /**
-         * The name of the firewall template.
+         * <p>The name of the firewall template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -128,12 +132,12 @@ public class DescribeFirewallTemplatesRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -142,7 +146,10 @@ public class DescribeFirewallTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -151,7 +158,11 @@ public class DescribeFirewallTemplatesRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

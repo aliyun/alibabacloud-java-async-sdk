@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCommandResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCommandResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The command ID.
+         * <p>The command ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-sh02yh0932w****</p>
          */
         public Builder commandId(String commandId) {
             this.commandId = commandId;
@@ -57,7 +61,10 @@ public class CreateCommandResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

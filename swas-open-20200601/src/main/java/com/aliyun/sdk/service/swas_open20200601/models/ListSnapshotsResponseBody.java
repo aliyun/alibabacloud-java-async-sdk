@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSnapshotsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSnapshotsResponseBody</p>
@@ -85,7 +86,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the snapshots.
+         * <p>Details about the snapshots.</p>
          */
         public Builder snapshots(java.util.List < Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -117,7 +127,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -169,7 +188,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the snapshot.
+             * <p>The tag key of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +199,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the snapshot.
+             * <p>The tag value of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -191,6 +216,12 @@ public class ListSnapshotsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSnapshotsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
@@ -362,7 +393,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-09T07:12:49Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -370,10 +404,11 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the simple application server.
-             * <p>
+             * <p>The ID of the simple application server.</p>
+             * <p>Note: This parameter has a value returned for only system disk snapshots.</p>
              * 
-             * Note: This parameter has a value returned for only system disk snapshots.
+             * <strong>example:</strong>
+             * <p>2ad1ae67295445f598017499dc****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -381,7 +416,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of snapshot creation.
+             * <p>The progress of snapshot creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -389,7 +427,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -397,7 +438,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the snapshot.
+             * <p>The remarks of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-Remark</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -405,7 +449,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the snapshot belongs.
+             * <p>The ID of the resource group to which the snapshot belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2bti7cf7****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -413,7 +460,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last disk rollback was performed.
+             * <p>The time when the last disk rollback was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-09T07:12:49Z</p>
              */
             public Builder rollbackTime(String rollbackTime) {
                 this.rollbackTime = rollbackTime;
@@ -421,7 +471,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot ID.
+             * <p>The snapshot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bp16oazlsold4dks****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -429,7 +482,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the snapshot.
+             * <p>The name of the snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-SnapshotName</p>
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -437,7 +493,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source disk. This parameter has a value even after the source disk is released.
+             * <p>The ID of the source disk. This parameter has a value even after the source disk is released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp14wq0149cpp2xy****</p>
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -445,11 +504,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the source disk. Valid values:
-             * <p>
+             * <p>The type of the source disk. Valid values:</p>
+             * <ul>
+             * <li>system: system disk.</li>
+             * <li>data: data disk.</li>
+             * </ul>
              * 
-             * *   system: system disk.
-             * *   data: data disk.
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
@@ -457,12 +519,15 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the snapshot. Valid values:
-             * <p>
+             * <p>The status of the snapshot. Valid values:</p>
+             * <ul>
+             * <li>Progressing: The snapshot is being created.</li>
+             * <li>Accomplished: The snapshot is created.</li>
+             * <li>Failed: The snapshot failed to be created.</li>
+             * </ul>
              * 
-             * *   Progressing: The snapshot is being created.
-             * *   Accomplished: The snapshot is created.
-             * *   Failed: The snapshot failed to be created.
+             * <strong>example:</strong>
+             * <p>Accomplished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -470,7 +535,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the snapshot.
+             * <p>The tags of the snapshot.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

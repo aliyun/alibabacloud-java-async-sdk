@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFirewallTemplateRulesResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFirewallTemplateRulesResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The firewall template rules.
+         * <p>The firewall template rules.</p>
          */
         public Builder firewallTemplateRules(java.util.List < FirewallTemplateRules> firewallTemplateRules) {
             this.firewallTemplateRules = firewallTemplateRules;
@@ -57,7 +58,10 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30637AD6-D977-4833-A54C-CC89483E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFirewallTemplateRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateFirewallTemplateRulesResponseBody</p>
+     */
     public static class FirewallTemplateRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FirewallTemplateRuleId")
         private String firewallTemplateRuleId;
@@ -145,7 +155,10 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
             private String sourceCidrIp; 
 
             /**
-             * The ID of the firewall template rule.
+             * <p>The ID of the firewall template rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ft-bcf1a7hrdq717****</p>
              */
             public Builder firewallTemplateRuleId(String firewallTemplateRuleId) {
                 this.firewallTemplateRuleId = firewallTemplateRuleId;
@@ -153,10 +166,13 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The port range. Valid values: 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: `1024/1055`, which indicates that the port range of 1024 to 1055.
-             * <p>
+             * <p>The port range. Valid values: 1 to 65535. Specify a port range in the format of &lt;start port number&gt;/&lt;end port number&gt;. Example: <code>1024/1055</code>, which indicates that the port range of 1024 to 1055.</p>
+             * <blockquote>
+             * <p> If you set RuleProtocol to ICMP, you must set Port to -1/-1.</p>
+             * </blockquote>
              * 
-             * >  If you set RuleProtocol to ICMP, you must set Port to -1/-1.
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -164,7 +180,10 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the firewall rule.
+             * <p>The remarks of the firewall rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -172,13 +191,16 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The transport layer protocol that the rule supports. Valid values:
-             * <p>
+             * <p>The transport layer protocol that the rule supports. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>TCP+UDP</li>
+             * <li>ICMP: the ICMP protocol</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
-             * *   TCP+UDP
-             * *   ICMP: the ICMP protocol
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ruleProtocol(String ruleProtocol) {
                 this.ruleProtocol = ruleProtocol;
@@ -186,7 +208,10 @@ public class CreateFirewallTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.
+             * <p>The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>171.233.XX.XX</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDatabaseInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDatabaseInstancesResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the Simple Database Service instances.
+         * <p>The information about the Simple Database Service instances.</p>
          */
         public Builder databaseInstances(java.util.List < DatabaseInstances> databaseInstances) {
             this.databaseInstances = databaseInstances;
@@ -93,7 +94,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20758A-585D-4A41-A9B2-28DA8F4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDatabaseInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDatabaseInstancesResponseBody</p>
+     */
     public static class DatabaseInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
@@ -337,12 +356,15 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             private String superAccountName; 
 
             /**
-             * The business status of the instance. Valid values:
-             * <p>
+             * <p>The business status of the instance. Valid values:</p>
+             * <ul>
+             * <li>normal</li>
+             * <li>expired</li>
+             * <li>overdue</li>
+             * </ul>
              * 
-             * *   normal
-             * *   expired
-             * *   overdue
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -350,10 +372,11 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the Simple Database Service instance. Set the value to PrePaid. This value indicates the subscription billing method.
-             * <p>
+             * <p>The billing method of the Simple Database Service instance. Set the value to PrePaid. This value indicates the subscription billing method.</p>
+             * <p>Default value: PrePaid.</p>
              * 
-             * Default value: PrePaid.
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -361,7 +384,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -369,7 +395,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>The time when the instance was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-01T02:39:46Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -377,13 +406,16 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The plan edition ID of the Simple Database Service instance. Valid values:
-             * <p>
+             * <p>The plan edition ID of the Simple Database Service instance. Valid values:</p>
+             * <ul>
+             * <li>swas.db.c1m1s25: CNY 35/month.</li>
+             * <li>swas.db.c1m2s80: CNY 100/month.</li>
+             * <li>swas.db.c2m4s120: CNY 200/month.</li>
+             * <li>swas.db.c2m8s240: CNY 300/month.</li>
+             * </ul>
              * 
-             * *   swas.db.c1m1s25: CNY 35/month.
-             * *   swas.db.c1m2s80: CNY 100/month.
-             * *   swas.db.c2m4s120: CNY 200/month.
-             * *   swas.db.c2m8s240: CNY 300/month.
+             * <strong>example:</strong>
+             * <p>swas.db.c1m1s25</p>
              */
             public Builder databaseInstanceEdition(String databaseInstanceEdition) {
                 this.databaseInstanceEdition = databaseInstanceEdition;
@@ -391,7 +423,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Simple Database Service instance.
+             * <p>The ID of the Simple Database Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db-38263fa955774501a2ae1bdaed6f****</p>
              */
             public Builder databaseInstanceId(String databaseInstanceId) {
                 this.databaseInstanceId = databaseInstanceId;
@@ -399,7 +434,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Simple Database Service instance.
+             * <p>The name of the Simple Database Service instance.</p>
              */
             public Builder databaseInstanceName(String databaseInstanceName) {
                 this.databaseInstanceName = databaseInstanceName;
@@ -407,16 +442,19 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Simple Database Service instance. Valid values:
-             * <p>
+             * <p>The status of the Simple Database Service instance. Valid values:</p>
+             * <ul>
+             * <li>Pending: The instance is being created.</li>
+             * <li>Restarting: The instance is being restarted.</li>
+             * <li>Running: The instance is running.</li>
+             * <li>Stopping: The instance is being stopped.</li>
+             * <li>Stopped: The instance is stopped.</li>
+             * <li>UPGRADING: The instance is being upgraded.</li>
+             * <li>DISABLED: The instance is disabled.</li>
+             * </ul>
              * 
-             * *   Pending: The instance is being created.
-             * *   Restarting: The instance is being restarted.
-             * *   Running: The instance is running.
-             * *   Stopping: The instance is being stopped.
-             * *   Stopped: The instance is stopped.
-             * *   UPGRADING: The instance is being upgraded.
-             * *   DISABLED: The instance is disabled.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder databaseInstanceStatus(String databaseInstanceStatus) {
                 this.databaseInstanceStatus = databaseInstanceStatus;
@@ -424,11 +462,14 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance. Valid values:
-             * <p>
+             * <p>The database engine version of the instance. Valid values:</p>
+             * <ul>
+             * <li>5.7: MySQL 5.7.</li>
+             * <li>8.0: MySQL 8.0.</li>
+             * </ul>
              * 
-             * *   5.7: MySQL 5.7.
-             * *   8.0: MySQL 8.0.
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder databaseVersion(String databaseVersion) {
                 this.databaseVersion = databaseVersion;
@@ -436,10 +477,13 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
-             * <p>
+             * <p>The time when the instance expires. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <blockquote>
+             * <p> The time displayed in the Simple Application Server console is in the format of UTC+8.</p>
+             * </blockquote>
              * 
-             * >  The time displayed in the Simple Application Server console is in the format of UTC+8.
+             * <strong>example:</strong>
+             * <p>2022-10-01T16:00:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -447,7 +491,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance. Unit: GB.
+             * <p>The memory size of the instance. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -455,7 +502,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The private endpoint.
+             * <p>The private endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1d39opj7906****.mysql.rds.aliyuncs.com</p>
              */
             public Builder privateConnection(String privateConnection) {
                 this.privateConnection = privateConnection;
@@ -463,10 +513,13 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint.
-             * <p>
+             * <p>The public endpoint.</p>
+             * <blockquote>
+             * <p> This parameter is displayed only after you apply for a public endpoint for the instance and a public endpoint is assigned to the instance. You can call <a href="https://help.aliyun.com/document_detail/451413.html">AllocatePublicConnection</a> to apply for a public endpoint for the instance.</p>
+             * </blockquote>
              * 
-             * >  This parameter is displayed only after you apply for a public endpoint for the instance and a public endpoint is assigned to the instance. You can call [AllocatePublicConnection](~~451413~~) to apply for a public endpoint for the instance.
+             * <strong>example:</strong>
+             * <p>db-38263fa955774501a2ae1bdaed6f****.mysql.rds.aliyuncs.com</p>
              */
             public Builder publicConnection(String publicConnection) {
                 this.publicConnection = publicConnection;
@@ -474,7 +527,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the Simple Database Service instances.
+             * <p>The region ID of the Simple Database Service instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -482,7 +538,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the enhanced SSD (ESSD). Unit: GB.
+             * <p>The size of the enhanced SSD (ESSD). Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -490,7 +549,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the super administrator account of the Simple Database Service instance.
+             * <p>The name of the super administrator account of the Simple Database Service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>administrator</p>
              */
             public Builder superAccountName(String superAccountName) {
                 this.superAccountName = superAccountName;

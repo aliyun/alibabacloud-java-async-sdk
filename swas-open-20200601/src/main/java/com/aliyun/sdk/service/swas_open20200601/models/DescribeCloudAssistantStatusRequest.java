@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudAssistantStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudAssistantStatusRequest</p>
@@ -96,7 +97,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         } 
 
         /**
-         * The IDs of the simple application servers.
+         * <p>The IDs of the simple application servers.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -106,12 +107,12 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The page number.
-         * <p>
+         * <p>The page number.</p>
+         * <p>Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -120,12 +121,12 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -134,7 +135,11 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application servers.
+         * <p>The region ID of the simple application servers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

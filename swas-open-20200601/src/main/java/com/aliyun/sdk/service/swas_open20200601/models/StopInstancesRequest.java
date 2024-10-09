@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopInstancesRequest} extends {@link RequestModel}
  *
  * <p>StopInstancesRequest</p>
@@ -97,7 +98,10 @@ public class StopInstancesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -106,11 +110,14 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly stop the servers.
-         * <p>
+         * <p>Specifies whether to forcibly stop the servers.</p>
+         * <ul>
+         * <li><strong>true</strong>: forcibly stops the servers.</li>
+         * <li><strong>false</strong>: normally stops the servers. This is the default value.</li>
+         * </ul>
          * 
-         * *   **true**: forcibly stops the servers.
-         * *   **false**: normally stops the servers. This is the default value.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -119,7 +126,11 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).
+         * <p>The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;2ad1ae67295445f598017499dc****&quot;, &quot;2ad1ae67295445f598017123dc****&quot;]</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -128,7 +139,11 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application servers. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application servers. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

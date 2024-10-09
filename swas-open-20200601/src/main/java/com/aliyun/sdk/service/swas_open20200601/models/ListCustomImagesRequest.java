@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCustomImagesRequest} extends {@link RequestModel}
  *
  * <p>ListCustomImagesRequest</p>
@@ -208,7 +209,10 @@ public class ListCustomImagesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -217,7 +221,10 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * The ID of the data disk snapshot.
+         * <p>The ID of the data disk snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-acscasca****</p>
          */
         public Builder dataSnapshotId(String dataSnapshotId) {
             this.putQueryParameter("DataSnapshotId", dataSnapshotId);
@@ -226,7 +233,10 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * The image IDs of the simple application server. The value can be a JSON array that consists of up to 100 image IDs. Separate multiple image IDs with commas (,).
+         * <p>The image IDs of the simple application server. The value can be a JSON array that consists of up to 100 image IDs. Separate multiple image IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;fe9c66133a9d4688872869726b52****&quot;, &quot;794c230fd3e64ea19f83f4d7a0ad****&quot;]</p>
          */
         public Builder imageIds(String imageIds) {
             this.putQueryParameter("ImageIds", imageIds);
@@ -235,7 +245,10 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * The image names of the simple application servers. The value can be a JSON array that consists of up to 100 image names. Separate multiple image names with commas (,).
+         * <p>The image names of the simple application servers. The value can be a JSON array that consists of up to 100 image names. Separate multiple image names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;test1****&quot;, &quot;test2****&quot;]</p>
          */
         public Builder imageNames(String imageNames) {
             this.putQueryParameter("ImageNames", imageNames);
@@ -244,7 +257,10 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Simple Application Server instance that the image originates from.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ace0706b2ac4454d984295a94213****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -253,7 +269,10 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -262,11 +281,14 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Maximum value: 100.
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -275,7 +297,11 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application servers corresponding to the custom images. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application servers corresponding to the custom images. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -284,7 +310,10 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bti7cf7yj2i</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -293,7 +322,17 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * Share.
+         * <p>Whether to query shared images. Value range:</p>
+         * <ul>
+         * <li><p>False: No. Indicates that shared images are not included in the returned results.</p>
+         * </li>
+         * <li><p>True: Yes. Indicates that only shared images are returned.</p>
+         * </li>
+         * </ul>
+         * <p>If not filled, all images are returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder share(Boolean share) {
             this.putQueryParameter("Share", share);
@@ -302,7 +341,10 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * The ID of the system disk snapshot.
+         * <p>The ID of the system disk snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp14m09pq8***0g6</p>
          */
         public Builder systemSnapshotId(String systemSnapshotId) {
             this.putQueryParameter("SystemSnapshotId", systemSnapshotId);
@@ -311,7 +353,7 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * Tag N of the custom image.
+         * <p>Tag N of the custom image.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -326,6 +368,12 @@ public class ListCustomImagesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListCustomImagesRequest} extends {@link TeaModel}
+     *
+     * <p>ListCustomImagesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -365,7 +413,10 @@ public class ListCustomImagesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+             * <p>The key of tag N. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -373,7 +424,10 @@ public class ListCustomImagesRequest extends Request {
             }
 
             /**
-             * The value of tag N. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.
+             * <p>The value of tag N. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

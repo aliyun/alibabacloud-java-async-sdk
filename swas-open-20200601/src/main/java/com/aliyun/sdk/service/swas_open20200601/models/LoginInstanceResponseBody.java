@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link LoginInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>LoginInstanceResponseBody</p>
@@ -49,7 +50,10 @@ public class LoginInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The URL that you use to log on to the server.
+         * <p>The URL that you use to log on to the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ecs-workbench.aliyun.com/view/instance/single/gbktfz">https://ecs-workbench.aliyun.com/view/instance/single/gbktfz</a>****</p>
          */
         public Builder redirectUrl(String redirectUrl) {
             this.redirectUrl = redirectUrl;
@@ -57,7 +61,10 @@ public class LoginInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2DE174B-7196-5778-A00D-6EA2601B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

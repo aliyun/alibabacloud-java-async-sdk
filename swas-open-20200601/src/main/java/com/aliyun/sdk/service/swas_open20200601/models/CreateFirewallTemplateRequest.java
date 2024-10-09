@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFirewallTemplateRequest} extends {@link RequestModel}
  *
  * <p>CreateFirewallTemplateRequest</p>
@@ -97,7 +98,10 @@ public class CreateFirewallTemplateRequest extends Request {
         } 
 
         /**
-         * The description of the firewall template.
+         * <p>The description of the firewall template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -106,7 +110,7 @@ public class CreateFirewallTemplateRequest extends Request {
         }
 
         /**
-         * The details of the firewall rule.
+         * <p>The details of the firewall rule.</p>
          */
         public Builder firewallRule(java.util.List < FirewallRule> firewallRule) {
             this.putQueryParameter("FirewallRule", firewallRule);
@@ -115,7 +119,11 @@ public class CreateFirewallTemplateRequest extends Request {
         }
 
         /**
-         * The name of the firewall template.
+         * <p>The name of the firewall template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -124,7 +132,11 @@ public class CreateFirewallTemplateRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server to which the firewall template belongs. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * <p>The region ID of the simple application server to which the firewall template belongs. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,6 +151,12 @@ public class CreateFirewallTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFirewallTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFirewallTemplateRequest</p>
+     */
     public static class FirewallRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -205,10 +223,14 @@ public class CreateFirewallTemplateRequest extends Request {
             private String sourceCidrIp; 
 
             /**
-             * The port range. Valid values: 1 to 65535. Specify a port range in the format of \<start port number>/\<end port number>. Example: `1024/1055`, which indicates that the port range of 1024 to 1055.
-             * <p>
+             * <p>The port range. Valid values: 1 to 65535. Specify a port range in the format of &lt;start port number&gt;/&lt;end port number&gt;. Example: <code>1024/1055</code>, which indicates that the port range of 1024 to 1055.</p>
+             * <blockquote>
+             * <p> If you set RuleProtocol to ICMP, you must set Port to -1/-1.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  If you set RuleProtocol to ICMP, you must set Port to -1/-1.
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -216,7 +238,7 @@ public class CreateFirewallTemplateRequest extends Request {
             }
 
             /**
-             * The remarks of the firewall rule.
+             * <p>The remarks of the firewall rule.</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -224,13 +246,17 @@ public class CreateFirewallTemplateRequest extends Request {
             }
 
             /**
-             * The transport layer protocol that the rule supports. Valid values:
-             * <p>
+             * <p>The transport layer protocol that the rule supports. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * <li>TCP+UDP</li>
+             * <li>ICMP</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   TCP
-             * *   UDP
-             * *   TCP+UDP
-             * *   ICMP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ruleProtocol(String ruleProtocol) {
                 this.ruleProtocol = ruleProtocol;
@@ -238,7 +264,11 @@ public class CreateFirewallTemplateRequest extends Request {
             }
 
             /**
-             * The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.
+             * <p>The source address to which you want to grant access permissions. CIDR blocks and IPv4 addresses are supported.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>223.166.XX.XX</p>
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
