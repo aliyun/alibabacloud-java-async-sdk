@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAppVersionsResponseBody</p>
@@ -97,11 +98,14 @@ public class ListAppVersionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the historical versions of the application were obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the historical versions of the application were obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates that the historical versions of the application were obtained.</li>
+         * <li><strong>false</strong>: indicates that the historical versions of the application could not be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: indicates that the historical versions of the application were obtained.
-         * *   **false**: indicates that the historical versions of the application could not be obtained.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,12 +113,12 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The deployment method of the application. Valid values:
-         * <p>
-         * 
-         * *   **image**: indicates that the application was deployed by using an image.
-         * *   **upload**: indicates that the application was deployed by uploading a WAR or JAR package.
-         * *   **url**: indicates that the application was deployed by specifying the URL of a WAR or JAR package.
+         * <p>The deployment method of the application. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong>: indicates that the application was deployed by using an image.</li>
+         * <li><strong>upload</strong>: indicates that the application was deployed by uploading a WAR or JAR package.</li>
+         * <li><strong>url</strong>: indicates that the application was deployed by specifying the URL of a WAR or JAR package.</li>
+         * </ul>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -122,13 +126,13 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -136,7 +140,10 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -144,7 +151,10 @@ public class ListAppVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the versions.
+         * <p>The information about the versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,6 +175,12 @@ public class ListAppVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAppVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppVersionsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildPackageUrl")
         private String buildPackageUrl;
@@ -240,9 +256,10 @@ public class ListAppVersionsResponseBody extends TeaModel {
             private String warUrl; 
 
             /**
-             * *   The address of the image. This parameter is returned when the **Type** parameter is set to **image**.
-             * <p>
-             * *   The download link of the WAR or JAR package. This parameter is returned when the **Type** parameter is set to **upload**.
+             * <ul>
+             * <li>The address of the image. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>image</strong>.</li>
+             * <li>The download link of the WAR or JAR package. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>upload</strong>.</li>
+             * </ul>
              */
             public Builder buildPackageUrl(String buildPackageUrl) {
                 this.buildPackageUrl = buildPackageUrl;
@@ -250,7 +267,10 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The download link of the WAR or JAR package. This parameter is returned when the **Type** parameter is set to **url**.
+             * <p>The download link of the WAR or JAR package. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>url</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1590124643553</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -258,11 +278,14 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
-             * <p>
+             * <p>The error code.</p>
+             * <ul>
+             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+             * </ul>
              * 
-             * *   The **ErrorCode** parameter is not returned when the request succeeds.
-             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+             * <strong>example:</strong>
+             * <p>a0ce266c-d354-423a-9bd6-4083405a****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -270,7 +293,10 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the application was created.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,7 +304,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the version.
+             * <p>The ID of the version.</p>
              */
             public Builder warUrl(String warUrl) {
                 this.warUrl = warUrl;

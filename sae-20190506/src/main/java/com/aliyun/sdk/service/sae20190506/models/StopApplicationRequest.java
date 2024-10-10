@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopApplicationRequest} extends {@link RequestModel}
  *
  * <p>StopApplicationRequest</p>
@@ -54,11 +55,15 @@ public class StopApplicationRequest extends Request {
         } 
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li><strong>success</strong> is returned when the request succeeds.</li>
+         * <li>An error code is returned when the request fails.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **success** is returned when the request succeeds.
-         * *   An error code is returned when the request fails.
+         * <strong>example:</strong>
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

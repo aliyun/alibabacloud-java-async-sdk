@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationsResponseBody</p>
@@ -133,7 +134,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * Queries applications.
+         * <p>Queries applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -141,7 +145,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 20
+         * <p>20</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -149,7 +156,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried applications.
+         * <p>The queried applications.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +164,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the request.</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -165,7 +175,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 20
+         * <p>20</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +186,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * cn-beijing:demo
+         * <p>cn-beijing:demo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -181,7 +197,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4D805CA-926D-41B1-8E63-7AD0C1ED****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +208,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -197,7 +219,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * demo-app
+         * <p>demo-app</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;
@@ -210,6 +235,12 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -271,6 +302,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class Children extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppDeletingStatus")
         private Boolean appDeletingStatus;
@@ -612,6 +649,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class ApplicationsTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -651,7 +694,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -659,7 +705,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -673,6 +722,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class Applications extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppDeletingStatus")
         private Boolean appDeletingStatus;
@@ -904,11 +959,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             private java.util.List < ApplicationsTags> tags; 
 
             /**
-             * Indicates whether the application is being deleted. Valid values:
-             * <p>
+             * <p>Indicates whether the application is being deleted. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The application is being deleted.</li>
+             * <li><strong>false</strong>: The application is not being deleted.</li>
+             * </ul>
              * 
-             * *   **true**: The application is being deleted.
-             * *   **false**: The application is not being deleted.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder appDeletingStatus(Boolean appDeletingStatus) {
                 this.appDeletingStatus = appDeletingStatus;
@@ -916,7 +974,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the application.
+             * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -924,7 +985,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -932,7 +996,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -956,16 +1023,19 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:
-             * <p>
+             * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+             * <ul>
+             * <li><strong>500</strong></li>
+             * <li><strong>1000</strong></li>
+             * <li><strong>2000</strong></li>
+             * <li><strong>4000</strong></li>
+             * <li><strong>8000</strong></li>
+             * <li><strong>16000</strong></li>
+             * <li><strong>32000</strong></li>
+             * </ul>
              * 
-             * *   **500**
-             * *   **1000**
-             * *   **2000**
-             * *   **4000**
-             * *   **8000**
-             * *   **16000**
-             * *   **32000**
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -981,7 +1051,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application instances.
+             * <p>The number of application instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
@@ -989,19 +1062,22 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:
-             * <p>
+             * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+             * <ul>
+             * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
+             * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
+             * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
+             * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
+             * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
+             * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
+             * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
+             * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
+             * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
+             * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+             * </ul>
              * 
-             * *   This parameter is set to **1024** if the Cpu parameter is set to 500 or 1000.
-             * *   This parameter is set to **2048** if the Cpu parameter is set to 500, 1000, or 2000.
-             * *   This parameter is set to **4096** if the Cpu parameter is set to 1000, 2000, or 4000.
-             * *   This parameter is set to **8192** if the Cpu parameter is set to 2000, 4000, or 8000.
-             * *   This parameter is set to **12288** if the Cpu parameter is set to 12000.
-             * *   This parameter is set to **16384** if the Cpu parameter is set to 4000, 8000, or 16000.
-             * *   This parameter is set to **24576** if the Cpu parameter is set to 12000.
-             * *   This parameter is set to **32768** if the Cpu parameter is set to 16000.
-             * *   This parameter is set to **65536** if the Cpu parameter is set to 8000, 16000, or 32000.
-             * *   This parameter is set to **131072** if the Cpu parameter is set to 32000.
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -1025,7 +1101,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace ID.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:demo</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -1049,7 +1128,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1057,7 +1139,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running instances.
+             * <p>The number of running instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder runningInstances(Integer runningInstances) {
                 this.runningInstances = runningInstances;
@@ -1065,7 +1150,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the application.
+             * <p>The tags of the application.</p>
              */
             public Builder tags(java.util.List < ApplicationsTags> tags) {
                 this.tags = tags;
@@ -1079,6 +1164,12 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Applications")
         private java.util.List < Applications> applications;
@@ -1142,7 +1233,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The applications.
+             * <p>The applications.</p>
              */
             public Builder applications(java.util.List < Applications> applications) {
                 this.applications = applications;
@@ -1150,7 +1241,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of application instances.
+             * <p>The number of application instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1158,7 +1252,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the application.
+             * <p>The tags of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1166,7 +1263,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about applications.
+             * <p>The information about applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

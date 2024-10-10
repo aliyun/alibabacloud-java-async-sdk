@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConfigMapResponseBody} extends {@link TeaModel}
  *
  * <p>CreateConfigMapResponseBody</p>
@@ -109,7 +110,10 @@ public class CreateConfigMapResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Empty
+         * <p>Empty</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,7 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +129,14 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ConfigMap that was created.
+         * <p>The ID of the ConfigMap that was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +144,10 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +155,10 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,13 +166,16 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -163,7 +183,10 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -176,6 +199,12 @@ public class CreateConfigMapResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateConfigMapResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateConfigMapResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigMapId")
         private Long configMapId;
@@ -203,7 +232,10 @@ public class CreateConfigMapResponseBody extends TeaModel {
             private Long configMapId; 
 
             /**
-             * The returned result.
+             * <p>The returned result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConfigMapResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConfigMapResponseBody</p>
@@ -109,11 +110,14 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the details of the ConfigMap instance were obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the details of the ConfigMap instance were obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The details were obtained.</li>
+         * <li><strong>false</strong>: The details failed to be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: The details were obtained.
-         * *   **false**: The details failed to be obtained.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the instance was last modified.
+         * <p>The time when the instance was last modified.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,13 +133,13 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the call was successful.
-         * *   **3xx**: indicates that the call was redirected.
-         * *   **4xx**: indicates that the call failed.
-         * *   **5xx**: indicates that a server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the call was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the call failed.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. The ID is used to query the details of a request.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,11 +158,14 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information. Valid values:
-         * <p>
+         * <p>The returned information. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   If the call is successful, **success** is returned.
-         * *   If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,7 +181,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -184,6 +197,12 @@ public class DescribeConfigMapResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConfigMapResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigMapResponseBody</p>
+     */
     public static class RelateApps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -223,7 +242,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             private String appName; 
 
             /**
-             * The ID of the ConfigMap instance.
+             * <p>The ID of the ConfigMap instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f16b4000-9058-4c22-a49d-49a28f0b****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -231,7 +253,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -245,6 +270,12 @@ public class DescribeConfigMapResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigMapResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigMapResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigMapId")
         private Long configMapId;
@@ -356,7 +387,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The name of the ConfigMap instance.
+             * <p>The name of the ConfigMap instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;
@@ -364,7 +398,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * The application that is associated with the instance.
+             * <p>The application that is associated with the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593746835111</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -372,7 +409,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace to which the instance belongs.
+             * <p>The ID of the namespace to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
              */
             public Builder data(java.util.Map < String, ? > data) {
                 this.data = data;
@@ -380,7 +420,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -388,11 +431,14 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * The returned error code. Valid values:
-             * <p>
+             * <p>The returned error code. Valid values:</p>
+             * <ul>
+             * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+             * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+             * </ul>
              * 
-             * *   If the call is successful, the **ErrorCode** parameter is not returned.
-             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+             * <strong>example:</strong>
+             * <p>test-configmap</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -400,7 +446,10 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * <p>The description of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -408,7 +457,7 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
              */
             public Builder relateApps(java.util.List < RelateApps> relateApps) {
                 this.relateApps = relateApps;
@@ -416,12 +465,12 @@ public class DescribeConfigMapResponseBody extends TeaModel {
             }
 
             /**
-             * The data of ConfigMap key-value pairs. Format:
-             * <p>
+             * <p>The data of ConfigMap key-value pairs. Format:</p>
+             * <p>{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}</p>
+             * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configurations</a>.</p>
              * 
-             * {"k1":"v1", "k2":"v2"}
-             * 
-             * k specifies a key and v specifies a value. For more information, see [Manage and use configurations](~~171326~~).
+             * <strong>example:</strong>
+             * <p>1593747274195</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

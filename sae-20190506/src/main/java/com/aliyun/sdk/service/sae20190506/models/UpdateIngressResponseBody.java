@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIngressResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateIngressResponseBody</p>
@@ -170,6 +171,12 @@ public class UpdateIngressResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateIngressResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateIngressResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IngressId")
         private Long ingressId;

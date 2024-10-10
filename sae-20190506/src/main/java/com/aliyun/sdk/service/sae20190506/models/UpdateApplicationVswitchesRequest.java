@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationVswitchesRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationVswitchesRequest</p>
@@ -69,7 +70,10 @@ public class UpdateApplicationVswitchesRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +82,10 @@ public class UpdateApplicationVswitchesRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-2ze559r1z1bpwqxwp****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestartInstancesRequest} extends {@link RequestModel}
  *
  * <p>RestartInstancesRequest</p>
@@ -69,7 +70,11 @@ public class RestartInstancesRequest extends Request {
         } 
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1daa7236-3844-4f36-b39a-605b0cc0****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +83,11 @@ public class RestartInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance to be restarted. Separate multiple instance IDs with commas (,).
+         * <p>The ID of the instance to be restarted. Separate multiple instance IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysae-1daa7236-3844-4f36-b39a-605b0cc0caa6-*****</p>
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

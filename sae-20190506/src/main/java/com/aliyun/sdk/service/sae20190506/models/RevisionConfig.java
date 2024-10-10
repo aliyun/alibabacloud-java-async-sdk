@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RevisionConfig} extends {@link TeaModel}
  *
  * <p>RevisionConfig</p>
@@ -62,7 +63,7 @@ public class RevisionConfig extends TeaModel {
         private WebNetworkConfig webNetworkConfig; 
 
         /**
-         * Containers.
+         * <p>This parameter is required.</p>
          */
         public Builder containers(java.util.List < Container > containers) {
             this.containers = containers;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebApplicationScalingConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebApplicationScalingConfigRequest</p>
@@ -69,7 +70,10 @@ public class DescribeWebApplicationScalingConfigRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("ApplicationId", applicationId);
@@ -78,7 +82,10 @@ public class DescribeWebApplicationScalingConfigRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:sae-test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

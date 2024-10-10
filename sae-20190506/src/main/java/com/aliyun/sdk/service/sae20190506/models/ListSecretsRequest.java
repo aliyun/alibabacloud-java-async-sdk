@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretsRequest} extends {@link RequestModel}
  *
  * <p>ListSecretsRequest</p>
@@ -54,7 +55,11 @@ public class ListSecretsRequest extends Request {
         } 
 
         /**
-         * The ID of the namespace in which the Secrets reside. By default, the namespace ID is the same as the region ID.
+         * <p>The ID of the namespace in which the Secrets reside. By default, the namespace ID is the same as the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SourceCodeAccount} extends {@link TeaModel}
  *
  * <p>SourceCodeAccount</p>
@@ -110,6 +111,12 @@ public class SourceCodeAccount extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SourceCodeAccount} extends {@link TeaModel}
+     *
+     * <p>SourceCodeAccount</p>
+     */
     public static class Organizations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvatarUrl")
         private String avatarUrl;

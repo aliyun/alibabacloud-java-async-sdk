@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationLogsInput} extends {@link TeaModel}
  *
  * <p>GetApplicationLogsInput</p>
@@ -191,7 +192,7 @@ public class GetApplicationLogsInput extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>This parameter is required.</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -263,7 +264,7 @@ public class GetApplicationLogsInput extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>This parameter is required.</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;

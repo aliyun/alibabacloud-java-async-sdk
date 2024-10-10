@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNamespacedConfigMapsRequest} extends {@link RequestModel}
  *
  * <p>ListNamespacedConfigMapsRequest</p>
@@ -54,7 +55,11 @@ public class ListNamespacedConfigMapsRequest extends Request {
         } 
 
         /**
-         * cn-hangzhou
+         * <p>cn-hangzhou</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

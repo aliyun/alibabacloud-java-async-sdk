@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BuildPipelineRun} extends {@link TeaModel}
  *
  * <p>BuildPipelineRun</p>
@@ -370,6 +371,12 @@ public class BuildPipelineRun extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BuildPipelineRun} extends {@link TeaModel}
+     *
+     * <p>BuildPipelineRun</p>
+     */
     public static class Trigger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BranchName")
         private String branchName;
@@ -438,7 +445,10 @@ public class BuildPipelineRun extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUSH</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -452,6 +462,12 @@ public class BuildPipelineRun extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipelineRun} extends {@link TeaModel}
+     *
+     * <p>BuildPipelineRun</p>
+     */
     public static class BuildConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeforeBuildCommand")
         private String beforeBuildCommand;
@@ -585,7 +601,10 @@ public class BuildPipelineRun extends TeaModel {
             }
 
             /**
-             * BuildType.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>buildpacks/dockerfile</p>
              */
             public Builder buildType(String buildType) {
                 this.buildType = buildType;
@@ -633,7 +652,7 @@ public class BuildPipelineRun extends TeaModel {
             }
 
             /**
-             * Trigger.
+             * <p>This parameter is required.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -655,6 +674,12 @@ public class BuildPipelineRun extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipelineRun} extends {@link TeaModel}
+     *
+     * <p>BuildPipelineRun</p>
+     */
     public static class CodeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -771,7 +796,10 @@ public class BuildPipelineRun extends TeaModel {
             private String repoId; 
 
             /**
-             * AccountId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -779,7 +807,10 @@ public class BuildPipelineRun extends TeaModel {
             }
 
             /**
-             * BranchName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
@@ -811,7 +842,10 @@ public class BuildPipelineRun extends TeaModel {
             }
 
             /**
-             * Provider.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>github/gitee/gitlab等</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -819,7 +853,10 @@ public class BuildPipelineRun extends TeaModel {
             }
 
             /**
-             * RepoFullName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-samples/java-maven-demo</p>
              */
             public Builder repoFullName(String repoFullName) {
                 this.repoFullName = repoFullName;
@@ -827,7 +864,10 @@ public class BuildPipelineRun extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3001</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -841,6 +881,12 @@ public class BuildPipelineRun extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipelineRun} extends {@link TeaModel}
+     *
+     * <p>BuildPipelineRun</p>
+     */
     public static class DeployConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlwaysAllocateCPU")
         private Boolean alwaysAllocateCPU;
@@ -962,6 +1008,12 @@ public class BuildPipelineRun extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipelineRun} extends {@link TeaModel}
+     *
+     * <p>BuildPipelineRun</p>
+     */
     public static class ImageConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -1043,6 +1095,12 @@ public class BuildPipelineRun extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipelineRun} extends {@link TeaModel}
+     *
+     * <p>BuildPipelineRun</p>
+     */
     public static class PackageConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PackageName")
         private String packageName;
@@ -1144,6 +1202,12 @@ public class BuildPipelineRun extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipelineRun} extends {@link TeaModel}
+     *
+     * <p>BuildPipelineRun</p>
+     */
     public static class Steps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -1325,6 +1389,12 @@ public class BuildPipelineRun extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BuildPipelineRun} extends {@link TeaModel}
+     *
+     * <p>BuildPipelineRun</p>
+     */
     public static class TriggerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BranchName")
         private String branchName;
@@ -1376,7 +1446,10 @@ public class BuildPipelineRun extends TeaModel {
             private String type; 
 
             /**
-             * BranchName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
@@ -1392,7 +1465,10 @@ public class BuildPipelineRun extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PUSH</p>
              */
             public Builder type(String type) {
                 this.type = type;

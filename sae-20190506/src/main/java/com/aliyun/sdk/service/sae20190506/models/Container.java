@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Container} extends {@link TeaModel}
  *
  * <p>Container</p>
@@ -207,7 +208,10 @@ public class Container extends TeaModel {
         }
 
         /**
-         * Image.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/serverless_devsxxxxx</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -247,7 +251,7 @@ public class Container extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>This parameter is required.</p>
          */
         public Builder resources(ContainerResources resources) {
             this.resources = resources;

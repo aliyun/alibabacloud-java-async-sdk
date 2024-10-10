@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChangeOrderRequest} extends {@link RequestModel}
  *
  * <p>DescribeChangeOrderRequest</p>
@@ -54,7 +55,11 @@ public class DescribeChangeOrderRequest extends Request {
         } 
 
         /**
-         * 76fa5c0-9ebb-4bb4-b383-1f885447\*\*\*\*
+         * <p>76fa5c0-9ebb-4bb4-b383-1f885447****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76fa5c0-9ebb-4bb4-b383-1f885447****</p>
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateIngressRequest} extends {@link RequestModel}
  *
  * <p>UpdateIngressRequest</p>
@@ -253,7 +254,10 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
-         * IngressId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87</p>
          */
         public Builder ingressId(Long ingressId) {
             this.putQueryParameter("IngressId", ingressId);

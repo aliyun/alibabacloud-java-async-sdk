@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>CreateNamespaceResponseBody</p>
@@ -109,7 +110,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * bucketPath
+         * <p>bucketPath</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The region where the namespace resides.
+         * <p>The region where the namespace resides.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +129,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * http://sae_pop_pre/#vpc
+         * <p><a href="http://sae_pop_pre/#vpc">http://sae_pop_pre/#vpc</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucketName</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +140,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +151,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the custom namespace.
+         * <p>The description of the custom namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +162,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * mountDir
+         * <p>mountDir</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -157,7 +173,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a981dd515966966104121683d****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -170,6 +189,12 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateNamespaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateNamespaceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableMicroRegistration")
         private Boolean enableMicroRegistration;
@@ -265,11 +290,14 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the namespace was created. Valid values:
-             * <p>
+             * <p>Indicates whether the namespace was created. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The instance was created.</li>
+             * <li><strong>false</strong>: The call failed to be created.</li>
+             * </ul>
              * 
-             * *   **true**: The instance was created.
-             * *   **false**: The call failed to be created.
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nameSpaceShortId(String nameSpaceShortId) {
                 this.nameSpaceShortId = nameSpaceShortId;
@@ -277,7 +305,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The short ID of the namespace.
+             * <p>The short ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder namespaceDescription(String namespaceDescription) {
                 this.namespaceDescription = namespaceDescription;
@@ -285,11 +316,14 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned. Take note of the following rules:
-             * <p>
+             * <p>The error code returned. Take note of the following rules:</p>
+             * <ul>
+             * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+             * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+             * </ul>
              * 
-             * *   The **ErrorCode** parameter is not returned if the request succeeds.
-             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -297,7 +331,10 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * Null
+             * <p>Null</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -305,13 +342,16 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code. Valid values:
-             * <p>
+             * <p>The HTTP status code. Valid values:</p>
+             * <ul>
+             * <li><strong>2xx</strong>: The call was successful.</li>
+             * <li><strong>3xx</strong>: The call was redirected.</li>
+             * <li><strong>4xx</strong>: The call failed.</li>
+             * <li><strong>5xx</strong>: A server error occurred.</li>
+             * </ul>
              * 
-             * *   **2xx**: The call was successful.
-             * *   **3xx**: The call was redirected.
-             * *   **4xx**: The call failed.
-             * *   **5xx**: A server error occurred.
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

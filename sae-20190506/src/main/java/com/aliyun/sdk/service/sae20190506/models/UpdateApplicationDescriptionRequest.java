@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationDescriptionRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationDescriptionRequest</p>
@@ -69,7 +70,10 @@ public class UpdateApplicationDescriptionRequest extends Request {
         } 
 
         /**
-         * AppDescription.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newdesc</p>
          */
         public Builder appDescription(String appDescription) {
             this.putQueryParameter("AppDescription", appDescription);
@@ -78,7 +82,10 @@ public class UpdateApplicationDescriptionRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ContainerResources} extends {@link TeaModel}
  *
  * <p>ContainerResources</p>
@@ -51,7 +52,10 @@ public class ContainerResources extends TeaModel {
         private Integer memory; 
 
         /**
-         * Cpu.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder cpu(Integer cpu) {
             this.cpu = cpu;
@@ -59,7 +63,10 @@ public class ContainerResources extends TeaModel {
         }
 
         /**
-         * Memory.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memory(Integer memory) {
             this.memory = memory;

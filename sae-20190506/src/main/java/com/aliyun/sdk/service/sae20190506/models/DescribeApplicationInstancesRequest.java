@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeApplicationInstancesRequest</p>
@@ -111,7 +112,11 @@ public class DescribeApplicationInstancesRequest extends Request {
         } 
 
         /**
-         * d700e680-aa4d-4ec1-afc2-6566b5ff\*\*\*\*
+         * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -120,7 +125,10 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -129,7 +137,11 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * b2a8a925-477a-4ed7-b825-d5e22500\*\*\*\*
+         * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2a8a925-477a-4ed7-b825-d5e22500****</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -138,7 +150,10 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * 10
+         * <p>10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +162,10 @@ public class DescribeApplicationInstancesRequest extends Request {
         }
 
         /**
-         * true
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAvailabilityMetricResponseBody} extends {@link TeaModel}
  *
  * <p>GetAvailabilityMetricResponseBody</p>
@@ -85,13 +86,16 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The following limits are imposed on the ID:
-         * <p>
+         * <p>The HTTP status code. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -99,7 +103,7 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The data entries returned.
+         * <p>The data entries returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -107,11 +111,14 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned. The following limits are imposed on the ID:
-         * <p>
+         * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   success: If the call is successful, **success** is returned.
-         * *   An error code: If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -119,7 +126,10 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A92C4EA-4C53-5A1C-8AEB-F2DB11982D5F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -127,11 +137,14 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the list of applications was obtained. The following limits are imposed on the ID:
-         * <p>
+         * <p>Indicates whether the list of applications was obtained. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li><strong>true</strong>: The namespaces were obtained.</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: The namespaces were obtained.
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -144,6 +157,12 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAvailabilityMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAvailabilityMetricResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -243,7 +262,10 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             private Long runnings; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -251,11 +273,14 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an auto scaling policy is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether an auto scaling policy is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: An auto scaling policy is enabled.</li>
+             * <li><strong>0</strong>: No auto scaling policy is enabled.</li>
+             * </ul>
              * 
-             * *   **1**: An auto scaling policy is enabled.
-             * *   **0**: No auto scaling policy is enabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder enableAutoscale(Long enableAutoscale) {
                 this.enableAutoscale = enableAutoscale;
@@ -263,7 +288,10 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The number of abnormal instances.
+             * <p>The number of abnormal instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorInstances(Long errorInstances) {
                 this.errorInstances = errorInstances;
@@ -271,7 +299,10 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The expected number of instances.
+             * <p>The expected number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder instances(Long instances) {
                 this.instances = instances;
@@ -279,7 +310,10 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -287,7 +321,10 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace ID.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -295,7 +332,10 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The current number of instances.
+             * <p>The current number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder runnings(Long runnings) {
                 this.runnings = runnings;

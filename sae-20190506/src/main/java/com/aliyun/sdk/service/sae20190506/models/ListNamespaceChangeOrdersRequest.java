@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNamespaceChangeOrdersRequest} extends {@link RequestModel}
  *
  * <p>ListNamespaceChangeOrdersRequest</p>
@@ -124,7 +125,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         } 
 
         /**
-         * 2
+         * <p>2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder coStatus(String coStatus) {
             this.putQueryParameter("CoStatus", coStatus);
@@ -133,7 +137,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * CoBatchStartApplication
+         * <p>CoBatchStartApplication</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CoBatchStartApplication</p>
          */
         public Builder coType(String coType) {
             this.putQueryParameter("CoType", coType);
@@ -142,7 +149,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -151,7 +161,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * test
+         * <p>test</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -160,7 +173,11 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * cn-shanghai:test
+         * <p>cn-shanghai:test</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -169,7 +186,10 @@ public class ListNamespaceChangeOrdersRequest extends Request {
         }
 
         /**
-         * 20
+         * <p>20</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

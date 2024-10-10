@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceSpecificationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceSpecificationsResponseBody</p>
@@ -109,13 +110,16 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * Information of instance types.
+         * <p>Information of instance types.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -131,11 +135,11 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
-         * 
-         * *   If the request is successful, this parameter is not returned.****
-         * *   This parameter is returned only if the request failed.**** For more information, see **Error codes** in this topic.
+         * <p>The error code.</p>
+         * <ul>
+         * <li>If the request is successful, this parameter is not returned.****</li>
+         * <li>This parameter is returned only if the request failed.**** For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +147,14 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. Valid values:
-         * <p>
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li><strong>success</strong> is returned when the request succeeds.</li>
+         * <li>An error code is returned when the request fails.</li>
+         * </ul>
          * 
-         * *   **success** is returned when the request succeeds.
-         * *   An error code is returned when the request fails.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +162,10 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +173,14 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether information of the instance types is successfully obtained. Valid values:
-         * <p>
+         * <p>Indicates whether information of the instance types is successfully obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +188,10 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It is used to query the details of a request.
+         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -188,6 +204,12 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceSpecificationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceSpecificationsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
@@ -275,7 +297,10 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             private Integer version; 
 
             /**
-             * The CPU specification of the instance type. Unit: millicore.
+             * <p>The CPU specification of the instance type. Unit: millicore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -283,11 +308,14 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance type is available. Valid values:
-             * <p>
+             * <p>Indicates whether the instance type is available. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -295,7 +323,10 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance type.
+             * <p>The ID of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -303,7 +334,10 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance type. Unit: MB.
+             * <p>The memory size of the instance type. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4096</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -311,7 +345,7 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance type.
+             * <p>The name of the instance type.</p>
              */
             public Builder specInfo(String specInfo) {
                 this.specInfo = specInfo;
@@ -319,7 +353,10 @@ public class DescribeInstanceSpecificationsResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the instance type.
+             * <p>The version number of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

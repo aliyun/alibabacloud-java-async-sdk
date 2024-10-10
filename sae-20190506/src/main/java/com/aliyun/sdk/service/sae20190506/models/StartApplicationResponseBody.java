@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>StartApplicationResponseBody</p>
@@ -109,13 +110,16 @@ public class StartApplicationResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class StartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,14 @@ public class StartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. Take note of the following rules:
-         * <p>
+         * <p>The error code returned. Take note of the following rules:</p>
+         * <ul>
+         * <li>If the call is successful, <strong>ErrorCode</strong> is not returned.</li>
+         * <li>If the call fails, <strong>ErrorCode</strong> is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * </ul>
          * 
-         * *   If the call is successful, **ErrorCode** is not returned.
-         * *   If the call fails, **ErrorCode** is returned. For more information, see the "**Error codes**" section in this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +150,14 @@ public class StartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. Take note of the following rules:
-         * <p>
+         * <p>The returned message. Take note of the following rules:</p>
+         * <ul>
+         * <li>If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   If the call is successful, **success** is returned.
-         * *   If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +165,10 @@ public class StartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BD8F4C7-D84C-4D46-9885-8212997E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +176,14 @@ public class StartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the application is started. Valid values:
-         * <p>
+         * <p>Indicates whether the application is started. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +191,10 @@ public class StartApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc3b6e215637275918588187d****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -188,6 +207,12 @@ public class StartApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
@@ -215,7 +240,10 @@ public class StartApplicationResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * The ID of the change order.
+             * <p>The ID of the change order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWebApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateWebApplicationRequest</p>
@@ -69,7 +70,10 @@ public class CreateWebApplicationRequest extends Request {
         } 
 
         /**
-         * NamespaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -78,7 +82,7 @@ public class CreateWebApplicationRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>This parameter is required.</p>
          */
         public Builder body(CreateWebApplicationInput body) {
             this.putBodyParameter("body", body);

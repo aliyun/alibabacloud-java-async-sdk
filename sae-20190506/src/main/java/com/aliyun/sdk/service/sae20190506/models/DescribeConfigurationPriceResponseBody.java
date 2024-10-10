@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConfigurationPriceResponseBody</p>
@@ -170,6 +171,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class BagUsage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
@@ -231,6 +238,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class Order extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Float discountAmount;
@@ -332,6 +345,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -393,6 +412,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class CpuMemPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Order")
         private Order order;
@@ -454,6 +479,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class DataOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Float discountAmount;
@@ -555,6 +586,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class RequestPriceOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Float discountAmount;
@@ -656,6 +693,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class RequestPriceRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -717,6 +760,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class RequestPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Order")
         private RequestPriceOrder order;
@@ -778,6 +827,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class DataRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -839,6 +894,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class TrafficPriceOrder extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Float discountAmount;
@@ -940,6 +1001,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class TrafficPriceRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1001,6 +1068,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class TrafficPrice extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Order")
         private TrafficPriceOrder order;
@@ -1062,6 +1135,12 @@ public class DescribeConfigurationPriceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeConfigurationPriceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeConfigurationPriceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BagUsage")
         private BagUsage bagUsage;

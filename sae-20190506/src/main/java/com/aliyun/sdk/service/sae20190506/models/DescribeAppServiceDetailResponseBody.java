@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppServiceDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAppServiceDetailResponseBody</p>
@@ -109,13 +110,16 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the call was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the call failed.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          * 
-         * - **2xx**: indicates that the call was successful.
-         * - **3xx**: indicates that the call was redirected.
-         * - **4xx**: indicates that the call failed.
-         * - **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,11 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error code. Valid values:
-         * <p>
-         * 
-         * - If the call is successful, the **ErrorCode** parameter is not returned.
-         * - If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+         * <p>The returned error code. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information.
+         * <p>The returned information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +158,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2C7874F-F109-5B34-8618-2C10BBA2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,11 +169,14 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the meta data was obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the meta data was obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The metadata was obtained.</li>
+         * <li><strong>false</strong>: The metadata failed to be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: The metadata was obtained.
-         * *   **false**: The metadata failed to be obtained.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +184,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. The ID is used to query the details of a request.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b16399316402420740034918e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -184,6 +200,12 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAppServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppServiceDetailResponseBody</p>
+     */
     public static class ParameterDefinitions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -235,7 +257,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The description of the parameter.
+             * <p>The description of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +268,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arg0</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,7 +279,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter.
+             * <p>The type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -265,6 +296,12 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppServiceDetailResponseBody</p>
+     */
     public static class Methods extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MethodController")
         private String methodController;
@@ -400,7 +437,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             private String returnType; 
 
             /**
-             * The class to which the method belongs.
+             * <p>The class to which the method belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.serverless.sae.controller.EchoController</p>
              */
             public Builder methodController(String methodController) {
                 this.methodController = methodController;
@@ -408,7 +448,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the method.
+             * <p>The name of the method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>echo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -416,7 +459,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the method.
+             * <p>The details of the method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder nameDetail(String nameDetail) {
                 this.nameDetail = nameDetail;
@@ -424,7 +470,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the parameter.
+             * <p>The definition of the parameter.</p>
              */
             public Builder parameterDefinitions(java.util.List < ParameterDefinitions> parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
@@ -432,7 +478,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the parameters.
+             * <p>The details of the parameters.</p>
              */
             public Builder parameterDetails(java.util.List < String > parameterDetails) {
                 this.parameterDetails = parameterDetails;
@@ -440,7 +486,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the parameters.
+             * <p>The types of the parameters.</p>
              */
             public Builder parameterTypes(java.util.List < String > parameterTypes) {
                 this.parameterTypes = parameterTypes;
@@ -448,10 +494,8 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The request paths. Format:
-             * <p>
-             * 
-             * `/path`
+             * <p>The request paths. Format:</p>
+             * <p><code>/path</code></p>
              */
             public Builder paths(java.util.List < String > paths) {
                 this.paths = paths;
@@ -459,11 +503,11 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The request methods. Valid values:
-             * <p>
-             * 
-             * *   **GET**
-             * *   **ALL**
+             * <p>The request methods. Valid values:</p>
+             * <ul>
+             * <li><strong>GET</strong></li>
+             * <li><strong>ALL</strong></li>
+             * </ul>
              */
             public Builder requestMethods(java.util.List < String > requestMethods) {
                 this.requestMethods = requestMethods;
@@ -471,7 +515,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the response.
+             * <p>The details of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder returnDetails(String returnDetails) {
                 this.returnDetails = returnDetails;
@@ -479,7 +526,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The data format of the response.
+             * <p>The data format of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java.lang.String</p>
              */
             public Builder returnType(String returnType) {
                 this.returnType = returnType;
@@ -493,6 +543,12 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAppServiceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAppServiceDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DubboApplicationName")
         private String dubboApplicationName;
@@ -652,7 +708,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The name of the Dubbo application.
+             * <p>The name of the Dubbo application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-consumer</p>
              */
             public Builder dubboApplicationName(String dubboApplicationName) {
                 this.dubboApplicationName = dubboApplicationName;
@@ -660,7 +719,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou-micro-service-******</p>
              */
             public Builder edasAppName(String edasAppName) {
                 this.edasAppName = edasAppName;
@@ -668,7 +730,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The group to which the service belongs. You can create a custom group.
+             * <p>The group to which the service belongs. You can create a custom group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>springCloud</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -676,7 +741,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata. Example: `{side: "provider", port: "18081", preserved: {register: {source: "SPRING_CLOUD"}},…}`.
+             * <p>The metadata. Example: <code>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</p>
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -684,7 +752,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The methods.
+             * <p>The methods.</p>
              */
             public Builder methods(java.util.List < Methods> methods) {
                 this.methods = methods;
@@ -692,7 +760,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-provider</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -724,11 +795,14 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service. Valid values:
-             * <p>
+             * <p>The type of the service. Valid values:</p>
+             * <ul>
+             * <li><strong>dubbo</strong></li>
+             * <li><strong>springCloud</strong></li>
+             * </ul>
              * 
-             * *   **dubbo**
-             * *   **springCloud**
+             * <strong>example:</strong>
+             * <p>springCloud</p>
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -736,7 +810,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Spring Cloud application.
+             * <p>The name of the Spring Cloud application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service-provider</p>
              */
             public Builder springApplicationName(String springApplicationName) {
                 this.springApplicationName = springApplicationName;
@@ -744,7 +821,10 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service. You can create a custom version.
+             * <p>The version of the service. You can create a custom version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

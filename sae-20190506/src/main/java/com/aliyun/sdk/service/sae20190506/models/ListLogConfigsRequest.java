@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogConfigsRequest} extends {@link RequestModel}
  *
  * <p>ListLogConfigsRequest</p>
@@ -84,7 +85,11 @@ public class ListLogConfigsRequest extends Request {
         } 
 
         /**
-         * 10
+         * <p>10</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56f77b65-788d-442a-9885-7f20d91f****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -93,7 +98,11 @@ public class ListLogConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -102,7 +111,11 @@ public class ListLogConfigsRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

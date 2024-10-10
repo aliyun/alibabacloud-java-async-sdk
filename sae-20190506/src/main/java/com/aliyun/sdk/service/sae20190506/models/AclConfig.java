@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AclConfig} extends {@link TeaModel}
  *
  * <p>AclConfig</p>
@@ -38,7 +39,7 @@ public class AclConfig extends TeaModel {
         private java.util.List < AclEntryConfig > aclEntries; 
 
         /**
-         * aclEntries.
+         * <p>This parameter is required.</p>
          */
         public Builder aclEntries(java.util.List < AclEntryConfig > aclEntries) {
             this.aclEntries = aclEntries;

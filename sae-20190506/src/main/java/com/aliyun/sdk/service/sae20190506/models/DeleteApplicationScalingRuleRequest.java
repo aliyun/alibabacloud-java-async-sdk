@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteApplicationScalingRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteApplicationScalingRuleRequest</p>
@@ -69,7 +70,11 @@ public class DeleteApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +83,11 @@ public class DeleteApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the trace. The ID is used to query the details of a request.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timer-0800-2100</p>
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);

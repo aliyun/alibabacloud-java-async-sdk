@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeJobHistoryResponseBody</p>
@@ -109,13 +110,16 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code returned. Valid values:
-         * <p>
+         * <p>The HTTP status code returned. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,14 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. Take note of the following rules:
-         * <p>
+         * <p>The error code returned. Take note of the following rules:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+         * </ul>
          * 
-         * *   If the call is successful, the **ErrorCode** parameter is not returned.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section in this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +150,14 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned. Take note of the following rules:
-         * <p>
+         * <p>The message returned. Take note of the following rules:</p>
+         * <ul>
+         * <li>If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   If the call is successful, **success** is returned.
-         * *   If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +165,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53F15A18-8079-5992-810C-0211A5AE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +176,14 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +191,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b1639af16575057857241351e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -188,6 +207,12 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeJobHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobHistoryResponseBody</p>
+     */
     public static class Jobs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Active")
         private Long active;
@@ -299,7 +324,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             private Long succeeded; 
 
             /**
-             * The number of running instances.
+             * <p>The number of running instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder active(Long active) {
                 this.active = active;
@@ -307,7 +335,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was executed.
+             * <p>The time when the job was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657522839</p>
              */
             public Builder completionTime(Long completionTime) {
                 this.completionTime = completionTime;
@@ -315,7 +346,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that failed to run.
+             * <p>The number of instances that failed to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failed(Long failed) {
                 this.failed = failed;
@@ -323,7 +357,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The job ID.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>manual-3db7a8fa-5d40-4edc-92e4-49d50eab****</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -331,7 +368,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned if exceptions occur during job running.
+             * <p>The message returned if exceptions occur during job running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Null</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -339,7 +379,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was created.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657522800</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -347,13 +390,16 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
-             * <p>
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The job was not executed.</li>
+             * <li><strong>1</strong>: The job was executed.</li>
+             * <li><strong>2</strong>: The job failed to be executed.</li>
+             * <li><strong>3</strong>: The job is being executed.</li>
+             * </ul>
              * 
-             * *   **0**: The job was not executed.
-             * *   **1**: The job was executed.
-             * *   **2**: The job failed to be executed.
-             * *   **3**: The job is being executed.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -361,7 +407,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are successfully run.
+             * <p>The number of instances that are successfully run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder succeeded(Long succeeded) {
                 this.succeeded = succeeded;
@@ -375,6 +424,12 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeJobHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeJobHistoryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Long currentPage;
@@ -438,7 +493,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -446,7 +504,7 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The jobs.
+             * <p>The jobs.</p>
              */
             public Builder jobs(java.util.List < Jobs> jobs) {
                 this.jobs = jobs;
@@ -454,7 +512,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page. Valid values: 0 to 10000.
+             * <p>The number of entries to return on each page. Valid values: 0 to 10000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -462,7 +523,10 @@ public class DescribeJobHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of jobs.
+             * <p>The total number of jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

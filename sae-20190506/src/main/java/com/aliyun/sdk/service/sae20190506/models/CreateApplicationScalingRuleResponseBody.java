@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApplicationScalingRuleResponseBody</p>
@@ -170,6 +171,12 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Metrics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetricTargetAverageUtilization")
         private Integer metricTargetAverageUtilization;
@@ -311,6 +318,12 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Metric extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxReplicas")
         private Integer maxReplicas;
@@ -392,6 +405,12 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Schedules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AtTime")
         private String atTime;
@@ -493,6 +512,12 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Timer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BeginDate")
         private String beginDate;
@@ -594,6 +619,12 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateApplicationScalingRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationScalingRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindSlbRequest} extends {@link RequestModel}
  *
  * <p>BindSlbRequest</p>
@@ -138,7 +139,11 @@ public class BindSlbRequest extends Request {
         } 
 
         /**
-         * 0099b7be-5f5b-4512-a7fc-56049ef1\*\*\*\*
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -147,7 +152,10 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * \[{"port":80,"targetPort":8080,"protocol":"TCP"}]
+         * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
          */
         public Builder internet(String internet) {
             this.putQueryParameter("Internet", internet);
@@ -165,7 +173,10 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * lb-bp1tg0k6d9nqaw7l1\*\*\*\*
+         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
          */
         public Builder internetSlbId(String internetSlbId) {
             this.putQueryParameter("InternetSlbId", internetSlbId);
@@ -174,7 +185,10 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * \[{"port":80,"targetPort":8080,"protocol":"TCP"}]
+         * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;port&quot;:80,&quot;targetPort&quot;:8080,&quot;protocol&quot;:&quot;TCP&quot;}]</p>
          */
         public Builder intranet(String intranet) {
             this.putQueryParameter("Intranet", intranet);
@@ -192,7 +206,10 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * lb-bp1tg0k6d9nqaw7l1\*\*\*\*
+         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-bp1tg0k6d9nqaw7l1****</p>
          */
         public Builder intranetSlbId(String intranetSlbId) {
             this.putQueryParameter("IntranetSlbId", intranetSlbId);

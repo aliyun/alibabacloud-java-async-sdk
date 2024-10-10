@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWebCustomDomainInput} extends {@link TeaModel}
  *
  * <p>CreateWebCustomDomainInput</p>
@@ -118,7 +119,10 @@ public class CreateWebCustomDomainInput extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;

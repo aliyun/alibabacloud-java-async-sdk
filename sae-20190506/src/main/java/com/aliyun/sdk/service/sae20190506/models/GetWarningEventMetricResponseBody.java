@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWarningEventMetricResponseBody} extends {@link TeaModel}
  *
  * <p>GetWarningEventMetricResponseBody</p>
@@ -85,13 +86,16 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The following limits are imposed on the ID:
-         * <p>
+         * <p>The HTTP status code. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -99,7 +103,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The details of applications.
+         * <p>The details of applications.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -107,11 +111,14 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned. The following limits are imposed on the ID:
-         * <p>
+         * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   success: If the call is successful, **success** is returned.
-         * *   An error code: If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -119,7 +126,10 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -127,11 +137,14 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the list of applications was obtained. The following limits are imposed on the ID:
-         * <p>
+         * <p>Indicates whether the list of applications was obtained. The following limits are imposed on the ID:</p>
+         * <ul>
+         * <li><strong>true</strong>: The namespaces were obtained.</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: The namespaces were obtained.
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -144,6 +157,12 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetWarningEventMetricResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWarningEventMetricResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -207,7 +226,10 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             private Long warningCount; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -215,7 +237,10 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The application name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +248,10 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace ID.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -231,7 +259,10 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Warning events.
+             * <p>The number of Warning events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder warningCount(Long warningCount) {
                 this.warningCount = warningCount;

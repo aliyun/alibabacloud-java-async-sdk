@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecretResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSecretResponseBody</p>
@@ -109,13 +110,16 @@ public class DeleteSecretResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The response.
+         * <p>The response.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,14 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. Valid values:
-         * <p>
+         * <p>The error code returned. Valid values:</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
          * 
-         * *   The **ErrorCode** parameter is not returned if the request succeeds.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +150,14 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned. Valid values:
-         * <p>
+         * <p>The additional information that is returned. Valid values:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   success: If the call is successful, **success** is returned.
-         * *   An error code: If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +165,10 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +176,14 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Secret is successfully deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the Secret is successfully deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance was deleted.</li>
+         * <li><strong>false</strong>: The instance failed to be deleted.</li>
+         * </ul>
          * 
-         * *   **true**: The instance was deleted.
-         * *   **false**: The instance failed to be deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +191,10 @@ public class DeleteSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -188,6 +207,12 @@ public class DeleteSecretResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteSecretResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteSecretResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecretId")
         private Long secretId;
@@ -215,7 +240,10 @@ public class DeleteSecretResponseBody extends TeaModel {
             private Long secretId; 
 
             /**
-             * The ID of the deleted Secret.
+             * <p>The ID of the deleted Secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder secretId(Long secretId) {
                 this.secretId = secretId;

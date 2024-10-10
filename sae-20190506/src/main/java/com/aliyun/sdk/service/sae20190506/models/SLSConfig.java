@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SLSConfig} extends {@link TeaModel}
  *
  * <p>SLSConfig</p>
@@ -50,6 +51,12 @@ public class SLSConfig extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SLSConfig} extends {@link TeaModel}
+     *
+     * <p>SLSConfig</p>
+     */
     public static class CollectConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("logPath")
         private String logPath;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RescaleApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>RescaleApplicationResponseBody</p>
@@ -97,13 +98,16 @@ public class RescaleApplicationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. Take note of the following rules:
-         * <p>
+         * <p>The HTTP status code. Take note of the following rules:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -111,7 +115,7 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The response.
+         * <p>The response.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -119,11 +123,14 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed. Take note of the following rules:
-         * <p>
+         * <p>The error code returned if the request failed. Take note of the following rules:</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
          * 
-         * *   The **ErrorCode** parameter is not returned if the request succeeds.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -131,7 +138,10 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned for the operation.
+         * <p>The message returned for the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +149,10 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,11 +160,14 @@ public class RescaleApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the application is successfully scaled. Take note of the following rules:
-         * <p>
+         * <p>Indicates whether the application is successfully scaled. Take note of the following rules:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -164,6 +180,12 @@ public class RescaleApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RescaleApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RescaleApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
@@ -191,7 +213,10 @@ public class RescaleApplicationResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * The ID of the change order.
+             * <p>The ID of the change order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e09829f-4914-4612-bc88-6f52fd81****</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

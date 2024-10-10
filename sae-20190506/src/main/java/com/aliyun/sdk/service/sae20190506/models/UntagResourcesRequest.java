@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -112,7 +113,10 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * false
+         * <p>false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder deleteAll(Boolean deleteAll) {
             this.putQueryParameter("DeleteAll", deleteAll);
@@ -121,7 +125,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * cn-beijing
+         * <p>cn-beijing</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +138,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * \["d42921c4-5433-4abd-8075-0e536f8b\*\*\*\*"]
+         * <p>[&quot;d42921c4-5433-4abd-8075-0e536f8b****&quot;]</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;d42921c4-5433-4abd-8075-0e536f8b****&quot;]</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -139,7 +151,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * application
+         * <p>application</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +164,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * \["k1","k2"]
+         * <p>[&quot;k1&quot;,&quot;k2&quot;]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;k1&quot;,&quot;k2&quot;]</p>
          */
         public Builder tagKeys(String tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

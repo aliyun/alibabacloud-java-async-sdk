@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SuspendJobRequest} extends {@link RequestModel}
  *
  * <p>SuspendJobRequest</p>
@@ -69,7 +70,11 @@ public class SuspendJobRequest extends Request {
         } 
 
         /**
-         * The ID of the job template.
+         * <p>The ID of the job template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ee1a7a07-abcb-4652-a1d3-2d57f415****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +83,11 @@ public class SuspendJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to suspend the job template.
+         * <p>Specifies whether to suspend the job template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder suspend(Boolean suspend) {
             this.putQueryParameter("Suspend", suspend);

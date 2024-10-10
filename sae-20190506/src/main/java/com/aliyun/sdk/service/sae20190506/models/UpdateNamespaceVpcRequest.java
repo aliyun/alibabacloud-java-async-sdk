@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNamespaceVpcRequest} extends {@link RequestModel}
  *
  * <p>UpdateNamespaceVpcRequest</p>
@@ -91,7 +92,10 @@ public class UpdateNamespaceVpcRequest extends Request {
         }
 
         /**
-         * vpc-2ze0i263cnn311nvj\*\*\*\*
+         * <p>vpc-2ze0i263cnn311nvj****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -100,7 +104,11 @@ public class UpdateNamespaceVpcRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze0i263cnn311nvj****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

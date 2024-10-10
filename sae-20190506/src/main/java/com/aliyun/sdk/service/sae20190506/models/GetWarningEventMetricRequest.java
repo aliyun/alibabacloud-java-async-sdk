@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetWarningEventMetricRequest} extends {@link RequestModel}
  *
  * <p>GetWarningEventMetricRequest</p>
@@ -127,12 +128,15 @@ public class GetWarningEventMetricRequest extends Request {
         } 
 
         /**
-         * The SAE application type. Valid values:
-         * <p>
+         * <p>The SAE application type. Valid values:</p>
+         * <ul>
+         * <li><strong>micro_service</strong></li>
+         * <li><strong>web</strong></li>
+         * <li><strong>job</strong></li>
+         * </ul>
          * 
-         * *   **micro_service**
-         * *   **web**
-         * *   **job**
+         * <strong>example:</strong>
+         * <p>micro_service</p>
          */
         public Builder appSource(String appSource) {
             this.putQueryParameter("AppSource", appSource);
@@ -141,11 +145,14 @@ public class GetWarningEventMetricRequest extends Request {
         }
 
         /**
-         * The CPU allocation policy. Valid values:
-         * <p>
+         * <p>The CPU allocation policy. Valid values:</p>
+         * <ul>
+         * <li><strong>request</strong>: CPU cores are allocated only when a request is initiated.</li>
+         * <li><strong>always</strong>: Fixed CPU cores are always allocated.</li>
+         * </ul>
          * 
-         * *   **request**: CPU cores are allocated only when a request is initiated.
-         * *   **always**: Fixed CPU cores are always allocated.
+         * <strong>example:</strong>
+         * <p>always</p>
          */
         public Builder cpuStrategy(String cpuStrategy) {
             this.putQueryParameter("CpuStrategy", cpuStrategy);
@@ -154,7 +161,11 @@ public class GetWarningEventMetricRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * <p>The end of the time range to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1675824035951</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -163,7 +174,11 @@ public class GetWarningEventMetricRequest extends Request {
         }
 
         /**
-         * The number of entries to return. Valid values: 0 to 100.
+         * <p>The number of entries to return. Valid values: 0 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -172,7 +187,11 @@ public class GetWarningEventMetricRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -181,7 +200,11 @@ public class GetWarningEventMetricRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * <p>The beginning of the time range to query.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1675823135951</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

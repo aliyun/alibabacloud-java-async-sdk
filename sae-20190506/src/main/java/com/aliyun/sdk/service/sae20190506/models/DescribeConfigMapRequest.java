@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConfigMapRequest} extends {@link RequestModel}
  *
  * <p>DescribeConfigMapRequest</p>
@@ -54,7 +55,11 @@ public class DescribeConfigMapRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configMapId(Long configMapId) {
             this.putQueryParameter("ConfigMapId", configMapId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConfigMapRequest} extends {@link RequestModel}
  *
  * <p>DeleteConfigMapRequest</p>
@@ -54,7 +55,11 @@ public class DeleteConfigMapRequest extends Request {
         } 
 
         /**
-         * 1
+         * <p>1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configMapId(Long configMapId) {
             this.putQueryParameter("ConfigMapId", configMapId);

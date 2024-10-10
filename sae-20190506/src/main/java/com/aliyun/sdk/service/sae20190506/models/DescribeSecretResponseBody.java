@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecretResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecretResponseBody</p>
@@ -109,13 +110,16 @@ public class DescribeSecretResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The response.
+         * <p>The response.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,14 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. Valid values:
-         * <p>
+         * <p>The error code returned. Valid values:</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          * 
-         * *   The **ErrorCode** parameter is not returned if the request succeeds.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see **Error codes** in this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +150,14 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned. Valid values:
-         * <p>
+         * <p>The additional information that is returned. Valid values:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   success: If the call is successful, **success** is returned.
-         * *   An error code: If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +165,10 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +176,14 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the details of the Secret instance are successfully queried. Valid values:
-         * <p>
+         * <p>Indicates whether the details of the Secret instance are successfully queried. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The information was queried.</li>
+         * <li><strong>false</strong>: The image failed to be found.</li>
+         * </ul>
          * 
-         * *   **true**: The information was queried.
-         * *   **false**: The image failed to be found.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +191,10 @@ public class DescribeSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -188,6 +207,12 @@ public class DescribeSecretResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecretResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecretResponseBody</p>
+     */
     public static class RelateApps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
@@ -227,7 +252,10 @@ public class DescribeSecretResponseBody extends TeaModel {
             private String appName; 
 
             /**
-             * The application ID.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f16b4000-9058-4c22-a49d-49a28f0b****</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -235,7 +263,10 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -249,6 +280,12 @@ public class DescribeSecretResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecretResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecretResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -360,7 +397,10 @@ public class DescribeSecretResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The time when the task was created.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593746835111</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -368,7 +408,10 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * <p>The ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -376,7 +419,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The associated application.
+             * <p>The associated application.</p>
              */
             public Builder relateApps(java.util.List < RelateApps> relateApps) {
                 this.relateApps = relateApps;
@@ -384,7 +427,7 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * Secret key-value pair data.
+             * <p>Secret key-value pair data.</p>
              */
             public Builder secretData(java.util.Map < String, String > secretData) {
                 this.secretData = secretData;
@@ -392,7 +435,10 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Secret instance.
+             * <p>The ID of the Secret instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder secretId(Long secretId) {
                 this.secretId = secretId;
@@ -400,7 +446,10 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Secret instance.
+             * <p>The name of the Secret instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-auth</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -408,7 +457,10 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the Secret instance.
+             * <p>The type of the Secret instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kubernetes.io/dockerconfigjson</p>
              */
             public Builder secretType(String secretType) {
                 this.secretType = secretType;
@@ -416,7 +468,10 @@ public class DescribeSecretResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was updated.
+             * <p>The time when the task was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1593746835111</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

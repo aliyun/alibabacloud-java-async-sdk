@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationImageRequest} extends {@link RequestModel}
  *
  * <p>DescribeApplicationImageRequest</p>
@@ -69,7 +70,11 @@ public class DescribeApplicationImageRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +83,11 @@ public class DescribeApplicationImageRequest extends Request {
         }
 
         /**
-         * The URL of the image.
+         * <p>The URL of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/demo/demo:latest</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);

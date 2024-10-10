@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentsRequest} extends {@link RequestModel}
  *
  * <p>DescribeComponentsRequest</p>
@@ -68,7 +69,10 @@ public class DescribeComponentsRequest extends Request {
         } 
 
         /**
-         * TOMCAT
+         * <p>TOMCAT</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d700e680-aa4d-4ec1-afc2-6566b5ff****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -77,7 +81,11 @@ public class DescribeComponentsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TOMCAT</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

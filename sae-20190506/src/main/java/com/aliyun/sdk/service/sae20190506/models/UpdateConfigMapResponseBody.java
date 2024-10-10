@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateConfigMapResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateConfigMapResponseBody</p>
@@ -109,11 +110,14 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the ConfigMap instance was updated. Valid values:
-         * <p>
+         * <p>Indicates whether the ConfigMap instance was updated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance was updated.</li>
+         * <li><strong>false</strong>: The instance failed to be updated.</li>
+         * </ul>
          * 
-         * *   **true**: The instance was updated.
-         * *   **false**: The instance failed to be updated.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,7 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ConfigMap instance.
+         * <p>The ID of the ConfigMap instance.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,13 +133,13 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx:**: indicates that the call was successful.
-         * *   **3xx**: indicates that the call was redirected.
-         * *   **4xx**: indicates that the call failed.
-         * *   **5xx**: indicates that a server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx:</strong>: indicates that the call was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the call failed.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. The ID is used to query the details of a request.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +158,10 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information.
+         * <p>The returned information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +177,10 @@ public class UpdateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -180,6 +193,12 @@ public class UpdateConfigMapResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateConfigMapResponseBody} extends {@link TeaModel}
+     *
+     * <p>UpdateConfigMapResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigMapId")
         private String configMapId;
@@ -207,11 +226,14 @@ public class UpdateConfigMapResponseBody extends TeaModel {
             private String configMapId; 
 
             /**
-             * The returned error code. Valid values:
-             * <p>
+             * <p>The returned error code. Valid values:</p>
+             * <ul>
+             * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+             * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+             * </ul>
              * 
-             * *   If the call is successful, the **ErrorCode** parameter is not returned.
-             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configMapId(String configMapId) {
                 this.configMapId = configMapId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGreyTagRouteRequest} extends {@link RequestModel}
  *
  * <p>DeleteGreyTagRouteRequest</p>
@@ -54,7 +55,11 @@ public class DeleteGreyTagRouteRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder greyTagRouteId(Long greyTagRouteId) {
             this.putQueryParameter("GreyTagRouteId", greyTagRouteId);

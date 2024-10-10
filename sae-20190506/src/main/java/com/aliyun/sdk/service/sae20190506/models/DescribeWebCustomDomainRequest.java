@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebCustomDomainRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebCustomDomainRequest</p>
@@ -69,7 +70,7 @@ public class DescribeWebCustomDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("DomainName", domainName);
@@ -78,7 +79,10 @@ public class DescribeWebCustomDomainRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

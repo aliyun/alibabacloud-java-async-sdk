@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWebApplicationScalingConfigInput} extends {@link TeaModel}
  *
  * <p>UpdateWebApplicationScalingConfigInput</p>
@@ -51,7 +52,10 @@ public class UpdateWebApplicationScalingConfigInput extends TeaModel {
         private Long minimumInstanceCount; 
 
         /**
-         * MaximumInstanceCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maximumInstanceCount(Long maximumInstanceCount) {
             this.maximumInstanceCount = maximumInstanceCount;
@@ -59,7 +63,7 @@ public class UpdateWebApplicationScalingConfigInput extends TeaModel {
         }
 
         /**
-         * MinimumInstanceCount.
+         * <p>This parameter is required.</p>
          */
         public Builder minimumInstanceCount(Long minimumInstanceCount) {
             this.minimumInstanceCount = minimumInstanceCount;

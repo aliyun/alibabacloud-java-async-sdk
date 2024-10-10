@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSecretRequest} extends {@link RequestModel}
  *
  * <p>UpdateSecretRequest</p>
@@ -84,7 +85,10 @@ public class UpdateSecretRequest extends Request {
         } 
 
         /**
-         * NamespaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -93,7 +97,7 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * SecretData.
+         * <p>This parameter is required.</p>
          */
         public Builder secretData(SecretData secretData) {
             String secretDataShrink = shrink(secretData, "SecretData", "json");
@@ -103,7 +107,10 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * SecretId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder secretId(Long secretId) {
             this.putQueryParameter("SecretId", secretId);
@@ -118,6 +125,12 @@ public class UpdateSecretRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSecretRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSecretRequest</p>
+     */
     public static class SecretData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecretData")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -146,7 +159,7 @@ public class UpdateSecretRequest extends Request {
             private String secretData; 
 
             /**
-             * SecretData.
+             * <p>This parameter is required.</p>
              */
             public Builder secretData(String secretData) {
                 this.secretData = secretData;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindSlbResponseBody} extends {@link TeaModel}
  *
  * <p>BindSlbResponseBody</p>
@@ -109,13 +110,16 @@ public class BindSlbResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,11 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
-         * 
-         * *   The **ErrorCode** parameter is not returned when the request succeeds.
-         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+         * <p>The error code.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +158,10 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,11 +169,14 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the SLB instance was successfully associated with the application. Valid values:
-         * <p>
+         * <p>Indicates whether the SLB instance was successfully associated with the application. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The SLB instance was successfully associated with the application.</li>
+         * <li><strong>false</strong>: The SLB instance could not be associated with the application.</li>
+         * </ul>
          * 
-         * *   **true**: The SLB instance was successfully associated with the application.
-         * *   **false**: The SLB instance could not be associated with the application.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +184,10 @@ public class BindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -184,6 +200,12 @@ public class BindSlbResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BindSlbResponseBody} extends {@link TeaModel}
+     *
+     * <p>BindSlbResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
@@ -211,7 +233,10 @@ public class BindSlbResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * The ID of the change order. It can be used to query the task status.
+             * <p>The ID of the change order. It can be used to query the task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

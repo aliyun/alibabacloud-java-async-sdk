@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppStackTask} extends {@link TeaModel}
  *
  * <p>AppStackTask</p>
@@ -190,6 +191,12 @@ public class AppStackTask extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AppStackTask} extends {@link TeaModel}
+     *
+     * <p>AppStackTask</p>
+     */
     public static class Steps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;

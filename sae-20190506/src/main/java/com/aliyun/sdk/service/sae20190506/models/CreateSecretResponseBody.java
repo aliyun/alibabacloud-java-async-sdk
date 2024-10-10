@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecretResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSecretResponseBody</p>
@@ -170,6 +171,12 @@ public class CreateSecretResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSecretResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateSecretResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecretId")
         private Long secretId;

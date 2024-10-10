@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchStartApplicationsRequest} extends {@link RequestModel}
  *
  * <p>BatchStartApplicationsRequest</p>
@@ -82,11 +83,14 @@ public class BatchStartApplicationsRequest extends Request {
         } 
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li><strong>success</strong> is returned when the request succeeds.</li>
+         * <li>An error code is returned when the request fails.</li>
+         * </ul>
          * 
-         * *   **success** is returned when the request succeeds.
-         * *   An error code is returned when the request fails.
+         * <strong>example:</strong>
+         * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -95,7 +99,11 @@ public class BatchStartApplicationsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -104,7 +112,10 @@ public class BatchStartApplicationsRequest extends Request {
         }
 
         /**
-         * The application version.
+         * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);

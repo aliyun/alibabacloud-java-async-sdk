@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateWebApplicationInput} extends {@link TeaModel}
  *
  * <p>CreateWebApplicationInput</p>
@@ -100,7 +101,10 @@ public class CreateWebApplicationInput extends TeaModel {
         private WebTrafficConfig webTrafficConfig; 
 
         /**
-         * ApplicationName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-app</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;
@@ -116,7 +120,7 @@ public class CreateWebApplicationInput extends TeaModel {
         }
 
         /**
-         * RevisionConfig.
+         * <p>This parameter is required.</p>
          */
         public Builder revisionConfig(RevisionConfig revisionConfig) {
             this.revisionConfig = revisionConfig;

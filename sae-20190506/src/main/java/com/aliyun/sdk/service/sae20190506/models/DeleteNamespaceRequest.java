@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNamespaceRequest} extends {@link RequestModel}
  *
  * <p>DeleteNamespaceRequest</p>
@@ -76,7 +77,10 @@ public class DeleteNamespaceRequest extends Request {
         }
 
         /**
-         * cn-beijing:test
+         * <p>cn-beijing:test</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

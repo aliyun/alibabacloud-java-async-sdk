@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmPipelineBatchRequest} extends {@link RequestModel}
  *
  * <p>ConfirmPipelineBatchRequest</p>
@@ -69,7 +70,11 @@ public class ConfirmPipelineBatchRequest extends Request {
         } 
 
         /**
-         * true
+         * <p>true</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder confirm(Boolean confirm) {
             this.putQueryParameter("Confirm", confirm);
@@ -78,7 +83,11 @@ public class ConfirmPipelineBatchRequest extends Request {
         }
 
         /**
-         * e2e-vds-feh-\*\*\*
+         * <p>e2e-vds-feh-***</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2e-vds-feh-***</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WebApplication} extends {@link TeaModel}
  *
  * <p>WebApplication</p>
@@ -172,7 +173,7 @@ public class WebApplication extends TeaModel {
         private WebTrafficConfig webTrafficConfig; 
 
         /**
-         * ApplicationId.
+         * <p>This parameter is required.</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -180,7 +181,7 @@ public class WebApplication extends TeaModel {
         }
 
         /**
-         * ApplicationName.
+         * <p>This parameter is required.</p>
          */
         public Builder applicationName(String applicationName) {
             this.applicationName = applicationName;

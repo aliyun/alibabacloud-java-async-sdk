@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateGreyTagRouteResponseBody} extends {@link TeaModel}
  *
  * <p>CreateGreyTagRouteResponseBody</p>
@@ -109,11 +110,14 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the information of the change order was queried. Valid values:
-         * <p>
+         * <p>Indicates whether the information of the change order was queried. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The information was queried.</li>
+         * <li><strong>false</strong>: The information failed to be queried.</li>
+         * </ul>
          * 
-         * *   **true**: The information was queried.
-         * *   **false**: The information failed to be queried.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,7 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the canary release rule. The ID is globally unique.
+         * <p>The ID of the canary release rule. The ID is globally unique.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,13 +133,13 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +158,10 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information.
+         * <p>The returned information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D29CBD0-45D3-410B-9826-52F86F90****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +177,10 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the canary release rule.
+         * <p>The information about the canary release rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -180,6 +193,12 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateGreyTagRouteResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateGreyTagRouteResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GreyTagRouteId")
         private Long greyTagRouteId;
@@ -207,11 +226,14 @@ public class CreateGreyTagRouteResponseBody extends TeaModel {
             private Long greyTagRouteId; 
 
             /**
-             * The returned error code. Valid values:
-             * <p>
+             * <p>The returned error code. Valid values:</p>
+             * <ul>
+             * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+             * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+             * </ul>
              * 
-             * *   If the call is successful, the **ErrorCode** parameter is not returned.
-             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder greyTagRouteId(Long greyTagRouteId) {
                 this.greyTagRouteId = greyTagRouteId;

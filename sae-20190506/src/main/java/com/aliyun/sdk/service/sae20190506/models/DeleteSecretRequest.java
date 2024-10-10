@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecretRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecretRequest</p>
@@ -69,7 +70,11 @@ public class DeleteSecretRequest extends Request {
         } 
 
         /**
-         * The ID of the namespace in which the Secret resides. By default, the namespace ID is the same as the region ID.
+         * <p>The ID of the namespace in which the Secret resides. By default, the namespace ID is the same as the region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -78,7 +83,11 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The ID of the Secret to be deleted. You can call the [ListSecrets](~~466929~~) operation to view the Secret IDs.
+         * <p>The ID of the Secret to be deleted. You can call the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation to view the Secret IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder secretId(Long secretId) {
             this.putQueryParameter("SecretId", secretId);

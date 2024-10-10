@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PriceEstimateOutput} extends {@link TeaModel}
  *
  * <p>PriceEstimateOutput</p>
@@ -90,6 +91,12 @@ public class PriceEstimateOutput extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PriceEstimateOutput} extends {@link TeaModel}
+     *
+     * <p>PriceEstimateOutput</p>
+     */
     public static class Usages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Float amount;
@@ -171,6 +178,12 @@ public class PriceEstimateOutput extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PriceEstimateOutput} extends {@link TeaModel}
+     *
+     * <p>PriceEstimateOutput</p>
+     */
     public static class Apps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Feature")
         private PriceEstimateFeature feature;
@@ -252,6 +265,12 @@ public class PriceEstimateOutput extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PriceEstimateOutput} extends {@link TeaModel}
+     *
+     * <p>PriceEstimateOutput</p>
+     */
     public static class Steps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
@@ -373,6 +392,12 @@ public class PriceEstimateOutput extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link PriceEstimateOutput} extends {@link TeaModel}
+     *
+     * <p>PriceEstimateOutput</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Float amount;

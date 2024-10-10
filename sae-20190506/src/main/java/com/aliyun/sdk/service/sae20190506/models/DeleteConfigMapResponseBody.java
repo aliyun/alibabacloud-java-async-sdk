@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteConfigMapResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteConfigMapResponseBody</p>
@@ -109,13 +110,16 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the call was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the call was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the call failed.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: indicates that the call was successful.
-         * *   **3xx**: indicates that the call was redirected.
-         * *   **4xx**: indicates that the call failed.
-         * *   **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,11 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error code. Valid values:
-         * <p>
-         * 
-         * *   If the call is successful, the **ErrorCode** parameter is not returned.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+         * <p>The returned error code. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +147,14 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information. Valid values:
-         * <p>
+         * <p>The returned information. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   If the call is successful, **success** is returned.
-         * *   If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +162,10 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +173,14 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the ConfigMap instance was deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the ConfigMap instance was deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The instance was deleted.</li>
+         * <li><strong>false</strong>: The instance failed to be deleted.</li>
+         * </ul>
          * 
-         * *   **true**: The instance was deleted.
-         * *   **false**: The instance failed to be deleted.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +188,10 @@ public class DeleteConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. The ID is used to query the details of a request.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -188,6 +204,12 @@ public class DeleteConfigMapResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteConfigMapResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteConfigMapResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigMapId")
         private Long configMapId;
@@ -215,7 +237,10 @@ public class DeleteConfigMapResponseBody extends TeaModel {
             private Long configMapId; 
 
             /**
-             * The ID of the deleted ConfigMap instance.
+             * <p>The ID of the deleted ConfigMap instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;

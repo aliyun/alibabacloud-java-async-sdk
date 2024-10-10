@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListChangeOrdersRequest} extends {@link RequestModel}
  *
  * <p>ListChangeOrdersRequest</p>
@@ -124,7 +125,11 @@ public class ListChangeOrdersRequest extends Request {
         } 
 
         /**
-         * 1
+         * <p>1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>145341c-9708-4967-b3ec-24933767****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -133,7 +138,10 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder coStatus(String coStatus) {
             this.putQueryParameter("CoStatus", coStatus);
@@ -142,7 +150,10 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * 2
+         * <p>2</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CoCreateApp</p>
          */
         public Builder coType(String coType) {
             this.putQueryParameter("CoType", coType);
@@ -151,7 +162,10 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * 20
+         * <p>20</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -160,7 +174,10 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * CoCreateApp
+         * <p>CoCreateApp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -169,7 +186,10 @@ public class ListChangeOrdersRequest extends Request {
         }
 
         /**
-         * test
+         * <p>test</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

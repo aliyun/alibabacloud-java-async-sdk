@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePipelineRequest} extends {@link RequestModel}
  *
  * <p>DescribePipelineRequest</p>
@@ -54,7 +55,11 @@ public class DescribePipelineRequest extends Request {
         } 
 
         /**
-         * The ID of the batch. You can call the [DescribeChangeOrder](~~126617~~) operation to obtain the ID.
+         * <p>The ID of the batch. You can call the <a href="https://help.aliyun.com/document_detail/126617.html">DescribeChangeOrder</a> operation to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>917660ba-5092-44ca-b8e0-80012c96****</p>
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);

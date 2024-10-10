@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationImageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApplicationImageResponseBody</p>
@@ -109,13 +110,16 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the image of the application.
+         * <p>The information about the image of the application.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,11 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code. Valid values:
-         * <p>
-         * 
-         * *   If the call is successful, the **ErrorCode** parameter is not returned.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the **Error codes** section in this topic.
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +147,14 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. Valid values:
-         * <p>
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   success: If the call is successful, **success** is returned.
-         * *   An error code: If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +162,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +173,14 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the information about the image was obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the information about the image was obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The information was obtained.</li>
+         * <li><strong>false</strong>: The information failed to be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: The information was obtained.
-         * *   **false**: The information failed to be obtained.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +188,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -188,6 +204,12 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApplicationImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationImageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CrUrl")
         private String crUrl;
@@ -299,7 +321,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             private String repoType; 
 
             /**
-             * This parameter is reserved.
+             * <p>This parameter is reserved.</p>
              */
             public Builder crUrl(String crUrl) {
                 this.crUrl = crUrl;
@@ -307,7 +329,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is reserved.
+             * <p>This parameter is reserved.</p>
              */
             public Builder logo(String logo) {
                 this.logo = logo;
@@ -315,7 +337,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -323,7 +348,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the repository.
+             * <p>The name of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -331,7 +359,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace to which the image repository belongs.
+             * <p>The name of the namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -339,7 +370,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the repository. Only Container Registry is supported.
+             * <p>The type of the repository. Only Container Registry is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALI_HUB</p>
              */
             public Builder repoOriginType(String repoOriginType) {
                 this.repoOriginType = repoOriginType;
@@ -347,7 +381,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the image.
+             * <p>The tag of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest</p>
              */
             public Builder repoTag(String repoTag) {
                 this.repoTag = repoTag;
@@ -355,7 +392,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is reserved.
+             * <p>This parameter is reserved.</p>
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;

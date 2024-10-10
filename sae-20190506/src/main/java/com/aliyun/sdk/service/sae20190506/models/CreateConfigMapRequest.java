@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateConfigMapRequest} extends {@link RequestModel}
  *
  * <p>CreateConfigMapRequest</p>
@@ -83,12 +84,12 @@ public class CreateConfigMapRequest extends Request {
         } 
 
         /**
-         * The key-value pairs of the ConfigMap in the JSON format. Format:
-         * <p>
+         * <p>The key-value pairs of the ConfigMap in the JSON format. Format:</p>
+         * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
+         * <p>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage a Kubernetes ConfigMap</a>.</p>
          * 
-         * {"Data":"{"k1":"v1", "k2":"v2"}"}
-         * 
-         * k specifies a key and v specifies a value. For more information, see [Manage a Kubernetes ConfigMap](~~171326~~).
+         * <strong>example:</strong>
+         * <p>test-desc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -97,7 +98,11 @@ public class CreateConfigMapRequest extends Request {
         }
 
         /**
-         * The name of the ConfigMap. The name can contain digits, letters, and underscores (_). The name must start with a letter.
+         * <p>The name of the ConfigMap. The name can contain digits, letters, and underscores (_). The name must start with a letter.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -106,7 +111,11 @@ public class CreateConfigMapRequest extends Request {
         }
 
         /**
-         * The ID of the namespace to which the ConfigMap instance belongs.
+         * <p>The ID of the namespace to which the ConfigMap instance belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

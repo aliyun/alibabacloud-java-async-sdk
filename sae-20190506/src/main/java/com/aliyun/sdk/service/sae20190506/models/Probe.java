@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Probe} extends {@link TeaModel}
  *
  * <p>Probe</p>
@@ -130,6 +131,12 @@ public class Probe extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Probe} extends {@link TeaModel}
+     *
+     * <p>Probe</p>
+     */
     public static class HttpHeaders extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
@@ -191,6 +198,12 @@ public class Probe extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Probe} extends {@link TeaModel}
+     *
+     * <p>Probe</p>
+     */
     public static class HttpGet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("httpHeaders")
         private java.util.List < HttpHeaders> httpHeaders;
@@ -272,6 +285,12 @@ public class Probe extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Probe} extends {@link TeaModel}
+     *
+     * <p>Probe</p>
+     */
     public static class TcpSocket extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
@@ -313,6 +332,12 @@ public class Probe extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link Probe} extends {@link TeaModel}
+     *
+     * <p>Probe</p>
+     */
     public static class ProbeHandler extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("httpGet")
         private HttpGet httpGet;

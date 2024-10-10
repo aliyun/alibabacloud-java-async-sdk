@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppEventsRequest} extends {@link RequestModel}
  *
  * <p>ListAppEventsRequest</p>
@@ -152,7 +153,10 @@ public class ListAppEventsRequest extends Request {
         } 
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f7730764-d88f-4b9a-8d8e-cd8efbfe****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -161,7 +165,10 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * <p>The page number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -170,11 +177,14 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * The type of the event. Valid values:
-         * <p>
+         * <p>The type of the event. Valid values:</p>
+         * <ul>
+         * <li><strong>Warning</strong>: an alert.</li>
+         * <li><strong>Normal</strong>: a normal event.</li>
+         * </ul>
          * 
-         * *   **Warning**: an alert.
-         * *   **Normal**: a normal event.
+         * <strong>example:</strong>
+         * <p>Warning</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -183,7 +193,11 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * The namespace ID.
+         * <p>The namespace ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -192,14 +206,17 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * The type of the object. Valid values:
-         * <p>
+         * <p>The type of the object. Valid values:</p>
+         * <ul>
+         * <li><strong>Deployment</strong>: an application.</li>
+         * <li><strong>Pod</strong>: an application instance.</li>
+         * <li><strong>Service</strong>: a Server Load Balancer (SLB) instance.</li>
+         * <li><strong>HorizontalPodAutoscaler</strong>: an auto scaling policy.</li>
+         * <li><strong>CloneSet</strong>: an application.</li>
+         * </ul>
          * 
-         * *   **Deployment**: an application.
-         * *   **Pod**: an application instance.
-         * *   **Service**: a Server Load Balancer (SLB) instance.
-         * *   **HorizontalPodAutoscaler**: an auto scaling policy.
-         * *   **CloneSet**: an application.
+         * <strong>example:</strong>
+         * <p>Pod</p>
          */
         public Builder objectKind(String objectKind) {
             this.putQueryParameter("ObjectKind", objectKind);
@@ -208,7 +225,10 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * The name of the object. Fuzzy search by prefix is supported.
+         * <p>The name of the object. Fuzzy search by prefix is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-x****</p>
          */
         public Builder objectName(String objectName) {
             this.putQueryParameter("ObjectName", objectName);
@@ -217,7 +237,10 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 0 to 10000.
+         * <p>The number of entries to return on each page. Valid values: 0 to 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,7 +249,10 @@ public class ListAppEventsRequest extends Request {
         }
 
         /**
-         * The cause of the event. Fuzzy search by prefix is supported.
+         * <p>The cause of the event. Fuzzy search by prefix is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);

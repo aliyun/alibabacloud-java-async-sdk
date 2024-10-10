@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGreyTagRouteRequest} extends {@link RequestModel}
  *
  * <p>DescribeGreyTagRouteRequest</p>
@@ -54,7 +55,11 @@ public class DescribeGreyTagRouteRequest extends Request {
         } 
 
         /**
-         * The ID of the canary release rule.
+         * <p>The ID of the canary release rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder greyTagRouteId(Long greyTagRouteId) {
             this.putQueryParameter("GreyTagRouteId", greyTagRouteId);

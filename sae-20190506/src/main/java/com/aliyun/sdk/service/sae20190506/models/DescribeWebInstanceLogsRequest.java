@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebInstanceLogsRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebInstanceLogsRequest</p>
@@ -84,7 +85,10 @@ public class DescribeWebInstanceLogsRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7e41aff0-9eca-45c9-ac48-675e09******</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("ApplicationId", applicationId);
@@ -93,7 +97,10 @@ public class DescribeWebInstanceLogsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-667b71bc-185b1067-5d99255c3abd</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -102,7 +109,10 @@ public class DescribeWebInstanceLogsRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

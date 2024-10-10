@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link Submenu} extends {@link TeaModel}
  *
  * <p>Submenu</p>
@@ -110,6 +111,12 @@ public class Submenu extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Submenu} extends {@link TeaModel}
+     *
+     * <p>Submenu</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultSelected")
         private Boolean defaultSelected;

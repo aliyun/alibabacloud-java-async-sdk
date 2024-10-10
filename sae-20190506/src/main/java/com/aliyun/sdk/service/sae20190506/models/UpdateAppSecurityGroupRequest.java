@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAppSecurityGroupRequest} extends {@link RequestModel}
  *
  * <p>UpdateAppSecurityGroupRequest</p>
@@ -69,7 +70,11 @@ public class UpdateAppSecurityGroupRequest extends Request {
         } 
 
         /**
-         * sg-wz969ngg2e49q5i4\*\*\*\*
+         * <p>sg-wz969ngg2e49q5i4****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +83,11 @@ public class UpdateAppSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-wz969ngg2e49q5i4****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

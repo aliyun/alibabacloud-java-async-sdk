@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConfigurationPriceRequest} extends {@link RequestModel}
  *
  * <p>DescribeConfigurationPriceRequest</p>
@@ -83,7 +84,10 @@ public class DescribeConfigurationPriceRequest extends Request {
         } 
 
         /**
-         * Cpu.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder cpu(Integer cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -92,7 +96,10 @@ public class DescribeConfigurationPriceRequest extends Request {
         }
 
         /**
-         * Memory.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096</p>
          */
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);

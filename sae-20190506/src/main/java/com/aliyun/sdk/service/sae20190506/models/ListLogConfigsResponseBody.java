@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogConfigsResponseBody</p>
@@ -109,11 +110,14 @@ public class ListLogConfigsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the logging configurations of an application were obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the logging configurations of an application were obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates that the configurations were obtained.</li>
+         * <li><strong>false</strong>: indicates that the configurations could not be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: indicates that the configurations were obtained.
-         * *   **false**: indicates that the configurations could not be obtained.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of logging configurations.
+         * <p>The details of logging configurations.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,13 +133,13 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,11 +158,14 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li><strong>success</strong> is returned when the request succeeds.</li>
+         * <li>An error code is returned when the request fails.</li>
+         * </ul>
          * 
-         * *   **success** is returned when the request succeeds.
-         * *   An error code is returned when the request fails.
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,7 +181,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The logging configurations.
+         * <p>The logging configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac1d5e2c15671581252413581d****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -184,6 +197,12 @@ public class ListLogConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLogConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogConfigsResponseBody</p>
+     */
     public static class LogConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;
@@ -295,7 +314,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             private String storeType; 
 
             /**
-             * The path of logs.
+             * <p>The path of logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-1f240907a6faf58c653f09e81b7e****</p>
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -303,7 +325,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of logs.
+             * <p>The storage type of logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-29 17:18:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -311,7 +336,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore in Log Service.
+             * <p>The name of the Logstore in Log Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/logs/hsf/hsf.log</p>
              */
             public Builder logDir(String logDir) {
                 this.logDir = logDir;
@@ -319,7 +347,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file_log</p>
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -327,7 +358,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the returned page.
+             * <p>The number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -335,7 +369,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the configuration was created.
+             * <p>The time when the configuration was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-1f240907a6faf58c653f09e81b7e****</p>
              */
             public Builder slsLogStore(String slsLogStore) {
                 this.slsLogStore = slsLogStore;
@@ -343,7 +380,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the log. Set this value to **file_log**.
+             * <p>The type of the log. Set this value to <strong>file_log</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sae-56f77b65-788d-442a-9885-7f20d91f****</p>
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
@@ -351,7 +391,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Log Service project.
+             * <p>The ID of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls</p>
              */
             public Builder storeType(String storeType) {
                 this.storeType = storeType;
@@ -365,6 +408,12 @@ public class ListLogConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLogConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogConfigsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -428,7 +477,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The total number of returned entries.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -436,7 +488,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Log Service configuration.
+             * <p>The name of the Log Service configuration.</p>
              */
             public Builder logConfigs(java.util.List < LogConfigs> logConfigs) {
                 this.logConfigs = logConfigs;
@@ -444,11 +496,14 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
-             * <p>
+             * <p>The error code.</p>
+             * <ul>
+             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+             * </ul>
              * 
-             * *   The **ErrorCode** parameter is not returned when the request succeeds.
-             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -456,7 +511,10 @@ public class ListLogConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

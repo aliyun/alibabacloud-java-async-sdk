@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteJobRequest} extends {@link RequestModel}
  *
  * <p>DeleteJobRequest</p>
@@ -54,7 +55,11 @@ public class DeleteJobRequest extends Request {
         } 
 
         /**
-         * The ID of the job template that you want to delete.
+         * <p>The ID of the job template that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

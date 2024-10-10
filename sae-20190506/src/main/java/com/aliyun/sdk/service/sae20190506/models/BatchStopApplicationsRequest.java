@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchStopApplicationsRequest} extends {@link RequestModel}
  *
  * <p>BatchStopApplicationsRequest</p>
@@ -82,7 +83,10 @@ public class BatchStopApplicationsRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</p>
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);
@@ -91,7 +95,11 @@ public class BatchStopApplicationsRequest extends Request {
         }
 
         /**
-         * ebf491f0-c1a5-45e2-b2c4-710dbe2a\*\*\*\*,ebf491f0-c1a5-45e2-b2c4-71025e2a\*\*\*\*
+         * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****,ebf491f0-c1a5-45e2-b2c4-71025e2a****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -100,7 +108,10 @@ public class BatchStopApplicationsRequest extends Request {
         }
 
         /**
-         * The application version.
+         * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);

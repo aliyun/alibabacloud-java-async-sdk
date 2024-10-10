@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RescaleApplicationVerticallyRequest} extends {@link RequestModel}
  *
  * <p>RescaleApplicationVerticallyRequest</p>
@@ -126,7 +127,11 @@ public class RescaleApplicationVerticallyRequest extends Request {
         } 
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0099b7be-5f5b-4512-a7fc-56049ef1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -135,7 +140,11 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * The destination CPU specification. Unit: millicore.
+         * <p>The destination CPU specification. Unit: millicore.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder cpu(String cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -144,7 +153,11 @@ public class RescaleApplicationVerticallyRequest extends Request {
         }
 
         /**
-         * The destination memory size. Unit: MB.
+         * <p>The destination memory size. Unit: MB.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memory(String memory) {
             this.putQueryParameter("Memory", memory);

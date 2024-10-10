@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIngressesRequest} extends {@link RequestModel}
  *
  * <p>ListIngressesRequest</p>
@@ -68,7 +69,10 @@ public class ListIngressesRequest extends Request {
         } 
 
         /**
-         * The list of routing rules.
+         * <p>The list of routing rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bbf3a590-6d13-46fe-8ca9-c947a20b****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -77,7 +81,11 @@ public class ListIngressesRequest extends Request {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

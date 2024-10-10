@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespaceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNamespaceResponseBody</p>
@@ -109,13 +110,16 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the namespace.
+         * <p>The information about the namespace.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,14 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. Take note of the following rules:
-         * <p>
+         * <p>The error code returned. Take note of the following rules:</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+         * </ul>
          * 
-         * *   The **ErrorCode** parameter is not returned if the request succeeds.
-         * *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +150,14 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned. Valid values:
-         * <p>
+         * <p>The additional information that is returned. Valid values:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   success: If the call is successful, **success** is returned.
-         * *   An error code: If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +165,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +176,14 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the information about the namespace was queried successfully. Valid values:
-         * <p>
+         * <p>Indicates whether the information about the namespace was queried successfully. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The information was queried.</li>
+         * <li><strong>false</strong>: The image failed to be found.</li>
+         * </ul>
          * 
-         * *   **true**: The information was queried.
-         * *   **false**: The image failed to be found.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +191,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a981dd515966966104121683d****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -188,6 +207,12 @@ public class DescribeNamespaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNamespaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNamespaceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableMicroRegistration")
         private Boolean enableMicroRegistration;
@@ -275,11 +300,14 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * Indicates whether the SAE built-in registry is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the SAE built-in registry is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableMicroRegistration(Boolean enableMicroRegistration) {
                 this.enableMicroRegistration = enableMicroRegistration;
@@ -287,7 +315,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The short ID of the namespace.
+             * <p>The short ID of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nameSpaceShortId(String nameSpaceShortId) {
                 this.nameSpaceShortId = nameSpaceShortId;
@@ -295,7 +326,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the namespace.
+             * <p>The description of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder namespaceDescription(String namespaceDescription) {
                 this.namespaceDescription = namespaceDescription;
@@ -303,7 +337,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace. The information about the default namespace cannot be queried or modified. The default namespace cannot be deleted.
+             * <p>The ID of the namespace. The information about the default namespace cannot be queried or modified. The default namespace cannot be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing:test</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -311,7 +348,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -319,7 +359,10 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

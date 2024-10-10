@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeJobRequest} extends {@link RequestModel}
  *
  * <p>DescribeJobRequest</p>
@@ -68,7 +69,11 @@ public class DescribeJobRequest extends Request {
         } 
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -77,7 +82,10 @@ public class DescribeJobRequest extends Request {
         }
 
         /**
-         * The job ID.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event-b798157b-40a2-4388-b578-71fb897103**-**</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

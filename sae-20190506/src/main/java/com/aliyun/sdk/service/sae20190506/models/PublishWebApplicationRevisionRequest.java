@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishWebApplicationRevisionRequest} extends {@link RequestModel}
  *
  * <p>PublishWebApplicationRevisionRequest</p>
@@ -84,7 +85,10 @@ public class PublishWebApplicationRevisionRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7e41aff0-9eca-45c9-ac48-675e09******</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("ApplicationId", applicationId);
@@ -93,7 +97,10 @@ public class PublishWebApplicationRevisionRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -102,7 +109,7 @@ public class PublishWebApplicationRevisionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>This parameter is required.</p>
          */
         public Builder body(PublishWebApplicationRevisionInput body) {
             this.putBodyParameter("body", body);

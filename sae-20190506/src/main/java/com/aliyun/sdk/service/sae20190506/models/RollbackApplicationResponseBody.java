@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RollbackApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>RollbackApplicationResponseBody</p>
@@ -109,13 +110,16 @@ public class RollbackApplicationResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Take note of the following rules:
-         * <p>
+         * <p>The HTTP status code. Take note of the following rules:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class RollbackApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The response.
+         * <p>The response.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,14 @@ public class RollbackApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed. Take note of the following rules:
-         * <p>
+         * <p>The error code returned if the request failed. Take note of the following rules:</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+         * </ul>
          * 
-         * *   The **ErrorCode** parameter is not returned if the request succeeds.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +150,10 @@ public class RollbackApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned for the operation.
+         * <p>The message returned for the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,10 @@ public class RollbackApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,11 +172,14 @@ public class RollbackApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the application is successfully rolled back. Take note of the following rules:
-         * <p>
+         * <p>Indicates whether the application is successfully rolled back. Take note of the following rules:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +187,10 @@ public class RollbackApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -184,6 +203,12 @@ public class RollbackApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RollbackApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>RollbackApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
@@ -223,7 +248,10 @@ public class RollbackApplicationResponseBody extends TeaModel {
             private Boolean isNeedApproval; 
 
             /**
-             * The ID of the change process.
+             * <p>The ID of the change process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;
@@ -231,11 +259,14 @@ public class RollbackApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether approval is required when a RAM user performs release. Take note of the following rules:
-             * <p>
+             * <p>Specifies whether approval is required when a RAM user performs release. Take note of the following rules:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isNeedApproval(Boolean isNeedApproval) {
                 this.isNeedApproval = isNeedApproval;

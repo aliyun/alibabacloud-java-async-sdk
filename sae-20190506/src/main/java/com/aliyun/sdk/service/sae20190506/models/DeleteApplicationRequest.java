@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteApplicationRequest} extends {@link RequestModel}
  *
  * <p>DeleteApplicationRequest</p>
@@ -54,7 +55,11 @@ public class DeleteApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>017f39b8-dfa4-4e16-a84b-1dcee4b1****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

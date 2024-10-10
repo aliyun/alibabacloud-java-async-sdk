@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetScaleAppMetricRequest} extends {@link RequestModel}
  *
  * <p>GetScaleAppMetricRequest</p>
@@ -96,12 +97,15 @@ public class GetScaleAppMetricRequest extends Request {
         } 
 
         /**
-         * The SAE application type. Valid values:
-         * <p>
+         * <p>The SAE application type. Valid values:</p>
+         * <ul>
+         * <li><strong>micro_service</strong></li>
+         * <li><strong>web</strong></li>
+         * <li><strong>job</strong></li>
+         * </ul>
          * 
-         * *   **micro_service**
-         * *   **web**
-         * *   **job**
+         * <strong>example:</strong>
+         * <p>micro_service</p>
          */
         public Builder appSource(String appSource) {
             this.putQueryParameter("AppSource", appSource);
@@ -110,11 +114,14 @@ public class GetScaleAppMetricRequest extends Request {
         }
 
         /**
-         * The CPU allocation policy. Valid values:
-         * <p>
+         * <p>The CPU allocation policy. Valid values:</p>
+         * <ul>
+         * <li><strong>request</strong>: CPU cores are allocated only when a request is initiated.</li>
+         * <li><strong>always</strong>: Fixed CPU cores are always allocated.</li>
+         * </ul>
          * 
-         * *   **request**: CPU cores are allocated only when a request is initiated.
-         * *   **always**: Fixed CPU cores are always allocated.
+         * <strong>example:</strong>
+         * <p>always</p>
          */
         public Builder cpuStrategy(String cpuStrategy) {
             this.putQueryParameter("CpuStrategy", cpuStrategy);
@@ -123,7 +130,11 @@ public class GetScaleAppMetricRequest extends Request {
         }
 
         /**
-         * The number of entries to return. Valid values: 0 to 100.
+         * <p>The number of entries to return. Valid values: 0 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -132,7 +143,10 @@ public class GetScaleAppMetricRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

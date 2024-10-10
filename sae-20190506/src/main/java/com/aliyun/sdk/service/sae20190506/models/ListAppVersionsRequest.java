@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAppVersionsRequest} extends {@link RequestModel}
  *
  * <p>ListAppVersionsRequest</p>
@@ -54,7 +55,11 @@ public class ListAppVersionsRequest extends Request {
         } 
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

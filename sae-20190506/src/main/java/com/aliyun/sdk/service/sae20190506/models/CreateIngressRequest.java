@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIngressRequest} extends {@link RequestModel}
  *
  * <p>CreateIngressRequest</p>
@@ -244,7 +245,10 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * DefaultRule.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036****&quot;,&quot;containerPort&quot;:8080}</p>
          */
         public Builder defaultRule(String defaultRule) {
             this.putQueryParameter("DefaultRule", defaultRule);
@@ -271,7 +275,10 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * ListenerPort.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -298,7 +305,10 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:sae-test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -316,7 +326,10 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * Rules.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;appId&quot;:&quot;395b60e4-0550-458d-9c54-a265d036****&quot;,&quot;containerPort&quot;:8080,&quot;domain&quot;:&quot;<a href="http://www.sae.site%22,%22path%22:%22/path1%22%7D,%7B%22appId%22:%22666403ce-d25b-47cf-87fe-497565d2****%22,%22containerPort%22:8080,%22domain%22:%22sae.site%22,%22path%22:%22/path2%22%7D%5D">www.sae.site&quot;,&quot;path&quot;:&quot;/path1&quot;},{&quot;appId&quot;:&quot;666403ce-d25b-47cf-87fe-497565d2****&quot;,&quot;containerPort&quot;:8080,&quot;domain&quot;:&quot;sae.site&quot;,&quot;path&quot;:&quot;/path2&quot;}]</a></p>
          */
         public Builder rules(String rules) {
             this.putBodyParameter("Rules", rules);
@@ -334,7 +347,10 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
-         * SlbId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-uf6hucc7inlqrtcq5****</p>
          */
         public Builder slbId(String slbId) {
             this.putQueryParameter("SlbId", slbId);

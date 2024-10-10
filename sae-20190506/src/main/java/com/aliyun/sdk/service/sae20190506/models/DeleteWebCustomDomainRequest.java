@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteWebCustomDomainRequest} extends {@link RequestModel}
  *
  * <p>DeleteWebCustomDomainRequest</p>
@@ -69,7 +70,10 @@ public class DeleteWebCustomDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin.pupumall.com</p>
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("DomainName", domainName);
@@ -78,7 +82,10 @@ public class DeleteWebCustomDomainRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

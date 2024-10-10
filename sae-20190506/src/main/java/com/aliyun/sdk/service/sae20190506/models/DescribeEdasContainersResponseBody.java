@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEdasContainersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEdasContainersResponseBody</p>
@@ -109,13 +110,16 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * The list of components.
+         * <p>The list of components.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -131,11 +135,11 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
-         * 
-         * *   The **ErrorCode** parameter is not returned when the request succeeds.
-         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+         * <p>The error code.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +158,10 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,11 +169,14 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the list of container components of a microservice application was obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the list of container components of a microservice application was obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates that the list was obtained.</li>
+         * <li><strong>false</strong>: indicates that the list could not be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: indicates that the list was obtained.
-         * *   **false**: indicates that the list could not be obtained.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -171,7 +184,10 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It is used to query the details of a request.
+         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -184,6 +200,12 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEdasContainersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEdasContainersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
@@ -223,11 +245,14 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
             private String edasContainerVersion; 
 
             /**
-             * Indicates whether the component is disabled. Valid values:
-             * <p>
+             * <p>Indicates whether the component is disabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: indicates that the component is disabled.</li>
+             * <li><strong>false</strong>: indicates that the component is not disabled.</li>
+             * </ul>
              * 
-             * *   **true**: indicates that the component is disabled.
-             * *   **false**: indicates that the component is not disabled.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -235,7 +260,10 @@ public class DescribeEdasContainersResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the container, such as Ali-Tomcat, in which a High-speed Service Framework (HSF) application runs.
+             * <p>The version of the container, such as Ali-Tomcat, in which a High-speed Service Framework (HSF) application runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.5.3</p>
              */
             public Builder edasContainerVersion(String edasContainerVersion) {
                 this.edasContainerVersion = edasContainerVersion;

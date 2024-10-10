@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchStopApplicationsResponseBody} extends {@link TeaModel}
  *
  * <p>BatchStopApplicationsResponseBody</p>
@@ -109,13 +110,16 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Take note of the following rules:
-         * <p>
+         * <p>The HTTP status code. Take note of the following rules:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * - **2xx**: The call was successful.
-         * - **3xx**: The call was redirected.
-         * - **4xx**: The call failed.
-         * - **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,7 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the change order.
+         * <p>The ID of the change order.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +135,14 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed. Take note of the following rules:
-         * <p>
+         * <p>The error code returned if the request failed. Take note of the following rules:</p>
+         * <ul>
+         * <li>The ErrorCode parameter is not returned if the request succeeds.</li>
+         * <li>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</li>
+         * </ul>
          * 
-         * - The ErrorCode parameter is not returned if the request succeeds.
-         * - If the call fails, the ErrorCode parameter is returned. For more information, see the "Error codes" section of this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +150,10 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,11 +161,14 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li><strong>success</strong> is returned when the request succeeds.</li>
+         * <li>An error code is returned when the request fails.</li>
+         * </ul>
          * 
-         * *   **success** is returned when the request succeeds.
-         * *   An error code is returned when the request fails.
+         * <strong>example:</strong>
+         * <p>7BD8F4C7-D84C-4D46-9885-8212997E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +176,14 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the application is created. Valid values
-         * <p>
+         * <p>Indicates whether the application is created. Valid values</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * - **true**
-         * - **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +191,10 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc3b6e215637275918588187d****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -188,6 +207,12 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchStopApplicationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchStopApplicationsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
@@ -215,11 +240,14 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * The error code.
-             * <p>
+             * <p>The error code.</p>
+             * <ul>
+             * <li>If the request is successful, this parameter is not returned.****</li>
+             * <li>This parameter is returned only if the request failed.**** For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</li>
+             * </ul>
              * 
-             * *   If the request is successful, this parameter is not returned.****
-             * *   This parameter is returned only if the request failed.**** For more information, see the "**Error codes**" section in this topic.
+             * <strong>example:</strong>
+             * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

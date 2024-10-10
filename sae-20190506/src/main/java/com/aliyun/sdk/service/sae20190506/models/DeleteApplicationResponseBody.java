@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteApplicationResponseBody</p>
@@ -109,11 +110,14 @@ public class DeleteApplicationResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the application is deleted. Valid values:
-         * <p>
+         * <p>Indicates whether the application is deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the change order that is used to query the task execution status.
+         * <p>The ID of the change order that is used to query the task execution status.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,13 +133,13 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: The request is successful.
-         * *   **3xx**: A redirection message is returned.
-         * *   **4xx**: The request is invalid.
-         * *   **5xx**: A server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The request is successful.</li>
+         * <li><strong>3xx</strong>: A redirection message is returned.</li>
+         * <li><strong>4xx</strong>: The request is invalid.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query details of the request.
+         * <p>The trace ID that is used to query details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,11 +158,14 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li>If the request is successful, <strong>success</strong> is returned.</li>
+         * <li>If an error occurred, the error code is returned.</li>
+         * </ul>
          * 
-         * *   If the request is successful, **success** is returned.
-         * *   If an error occurred, the error code is returned.
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,7 +181,10 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * <p>The returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -184,6 +197,12 @@ public class DeleteApplicationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DeleteApplicationResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
@@ -211,11 +230,14 @@ public class DeleteApplicationResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * The error code that is returned if the request fails.
-             * <p>
+             * <p>The error code that is returned if the request fails.</p>
+             * <ul>
+             * <li>If the request is successful, this parameter is not returned.****</li>
+             * <li>This parameter is returned only if the request failed.**** For more information about the values of this parameter, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+             * </ul>
              * 
-             * *   If the request is successful, this parameter is not returned.****
-             * *   This parameter is returned only if the request failed.**** For more information about the values of this parameter, see the "**Error codes**" section of this topic.
+             * <strong>example:</strong>
+             * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

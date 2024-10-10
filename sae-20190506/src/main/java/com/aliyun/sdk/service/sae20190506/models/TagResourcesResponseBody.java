@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>TagResourcesResponseBody</p>
@@ -109,11 +110,14 @@ public class TagResourcesResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether tags were added to the specified resources successfully. Valid values:
-         * <p>
+         * <p>Indicates whether tags were added to the specified resources successfully. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates that tags were added to the specified resources successfully.</li>
+         * <li><strong>false</strong>: indicates that tags could not be added to the specified resources.</li>
+         * </ul>
          * 
-         * *   **true**: indicates that tags were added to the specified resources successfully.
-         * *   **false**: indicates that tags could not be added to the specified resources.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,11 +125,14 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
-         * <p>
+         * <p>The error code.</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          * 
-         * *   The **ErrorCode** parameter is not returned when the request succeeds.
-         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -133,13 +140,13 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -147,7 +154,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +165,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,7 +184,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates that the operation was successful.
+         * <p>Indicates that the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

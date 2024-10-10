@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNamespaceRequest} extends {@link RequestModel}
  *
  * <p>CreateNamespaceRequest</p>
@@ -119,7 +120,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nameSpaceShortId(String nameSpaceShortId) {
             this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
@@ -128,7 +132,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The message returned for the operation.
+         * <p>The message returned for the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder namespaceDescription(String namespaceDescription) {
             this.putQueryParameter("NamespaceDescription", namespaceDescription);
@@ -137,7 +144,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -146,7 +156,11 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

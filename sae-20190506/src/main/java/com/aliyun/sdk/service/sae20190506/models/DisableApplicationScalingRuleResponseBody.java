@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableApplicationScalingRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DisableApplicationScalingRuleResponseBody</p>
@@ -121,7 +122,10 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. The ID is used to query the details of a request.
+         * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

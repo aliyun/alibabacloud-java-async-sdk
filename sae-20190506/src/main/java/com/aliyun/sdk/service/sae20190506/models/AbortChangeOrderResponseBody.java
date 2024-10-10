@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AbortChangeOrderResponseBody} extends {@link TeaModel}
  *
  * <p>AbortChangeOrderResponseBody</p>
@@ -109,11 +110,14 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the change order was terminated. Valid values:
-         * <p>
+         * <p>Indicates whether the change order was terminated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The change order was terminated.</li>
+         * <li><strong>false</strong>: The change order could not be terminated.</li>
+         * </ul>
          * 
-         * *   **true**: The change order was terminated.
-         * *   **false**: The change order could not be terminated.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,7 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the change order.
+         * <p>The ID of the change order.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,13 +133,13 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace.
+         * <p>The ID of the trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +158,10 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +177,10 @@ public class AbortChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -180,6 +193,12 @@ public class AbortChangeOrderResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AbortChangeOrderResponseBody} extends {@link TeaModel}
+     *
+     * <p>AbortChangeOrderResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChangeOrderId")
         private String changeOrderId;
@@ -207,11 +226,14 @@ public class AbortChangeOrderResponseBody extends TeaModel {
             private String changeOrderId; 
 
             /**
-             * The error code.
-             * <p>
+             * <p>The error code.</p>
+             * <ul>
+             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+             * </ul>
              * 
-             * *   The **ErrorCode** parameter is not returned when the request succeeds.
-             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+             * <strong>example:</strong>
+             * <p>be2e1c76-682b-4897-98d3-1d8d6478****</p>
              */
             public Builder changeOrderId(String changeOrderId) {
                 this.changeOrderId = changeOrderId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListIngressesResponseBody} extends {@link TeaModel}
  *
  * <p>ListIngressesResponseBody</p>
@@ -117,7 +118,7 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * The port specified for the SLB listener.
+         * <p>The port specified for the SLB listener.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -133,7 +134,10 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the namespace.
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +145,10 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the SLB instance.
+         * <p>The ID of the SLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +164,10 @@ public class ListIngressesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the routing rule.
+         * <p>The name of the routing rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -170,6 +180,12 @@ public class ListIngressesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIngressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIngressesResponseBody</p>
+     */
     public static class IngressList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
@@ -353,11 +369,14 @@ public class ListIngressesResponseBody extends TeaModel {
             private String slbType; 
 
             /**
-             * The error code. 
-             * <p>
+             * <p>The error code. </p>
+             * <ul>
+             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+             * </ul>
              * 
-             * - The **ErrorCode** parameter is not returned when the request succeeds.
-             * - The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+             * <strong>example:</strong>
+             * <p>13624*<strong><strong>73809_16f8e549a20_1175189789_12</strong></strong>3210</p>
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -373,7 +392,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the routing rule.
+             * <p>The ID of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -381,11 +403,14 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the list of routing rules was obtained. Valid values:
-             * <p>
+             * <p>Indicates whether the list of routing rules was obtained. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: indicates that the list was obtained.</li>
+             * <li><strong>false</strong>: indicates that the list could not be obtained.</li>
+             * </ul>
              * 
-             * *   **true**: indicates that the list was obtained.
-             * *   **false**: indicates that the list could not be obtained.
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -393,11 +418,14 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the SLB instance based on the processing capabilities. Valid values:
-             * <p>
+             * <p>The type of the SLB instance based on the processing capabilities. Valid values:</p>
+             * <ul>
+             * <li><strong>clb</strong>: the Classic Load Balancer (CLB) instance.</li>
+             * <li><strong>alb</strong>: the Application Load Balancer (ALB) instance.</li>
+             * </ul>
              * 
-             * *   **clb**: the Classic Load Balancer (CLB) instance.
-             * *   **alb**: the Application Load Balancer (ALB) instance.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder listenerPort(String listenerPort) {
                 this.listenerPort = listenerPort;
@@ -445,13 +473,16 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code. Valid values:
-             * <p>
+             * <p>The HTTP status code. Valid values:</p>
+             * <ul>
+             * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+             * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+             * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+             * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+             * </ul>
              * 
-             * *   **2xx**: indicates that the request was successful.
-             * *   **3xx**: indicates that the request was redirected.
-             * *   **4xx**: indicates that the request was invalid.
-             * *   **5xx**: indicates that a server error occurred.
+             * <strong>example:</strong>
+             * <p>lb-uf6jt0nu4z6ior943****-80-f5****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -459,7 +490,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the routing rule.
+             * <p>The name of the routing rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -467,7 +501,10 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-uf62****6d13tq2u5</p>
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -475,11 +512,14 @@ public class ListIngressesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol used to forward requests. Valid values:
-             * <p>
+             * <p>The protocol used to forward requests. Valid values:</p>
+             * <ul>
+             * <li><strong>HTTP</strong>: used when the application needs to identify the transmitted data.</li>
+             * <li><strong>HTTPS</strong>: used when the application requires encrypted data transmission.</li>
+             * </ul>
              * 
-             * *   **HTTP**: used when the application needs to identify the transmitted data.
-             * *   **HTTPS**: used when the application requires encrypted data transmission.
+             * <strong>example:</strong>
+             * <p>internet</p>
              */
             public Builder slbType(String slbType) {
                 this.slbType = slbType;
@@ -493,6 +533,12 @@ public class ListIngressesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListIngressesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIngressesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IngressList")
         private java.util.List < IngressList> ingressList;
@@ -520,11 +566,11 @@ public class ListIngressesResponseBody extends TeaModel {
             private java.util.List < IngressList> ingressList; 
 
             /**
-             * The type of the SLB instance based on the IP address. Valid values:
-             * <p>
-             * 
-             * *   **internet**: the Internet-facing SLB instance.
-             * *   **intranet**: the internal-facing SLB instance.
+             * <p>The type of the SLB instance based on the IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>internet</strong>: the Internet-facing SLB instance.</li>
+             * <li><strong>intranet</strong>: the internal-facing SLB instance.</li>
+             * </ul>
              */
             public Builder ingressList(java.util.List < IngressList> ingressList) {
                 this.ingressList = ingressList;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppStackInstance} extends {@link TeaModel}
  *
  * <p>AppStackInstance</p>
@@ -190,6 +191,12 @@ public class AppStackInstance extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AppStackInstance} extends {@link TeaModel}
+     *
+     * <p>AppStackInstance</p>
+     */
     public static class Endpoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
@@ -271,6 +278,12 @@ public class AppStackInstance extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AppStackInstance} extends {@link TeaModel}
+     *
+     * <p>AppStackInstance</p>
+     */
     public static class Parameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNamespaceListRequest} extends {@link RequestModel}
  *
  * <p>DescribeNamespaceListRequest</p>
@@ -67,11 +68,14 @@ public class DescribeNamespaceListRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return custom namespaces. Valid values:
-         * <p>
+         * <p>Specifies whether to return custom namespaces. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The system returns custom namespaces.</li>
+         * <li><strong>false</strong>: The system does not return custom namespaces.</li>
+         * </ul>
          * 
-         * *   **true**: The system returns custom namespaces.
-         * *   **false**: The system does not return custom namespaces.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder containCustom(Boolean containCustom) {
             this.putQueryParameter("ContainCustom", containCustom);
@@ -80,11 +84,14 @@ public class DescribeNamespaceListRequest extends Request {
         }
 
         /**
-         * Specifies whether to exclude hybrid cloud namespaces from the result. Valid values:
-         * <p>
+         * <p>Specifies whether to exclude hybrid cloud namespaces from the result. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The system excludes hybrid cloud namespaces from the result.</li>
+         * <li><strong>false</strong>: The system does not exclude hybrid cloud namespaces from the result.</li>
+         * </ul>
          * 
-         * - **true**: The system excludes hybrid cloud namespaces from the result.
-         * - **false**: The system does not exclude hybrid cloud namespaces from the result.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hybridCloudExclude(Boolean hybridCloudExclude) {
             this.putQueryParameter("HybridCloudExclude", hybridCloudExclude);

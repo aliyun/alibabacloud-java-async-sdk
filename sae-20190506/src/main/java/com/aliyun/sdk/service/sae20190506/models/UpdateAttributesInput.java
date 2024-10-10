@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAttributesInput} extends {@link TeaModel}
  *
  * <p>UpdateAttributesInput</p>

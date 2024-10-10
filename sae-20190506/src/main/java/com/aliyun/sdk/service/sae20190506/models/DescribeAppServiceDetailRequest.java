@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAppServiceDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeAppServiceDetailRequest</p>
@@ -138,7 +139,11 @@ public class DescribeAppServiceDetailRequest extends Request {
         } 
 
         /**
-         * 6dcc8c9e-d3da-478a-a066-86dcf820\*\*\*\*
+         * <p>6dcc8c9e-d3da-478a-a066-86dcf820****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6dcc8c9e-d3da-478a-a066-86dcf820****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -165,7 +170,10 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * springCloud
+         * <p>springCloud</p>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
          */
         public Builder serviceGroup(String serviceGroup) {
             this.putQueryParameter("ServiceGroup", serviceGroup);
@@ -174,7 +182,10 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * edas.service.provider
+         * <p>edas.service.provider</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas.service.provider</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -183,7 +194,10 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * springCloud
+         * <p>springCloud</p>
+         * 
+         * <strong>example:</strong>
+         * <p>springCloud</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -192,7 +206,10 @@ public class DescribeAppServiceDetailRequest extends Request {
         }
 
         /**
-         * 1.0.0
+         * <p>1.0.0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

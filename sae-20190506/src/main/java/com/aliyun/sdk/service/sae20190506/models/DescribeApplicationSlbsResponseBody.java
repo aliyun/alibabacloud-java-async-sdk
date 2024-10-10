@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationSlbsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApplicationSlbsResponseBody</p>
@@ -109,11 +110,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the information about the SLB instances that are associated with an application was obtained successfully. Valid values:
-         * <p>
+         * <p>Indicates whether the information about the SLB instances that are associated with an application was obtained successfully. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates that the information was obtained successfully.</li>
+         * <li><strong>false</strong>: indicates that the information failed to be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: indicates that the information was obtained successfully.
-         * *   **false**: indicates that the information failed to be obtained.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * Configurations of internal-facing SLB instances.
+         * <p>Configurations of internal-facing SLB instances.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,13 +133,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * <p>The ID of the trace. It can be used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,11 +158,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
-         * <p>
+         * <p>The returned message.</p>
+         * <ul>
+         * <li><strong>success</strong> is returned when the request succeeds.</li>
+         * <li>An error code is returned when the request fails.</li>
+         * </ul>
          * 
-         * *   **success** is returned when the request succeeds.
-         * *   An error code is returned when the request fails.
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,7 +181,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -184,6 +197,12 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeApplicationSlbsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationSlbsResponseBody</p>
+     */
     public static class Internet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cookie")
         private String cookie;
@@ -331,7 +350,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The supported protocol.
+             * <p>The supported protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
              */
             public Builder httpsCertId(String httpsCertId) {
                 this.httpsCertId = httpsCertId;
@@ -339,7 +361,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the internal-facing SLB instance.
+             * <p>The ID of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -347,7 +372,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The container port.
+             * <p>The container port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -371,7 +399,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The port specified for the SLB listener.
+             * <p>The port specified for the SLB listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -385,6 +416,12 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApplicationSlbsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationSlbsResponseBody</p>
+     */
     public static class Intranet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cookie")
         private String cookie;
@@ -532,7 +569,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The supported protocol.
+             * <p>The supported protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
              */
             public Builder httpsCertId(String httpsCertId) {
                 this.httpsCertId = httpsCertId;
@@ -540,7 +580,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the Internet-facing SLB instance.
+             * <p>The IP address of the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -548,7 +591,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The container port.
+             * <p>The container port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -572,7 +618,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The port specified for the SLB listener.
+             * <p>The port specified for the SLB listener.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;
@@ -586,6 +635,12 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeApplicationSlbsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeApplicationSlbsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Internet")
         private java.util.List < Internet> internet;
@@ -721,7 +776,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             private String intranetSlbId; 
 
             /**
-             * The ID of the SSL certificate issued by Alibaba Cloud.
+             * <p>The ID of the SSL certificate issued by Alibaba Cloud.</p>
              */
             public Builder internet(java.util.List < Internet> internet) {
                 this.internet = internet;
@@ -729,7 +784,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Internet-facing SLB instance.
+             * <p>The ID of the Internet-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><code>59.74.**.**</code></p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -753,7 +811,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * Configurations of Internet-facing SLB instances.
+             * <p>Configurations of Internet-facing SLB instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-uf6xc7wybefehnv45****</p>
              */
             public Builder internetSlbId(String internetSlbId) {
                 this.internetSlbId = internetSlbId;
@@ -761,7 +822,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SSL certificate issued by Alibaba Cloud.
+             * <p>The ID of the SSL certificate issued by Alibaba Cloud.</p>
              */
             public Builder intranet(java.util.List < Intranet> intranet) {
                 this.intranet = intranet;
@@ -769,11 +830,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
-             * <p>
+             * <p>The error code.</p>
+             * <ul>
+             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+             * </ul>
              * 
-             * *   The **ErrorCode** parameter is not returned when the request succeeds.
-             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+             * <strong>example:</strong>
+             * <p>192.168.0.0</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -797,7 +861,10 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the internal-facing SLB instance.
+             * <p>The IP address of the internal-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-uf6xc7wybefehnv45****</p>
              */
             public Builder intranetSlbId(String intranetSlbId) {
                 this.intranetSlbId = intranetSlbId;

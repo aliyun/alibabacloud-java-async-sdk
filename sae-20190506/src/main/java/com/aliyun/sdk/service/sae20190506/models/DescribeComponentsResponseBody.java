@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeComponentsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeComponentsResponseBody</p>
@@ -109,11 +110,14 @@ public class DescribeComponentsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the component version was obtained. Valid values:
-         * <p>
+         * <p>Indicates whether the component version was obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: indicates that the component version was obtained.</li>
+         * <li><strong>false</strong>: indicates that the component version could not be obtained.</li>
+         * </ul>
          * 
-         * *   **true**: indicates that the component version was obtained.
-         * *   **false**: indicates that the component version could not be obtained.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +125,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The component type.
+         * <p>The component type.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -129,13 +133,13 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+         * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+         * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+         * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+         * </ul>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +147,10 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It is used to query the details of a request.
+         * <p>The ID of the trace. It is used to query the details of a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +158,10 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +177,10 @@ public class DescribeComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the component.
+         * <p>The details of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a98a02315955564772843261e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -180,6 +193,12 @@ public class DescribeComponentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeComponentsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentDescription")
         private String componentDescription;
@@ -243,11 +262,14 @@ public class DescribeComponentsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether the component is expired. Valid values:
-             * <p>
+             * <p>Indicates whether the component is expired. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The component is expired.</li>
+             * <li><strong>false</strong>: The component is not expired.</li>
+             * </ul>
              * 
-             * *   **true**: The component is expired.
-             * *   **false**: The component is not expired.
+             * <strong>example:</strong>
+             * <p>Open JDK 8</p>
              */
             public Builder componentDescription(String componentDescription) {
                 this.componentDescription = componentDescription;
@@ -255,7 +277,10 @@ public class DescribeComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the component.
+             * <p>The description of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open JDK 8</p>
              */
             public Builder componentKey(String componentKey) {
                 this.componentKey = componentKey;
@@ -263,11 +288,14 @@ public class DescribeComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
-             * <p>
+             * <p>The error code.</p>
+             * <ul>
+             * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
+             * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+             * </ul>
              * 
-             * *   The **ErrorCode** parameter is not returned when the request succeeds.
-             * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -275,7 +303,10 @@ public class DescribeComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the component.
+             * <p>The ID of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JDK</p>
              */
             public Builder type(String type) {
                 this.type = type;

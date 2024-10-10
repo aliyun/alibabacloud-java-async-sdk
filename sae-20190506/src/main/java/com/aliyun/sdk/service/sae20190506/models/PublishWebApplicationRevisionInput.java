@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublishWebApplicationRevisionInput} extends {@link TeaModel}
  *
  * <p>PublishWebApplicationRevisionInput</p>
@@ -75,7 +76,7 @@ public class PublishWebApplicationRevisionInput extends TeaModel {
         private Boolean takeEffect; 
 
         /**
-         * Containers.
+         * <p>This parameter is required.</p>
          */
         public Builder containers(java.util.List < Container > containers) {
             this.containers = containers;

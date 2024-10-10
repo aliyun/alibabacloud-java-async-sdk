@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WebAclEntryConfig} extends {@link TeaModel}
  *
  * <p>WebAclEntryConfig</p>
@@ -38,7 +39,10 @@ public class WebAclEntryConfig extends TeaModel {
         private String entry; 
 
         /**
-         * Entry.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.3.4/32</p>
          */
         public Builder entry(String entry) {
             this.entry = entry;

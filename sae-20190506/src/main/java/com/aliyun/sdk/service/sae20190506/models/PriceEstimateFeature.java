@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PriceEstimateFeature} extends {@link TeaModel}
  *
  * <p>PriceEstimateFeature</p>
@@ -247,7 +248,10 @@ public class PriceEstimateFeature extends TeaModel {
         private String regionId; 
 
         /**
-         * AppType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Web/MicroService</p>
          */
         public Builder appType(String appType) {
             this.appType = appType;
@@ -255,7 +259,10 @@ public class PriceEstimateFeature extends TeaModel {
         }
 
         /**
-         * CpuCore.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpuCore(Float cpuCore) {
             this.cpuCore = cpuCore;
@@ -263,7 +270,10 @@ public class PriceEstimateFeature extends TeaModel {
         }
 
         /**
-         * CpuStrategy.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request/Always</p>
          */
         public Builder cpuStrategy(String cpuStrategy) {
             this.cpuStrategy = cpuStrategy;
@@ -271,7 +281,10 @@ public class PriceEstimateFeature extends TeaModel {
         }
 
         /**
-         * EnvType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test/Production</p>
          */
         public Builder envType(String envType) {
             this.envType = envType;
@@ -351,7 +364,10 @@ public class PriceEstimateFeature extends TeaModel {
         }
 
         /**
-         * MemoryGiB.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder memoryGiB(Float memoryGiB) {
             this.memoryGiB = memoryGiB;
@@ -383,7 +399,10 @@ public class PriceEstimateFeature extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;

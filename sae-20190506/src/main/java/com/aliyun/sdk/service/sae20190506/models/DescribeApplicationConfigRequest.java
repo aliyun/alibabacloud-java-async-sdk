@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeApplicationConfigRequest</p>
@@ -68,7 +69,11 @@ public class DescribeApplicationConfigRequest extends Request {
         } 
 
         /**
-         * 7171a6ca-d1cd-4928-8642-7d5cfe69\*\*\*\*
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -77,7 +82,10 @@ public class DescribeApplicationConfigRequest extends Request {
         }
 
         /**
-         * 0026ff7f-2b57-4127-bdd0-9bf202bb\*\*\*\*
+         * <p>0026ff7f-2b57-4127-bdd0-9bf202bb****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0026ff7f-2b57-4127-bdd0-9bf202bb****</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

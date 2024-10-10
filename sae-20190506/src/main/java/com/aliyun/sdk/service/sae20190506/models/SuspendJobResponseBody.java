@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SuspendJobResponseBody} extends {@link TeaModel}
  *
  * <p>SuspendJobResponseBody</p>
@@ -109,13 +110,16 @@ public class SuspendJobResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
+         * <p>The HTTP status code. Valid values:</p>
+         * <ul>
+         * <li><strong>2xx</strong>: The call was successful.</li>
+         * <li><strong>3xx</strong>: The call was redirected.</li>
+         * <li><strong>4xx</strong>: The call failed.</li>
+         * <li><strong>5xx</strong>: A server error occurred.</li>
+         * </ul>
          * 
-         * *   **2xx**: The call was successful.
-         * *   **3xx**: The call was redirected.
-         * *   **4xx**: The call failed.
-         * *   **5xx**: A server error occurred.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +127,10 @@ public class SuspendJobResponseBody extends TeaModel {
         }
 
         /**
-         * Whether the execution is successful.
+         * <p>Whether the execution is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{success: true}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -131,11 +138,14 @@ public class SuspendJobResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. Valid values:
-         * <p>
+         * <p>The error code returned. Valid values:</p>
+         * <ul>
+         * <li>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</li>
+         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * </ul>
          * 
-         * *   The **ErrorCode** parameter is not returned if the request succeeds.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see **Error codes** in this topic.
+         * <strong>example:</strong>
+         * <p>Null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +153,14 @@ public class SuspendJobResponseBody extends TeaModel {
         }
 
         /**
-         * The additional information that is returned. Valid values:
-         * <p>
+         * <p>The additional information that is returned. Valid values:</p>
+         * <ul>
+         * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+         * <li>An error code: If the call fails, an error code is returned.</li>
+         * </ul>
          * 
-         * *   success: If the call is successful, **success** is returned.
-         * *   An error code: If the call fails, an error code is returned.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +168,10 @@ public class SuspendJobResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67DD9A98-9CCC-5BE8-8C9E-B45E72F4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +179,14 @@ public class SuspendJobResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the job was executed. Valid values:
-         * <p>
+         * <p>Indicates whether the job was executed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The job was executed.</li>
+         * <li><strong>false</strong>: The job failed to be executed.</li>
+         * </ul>
          * 
-         * *   **true**: The job was executed.
-         * *   **false**: The job failed to be executed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +194,10 @@ public class SuspendJobResponseBody extends TeaModel {
         }
 
         /**
-         * The trace ID that is used to query the details of the request.
+         * <p>The trace ID that is used to query the details of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b87b7e716575071334387401e****</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

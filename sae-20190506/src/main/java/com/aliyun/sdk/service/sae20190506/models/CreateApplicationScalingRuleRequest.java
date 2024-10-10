@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationScalingRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationScalingRuleRequest</p>
@@ -168,7 +169,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -222,7 +226,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * ScalingRuleName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timer-0800-2100</p>
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);
@@ -240,7 +247,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * ScalingRuleType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timing</p>
          */
         public Builder scalingRuleType(String scalingRuleType) {
             this.putQueryParameter("ScalingRuleType", scalingRuleType);

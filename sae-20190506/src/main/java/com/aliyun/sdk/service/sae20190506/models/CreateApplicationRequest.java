@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationRequest</p>
@@ -925,7 +926,10 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * acs:ram::123456789012\*\*\*\*:role/adminrole
+         * <p>acs:ram::123456789012****:role/adminrole</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:role/adminrole</p>
          */
         public Builder acrAssumeRoleArn(String acrAssumeRoleArn) {
             this.putQueryParameter("AcrAssumeRoleArn", acrAssumeRoleArn);
@@ -934,7 +938,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * cri-xxxxxx
+         * <p>cri-xxxxxx</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xxxxxx</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.putBodyParameter("AcrInstanceId", acrInstanceId);
@@ -943,7 +950,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * This is a test description.
+         * <p>This is a test description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test description.</p>
          */
         public Builder appDescription(String appDescription) {
             this.putQueryParameter("AppDescription", appDescription);
@@ -952,7 +962,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * test
+         * <p>test</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -970,7 +984,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * true
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder associateEip(Boolean associateEip) {
             this.putBodyParameter("AssociateEip", associateEip);
@@ -979,7 +996,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * true
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoConfig(Boolean autoConfig) {
             this.putQueryParameter("AutoConfig", autoConfig);
@@ -997,7 +1017,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * sleep
+         * <p>sleep</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -1006,7 +1029,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1d
+         * <p>1d</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;a&quot;,&quot;b&quot;]</p>
          */
         public Builder commandArgs(String commandArgs) {
             this.putQueryParameter("CommandArgs", commandArgs);
@@ -1015,7 +1041,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"configMapId":16,"key":"test","mountPath":"/tmp"}]
+         * <p>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;configMapId&quot;:16,&quot;key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
          */
         public Builder configMapMountDesc(String configMapMountDesc) {
             this.putBodyParameter("ConfigMapMountDesc", configMapMountDesc);
@@ -1024,7 +1053,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1000
+         * <p>1000</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder cpu(Integer cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -1033,7 +1065,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"hostName":"samplehost","ip":"127.0.0.1"}]
+         * <p>[{&quot;hostName&quot;:&quot;samplehost&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;hostName&quot;:&quot;samplehost&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;}]</p>
          */
         public Builder customHostAlias(String customHostAlias) {
             this.putQueryParameter("CustomHostAlias", customHostAlias);
@@ -1042,7 +1077,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * true
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deploy(Boolean deploy) {
             this.putQueryParameter("Deploy", deploy);
@@ -1060,7 +1098,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 3.5.3
+         * <p>3.5.3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.5.3</p>
          */
         public Builder edasContainerVersion(String edasContainerVersion) {
             this.putQueryParameter("EdasContainerVersion", edasContainerVersion);
@@ -1087,7 +1128,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"name":"envtmp","value":"0"}]
+         * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;envtmp&quot;,&quot;value&quot;:&quot;0&quot;}]</p>
          */
         public Builder envs(String envs) {
             this.putQueryParameter("Envs", envs);
@@ -1105,7 +1149,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1
+         * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -1114,7 +1161,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * custom-args
+         * <p>custom-args</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom-args</p>
          */
         public Builder jarStartArgs(String jarStartArgs) {
             this.putQueryParameter("JarStartArgs", jarStartArgs);
@@ -1123,7 +1173,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \-Xms4G -Xmx4G
+         * <p>-Xms4G -Xmx4G</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-Xms4G -Xmx4G</p>
          */
         public Builder jarStartOptions(String jarStartOptions) {
             this.putQueryParameter("JarStartOptions", jarStartOptions);
@@ -1132,7 +1185,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Open JDK 8
+         * <p>Open JDK 8</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open JDK 8</p>
          */
         public Builder jdk(String jdk) {
             this.putQueryParameter("Jdk", jdk);
@@ -1150,7 +1206,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
          */
         public Builder liveness(String liveness) {
             this.putQueryParameter("Liveness", liveness);
@@ -1159,7 +1218,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1024
+         * <p>1024</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
@@ -1186,7 +1248,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{mountPath: "/tmp", nasPath: "/"}]
+         * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
          */
         public Builder mountDesc(String mountDesc) {
             this.putQueryParameter("MountDesc", mountDesc);
@@ -1195,7 +1260,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * example.com
+         * <p>example.com</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder mountHost(String mountHost) {
             this.putQueryParameter("MountHost", mountHost);
@@ -1204,7 +1272,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * cn-beijing:test
+         * <p>cn-beijing:test</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing:test</p>
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -1222,7 +1293,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * KSAK\*\*\*\*
+         * <p>KSAK****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KSAK****</p>
          */
         public Builder nasId(String nasId) {
             this.putQueryParameter("NasId", nasId);
@@ -1231,7 +1305,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * xxxxxx
+         * <p>xxxxxx</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder ossAkId(String ossAkId) {
             this.putBodyParameter("OssAkId", ossAkId);
@@ -1240,7 +1317,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * xxxxxx
+         * <p>xxxxxx</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder ossAkSecret(String ossAkSecret) {
             this.putBodyParameter("OssAkSecret", ossAkSecret);
@@ -1249,7 +1329,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"bucketName": "oss-bucket", "bucketPath": "data/user.data", "mountPath": "/usr/data/user.data", "readOnly": true}]
+         * <p>[{&quot;bucketName&quot;: &quot;oss-bucket&quot;, &quot;bucketPath&quot;: &quot;data/user.data&quot;, &quot;mountPath&quot;: &quot;/usr/data/user.data&quot;, &quot;readOnly&quot;: true}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;bucketName&quot;: &quot;oss-bucket&quot;, &quot;bucketPath&quot;: &quot;data/user.data&quot;, &quot;mountPath&quot;: &quot;/usr/data/user.data&quot;, &quot;readOnly&quot;: true}]</p>
          */
         public Builder ossMountDescs(String ossMountDescs) {
             this.putBodyParameter("OssMountDescs", ossMountDescs);
@@ -1258,7 +1341,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * FatJar
+         * <p>FatJar</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FatJar</p>
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -1267,7 +1354,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * http://myoss.oss-cn-\*\*\*\*.aliyuncs.com/my-buc/2019-06-30/\*\*\*\*.jar
+         * <p><a href="http://myoss.oss-cn-%5C*%5C*%5C*%5C*.aliyuncs.com/my-buc/2019-06-30/%5C*%5C*%5C*%5C*.jar">http://myoss.oss-cn-\*\*\*\*.aliyuncs.com/my-buc/2019-06-30/\*\*\*\*.jar</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar</a></p>
          */
         public Builder packageUrl(String packageUrl) {
             this.putQueryParameter("PackageUrl", packageUrl);
@@ -1276,7 +1366,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1.0.0
+         * <p>1.0.0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder packageVersion(String packageVersion) {
             this.putQueryParameter("PackageVersion", packageVersion);
@@ -1294,7 +1387,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * /usr/local/etc/php/conf.d/arms.ini
+         * <p>/usr/local/etc/php/conf.d/arms.ini</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/etc/php/conf.d/arms.ini</p>
          */
         public Builder phpArmsConfigLocation(String phpArmsConfigLocation) {
             this.putQueryParameter("PhpArmsConfigLocation", phpArmsConfigLocation);
@@ -1303,7 +1399,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * k1=v1
+         * <p>k1=v1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1=v1</p>
          */
         public Builder phpConfig(String phpConfig) {
             this.putBodyParameter("PhpConfig", phpConfig);
@@ -1312,7 +1411,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * /usr/local/etc/php/php.ini
+         * <p>/usr/local/etc/php/php.ini</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/etc/php/php.ini</p>
          */
         public Builder phpConfigLocation(String phpConfigLocation) {
             this.putQueryParameter("PhpConfigLocation", phpConfigLocation);
@@ -1321,7 +1423,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"exec":{"command":\["cat","/etc/group"]}}
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
          */
         public Builder postStart(String postStart) {
             this.putQueryParameter("PostStart", postStart);
@@ -1330,7 +1435,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"exec":{"command":\["cat","/etc/group"]}}
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
          */
         public Builder preStop(String preStop) {
             this.putQueryParameter("PreStop", preStop);
@@ -1375,7 +1483,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"exec":{"command":\["sh","-c","cat /home/admin/start.sh"]},"initialDelaySeconds":30,"periodSeconds":30,"timeoutSeconds":2}
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
          */
         public Builder readiness(String readiness) {
             this.putQueryParameter("Readiness", readiness);
@@ -1384,7 +1495,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 1
+         * <p>1</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder replicas(Integer replicas) {
             this.putQueryParameter("Replicas", replicas);
@@ -1402,7 +1517,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * sg-wz969ngg2e49q5i4\*\*\*\*
+         * <p>sg-wz969ngg2e49q5i4****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-wz969ngg2e49q5i4****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1420,7 +1538,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * \[{"logDir":"","logType":"stdout"},{"logDir":"/tmp/a.log"}]
+         * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
          */
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
@@ -1429,7 +1550,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * 30
+         * <p>30</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
             this.putQueryParameter("TerminationGracePeriodSeconds", terminationGracePeriodSeconds);
@@ -1438,7 +1562,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Asia/Shanghai
+         * <p>Asia/Shanghai</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timezone(String timezone) {
             this.putQueryParameter("Timezone", timezone);
@@ -1447,7 +1574,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * {"port":8080,"contextPath":"/","maxThreads":400,"uriEncoding":"ISO-8859-1","useBodyEncodingForUri":true}
+         * <p>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;port&quot;:8080,&quot;contextPath&quot;:&quot;/&quot;,&quot;maxThreads&quot;:400,&quot;uriEncoding&quot;:&quot;ISO-8859-1&quot;,&quot;useBodyEncodingForUri&quot;:true}</p>
          */
         public Builder tomcatConfig(String tomcatConfig) {
             this.putQueryParameter("TomcatConfig", tomcatConfig);
@@ -1456,7 +1586,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * vsw-bp12mw1f8k3jgygk9\*\*\*\*
+         * <p>vsw-bp12mw1f8k3jgygk9****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp12mw1f8k3jgygk9****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1465,7 +1598,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * vpc-bp1aevy8sofi8mh1q\*\*\*\*
+         * <p>vpc-bp1aevy8sofi8mh1q****</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1aevy8sofi8mh1q****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1474,7 +1610,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * CATALINA_OPTS=\\"$CATALINA_OPTS $Options\\" catalina.sh run
+         * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CATALINA_OPTS=&quot;$CATALINA_OPTS $Options&quot; catalina.sh run</p>
          */
         public Builder warStartOptions(String warStartOptions) {
             this.putQueryParameter("WarStartOptions", warStartOptions);
@@ -1483,7 +1622,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * apache-tomcat-7.0.91
+         * <p>apache-tomcat-7.0.91</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apache-tomcat-7.0.91</p>
          */
         public Builder webContainer(String webContainer) {
             this.putQueryParameter("WebContainer", webContainer);
