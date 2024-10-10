@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFoCreatedAppsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFoCreatedAppsResponseBody</p>
@@ -73,7 +74,10 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about disaster recovery plans.
+         * <p>The information about disaster recovery plans.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.
+         * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cannot find region according to your domain.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40F63F07-3AB6-53B3-8825-0580C130E3EA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +120,12 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFoCreatedAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFoCreatedAppsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
@@ -173,7 +189,10 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 应用ID
+             * <p>应用ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JIX9NEZUALGS46UI</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -181,7 +200,10 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of an error report.
+             * <p>The URL of an error report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://api.aliyun.com/troubleshoot?q=ServiceUnavailable&product=BPStudio&requestId=4CDA03A3-C652-1408-8ABD-7E652A7CBFB6">https://api.aliyun.com/troubleshoot?q=ServiceUnavailable&amp;product=BPStudio&amp;requestId=4CDA03A3-C652-1408-8ABD-7E652A7CBFB6</a></p>
              */
             public Builder reportUrl(String reportUrl) {
                 this.reportUrl = reportUrl;
@@ -189,7 +211,11 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the disaster recovery plan.
+             * <p>The status of the disaster recovery plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployed_Success
+             * Destroyed_Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -197,7 +223,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The title.
+             * <p>The title.</p>
              */
             public Builder title(String title) {
                 this.title = title;

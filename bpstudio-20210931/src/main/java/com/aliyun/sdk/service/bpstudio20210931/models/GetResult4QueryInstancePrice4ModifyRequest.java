@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResult4QueryInstancePrice4ModifyRequest} extends {@link RequestModel}
  *
  * <p>GetResult4QueryInstancePrice4ModifyRequest</p>
@@ -77,7 +78,10 @@ public class GetResult4QueryInstancePrice4ModifyRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58d5d8c5b5489150417a7cd6caa614bb</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

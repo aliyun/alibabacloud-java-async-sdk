@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteOperationSyncRequest} extends {@link RequestModel}
  *
  * <p>ExecuteOperationSyncRequest</p>
@@ -153,7 +154,10 @@ public class ExecuteOperationSyncRequest extends Request {
         }
 
         /**
-         * Operation.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rename</p>
          */
         public Builder operation(String operation) {
             this.putBodyParameter("Operation", operation);
@@ -171,7 +175,10 @@ public class ExecuteOperationSyncRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dds</p>
          */
         public Builder serviceType(String serviceType) {
             this.putBodyParameter("ServiceType", serviceType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationRequest</p>
@@ -153,7 +154,10 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder areaId(String areaId) {
             this.putBodyParameter("AreaId", areaId);
@@ -162,7 +166,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600765710019</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -171,7 +178,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The parameters that are used to configure the application you want to create. For example, enableMonitor specifies whether to automatically create a CloudMonitor task for the application, and enableReport specifies whether to generate reports.
+         * <p>The parameters that are used to configure the application you want to create. For example, enableMonitor specifies whether to automatically create a CloudMonitor task for the application, and enableReport specifies whether to generate reports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;enableMonitor&quot;:&quot;0&quot;, &quot;enableReport&quot;:&quot;1&quot;}</p>
          */
         public Builder configuration(java.util.Map < String, String > configuration) {
             String configurationShrink = shrink(configuration, "Configuration", "json");
@@ -181,7 +191,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The instances in which you want to create the application. You can create applications in an existing virtual private cloud (VPC).
+         * <p>The instances in which you want to create the application. You can create applications in an existing virtual private cloud (VPC).</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
@@ -191,11 +201,15 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The name of the application.
-         * <p>
+         * <p>The name of the application.</p>
+         * <ul>
+         * <li>The application name must be unique. You can call the <a href="https://www.alibabacloud.com/help/en/bp-studio/latest/api-bpstudio-2021-09-31-listapplication">ListApplication</a> operation to query the existing applications.</li>
+         * <li>The application name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http:// or https://</code>. The name can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   The application name must be unique. You can call the [ListApplication](https://www.alibabacloud.com/help/en/bp-studio/latest/api-bpstudio-2021-09-31-listapplication) operation to query the existing applications.
-         * *   The application name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http:// or https://`. The name can contain letters, digits, underscores (\_), and hyphens (-).
+         * <strong>example:</strong>
+         * <p>cadt-application</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -204,7 +218,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the application you want to create belongs.
+         * <p>The ID of the resource group to which the application you want to create belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyjt3c5om3hi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -213,7 +230,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the template.
+         * <p>The ID of the template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0KSHPM6SJU03TNZP</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -222,7 +243,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.
+         * <p>The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;variable1&quot;:&quot;1&quot;}</p>
          */
         public Builder variables(java.util.Map < String, ? > variables) {
             String variablesShrink = shrink(variables, "Variables", "json");
@@ -238,6 +262,12 @@ public class CreateApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationRequest</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -289,7 +319,10 @@ public class CreateApplicationRequest extends Request {
             private String nodeType; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1q56trhtaq40vlq5ojm</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -297,7 +330,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * The name of the instance.
+             * <p>The name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -305,7 +341,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * The type of the instance.
+             * <p>The type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

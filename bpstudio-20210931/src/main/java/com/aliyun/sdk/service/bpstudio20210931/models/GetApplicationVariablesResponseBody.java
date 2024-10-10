@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationVariablesResponseBody} extends {@link TeaModel}
  *
  * <p>GetApplicationVariablesResponseBody</p>
@@ -97,7 +98,10 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7036DDBE-0ABA-52D7-A39D-75E511970F07</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetApplicationVariablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationVariablesResponseBody</p>
+     */
     public static class VariableList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
@@ -171,6 +181,12 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetApplicationVariablesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationVariablesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;

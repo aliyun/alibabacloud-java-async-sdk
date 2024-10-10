@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationVariables4FailResponse} extends {@link TeaModel}
  *
  * <p>GetApplicationVariables4FailResponse</p>

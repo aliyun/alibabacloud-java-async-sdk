@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValuateTemplateRequest} extends {@link RequestModel}
  *
  * <p>ValuateTemplateRequest</p>
@@ -125,7 +126,10 @@ public class ValuateTemplateRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder areaId(String areaId) {
             this.putBodyParameter("AreaId", areaId);
@@ -134,7 +138,11 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600765710019</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -143,7 +151,7 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * The instances to be replaced.
+         * <p>The instances to be replaced.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
@@ -153,7 +161,10 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the application belongs.
+         * <p>The ID of the resource group to which the application belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyjt3c5om3fi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -162,7 +173,11 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * The template ID.
+         * <p>The template ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0KSHPM6SJU03TNZP</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -171,7 +186,7 @@ public class ValuateTemplateRequest extends Request {
         }
 
         /**
-         * The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.
+         * <p>The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.</p>
          */
         public Builder variables(java.util.Map < String, String > variables) {
             String variablesShrink = shrink(variables, "Variables", "json");
@@ -187,6 +202,12 @@ public class ValuateTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ValuateTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ValuateTemplateRequest</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -238,7 +259,10 @@ public class ValuateTemplateRequest extends Request {
             private String nodeType; 
 
             /**
-             * The instance ID.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1q56trhtaq40vlq5oj</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -246,7 +270,10 @@ public class ValuateTemplateRequest extends Request {
             }
 
             /**
-             * The name of the application instance that is displayed on the diagram.
+             * <p>The name of the application instance that is displayed on the diagram.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -254,7 +281,10 @@ public class ValuateTemplateRequest extends Request {
             }
 
             /**
-             * The instance type.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

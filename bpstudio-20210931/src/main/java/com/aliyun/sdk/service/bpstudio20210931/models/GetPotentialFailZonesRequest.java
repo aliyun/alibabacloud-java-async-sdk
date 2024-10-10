@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPotentialFailZonesRequest} extends {@link RequestModel}
  *
  * <p>GetPotentialFailZonesRequest</p>
@@ -67,7 +68,10 @@ public class GetPotentialFailZonesRequest extends Request {
         } 
 
         /**
-         * Specifies whether the value of this parameter is the ID of a disaster recovery set.
+         * <p>Specifies whether the value of this parameter is the ID of a disaster recovery set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isPlanId(Boolean isPlanId) {
             this.putBodyParameter("IsPlanId", isPlanId);
@@ -76,7 +80,10 @@ public class GetPotentialFailZonesRequest extends Request {
         }
 
         /**
-         * If you set IsPlanId to false, specify the ID of a disaster recovery application. If you set IsPlanId to true, specify the ID of a disaster recovery set.
+         * <p>If you set IsPlanId to false, specify the ID of a disaster recovery application. If you set IsPlanId to true, specify the ID of a disaster recovery set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FS3ATPTOSC4SE1GG</p>
          */
         public Builder objectId(String objectId) {
             this.putBodyParameter("ObjectId", objectId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetTemplateRequest</p>
@@ -82,7 +83,10 @@ public class GetTemplateRequest extends Request {
         } 
 
         /**
-         * Template Area
+         * <p>Template Area</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);
@@ -91,7 +95,10 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroup ID
+         * <p>ResourceGroup ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzhfgmw4e6fwq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -100,7 +107,11 @@ public class GetTemplateRequest extends Request {
         }
 
         /**
-         * Template ID
+         * <p>Template ID</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XFKR6WYRVS24S07R</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);

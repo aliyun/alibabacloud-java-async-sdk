@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InitAppFailOverRequest} extends {@link RequestModel}
  *
  * <p>InitAppFailOverRequest</p>
@@ -53,7 +54,10 @@ public class InitAppFailOverRequest extends Request {
         } 
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>002XWH7MXB8MJRU0</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);

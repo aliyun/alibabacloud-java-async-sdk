@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteOperationASyncRequest} extends {@link RequestModel}
  *
  * <p>ExecuteOperationASyncRequest</p>
@@ -125,7 +126,10 @@ public class ExecuteOperationASyncRequest extends Request {
         } 
 
         /**
-         * The ID of the Cloud Architect Design Tools (CADT) application.
+         * <p>The ID of the Cloud Architect Design Tools (CADT) application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BG**********UQ</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -134,28 +138,25 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * The parameters related to the action. Specify the parameters based on the value of Operation. The parameters are passed in the map format. The following examples show how to specify the parameters if you want to change the specifications of an Elastic Compute Service (ECS) instance:
-         * <p>
+         * <p>The parameters related to the action. Specify the parameters based on the value of Operation. The parameters are passed in the map format. The following examples show how to specify the parameters if you want to change the specifications of an Elastic Compute Service (ECS) instance:</p>
+         * <ul>
+         * <li>The following common parameters are required: change_type, regionId, instanceId, appId</li>
+         * <li>Example values for changing the instance type of the ECS instance: { &quot;ServiceType&quot;: &quot;ecs&quot;, &quot;Operation&quot;: &quot;modifyInstanceType&quot;, &quot;Attributes&quot;: &quot;{&quot;change_type&quot;:&quot;modify_instance_type&quot;,&quot;instance_type&quot;:&quot;ecs.hfr7.2xlarge&quot;,&quot;instanceId&quot;:&quot;i-xxxxxxxxx&quot;,&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;appId&quot;:&quot;xxxxxxxxxxxxx&quot;}&quot; }</li>
+         * <li>Example values for stopping the ECS instance: { &quot;ServiceType&quot;: &quot;ecs&quot;, &quot;Operation&quot;: &quot;modifyInstanceType&quot;, &quot;Attributes&quot;: &quot;{&quot;change_type&quot;:&quot;modify_status&quot;,&quot;status&quot;:&quot;Stopped&quot;,&quot;instanceId&quot;:&quot;i-xxxxxxxxx&quot;,&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;appId&quot;:&quot;xxxxxxxxxxxxx&quot;}&quot; }</li>
+         * <li>Example values for starting the ECS instance: { &quot;ServiceType&quot;: &quot;ecs&quot;, &quot;Operation&quot;: &quot;modifyInstanceType&quot;, &quot;Attributes&quot;: &quot;{&quot;change_type&quot;:&quot;modify_status&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;instanceId&quot;:&quot;i-xxxxxxxxx&quot;,&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;appId&quot;:&quot;xxxxxxxxxxxxx&quot;}&quot; }</li>
+         * <li>Example values for restarting the ECS instance: { &quot;ServiceType&quot;: &quot;ecs&quot;, &quot;Operation&quot;: &quot;modifyInstanceType&quot;, &quot;Attributes&quot;: &quot;{&quot;change_type&quot;:&quot;modify_status&quot;,&quot;status&quot;:&quot;Restart&quot;,&quot;instanceId&quot;:&quot;i-xxxxxxxxx&quot;,&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;appId&quot;:&quot;xxxxxxxxxxxxx&quot;}&quot; }</li>
+         * </ul>
+         * <p>Example of enumerating more than one set of parameters:</p>
+         * <ul>
+         * <li><p>{ &quot;ServiceType&quot;: &quot;ecs&quot;, &quot;Operation&quot;: &quot;modifyInstanceType&quot;, &quot;Attributes&quot;: &quot;{\&quot;change_type\&quot;:\&quot;modify_instance_type\&quot;,\&quot;instance_type\&quot;:\&quot;ecs.hfr7.2xlarge\&quot;,\&quot;instanceId\&quot;:\&quot;i-xxxxxxxxx\&quot;,\&quot;regionId\&quot;:\&quot;cn-beijing\&quot;,\&quot;appId\&quot;:\&quot;xxxxxxxxxxxxx\&quot;}&quot; }</p>
+         * <!-- -->
          * 
-         * *   The following common parameters are required: change_type, regionId, instanceId, appId
-         * *   Example values for changing the instance type of the ECS instance: { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_instance_type","instance_type":"ecs.hfr7.2xlarge","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
-         * *   Example values for stopping the ECS instance: { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_status","status":"Stopped","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
-         * *   Example values for starting the ECS instance: { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_status","status":"Running","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
-         * *   Example values for restarting the ECS instance: { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{"change_type":"modify_status","status":"Restart","instanceId":"i-xxxxxxxxx","regionId":"cn-beijing","appId":"xxxxxxxxxxxxx"}" }
+         * <p>:</p>
+         * <!-- -->
          * 
-         * Example of enumerating more than one set of parameters:
-         * 
-         * *   { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\"change_type\\":\\"modify_instance_type\\",\\"instance_type\\":\\"ecs.hfr7.2xlarge\\",\\"instanceId\\":\\"i-xxxxxxxxx\\",\\"regionId\\":\\"cn-beijing\\",\\"appId\\":\\"xxxxxxxxxxxxx\\"}" }
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     { "ServiceType": "ecs", "Operation": "modifyInstanceType", "Attributes": "{\\"change_type\\":\\"modify_instance_type\\",\\"instance_type\\":\\"ecs.hfr7.2xlarge\\",\\"instanceId\\":\\"i-xxxxxxxxx\\",\\"regionId\\":\\"cn-beijing\\",\\"appId\\":\\"xxxxxxxxxxxxx\\"}" }
-         * 
-         *     <!-- -->
+         * <p>{ &quot;ServiceType&quot;: &quot;ecs&quot;, &quot;Operation&quot;: &quot;modifyInstanceType&quot;, &quot;Attributes&quot;: &quot;{\&quot;change_type\&quot;:\&quot;modify_instance_type\&quot;,\&quot;instance_type\&quot;:\&quot;ecs.hfr7.2xlarge\&quot;,\&quot;instanceId\&quot;:\&quot;i-xxxxxxxxx\&quot;,\&quot;regionId\&quot;:\&quot;cn-beijing\&quot;,\&quot;appId\&quot;:\&quot;xxxxxxxxxxxxx\&quot;}&quot; }</p>
+         * <!-- --></li>
+         * </ul>
          */
         public Builder attributes(java.util.Map < String, ? > attributes) {
             String attributesShrink = shrink(attributes, "Attributes", "json");
@@ -165,7 +166,10 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600765710019</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -174,16 +178,21 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * This operation type is the operation type of modifying the product, some operation types are generic, and some are used alone. The following is an example of ECS deployment:
-         * <p>
-         * - The name of the ECS: rename
-         * - Specificationof ecs: modifyInstanceType
-         * - Startup of ecs: modifyInstanceType
-         * - Stop of ecs: modifyInstanceType
-         * - Restart of ecs: modifyInstanceType
-         * - Ecs Tag: addTags
-         * - Deletion of ecs: ecsDelete
-         * - Paid type for ecs: modifyPayType
+         * <p>This operation type is the operation type of modifying the product, some operation types are generic, and some are used alone. The following is an example of ECS deployment:</p>
+         * <ul>
+         * <li>The name of the ECS: rename</li>
+         * <li>Specificationof ecs: modifyInstanceType</li>
+         * <li>Startup of ecs: modifyInstanceType</li>
+         * <li>Stop of ecs: modifyInstanceType</li>
+         * <li>Restart of ecs: modifyInstanceType</li>
+         * <li>Ecs Tag: addTags</li>
+         * <li>Deletion of ecs: ecsDelete</li>
+         * <li>Paid type for ecs: modifyPayType</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>queryTopo</p>
          */
         public Builder operation(String operation) {
             this.putBodyParameter("Operation", operation);
@@ -192,7 +201,10 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * Resource group ID, which is used to verify the permissions of the resource group
+         * <p>Resource group ID, which is used to verify the permissions of the resource group</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceshi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -201,7 +213,11 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * The type of the service. If you want to perform operations on an Elastic Compute Service (ECS) instance, set ServiceType to ecs.
+         * <p>The type of the service. If you want to perform operations on an Elastic Compute Service (ECS) instance, set ServiceType to ecs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK</p>
          */
         public Builder serviceType(String serviceType) {
             this.putBodyParameter("ServiceType", serviceType);

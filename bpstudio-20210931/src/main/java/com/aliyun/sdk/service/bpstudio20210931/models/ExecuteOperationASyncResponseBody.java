@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteOperationASyncResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteOperationASyncResponseBody</p>
@@ -73,7 +74,10 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Result code, 200 for success; Other representatives fail.
+         * <p>Result code, 200 for success; Other representatives fail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the operation.
+         * <p>The ID of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op_xxxxxxxxxxxxxxxxxx_ecs_modifyInstanceType_BYSOQGWUV6PME412_ERMEZLXNN3K9N3OL</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * Error message
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot; &quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
         }
 
         /**
-         * Request ID
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SD-WEF-DSW-32ED-323DDSD-2332D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

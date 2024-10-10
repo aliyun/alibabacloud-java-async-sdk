@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppFailBackResponseBody} extends {@link TeaModel}
  *
  * <p>AppFailBackResponseBody</p>
@@ -73,7 +74,10 @@ public class AppFailBackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class AppFailBackResponseBody extends TeaModel {
         }
 
         /**
-         * The disaster recovery switchback task ID.
+         * <p>The disaster recovery switchback task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3309</p>
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class AppFailBackResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.
+         * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OKITHEVRQCN6ULQG</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class AppFailBackResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7036DDBE-0ABA-52D7-A39D-75E511970F07</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPotentialFailZonesResponseBody} extends {@link TeaModel}
  *
  * <p>GetPotentialFailZonesResponseBody</p>
@@ -73,7 +74,10 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,7 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The zones where the current disaster recovery service can be switched.
+         * <p>The zones where the current disaster recovery service can be switched.</p>
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -89,7 +93,10 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified ResourceIds are not found in our records.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +104,10 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFB7F5C8-FE7A-06CA-9F87-ABBF6B848F0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

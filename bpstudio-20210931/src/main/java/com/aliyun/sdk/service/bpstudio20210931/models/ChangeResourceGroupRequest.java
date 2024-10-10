@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
@@ -84,7 +85,11 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the new resource group.
+         * <p>The ID of the new resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2ajbjoloa23q</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putBodyParameter("NewResourceGroupId", newResourceGroupId);
@@ -93,7 +98,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
+         * <p>The ID of the resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P7RMVSVM9LOVYQOM</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -102,7 +111,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource for which you want to change the resource group. Valid values: APPLICATION and TEMPLATE.
+         * <p>The type of the resource for which you want to change the resource group. Valid values: APPLICATION and TEMPLATE.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APPLICATION</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);

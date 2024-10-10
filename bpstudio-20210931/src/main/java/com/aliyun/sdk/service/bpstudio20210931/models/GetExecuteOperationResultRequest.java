@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetExecuteOperationResultRequest} extends {@link RequestModel}
  *
  * <p>GetExecuteOperationResultRequest</p>
@@ -68,7 +69,11 @@ public class GetExecuteOperationResultRequest extends Request {
         } 
 
         /**
-         * The ID of the operation.
+         * <p>The ID of the operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op_xxxxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder operationId(String operationId) {
             this.putBodyParameter("OperationId", operationId);
@@ -77,7 +82,10 @@ public class GetExecuteOperationResultRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. This parameter is specified to verify the permissions on the resource group.
+         * <p>The ID of the resource group. This parameter is specified to verify the permissions on the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testResourceId</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

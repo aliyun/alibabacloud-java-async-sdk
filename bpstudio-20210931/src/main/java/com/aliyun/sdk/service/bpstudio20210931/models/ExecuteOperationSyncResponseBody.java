@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteOperationSyncResponseBody} extends {@link TeaModel}
  *
  * <p>ExecuteOperationSyncResponseBody</p>
@@ -15,7 +16,7 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -48,7 +49,7 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -68,7 +69,7 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private String data; 
+        private Data data; 
         private String message; 
         private String requestId; 
 
@@ -83,7 +84,7 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -110,4 +111,111 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExecuteOperationSyncResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExecuteOperationSyncResponseBody</p>
+     */
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Arguments")
+        private String arguments;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("OperationId")
+        private String operationId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private Data(Builder builder) {
+            this.arguments = builder.arguments;
+            this.message = builder.message;
+            this.operationId = builder.operationId;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return arguments
+         */
+        public String getArguments() {
+            return this.arguments;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return operationId
+         */
+        public String getOperationId() {
+            return this.operationId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String arguments; 
+            private String message; 
+            private String operationId; 
+            private String status; 
+
+            /**
+             * Arguments.
+             */
+            public Builder arguments(String arguments) {
+                this.arguments = arguments;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * OperationId.
+             */
+            public Builder operationId(String operationId) {
+                this.operationId = operationId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

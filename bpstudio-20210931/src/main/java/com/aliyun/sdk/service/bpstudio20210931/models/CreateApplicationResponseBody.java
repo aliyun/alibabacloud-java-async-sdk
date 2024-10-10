@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateApplicationResponseBody</p>
@@ -73,7 +74,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>002XWH7MXB8MJRU0</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A07FFDF2-78FA-1B48-9E38-88E833A93187</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

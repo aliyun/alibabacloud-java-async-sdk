@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResource4ModifyRecordRequest} extends {@link RequestModel}
  *
  * <p>GetResource4ModifyRecordRequest</p>
@@ -83,7 +84,10 @@ public class GetResource4ModifyRecordRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE68D71ZY5YYIU9R</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);

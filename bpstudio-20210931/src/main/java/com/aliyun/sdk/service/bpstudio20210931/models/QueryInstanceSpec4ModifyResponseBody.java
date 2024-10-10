@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInstanceSpec4ModifyResponseBody} extends {@link TeaModel}
  *
  * <p>QueryInstanceSpec4ModifyResponseBody</p>
@@ -150,6 +151,12 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryInstanceSpec4ModifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInstanceSpec4ModifyResponseBody</p>
+     */
     public static class OptionalValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -271,6 +278,12 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryInstanceSpec4ModifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryInstanceSpec4ModifyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OptionalValues")
         private java.util.List < OptionalValues> optionalValues;

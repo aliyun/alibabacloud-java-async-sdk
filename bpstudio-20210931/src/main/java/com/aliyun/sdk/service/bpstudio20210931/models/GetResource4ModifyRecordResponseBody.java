@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResource4ModifyRecordResponseBody} extends {@link TeaModel}
  *
  * <p>GetResource4ModifyRecordResponseBody</p>
@@ -170,9 +171,18 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResource4ModifyRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResource4ModifyRecordResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Attribute")
         private String attribute;
+
+        @com.aliyun.core.annotation.NameInMap("Error")
+        private String error;
 
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
@@ -188,6 +198,7 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.attribute = builder.attribute;
+            this.error = builder.error;
             this.modifyTime = builder.modifyTime;
             this.resourceId = builder.resourceId;
             this.status = builder.status;
@@ -207,6 +218,13 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
          */
         public String getAttribute() {
             return this.attribute;
+        }
+
+        /**
+         * @return error
+         */
+        public String getError() {
+            return this.error;
         }
 
         /**
@@ -239,6 +257,7 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
 
         public static final class Builder {
             private String attribute; 
+            private String error; 
             private String modifyTime; 
             private String resourceId; 
             private String status; 
@@ -249,6 +268,14 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
+                return this;
+            }
+
+            /**
+             * Error.
+             */
+            public Builder error(String error) {
+                this.error = error;
                 return this;
             }
 

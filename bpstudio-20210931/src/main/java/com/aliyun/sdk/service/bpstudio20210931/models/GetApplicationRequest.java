@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetApplicationRequest} extends {@link RequestModel}
  *
  * <p>GetApplicationRequest</p>
@@ -68,7 +69,11 @@ public class GetApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VVK605ZH00OA4MRT</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -77,7 +82,10 @@ public class GetApplicationRequest extends Request {
         }
 
         /**
-         * Queries the basic information, verification results, billing results, and deployment results of an application.
+         * <p>Queries the basic information, verification results, billing results, and deployment results of an application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyjt3c5om3hi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

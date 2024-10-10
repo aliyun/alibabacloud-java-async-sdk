@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResult4QueryInstancePrice4ModifyResponse} extends {@link TeaModel}
  *
  * <p>GetResult4QueryInstancePrice4ModifyResponse</p>

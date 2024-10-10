@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationRequest} extends {@link RequestModel}
  *
  * <p>ListApplicationRequest</p>
@@ -154,7 +155,10 @@ public class ListApplicationRequest extends Request {
         } 
 
         /**
-         * Keywords in the app name
+         * <p>Keywords in the app name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -163,7 +167,11 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The pagination size of the resulting value cannot be less than the minimum value of 1 and cannot be greater than the maximum value of 50.
+         * <p>The pagination size of the resulting value cannot be less than the minimum value of 1 and cannot be greater than the maximum value of 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -172,7 +180,11 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The pagination page number of the resulting value cannot be less than the minimum value of 1 and cannot be greater than the maximum value of 10000.
+         * <p>The pagination page number of the resulting value cannot be less than the minimum value of 1 and cannot be greater than the maximum value of 10000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(Integer nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -181,7 +193,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * 1 update time,<br>2 creation time
+         * <p>1 update time,<br>2 creation time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderType(Long orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -190,7 +205,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -199,7 +217,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * Resource Id
+         * <p>Resource Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxxxxxx</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -208,7 +229,13 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * The status of the applications to be returned.
+         * <p>The status of the applications to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The following values are &quot;success&quot; and &quot;release&quot;.
+         * If the input value is &quot;success&quot;, the returned application list includes all applications in the Deployed_Success state of successful deployment.
+         * If the input value is release, the returned application list includes all applications in the release success (Destroyed_Success) and release failure (Destroyed_Failure) status.
+         * If this parameter is left blank, the returned app list includes apps in all states.</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -217,7 +244,10 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * Template Id
+         * <p>Template Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0KSXXX6SJU03TXXX</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);

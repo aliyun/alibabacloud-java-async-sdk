@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReleaseApplicationResponseBody} extends {@link TeaModel}
  *
  * <p>ReleaseApplicationResponseBody</p>
@@ -73,7 +74,10 @@ public class ReleaseApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class ReleaseApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class ReleaseApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class ReleaseApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFB7F5C8-FE7A-06CA-9F87-ABBF6B848F0C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

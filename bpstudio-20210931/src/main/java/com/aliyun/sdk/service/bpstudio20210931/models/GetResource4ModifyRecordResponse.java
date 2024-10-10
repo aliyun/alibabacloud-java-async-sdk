@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResource4ModifyRecordResponse} extends {@link TeaModel}
  *
  * <p>GetResource4ModifyRecordResponse</p>

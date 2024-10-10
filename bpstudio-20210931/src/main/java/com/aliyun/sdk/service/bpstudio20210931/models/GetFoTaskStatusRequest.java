@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFoTaskStatusRequest} extends {@link RequestModel}
  *
  * <p>GetFoTaskStatusRequest</p>
@@ -53,7 +54,10 @@ public class GetFoTaskStatusRequest extends Request {
         } 
 
         /**
-         * The disaster recovery switchover task ID.
+         * <p>The disaster recovery switchover task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2615</p>
          */
         public Builder taskId(Integer taskId) {
             this.putBodyParameter("TaskId", taskId);

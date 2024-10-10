@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTemplateRequest} extends {@link RequestModel}
  *
  * <p>ListTemplateRequest</p>
@@ -142,7 +143,10 @@ public class ListTemplateRequest extends Request {
         } 
 
         /**
-         * The keyword that is used to search for templates.
+         * <p>The keyword that is used to search for templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cadt</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -151,7 +155,11 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -160,7 +168,11 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder nextToken(Integer nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -169,14 +181,17 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * The criterion by which the returned templates are sorted. Valid values:
-         * <p>
+         * <p>The criterion by which the returned templates are sorted. Valid values:</p>
+         * <ul>
+         * <li>1: The templates are sorted by the time when they are updated.</li>
+         * <li>2: The templates are sorted by the time when they are created.</li>
+         * <li>3: The templates are sorted by the system.</li>
+         * <li>4: The templates are sorted by the number of times that they are used.</li>
+         * <li>If you specify an integer other than 1, 2, 3, and 4 or do not specify any value, the templates are sorted by the system.</li>
+         * </ul>
          * 
-         * *   1: The templates are sorted by the time when they are updated.
-         * *   2: The templates are sorted by the time when they are created.
-         * *   3: The templates are sorted by the system.
-         * *   4: The templates are sorted by the number of times that they are used.
-         * *   If you specify an integer other than 1, 2, 3, and 4 or do not specify any value, the templates are sorted by the system.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderType(Long orderType) {
             this.putBodyParameter("OrderType", orderType);
@@ -185,7 +200,10 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyjt3c5om3hi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -194,7 +212,10 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * The tag that you want to use to query templates.
+         * <p>The tag that you want to use to query templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tagList(Integer tagList) {
             this.putBodyParameter("TagList", tagList);
@@ -203,7 +224,11 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
-         * The type of the templates to be returned. Valid values: public and private
+         * <p>The type of the templates to be returned. Valid values: public and private</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

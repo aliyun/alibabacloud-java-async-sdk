@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetResult4QueryInstancePrice4ModifyResponseBody} extends {@link TeaModel}
  *
  * <p>GetResult4QueryInstancePrice4ModifyResponseBody</p>
@@ -130,6 +131,12 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetResult4QueryInstancePrice4ModifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResult4QueryInstancePrice4ModifyResponseBody</p>
+     */
     public static class PriceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Double discountAmount;
@@ -291,6 +298,12 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetResult4QueryInstancePrice4ModifyResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetResult4QueryInstancePrice4ModifyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PriceList")
         private java.util.List < PriceList> priceList;

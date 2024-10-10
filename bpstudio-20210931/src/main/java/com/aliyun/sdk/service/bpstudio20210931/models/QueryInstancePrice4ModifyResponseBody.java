@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryInstancePrice4ModifyResponseBody} extends {@link TeaModel}
  *
  * <p>QueryInstancePrice4ModifyResponseBody</p>
@@ -113,7 +114,7 @@ public class QueryInstancePrice4ModifyResponseBody extends TeaModel {
         }
 
         /**
-         * taskId
+         * <p>taskId</p>
          */
         public Builder data(String data) {
             this.data = data;

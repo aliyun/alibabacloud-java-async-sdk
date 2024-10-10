@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyApplicationSpecRequest} extends {@link RequestModel}
  *
  * <p>ModifyApplicationSpecRequest</p>
@@ -68,7 +69,10 @@ public class ModifyApplicationSpecRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02S7UU41WKJL7ERR</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -93,6 +97,12 @@ public class ModifyApplicationSpecRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyApplicationSpecRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyApplicationSpecRequest</p>
+     */
     public static class InstanceSpec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Configuration")
         private java.util.Map < String, ? > configuration;

@@ -40,8 +40,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to switch a disaster recovery application back to the primary zone.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to switch a disaster recovery application back to the primary zone.</p>
+     * 
+     * @param request the request parameters of AppFailBack  AppFailBackRequest
+     * @return AppFailBackResponse
      */
     @Override
     public CompletableFuture<AppFailBackResponse> appFailBack(AppFailBackRequest request) {
@@ -58,8 +61,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to switch a disaster recovery application to another supported zone.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to switch a disaster recovery application to another supported zone.</p>
+     * 
+     * @param request the request parameters of AppFailOver  AppFailOverRequest
+     * @return AppFailOverResponse
      */
     @Override
     public CompletableFuture<AppFailOverResponse> appFailOver(AppFailOverRequest request) {
@@ -75,6 +81,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     @Override
     public CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request) {
         try {
@@ -89,6 +99,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateApplication  CreateApplicationRequest
+     * @return CreateApplicationResponse
+     */
     @Override
     public CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request) {
         try {
@@ -104,8 +118,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation to delete an application, make sure that the application is in the `Destroyed_Success` state. Otherwise, the application fails to be deleted.`` You can call the [GetApplication](https://www.alibabacloud.com/help/en/bp-studio/latest/api-bpstudio-2021-09-31-getapplication) operation to query the status of an application.
-      *
+     * <b>description</b> :
+     * <p>Before you call this operation to delete an application, make sure that the application is in the <code>Destroyed_Success</code> state. Otherwise, the application fails to be deleted.`` You can call the <a href="https://www.alibabacloud.com/help/en/bp-studio/latest/api-bpstudio-2021-09-31-getapplication">GetApplication</a> operation to query the status of an application.</p>
+     * 
+     * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
+     * @return DeleteApplicationResponse
      */
     @Override
     public CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request) {
@@ -121,6 +138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeployApplication  DeployApplicationRequest
+     * @return DeployApplicationResponse
+     */
     @Override
     public CompletableFuture<DeployApplicationResponse> deployApplication(DeployApplicationRequest request) {
         try {
@@ -135,6 +156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteOperationASync  ExecuteOperationASyncRequest
+     * @return ExecuteOperationASyncResponse
+     */
     @Override
     public CompletableFuture<ExecuteOperationASyncResponse> executeOperationASync(ExecuteOperationASyncRequest request) {
         try {
@@ -149,6 +174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteOperationSync  ExecuteOperationSyncRequest
+     * @return ExecuteOperationSyncResponse
+     */
     @Override
     public CompletableFuture<ExecuteOperationSyncResponse> executeOperationSync(ExecuteOperationSyncRequest request) {
         try {
@@ -163,6 +192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplication  GetApplicationRequest
+     * @return GetApplicationResponse
+     */
     @Override
     public CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request) {
         try {
@@ -177,6 +210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplicationVariables  GetApplicationVariablesRequest
+     * @return GetApplicationVariablesResponse
+     */
     @Override
     public CompletableFuture<GetApplicationVariablesResponse> getApplicationVariables(GetApplicationVariablesRequest request) {
         try {
@@ -191,6 +228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetApplicationVariables4Fail  GetApplicationVariables4FailRequest
+     * @return GetApplicationVariables4FailResponse
+     */
     @Override
     public CompletableFuture<GetApplicationVariables4FailResponse> getApplicationVariables4Fail(GetApplicationVariables4FailRequest request) {
         try {
@@ -205,6 +246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetExecuteOperationResult  GetExecuteOperationResultRequest
+     * @return GetExecuteOperationResultResponse
+     */
     @Override
     public CompletableFuture<GetExecuteOperationResultResponse> getExecuteOperationResult(GetExecuteOperationResultRequest request) {
         try {
@@ -220,8 +265,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the status of a disaster recovery switchover task by task ID.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the status of a disaster recovery switchover task by task ID.</p>
+     * 
+     * @param request the request parameters of GetFoTaskStatus  GetFoTaskStatusRequest
+     * @return GetFoTaskStatusResponse
      */
     @Override
     public CompletableFuture<GetFoTaskStatusResponse> getFoTaskStatus(GetFoTaskStatusRequest request) {
@@ -238,8 +286,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the zones where the specified disaster recovery service can be switched.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the zones where the specified disaster recovery service can be switched.</p>
+     * 
+     * @param request the request parameters of GetPotentialFailZones  GetPotentialFailZonesRequest
+     * @return GetPotentialFailZonesResponse
      */
     @Override
     public CompletableFuture<GetPotentialFailZonesResponse> getPotentialFailZones(GetPotentialFailZonesRequest request) {
@@ -255,6 +306,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResource4ModifyRecord  GetResource4ModifyRecordRequest
+     * @return GetResource4ModifyRecordResponse
+     */
     @Override
     public CompletableFuture<GetResource4ModifyRecordResponse> getResource4ModifyRecord(GetResource4ModifyRecordRequest request) {
         try {
@@ -269,6 +324,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResult4QueryInstancePrice4Modify  GetResult4QueryInstancePrice4ModifyRequest
+     * @return GetResult4QueryInstancePrice4ModifyResponse
+     */
     @Override
     public CompletableFuture<GetResult4QueryInstancePrice4ModifyResponse> getResult4QueryInstancePrice4Modify(GetResult4QueryInstancePrice4ModifyRequest request) {
         try {
@@ -283,6 +342,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetTemplate  GetTemplateRequest
+     * @return GetTemplateResponse
+     */
     @Override
     public CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request) {
         try {
@@ -298,10 +361,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * ><danger> This API is no longer recommended, and the image related to the Application has included access authorization in the GetApplication property.></danger>
-      *
+     * @deprecated OpenAPI GetToken is deprecated, please use BPStudio::2021-09-31::GetApplication instead.  * @description >Danger:  This API is no longer recommended, and the image related to the Application has included access authorization in the GetApplication property.
+     * 
+     * @param request the request parameters of GetToken  GetTokenRequest
+     * @return GetTokenResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request) {
         try {
@@ -317,8 +382,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to prepare for application switchover and initiate a switchover task.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to prepare for application switchover and initiate a switchover task.</p>
+     * 
+     * @param request the request parameters of InitAppFailOver  InitAppFailOverRequest
+     * @return InitAppFailOverResponse
      */
     @Override
     public CompletableFuture<InitAppFailOverResponse> initAppFailOver(InitAppFailOverRequest request) {
@@ -334,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListApplication  ListApplicationRequest
+     * @return ListApplicationResponse
+     */
     @Override
     public CompletableFuture<ListApplicationResponse> listApplication(ListApplicationRequest request) {
         try {
@@ -349,8 +421,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query all disaster recovery plans.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query all disaster recovery plans.</p>
+     * 
+     * @param request the request parameters of ListFoCreatedApps  ListFoCreatedAppsRequest
+     * @return ListFoCreatedAppsResponse
      */
     @Override
     public CompletableFuture<ListFoCreatedAppsResponse> listFoCreatedApps(ListFoCreatedAppsRequest request) {
@@ -366,6 +441,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -380,6 +459,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTemplate  ListTemplateRequest
+     * @return ListTemplateResponse
+     */
     @Override
     public CompletableFuture<ListTemplateResponse> listTemplate(ListTemplateRequest request) {
         try {
@@ -394,6 +477,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyApplicationSpec  ModifyApplicationSpecRequest
+     * @return ModifyApplicationSpecResponse
+     */
     @Override
     public CompletableFuture<ModifyApplicationSpecResponse> modifyApplicationSpec(ModifyApplicationSpecRequest request) {
         try {
@@ -408,6 +495,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryInstancePrice4Modify  QueryInstancePrice4ModifyRequest
+     * @return QueryInstancePrice4ModifyResponse
+     */
     @Override
     public CompletableFuture<QueryInstancePrice4ModifyResponse> queryInstancePrice4Modify(QueryInstancePrice4ModifyRequest request) {
         try {
@@ -422,6 +513,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryInstanceSpec4Modify  QueryInstanceSpec4ModifyRequest
+     * @return QueryInstanceSpec4ModifyResponse
+     */
     @Override
     public CompletableFuture<QueryInstanceSpec4ModifyResponse> queryInstanceSpec4Modify(QueryInstanceSpec4ModifyRequest request) {
         try {
@@ -436,6 +531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReConfigApplication  ReConfigApplicationRequest
+     * @return ReConfigApplicationResponse
+     */
     @Override
     public CompletableFuture<ReConfigApplicationResponse> reConfigApplication(ReConfigApplicationRequest request) {
         try {
@@ -450,6 +549,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseApplication  ReleaseApplicationRequest
+     * @return ReleaseApplicationResponse
+     */
     @Override
     public CompletableFuture<ReleaseApplicationResponse> releaseApplication(ReleaseApplicationRequest request) {
         try {
@@ -464,6 +567,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidateApplication  ValidateApplicationRequest
+     * @return ValidateApplicationResponse
+     */
     @Override
     public CompletableFuture<ValidateApplicationResponse> validateApplication(ValidateApplicationRequest request) {
         try {
@@ -478,6 +585,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValuateApplication  ValuateApplicationRequest
+     * @return ValuateApplicationResponse
+     */
     @Override
     public CompletableFuture<ValuateApplicationResponse> valuateApplication(ValuateApplicationRequest request) {
         try {
@@ -492,6 +603,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValuateTemplate  ValuateTemplateRequest
+     * @return ValuateTemplateResponse
+     */
     @Override
     public CompletableFuture<ValuateTemplateResponse> valuateTemplate(ValuateTemplateRequest request) {
         try {

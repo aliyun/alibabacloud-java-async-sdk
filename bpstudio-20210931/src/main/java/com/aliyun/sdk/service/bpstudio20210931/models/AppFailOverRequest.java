@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AppFailOverRequest} extends {@link RequestModel}
  *
  * <p>AppFailOverRequest</p>
@@ -67,7 +68,10 @@ public class AppFailOverRequest extends Request {
         } 
 
         /**
-         * The application ID.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE68D71ZY5YYIU9R</p>
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -76,7 +80,10 @@ public class AppFailOverRequest extends Request {
         }
 
         /**
-         * The destination zone to which you want to switch the disaster recovery application.
+         * <p>The destination zone to which you want to switch the disaster recovery application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder failZone(String failZone) {
             this.putBodyParameter("FailZone", failZone);

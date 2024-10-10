@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFoTaskStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetFoTaskStatusResponseBody</p>
@@ -73,7 +74,10 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the switchover task.
+         * <p>The status of the switchover task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +96,10 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.
+         * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OKITHEVRQCN6ULQG</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +107,10 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>923692F0-A15B-58B4-BAF4-2AFA4AF46240</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
