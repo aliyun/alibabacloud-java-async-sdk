@@ -56,6 +56,7 @@ public class AssociateDefaultFilterRequest extends Request {
 
         /**
          * <p>The name of the filter.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder filterName(String filterName) {
             this.putQueryParameter("FilterName", filterName);

@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AssociateDefaultFilter  AssociateDefaultFilterRequest
+     * @return AssociateDefaultFilterResponse
+     */
     @Override
     public CompletableFuture<AssociateDefaultFilterResponse> associateDefaultFilter(AssociateDefaultFilterRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFilter  CreateFilterRequest
+     * @return CreateFilterResponse
+     */
     @Override
     public CompletableFuture<CreateFilterResponse> createFilter(CreateFilterRequest request) {
         try {
@@ -67,6 +75,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSavedQuery  CreateSavedQueryRequest
+     * @return CreateSavedQueryResponse
+     */
     @Override
     public CompletableFuture<CreateSavedQueryResponse> createSavedQuery(CreateSavedQueryRequest request) {
         try {
@@ -81,6 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFilter  DeleteFilterRequest
+     * @return DeleteFilterResponse
+     */
     @Override
     public CompletableFuture<DeleteFilterResponse> deleteFilter(DeleteFilterRequest request) {
         try {
@@ -95,6 +111,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSavedQuery  DeleteSavedQueryRequest
+     * @return DeleteSavedQueryResponse
+     */
     @Override
     public CompletableFuture<DeleteSavedQueryResponse> deleteSavedQuery(DeleteSavedQueryRequest request) {
         try {
@@ -109,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableMultiAccountResourceCenter  DisableMultiAccountResourceCenterRequest
+     * @return DisableMultiAccountResourceCenterResponse
+     */
     @Override
     public CompletableFuture<DisableMultiAccountResourceCenterResponse> disableMultiAccountResourceCenter(DisableMultiAccountResourceCenterRequest request) {
         try {
@@ -123,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableResourceCenter  DisableResourceCenterRequest
+     * @return DisableResourceCenterResponse
+     */
     @Override
     public CompletableFuture<DisableResourceCenterResponse> disableResourceCenter(DisableResourceCenterRequest request) {
         try {
@@ -137,6 +165,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisassociateDefaultFilter  DisassociateDefaultFilterRequest
+     * @return DisassociateDefaultFilterResponse
+     */
     @Override
     public CompletableFuture<DisassociateDefaultFilterResponse> disassociateDefaultFilter(DisassociateDefaultFilterRequest request) {
         try {
@@ -153,7 +185,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="~~200506~~">Resource Directory overview</a>.</p>
+     * <p>If you have created a resource directory for your enterprise, you can enable the cross-account resource search feature by using the management account of the resource directory or a delegated administrator account of Resource Center to view the resources of members in the resource directory. For more information about a resource directory, see <a href="https://help.aliyun.com/document_detail/200506.html">Resource Directory overview</a>.</p>
+     * 
+     * @param request the request parameters of EnableMultiAccountResourceCenter  EnableMultiAccountResourceCenterRequest
+     * @return EnableMultiAccountResourceCenterResponse
      */
     @Override
     public CompletableFuture<EnableMultiAccountResourceCenterResponse> enableMultiAccountResourceCenter(EnableMultiAccountResourceCenterRequest request) {
@@ -169,6 +204,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableResourceCenter  EnableResourceCenterRequest
+     * @return EnableResourceCenterResponse
+     */
     @Override
     public CompletableFuture<EnableResourceCenterResponse> enableResourceCenter(EnableResourceCenterRequest request) {
         try {
@@ -183,6 +222,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteMultiAccountSQLQuery  ExecuteMultiAccountSQLQueryRequest
+     * @return ExecuteMultiAccountSQLQueryResponse
+     */
     @Override
     public CompletableFuture<ExecuteMultiAccountSQLQueryResponse> executeMultiAccountSQLQuery(ExecuteMultiAccountSQLQueryRequest request) {
         try {
@@ -197,6 +240,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecuteSQLQuery  ExecuteSQLQueryRequest
+     * @return ExecuteSQLQueryResponse
+     */
     @Override
     public CompletableFuture<ExecuteSQLQueryResponse> executeSQLQuery(ExecuteSQLQueryRequest request) {
         try {
@@ -211,6 +258,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetExampleQuery  GetExampleQueryRequest
+     * @return GetExampleQueryResponse
+     */
     @Override
     public CompletableFuture<GetExampleQueryResponse> getExampleQuery(GetExampleQueryRequest request) {
         try {
@@ -225,6 +276,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMultiAccountResourceCenterServiceStatus  GetMultiAccountResourceCenterServiceStatusRequest
+     * @return GetMultiAccountResourceCenterServiceStatusResponse
+     */
     @Override
     public CompletableFuture<GetMultiAccountResourceCenterServiceStatusResponse> getMultiAccountResourceCenterServiceStatus(GetMultiAccountResourceCenterServiceStatusRequest request) {
         try {
@@ -239,6 +294,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMultiAccountResourceConfiguration  GetMultiAccountResourceConfigurationRequest
+     * @return GetMultiAccountResourceConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetMultiAccountResourceConfigurationResponse> getMultiAccountResourceConfiguration(GetMultiAccountResourceConfigurationRequest request) {
         try {
@@ -253,6 +312,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceCenterServiceStatus  GetResourceCenterServiceStatusRequest
+     * @return GetResourceCenterServiceStatusResponse
+     */
     @Override
     public CompletableFuture<GetResourceCenterServiceStatusResponse> getResourceCenterServiceStatus(GetResourceCenterServiceStatusRequest request) {
         try {
@@ -267,6 +330,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceConfiguration  GetResourceConfigurationRequest
+     * @return GetResourceConfigurationResponse
+     */
     @Override
     public CompletableFuture<GetResourceConfigurationResponse> getResourceConfiguration(GetResourceConfigurationRequest request) {
         try {
@@ -281,6 +348,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetResourceCounts  GetResourceCountsRequest
+     * @return GetResourceCountsResponse
+     */
     @Override
     public CompletableFuture<GetResourceCountsResponse> getResourceCounts(GetResourceCountsRequest request) {
         try {
@@ -295,6 +366,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSavedQuery  GetSavedQueryRequest
+     * @return GetSavedQueryResponse
+     */
     @Override
     public CompletableFuture<GetSavedQueryResponse> getSavedQuery(GetSavedQueryRequest request) {
         try {
@@ -309,6 +384,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListExampleQueries  ListExampleQueriesRequest
+     * @return ListExampleQueriesResponse
+     */
     @Override
     public CompletableFuture<ListExampleQueriesResponse> listExampleQueries(ListExampleQueriesRequest request) {
         try {
@@ -323,6 +402,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFilters  ListFiltersRequest
+     * @return ListFiltersResponse
+     */
     @Override
     public CompletableFuture<ListFiltersResponse> listFilters(ListFiltersRequest request) {
         try {
@@ -337,6 +420,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMultiAccountResourceGroups  ListMultiAccountResourceGroupsRequest
+     * @return ListMultiAccountResourceGroupsResponse
+     */
     @Override
     public CompletableFuture<ListMultiAccountResourceGroupsResponse> listMultiAccountResourceGroups(ListMultiAccountResourceGroupsRequest request) {
         try {
@@ -351,6 +438,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMultiAccountTagKeys  ListMultiAccountTagKeysRequest
+     * @return ListMultiAccountTagKeysResponse
+     */
     @Override
     public CompletableFuture<ListMultiAccountTagKeysResponse> listMultiAccountTagKeys(ListMultiAccountTagKeysRequest request) {
         try {
@@ -365,6 +456,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMultiAccountTagValues  ListMultiAccountTagValuesRequest
+     * @return ListMultiAccountTagValuesResponse
+     */
     @Override
     public CompletableFuture<ListMultiAccountTagValuesResponse> listMultiAccountTagValues(ListMultiAccountTagValuesRequest request) {
         try {
@@ -379,6 +474,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListResourceTypes  ListResourceTypesRequest
+     * @return ListResourceTypesResponse
+     */
     @Override
     public CompletableFuture<ListResourceTypesResponse> listResourceTypes(ListResourceTypesRequest request) {
         try {
@@ -393,6 +492,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSavedQueries  ListSavedQueriesRequest
+     * @return ListSavedQueriesResponse
+     */
     @Override
     public CompletableFuture<ListSavedQueriesResponse> listSavedQueries(ListSavedQueriesRequest request) {
         try {
@@ -407,6 +510,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagKeys  ListTagKeysRequest
+     * @return ListTagKeysResponse
+     */
     @Override
     public CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request) {
         try {
@@ -421,6 +528,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListTagValues  ListTagValuesRequest
+     * @return ListTagValuesResponse
+     */
     @Override
     public CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request) {
         try {
@@ -437,14 +548,17 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
      * <ul>
-     * <li>You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="~~477798~~">Services that work with Resource Center</a>.</li>
-     * <li>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="~~600556~~">Grant a RAM user the permissions to use Resource Center</a>.</li>
+     * <li>Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</li>
      * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
      * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
      * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
      * <li>You can visit <a href="https://api.alibabacloud.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
      * </ul>
+     * 
+     * @param request the request parameters of SearchMultiAccountResources  SearchMultiAccountResourcesRequest
+     * @return SearchMultiAccountResourcesResponse
      */
     @Override
     public CompletableFuture<SearchMultiAccountResourcesResponse> searchMultiAccountResources(SearchMultiAccountResourcesRequest request) {
@@ -462,13 +576,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>  You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
      * <ul>
-     * <li>You can use this operation to search for only resources whose types are supported by Resource Center in services that work with Resource Center. For more information about the services and the resource types that are supported by Resource Center, see <a href="~~477798~~">Services that work with Resource Center</a>.</li>
      * <li>By default, the operation returns a maximum of 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
      * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
      * <li>You can specify one or more filter conditions to narrow the search scope. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
      * <li>You can visit <a href="https://api.aliyun.com/api-tools/demo/ResourceCenter">Sample Code Center</a> to view more sample queries.</li>
      * </ul>
+     * 
+     * @param request the request parameters of SearchResources  SearchResourcesRequest
+     * @return SearchResourcesResponse
      */
     @Override
     public CompletableFuture<SearchResourcesResponse> searchResources(SearchResourcesRequest request) {
@@ -484,6 +601,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFilter  UpdateFilterRequest
+     * @return UpdateFilterResponse
+     */
     @Override
     public CompletableFuture<UpdateFilterResponse> updateFilter(UpdateFilterRequest request) {
         try {
@@ -498,6 +619,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSavedQuery  UpdateSavedQueryRequest
+     * @return UpdateSavedQueryResponse
+     */
     @Override
     public CompletableFuture<UpdateSavedQueryResponse> updateSavedQuery(UpdateSavedQueryRequest request) {
         try {

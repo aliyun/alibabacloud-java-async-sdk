@@ -59,6 +59,7 @@ public class GetSavedQueryRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="~~ListSavedQueries~~">ListSavedQueries</a> operation to query the ID.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>sq-GeAck****</p>

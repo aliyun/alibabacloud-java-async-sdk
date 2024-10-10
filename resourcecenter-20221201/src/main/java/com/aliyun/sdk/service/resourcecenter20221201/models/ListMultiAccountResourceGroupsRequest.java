@@ -98,6 +98,7 @@ public class ListMultiAccountResourceGroupsRequest extends Request {
 
         /**
          * <p>The ID of the management account or member of the resource directory.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1394339739****</p>

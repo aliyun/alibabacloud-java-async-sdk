@@ -108,7 +108,7 @@ public class ListResourceTypesRequest extends Request {
 
         /**
          * <p>The resource type.</p>
-         * <p>For more information about the resource types that are supported by Resource Center, see <a href="~~477798~~">Services that work with Resource Center</a>.</p>
+         * <p>For more information about the resource types that are supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::ACK::Cluster</p>

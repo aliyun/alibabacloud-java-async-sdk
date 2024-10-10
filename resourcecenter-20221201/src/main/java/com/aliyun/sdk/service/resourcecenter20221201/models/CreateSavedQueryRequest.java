@@ -98,6 +98,7 @@ public class CreateSavedQueryRequest extends Request {
 
         /**
          * <p>The query statement in the template.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM resources;</p>
@@ -115,6 +116,7 @@ public class CreateSavedQueryRequest extends Request {
          * <li>The name can contain letters, digits, underscores (_), and hyphens (-).</li>
          * <li>The name must be unique.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Query of All Alibaba Cloud Resources</p>

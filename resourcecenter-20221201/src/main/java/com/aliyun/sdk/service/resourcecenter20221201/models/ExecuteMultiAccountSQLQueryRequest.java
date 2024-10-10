@@ -18,6 +18,15 @@ public class ExecuteMultiAccountSQLQueryRequest extends Request {
     private String expression;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Scope")
     @com.aliyun.core.annotation.Validation(required = true)
     private String scope;
@@ -25,6 +34,8 @@ public class ExecuteMultiAccountSQLQueryRequest extends Request {
     private ExecuteMultiAccountSQLQueryRequest(Builder builder) {
         super(builder);
         this.expression = builder.expression;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.scope = builder.scope;
     }
 
@@ -49,6 +60,20 @@ public class ExecuteMultiAccountSQLQueryRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return scope
      */
     public String getScope() {
@@ -57,6 +82,8 @@ public class ExecuteMultiAccountSQLQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExecuteMultiAccountSQLQueryRequest, Builder> {
         private String expression; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String scope; 
 
         private Builder() {
@@ -66,13 +93,16 @@ public class ExecuteMultiAccountSQLQueryRequest extends Request {
         private Builder(ExecuteMultiAccountSQLQueryRequest request) {
             super(request);
             this.expression = request.expression;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.scope = request.scope;
         } 
 
         /**
          * <p>The SQL statement to be executed.</p>
          * <p>The number of characters in the SQL statement must be less than 2,000.</p>
-         * <p>For more information about the SQL syntax, see <a href="~~2539395~~">Basic SQL syntax</a>.</p>
+         * <p>For more information about the SQL syntax, see <a href="https://help.aliyun.com/document_detail/2539395.html">Basic SQL syntax</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM resources LIMIT 100;</p>
@@ -80,6 +110,24 @@ public class ExecuteMultiAccountSQLQueryRequest extends Request {
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
             this.expression = expression;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -92,7 +140,8 @@ public class ExecuteMultiAccountSQLQueryRequest extends Request {
          * <li>ID of a member: Resources within the member are searched.</li>
          * <li>ID of a member/ID of a Resource group: Resources within the member in the resource group are searched.</li>
          * </ul>
-         * <p>For more information about how to obtain the ID of a resource directory, the Root folder, a folder, a member, or a resource group, see <a href="~~159995~~">GetResourceDirectory</a>, <a href="~~159997~~">ListFoldersForParent</a>, <a href="~~159997~~">ListFoldersForParent</a>, <a href="~~160016~~">ListAccounts</a>, or <a href="~~158855~~">ListResourceGroups</a>.</p>
+         * <p>For more information about how to obtain the ID of a resource directory, the Root folder, a folder, a member, or a resource group, see <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a>, <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a>, <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a>, <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>, or <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>rd-r4****</p>

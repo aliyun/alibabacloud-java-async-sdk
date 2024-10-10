@@ -56,6 +56,7 @@ public class DeleteFilterRequest extends Request {
 
         /**
          * <p>The name of the filter.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>

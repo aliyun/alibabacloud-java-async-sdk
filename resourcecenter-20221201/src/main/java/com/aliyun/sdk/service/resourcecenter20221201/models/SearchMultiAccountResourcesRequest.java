@@ -150,11 +150,12 @@ public class SearchMultiAccountResourcesRequest extends Request {
         /**
          * <p>The search scope. You can set the value to one of the following items:</p>
          * <ul>
-         * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="~~159995~~">GetResourceDirectory</a> operation to obtain the ID.</li>
-         * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="~~159997~~">ListFoldersForParent</a> operation to obtain the ID.</li>
-         * <li>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="~~159997~~">ListFoldersForParent</a> operation to obtain the ID.</li>
-         * <li>ID of a member: Resources within the member are searched. You can call the <a href="~~160016~~">ListAccounts</a> operation to obtain the ID.</li>
+         * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a> operation to obtain the ID.</li>
+         * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</li>
+         * <li>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to obtain the ID.</li>
+         * <li>ID of a member: Resources within the member are searched. You can call the <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a> operation to obtain the ID.</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>rd-r4****</p>

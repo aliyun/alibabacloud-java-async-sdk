@@ -155,6 +155,7 @@ public class ListTagValuesRequest extends Request {
 
         /**
          * <p>The tag key.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test_key</p>

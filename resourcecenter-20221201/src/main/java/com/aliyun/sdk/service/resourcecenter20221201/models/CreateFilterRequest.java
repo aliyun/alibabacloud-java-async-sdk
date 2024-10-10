@@ -71,6 +71,7 @@ public class CreateFilterRequest extends Request {
 
         /**
          * <p>The configurations of the filter.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -92,6 +93,7 @@ public class CreateFilterRequest extends Request {
 
         /**
          * <p>The name of the filter.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>

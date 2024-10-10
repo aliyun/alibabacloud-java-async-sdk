@@ -141,6 +141,7 @@ public class ListFiltersResponseBody extends TeaModel {
 
             /**
              * <p>The configurations of the filter.</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>{

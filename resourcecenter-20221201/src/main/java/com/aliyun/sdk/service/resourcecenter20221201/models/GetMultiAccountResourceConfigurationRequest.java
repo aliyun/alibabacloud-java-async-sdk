@@ -101,6 +101,7 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
 
         /**
          * <p>The ID of the management account or member of the resource directory.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1619302****</p>
@@ -113,6 +114,7 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
 
         /**
          * <p>The ID of the resource.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>m-eb3hji****</p>
@@ -125,6 +127,7 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
 
         /**
          * <p>The region ID of the resource.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -137,6 +140,7 @@ public class GetMultiAccountResourceConfigurationRequest extends Request {
 
         /**
          * <p>The type of the resource.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::VPC::RouteTable</p>

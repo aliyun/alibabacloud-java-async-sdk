@@ -59,6 +59,7 @@ public class GetExampleQueryRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="~~ListExampleQueries~~">ListExampleQueries</a> operation to obtain the template ID.</p>
          * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>sq-0PfKy****</p>

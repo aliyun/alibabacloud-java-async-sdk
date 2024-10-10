@@ -86,6 +86,7 @@ public class GetResourceConfigurationRequest extends Request {
 
         /**
          * <p>The ID of the resource.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-bp1kyg72m****</p>
@@ -98,6 +99,7 @@ public class GetResourceConfigurationRequest extends Request {
 
         /**
          * <p>The region ID of the resource.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -110,7 +112,8 @@ public class GetResourceConfigurationRequest extends Request {
 
         /**
          * <p>The type of the resource.</p>
-         * <p>For more information about the resource types supported by Resource Center, see <a href="~~477798~~">Services that work with Resource Center</a>.</p>
+         * <p>For more information about the resource types supported by Resource Center, see <a href="https://help.aliyun.com/document_detail/477798.html">Services that work with Resource Center</a>.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ACS::VPC::RouteTable</p>
