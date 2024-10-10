@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesRequest} extends {@link RequestModel}
  *
  * <p>ListTagValuesRequest</p>
@@ -140,7 +141,11 @@ public class ListTagValuesRequest extends Request {
         } 
 
         /**
-         * The key of the tag.
+         * <p>The key of the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ESS</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -149,7 +154,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -167,10 +175,11 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +188,11 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The region ID of the Auto Scaling resource.
+         * <p>The region ID of the Auto Scaling resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -197,7 +210,11 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * The type of the Auto Scaling resource. Set the value to scalinggroup. This indicates that the tag is added to a scaling group.
+         * <p>The type of the Auto Scaling resource. Set the value to scalinggroup. This indicates that the tag is added to a scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scalinggroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

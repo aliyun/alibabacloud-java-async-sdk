@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetInstancesProtectionRequest} extends {@link RequestModel}
  *
  * <p>SetInstancesProtectionRequest</p>
@@ -112,7 +113,8 @@ public class SetInstancesProtectionRequest extends Request {
         } 
 
         /**
-         * The IDs of the ECS instances.
+         * <p>The IDs of the ECS instances.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -130,11 +132,15 @@ public class SetInstancesProtectionRequest extends Request {
         }
 
         /**
-         * Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:
-         * <p>
+         * <p>Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder protectedFromScaleIn(Boolean protectedFromScaleIn) {
             this.putQueryParameter("ProtectedFromScaleIn", protectedFromScaleIn);
@@ -152,7 +158,11 @@ public class SetInstancesProtectionRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExitStandbyRequest} extends {@link RequestModel}
  *
  * <p>ExitStandbyRequest</p>
@@ -139,13 +140,15 @@ public class ExitStandbyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove the instance from the Standby state in an asynchronous manner. Valid values:
-         * <p>
+         * <p>Specifies whether to remove the instance from the Standby state in an asynchronous manner. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -154,10 +157,11 @@ public class ExitStandbyRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -166,7 +170,8 @@ public class ExitStandbyRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
+         * <p>The IDs of the ECS instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -184,7 +189,10 @@ public class ExitStandbyRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,7 +210,11 @@ public class ExitStandbyRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1fo0dbtsbmqa9h****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

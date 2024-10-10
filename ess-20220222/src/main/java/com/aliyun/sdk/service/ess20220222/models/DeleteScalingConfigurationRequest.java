@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteScalingConfigurationRequest} extends {@link RequestModel}
  *
  * <p>DeleteScalingConfigurationRequest</p>
@@ -123,7 +124,11 @@ public class DeleteScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling configuration that you want to delete.
+         * <p>The ID of the scaling configuration that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc-bp1bx8mzur534edp****</p>
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);

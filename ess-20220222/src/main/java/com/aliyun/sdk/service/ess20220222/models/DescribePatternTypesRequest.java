@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePatternTypesRequest} extends {@link RequestModel}
  *
  * <p>DescribePatternTypesRequest</p>
@@ -446,16 +447,15 @@ public class DescribePatternTypesRequest extends Request {
         } 
 
         /**
-         * The architectures of instance types. Valid values:
-         * <p>
-         * 
-         * *   X86: x86
-         * *   Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated
-         * *   BareMetal: ECS Bare Metal Instance
-         * *   Arm: Arm
-         * *   SuperComputeCluster: Super Computing Cluster
-         * 
-         * By default, all values are selected.
+         * <p>The architectures of instance types. Valid values:</p>
+         * <ul>
+         * <li>X86: x86</li>
+         * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</li>
+         * <li>BareMetal: ECS Bare Metal Instance</li>
+         * <li>Arm: Arm</li>
+         * <li>SuperComputeCluster: Super Computing Cluster</li>
+         * </ul>
+         * <p>By default, all values are selected.</p>
          */
         public Builder architecture(java.util.List < String > architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -464,14 +464,16 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * Specifies whether to include burstable instance types. Valid values:
-         * <p>
+         * <p>Specifies whether to include burstable instance types. Valid values:</p>
+         * <ul>
+         * <li>Exclude: does not include burstable instance types.</li>
+         * <li>Include: includes burstable instance types.</li>
+         * <li>Required: includes only burstable instance types.</li>
+         * </ul>
+         * <p>Default value: Include.</p>
          * 
-         * *   Exclude: does not include burstable instance types.
-         * *   Include: includes burstable instance types.
-         * *   Required: includes only burstable instance types.
-         * 
-         * Default value: Include.
+         * <strong>example:</strong>
+         * <p>Include</p>
          */
         public Builder burstablePerformance(String burstablePerformance) {
             this.putQueryParameter("BurstablePerformance", burstablePerformance);
@@ -480,7 +482,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The channel ID. This parameter is not for public use.
+         * <p>The channel ID. This parameter is not for public use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79425074</p>
          */
         public Builder channelId(Long channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -489,7 +494,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The number of vCPUs that you want to assign to the instance type.
+         * <p>The number of vCPUs that you want to assign to the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cores(Integer cores) {
             this.putQueryParameter("Cores", cores);
@@ -498,7 +506,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The number of vCPUs that you want to assign to the instance type. You can specify multiple vCPUs.
+         * <p>The number of vCPUs that you want to assign to the instance type. You can specify multiple vCPUs.</p>
          */
         public Builder coresList(java.util.List < Integer > coresList) {
             this.putQueryParameter("CoresList", coresList);
@@ -507,13 +515,14 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The CPU architectures of the instance types. Valid values:
-         * <p>
-         * 
-         * >  You can specify 1 to 2 CPU architectures.
-         * 
-         * *   x86
-         * *   Arm
+         * <p>The CPU architectures of the instance types. Valid values:</p>
+         * <blockquote>
+         * <p> You can specify 1 to 2 CPU architectures.</p>
+         * </blockquote>
+         * <ul>
+         * <li>x86</li>
+         * <li>Arm</li>
+         * </ul>
          */
         public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
             this.putQueryParameter("CpuArchitectures", cpuArchitectures);
@@ -531,7 +540,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The GPU models.
+         * <p>The GPU models.</p>
          */
         public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
             this.putQueryParameter("GpuSpecs", gpuSpecs);
@@ -540,25 +549,25 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The categories of the instance types. Valid values:
-         * <p>
-         * 
-         * *   General-purpose
-         * *   Compute-optimized
-         * *   Memory-optimized
-         * *   Big data
-         * *   Local SSDs
-         * *   High Clock Speed
-         * *   Enhanced
-         * *   Shared
-         * *   Compute-optimized with GPU
-         * *   Visual Compute-optimized
-         * *   Heterogeneous Service
-         * *   Compute-optimized with FPGA
-         * *   Compute-optimized with NPU
-         * *   ECS Bare Metal
-         * *   Super Computing Cluster
-         * *   High Performance Compute
+         * <p>The categories of the instance types. Valid values:</p>
+         * <ul>
+         * <li>General-purpose</li>
+         * <li>Compute-optimized</li>
+         * <li>Memory-optimized</li>
+         * <li>Big data</li>
+         * <li>Local SSDs</li>
+         * <li>High Clock Speed</li>
+         * <li>Enhanced</li>
+         * <li>Shared</li>
+         * <li>Compute-optimized with GPU</li>
+         * <li>Visual Compute-optimized</li>
+         * <li>Heterogeneous Service</li>
+         * <li>Compute-optimized with FPGA</li>
+         * <li>Compute-optimized with NPU</li>
+         * <li>ECS Bare Metal</li>
+         * <li>Super Computing Cluster</li>
+         * <li>High Performance Compute</li>
+         * </ul>
          */
         public Builder instanceCategories(java.util.List < String > instanceCategories) {
             this.putQueryParameter("InstanceCategories", instanceCategories);
@@ -567,12 +576,15 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The level of the instance family. Valid values:
-         * <p>
+         * <p>The level of the instance family. Valid values:</p>
+         * <ul>
+         * <li>EntryLevel: entry level</li>
+         * <li>EnterpriseLevel: enterprise level</li>
+         * <li>CreditEntryLevel: credit-based entry level For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</li>
+         * </ul>
          * 
-         * *   EntryLevel: entry level
-         * *   EnterpriseLevel: enterprise level
-         * *   CreditEntryLevel: credit-based entry level For more information, see [Burstable instance families](~~59977~~).
+         * <strong>example:</strong>
+         * <p>EnterpriseLevel</p>
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
@@ -581,7 +593,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The instance families that you want to query. You can query 1 to 10 instance families in each call.
+         * <p>The instance families that you want to query. You can query 1 to 10 instance families in each call.</p>
          */
         public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
             this.putQueryParameter("InstanceTypeFamilies", instanceTypeFamilies);
@@ -590,7 +602,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The maximum hourly price for pay-as-you-go or preemptible instances.
+         * <p>The maximum hourly price for pay-as-you-go or preemptible instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxPrice(Float maxPrice) {
             this.putQueryParameter("MaxPrice", maxPrice);
@@ -599,7 +614,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The maximum number of vCPUs per instance type.
+         * <p>The maximum number of vCPUs per instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder maximumCpuCoreCount(Integer maximumCpuCoreCount) {
             this.putQueryParameter("MaximumCpuCoreCount", maximumCpuCoreCount);
@@ -608,7 +626,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The maximum number of GPUs per instance. The value must be a positive integer.
+         * <p>The maximum number of GPUs per instance. The value must be a positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maximumGpuAmount(Integer maximumGpuAmount) {
             this.putQueryParameter("MaximumGpuAmount", maximumGpuAmount);
@@ -617,7 +638,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The maximum memory size per instance. Unit: GiB.
+         * <p>The maximum memory size per instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder maximumMemorySize(Float maximumMemorySize) {
             this.putQueryParameter("MaximumMemorySize", maximumMemorySize);
@@ -626,7 +650,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The memory size that you want to assign to the instance type. Unit: GiB.
+         * <p>The memory size that you want to assign to the instance type. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -635,7 +662,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The memory size that you want to assign to the instance type. Unit: GiB. You can specify multiple memory sizes.
+         * <p>The memory size that you want to assign to the instance type. Unit: GiB. You can specify multiple memory sizes.</p>
          */
         public Builder memoryList(java.util.List < Float > memoryList) {
             this.putQueryParameter("MemoryList", memoryList);
@@ -644,7 +671,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
+         * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder minimumBaselineCredit(Integer minimumBaselineCredit) {
             this.putQueryParameter("MinimumBaselineCredit", minimumBaselineCredit);
@@ -653,7 +683,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of vCPUs per instance type.
+         * <p>The minimum number of vCPUs per instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minimumCpuCoreCount(Integer minimumCpuCoreCount) {
             this.putQueryParameter("MinimumCpuCoreCount", minimumCpuCoreCount);
@@ -662,7 +695,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of IPv6 addresses per ENI.
+         * <p>The minimum number of IPv6 addresses per ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minimumEniIpv6AddressQuantity(Integer minimumEniIpv6AddressQuantity) {
             this.putQueryParameter("MinimumEniIpv6AddressQuantity", minimumEniIpv6AddressQuantity);
@@ -671,7 +707,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of IPv4 addresses per ENI.
+         * <p>The minimum number of IPv4 addresses per ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minimumEniPrivateIpAddressQuantity(Integer minimumEniPrivateIpAddressQuantity) {
             this.putQueryParameter("MinimumEniPrivateIpAddressQuantity", minimumEniPrivateIpAddressQuantity);
@@ -680,7 +719,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of elastic network interfaces (ENIs) per instance.
+         * <p>The minimum number of elastic network interfaces (ENIs) per instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minimumEniQuantity(Integer minimumEniQuantity) {
             this.putQueryParameter("MinimumEniQuantity", minimumEniQuantity);
@@ -689,7 +731,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The minimum number of GPUs per instance. The value must be a positive integer.
+         * <p>The minimum number of GPUs per instance. The value must be a positive integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder minimumGpuAmount(Integer minimumGpuAmount) {
             this.putQueryParameter("MinimumGpuAmount", minimumGpuAmount);
@@ -698,7 +743,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The initial vCPU credits per t5 or t6 burstable instance.
+         * <p>The initial vCPU credits per t5 or t6 burstable instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder minimumInitialCredit(Integer minimumInitialCredit) {
             this.putQueryParameter("MinimumInitialCredit", minimumInitialCredit);
@@ -707,7 +755,10 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The minimum memory size per instance. Unit: GiB.
+         * <p>The minimum memory size per instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder minimumMemorySize(Float minimumMemorySize) {
             this.putQueryParameter("MinimumMemorySize", minimumMemorySize);
@@ -716,7 +767,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The processor models of the instance types. You can specify 1 to 10 processor models.
+         * <p>The processor models of the instance types. You can specify 1 to 10 processor models.</p>
          */
         public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
             this.putQueryParameter("PhysicalProcessorModels", physicalProcessorModels);
@@ -725,7 +776,11 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -734,14 +789,16 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The preemption policy that you want to apply to pay-as-you-go instances. Valid values:
-         * <p>
+         * <p>The preemption policy that you want to apply to pay-as-you-go instances. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instances are created as regular pay-as-you-go instances.</li>
+         * <li>SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The instances are created as regular pay-as-you-go instances.
-         * *   SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -750,7 +807,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The IDs of the vSwitches.
+         * <p>The IDs of the vSwitches.</p>
          */
         public Builder vSwitchId(java.util.List < String > vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachLoadBalancersRequest} extends {@link RequestModel}
  *
  * <p>DetachLoadBalancersRequest</p>
@@ -153,15 +154,16 @@ public class DetachLoadBalancersRequest extends Request {
         } 
 
         /**
-         * Specifies whether to detach the CLB instance from the scaling group in an asynchronous manner. If you detach the CLB instance from the scaling group in an asynchronous manner, the call is successful only after all operations are successful. If a specific operation fails, the call fails. We recommend that you set this parameter to true.
-         * <p>
+         * <p>Specifies whether to detach the CLB instance from the scaling group in an asynchronous manner. If you detach the CLB instance from the scaling group in an asynchronous manner, the call is successful only after all operations are successful. If a specific operation fails, the call fails. We recommend that you set this parameter to true.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: detaches the CLB instance from the scaling group in an asynchronous manner. In this case, the ID of the scaling activity is returned.</li>
+         * <li>false: does not detach the CLB instance from the scaling group in an asynchronous manner.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * Valid values:
-         * 
-         * *   true: detaches the CLB instance from the scaling group in an asynchronous manner. In this case, the ID of the scaling activity is returned.
-         * *   false: does not detach the CLB instance from the scaling group in an asynchronous manner.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -170,7 +172,10 @@ public class DetachLoadBalancersRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,13 +184,15 @@ public class DetachLoadBalancersRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove Elastic Compute Service (ECS) instances in the scaling group from the backend server groups of the CLB instance. Valid values:
-         * <p>
+         * <p>Specifies whether to remove Elastic Compute Service (ECS) instances in the scaling group from the backend server groups of the CLB instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDetach(Boolean forceDetach) {
             this.putQueryParameter("ForceDetach", forceDetach);
@@ -194,7 +201,8 @@ public class DetachLoadBalancersRequest extends Request {
         }
 
         /**
-         * The IDs of the CLB instances. You can specify up to five instance IDs.
+         * <p>The IDs of the CLB instances. You can specify up to five instance IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder loadBalancers(java.util.List < String > loadBalancers) {
             this.putQueryParameter("LoadBalancers", loadBalancers);
@@ -212,7 +220,10 @@ public class DetachLoadBalancersRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -230,7 +241,11 @@ public class DetachLoadBalancersRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1ffogfdauy0jw0****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeactivateScalingConfigurationRequest} extends {@link RequestModel}
  *
  * <p>DeactivateScalingConfigurationRequest</p>
@@ -123,7 +124,11 @@ public class DeactivateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling configuration.
+         * <p>The ID of the scaling configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc-bp1ahp2ud7qkzt2a****</p>
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);

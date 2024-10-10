@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachInstancesRequest} extends {@link RequestModel}
  *
  * <p>DetachInstancesRequest</p>
@@ -195,10 +196,11 @@ public class DetachInstancesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -207,13 +209,15 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to adjust the expected number of instances in the scaling group. Valid values:
-         * <p>
+         * <p>Specifies whether to adjust the expected number of instances in the scaling group. Valid values:</p>
+         * <ul>
+         * <li>true: After a specific number of instances are removed from the scaling group, the expected number of instances in the scaling group decreases.</li>
+         * <li>false: After a specific number of instances are removed from the scaling group, the expected number of instances in the scaling group remains unchanged.</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
-         * *   true: After a specific number of instances are removed from the scaling group, the expected number of instances in the scaling group decreases.
-         * *   false: After a specific number of instances are removed from the scaling group, the expected number of instances in the scaling group remains unchanged.
-         * 
-         * Default value: true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder decreaseDesiredCapacity(Boolean decreaseDesiredCapacity) {
             this.putQueryParameter("DecreaseDesiredCapacity", decreaseDesiredCapacity);
@@ -222,12 +226,14 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to detach the ECS instances or elastic container instances that are marked for removal from the associated load balancers, and whether to remove the private IP addresses of these instances from the IP address whitelists of the associated ApsaraDB RDS instances.
-         * <p>
+         * <p>Specifies whether to detach the ECS instances or elastic container instances that are marked for removal from the associated load balancers, and whether to remove the private IP addresses of these instances from the IP address whitelists of the associated ApsaraDB RDS instances.</p>
+         * <p>Both: detaches the ECS instances or elastic container instances that are marked for removal from the associated load balancers and removes the private IP addresses of these instances from the IP address whitelists of the associated ApsaraDB RDS instances.</p>
+         * <blockquote>
+         * <p> This parameter is not supported if you want to remove Alibaba Cloud-hosted third-party instances from a scaling group.</p>
+         * </blockquote>
          * 
-         * Both: detaches the ECS instances or elastic container instances that are marked for removal from the associated load balancers and removes the private IP addresses of these instances from the IP address whitelists of the associated ApsaraDB RDS instances.
-         * 
-         * >  This parameter is not supported if you want to remove Alibaba Cloud-hosted third-party instances from a scaling group.
+         * <strong>example:</strong>
+         * <p>both</p>
          */
         public Builder detachOption(String detachOption) {
             this.putQueryParameter("DetachOption", detachOption);
@@ -236,13 +242,15 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to ignore invalid instances when you remove a batch of instances from the scaling group. Valid values:
-         * <p>
+         * <p>Specifies whether to ignore invalid instances when you remove a batch of instances from the scaling group. Valid values:</p>
+         * <ul>
+         * <li>true: ignores invalid instances. If invalid instances exist and valid instances are removed from the scaling group, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.</li>
+         * <li>false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to remove from the scaling group, an error is reported.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: ignores invalid instances. If invalid instances exist and valid instances are removed from the scaling group, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.
-         * *   false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to remove from the scaling group, an error is reported.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreInvalidInstance(Boolean ignoreInvalidInstance) {
             this.putQueryParameter("IgnoreInvalidInstance", ignoreInvalidInstance);
@@ -251,7 +259,8 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances, elastic container instances, or Aliababa Cloud-managed third-party instances that you want to remove from a scaling group.
+         * <p>The IDs of the ECS instances, elastic container instances, or Aliababa Cloud-managed third-party instances that you want to remove from a scaling group.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -260,15 +269,18 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to trigger a lifecycle hook for scale-in purposes when ECS instances or elastic container instances are removed from the scaling group. Valid values:
-         * <p>
+         * <p>Specifies whether to trigger a lifecycle hook for scale-in purposes when ECS instances or elastic container instances are removed from the scaling group. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is not supported if you want to remove Alibaba Cloud-hosted third-party instances from a scaling group.</p>
+         * </blockquote>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * >  This parameter is not supported if you want to remove Alibaba Cloud-hosted third-party instances from a scaling group.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lifecycleHook(Boolean lifecycleHook) {
             this.putQueryParameter("LifecycleHook", lifecycleHook);
@@ -313,7 +325,11 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

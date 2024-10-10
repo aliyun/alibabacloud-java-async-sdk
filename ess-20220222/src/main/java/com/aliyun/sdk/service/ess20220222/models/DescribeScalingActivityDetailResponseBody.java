@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScalingActivityDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScalingActivityDetailResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * The details of the scaling activity. If the status of the scaling activity is Rejected, no result is displayed.
+         * <p>The details of the scaling activity. If the status of the scaling activity is Rejected, no result is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new ECS instances &quot;i-bp16t2cgmiiymeqv****&quot; are created.</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -69,7 +73,10 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B13527BF-1FBD-4334-A512-20F5E9D3FB4D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scaling activity.
+         * <p>The ID of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa-bp1c9djwrgxjyk31****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

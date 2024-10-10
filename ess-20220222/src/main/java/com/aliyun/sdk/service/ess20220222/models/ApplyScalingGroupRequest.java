@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyScalingGroupRequest} extends {@link RequestModel}
  *
  * <p>ApplyScalingGroupRequest</p>
@@ -82,7 +83,34 @@ public class ApplyScalingGroupRequest extends Request {
         } 
 
         /**
-         * The content of the configuration file.
+         * <p>The content of the configuration file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: apps/v1
+         * kind: Deployment
+         * metadata:
+         *   name: nginx-deployment
+         *   labels:
+         *     app: nginx
+         * spec:
+         *   replicas: 3
+         *   selector:
+         *     matchLabels:
+         *       app: nginx
+         *   template:
+         *     metadata:
+         *       labels:
+         *         app: nginx
+         *       annotations:
+         *         k8s.aliyun.com/eip-bandwidth: 10
+         *         k8s.aliyun.com/eci-with-eip: true
+         *     spec:
+         *       containers:
+         *       - name: nginx
+         *         image: nginx:1.14.2
+         *         ports:
+         *         - containerPort: 80</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -91,7 +119,10 @@ public class ApplyScalingGroupRequest extends Request {
         }
 
         /**
-         * Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.
+         * <p>Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YAML</p>
          */
         public Builder format(String format) {
             this.putQueryParameter("Format", format);
@@ -100,7 +131,10 @@ public class ApplyScalingGroupRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

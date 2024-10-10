@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebalanceInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>RebalanceInstancesResponseBody</p>
@@ -49,7 +50,10 @@ public class RebalanceInstancesResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class RebalanceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scaling activity.
+         * <p>The ID of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa-kjgffgdfadah****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

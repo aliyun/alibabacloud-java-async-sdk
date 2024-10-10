@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachAlbServerGroupsRequest} extends {@link RequestModel}
  *
  * <p>DetachAlbServerGroupsRequest</p>
@@ -140,7 +141,8 @@ public class DetachAlbServerGroupsRequest extends Request {
         } 
 
         /**
-         * Details of the ALB server groups.
+         * <p>Details of the ALB server groups.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder albServerGroups(java.util.List < AlbServerGroups> albServerGroups) {
             this.putQueryParameter("AlbServerGroups", albServerGroups);
@@ -149,10 +151,11 @@ public class DetachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure the idempotence of a request</a>.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -161,13 +164,15 @@ public class DetachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove the existing ECS instances from the ALB server group. Valid values:
-         * <p>
+         * <p>Specifies whether to remove the existing ECS instances from the ALB server group. Valid values:</p>
+         * <ul>
+         * <li>true: removes the existing ECS instances from the ALB server group and returns the value of <code>ScalingActivityId</code>. You can query the value of ScalingActivityId to check whether the existing ECS instances are removed from the ALB server group.</li>
+         * <li>false: does not remove the existing ECS instances from the ALB server group.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: removes the existing ECS instances from the ALB server group and returns the value of `ScalingActivityId`. You can query the value of ScalingActivityId to check whether the existing ECS instances are removed from the ALB server group.
-         * *   false: does not remove the existing ECS instances from the ALB server group.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDetach(Boolean forceDetach) {
             this.putQueryParameter("ForceDetach", forceDetach);
@@ -185,7 +190,11 @@ public class DetachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.
+         * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +212,11 @@ public class DetachAlbServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -218,6 +231,12 @@ public class DetachAlbServerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DetachAlbServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DetachAlbServerGroupsRequest</p>
+     */
     public static class AlbServerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlbServerGroupId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -259,7 +278,11 @@ public class DetachAlbServerGroupsRequest extends Request {
             private Integer port; 
 
             /**
-             * The ID of the ALB server group.
+             * <p>The ID of the ALB server group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-ddwb0y0g6y9bjm****</p>
              */
             public Builder albServerGroupId(String albServerGroupId) {
                 this.albServerGroupId = albServerGroupId;
@@ -267,7 +290,11 @@ public class DetachAlbServerGroupsRequest extends Request {
             }
 
             /**
-             * The port number used by the ECS instances in the ALB server group.
+             * <p>The port number used by the ECS instances in the ALB server group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;

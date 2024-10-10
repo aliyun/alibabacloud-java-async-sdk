@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateScheduledTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateScheduledTaskRequest</p>
@@ -279,7 +280,10 @@ public class CreateScheduledTaskRequest extends Request {
         } 
 
         /**
-         * The description of the scheduled task. The description must be 2 to 200 characters in length.
+         * <p>The description of the scheduled task. The description must be 2 to 200 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test scheduled task.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -288,10 +292,13 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The expected number of instances in the scaling group if you specify the ScalingGroupId parameter.
-         * <p>
+         * <p>The expected number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         * <blockquote>
+         * <p>You must specify the <code>DesiredCapacity</code> parameter when you create a scaling group.</p>
+         * </blockquote>
          * 
-         * > You must specify the `DesiredCapacity` parameter when you create a scaling group.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder desiredCapacity(Integer desiredCapacity) {
             this.putQueryParameter("DesiredCapacity", desiredCapacity);
@@ -300,10 +307,11 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The time period during which the failed scheduled task can be retried. Unit: seconds. Valid values: 0 to 1800.
-         * <p>
+         * <p>The time period during which the failed scheduled task can be retried. Unit: seconds. Valid values: 0 to 1800.</p>
+         * <p>Default value: 600.</p>
          * 
-         * Default value: 600.
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder launchExpirationTime(Integer launchExpirationTime) {
             this.putQueryParameter("LaunchExpirationTime", launchExpirationTime);
@@ -312,11 +320,14 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The point in time at which the scheduled task is triggered. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot enter a point in time that is later than 90 days from the point in time at which the scheduled task is created.
-         * <p>
+         * <p>The point in time at which the scheduled task is triggered. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot enter a point in time that is later than 90 days from the point in time at which the scheduled task is created.</p>
+         * <ul>
+         * <li>If you specify the <code>RecurrenceType</code> parameter, the scheduled task is repeatedly executed at the point in time that is specified by the LaunchTime parameter.</li>
+         * <li>If you do not specify the <code>RecurrenceType</code> parameter, the task is executed only once at the point in time that is specified by the LaunchTime parameter.</li>
+         * </ul>
          * 
-         * *   If you specify the `RecurrenceType` parameter, the scheduled task is repeatedly executed at the point in time that is specified by the LaunchTime parameter.
-         * *   If you do not specify the `RecurrenceType` parameter, the task is executed only once at the point in time that is specified by the LaunchTime parameter.
+         * <strong>example:</strong>
+         * <p>2014-08-17T16:52Z</p>
          */
         public Builder launchTime(String launchTime) {
             this.putQueryParameter("LaunchTime", launchTime);
@@ -325,7 +336,10 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The maximum number of instances in the scaling group if you specify the ScalingGroupId parameter.
+         * <p>The maximum number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxValue(Integer maxValue) {
             this.putQueryParameter("MaxValue", maxValue);
@@ -334,7 +348,10 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The minimum number of instances in the scaling group if you specify the ScalingGroupId parameter.
+         * <p>The minimum number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder minValue(Integer minValue) {
             this.putQueryParameter("MinValue", minValue);
@@ -361,10 +378,11 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The end time of the scheduled task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format.
-         * <p>
+         * <p>The end time of the scheduled task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format.</p>
+         * <p>The time must be in UTC. You cannot enter a point in time that is later than 365 days from the point in time at which the scheduled task is created.</p>
          * 
-         * The time must be in UTC. You cannot enter a point in time that is later than 365 days from the point in time at which the scheduled task is created.
+         * <strong>example:</strong>
+         * <p>2014-08-17T16:55Z</p>
          */
         public Builder recurrenceEndTime(String recurrenceEndTime) {
             this.putQueryParameter("RecurrenceEndTime", recurrenceEndTime);
@@ -373,15 +391,17 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The interval at which the scheduled task is repeated. Valid values:
-         * <p>
+         * <p>The interval at which the scheduled task is repeated. Valid values:</p>
+         * <ul>
+         * <li>Daily: The scheduled task is executed once every specified number of days.</li>
+         * <li>Weekly: The scheduled task is executed on each specified day of the week.</li>
+         * <li>Monthly: The scheduled task is executed on each specified day of the month.</li>
+         * <li>Cron: The scheduled task is executed based on the specified cron expression.</li>
+         * </ul>
+         * <p>You must specify the <code>RecurrenceType</code> and <code>RecurrenceValue</code> parameters at the same time.</p>
          * 
-         * *   Daily: The scheduled task is executed once every specified number of days.
-         * *   Weekly: The scheduled task is executed on each specified day of the week.
-         * *   Monthly: The scheduled task is executed on each specified day of the month.
-         * *   Cron: The scheduled task is executed based on the specified cron expression.
-         * 
-         * You must specify the `RecurrenceType` and `RecurrenceValue` parameters at the same time.
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder recurrenceType(String recurrenceType) {
             this.putQueryParameter("RecurrenceType", recurrenceType);
@@ -390,15 +410,17 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The number of recurrences of the scheduled task.
-         * <p>
+         * <p>The number of recurrences of the scheduled task.</p>
+         * <ul>
+         * <li>If you set the <code>RecurrenceType</code> parameter to <code>Daily</code>, you can specify only one value for this parameter. Valid values: 1 to 31.</li>
+         * <li>If you set the <code>RecurrenceType</code> parameter to <code>Weekly</code>, you can specify multiple values for this parameter. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.``</li>
+         * <li>If you set the <code>RecurrenceType</code> parameter to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A.</li>
+         * <li>If you set the <code>RecurrenceType</code> parameter to <code>Cron</code>, you can specify a cron expression. A cron expression is written in UTC time and consists of the following fields: minute, hour, day, month, and week. The expression can contain the letters L and W and the following wildcard characters: commas (,), question marks (?), hyphens (-), asterisks (*), number signs (#), and forward slashes (/).</li>
+         * </ul>
+         * <p>You must specify both the <code>RecurrenceType</code> parameter and the <code>RecurrenceValue</code> parameter.</p>
          * 
-         * *   If you set the `RecurrenceType` parameter to `Daily`, you can specify only one value for this parameter. Valid values: 1 to 31.
-         * *   If you set the `RecurrenceType` parameter to `Weekly`, you can specify multiple values for this parameter. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6.``
-         * *   If you set the `RecurrenceType` parameter to `Monthly`, you can specify two values in the `A-B` format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A.
-         * *   If you set the `RecurrenceType` parameter to `Cron`, you can specify a cron expression. A cron expression is written in UTC time and consists of the following fields: minute, hour, day, month, and week. The expression can contain the letters L and W and the following wildcard characters: commas (,), question marks (?), hyphens (-), asterisks (\*), number signs (#), and forward slashes (/).
-         * 
-         * You must specify both the `RecurrenceType` parameter and the `RecurrenceValue` parameter.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recurrenceValue(String recurrenceValue) {
             this.putQueryParameter("RecurrenceValue", recurrenceValue);
@@ -407,7 +429,11 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The region ID of the scheduled task.
+         * <p>The region ID of the scheduled task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -425,10 +451,11 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group. If you specify this parameter, the number of instances in the scaling group will be changed when the scheduled task is triggered.
-         * <p>
+         * <p>The ID of the scaling group. If you specify this parameter, the number of instances in the scaling group will be changed when the scheduled task is triggered.</p>
+         * <p>If you specify <code>ScalingGroupId</code>, you must also specify at least one of the following parameters: <code>MinValue</code>, <code>MaxValue</code>, and <code>DesiredCapacity</code>. You cannot specify <code>ScheduledAction</code> and <code>ScalingGroupId</code> at the same time.</p>
          * 
-         * If you specify `ScalingGroupId`, you must also specify at least one of the following parameters: `MinValue`, `MaxValue`, and `DesiredCapacity`. You cannot specify `ScheduledAction` and `ScalingGroupId` at the same time.
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -437,10 +464,11 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The scaling rule that you want to execute when the scheduled task is triggered. Specify the unique identifier of the scaling rule.
-         * <p>
+         * <p>The scaling rule that you want to execute when the scheduled task is triggered. Specify the unique identifier of the scaling rule.</p>
+         * <p>If you specify <code>ScheduledAction</code>, the scheduled task uses an existing scaling rule. You cannot specify <code>ScheduledAction</code> and <code>ScalingGroupId</code> at the same time.</p>
          * 
-         * If you specify `ScheduledAction`, the scheduled task uses an existing scaling rule. You cannot specify `ScheduledAction` and `ScalingGroupId` at the same time.
+         * <strong>example:</strong>
+         * <p>ari:acs:ess:cn-hangzhou:140692647****:scalingrule/asr-bp12tcnol686y1ik****</p>
          */
         public Builder scheduledAction(String scheduledAction) {
             this.putQueryParameter("ScheduledAction", scheduledAction);
@@ -449,10 +477,11 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * The name of the scheduled task. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit. The name of the scheduled task must be unique in the region and within the Alibaba Cloud account.
-         * <p>
+         * <p>The name of the scheduled task. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit. The name of the scheduled task must be unique in the region and within the Alibaba Cloud account.</p>
+         * <p>If you do not specify this parameter, the value of the <code>ScheduledTaskId</code> parameter is used.</p>
          * 
-         * If you do not specify this parameter, the value of the `ScheduledTaskId` parameter is used.
+         * <strong>example:</strong>
+         * <p>scheduled****</p>
          */
         public Builder scheduledTaskName(String scheduledTaskName) {
             this.putQueryParameter("ScheduledTaskName", scheduledTaskName);
@@ -461,13 +490,15 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the scheduled task.
-         * <p>
+         * <p>Specifies whether to enable the scheduled task.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder taskEnabled(Boolean taskEnabled) {
             this.putQueryParameter("TaskEnabled", taskEnabled);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLifecycleHooksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLifecycleHooksResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the lifecycle hooks.
+         * <p>The details of the lifecycle hooks.</p>
          */
         public Builder lifecycleHooks(java.util.List < LifecycleHooks> lifecycleHooks) {
             this.lifecycleHooks = lifecycleHooks;
@@ -93,7 +94,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +105,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of lifecycle hooks.
+         * <p>The total number of lifecycle hooks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLifecycleHooksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLifecycleHooksResponseBody</p>
+     */
     public static class LifecycleHooks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultResult")
         private String defaultResult;
@@ -253,7 +272,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             private String scalingGroupId; 
 
             /**
-             * The next action that is performed after the lifecycle hook times out.
+             * <p>The next action that is performed after the lifecycle hook times out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTINUE</p>
              */
             public Builder defaultResult(String defaultResult) {
                 this.defaultResult = defaultResult;
@@ -261,7 +283,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult.
+             * <p>The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder heartbeatTimeout(Integer heartbeatTimeout) {
                 this.heartbeatTimeout = heartbeatTimeout;
@@ -269,7 +294,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the lifecycle hook.
+             * <p>The ID of the lifecycle hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ash-bp19d1032y9kij96****</p>
              */
             public Builder lifecycleHookId(String lifecycleHookId) {
                 this.lifecycleHookId = lifecycleHookId;
@@ -277,7 +305,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the lifecycle hook.
+             * <p>The name of the lifecycle hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lifecyclehook****</p>
              */
             public Builder lifecycleHookName(String lifecycleHookName) {
                 this.lifecycleHookName = lifecycleHookName;
@@ -285,11 +316,14 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the lifecycle hook. Valid values:
-             * <p>
+             * <p>The status of the lifecycle hook. Valid values:</p>
+             * <ul>
+             * <li>Active: The lifecycle hook is enabled.</li>
+             * <li>InActive: The lifecycle hook is disabled.</li>
+             * </ul>
              * 
-             * *   Active: The lifecycle hook is enabled.
-             * *   InActive: The lifecycle hook is disabled.
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder lifecycleHookStatus(String lifecycleHookStatus) {
                 this.lifecycleHookStatus = lifecycleHookStatus;
@@ -297,7 +331,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling activity to which the lifecycle hook applies.
+             * <p>The type of the scaling activity to which the lifecycle hook applies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SCALE_OUT</p>
              */
             public Builder lifecycleTransition(String lifecycleTransition) {
                 this.lifecycleTransition = lifecycleTransition;
@@ -305,22 +342,25 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter is in one of the following formats:
-             * <p>
+             * <p>The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter is in one of the following formats:</p>
+             * <ul>
+             * <li>If you did not specify this parameter, the return value is in the <code>acs:ess:{region-id}:{account-id}:null/null</code> format.</li>
+             * <li>If you specified a Message Service (MNS) queue as the notification recipient, the return value is in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
+             * <li>If you specified an MNS topic as the notification recipient, the return value is in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
+             * <li>If you specified a CloudOps Orchestration Service (OOS) template as the notification recipient, the return value is in the <code>acs:oos:{region-id}:{account-id}:template/{templatename}</code> format.</li>
+             * <li>If you specified an event bus as the notification recipient, the return value is in the <code>acs:eventbridge:{region-id}:{account-id}:eventbus/default</code> format.</li>
+             * </ul>
+             * <p>The variables in the preceding formats have the following meanings:</p>
+             * <ul>
+             * <li>region-id: the region ID of your scaling group.</li>
+             * <li>account-id: the ID of your Alibaba Cloud.</li>
+             * <li>queuename: the name of the MNS queue.</li>
+             * <li>topicname: the name of the MNS topic.</li>
+             * <li>templatename: the name of the OOS template.</li>
+             * </ul>
              * 
-             * *   If you did not specify this parameter, the return value is in the `acs:ess:{region-id}:{account-id}:null/null` format.
-             * *   If you specified a Message Service (MNS) queue as the notification recipient, the return value is in the `acs:mns:{region-id}:{account-id}:queue/{queuename}` format.
-             * *   If you specified an MNS topic as the notification recipient, the return value is in the `acs:mns:{region-id}:{account-id}:topic/{topicname}` format.
-             * *   If you specified a CloudOps Orchestration Service (OOS) template as the notification recipient, the return value is in the `acs:oos:{region-id}:{account-id}:template/{templatename}` format.
-             * *   If you specified an event bus as the notification recipient, the return value is in the `acs:eventbridge:{region-id}:{account-id}:eventbus/default` format.
-             * 
-             * The variables in the preceding formats have the following meanings:
-             * 
-             * *   region-id: the region ID of your scaling group.
-             * *   account-id: the ID of your Alibaba Cloud.
-             * *   queuename: the name of the MNS queue.
-             * *   topicname: the name of the MNS topic.
-             * *   templatename: the name of the OOS template.
+             * <strong>example:</strong>
+             * <p>acs:ess:cn-beijing:161456884340****:null/null</p>
              */
             public Builder notificationArn(String notificationArn) {
                 this.notificationArn = notificationArn;
@@ -328,7 +368,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The fixed string that is included in a notification that Auto Scaling sends when the lifecycle hook takes effect.
+             * <p>The fixed string that is included in a notification that Auto Scaling sends when the lifecycle hook takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Lifecycle Hook.</p>
              */
             public Builder notificationMetadata(String notificationMetadata) {
                 this.notificationMetadata = notificationMetadata;
@@ -336,7 +379,10 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scaling group.
+             * <p>The ID of the scaling group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-bp1igpak5ft1flyp****</p>
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;

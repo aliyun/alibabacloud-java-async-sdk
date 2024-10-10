@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertConfigurationRequest} extends {@link RequestModel}
  *
  * <p>DescribeAlertConfigurationRequest</p>
@@ -106,7 +107,11 @@ public class DescribeAlertConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +129,11 @@ public class DescribeAlertConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

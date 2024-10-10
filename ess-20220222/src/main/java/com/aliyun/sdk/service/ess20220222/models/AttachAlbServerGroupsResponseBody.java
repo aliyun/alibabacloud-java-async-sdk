@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachAlbServerGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>AttachAlbServerGroupsResponseBody</p>
@@ -49,7 +50,10 @@ public class AttachAlbServerGroupsResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,10 +61,13 @@ public class AttachAlbServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scaling activity. During the scaling activity, the ALB server group is attached to the scaling group and the existing ECS instances or elastic container instances in the scaling group are added to the ALB server group.
-         * <p>
+         * <p>The ID of the scaling activity. During the scaling activity, the ALB server group is attached to the scaling group and the existing ECS instances or elastic container instances in the scaling group are added to the ALB server group.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if you set <code>ForceAttach</code> to <code>true</code>.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned only if you set `ForceAttach` to `true`.
+         * <strong>example:</strong>
+         * <p>asa-2ze6wxj8vsohn6j9****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

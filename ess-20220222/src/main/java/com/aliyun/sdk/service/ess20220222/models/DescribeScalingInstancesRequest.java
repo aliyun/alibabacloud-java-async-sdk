@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScalingInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeScalingInstancesRequest</p>
@@ -265,12 +266,15 @@ public class DescribeScalingInstancesRequest extends Request {
         } 
 
         /**
-         * The instance creation method. Valid values:
-         * <p>
+         * <p>The instance creation method. Valid values:</p>
+         * <ul>
+         * <li>AutoCreated: The ECS instances are created by Auto Scaling based on the instance configuration source.</li>
+         * <li>Attached: The ECS instances are manually added to the scaling group.</li>
+         * <li>Managed: The Alibaba Cloud-managed third-party instances are manually added to the scaling group.</li>
+         * </ul>
          * 
-         * *   AutoCreated: The ECS instances are created by Auto Scaling based on the instance configuration source.
-         * *   Attached: The ECS instances are manually added to the scaling group.
-         * *   Managed: The Alibaba Cloud-managed third-party instances are manually added to the scaling group.
+         * <strong>example:</strong>
+         * <p>AutoCreated</p>
          */
         public Builder creationType(String creationType) {
             this.putQueryParameter("CreationType", creationType);
@@ -279,7 +283,7 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The instance creation methods. If you specify this parameter, you cannot specify CreationType.
+         * <p>The instance creation methods. If you specify this parameter, you cannot specify CreationType.</p>
          */
         public Builder creationTypes(java.util.List < String > creationTypes) {
             this.putQueryParameter("CreationTypes", creationTypes);
@@ -288,17 +292,19 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The health status of the ECS instance in the scaling group. If an ECS instance is not in the Running state, the instance is considered unhealthy. Valid values:
-         * <p>
+         * <p>The health status of the ECS instance in the scaling group. If an ECS instance is not in the Running state, the instance is considered unhealthy. Valid values:</p>
+         * <ul>
+         * <li>Healthy</li>
+         * <li>Unhealthy</li>
+         * </ul>
+         * <p>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and then releases the automatically created instances among the unhealthy instances.</p>
+         * <p>Unhealthy ECS instances that are manually added to the scaling group are released based on the management mode of the lifecycles of the instances. If the lifecycles of the ECS instances are not managed by the scaling group, Auto Scaling removes the instances from the scaling group but does not release the instances. If the lifecycles of the ECS instances are managed by the scaling group, Auto Scaling removes the instances from the scaling group and releases the instances.</p>
+         * <blockquote>
+         * <p> Make sure that you have sufficient balance within your Alibaba Cloud account. If your Alibaba Cloud account has an overdue payment, all pay-as-you-go ECS instances, including preemptible instances, may be stopped or even released. For information about how the status of ECS instances changes when you have an overdue payment in your Alibaba Cloud account, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</p>
+         * </blockquote>
          * 
-         * *   Healthy
-         * *   Unhealthy
-         * 
-         * Auto Scaling automatically removes unhealthy ECS instances from the scaling group and then releases the automatically created instances among the unhealthy instances.
-         * 
-         * Unhealthy ECS instances that are manually added to the scaling group are released based on the management mode of the lifecycles of the instances. If the lifecycles of the ECS instances are not managed by the scaling group, Auto Scaling removes the instances from the scaling group but does not release the instances. If the lifecycles of the ECS instances are managed by the scaling group, Auto Scaling removes the instances from the scaling group and releases the instances.
-         * 
-         * >  Make sure that you have sufficient balance within your Alibaba Cloud account. If your Alibaba Cloud account has an overdue payment, all pay-as-you-go ECS instances, including preemptible instances, may be stopped or even released. For information about how the status of ECS instances changes when you have an overdue payment in your Alibaba Cloud account, see [Overdue payments](~~170589~~).
+         * <strong>example:</strong>
+         * <p>Healthy</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -307,10 +313,8 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances.
-         * <p>
-         * 
-         * The IDs of inactive instances are not displayed in the query result, and no errors are returned.
+         * <p>The IDs of the ECS instances.</p>
+         * <p>The IDs of inactive instances are not displayed in the query result, and no errors are returned.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -319,17 +323,20 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The lifecycle status of the ECS instance in the scaling group. Valid values:
-         * <p>
+         * <p>The lifecycle status of the ECS instance in the scaling group. Valid values:</p>
+         * <ul>
+         * <li>InService: The ECS instance is added to the scaling group and provides services as expected.</li>
+         * <li>Pending: The ECS instance is being added to the scaling group. When an ECS instance is being added to the scaling group, Auto Scaling also adds the instance to the backend server groups of the attached load balancers and adds the private IP address of the instance to the IP address whitelists of the attached ApsaraDB RDS instances.</li>
+         * <li>Pending:Wait: The ECS instance is waiting to be added to the scaling group. If a scale-out lifecycle hook is in effect, the ECS instance remains in the Pending:Wait state until the timeout period for the lifecycle hook expires.</li>
+         * <li>Protected: The ECS instance is protected. Protected ECS instances can continue to provide services as expected, but Auto Scaling does not manage the lifecycles of the ECS instances. You must manually manage the lifecycles of the ECS instances.</li>
+         * <li>Standby: The ECS instance is on standby. Standby ECS instances do not provide services as expected, and the weights of the ECS instances as backend servers are reset to zero. Auto Scaling does not manage the lifecycles of the ECS instances. Therefore, you must manually manage the lifecycles of the ECS instances.</li>
+         * <li>Stopped: The ECS instance is stopped. Stopped ECS instances no longer provide services.</li>
+         * <li>Removing: The ECS instance is being removed from the scaling group. When an ECS instance is being removed from the scaling group, Auto Scaling also removes the instance from the backend server groups of the attached load balancers and removes the private IP address of the instance from the IP address whitelists of the attached ApsaraDB RDS instances.</li>
+         * <li>Removing:Wait: The ECS instance is waiting to be removed from the scaling group. If a scale-in lifecycle hook is in effect, the ECS instance remains in the Removing:Wait state until the timeout period for the lifecycle hook expires.</li>
+         * </ul>
          * 
-         * *   InService: The ECS instance is added to the scaling group and provides services as expected.
-         * *   Pending: The ECS instance is being added to the scaling group. When an ECS instance is being added to the scaling group, Auto Scaling also adds the instance to the backend server groups of the attached load balancers and adds the private IP address of the instance to the IP address whitelists of the attached ApsaraDB RDS instances.
-         * *   Pending:Wait: The ECS instance is waiting to be added to the scaling group. If a scale-out lifecycle hook is in effect, the ECS instance remains in the Pending:Wait state until the timeout period for the lifecycle hook expires.
-         * *   Protected: The ECS instance is protected. Protected ECS instances can continue to provide services as expected, but Auto Scaling does not manage the lifecycles of the ECS instances. You must manually manage the lifecycles of the ECS instances.
-         * *   Standby: The ECS instance is on standby. Standby ECS instances do not provide services as expected, and the weights of the ECS instances as backend servers are reset to zero. Auto Scaling does not manage the lifecycles of the ECS instances. Therefore, you must manually manage the lifecycles of the ECS instances.
-         * *   Stopped: The ECS instance is stopped. Stopped ECS instances no longer provide services.
-         * *   Removing: The ECS instance is being removed from the scaling group. When an ECS instance is being removed from the scaling group, Auto Scaling also removes the instance from the backend server groups of the attached load balancers and removes the private IP address of the instance from the IP address whitelists of the attached ApsaraDB RDS instances.
-         * *   Removing:Wait: The ECS instance is waiting to be removed from the scaling group. If a scale-in lifecycle hook is in effect, the ECS instance remains in the Removing:Wait state until the timeout period for the lifecycle hook expires.
+         * <strong>example:</strong>
+         * <p>InService</p>
          */
         public Builder lifecycleState(String lifecycleState) {
             this.putQueryParameter("LifecycleState", lifecycleState);
@@ -338,7 +345,7 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The lifecycle status of the ECS instances in the scaling group. You can specify only one of LifecycleStates and LifecycleState at a time. We recommend that you specify this parameter.
+         * <p>The lifecycle status of the ECS instances in the scaling group. You can specify only one of LifecycleStates and LifecycleState at a time. We recommend that you specify this parameter.</p>
          */
         public Builder lifecycleStates(java.util.List < String > lifecycleStates) {
             this.putQueryParameter("LifecycleStates", lifecycleStates);
@@ -365,10 +372,11 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -377,10 +385,11 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
-         * <p>
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -389,7 +398,11 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -416,7 +429,10 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling activity.
+         * <p>The ID of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa-bp1c9djwrgxjyk31****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.putQueryParameter("ScalingActivityId", scalingActivityId);
@@ -425,7 +441,10 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling configuration.
+         * <p>The ID of the scaling configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc-bp1i65jd06v04vdh****</p>
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);
@@ -434,7 +453,10 @@ public class DescribeScalingInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

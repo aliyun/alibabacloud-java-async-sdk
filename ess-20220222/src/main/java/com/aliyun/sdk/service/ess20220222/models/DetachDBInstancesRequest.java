@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachDBInstancesRequest} extends {@link RequestModel}
  *
  * <p>DetachDBInstancesRequest</p>
@@ -153,10 +154,11 @@ public class DetachDBInstancesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -165,7 +167,8 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the ApsaraDB RDS instances. You can specify up to five ApsaraDB RDS instances.
+         * <p>The IDs of the ApsaraDB RDS instances. You can specify up to five ApsaraDB RDS instances.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstances(java.util.List < String > DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
@@ -174,13 +177,15 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove the private IP addresses of the existing instances in the scaling group from the IP address whitelist of the ApsaraDB RDS instance. Valid values:
-         * <p>
+         * <p>Specifies whether to remove the private IP addresses of the existing instances in the scaling group from the IP address whitelist of the ApsaraDB RDS instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDetach(Boolean forceDetach) {
             this.putQueryParameter("ForceDetach", forceDetach);
@@ -198,7 +203,10 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -207,10 +215,11 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * This parameter takes effect only for databases whose AttachMode is set to SecurityGroup. If you set this parameter to true, Auto Scaling removes the security group ID of the active scaling configuration from the security group whitelist of the database that you want to detach from the scaling group.
-         * <p>
+         * <p>This parameter takes effect only for databases whose AttachMode is set to SecurityGroup. If you set this parameter to true, Auto Scaling removes the security group ID of the active scaling configuration from the security group whitelist of the database that you want to detach from the scaling group.</p>
+         * <p>Default value: false.</p>
          * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder removeSecurityGroup(Boolean removeSecurityGroup) {
             this.putQueryParameter("RemoveSecurityGroup", removeSecurityGroup);
@@ -228,7 +237,11 @@ public class DetachDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

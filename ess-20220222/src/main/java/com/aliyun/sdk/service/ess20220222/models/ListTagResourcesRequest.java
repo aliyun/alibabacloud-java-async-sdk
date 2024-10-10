@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -139,7 +140,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The token that determines the start point of the next query.
+         * <p>The token that determines the start point of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -157,7 +161,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call the [DescribeRegions](~~2679950~~) operation to query the most recent region list.
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -166,7 +174,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.
+         * <p>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -184,7 +192,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to scalinggroup.
+         * <p>The resource type. Set the value to scalinggroup.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scalinggroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -193,7 +205,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Details of the tags.
+         * <p>Details of the tags.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -208,6 +220,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -247,14 +265,16 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. The key is used to perform an exact match of Auto Scaling resources. The key must be 1 to 128 characters in length.
-             * <p>
+             * <p>The key of the tag. The key is used to perform an exact match of Auto Scaling resources. The key must be 1 to 128 characters in length.</p>
+             * <p><code>Tags</code> is used to perform an exact match of Auto Scaling resources to which the specified tags are added. Specify a tag in the key-value pair format.</p>
+             * <ul>
+             * <li>If you specify only <code>Tags.Key</code>, all resources whose tags contain the specified tag key are returned.</li>
+             * <li>If you specify only <code>Tags.Value</code>, the <code>MissingParameter.TagKey</code> error is reported.</li>
+             * <li>If you specify multiple key-value pairs at the same time, only Auto Scaling resources that match all the tag keys and tag values are returned.</li>
+             * </ul>
              * 
-             * `Tags` is used to perform an exact match of Auto Scaling resources to which the specified tags are added. Specify a tag in the key-value pair format.
-             * 
-             * *   If you specify only `Tags.Key`, all resources whose tags contain the specified tag key are returned.
-             * *   If you specify only `Tags.Value`, the `MissingParameter.TagKey` error is reported.
-             * *   If you specify multiple key-value pairs at the same time, only Auto Scaling resources that match all the tag keys and tag values are returned.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -262,7 +282,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag. The value is used to perform an exact match of Auto Scaling resources. The value can be up to 128 characters in length.
+             * <p>The value of the tag. The value is used to perform an exact match of Auto Scaling resources. The value can be up to 128 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

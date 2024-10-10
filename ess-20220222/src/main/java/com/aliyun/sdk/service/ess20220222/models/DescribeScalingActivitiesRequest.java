@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScalingActivitiesRequest} extends {@link RequestModel}
  *
  * <p>DescribeScalingActivitiesRequest</p>
@@ -222,10 +223,11 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -234,10 +236,11 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -246,7 +249,11 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group to which the scaling activity that you want to query belongs.
+         * <p>The region ID of the scaling group to which the scaling activity that you want to query belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,10 +280,10 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The IDs of the scaling activities that you want to query.
-         * <p>
-         * 
-         * > When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.
+         * <p>The IDs of the scaling activities that you want to query.</p>
+         * <blockquote>
+         * <p>When you call this operation, you must specify one of the <code>ScalingGroupId</code> and <code>ScalingActivityId.N</code> parameters. Otherwise, an error is reported.</p>
+         * </blockquote>
          */
         public Builder scalingActivityIds(java.util.List < String > scalingActivityIds) {
             this.putQueryParameter("ScalingActivityIds", scalingActivityIds);
@@ -285,10 +292,13 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
-         * <p>
+         * <p>The ID of the scaling group.</p>
+         * <blockquote>
+         * <p>When you call this operation, you must specify one of the <code>ScalingGroupId</code> and <code>ScalingActivityId.N</code> parameters. Otherwise, an error is reported.</p>
+         * </blockquote>
          * 
-         * > When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -297,14 +307,17 @@ public class DescribeScalingActivitiesRequest extends Request {
         }
 
         /**
-         * The status of the scaling activity. Valid values:
-         * <p>
+         * <p>The status of the scaling activity. Valid values:</p>
+         * <ul>
+         * <li>Successful: The scaling activity is successful.</li>
+         * <li>Warning: The scaling activity is partially successful.</li>
+         * <li>Failed: The scaling activity failed.</li>
+         * <li>InProgress: The scaling activity is in progress.</li>
+         * <li>Rejected: The request to trigger the scaling activity is rejected.</li>
+         * </ul>
          * 
-         * *   Successful: The scaling activity is successful.
-         * *   Warning: The scaling activity is partially successful.
-         * *   Failed: The scaling activity failed.
-         * *   InProgress: The scaling activity is in progress.
-         * *   Rejected: The request to trigger the scaling activity is rejected.
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder statusCode(String statusCode) {
             this.putQueryParameter("StatusCode", statusCode);

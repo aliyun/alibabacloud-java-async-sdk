@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RecordLifecycleActionHeartbeatRequest} extends {@link RequestModel}
  *
  * <p>RecordLifecycleActionHeartbeatRequest</p>
@@ -157,7 +158,10 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,12 +179,12 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * The time window during which the desired ECS instance stays in a Pending state. When the time window ends, Auto Scaling executes the default action. Valid values: 30 to 21600. Unit: seconds.
-         * <p>
+         * <p>The time window during which the desired ECS instance stays in a Pending state. When the time window ends, Auto Scaling executes the default action. Valid values: 30 to 21600. Unit: seconds.</p>
+         * <p>After you create a lifecycle hook, you can call this operation to extend the time window during which the desired ECS instance stays in a Pending state. You can also call the <a href="https://help.aliyun.com/document_detail/459335.html">CompleteLifecycleAction</a> operation to remove the desired ECS instance from a Pending state ahead of schedule.</p>
+         * <p>Default value: 600.</p>
          * 
-         * After you create a lifecycle hook, you can call this operation to extend the time window during which the desired ECS instance stays in a Pending state. You can also call the [CompleteLifecycleAction](~~459335~~) operation to remove the desired ECS instance from a Pending state ahead of schedule.
-         * 
-         * Default value: 600.
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder heartbeatTimeout(Integer heartbeatTimeout) {
             this.putQueryParameter("heartbeatTimeout", heartbeatTimeout);
@@ -189,10 +193,11 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * The action token of the lifecycle hook. You can obtain the token from the details page of the Message Service (MNS) queue specified for the lifecycle hook when the desired ECS instance enters a Pending state.\
-         * <p>
-         * You can also call the [DescribeLifecycleActions](~~459333~~) operation to obtain the action token of the lifecycle hook.\
-         * If you specified an MNS topic for the lifecycle hook, you can obtain the token from the MNS topic.
+         * <p>The action token of the lifecycle hook. You can obtain the token from the details page of the Message Service (MNS) queue specified for the lifecycle hook when the desired ECS instance enters a Pending state.<br>You can also call the <a href="https://help.aliyun.com/document_detail/459333.html">DescribeLifecycleActions</a> operation to obtain the action token of the lifecycle hook.<br>If you specified an MNS topic for the lifecycle hook, you can obtain the token from the MNS topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F324B880-900E-4968-85DD-81691113****</p>
          */
         public Builder lifecycleActionToken(String lifecycleActionToken) {
             this.putQueryParameter("lifecycleActionToken", lifecycleActionToken);
@@ -201,7 +206,11 @@ public class RecordLifecycleActionHeartbeatRequest extends Request {
         }
 
         /**
-         * The ID of the lifecycle hook.
+         * <p>The ID of the lifecycle hook.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ash-bp1fxuqyi98w0aib****</p>
          */
         public Builder lifecycleHookId(String lifecycleHookId) {
             this.putQueryParameter("lifecycleHookId", lifecycleHookId);

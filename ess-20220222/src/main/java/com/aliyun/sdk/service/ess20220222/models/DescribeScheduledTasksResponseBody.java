@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScheduledTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScheduledTasksResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The information collection of the scheduled tasks.
+         * <p>The information collection of the scheduled tasks.</p>
          */
         public Builder scheduledTasks(java.util.List < ScheduledTasks> scheduledTasks) {
             this.scheduledTasks = scheduledTasks;
@@ -117,7 +127,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of scheduled tasks.
+         * <p>The total number of scheduled tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScheduledTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScheduledTasksResponseBody</p>
+     */
     public static class ScheduledTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -313,7 +332,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             private Boolean taskEnabled; 
 
             /**
-             * The description of the scheduled task.
+             * <p>The description of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test scheduled task.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -321,7 +343,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The expected number of instances in the scaling group. If you set `Scaling Method` to `Configure Number of Instances in Scaling Group`, you can specify this parameter.
+             * <p>The expected number of instances in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder desiredCapacity(Integer desiredCapacity) {
                 this.desiredCapacity = desiredCapacity;
@@ -329,7 +354,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time window during which the scheduled task can be retried. Unit: seconds. Valid values: 0 to 21600.
+             * <p>The time window during which the scheduled task can be retried. Unit: seconds. Valid values: 0 to 21600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder launchExpirationTime(Integer launchExpirationTime) {
                 this.launchExpirationTime = launchExpirationTime;
@@ -337,7 +365,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time at which the scheduled task is triggered.
+             * <p>The point in time at which the scheduled task is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-08-18T10:52Z</p>
              */
             public Builder launchTime(String launchTime) {
                 this.launchTime = launchTime;
@@ -345,7 +376,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of instances that must be contained in the scaling group. If you set `Scaling Method` to `Configure Number of Instances in Scaling Group`, you can specify this parameter.
+             * <p>The maximum number of instances that must be contained in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -353,7 +387,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of instances that must be contained in the scaling group. If you set `Scaling Method` to `Configure Number of Instances in Scaling Group`, you can specify this parameter.
+             * <p>The minimum number of instances that must be contained in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -361,7 +398,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the recurrence of the scheduled task.
+             * <p>The end time of the recurrence of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2014-08-20T16:55Z</p>
              */
             public Builder recurrenceEndTime(String recurrenceEndTime) {
                 this.recurrenceEndTime = recurrenceEndTime;
@@ -369,7 +409,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The recurring interval of the scheduled task.
+             * <p>The recurring interval of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -377,7 +420,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The frequency of recurrence of the scheduled task.
+             * <p>The frequency of recurrence of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recurrenceValue(String recurrenceValue) {
                 this.recurrenceValue = recurrenceValue;
@@ -385,7 +431,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scaling group to which the scheduled task belongs.
+             * <p>The ID of the scaling group to which the scheduled task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-bp1bo5tca4m56nap****</p>
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -393,7 +442,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The scaling rule of the scheduled task. A value is returned for this parameter only after you specify ScheduledActions.
+             * <p>The scaling rule of the scheduled task. A value is returned for this parameter only after you specify ScheduledActions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ari:acs:ess:cn-hangzhou:1406926474****:scalingrule/asr-bp1id5rhu8edp7kd****</p>
              */
             public Builder scheduledAction(String scheduledAction) {
                 this.scheduledAction = scheduledAction;
@@ -401,7 +453,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scheduled task.
+             * <p>The ID of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edRtShc57WGXdt8TlPbr****</p>
              */
             public Builder scheduledTaskId(String scheduledTaskId) {
                 this.scheduledTaskId = scheduledTaskId;
@@ -409,7 +464,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scheduled task.
+             * <p>The name of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scheduled****</p>
              */
             public Builder scheduledTaskName(String scheduledTaskName) {
                 this.scheduledTaskName = scheduledTaskName;
@@ -417,13 +475,15 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the scheduled task is enabled.
-             * <p>
+             * <p>Indicates whether the scheduled task is enabled.</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>Default value: true.</p>
              * 
-             * *   true
-             * *   false
-             * 
-             * Default value: true.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskEnabled(Boolean taskEnabled) {
                 this.taskEnabled = taskEnabled;

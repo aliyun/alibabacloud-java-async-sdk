@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyUserRequest} extends {@link RequestModel}
  *
  * <p>VerifyUserRequest</p>
@@ -104,10 +105,11 @@ public class VerifyUserRequest extends Request {
         }
 
         /**
-         * The ID of the region where Auto Scaling is required.
-         * <p>
+         * <p>The ID of the region where Auto Scaling is required.</p>
+         * <p>Examples: <code>cn-hangzhou</code> and <code>cn-shanghai</code>. For more information, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
          * 
-         * Examples: `cn-hangzhou` and `cn-shanghai`. For more information, see [Regions and zones](~~40654~~).
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

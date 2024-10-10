@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRefreshesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceRefreshesResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceRefreshesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRefreshesResponseBody</p>
+     */
     public static class DesiredConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
@@ -191,6 +198,12 @@ public class DescribeInstanceRefreshesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceRefreshesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRefreshesResponseBody</p>
+     */
     public static class InstanceRefreshTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesiredConfiguration")
         private DesiredConfiguration desiredConfiguration;

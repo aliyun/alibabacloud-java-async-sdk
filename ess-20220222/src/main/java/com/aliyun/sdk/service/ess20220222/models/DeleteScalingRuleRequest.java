@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteScalingRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteScalingRuleRequest</p>
@@ -128,7 +129,10 @@ public class DeleteScalingRuleRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,7 +150,11 @@ public class DeleteScalingRuleRequest extends Request {
         }
 
         /**
-         * The ID of the scaling rule that you want to delete.
+         * <p>The ID of the scaling rule that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asr-bp163l21e07uhnyt****</p>
          */
         public Builder scalingRuleId(String scalingRuleId) {
             this.putQueryParameter("ScalingRuleId", scalingRuleId);

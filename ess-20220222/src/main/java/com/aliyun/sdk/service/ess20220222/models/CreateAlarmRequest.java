@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAlarmRequest} extends {@link RequestModel}
  *
  * <p>CreateAlarmRequest</p>
@@ -307,7 +308,7 @@ public class CreateAlarmRequest extends Request {
         } 
 
         /**
-         * The list of unique identifiers of the scaling rules that are associated with the event-triggered task.
+         * <p>The list of unique identifiers of the scaling rules that are associated with the event-triggered task.</p>
          */
         public Builder alarmActions(java.util.List < String > alarmActions) {
             this.putQueryParameter("AlarmActions", alarmActions);
@@ -316,15 +317,19 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The operator that is used to compare the metric value and the threshold. Valid values:
-         * <p>
+         * <p>The operator that is used to compare the metric value and the threshold. Valid values:</p>
+         * <ul>
+         * <li>If the metric value is greater than or equal to the threshold, set the value to: &gt;=.</li>
+         * <li>If the metric value is less than or equal to the threshold, set the value to: &lt;=.</li>
+         * <li>If the metric value is greater than the threshold, set the value to: &gt;.</li>
+         * <li>If the metric value is less than the threshold, set the value to: &lt;.</li>
+         * </ul>
+         * <p>Default value: &gt;=.</p>
          * 
-         * *   If the metric value is greater than or equal to the threshold, set the value to: >=.
-         * *   If the metric value is less than or equal to the threshold, set the value to: <=.
-         * *   If the metric value is greater than the threshold, set the value to: >.
-         * *   If the metric value is less than the threshold, set the value to: <.
-         * 
-         * Default value: >=.
+         * <strong>example:</strong>
+         * <blockquote>
+         * <p>=</p>
+         * </blockquote>
          */
         public Builder comparisonOperator(String comparisonOperator) {
             this.putQueryParameter("ComparisonOperator", comparisonOperator);
@@ -333,7 +338,10 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The description of the event-triggered task.
+         * <p>The description of the event-triggered task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test alarm task.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -342,7 +350,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The metric dimensions.
+         * <p>The metric dimensions.</p>
          */
         public Builder dimensions(java.util.List < Dimensions> dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -351,21 +359,24 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The effective period of the event-triggered task. By default, the event-triggered task is in effect all the time.
-         * <p>
+         * <p>The effective period of the event-triggered task. By default, the event-triggered task is in effect all the time.</p>
+         * <p>This parameter follows the cron expression format. The default format is <code>X X X X X ?</code>. In the format:</p>
+         * <ul>
+         * <li>X: a placeholder for a field, which represents seconds, minutes, hours, days, and months in sequence. X can be a definite value or a special character that has logical meaning. For information about the valid values of X, see <a href="https://help.aliyun.com/document_detail/25907.html">Cron expression</a>.</li>
+         * <li>?: No value is specified.</li>
+         * </ul>
+         * <blockquote>
+         * <p>By default, this parameter value is specified in <strong>UTC+8</strong>. You can specify the time zone in the <code>TZ=+yy</code> format before a cron expression. y indicates the time zone. For example, <code>TZ=+00 * * 1-2 * * ?</code> specifies that the event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.</p>
+         * </blockquote>
+         * <p>Sample values:</p>
+         * <ul>
+         * <li><code>* * * * * ? </code>: The event-triggered task is in effect all the time.</li>
+         * <li><code>* * 17-18 * * ? </code>: The event-triggered task is in effect between 17:00 and 18:59 (UTC+8) every day.</li>
+         * <li><code>TZ=+00 * * 1-2 * * ?</code>: The event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.</li>
+         * </ul>
          * 
-         * This parameter follows the cron expression format. The default format is `X X X X X ?`. In the format:
-         * 
-         * *   X: a placeholder for a field, which represents seconds, minutes, hours, days, and months in sequence. X can be a definite value or a special character that has logical meaning. For information about the valid values of X, see [Cron expression](~~25907~~).
-         * *   ?: No value is specified.
-         * 
-         * > By default, this parameter value is specified in **UTC+8**. You can specify the time zone in the `TZ=+yy` format before a cron expression. y indicates the time zone. For example, `TZ=+00 * * 1-2 * * ?` specifies that the event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.
-         * 
-         * Sample values:
-         * 
-         * *   ` * * * * * ?  `: The event-triggered task is in effect all the time.
-         * *   ` * * 17-18 * * ?  `: The event-triggered task is in effect between 17:00 and 18:59 (UTC+8) every day.
-         * *   `TZ=+00 * * 1-2 * * ?`: The event-triggered task is in effect between 01:00 and 02:59 (UTC+0) every day.
+         * <strong>example:</strong>
+         * <p>TZ=+00 * * 1-2 * * ?</p>
          */
         public Builder effective(String effective) {
             this.putQueryParameter("Effective", effective);
@@ -374,10 +385,11 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The number of times that the threshold must be reached before a scaling rule can be executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is triggered.
-         * <p>
+         * <p>The number of times that the threshold must be reached before a scaling rule can be executed. For example, if you set this parameter to 3, the average CPU utilization must reach or exceed 80% three times in a row before a scaling rule is triggered.</p>
+         * <p>Default value: 3.</p>
          * 
-         * Default value: 3.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder evaluationCount(Integer evaluationCount) {
             this.putQueryParameter("EvaluationCount", evaluationCount);
@@ -386,7 +398,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The information about the multi-metric alert rules.
+         * <p>The information about the multi-metric alert rules.</p>
          */
         public Builder expressions(java.util.List < Expressions> expressions) {
             this.putQueryParameter("Expressions", expressions);
@@ -395,13 +407,15 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The relationship between the trigger conditions in the multi-metric alert rule. Valid values:
-         * <p>
+         * <p>The relationship between the trigger conditions in the multi-metric alert rule. Valid values:</p>
+         * <ul>
+         * <li><code>&amp;&amp;</code>: An alert is triggered only if all metrics in the multi-metric alert rule meet the trigger conditions. In this case, an alert is triggered only if the results of all trigger conditions that are specified in the multi-metric alert rule are <code>true</code>.</li>
+         * <li><code>||</code>: An alert is triggered if one of the metrics in the multi-metric alert rule meets the trigger conditions.</li>
+         * </ul>
+         * <p>Default value: <code>&amp;&amp;</code>.</p>
          * 
-         * *   `&&`: An alert is triggered only if all metrics in the multi-metric alert rule meet the trigger conditions. In this case, an alert is triggered only if the results of all trigger conditions that are specified in the multi-metric alert rule are `true`.
-         * *   `||`: An alert is triggered if one of the metrics in the multi-metric alert rule meets the trigger conditions.
-         * 
-         * Default value: `&&`.
+         * <strong>example:</strong>
+         * <p>&amp;&amp;</p>
          */
         public Builder expressionsLogicOperator(String expressionsLogicOperator) {
             this.putQueryParameter("ExpressionsLogicOperator", expressionsLogicOperator);
@@ -410,7 +424,10 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The ID of the application group to which the custom metric belongs. If you set the MetricType parameter to custom, you must specify this parameter.
+         * <p>The ID of the application group to which the custom metric belongs. If you set the MetricType parameter to custom, you must specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4055401</p>
          */
         public Builder groupId(Integer groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -419,40 +436,44 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The metric name. The valid values of this parameter vary based on the metric type.
-         * <p>
+         * <p>The metric name. The valid values of this parameter vary based on the metric type.</p>
+         * <ul>
+         * <li><p>If you set MetricType to custom, the valid values are the metrics that you have.</p>
+         * </li>
+         * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
+         * <ul>
+         * <li>CpuUtilization: the CPU utilization. Unit: %.</li>
+         * <li>ConcurrentConnections: the number of concurrent connections.</li>
+         * <li>IntranetTx: the outbound traffic over an internal network. Unit: KB/min.</li>
+         * <li>IntranetRx: the inbound traffic over an internal network. Unit: KB/min.</li>
+         * <li>VpcInternetTx: the outbound traffic over a virtual private cloud (VPC). Unit: KB/min.</li>
+         * <li>VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.</li>
+         * <li>SystemDiskReadBps: the number of bytes read from the system disk per second.</li>
+         * <li>SystemDiskWriteBps: the number of bytes written to the system disk per second.</li>
+         * <li>SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.</li>
+         * <li>SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.</li>
+         * <li>CpuUtilizationAgent: the CPU utilization. Unit: %.</li>
+         * <li>GpuUtilizationAgent: the GPU utilization. Unit: %.</li>
+         * <li>GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.</li>
+         * <li>GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.</li>
+         * <li>MemoryUtilization: the memory usage. Unit: %.</li>
+         * <li>LoadAverage: the average system load.</li>
+         * <li>TcpConnection: the total number of TCP connections.</li>
+         * <li>TcpConnection: the number of established TCP connections.</li>
+         * <li>PackagesNetOut: the number of packets sent by the internal network interface controller (NIC). Unit: counts/s.</li>
+         * <li>PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.</li>
+         * <li>PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.</li>
+         * <li>PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.</li>
+         * <li>EciPodCpuUtilization: the CPU utilization. Unit: %.</li>
+         * <li>EciPodMemoryUtilization: the memory usage. Unit: %.</li>
+         * <li>LoadBalancerRealServerAverageQps: the queries per second (QPS) of an instance.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</p>
          * 
-         * *   If you set MetricType to custom, the valid values are the metrics that you have.
-         * 
-         * *   If you set MetricType to system, this parameter has the following valid values:
-         * 
-         *     *   CpuUtilization: the CPU utilization. Unit: %.
-         *     *   ConcurrentConnections: the number of concurrent connections.
-         *     *   IntranetTx: the outbound traffic over an internal network. Unit: KB/min.
-         *     *   IntranetRx: the inbound traffic over an internal network. Unit: KB/min.
-         *     *   VpcInternetTx: the outbound traffic over a virtual private cloud (VPC). Unit: KB/min.
-         *     *   VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.
-         *     *   SystemDiskReadBps: the number of bytes read from the system disk per second.
-         *     *   SystemDiskWriteBps: the number of bytes written to the system disk per second.
-         *     *   SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.
-         *     *   SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.
-         *     *   CpuUtilizationAgent: the CPU utilization. Unit: %.
-         *     *   GpuUtilizationAgent: the GPU utilization. Unit: %.
-         *     *   GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.
-         *     *   GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.
-         *     *   MemoryUtilization: the memory usage. Unit: %.
-         *     *   LoadAverage: the average system load.
-         *     *   TcpConnection: the total number of TCP connections.
-         *     *   TcpConnection: the number of established TCP connections.
-         *     *   PackagesNetOut: the number of packets sent by the internal network interface controller (NIC). Unit: counts/s.
-         *     *   PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.
-         *     *   PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.
-         *     *   PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.
-         *     *   EciPodCpuUtilization: the CPU utilization. Unit: %.
-         *     *   EciPodMemoryUtilization: the memory usage. Unit: %.
-         *     *   LoadBalancerRealServerAverageQps: the queries per second (QPS) of an instance.
-         * 
-         * For more information, see [Event-triggered tasks of the system monitoring type](~~74854~~).
+         * <strong>example:</strong>
+         * <p>CpuUtilization</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -461,11 +482,14 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The type of the metric. Valid values:
-         * <p>
+         * <p>The type of the metric. Valid values:</p>
+         * <ul>
+         * <li>system: system metrics of CloudMonitor</li>
+         * <li>custom: custom metrics that are reported to CloudMonitor</li>
+         * </ul>
          * 
-         * *   system: system metrics of CloudMonitor
-         * *   custom: custom metrics that are reported to CloudMonitor
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -474,7 +498,10 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The name of the event-triggered task.
+         * <p>The name of the event-triggered task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAlarmTask</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -492,18 +519,21 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The statistical period of the metric data. Unit: seconds. Valid values:
-         * <p>
+         * <p>The statistical period of the metric data. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li>15</li>
+         * <li>60</li>
+         * <li>120</li>
+         * <li>300</li>
+         * <li>900</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can set this parameter to 15 seconds only for scaling groups of the ECS type.</p>
+         * </blockquote>
+         * <p>Default value: 300.</p>
          * 
-         * *   15
-         * *   60
-         * *   120
-         * *   300
-         * *   900
-         * 
-         * >  You can set this parameter to 15 seconds only for scaling groups of the ECS type.
-         * 
-         * Default value: 300.
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -512,7 +542,11 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -530,7 +564,11 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The scaling group ID of the event-triggered task.
+         * <p>The scaling group ID of the event-triggered task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -539,14 +577,16 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The method that is used to aggregate statistics for the metric. Valid values:
-         * <p>
+         * <p>The method that is used to aggregate statistics for the metric. Valid values:</p>
+         * <ul>
+         * <li>Average</li>
+         * <li>Minimum</li>
+         * <li>Maximum</li>
+         * </ul>
+         * <p>Default value: Average.</p>
          * 
-         * *   Average
-         * *   Minimum
-         * *   Maximum
-         * 
-         * Default value: Average.
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         public Builder statistics(String statistics) {
             this.putQueryParameter("Statistics", statistics);
@@ -555,7 +595,10 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The threshold of the metric value. If the threshold is reached the specified number of times within the specified period, a scaling rule is executed.
+         * <p>The threshold of the metric value. If the threshold is reached the specified number of times within the specified period, a scaling rule is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80.0</p>
          */
         public Builder threshold(Float threshold) {
             this.putQueryParameter("Threshold", threshold);
@@ -570,6 +613,12 @@ public class CreateAlarmRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAlarmRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAlarmRequest</p>
+     */
     public static class Dimensions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
@@ -609,17 +658,22 @@ public class CreateAlarmRequest extends Request {
             private String dimensionValue; 
 
             /**
-             * The dimension key of the metric. The valid values vary based on the metric type.
-             * <p>
+             * <p>The dimension key of the metric. The valid values vary based on the metric type.</p>
+             * <ul>
+             * <li><p>If you set MetricType to custom, you can specify this parameter based on your business requirements.</p>
+             * </li>
+             * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
+             * <ul>
+             * <li>user_id: the ID of your Alibaba Cloud account.</li>
+             * <li>scaling_group: the scaling group that you want to monitor by using the event-triggered task.</li>
+             * <li>device: the NIC type.</li>
+             * <li>state: the status of the TCP connection.</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   If you set MetricType to custom, you can specify this parameter based on your business requirements.
-             * 
-             * *   If you set MetricType to system, this parameter has the following valid values:
-             * 
-             *     *   user_id: the ID of your Alibaba Cloud account.
-             *     *   scaling_group: the scaling group that you want to monitor by using the event-triggered task.
-             *     *   device: the NIC type.
-             *     *   state: the status of the TCP connection.
+             * <strong>example:</strong>
+             * <p>device</p>
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -627,26 +681,34 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The dimension value of the metric. The valid values of this parameter vary based on the value of Dimensions.DimensionKey.
-             * <p>
+             * <p>The dimension value of the metric. The valid values of this parameter vary based on the value of Dimensions.DimensionKey.</p>
+             * <ul>
+             * <li><p>If you set MetricType to custom, you can specify this parameter based on your business requirements.</p>
+             * </li>
+             * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
+             * <ul>
+             * <li><p>user_id: The system specifies the value.</p>
+             * </li>
+             * <li><p>scaling_group: The system specifies the value.</p>
+             * </li>
+             * <li><p>device: You can set this parameter to eth0 or eth1.</p>
+             * <ul>
+             * <li>For instances of the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in VPCs.</li>
+             * <li>For instances of the classic network type, eth1 specifies the public NIC.</li>
+             * </ul>
+             * </li>
+             * <li><p>state: You can set this parameter to TCP_TOTAL or ESTABLISHED.</p>
+             * <ul>
+             * <li>TCP_TOTAL specifies the total number of TCP connections.</li>
+             * <li>ESTABLISHED specifies the number of TCP connections that are established.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   If you set MetricType to custom, you can specify this parameter based on your business requirements.
-             * 
-             * *   If you set MetricType to system, this parameter has the following valid values:
-             * 
-             *     *   user_id: The system specifies the value.
-             * 
-             *     *   scaling_group: The system specifies the value.
-             * 
-             *     *   device: You can set this parameter to eth0 or eth1.
-             * 
-             *         *   For instances of the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in VPCs.
-             *         *   For instances of the classic network type, eth1 specifies the public NIC.
-             * 
-             *     *   state: You can set this parameter to TCP_TOTAL or ESTABLISHED.
-             * 
-             *         *   TCP_TOTAL specifies the total number of TCP connections.
-             *         *   ESTABLISHED specifies the number of TCP connections that are established.
+             * <strong>example:</strong>
+             * <p>eth0</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -660,6 +722,12 @@ public class CreateAlarmRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateAlarmRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAlarmRequest</p>
+     */
     public static class Expressions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
@@ -735,15 +803,19 @@ public class CreateAlarmRequest extends Request {
             private Float threshold; 
 
             /**
-             * The operator that you want to use to compare the metric value and the threshold in the multi-metric alert rule. Valid values:
-             * <p>
+             * <p>The operator that you want to use to compare the metric value and the threshold in the multi-metric alert rule. Valid values:</p>
+             * <ul>
+             * <li>If the metric value is greater than or equal to the threshold, set the value to &gt;=.</li>
+             * <li>If the metric value is less than or equal to the metric threshold, set the value to &lt;=.</li>
+             * <li>If the metric value is greater than the metric threshold, set the value to &gt;.</li>
+             * <li>If the metric value is less than the metric threshold, set the value to &lt;.</li>
+             * </ul>
+             * <p>Default value: &gt;=.</p>
              * 
-             * *   If the metric value is greater than or equal to the threshold, set the value to >=.
-             * *   If the metric value is less than or equal to the metric threshold, set the value to <=.
-             * *   If the metric value is greater than the metric threshold, set the value to >.
-             * *   If the metric value is less than the metric threshold, set the value to <.
-             * 
-             * Default value: >=.
+             * <strong>example:</strong>
+             * <blockquote>
+             * <p>=</p>
+             * </blockquote>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -751,40 +823,44 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The names of the metrics in the multi-metric alert rule. The valid values of this parameter vary based on the metric type.
-             * <p>
+             * <p>The names of the metrics in the multi-metric alert rule. The valid values of this parameter vary based on the metric type.</p>
+             * <ul>
+             * <li><p>If you set MetricType to custom, the valid values are the metrics that you have.</p>
+             * </li>
+             * <li><p>If you set MetricType to system, this parameter has the following valid values:</p>
+             * <ul>
+             * <li>CpuUtilization: the CPU utilization. Unit: %.</li>
+             * <li>ConcurrentConnections: the number of concurrent connections.</li>
+             * <li>IntranetTx: the outbound traffic over an internal network. Unit: KB/min.</li>
+             * <li>IntranetRx: the inbound traffic over an internal network. Unit: KB/min.</li>
+             * <li>VpcInternetTx: the outbound traffic over a VPC. Unit: KB/min.</li>
+             * <li>VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.</li>
+             * <li>SystemDiskReadBps: the number of bytes read from the system disk per second.</li>
+             * <li>SystemDiskWriteBps: the number of bytes written to the system disk per second.</li>
+             * <li>SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.</li>
+             * <li>SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.</li>
+             * <li>CpuUtilizationAgent: the CPU utilization. Unit: %.</li>
+             * <li>GpuUtilizationAgent: the GPU utilization. Unit: %.</li>
+             * <li>GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.</li>
+             * <li>GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.</li>
+             * <li>MemoryUtilization: the memory usage. Unit: %.</li>
+             * <li>LoadAverage: the average system load.</li>
+             * <li>TcpConnection: the total number of TCP connections.</li>
+             * <li>TcpConnection: the number of established TCP connections.</li>
+             * <li>PackagesNetOut: the number of packets sent by the internal NIC. Unit: counts/s.</li>
+             * <li>PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.</li>
+             * <li>PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.</li>
+             * <li>PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.</li>
+             * <li>EciPodCpuUtilization: the CPU utilization. Unit: %.</li>
+             * <li>EciPodMemoryUtilization: the memory usage. Unit: %.</li>
+             * <li>LoadBalancerRealServerAverageQps: the QPS of an instance.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/74854.html">Event-triggered tasks of the system monitoring type</a>.</p>
              * 
-             * *   If you set MetricType to custom, the valid values are the metrics that you have.
-             * 
-             * *   If you set MetricType to system, this parameter has the following valid values:
-             * 
-             *     *   CpuUtilization: the CPU utilization. Unit: %.
-             *     *   ConcurrentConnections: the number of concurrent connections.
-             *     *   IntranetTx: the outbound traffic over an internal network. Unit: KB/min.
-             *     *   IntranetRx: the inbound traffic over an internal network. Unit: KB/min.
-             *     *   VpcInternetTx: the outbound traffic over a VPC. Unit: KB/min.
-             *     *   VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.
-             *     *   SystemDiskReadBps: the number of bytes read from the system disk per second.
-             *     *   SystemDiskWriteBps: the number of bytes written to the system disk per second.
-             *     *   SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.
-             *     *   SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.
-             *     *   CpuUtilizationAgent: the CPU utilization. Unit: %.
-             *     *   GpuUtilizationAgent: the GPU utilization. Unit: %.
-             *     *   GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.
-             *     *   GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.
-             *     *   MemoryUtilization: the memory usage. Unit: %.
-             *     *   LoadAverage: the average system load.
-             *     *   TcpConnection: the total number of TCP connections.
-             *     *   TcpConnection: the number of established TCP connections.
-             *     *   PackagesNetOut: the number of packets sent by the internal NIC. Unit: counts/s.
-             *     *   PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.
-             *     *   PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.
-             *     *   PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.
-             *     *   EciPodCpuUtilization: the CPU utilization. Unit: %.
-             *     *   EciPodMemoryUtilization: the memory usage. Unit: %.
-             *     *   LoadBalancerRealServerAverageQps: the QPS of an instance.
-             * 
-             * For more information, see [Event-triggered tasks of the system monitoring type](~~74854~~).
+             * <strong>example:</strong>
+             * <p>CpuUtilization</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -792,18 +868,21 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The statistical period of the metric data in the multi-metric alert rule. Unit: seconds. Valid values:
-             * <p>
+             * <p>The statistical period of the metric data in the multi-metric alert rule. Unit: seconds. Valid values:</p>
+             * <ul>
+             * <li>15</li>
+             * <li>60</li>
+             * <li>120</li>
+             * <li>300</li>
+             * <li>900</li>
+             * </ul>
+             * <blockquote>
+             * <p> You can set this parameter to 15 seconds only for scaling groups of the ECS type.</p>
+             * </blockquote>
+             * <p>Default value: 300.</p>
              * 
-             * *   15
-             * *   60
-             * *   120
-             * *   300
-             * *   900
-             * 
-             * >  You can set this parameter to 15 seconds only for scaling groups of the ECS type.
-             * 
-             * Default value: 300.
+             * <strong>example:</strong>
+             * <p>900</p>
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -811,14 +890,16 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The method that you want to use to aggregate the metric data in the multi-metric alert rule. Valid values:
-             * <p>
+             * <p>The method that you want to use to aggregate the metric data in the multi-metric alert rule. Valid values:</p>
+             * <ul>
+             * <li>Average: the average value.</li>
+             * <li>Minimum: the minimum value</li>
+             * <li>Maximum: the maximum value</li>
+             * </ul>
+             * <p>Default value: Average.</p>
              * 
-             * *   Average: the average value.
-             * *   Minimum: the minimum value
-             * *   Maximum: the maximum value
-             * 
-             * Default value: Average.
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -826,7 +907,10 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The threshold of the metric value in the multi-metric alert rule. If the threshold is reached the specified number of times within the statistical period, a scaling rule is executed.
+             * <p>The threshold of the metric value in the multi-metric alert rule. If the threshold is reached the specified number of times within the statistical period, a scaling rule is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40.0</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNotificationConfigurationRequest} extends {@link RequestModel}
  *
  * <p>CreateNotificationConfigurationRequest</p>
@@ -140,19 +141,23 @@ public class CreateNotificationConfigurationRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the notification recipient. The following list describes the value formats of this parameter:</p>
+         * <ul>
+         * <li>If you specify CloudMonitor as the notification recipient, specify the value in the <code>acs:ess:{region-id}:{account-id}:cloudmonitor</code> format.</li>
+         * <li>If you specify an MNS queue as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
+         * <li>If you specify an MNS topic as the notification recipient, specify the value in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
+         * </ul>
+         * <p>The variables in the preceding formats have the following meanings:</p>
+         * <ul>
+         * <li><code>region-id</code>: the region ID of the scaling group.</li>
+         * <li><code>account-id</code>: the ID of the Alibaba Cloud account.</li>
+         * <li><code>queuename</code>: the name of the MNS queue.</li>
+         * <li><code>topicname</code>: the name of the MNS topic.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you specify CloudMonitor as the notification recipient, specify the value in the `acs:ess:{region-id}:{account-id}:cloudmonitor` format.
-         * *   If you specify an MNS queue as the notification recipient, specify the value in the `acs:mns:{region-id}:{account-id}:queue/{queuename}` format.
-         * *   If you specify an MNS topic as the notification recipient, specify the value in the `acs:mns:{region-id}:{account-id}:topic/{topicname}` format.
-         * 
-         * The variables in the preceding formats have the following meanings:
-         * 
-         * *   `region-id`: the region ID of the scaling group.
-         * *   `account-id`: the ID of the Alibaba Cloud account.
-         * *   `queuename`: the name of the MNS queue.
-         * *   `topicname`: the name of the MNS topic.
+         * <strong>example:</strong>
+         * <p>acs:mns:cn-beijing:161456884340****:queue/modifyLifecycleHo****</p>
          */
         public Builder notificationArn(String notificationArn) {
             this.putQueryParameter("NotificationArn", notificationArn);
@@ -161,10 +166,9 @@ public class CreateNotificationConfigurationRequest extends Request {
         }
 
         /**
-         * The notification types. Specify multiple IDs in the repeated list form.
-         * <p>
-         * 
-         * You can call the DescribeNotificationTypes operation to query the values of this parameter.
+         * <p>The notification types. Specify multiple IDs in the repeated list form.</p>
+         * <p>You can call the DescribeNotificationTypes operation to query the values of this parameter.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder notificationTypes(java.util.List < String > notificationTypes) {
             this.putQueryParameter("NotificationTypes", notificationTypes);
@@ -182,7 +186,10 @@ public class CreateNotificationConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,7 +207,11 @@ public class CreateNotificationConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -209,7 +220,10 @@ public class CreateNotificationConfigurationRequest extends Request {
         }
 
         /**
-         * The time zone of the notification. Specify the value in UTC. For example, a value of UTC+8 specifies that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 specifies that the time is 7 hours behind Coordinated Universal Time.
+         * <p>The time zone of the notification. Specify the value in UTC. For example, a value of UTC+8 specifies that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 specifies that the time is 7 hours behind Coordinated Universal Time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTC+8</p>
          */
         public Builder timeZone(String timeZone) {
             this.putQueryParameter("TimeZone", timeZone);

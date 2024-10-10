@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -140,13 +141,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resource. This parameter takes effect only when you do not specify `TagKeys` in the request parameters. Valid values:
-         * <p>
+         * <p>Specifies whether to remove all tags from the resource. This parameter takes effect only when you do not specify <code>TagKeys</code> in the request parameters. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -164,7 +167,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +180,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * <p>The resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -191,7 +199,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to scalinggroup.
+         * <p>The resource type. Set the value to scalinggroup.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scalinggroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -200,7 +212,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag keys.
+         * <p>The tag keys.</p>
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
             this.putQueryParameter("TagKeys", tagKeys);

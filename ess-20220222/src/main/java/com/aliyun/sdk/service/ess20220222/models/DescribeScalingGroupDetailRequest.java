@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScalingGroupDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeScalingGroupDetailRequest</p>
@@ -97,7 +98,10 @@ public class DescribeScalingGroupDetailRequest extends Request {
         } 
 
         /**
-         * The output format. Set the value to yaml.
+         * <p>The output format. Set the value to yaml.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yaml</p>
          */
         public Builder outputFormat(String outputFormat) {
             this.putQueryParameter("OutputFormat", outputFormat);
@@ -115,7 +119,11 @@ public class DescribeScalingGroupDetailRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group. For more information, see [Regions and zones](~~40654~~).
+         * <p>The region ID of the scaling group. For more information, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +132,11 @@ public class DescribeScalingGroupDetailRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

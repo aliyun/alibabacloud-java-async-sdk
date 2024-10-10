@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertConfigurationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAlertConfigurationResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeAlertConfigurationResponseBody extends TeaModel {
         private java.util.List < String > scaleStatuses; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeAlertConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the scaling activities that trigger text message, internal message, or email-based notifications.
+         * <p>The status of the scaling activities that trigger text message, internal message, or email-based notifications.</p>
          */
         public Builder scaleStatuses(java.util.List < String > scaleStatuses) {
             this.scaleStatuses = scaleStatuses;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNotificationTypesRequest} extends {@link RequestModel}
  *
  * <p>DescribeNotificationTypesRequest</p>

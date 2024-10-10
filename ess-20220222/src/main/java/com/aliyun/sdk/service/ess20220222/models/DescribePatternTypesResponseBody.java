@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePatternTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePatternTypesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribePatternTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instance types that meet the specified requirements.
+         * <p>The instance types that meet the specified requirements.</p>
          */
         public Builder patternTypes(java.util.List < PatternTypes> patternTypes) {
             this.patternTypes = patternTypes;
@@ -57,7 +58,10 @@ public class DescribePatternTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribePatternTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePatternTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePatternTypesResponseBody</p>
+     */
     public static class PatternTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cores")
         private Integer cores;
@@ -145,7 +155,10 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             private Float memory; 
 
             /**
-             * The number of vCPUs that are assigned to the instance type.
+             * <p>The number of vCPUs that are assigned to the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -153,12 +166,15 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the instance family.
-             * <p>
+             * <p>The level of the instance family.</p>
+             * <ul>
+             * <li>EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+             * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+             * <li>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+             * </ul>
              * 
-             * *   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
-             * *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see [Overview of instance families](~~25378~~).
-             * *   CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](~~59977~~).
+             * <strong>example:</strong>
+             * <p>EnterpriseLevel</p>
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -166,7 +182,10 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance type.
+             * <p>The name of the instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c7.xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -174,7 +193,10 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family.
+             * <p>The instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.c7</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -182,7 +204,10 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size that are assigned to the instance type. Unit: GiB.
+             * <p>The memory size that are assigned to the instance type. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;

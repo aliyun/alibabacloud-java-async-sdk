@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScalingRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeScalingRulesRequest</p>
@@ -241,10 +242,11 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -253,10 +255,11 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -265,7 +268,11 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group to which the scaling rules that you want to query belong.
+         * <p>The region ID of the scaling group to which the scaling rules that you want to query belong.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -292,7 +299,10 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1ffogfdauy0jw0****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -301,7 +311,7 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The unique identifiers of the scaling rules that you want to query.
+         * <p>The unique identifiers of the scaling rules that you want to query.</p>
          */
         public Builder scalingRuleAris(java.util.List < String > scalingRuleAris) {
             this.putQueryParameter("ScalingRuleAris", scalingRuleAris);
@@ -310,7 +320,7 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The IDs of the scaling rules that you want to query.
+         * <p>The IDs of the scaling rules that you want to query.</p>
          */
         public Builder scalingRuleIds(java.util.List < String > scalingRuleIds) {
             this.putQueryParameter("ScalingRuleIds", scalingRuleIds);
@@ -319,7 +329,7 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The names of the scaling rules that you want to query.
+         * <p>The names of the scaling rules that you want to query.</p>
          */
         public Builder scalingRuleNames(java.util.List < String > scalingRuleNames) {
             this.putQueryParameter("ScalingRuleNames", scalingRuleNames);
@@ -328,13 +338,16 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * The type of the scaling rule. Valid values:
-         * <p>
+         * <p>The type of the scaling rule. Valid values:</p>
+         * <ul>
+         * <li>SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.</li>
+         * <li>TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.</li>
+         * <li>StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.</li>
+         * <li>PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.</li>
+         * </ul>
          * 
-         * *   SimpleScalingRule: adjusts the number of ECS instances based on the values of the AdjustmentType and AdjustmentValue parameters.
-         * *   TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of the TargetValue parameter.
-         * *   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.
-         * *   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to adjust the boundary values for the scaling group.
+         * <strong>example:</strong>
+         * <p>SimpleScalingRule</p>
          */
         public Builder scalingRuleType(String scalingRuleType) {
             this.putQueryParameter("ScalingRuleType", scalingRuleType);
@@ -343,13 +356,15 @@ public class DescribeScalingRulesRequest extends Request {
         }
 
         /**
-         * Specifies whether to return CloudMonitor event-triggered tasks associated with scaling rules. Valid values:
-         * <p>
+         * <p>Specifies whether to return CloudMonitor event-triggered tasks associated with scaling rules. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showAlarmRules(Boolean showAlarmRules) {
             this.putQueryParameter("ShowAlarmRules", showAlarmRules);

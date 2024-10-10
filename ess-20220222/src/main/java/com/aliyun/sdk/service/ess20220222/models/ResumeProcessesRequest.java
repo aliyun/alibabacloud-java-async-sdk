@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResumeProcessesRequest} extends {@link RequestModel}
  *
  * <p>ResumeProcessesRequest</p>
@@ -125,10 +126,11 @@ public class ResumeProcessesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+         * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
          * 
-         * The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -146,7 +148,8 @@ public class ResumeProcessesRequest extends Request {
         }
 
         /**
-         * Details of the processes that you want to resume.
+         * <p>Details of the processes that you want to resume.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder processes(java.util.List < String > processes) {
             this.putQueryParameter("Processes", processes);
@@ -155,7 +158,10 @@ public class ResumeProcessesRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +179,11 @@ public class ResumeProcessesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp15oubotmrq11xe****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

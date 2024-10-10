@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetInstanceHealthRequest} extends {@link RequestModel}
  *
  * <p>SetInstanceHealthRequest</p>
@@ -97,11 +98,15 @@ public class SetInstanceHealthRequest extends Request {
         } 
 
         /**
-         * The health status of the instance. Valid values:
-         * <p>
+         * <p>The health status of the instance. Valid values:</p>
+         * <ul>
+         * <li>Healthy: sets the instance as healthy.</li>
+         * <li>Unhealthy: sets the instance as unhealthy.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Healthy: sets the instance as healthy.
-         * *   Unhealthy: sets the instance as unhealthy.
+         * <strong>example:</strong>
+         * <p>Healthy</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -110,7 +115,11 @@ public class SetInstanceHealthRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1ap6bro51a7fsa****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

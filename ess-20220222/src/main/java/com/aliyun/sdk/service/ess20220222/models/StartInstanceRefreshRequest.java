@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartInstanceRefreshRequest} extends {@link RequestModel}
  *
  * <p>StartInstanceRefreshRequest</p>
@@ -198,7 +199,10 @@ public class StartInstanceRefreshRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +220,10 @@ public class StartInstanceRefreshRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -231,6 +238,12 @@ public class StartInstanceRefreshRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link StartInstanceRefreshRequest} extends {@link TeaModel}
+     *
+     * <p>StartInstanceRefreshRequest</p>
+     */
     public static class DesiredConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;

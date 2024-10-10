@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachInstancesRequest} extends {@link RequestModel}
  *
  * <p>AttachInstancesRequest</p>
@@ -194,10 +195,11 @@ public class AttachInstancesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,15 +208,18 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the scaling group to manage the lifecycles of manually added instances. Valid values:
-         * <p>
+         * <p>Specifies whether to use the scaling group to manage the lifecycles of manually added instances. Valid values:</p>
+         * <ul>
+         * <li>true: The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</li>
+         * <li>false: The scaling group does not manage the lifecycles of manually added instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You cannot specify this parameter for subscription instances, non-Alibaba Cloud instances, and instances in Economical Mode.</p>
+         * </blockquote>
+         * <p>Default value: false.</p>
          * 
-         * *   true: The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.
-         * *   false: The scaling group does not manage the lifecycles of manually added instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.
-         * 
-         * >  You cannot specify this parameter for subscription instances, non-Alibaba Cloud instances, and instances in Economical Mode.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder entrusted(Boolean entrusted) {
             this.putQueryParameter("Entrusted", entrusted);
@@ -223,7 +228,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances, elastic container instances, non-Alibaba Cloud instances, or instances in Economical Mode.
+         * <p>The IDs of the ECS instances, elastic container instances, non-Alibaba Cloud instances, or instances in Economical Mode.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -232,15 +237,18 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to trigger the lifecycle hook for scale-outs when you call this operation. Valid values:
-         * <p>
+         * <p>Specifies whether to trigger the lifecycle hook for scale-outs when you call this operation. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> You cannot specify this parameter for subscription instances and instances in Economical Mode.</p>
+         * </blockquote>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * >  You cannot specify this parameter for subscription instances and instances in Economical Mode.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lifecycleHook(Boolean lifecycleHook) {
             this.putQueryParameter("LifecycleHook", lifecycleHook);
@@ -249,7 +257,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The weight of an ECS instance or elastic container instance as a backend server. You can use this parameter to specify weights for multiple instances at the same time.
+         * <p>The weight of an ECS instance or elastic container instance as a backend server. You can use this parameter to specify weights for multiple instances at the same time.</p>
          */
         public Builder loadBalancerWeights(java.util.List < Integer > loadBalancerWeights) {
             this.putQueryParameter("LoadBalancerWeights", loadBalancerWeights);
@@ -276,7 +284,10 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -303,7 +314,11 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

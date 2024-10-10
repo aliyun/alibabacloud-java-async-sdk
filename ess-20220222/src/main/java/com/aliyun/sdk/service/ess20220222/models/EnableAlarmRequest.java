@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableAlarmRequest} extends {@link RequestModel}
  *
  * <p>EnableAlarmRequest</p>
@@ -97,7 +98,11 @@ public class EnableAlarmRequest extends Request {
         } 
 
         /**
-         * The ID of the event-triggered task.
+         * <p>The ID of the event-triggered task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1hvbnmkl10vll5****_f95ce797-dc2e-4bad-9618-14fee7d1****</p>
          */
         public Builder alarmTaskId(String alarmTaskId) {
             this.putQueryParameter("AlarmTaskId", alarmTaskId);
@@ -115,7 +120,11 @@ public class EnableAlarmRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

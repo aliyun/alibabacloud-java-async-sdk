@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNotificationConfigurationsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNotificationConfigurationsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The notification settings.
+         * <p>The notification settings.</p>
          */
         public Builder notificationConfigurationModels(java.util.List < NotificationConfigurationModels> notificationConfigurationModels) {
             this.notificationConfigurationModels = notificationConfigurationModels;
@@ -57,7 +58,10 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNotificationConfigurationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNotificationConfigurationsResponseBody</p>
+     */
     public static class NotificationConfigurationModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotificationArn")
         private String notificationArn;
@@ -133,19 +143,22 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:
-             * <p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</p>
+             * <ul>
+             * <li>If you use CloudMonitor as the notification method, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.</li>
+             * <li>If you use a Message Service (MNS) queue as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.</li>
+             * <li>If you use an MNS topic as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.</li>
+             * </ul>
+             * <p>The variables in the preceding formats have the following meanings:</p>
+             * <ul>
+             * <li>region-id: the region ID of the scaling group.</li>
+             * <li>account-id: the ID of the Alibaba Cloud account.</li>
+             * <li>queuename: the name of the MNS queue.</li>
+             * <li>topicname: the name of the MNS topic.</li>
+             * </ul>
              * 
-             * *   If you use CloudMonitor as the notification method, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.
-             * *   If you use a Message Service (MNS) queue as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.
-             * *   If you use an MNS topic as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.
-             * 
-             * The variables in the preceding formats have the following meanings:
-             * 
-             * *   region-id: the region ID of the scaling group.
-             * *   account-id: the ID of the Alibaba Cloud account.
-             * *   queuename: the name of the MNS queue.
-             * *   topicname: the name of the MNS topic.
+             * <strong>example:</strong>
+             * <p>acs:mns:cn-beijing:161456884340****:topic/modifyLifecycleHo****</p>
              */
             public Builder notificationArn(String notificationArn) {
                 this.notificationArn = notificationArn;
@@ -153,7 +166,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the notifications.
+             * <p>The types of the notifications.</p>
              */
             public Builder notificationTypes(java.util.List < String > notificationTypes) {
                 this.notificationTypes = notificationTypes;
@@ -161,7 +174,10 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scaling group.
+             * <p>The ID of the scaling group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-bp1igpak5ft1flyp****</p>
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -169,7 +185,10 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the notification. The value must be in UTC. For example, a value of UTC+8 indicates that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 indicates that the time is 7 hours behind Coordinated Universal Time.
+             * <p>The time zone of the notification. The value must be in UTC. For example, a value of UTC+8 indicates that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 indicates that the time is 7 hours behind Coordinated Universal Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UTC+8</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

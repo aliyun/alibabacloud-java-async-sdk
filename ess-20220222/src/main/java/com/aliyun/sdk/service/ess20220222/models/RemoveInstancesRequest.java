@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveInstancesRequest} extends {@link RequestModel}
  *
  * <p>RemoveInstancesRequest</p>
@@ -195,7 +196,10 @@ public class RemoveInstancesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,13 +208,15 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to adjust the expected number of ECS instances in the scaling group. Valid values:
-         * <p>
+         * <p>Specifies whether to adjust the expected number of ECS instances in the scaling group. Valid values:</p>
+         * <ul>
+         * <li>true: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group decreases.</li>
+         * <li>false: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group remains unchanged.</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
-         * *   true: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group decreases.
-         * *   false: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group remains unchanged.
-         * 
-         * Default value: true.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder decreaseDesiredCapacity(Boolean decreaseDesiredCapacity) {
             this.putQueryParameter("DecreaseDesiredCapacity", decreaseDesiredCapacity);
@@ -219,13 +225,15 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to ignore invalid instances when you remove a batch of instances from the scaling group. Valid values:
-         * <p>
+         * <p>Specifies whether to ignore invalid instances when you remove a batch of instances from the scaling group. Valid values:</p>
+         * <ul>
+         * <li>true: ignores invalid instances. If invalid instances exist and valid instances are deleted, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.</li>
+         * <li>false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to remove from the scaling group, an error is reported.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: ignores invalid instances. If invalid instances exist and valid instances are deleted, the corresponding scaling activity enters the Warning state. You can check the scaling activity details to view the invalid instances that are ignored.
-         * *   false: does not ignore invalid instances. If invalid instances exist in the batch of instances that you want to remove from the scaling group, an error is reported.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreInvalidInstance(Boolean ignoreInvalidInstance) {
             this.putQueryParameter("IgnoreInvalidInstance", ignoreInvalidInstance);
@@ -234,7 +242,8 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances that you want to remove from the scaling group.
+         * <p>The IDs of the ECS instances that you want to remove from the scaling group.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -261,7 +270,10 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,25 +282,26 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * The action subsequent to the removal of the Elastic Compute Service (ECS) instances. Valid values:
-         * <p>
+         * <p>The action subsequent to the removal of the Elastic Compute Service (ECS) instances. Valid values:</p>
+         * <ul>
+         * <li><p>recycle: The ECS instances enter the Economical Mode.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> This setting is applicable only if you set <code>ScalingPolicy</code> to <code>recycle</code>.</p>
+         * </li>
+         * <li><p>release: The ECS instances are released.</p>
+         * </li>
+         * </ul>
+         * <p>ScalingPolicy of the CreateScalingGroup operation specifies the reclaim mode of the scaling group while RemovePolicy of the RemoveInstances operation specifies the subsequent action when an ECS instance is removed from the scaling group. Examples:</p>
+         * <ul>
+         * <li>If you set ScalingPolicy and RemovePolicy to recycle, the ECS instances enter the Economical Mode when they are removed.</li>
+         * <li>If you set ScalingPolicy to recycle and RemovePolicy to release, the ECS instances are released when they are removed.</li>
+         * <li>If you set ScalingPolicy to release and RemovePolicy to recycle, the ECS instances are released when they are removed.</li>
+         * <li>If you set ScalingPolicy and RemovePolicy to release, the ECS instances are released when they are removed.</li>
+         * </ul>
+         * <p>Default value: release.</p>
          * 
-         * *   recycle: The ECS instances enter the Economical Mode.
-         * 
-         *     **
-         * 
-         *     **Note** This setting is applicable only if you set `ScalingPolicy` to `recycle`.
-         * 
-         * *   release: The ECS instances are released.
-         * 
-         * ScalingPolicy of the CreateScalingGroup operation specifies the reclaim mode of the scaling group while RemovePolicy of the RemoveInstances operation specifies the subsequent action when an ECS instance is removed from the scaling group. Examples:
-         * 
-         * *   If you set ScalingPolicy and RemovePolicy to recycle, the ECS instances enter the Economical Mode when they are removed.
-         * *   If you set ScalingPolicy to recycle and RemovePolicy to release, the ECS instances are released when they are removed.
-         * *   If you set ScalingPolicy to release and RemovePolicy to recycle, the ECS instances are released when they are removed.
-         * *   If you set ScalingPolicy and RemovePolicy to release, the ECS instances are released when they are removed.
-         * 
-         * Default value: release.
+         * <strong>example:</strong>
+         * <p>release</p>
          */
         public Builder removePolicy(String removePolicy) {
             this.putQueryParameter("RemovePolicy", removePolicy);
@@ -315,7 +328,11 @@ public class RemoveInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

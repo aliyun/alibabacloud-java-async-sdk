@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLifecycleHookRequest} extends {@link RequestModel}
  *
  * <p>DeleteLifecycleHookRequest</p>
@@ -137,7 +138,10 @@ public class DeleteLifecycleHookRequest extends Request {
         } 
 
         /**
-         * The ID of the lifecycle hook.
+         * <p>The ID of the lifecycle hook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ash-bp14g3ee6bt3sc98****</p>
          */
         public Builder lifecycleHookId(String lifecycleHookId) {
             this.putQueryParameter("LifecycleHookId", lifecycleHookId);
@@ -146,7 +150,10 @@ public class DeleteLifecycleHookRequest extends Request {
         }
 
         /**
-         * The name of the lifecycle hook.
+         * <p>The name of the lifecycle hook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lifecyclehook****</p>
          */
         public Builder lifecycleHookName(String lifecycleHookName) {
             this.putQueryParameter("LifecycleHookName", lifecycleHookName);
@@ -173,7 +180,10 @@ public class DeleteLifecycleHookRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -191,7 +201,10 @@ public class DeleteLifecycleHookRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

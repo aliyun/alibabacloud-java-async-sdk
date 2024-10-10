@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyEciScalingConfigurationRequest} extends {@link RequestModel}
  *
  * <p>ApplyEciScalingConfigurationRequest</p>
@@ -111,7 +112,34 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         } 
 
         /**
-         * The content of the configuration file.
+         * <p>The content of the configuration file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: apps/v1
+         * kind: Deployment
+         * metadata:
+         *   name: nginx-deployment
+         *   labels:
+         *     app: nginx
+         *   spec:
+         *     replicas: 3
+         *     selector:
+         *        matchLabels:
+         *         app: nginx
+         *     template:
+         *       metadata:
+         *         labels:
+         *           app: nginx
+         *         annotations:
+         *           k8s.aliyun.com/eip-bandwidth: 10
+         *           k8s.aliyun.com/eci-with-eip: true
+         *         spec:
+         *           containers:
+         *           - name: nginx
+         *             image: nginx:1.14.2
+         *             ports:
+         *             - containerPort: 80</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -120,7 +148,10 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Optional. Set the value to YAML.
+         * <p>Optional. Set the value to YAML.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YAML</p>
          */
         public Builder format(String format) {
             this.putQueryParameter("Format", format);
@@ -129,7 +160,10 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,10 +172,11 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling configuration.
-         * <p>
+         * <p>The ID of the scaling configuration.</p>
+         * <p>If you want the system to update a scaling configuration of the Elastic Container Instance type based on a YAML configuration file, you must specify <code>ScalingConfigurationId</code>. If you do not specify <code>ScalingConfigurationId</code>, the system creates a new scaling configuration based on the YAML configuration file.</p>
          * 
-         * If you want the system to update a scaling configuration of the Elastic Container Instance type based on a YAML configuration file, you must specify `ScalingConfigurationId`. If you do not specify `ScalingConfigurationId`, the system creates a new scaling configuration based on the YAML configuration file.
+         * <strong>example:</strong>
+         * <p>asc-bp1i65jd06v04vdh****</p>
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);
@@ -150,7 +185,11 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

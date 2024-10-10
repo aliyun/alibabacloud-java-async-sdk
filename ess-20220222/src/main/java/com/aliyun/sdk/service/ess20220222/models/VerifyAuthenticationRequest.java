@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyAuthenticationRequest} extends {@link RequestModel}
  *
  * <p>VerifyAuthenticationRequest</p>
@@ -109,11 +110,14 @@ public class VerifyAuthenticationRequest extends Request {
         } 
 
         /**
-         * Specifies whether to check only the authorization status. Valid values:
-         * <p>
+         * <p>Specifies whether to check only the authorization status. Valid values:</p>
+         * <ul>
+         * <li>true: checks only the authorization status. The service-linked role is not created.</li>
+         * <li>false (default): checks the authorization status and resource usage.</li>
+         * </ul>
          * 
-         * *   true: checks only the authorization status. The service-linked role is not created.
-         * *   false (default): checks the authorization status and resource usage.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyCheck(Boolean onlyCheck) {
             this.putQueryParameter("OnlyCheck", onlyCheck);
@@ -149,7 +153,10 @@ public class VerifyAuthenticationRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account.
+         * <p>The ID of your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678123*****</p>
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

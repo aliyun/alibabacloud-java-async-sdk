@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachServerGroupsRequest} extends {@link RequestModel}
  *
  * <p>AttachServerGroupsRequest</p>
@@ -140,10 +141,11 @@ public class AttachServerGroupsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -152,13 +154,15 @@ public class AttachServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the server group. Valid values:
-         * <p>
+         * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the server group. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceAttach(Boolean forceAttach) {
             this.putQueryParameter("ForceAttach", forceAttach);
@@ -176,7 +180,11 @@ public class AttachServerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +202,11 @@ public class AttachServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1fo0dbtsbmqa9h****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -203,7 +215,8 @@ public class AttachServerGroupsRequest extends Request {
         }
 
         /**
-         * The information about the server groups.
+         * <p>The information about the server groups.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
             this.putQueryParameter("ServerGroups", serverGroups);
@@ -218,6 +231,12 @@ public class AttachServerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AttachServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>AttachServerGroupsRequest</p>
+     */
     public static class ServerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -285,10 +304,12 @@ public class AttachServerGroupsRequest extends Request {
             private Integer weight; 
 
             /**
-             * The port used by ECS instances or elastic container instances after being added as backend servers to the server group.
-             * <p>
+             * <p>The port used by ECS instances or elastic container instances after being added as backend servers to the server group.</p>
+             * <p>Valid values: 1 to 65535.</p>
+             * <p>This parameter is required.</p>
              * 
-             * Valid values: 1 to 65535.
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -296,7 +317,11 @@ public class AttachServerGroupsRequest extends Request {
             }
 
             /**
-             * The ID of the server group.
+             * <p>The ID of the server group.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sgp-5yc3bd9lfyh*****</p>
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -304,11 +329,15 @@ public class AttachServerGroupsRequest extends Request {
             }
 
             /**
-             * The type of the server group. Valid values:
-             * <p>
+             * <p>The type of the server group. Valid values:</p>
+             * <ul>
+             * <li>ALB</li>
+             * <li>NLB</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   ALB
-             * *   NLB
+             * <strong>example:</strong>
+             * <p>ALB</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -316,10 +345,12 @@ public class AttachServerGroupsRequest extends Request {
             }
 
             /**
-             * The weight of an ECS instance or elastic container instance as a backend server of the server group. Valid values: 0 to 100.
-             * <p>
+             * <p>The weight of an ECS instance or elastic container instance as a backend server of the server group. Valid values: 0 to 100.</p>
+             * <p>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.</p>
+             * <p>This parameter is required.</p>
              * 
-             * If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

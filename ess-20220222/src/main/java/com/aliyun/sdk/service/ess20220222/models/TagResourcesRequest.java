@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -136,7 +137,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -145,7 +150,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.
+         * <p>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -163,7 +169,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to scalinggroup.
+         * <p>The resource type. Set the value to scalinggroup.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scalinggroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -172,7 +182,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Details of the tags.
+         * <p>Details of the tags.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -187,6 +198,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -238,10 +255,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that you want to add to the Auto Scaling resource.
-             * <p>
+             * <p>The key of the tag that you want to add to the Auto Scaling resource.</p>
+             * <p>You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
              * 
-             * You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -249,13 +267,15 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Specifies whether to propagate the tag that you want to add. Valid values:
-             * <p>
+             * <p>Specifies whether to propagate the tag that you want to add. Valid values:</p>
+             * <ul>
+             * <li>true: propagates the tag only to instances that are newly created and does not propagate the tag to instances that are already running in the scaling group.</li>
+             * <li>false: does not propagate the tag to any instances.</li>
+             * </ul>
+             * <p>Default value: false.</p>
              * 
-             * *   true: propagates the tag only to instances that are newly created and does not propagate the tag to instances that are already running in the scaling group.
-             * *   false: does not propagate the tag to any instances.
-             * 
-             * Default value: false.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder propagate(Boolean propagate) {
                 this.propagate = propagate;
@@ -263,10 +283,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The value of the tag that you want to add to the Auto Scaling resource.
-             * <p>
+             * <p>The value of the tag that you want to add to the Auto Scaling resource.</p>
+             * <p>You can specify empty strings as tag values. The tag value must be 0 to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
              * 
-             * You can specify empty strings as tag values. The tag value must be 0 to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

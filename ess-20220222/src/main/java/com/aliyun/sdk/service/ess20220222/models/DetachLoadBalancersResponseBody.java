@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachLoadBalancersResponseBody} extends {@link TeaModel}
  *
  * <p>DetachLoadBalancersResponseBody</p>
@@ -49,7 +50,10 @@ public class DetachLoadBalancersResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DetachLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scaling activity. The value of this parameter is returned only if you set the Async parameter to true. You can call the describescalingactivities operation to query all scaling activity IDs and use the scaling activity IDs to check the status of the scaling activities.
+         * <p>The ID of the scaling activity. The value of this parameter is returned only if you set the Async parameter to true. You can call the describescalingactivities operation to query all scaling activity IDs and use the scaling activity IDs to check the status of the scaling activities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa-bp140qd7mak8k63f****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

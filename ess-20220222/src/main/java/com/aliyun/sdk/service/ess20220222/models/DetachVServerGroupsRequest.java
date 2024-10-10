@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachVServerGroupsRequest} extends {@link RequestModel}
  *
  * <p>DetachVServerGroupsRequest</p>
@@ -140,10 +141,11 @@ public class DetachVServerGroupsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -152,13 +154,15 @@ public class DetachVServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove the existing instances in the scaling group from the vServer group marked for detachment.
-         * <p>
+         * <p>Specifies whether to remove the existing instances in the scaling group from the vServer group marked for detachment.</p>
+         * <ul>
+         * <li>true: If you set this parameter to <code>true</code>, the detachment of the load balancer from the scaling group causes automatic removal of the existing instances in the scaling group from the corresponding vServer group.</li>
+         * <li>false: If you set this parameter to <code>false</code>, the detachment of the load balancer from the scaling group does not cause automatic removal of the existing instances in the scaling group from the corresponding vServer group.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: If you set this parameter to `true`, the detachment of the load balancer from the scaling group causes automatic removal of the existing instances in the scaling group from the corresponding vServer group.
-         * *   false: If you set this parameter to `false`, the detachment of the load balancer from the scaling group does not cause automatic removal of the existing instances in the scaling group from the corresponding vServer group.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDetach(Boolean forceDetach) {
             this.putQueryParameter("ForceDetach", forceDetach);
@@ -176,7 +180,11 @@ public class DetachVServerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.
+         * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +202,11 @@ public class DetachVServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1fo0dbtsbmqa9h****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -203,7 +215,8 @@ public class DetachVServerGroupsRequest extends Request {
         }
 
         /**
-         * The collection of information about the vServer groups marked for detachment.
+         * <p>The collection of information about the vServer groups marked for detachment.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder vServerGroups(java.util.List < VServerGroups> vServerGroups) {
             this.putQueryParameter("VServerGroups", vServerGroups);
@@ -218,6 +231,12 @@ public class DetachVServerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DetachVServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DetachVServerGroupsRequest</p>
+     */
     public static class VServerGroupAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -257,7 +276,10 @@ public class DetachVServerGroupsRequest extends Request {
             private String vServerGroupId; 
 
             /**
-             * The port number that Auto Scaling employs to incorporate instances into the vServer group. Valid values: 1 to 65535.
+             * <p>The port number that Auto Scaling employs to incorporate instances into the vServer group. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -265,7 +287,10 @@ public class DetachVServerGroupsRequest extends Request {
             }
 
             /**
-             * The ID of the backend vServer group.
+             * <p>The ID of the backend vServer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-bp1jp1rge****</p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
@@ -279,6 +304,12 @@ public class DetachVServerGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DetachVServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DetachVServerGroupsRequest</p>
+     */
     public static class VServerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
@@ -318,10 +349,13 @@ public class DetachVServerGroupsRequest extends Request {
             private java.util.List < VServerGroupAttributes> vServerGroupAttributes; 
 
             /**
-             * The ID of the load balancer to which the vServer group belongs.
-             * <p>
+             * <p>The ID of the load balancer to which the vServer group belongs.</p>
+             * <blockquote>
+             * <p> You can detach vServer groups of up to five load balancers from a scaling group in one call.</p>
+             * </blockquote>
              * 
-             * >  You can detach vServer groups of up to five load balancers from a scaling group in one call.
+             * <strong>example:</strong>
+             * <p>lb-bp1p90y3ya9h8s62d****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -329,7 +363,7 @@ public class DetachVServerGroupsRequest extends Request {
             }
 
             /**
-             * The attributes of the backend vServer group.
+             * <p>The attributes of the backend vServer group.</p>
              */
             public Builder vServerGroupAttributes(java.util.List < VServerGroupAttributes> vServerGroupAttributes) {
                 this.vServerGroupAttributes = vServerGroupAttributes;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScalingActivitiesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScalingActivitiesResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC107349-57B7-4405-B1BF-9BF5AF7F2A46</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the scaling activities.
+         * <p>The information about the scaling activities.</p>
          */
         public Builder scalingActivities(java.util.List < ScalingActivities> scalingActivities) {
             this.scalingActivities = scalingActivities;
@@ -117,7 +127,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of scaling activities.
+         * <p>The total number of scaling activities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScalingActivitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScalingActivitiesResponseBody</p>
+     */
     public static class LifecycleHookContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisableLifecycleHook")
         private Boolean disableLifecycleHook;
@@ -169,11 +188,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private java.util.List < String > ignoredLifecycleHookIds; 
 
             /**
-             * Indicates whether all lifecycle hooks are disabled. Valid values:
-             * <p>
+             * <p>Indicates whether all lifecycle hooks are disabled. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disableLifecycleHook(Boolean disableLifecycleHook) {
                 this.disableLifecycleHook = disableLifecycleHook;
@@ -181,7 +203,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the lifecycle hooks that are disabled.
+             * <p>The IDs of the lifecycle hooks that are disabled.</p>
              */
             public Builder ignoredLifecycleHookIds(java.util.List < String > ignoredLifecycleHookIds) {
                 this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
@@ -195,6 +217,12 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeScalingActivitiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScalingActivitiesResponseBody</p>
+     */
     public static class ScalingActivities extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActivityMetadata")
         private String activityMetadata;
@@ -558,7 +586,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private String triggerSourceType; 
 
             /**
-             * The metadata of the scaling activity.
+             * <p>The metadata of the scaling activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;goatscaler.io/managed&quot;:&quot;true&quot;}</p>
              */
             public Builder activityMetadata(String activityMetadata) {
                 this.activityMetadata = activityMetadata;
@@ -566,7 +597,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances that are manually added to the scaling group after the scaling activity was complete.
+             * <p>The total number of instances that are manually added to the scaling group after the scaling activity was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attachedCapacity(String attachedCapacity) {
                 this.attachedCapacity = attachedCapacity;
@@ -574,7 +608,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances that are created by Auto Scaling after the scaling activity was complete.
+             * <p>The total number of instances that are created by Auto Scaling after the scaling activity was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder autoCreatedCapacity(String autoCreatedCapacity) {
                 this.autoCreatedCapacity = autoCreatedCapacity;
@@ -582,7 +619,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the scaling activity was triggered.
+             * <p>The reason why the scaling activity was triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A user requests to execute scaling rule &quot;asr-bp12tcnol686y1ik****&quot;, changing the Total Capacity from &quot;1&quot; to &quot;2&quot;.</p>
              */
             public Builder cause(String cause) {
                 this.cause = cause;
@@ -590,7 +630,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are created during the scale-out event.
+             * <p>The number of instances that are created during the scale-out event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder createdCapacity(Integer createdCapacity) {
                 this.createdCapacity = createdCapacity;
@@ -598,7 +641,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that are created during the scale-out event.
+             * <p>The instances that are created during the scale-out event.</p>
              */
             public Builder createdInstances(java.util.List < String > createdInstances) {
                 this.createdInstances = createdInstances;
@@ -606,7 +649,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the scaling activity.
+             * <p>The description of the scaling activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Add &quot;1&quot; ECS instance</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -614,7 +660,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are released during the scale-in event.
+             * <p>The number of instances that are released during the scale-in event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder destroyedCapacity(Integer destroyedCapacity) {
                 this.destroyedCapacity = destroyedCapacity;
@@ -622,7 +671,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that are released during the scale-in event.
+             * <p>The instances that are released during the scale-in event.</p>
              */
             public Builder destroyedInstances(java.util.List < String > destroyedInstances) {
                 this.destroyedInstances = destroyedInstances;
@@ -630,7 +679,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the scaling activity.
+             * <p>Details of the scaling activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;new ECS instances &quot;i-j6c8ilerw, i-j6c8iler4mx&quot; are created.&quot;</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -638,7 +690,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scaling activity was complete.
+             * <p>The time when the scaling activity was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-10T09:54Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -646,7 +701,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The error code that is returned when the scaling activity failed.
+             * <p>The error code that is returned when the scaling activity failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OperationDenied.NoStock</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -654,7 +712,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when the scaling activity failed.
+             * <p>The error message that is returned when the scaling activity failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified ECS resource is out of stock in this region. Please try again later.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -670,7 +731,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The context of the lifecycle hook.
+             * <p>The context of the lifecycle hook.</p>
              */
             public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
                 this.lifecycleHookContext = lifecycleHookContext;
@@ -678,7 +739,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The execution progress of the scaling activity.
+             * <p>The execution progress of the scaling activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -686,7 +750,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scaling activity.
+             * <p>The ID of the scaling activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asa-bp161xudmuxdzofe****</p>
              */
             public Builder scalingActivityId(String scalingActivityId) {
                 this.scalingActivityId = scalingActivityId;
@@ -694,7 +761,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scaling group.
+             * <p>The ID of the scaling group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-bp18p2yfxow2dloq****</p>
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -702,10 +772,11 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out event.
-             * <p>
+             * <p>If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out event.</p>
+             * <p>If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in event.</p>
              * 
-             * If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in event.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scalingInstanceNumber(Integer scalingInstanceNumber) {
                 this.scalingInstanceNumber = scalingInstanceNumber;
@@ -713,7 +784,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scaling activity was started.
+             * <p>The time when the scaling activity was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-09-10T09:54Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -721,7 +795,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are started from the Economical Mode during the scale-out event.
+             * <p>The number of instances that are started from the Economical Mode during the scale-out event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder startedCapacity(Integer startedCapacity) {
                 this.startedCapacity = startedCapacity;
@@ -729,7 +806,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that are started from the Economical Mode during the scale-out event.
+             * <p>The instances that are started from the Economical Mode during the scale-out event.</p>
              */
             public Builder startedInstances(java.util.List < String > startedInstances) {
                 this.startedInstances = startedInstances;
@@ -737,14 +814,17 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the scaling activity. Valid values:
-             * <p>
+             * <p>The status of the scaling activity. Valid values:</p>
+             * <ul>
+             * <li>Successful: The scaling activity is successful.</li>
+             * <li>Warning: The scaling activity is partially successful.</li>
+             * <li>Failed: The scaling activity failed.</li>
+             * <li>InProgress: The scaling activity is in progress.</li>
+             * <li>Rejected: The request to trigger the scaling activity is rejected.</li>
+             * </ul>
              * 
-             * *   Successful: The scaling activity is successful.
-             * *   Warning: The scaling activity is partially successful.
-             * *   Failed: The scaling activity failed.
-             * *   InProgress: The scaling activity is in progress.
-             * *   Rejected: The request to trigger the scaling activity is rejected.
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -752,7 +832,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The status message of the scaling activity.
+             * <p>The status message of the scaling activity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;1&quot; ECS instances are added</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -760,7 +843,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are stopped in the Economical Mode during the scale-in event.
+             * <p>The number of instances that are stopped in the Economical Mode during the scale-in event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder stoppedCapacity(Integer stoppedCapacity) {
                 this.stoppedCapacity = stoppedCapacity;
@@ -768,7 +854,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that are stopped in the Economical Mode during the scale-in event.
+             * <p>The instances that are stopped in the Economical Mode during the scale-in event.</p>
              */
             public Builder stoppedInstances(java.util.List < String > stoppedInstances) {
                 this.stoppedInstances = stoppedInstances;
@@ -776,7 +862,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances in the scaling group after the scaling activity was complete.
+             * <p>The total number of instances in the scaling group after the scaling activity was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCapacity(String totalCapacity) {
                 this.totalCapacity = totalCapacity;
@@ -784,12 +873,15 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the trigger source of the scaling activity.
-             * <p>
+             * <p>The ID of the trigger source of the scaling activity.</p>
+             * <ul>
+             * <li>If TriggerSourceType is set to Cms, the ID of the trigger source is the ID of an event-triggered task.</li>
+             * <li>If TriggerSourceType is set to Api, the ID of the trigger source is the ID of an Alibaba Cloud account or a RAM user.</li>
+             * <li>If TriggerSourceType is set to Api, the ID of the trigger source is null.</li>
+             * </ul>
              * 
-             * *   If TriggerSourceType is set to Cms, the ID of the trigger source is the ID of an event-triggered task.
-             * *   If TriggerSourceType is set to Api, the ID of the trigger source is the ID of an Alibaba Cloud account or a RAM user.
-             * *   If TriggerSourceType is set to Api, the ID of the trigger source is null.
+             * <strong>example:</strong>
+             * <p>2346366580*****</p>
              */
             public Builder triggerSourceId(String triggerSourceId) {
                 this.triggerSourceId = triggerSourceId;
@@ -797,12 +889,15 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the trigger source of the scaling activity.
-             * <p>
+             * <p>The type of the trigger source of the scaling activity.</p>
+             * <ul>
+             * <li>Cms: triggered by an event-triggered task</li>
+             * <li>APIs: triggered by API calling</li>
+             * <li>Ess: triggered by a system task</li>
+             * </ul>
              * 
-             * *   Cms: triggered by an event-triggered task
-             * *   APIs: triggered by API calling
-             * *   Ess: triggered by a system task
+             * <strong>example:</strong>
+             * <p>Api</p>
              */
             public Builder triggerSourceType(String triggerSourceType) {
                 this.triggerSourceType = triggerSourceType;

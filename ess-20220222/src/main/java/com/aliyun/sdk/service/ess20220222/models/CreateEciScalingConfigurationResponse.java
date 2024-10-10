@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateEciScalingConfigurationResponse} extends {@link TeaModel}
  *
  * <p>CreateEciScalingConfigurationResponse</p>

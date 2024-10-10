@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetGroupDeletionProtectionRequest} extends {@link RequestModel}
  *
  * <p>SetGroupDeletionProtectionRequest</p>
@@ -111,13 +112,16 @@ public class SetGroupDeletionProtectionRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable deletion protection for the scaling group. Valid values:
-         * <p>
+         * <p>Specifies whether to enable deletion protection for the scaling group. Valid values:</p>
+         * <ul>
+         * <li>true: enables deletion protection. In this case, you cannot delete the scaling group by using the Auto Scaling console or calling an API operation. You must disable deletion protection before you can delete the scaling group.</li>
+         * <li>false: disables deletion protection.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: enables deletion protection. In this case, you cannot delete the scaling group by using the Auto Scaling console or calling an API operation. You must disable deletion protection before you can delete the scaling group.
-         * *   false: disables deletion protection.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder groupDeletionProtection(Boolean groupDeletionProtection) {
             this.putQueryParameter("GroupDeletionProtection", groupDeletionProtection);
@@ -135,7 +139,10 @@ public class SetGroupDeletionProtectionRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +160,11 @@ public class SetGroupDeletionProtectionRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

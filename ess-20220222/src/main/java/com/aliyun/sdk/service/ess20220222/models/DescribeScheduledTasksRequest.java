@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScheduledTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeScheduledTasksRequest</p>
@@ -269,10 +270,11 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
-         * <p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -281,10 +283,11 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries per page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -311,7 +314,11 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group to which the scheduled task belongs.
+         * <p>The region ID of the scaling group to which the scheduled task belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -338,7 +345,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group to which the scheduled task belongs.
+         * <p>The ID of the scaling group to which the scheduled task belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1bo5tca4m56nap****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -347,7 +357,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The scaling rules of the scheduled tasks. Once the scheduled tasks are triggered, the scaling rules are executed.
+         * <p>The scaling rules of the scheduled tasks. Once the scheduled tasks are triggered, the scaling rules are executed.</p>
          */
         public Builder scheduledActions(java.util.List < String > scheduledActions) {
             this.putQueryParameter("ScheduledActions", scheduledActions);
@@ -356,7 +366,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The IDs of the scheduled tasks that you want to query.
+         * <p>The IDs of the scheduled tasks that you want to query.</p>
          */
         public Builder scheduledTaskIds(java.util.List < String > scheduledTaskIds) {
             this.putQueryParameter("ScheduledTaskIds", scheduledTaskIds);
@@ -365,7 +375,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The names of the scheduled tasks that you want to query.
+         * <p>The names of the scheduled tasks that you want to query.</p>
          */
         public Builder scheduledTaskNames(java.util.List < String > scheduledTaskNames) {
             this.putQueryParameter("ScheduledTaskNames", scheduledTaskNames);

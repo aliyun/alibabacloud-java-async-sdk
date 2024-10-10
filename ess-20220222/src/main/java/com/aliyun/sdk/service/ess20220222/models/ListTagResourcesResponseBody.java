@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagResourcesResponseBody</p>
@@ -61,7 +62,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * The token that determines the start point of the next query.
+         * <p>The token that determines the start point of the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +73,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DE65F6B7-7566-4802-9007-96F2494A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that encompasses both the resource details and its tags, comprising elements like the resource ID, the resource type, the tag key, and the tag value.
+         * <p>An array that encompasses both the resource details and its tags, comprising elements like the resource ID, the resource type, the tag key, and the tag value.</p>
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -90,6 +97,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesResponseBody</p>
+     */
     public static class TagResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Propagate")
         private Boolean propagate;
@@ -165,11 +178,14 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * Indicates whether the tags of the scaling group can be propagated to instances. Valid values:
-             * <p>
+             * <p>Indicates whether the tags of the scaling group can be propagated to instances. Valid values:</p>
+             * <ul>
+             * <li>true: The tags of the scaling group can be propagated to only instances that are newly created.</li>
+             * <li>false: The tags of the scaling group cannot be propagated to instances.</li>
+             * </ul>
              * 
-             * *   true: The tags of the scaling group can be propagated to only instances that are newly created.
-             * *   false: The tags of the scaling group cannot be propagated to instances.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder propagate(Boolean propagate) {
                 this.propagate = propagate;
@@ -177,7 +193,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asg-bp17xb4x1vr29lgt****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -185,7 +204,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ESS::SCALINGGROUP</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -193,7 +215,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key of the resource.
+             * <p>The tag key of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -201,7 +226,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the resource.
+             * <p>The tag value of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ApplyScalingGroupResponseBody} extends {@link TeaModel}
  *
  * <p>ApplyScalingGroupResponseBody</p>
@@ -49,7 +50,10 @@ public class ApplyScalingGroupResponseBody extends TeaModel {
         private String scalingGroupId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC107349-57B7-4405-B1BF-9BF5AF7F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class ApplyScalingGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the enabled scaling group.
+         * <p>The ID of the enabled scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.scalingGroupId = scalingGroupId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecuteScalingRuleRequest} extends {@link RequestModel}
  *
  * <p>ExecuteScalingRuleRequest</p>
@@ -166,7 +167,10 @@ public class ExecuteScalingRuleRequest extends Request {
         } 
 
         /**
-         * The threshold specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.
+         * <p>The threshold specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder breachThreshold(Float breachThreshold) {
             this.putQueryParameter("BreachThreshold", breachThreshold);
@@ -175,10 +179,11 @@ public class ExecuteScalingRuleRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -187,7 +192,10 @@ public class ExecuteScalingRuleRequest extends Request {
         }
 
         /**
-         * The metric value specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.
+         * <p>The metric value specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder metricValue(Float metricValue) {
             this.putQueryParameter("MetricValue", metricValue);
@@ -214,7 +222,10 @@ public class ExecuteScalingRuleRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,10 +252,14 @@ public class ExecuteScalingRuleRequest extends Request {
         }
 
         /**
-         * The unique identifier of the scaling rule.
-         * <p>
+         * <p>The unique identifier of the scaling rule.</p>
+         * <blockquote>
+         * <p> You can call this operation to execute simple scaling rules and step scaling rules. If you want to call this operation to execute a step scaling rule, you must specify <code>BreachThreshold</code> and <code>MetricValue</code>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call this operation to execute simple scaling rules and step scaling rules. If you want to call this operation to execute a step scaling rule, you must specify `BreachThreshold` and `MetricValue`.
+         * <strong>example:</strong>
+         * <p>ari:acs:ess:cn-hangzhou:140692647406****:scalingrule/asr-bp1dvirgwkoowxk7****</p>
          */
         public Builder scalingRuleAri(String scalingRuleAri) {
             this.putQueryParameter("ScalingRuleAri", scalingRuleAri);

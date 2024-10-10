@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLimitationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLimitationResponseBody</p>
@@ -205,10 +206,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The maximum number of Application Load Balancer (ALB) server groups that can be attached to a scaling group.
-         * <p>
+         * <p>The maximum number of Application Load Balancer (ALB) server groups that can be attached to a scaling group.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxNumberOfAlbServerGroup(Integer maxNumberOfAlbServerGroup) {
             this.maxNumberOfAlbServerGroup = maxNumberOfAlbServerGroup;
@@ -216,10 +220,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of ApsaraDB RDS instances that can be associated with a scaling group.
-         * <p>
+         * <p>The maximum number of ApsaraDB RDS instances that can be associated with a scaling group.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxNumberOfDBInstances(Integer maxNumberOfDBInstances) {
             this.maxNumberOfDBInstances = maxNumberOfDBInstances;
@@ -227,7 +234,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of lifecycle hooks that can be created in a scaling group.
+         * <p>The maximum number of lifecycle hooks that can be created in a scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxNumberOfLifecycleHooks(Integer maxNumberOfLifecycleHooks) {
             this.maxNumberOfLifecycleHooks = maxNumberOfLifecycleHooks;
@@ -235,10 +245,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of Classic Load Balancer (CLB, formerly known as SLB) instances that can be associated with a scaling group.
-         * <p>
+         * <p>The maximum number of Classic Load Balancer (CLB, formerly known as SLB) instances that can be associated with a scaling group.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxNumberOfLoadBalancers(Integer maxNumberOfLoadBalancers) {
             this.maxNumberOfLoadBalancers = maxNumberOfLoadBalancers;
@@ -246,10 +259,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of instances that can be contained in a scaling group.
-         * <p>
+         * <p>The maximum number of instances that can be contained in a scaling group.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder maxNumberOfMaxSize(Integer maxNumberOfMaxSize) {
             this.maxNumberOfMaxSize = maxNumberOfMaxSize;
@@ -257,7 +273,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The minimum number of instances that must be contained in a scaling group. The value of `MaxNumberOfMinSize` must be consistent with the value of `MaxNumberOfMaxSize`.
+         * <p>The minimum number of instances that must be contained in a scaling group. The value of <code>MaxNumberOfMinSize</code> must be consistent with the value of <code>MaxNumberOfMaxSize</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder maxNumberOfMinSize(Integer maxNumberOfMinSize) {
             this.maxNumberOfMinSize = maxNumberOfMinSize;
@@ -265,10 +284,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of Network Load Balancer (NLB) server groups that can be attached to a scaling group.
-         * <p>
+         * <p>The maximum number of Network Load Balancer (NLB) server groups that can be attached to a scaling group.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxNumberOfNlbServerGroup(Integer maxNumberOfNlbServerGroup) {
             this.maxNumberOfNlbServerGroup = maxNumberOfNlbServerGroup;
@@ -276,7 +298,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of notification rules that can be created in a scaling group.
+         * <p>The maximum number of notification rules that can be created in a scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder maxNumberOfNotificationConfigurations(Integer maxNumberOfNotificationConfigurations) {
             this.maxNumberOfNotificationConfigurations = maxNumberOfNotificationConfigurations;
@@ -284,10 +309,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of scaling configurations that can be created in a scaling group.
-         * <p>
+         * <p>The maximum number of scaling configurations that can be created in a scaling group.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder maxNumberOfScalingConfigurations(Integer maxNumberOfScalingConfigurations) {
             this.maxNumberOfScalingConfigurations = maxNumberOfScalingConfigurations;
@@ -295,10 +323,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of scaling groups that can be created in a region by using an Alibaba Cloud account.
-         * <p>
+         * <p>The maximum number of scaling groups that can be created in a region by using an Alibaba Cloud account.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder maxNumberOfScalingGroups(Integer maxNumberOfScalingGroups) {
             this.maxNumberOfScalingGroups = maxNumberOfScalingGroups;
@@ -306,7 +337,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of Elastic Compute Service (ECS) instances or elastic container instances that can be automatically scaled in a scaling group at the same time.
+         * <p>The maximum number of Elastic Compute Service (ECS) instances or elastic container instances that can be automatically scaled in a scaling group at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder maxNumberOfScalingInstances(Integer maxNumberOfScalingInstances) {
             this.maxNumberOfScalingInstances = maxNumberOfScalingInstances;
@@ -314,10 +348,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of scaling rules that can be created in a scaling group.
-         * <p>
+         * <p>The maximum number of scaling rules that can be created in a scaling group.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder maxNumberOfScalingRules(Integer maxNumberOfScalingRules) {
             this.maxNumberOfScalingRules = maxNumberOfScalingRules;
@@ -325,10 +362,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of scheduled tasks that can be created in a region by using an Alibaba Cloud account.
-         * <p>
+         * <p>The maximum number of scheduled tasks that can be created in a region by using an Alibaba Cloud account.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder maxNumberOfScheduledTasks(Integer maxNumberOfScheduledTasks) {
             this.maxNumberOfScheduledTasks = maxNumberOfScheduledTasks;
@@ -336,10 +376,13 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of CLB vServer groups that can be attached to a scaling group.
-         * <p>
+         * <p>The maximum number of CLB vServer groups that can be attached to a scaling group.</p>
+         * <blockquote>
+         * <p> To view the quota or request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
+         * </blockquote>
          * 
-         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxNumberOfVServerGroups(Integer maxNumberOfVServerGroups) {
             this.maxNumberOfVServerGroups = maxNumberOfVServerGroups;
@@ -347,7 +390,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE9BEB41-E7B8-4C7D-A3CF-2DCB1066****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

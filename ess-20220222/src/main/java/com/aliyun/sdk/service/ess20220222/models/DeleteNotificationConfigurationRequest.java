@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNotificationConfigurationRequest} extends {@link RequestModel}
  *
  * <p>DeleteNotificationConfigurationRequest</p>
@@ -111,19 +112,23 @@ public class DeleteNotificationConfigurationRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:
-         * <p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</p>
+         * <ul>
+         * <li>If you use CloudMonitor as the notification party, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.</li>
+         * <li>If you use an MNS queue as the notification party, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.</li>
+         * <li>If you use an MNS topic as the notification party, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.</li>
+         * </ul>
+         * <p>The variables in the preceding formats have the following meanings:</p>
+         * <ul>
+         * <li>region-id: the region ID of the scaling group.</li>
+         * <li>account-id: the ID of the Alibaba Cloud account.</li>
+         * <li>queuename: the name of the MNS queue.</li>
+         * <li>topicname: the name of the MNS topic.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If you use CloudMonitor as the notification party, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.
-         * *   If you use an MNS queue as the notification party, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.
-         * *   If you use an MNS topic as the notification party, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.
-         * 
-         * The variables in the preceding formats have the following meanings:
-         * 
-         * *   region-id: the region ID of the scaling group.
-         * *   account-id: the ID of the Alibaba Cloud account.
-         * *   queuename: the name of the MNS queue.
-         * *   topicname: the name of the MNS topic.
+         * <strong>example:</strong>
+         * <p>acs:ess:cn-beijing:161456884340****:cloudmonitor</p>
          */
         public Builder notificationArn(String notificationArn) {
             this.putQueryParameter("NotificationArn", notificationArn);
@@ -141,7 +146,10 @@ public class DeleteNotificationConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -159,7 +167,11 @@ public class DeleteNotificationConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEciScalingConfigurationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeEciScalingConfigurationsRequest</p>
@@ -199,10 +200,11 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -211,10 +213,11 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,7 +226,11 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group to which the scaling configuration belongs.
+         * <p>The region ID of the scaling group to which the scaling configuration belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -250,10 +257,8 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The IDs of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration IDs.
-         * <p>
-         * 
-         * The IDs of active and inactive scaling configurations are displayed in the query results. You can distinguish between active and inactive scaling configurations based on the value of `LifecycleState`.
+         * <p>The IDs of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration IDs.</p>
+         * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can distinguish between active and inactive scaling configurations based on the value of <code>LifecycleState</code>.</p>
          */
         public Builder scalingConfigurationIds(java.util.List < String > scalingConfigurationIds) {
             this.putQueryParameter("ScalingConfigurationIds", scalingConfigurationIds);
@@ -262,10 +267,8 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The names of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration names.
-         * <p>
-         * 
-         * The names of inactive scaling configurations are not displayed in the query results, and no error is reported.
+         * <p>The names of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration names.</p>
+         * <p>The names of inactive scaling configurations are not displayed in the query results, and no error is reported.</p>
          */
         public Builder scalingConfigurationNames(java.util.List < String > scalingConfigurationNames) {
             this.putQueryParameter("ScalingConfigurationNames", scalingConfigurationNames);
@@ -274,7 +277,10 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.
+         * <p>The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp17pelvl720x3v7****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

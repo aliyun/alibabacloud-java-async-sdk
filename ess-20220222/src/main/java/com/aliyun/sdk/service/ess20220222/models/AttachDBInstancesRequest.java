@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachDBInstancesRequest} extends {@link RequestModel}
  *
  * <p>AttachDBInstancesRequest</p>
@@ -167,11 +168,14 @@ public class AttachDBInstancesRequest extends Request {
         } 
 
         /**
-         * The mode in which you want to attach the ApsaraDB RDS instance to the scaling group. Valid values:
-         * <p>
+         * <p>The mode in which you want to attach the ApsaraDB RDS instance to the scaling group. Valid values:</p>
+         * <ul>
+         * <li>SecurityIp: the SecurityIp mode. Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the ApsaraDB RDS instance. You can select this mode only when you attach an ApsaraDB RDS instance to a scaling group.</li>
+         * <li>SecurityGroup: the security group mode. Auto Scaling adds the security group of the scaling configuration to the security group whitelist for registration and association.</li>
+         * </ul>
          * 
-         * *   SecurityIp: the SecurityIp mode. Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the ApsaraDB RDS instance. You can select this mode only when you attach an ApsaraDB RDS instance to a scaling group.
-         * *   SecurityGroup: the security group mode. Auto Scaling adds the security group of the scaling configuration to the security group whitelist for registration and association.
+         * <strong>example:</strong>
+         * <p>SecurityIp</p>
          */
         public Builder attachMode(String attachMode) {
             this.putQueryParameter("AttachMode", attachMode);
@@ -180,10 +184,11 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
+         * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure the idempotence of a request</a>.</p>
          * 
-         * The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -192,7 +197,8 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraDB RDS instance.
+         * <p>The ID of the ApsaraDB RDS instance.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder DBInstances(java.util.List < String > DBInstances) {
             this.putQueryParameter("DBInstances", DBInstances);
@@ -201,13 +207,15 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to add the private IP addresses of all instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance. Valid values:
-         * <p>
+         * <p>Specifies whether to add the private IP addresses of all instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceAttach(Boolean forceAttach) {
             this.putQueryParameter("ForceAttach", forceAttach);
@@ -225,7 +233,10 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,7 +254,11 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1avr6ensitts3w****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -252,14 +267,16 @@ public class AttachDBInstancesRequest extends Request {
         }
 
         /**
-         * The type of the database that you want to attach to the scaling group. Valid values:
-         * <p>
+         * <p>The type of the database that you want to attach to the scaling group. Valid values:</p>
+         * <ul>
+         * <li>ApsaraDB RDS</li>
+         * <li>ApsaraDB for Redis</li>
+         * <li>ApsaraDB for MongoDB</li>
+         * </ul>
+         * <p>Default value: RDS.</p>
          * 
-         * *   ApsaraDB RDS
-         * *   ApsaraDB for Redis
-         * *   ApsaraDB for MongoDB
-         * 
-         * Default value: RDS.
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

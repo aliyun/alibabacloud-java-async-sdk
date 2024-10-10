@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScaleWithAdjustmentRequest} extends {@link RequestModel}
  *
  * <p>ScaleWithAdjustmentRequest</p>
@@ -196,7 +197,10 @@ public class ScaleWithAdjustmentRequest extends Request {
         } 
 
         /**
-         * The metadata of the scaling activity.
+         * <p>The metadata of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
          */
         public Builder activityMetadata(String activityMetadata) {
             this.putQueryParameter("ActivityMetadata", activityMetadata);
@@ -205,12 +209,16 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * The type of the scaling policy. Valid values:
-         * <p>
+         * <p>The type of the scaling policy. Valid values:</p>
+         * <ul>
+         * <li>QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</li>
+         * <li>PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</li>
+         * <li>TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.
-         * *   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.
-         * *   TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.
+         * <strong>example:</strong>
+         * <p>QuantityChangeInCapacity</p>
          */
         public Builder adjustmentType(String adjustmentType) {
             this.putQueryParameter("AdjustmentType", adjustmentType);
@@ -219,12 +227,16 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * The number of instances in each adjustment. The number of ECS instances in each adjustment cannot exceed 1,000.
-         * <p>
+         * <p>The number of instances in each adjustment. The number of ECS instances in each adjustment cannot exceed 1,000.</p>
+         * <ul>
+         * <li>Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</li>
+         * <li>Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</li>
+         * <li>Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.
-         * *   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.
-         * *   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder adjustmentValue(Integer adjustmentValue) {
             this.putQueryParameter("AdjustmentValue", adjustmentValue);
@@ -233,7 +245,10 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -242,7 +257,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * The context of the lifecycle hook.
+         * <p>The context of the lifecycle hook.</p>
          */
         public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
             String lifecycleHookContextShrink = shrink(lifecycleHookContext, "LifecycleHookContext", "json");
@@ -252,7 +267,10 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * The minimum number of instances allowed in each adjustment. This parameter takes effect only if you set the `AdjustmentType` parameter to `PercentChangeInCapacity`.
+         * <p>The minimum number of instances allowed in each adjustment. This parameter takes effect only if you set the <code>AdjustmentType</code> parameter to <code>PercentChangeInCapacity</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
             this.putQueryParameter("MinAdjustmentMagnitude", minAdjustmentMagnitude);
@@ -261,7 +279,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out event.
+         * <p>The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out event.</p>
          */
         public Builder overrides(Overrides overrides) {
             String overridesShrink = shrink(overrides, "Overrides", "json");
@@ -289,7 +307,11 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-j6c1o397427hyjdc****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -298,15 +320,18 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * Specifies whether to trigger the scaling activity in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid values:
-         * <p>
+         * <p>Specifies whether to trigger the scaling activity in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid values:</p>
+         * <ul>
+         * <li>true: triggers the scaling activity in a synchronous manner. The scaling activity is triggered at the time when the scaling rule is executed.</li>
+         * <li>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number of instances and determines whether to trigger the scaling activity based on the check result.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more information about the Expected Number of Instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
+         * </blockquote>
+         * <p>Default value: false.</p>
          * 
-         * *   true: triggers the scaling activity in a synchronous manner. The scaling activity is triggered at the time when the scaling rule is executed.
-         * *   false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number of instances and determines whether to trigger the scaling activity based on the check result.
-         * 
-         * > For more information about the Expected Number of Instances feature, see [Expected number of instances](~~146231~~).
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder syncActivity(Boolean syncActivity) {
             this.putQueryParameter("SyncActivity", syncActivity);
@@ -321,6 +346,12 @@ public class ScaleWithAdjustmentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ScaleWithAdjustmentRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleWithAdjustmentRequest</p>
+     */
     public static class LifecycleHookContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisableLifecycleHook")
         private Boolean disableLifecycleHook;
@@ -360,11 +391,14 @@ public class ScaleWithAdjustmentRequest extends Request {
             private java.util.List < String > ignoredLifecycleHookIds; 
 
             /**
-             * Specifies whether to disable the Lifecycle Hook feature. Valid values:
-             * <p>
+             * <p>Specifies whether to disable the Lifecycle Hook feature. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder disableLifecycleHook(Boolean disableLifecycleHook) {
                 this.disableLifecycleHook = disableLifecycleHook;
@@ -372,7 +406,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The IDs of the lifecycle hooks that you want to disable.
+             * <p>The IDs of the lifecycle hooks that you want to disable.</p>
              */
             public Builder ignoredLifecycleHookIds(java.util.List < String > ignoredLifecycleHookIds) {
                 this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
@@ -386,6 +420,12 @@ public class ScaleWithAdjustmentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ScaleWithAdjustmentRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleWithAdjustmentRequest</p>
+     */
     public static class EnvironmentVars extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -425,7 +465,10 @@ public class ScaleWithAdjustmentRequest extends Request {
             private String value; 
 
             /**
-             * The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (\_), and digits. The name cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
+             * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PATH</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -433,7 +476,10 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The value of the environment variable. The value can be up to 256 characters in length.
+             * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/tomcat</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -447,6 +493,12 @@ public class ScaleWithAdjustmentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ScaleWithAdjustmentRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleWithAdjustmentRequest</p>
+     */
     public static class ContainerOverrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
         private java.util.List < String > args;
@@ -534,7 +586,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             private String name; 
 
             /**
-             * The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.
+             * <p>The arguments that correspond to the startup commands of the container. You can specify up to 10 arguments.</p>
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -542,7 +594,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.
+             * <p>The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -550,7 +602,10 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the container.
+             * <p>The number of vCPUs that you want to allocate to the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -558,7 +613,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The information about the environment variables.
+             * <p>The information about the environment variables.</p>
              */
             public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -566,7 +621,10 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The memory size that you want to allocate to the container. Unit: GiB.
+             * <p>The memory size that you want to allocate to the container. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -574,7 +632,10 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The container name. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.
+             * <p>The container name. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>container-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -588,6 +649,12 @@ public class ScaleWithAdjustmentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ScaleWithAdjustmentRequest} extends {@link TeaModel}
+     *
+     * <p>ScaleWithAdjustmentRequest</p>
+     */
     public static class Overrides extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerOverrides")
         private java.util.List < ContainerOverrides> containerOverrides;
@@ -639,7 +706,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             private Float memory; 
 
             /**
-             * The list of parameters that you want to use to override specific configurations for containers.
+             * <p>The list of parameters that you want to use to override specific configurations for containers.</p>
              */
             public Builder containerOverrides(java.util.List < ContainerOverrides> containerOverrides) {
                 this.containerOverrides = containerOverrides;
@@ -647,7 +714,10 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the instance.
+             * <p>The number of vCPUs that you want to allocate to the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -655,7 +725,10 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The memory size that you want to allocate to the instance. Unit: GiB.
+             * <p>The memory size that you want to allocate to the instance. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;

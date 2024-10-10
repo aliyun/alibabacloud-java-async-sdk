@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLifecycleActionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLifecycleActionsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The actions of the lifecycle hook.
+         * <p>The actions of the lifecycle hook.</p>
          */
         public Builder lifecycleActions(java.util.List < LifecycleActions> lifecycleActions) {
             this.lifecycleActions = lifecycleActions;
@@ -93,7 +94,10 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
 
         /**
-         * The query token returned in this call.
+         * <p>The query token returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAcSz4VTb1Nq****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42A742EB-FCF3-459E-9C62-E107048C17E3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the queried lifecycle actions.
+         * <p>The total number of the queried lifecycle actions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLifecycleActionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLifecycleActionsResponseBody</p>
+     */
     public static class LifecycleActions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceIds")
         private java.util.List < String > instanceIds;
@@ -205,7 +224,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             private String lifecycleHookId; 
 
             /**
-             * The IDs of the ECS instances on which the lifecycle hook takes effect
+             * <p>The IDs of the ECS instances on which the lifecycle hook takes effect</p>
              */
             public Builder instanceIds(java.util.List < String > instanceIds) {
                 this.instanceIds = instanceIds;
@@ -213,11 +232,14 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The subsequent action that Auto Scaling performs after the lifecycle hook times out. Valid values:
-             * <p>
+             * <p>The subsequent action that Auto Scaling performs after the lifecycle hook times out. Valid values:</p>
+             * <ul>
+             * <li>CONTINUE: Auto Scaling continues to respond to a scale-in or scale-out request.</li>
+             * <li>ABANDON: Auto Scaling releases ECS instances that are created during scale-out events, or removes ECS instances from the scaling group during scale-in events.</li>
+             * </ul>
              * 
-             * *   CONTINUE: Auto Scaling continues to respond to a scale-in or scale-out request.
-             * *   ABANDON: Auto Scaling releases ECS instances that are created during scale-out events, or removes ECS instances from the scaling group during scale-in events.
+             * <strong>example:</strong>
+             * <p>CONTINUE</p>
              */
             public Builder lifecycleActionResult(String lifecycleActionResult) {
                 this.lifecycleActionResult = lifecycleActionResult;
@@ -225,7 +247,10 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the lifecycle hook action.
+             * <p>The status of the lifecycle hook action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder lifecycleActionStatus(String lifecycleActionStatus) {
                 this.lifecycleActionStatus = lifecycleActionStatus;
@@ -233,7 +258,10 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The token of the lifecycle hook action.
+             * <p>The token of the lifecycle hook action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9C2E9DA7-F794-449A-ACF6-CEE24444F7BB</p>
              */
             public Builder lifecycleActionToken(String lifecycleActionToken) {
                 this.lifecycleActionToken = lifecycleActionToken;
@@ -241,7 +269,10 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the lifecycle hook.
+             * <p>The ID of the lifecycle hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ash-bp18uoft0deax0f7****</p>
              */
             public Builder lifecycleHookId(String lifecycleHookId) {
                 this.lifecycleHookId = lifecycleHookId;

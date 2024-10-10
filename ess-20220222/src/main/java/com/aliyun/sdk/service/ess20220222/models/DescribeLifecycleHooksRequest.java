@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLifecycleHooksRequest} extends {@link RequestModel}
  *
  * <p>DescribeLifecycleHooksRequest</p>
@@ -165,7 +166,7 @@ public class DescribeLifecycleHooksRequest extends Request {
         } 
 
         /**
-         * The IDs of the lifecycle hooks that you want to query.
+         * <p>The IDs of the lifecycle hooks that you want to query.</p>
          */
         public Builder lifecycleHookIds(java.util.List < String > lifecycleHookIds) {
             this.putQueryParameter("LifecycleHookIds", lifecycleHookIds);
@@ -174,7 +175,10 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * The name of the lifecycle hook.
+         * <p>The name of the lifecycle hook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lifecyclehook****</p>
          */
         public Builder lifecycleHookName(String lifecycleHookName) {
             this.putQueryParameter("LifecycleHookName", lifecycleHookName);
@@ -201,10 +205,11 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -213,10 +218,11 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>Default value: 50.</p>
          * 
-         * Default value: 50.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +231,10 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,7 +252,10 @@ public class DescribeLifecycleHooksRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

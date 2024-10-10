@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAlarmResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteAlarmResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteAlarmResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the event-triggered task.
+         * <p>The ID of the event-triggered task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1hvbnmkl10vll5****_f95ce797-dc2e-4bad-9618-14fee7d1****</p>
          */
         public Builder alarmTaskId(String alarmTaskId) {
             this.alarmTaskId = alarmTaskId;
@@ -57,7 +61,10 @@ public class DeleteAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF9BFEE-FE07-4627-B8FB-14326FB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

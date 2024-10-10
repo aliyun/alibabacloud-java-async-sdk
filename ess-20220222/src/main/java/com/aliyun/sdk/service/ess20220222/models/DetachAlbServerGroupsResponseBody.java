@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DetachAlbServerGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DetachAlbServerGroupsResponseBody</p>
@@ -49,7 +50,10 @@ public class DetachAlbServerGroupsResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DetachAlbServerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scaling activity during which the ALB server group is detached from the scaling group and the existing ECS instances are removed from the ALB server group. This parameter has a return value only if you set `ForceDetach` to `true`.
+         * <p>The ID of the scaling activity during which the ALB server group is detached from the scaling group and the existing ECS instances are removed from the ALB server group. This parameter has a return value only if you set <code>ForceDetach</code> to <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa-2ze6wxj8vsohn6j9****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.scalingActivityId = scalingActivityId;

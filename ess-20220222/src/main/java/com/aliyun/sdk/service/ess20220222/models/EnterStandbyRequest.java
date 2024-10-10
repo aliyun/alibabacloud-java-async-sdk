@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnterStandbyRequest} extends {@link RequestModel}
  *
  * <p>EnterStandbyRequest</p>
@@ -125,13 +126,15 @@ public class EnterStandbyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to asynchronously put the ECS instance into the Standby state. Valid values:
-         * <p>
+         * <p>Specifies whether to asynchronously put the ECS instance into the Standby state. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -140,7 +143,10 @@ public class EnterStandbyRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,7 +155,8 @@ public class EnterStandbyRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances.
+         * <p>The IDs of the ECS instances.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -176,7 +183,11 @@ public class EnterStandbyRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1fo0dbtsbmqa9h****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

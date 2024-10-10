@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelInstanceRefreshRequest} extends {@link RequestModel}
  *
  * <p>CancelInstanceRefreshRequest</p>
@@ -112,7 +113,10 @@ public class CancelInstanceRefreshRequest extends Request {
         } 
 
         /**
-         * InstanceRefreshTaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ir-aca123sf****</p>
          */
         public Builder instanceRefreshTaskId(String instanceRefreshTaskId) {
             this.putQueryParameter("InstanceRefreshTaskId", instanceRefreshTaskId);
@@ -130,7 +134,10 @@ public class CancelInstanceRefreshRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +155,10 @@ public class CancelInstanceRefreshRequest extends Request {
         }
 
         /**
-         * ScalingGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

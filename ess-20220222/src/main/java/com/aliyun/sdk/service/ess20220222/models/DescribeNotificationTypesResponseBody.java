@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNotificationTypesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNotificationTypesResponseBody</p>
@@ -49,17 +50,17 @@ public class DescribeNotificationTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The types of the notifications.
-         * <p>
-         * 
-         * *   AUTOSCALING:SCALE_OUT_SUCCESS: The scale-out activity succeeds.
-         * *   AUTOSCALING:SCALE_IN_SUCCESS: The scale-in activity succeeds.
-         * *   AUTOSCALING:SCALE_OUT_ERROR: The scale-out activity fails.
-         * *   AUTOSCALING:SCALE_IN_ERROR: The scale-in activity fails.
-         * *   AUTOSCALING:SCALE_REJECT: The request for scaling activities is rejected.
-         * *   AUTOSCALING:SCALE_OUT_START: The scale-out activity starts.
-         * *   AUTOSCALING:SCALE_IN_START: The scale-in activity starts.
-         * *   AUTOSCALING:SCHEDULE_TASK_EXPIRING: Auto Scaling sends a notification when a scheduled task is about to expire.
+         * <p>The types of the notifications.</p>
+         * <ul>
+         * <li>AUTOSCALING:SCALE_OUT_SUCCESS: The scale-out activity succeeds.</li>
+         * <li>AUTOSCALING:SCALE_IN_SUCCESS: The scale-in activity succeeds.</li>
+         * <li>AUTOSCALING:SCALE_OUT_ERROR: The scale-out activity fails.</li>
+         * <li>AUTOSCALING:SCALE_IN_ERROR: The scale-in activity fails.</li>
+         * <li>AUTOSCALING:SCALE_REJECT: The request for scaling activities is rejected.</li>
+         * <li>AUTOSCALING:SCALE_OUT_START: The scale-out activity starts.</li>
+         * <li>AUTOSCALING:SCALE_IN_START: The scale-in activity starts.</li>
+         * <li>AUTOSCALING:SCHEDULE_TASK_EXPIRING: Auto Scaling sends a notification when a scheduled task is about to expire.</li>
+         * </ul>
          */
         public Builder notificationTypes(java.util.List < String > notificationTypes) {
             this.notificationTypes = notificationTypes;
@@ -67,7 +68,10 @@ public class DescribeNotificationTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

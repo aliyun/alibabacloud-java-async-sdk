@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagValuesResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagValuesResponseBody</p>
@@ -73,7 +74,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         private java.util.List < String > values; 
 
         /**
-         * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
+         * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -81,7 +85,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -89,7 +96,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB444F46-1CFF-4B06-B8F0-B45D3158****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the tag values.
+         * <p>Details of the tag values.</p>
          */
         public Builder values(java.util.List < String > values) {
             this.values = values;

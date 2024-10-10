@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeResourceGroupRequest} extends {@link RequestModel}
  *
  * <p>ChangeResourceGroupRequest</p>
@@ -126,7 +127,11 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which you want to move the scaling group.
+         * <p>The ID of the resource group to which you want to move the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2ckjqe3*****</p>
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -144,7 +149,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +162,11 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group that you want to move from the current resource group to another resource group.
+         * <p>The ID of the scaling group that you want to move from the current resource group to another resource group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp17xb4x1vr29lgt****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -171,7 +184,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource type. Set the value to scalinggroup.
+         * <p>The resource type. Set the value to scalinggroup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scalinggroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

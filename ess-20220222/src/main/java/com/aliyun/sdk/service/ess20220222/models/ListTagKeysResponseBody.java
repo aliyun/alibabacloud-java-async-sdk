@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListTagKeysResponseBody</p>
@@ -73,7 +74,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the tag keys.
+         * <p>Details of the tag keys.</p>
          */
         public Builder keys(java.util.List < String > keys) {
             this.keys = keys;
@@ -81,7 +82,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +93,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -97,7 +104,10 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC09A6AA-2713-4E10-A2E9-E6C5C43A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

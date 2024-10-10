@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteEciScalingConfigurationRequest} extends {@link RequestModel}
  *
  * <p>DeleteEciScalingConfigurationRequest</p>
@@ -128,7 +129,10 @@ public class DeleteEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * <p>The region ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,7 +150,11 @@ public class DeleteEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling configuration that you want to delete.
+         * <p>The ID of the scaling configuration that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc-bp1bx8mzur534edp****</p>
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);

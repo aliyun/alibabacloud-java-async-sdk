@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScalingActivityDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeScalingActivityDetailRequest</p>
@@ -123,7 +124,11 @@ public class DescribeScalingActivityDetailRequest extends Request {
         }
 
         /**
-         * The ID of the scaling activity that you want to query. You can call the DescribeScalingActivities operation to query the IDs of scaling activities.
+         * <p>The ID of the scaling activity that you want to query. You can call the DescribeScalingActivities operation to query the IDs of scaling activities.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa-bp1c9djwrgxjyk31****</p>
          */
         public Builder scalingActivityId(String scalingActivityId) {
             this.putQueryParameter("ScalingActivityId", scalingActivityId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagKeysRequest} extends {@link RequestModel}
  *
  * <p>ListTagKeysRequest</p>
@@ -125,7 +126,10 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -143,10 +147,11 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +160,11 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The region ID of the Auto Scaling resource.
+         * <p>The region ID of the Auto Scaling resource.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +182,11 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The type of the Auto Scaling resources. Set the value to `scalinggroup`. This means the tag key you want to query is added to a scaling group.
+         * <p>The type of the Auto Scaling resources. Set the value to <code>scalinggroup</code>. This means the tag key you want to query is added to a scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scalinggroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

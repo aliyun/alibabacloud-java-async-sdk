@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The collection of region information.
+         * <p>The collection of region information.</p>
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassicUnavailable")
         private Boolean classicUnavailable;
@@ -145,11 +155,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private Boolean vpcUnavailable; 
 
             /**
-             * Indicates whether the current region supports scaling groups that reside in the classic network. Valid values:
-             * <p>
+             * <p>Indicates whether the current region supports scaling groups that reside in the classic network. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder classicUnavailable(Boolean classicUnavailable) {
                 this.classicUnavailable = classicUnavailable;
@@ -157,7 +170,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region name.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Beijing)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -165,7 +181,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region endpoint.
+             * <p>The region endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ess.aliyuncs.com</p>
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -173,7 +192,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -181,11 +203,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the current region supports scaling groups that reside in virtual private clouds (VPCs). Valid values:
-             * <p>
+             * <p>Indicates whether the current region supports scaling groups that reside in virtual private clouds (VPCs). Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder vpcUnavailable(Boolean vpcUnavailable) {
                 this.vpcUnavailable = vpcUnavailable;

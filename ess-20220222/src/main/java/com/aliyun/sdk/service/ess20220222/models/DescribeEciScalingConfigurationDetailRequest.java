@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEciScalingConfigurationDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeEciScalingConfigurationDetailRequest</p>
@@ -97,7 +98,10 @@ public class DescribeEciScalingConfigurationDetailRequest extends Request {
         } 
 
         /**
-         * The output format. Set the value to YAML.
+         * <p>The output format. Set the value to YAML.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yaml</p>
          */
         public Builder outputFormat(String outputFormat) {
             this.putQueryParameter("OutputFormat", outputFormat);
@@ -106,7 +110,11 @@ public class DescribeEciScalingConfigurationDetailRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group to which the scaling configuration belongs.
+         * <p>The region ID of the scaling group to which the scaling configuration belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -115,7 +123,11 @@ public class DescribeEciScalingConfigurationDetailRequest extends Request {
         }
 
         /**
-         * The ID of the scaling configuration based on which elastic container instances are created.
+         * <p>The ID of the scaling configuration based on which elastic container instances are created.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc-bp1ffogfdauy0nu5****</p>
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);
@@ -124,7 +136,10 @@ public class DescribeEciScalingConfigurationDetailRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group to which the scaling configuration belongs.
+         * <p>The ID of the scaling group to which the scaling configuration belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1ffogfdauy0jw0****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);

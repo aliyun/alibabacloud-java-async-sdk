@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AttachVServerGroupsRequest} extends {@link RequestModel}
  *
  * <p>AttachVServerGroupsRequest</p>
@@ -140,10 +141,11 @@ public class AttachVServerGroupsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-42665544****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -152,13 +154,15 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the new vServer group. Valid values:
-         * <p>
+         * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the new vServer group. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceAttach(Boolean forceAttach) {
             this.putQueryParameter("ForceAttach", forceAttach);
@@ -176,7 +180,11 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai. For information about regions and zones, see [Regions and zones](~~40654~~).
+         * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai. For information about regions and zones, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +202,11 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group.
+         * <p>The ID of the scaling group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -203,7 +215,8 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * The information about the vServer groups.
+         * <p>The information about the vServer groups.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder vServerGroups(java.util.List < VServerGroups> vServerGroups) {
             this.putQueryParameter("VServerGroups", vServerGroups);
@@ -218,6 +231,12 @@ public class AttachVServerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AttachVServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>AttachVServerGroupsRequest</p>
+     */
     public static class VServerGroupAttributes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -269,7 +288,10 @@ public class AttachVServerGroupsRequest extends Request {
             private Integer weight; 
 
             /**
-             * The port number over which Auto Scaling adds ECS instances or elastic container instances to the new vServer group. Valid values: 1 to 65535.
+             * <p>The port number over which Auto Scaling adds ECS instances or elastic container instances to the new vServer group. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -277,7 +299,10 @@ public class AttachVServerGroupsRequest extends Request {
             }
 
             /**
-             * The ID of the vServer group.
+             * <p>The ID of the vServer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-bp1u7etiogg38yvwz****</p>
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;
@@ -285,10 +310,11 @@ public class AttachVServerGroupsRequest extends Request {
             }
 
             /**
-             * The weight of an ECS instance or elastic container instance as a backend server. Valid values: 0 to 100.
-             * <p>
+             * <p>The weight of an ECS instance or elastic container instance as a backend server. Valid values: 0 to 100.</p>
+             * <p>Default value: 50.</p>
              * 
-             * Default value: 50.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -302,6 +328,12 @@ public class AttachVServerGroupsRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AttachVServerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>AttachVServerGroupsRequest</p>
+     */
     public static class VServerGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
@@ -341,7 +373,10 @@ public class AttachVServerGroupsRequest extends Request {
             private java.util.List < VServerGroupAttributes> vServerGroupAttributes; 
 
             /**
-             * The ID of the CLB instance to which the new vServer group belongs.
+             * <p>The ID of the CLB instance to which the new vServer group belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rsp-bp1jp1rge****</p>
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -349,7 +384,7 @@ public class AttachVServerGroupsRequest extends Request {
             }
 
             /**
-             * The attributes of the vServer group.
+             * <p>The attributes of the vServer group.</p>
              */
             public Builder vServerGroupAttributes(java.util.List < VServerGroupAttributes> vServerGroupAttributes) {
                 this.vServerGroupAttributes = vServerGroupAttributes;

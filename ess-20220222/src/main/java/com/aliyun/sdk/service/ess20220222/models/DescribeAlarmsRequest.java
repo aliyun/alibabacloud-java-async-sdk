@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlarmsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAlarmsRequest</p>
@@ -195,7 +196,10 @@ public class DescribeAlarmsRequest extends Request {
         } 
 
         /**
-         * The ID of the event-triggered task.
+         * <p>The ID of the event-triggered task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1hvbnmkl10vll5****_f95ce797-dc2e-4bad-9618-14fee7d1****</p>
          */
         public Builder alarmTaskId(String alarmTaskId) {
             this.putQueryParameter("AlarmTaskId", alarmTaskId);
@@ -204,11 +208,14 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the event-triggered task. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the event-triggered task. Valid values:</p>
+         * <ul>
+         * <li>true: enables the event-triggered task.</li>
+         * <li>false: disables the event-triggered task.</li>
+         * </ul>
          * 
-         * *   true: enables the event-triggered task.
-         * *   false: disables the event-triggered task.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isEnable(Boolean isEnable) {
             this.putQueryParameter("IsEnable", isEnable);
@@ -217,7 +224,10 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * The metric name.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CpuUtilization</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -226,11 +236,14 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * The metric type. Valid values:
-         * <p>
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li>system: system metrics of CloudMonitor</li>
+         * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+         * </ul>
          * 
-         * *   system: system metrics of CloudMonitor
-         * *   custom: custom metrics that are reported to CloudMonitor.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -248,10 +261,11 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
-         * Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -260,10 +274,11 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 50.
-         * <p>
+         * <p>The number of entries to return on each page. Maximum value: 50.</p>
+         * <p>Default value: 10.</p>
          * 
-         * Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,7 +287,11 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * The region ID of the event-triggered task.
+         * <p>The region ID of the event-triggered task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -290,7 +309,10 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * The ID of the scaling group with which the event-triggered task is associated.
+         * <p>The ID of the scaling group with which the event-triggered task is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
@@ -299,12 +321,15 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * The status of the event-triggered task. Valid values:
-         * <p>
+         * <p>The status of the event-triggered task. Valid values:</p>
+         * <ul>
+         * <li>ALARM: The alert condition is met and an alert is triggered.</li>
+         * <li>OK: The alert condition is not met.</li>
+         * <li>INSUFFICIENT_DATA: Auto Scaling cannot determine whether the alert condition is met due to insufficient data.</li>
+         * </ul>
          * 
-         * *   ALARM: The alert condition is met and an alert is triggered.
-         * *   OK: The alert condition is not met.
-         * *   INSUFFICIENT_DATA: Auto Scaling cannot determine whether the alert condition is met due to insufficient data.
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
