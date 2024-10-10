@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeCheckConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeCheckConfigResponseBody</p>
@@ -37,7 +38,10 @@ public class ChangeCheckConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EBB8614-746D-555D-AB69-C801AEC7DCE0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

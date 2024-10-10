@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileProtectRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateFileProtectRuleRequest</p>
@@ -170,13 +171,16 @@ public class CreateFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * The severity of alerts. Valid values:
-         * <p>
+         * <p>The severity of alerts. Valid values:</p>
+         * <ul>
+         * <li>0: does not generate alerts</li>
+         * <li>1: sends notifications</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
+         * </ul>
          * 
-         * *   0: does not generate alerts
-         * *   1: sends notifications
-         * *   2: suspicious
-         * *   3: high-risk
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -185,7 +189,8 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The operations that you want to perform on the files.
+         * <p>The operations that you want to perform on the files.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder fileOps(java.util.List < String > fileOps) {
             this.putQueryParameter("FileOps", fileOps);
@@ -194,7 +199,8 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The paths to the files that you want to monitor. Wildcard characters are supported.
+         * <p>The paths to the files that you want to monitor. Wildcard characters are supported.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder filePaths(java.util.List < String > filePaths) {
             this.putQueryParameter("FilePaths", filePaths);
@@ -203,11 +209,14 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>windows</strong>: Windows</li>
+         * <li><strong>linux</strong>: Linux</li>
+         * </ul>
          * 
-         * *   **windows**: Windows
-         * *   **linux**: Linux
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -216,7 +225,8 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The paths to the processes that you want to monitor. Wildcard characters are supported.
+         * <p>The paths to the processes that you want to monitor. Wildcard characters are supported.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder procPaths(java.util.List < String > procPaths) {
             this.putQueryParameter("ProcPaths", procPaths);
@@ -225,11 +235,15 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The handling method of the rule. Valid values:
-         * <p>
+         * <p>The handling method of the rule. Valid values:</p>
+         * <ul>
+         * <li>pass: allow</li>
+         * <li>alert</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   pass: allow
-         * *   alert
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -238,7 +252,11 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tetsRule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -247,11 +265,14 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the rule. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -260,7 +281,10 @@ public class CreateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The switch ID of the rule.
+         * <p>The switch ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE_PROTECT_RULE_SWITCH_TYPE_0000</p>
          */
         public Builder switchId(String switchId) {
             this.putQueryParameter("SwitchId", switchId);

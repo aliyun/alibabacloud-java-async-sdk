@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageRequest</p>
@@ -99,10 +100,14 @@ public class DescribeImageRequest extends Request {
         } 
 
         /**
-         * The instance ID of the image.
-         * <p>
+         * <p>The instance ID of the image.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the IDs of instances.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of instances.
+         * <strong>example:</strong>
+         * <p>cri-hfs6gaawhyu6****</p>
          */
         public Builder imageInstanceId(String imageInstanceId) {
             this.putQueryParameter("ImageInstanceId", imageInstanceId);
@@ -111,10 +116,14 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * The region ID of the image.
-         * <p>
+         * <p>The region ID of the image.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the IDs of regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder imageRegionId(String imageRegionId) {
             this.putQueryParameter("ImageRegionId", imageRegionId);
@@ -123,10 +132,14 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
-         * <p>
+         * <p>The ID of the image repository.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the IDs of image repositories.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query the IDs of image repositories.
+         * <strong>example:</strong>
+         * <p>crr-7i88t7lx3fmf****</p>
          */
         public Builder imageRepoId(String imageRepoId) {
             this.putQueryParameter("ImageRepoId", imageRepoId);
@@ -135,10 +148,14 @@ public class DescribeImageRequest extends Request {
         }
 
         /**
-         * The tag that is added to the image.
-         * <p>
+         * <p>The tag that is added to the image.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query tags.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeImageInstances](~~DescribeImageInstances~~) operation to query tags.
+         * <strong>example:</strong>
+         * <p>1.8.0.15</p>
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);

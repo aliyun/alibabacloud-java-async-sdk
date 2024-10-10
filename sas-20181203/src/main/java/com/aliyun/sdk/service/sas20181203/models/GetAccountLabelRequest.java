@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountLabelRequest} extends {@link RequestModel}
  *
  * <p>GetAccountLabelRequest</p>
@@ -68,7 +69,7 @@ public class GetAccountLabelRequest extends Request {
         } 
 
         /**
-         * LabelList.
+         * <p>This parameter is required.</p>
          */
         public Builder labelList(java.util.List < String > labelList) {
             this.putQueryParameter("LabelList", labelList);

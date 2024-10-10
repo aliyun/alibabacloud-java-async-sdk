@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveCheckInstanceResultWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveCheckInstanceResultWhiteListResponseBody</p>
@@ -37,7 +38,10 @@ public class RemoveCheckInstanceResultWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F156EA41-8EEF-54B2-908B-EAE071XXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

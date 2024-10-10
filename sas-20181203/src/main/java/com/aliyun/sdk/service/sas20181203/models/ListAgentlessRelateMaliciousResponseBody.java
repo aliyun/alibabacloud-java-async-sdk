@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentlessRelateMaliciousResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentlessRelateMaliciousResponseBody</p>
@@ -61,7 +62,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of hosts that are associated with the risk.
+         * <p>The list of hosts that are associated with the risk.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -69,7 +70,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCA270CC-24C8-5DA1-9184-20F2605C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentlessRelateMaliciousResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentlessRelateMaliciousResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
@@ -189,7 +199,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The file path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/logs/arms/tracelogs/log****</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -197,7 +210,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168257753****</p>
              */
             public Builder firstScanTimestamp(Long firstScanTimestamp) {
                 this.firstScanTimestamp = firstScanTimestamp;
@@ -205,7 +221,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-0****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -213,7 +232,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -221,7 +243,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.25.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -229,7 +254,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168257753****</p>
              */
             public Builder latestScanTimestamp(Long latestScanTimestamp) {
                 this.latestScanTimestamp = latestScanTimestamp;
@@ -237,7 +265,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -251,6 +282,12 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentlessRelateMaliciousResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentlessRelateMaliciousResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -314,7 +351,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -322,7 +362,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -330,7 +373,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -338,7 +384,10 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>197</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

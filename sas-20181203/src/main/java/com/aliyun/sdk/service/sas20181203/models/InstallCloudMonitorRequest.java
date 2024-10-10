@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallCloudMonitorRequest} extends {@link RequestModel}
  *
  * <p>InstallCloudMonitorRequest</p>
@@ -110,10 +111,13 @@ public class InstallCloudMonitorRequest extends Request {
         } 
 
         /**
-         * The AccessKey ID that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey ID.
-         * <p>
+         * <p>The AccessKey ID that is required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to query the AccessKey ID.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.
+         * <strong>example:</strong>
+         * <p>usY*****R_U</p>
          */
         public Builder agentAccessKey(String agentAccessKey) {
             this.putQueryParameter("AgentAccessKey", agentAccessKey);
@@ -122,10 +126,13 @@ public class InstallCloudMonitorRequest extends Request {
         }
 
         /**
-         * The AccessKey secret that is required to install the CloudMonitor agent. You can call the [DescribeMonitoringAgentAccessKey](~~114948~~) operation to query the AccessKey secret.
-         * <p>
+         * <p>The AccessKey secret that is required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to query the AccessKey secret.</p>
+         * <blockquote>
+         * <p>This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</p>
+         * </blockquote>
          * 
-         * > This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.
+         * <strong>example:</strong>
+         * <p>UCxF2R1sIO90XlU9****</p>
          */
         public Builder agentSecretKey(String agentSecretKey) {
             this.putQueryParameter("AgentSecretKey", agentSecretKey);
@@ -134,7 +141,11 @@ public class InstallCloudMonitorRequest extends Request {
         }
 
         /**
-         * The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see [Overview](~~183431~~).
+         * <p>The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183431.html">Overview</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.5.6</p>
          */
         public Builder argusVersion(String argusVersion) {
             this.putQueryParameter("ArgusVersion", argusVersion);
@@ -143,7 +154,7 @@ public class InstallCloudMonitorRequest extends Request {
         }
 
         /**
-         * The IDs of the servers on which you want to install the CloudMonitor agent. Separate multiple IDs with commas (,).
+         * <p>The IDs of the servers on which you want to install the CloudMonitor agent. Separate multiple IDs with commas (,).</p>
          */
         public Builder instanceIdList(java.util.List < String > instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -152,7 +163,7 @@ public class InstallCloudMonitorRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers on which you want to install the CloudMonitor agent. Separate multiple UUIDs with commas (,).
+         * <p>The UUIDs of the servers on which you want to install the CloudMonitor agent. Separate multiple UUIDs with commas (,).</p>
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

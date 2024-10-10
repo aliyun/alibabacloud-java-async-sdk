@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupFilesRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupFilesRequest</p>
@@ -113,7 +114,11 @@ public class DescribeBackupFilesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -122,7 +127,11 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -131,7 +140,10 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * The path to the backup file.
+         * <p>The path to the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -140,7 +152,11 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * The hash value of the backup file.
+         * <p>The hash value of the backup file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a7f26223ef3974c6fac324cd37713ab65ab618859d20b4039192a5da44d77b63</p>
          */
         public Builder snapshotHash(String snapshotHash) {
             this.putQueryParameter("SnapshotHash", snapshotHash);
@@ -149,7 +165,11 @@ public class DescribeBackupFilesRequest extends Request {
         }
 
         /**
-         * The UUID of the server to which an anti-ransomware policy is applied.
+         * <p>The UUID of the server to which an anti-ransomware policy is applied.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6d5b361f-958d-48a8-a9d2-d6e82c1a****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

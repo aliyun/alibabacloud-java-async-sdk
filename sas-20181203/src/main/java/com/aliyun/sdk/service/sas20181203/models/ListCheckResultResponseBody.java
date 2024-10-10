@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckResultResponseBody} extends {@link TeaModel}
  *
  * <p>ListCheckResultResponseBody</p>
@@ -61,7 +62,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the check items.
+         * <p>The information about the check items.</p>
          */
         public Builder checks(java.util.List < Checks> checks) {
             this.checks = checks;
@@ -69,7 +70,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F9B6DD67-B289-5406-B35C-B0F4A217S23</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListCheckResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckResultResponseBody</p>
+     */
     public static class CheckPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequirementId")
         private Long requirementId;
@@ -177,7 +187,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             private String standardShowName; 
 
             /**
-             * The ID of the requirement item for the check item.
+             * <p>The ID of the requirement item for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder requirementId(Long requirementId) {
                 this.requirementId = requirementId;
@@ -185,7 +198,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the requirement item for the check item.
+             * <p>The display name of the requirement item for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba cloud OSS best security practices</p>
              */
             public Builder requirementShowName(String requirementShowName) {
                 this.requirementShowName = requirementShowName;
@@ -193,7 +209,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the section for the check item.
+             * <p>The ID of the section for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder sectionId(Long sectionId) {
                 this.sectionId = sectionId;
@@ -201,7 +220,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the section for the check item.
+             * <p>The display name of the section for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Log Audit</p>
              */
             public Builder sectionShowName(String sectionShowName) {
                 this.sectionShowName = sectionShowName;
@@ -209,7 +231,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The standard ID of the check item.
+             * <p>The standard ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder standardId(Long standardId) {
                 this.standardId = standardId;
@@ -217,7 +242,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The standard display name of the check item.
+             * <p>The standard display name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Best security practices</p>
              */
             public Builder standardShowName(String standardShowName) {
                 this.standardShowName = standardShowName;
@@ -231,6 +259,12 @@ public class ListCheckResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckResultResponseBody</p>
+     */
     public static class Checks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetSubType")
         private Integer assetSubType;
@@ -261,6 +295,9 @@ public class ListCheckResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LastCheckTime")
         private Long lastCheckTime;
+
+        @com.aliyun.core.annotation.NameInMap("OperationType")
+        private String operationType;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -294,6 +331,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             this.instanceSubType = builder.instanceSubType;
             this.instanceType = builder.instanceType;
             this.lastCheckTime = builder.lastCheckTime;
+            this.operationType = builder.operationType;
             this.riskLevel = builder.riskLevel;
             this.status = builder.status;
             this.statusMessage = builder.statusMessage;
@@ -382,6 +420,13 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return operationType
+         */
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        /**
          * @return riskLevel
          */
         public String getRiskLevel() {
@@ -441,6 +486,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             private String instanceSubType; 
             private String instanceType; 
             private Long lastCheckTime; 
+            private String operationType; 
             private String riskLevel; 
             private String status; 
             private String statusMessage; 
@@ -474,7 +520,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -482,7 +531,7 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The check policies.
+             * <p>The check policies.</p>
              */
             public Builder checkPolicies(java.util.List < CheckPolicies> checkPolicies) {
                 this.checkPolicies = checkPolicies;
@@ -490,11 +539,14 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item. Valid values:
-             * <p>
+             * <p>The type of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: paid</li>
+             * <li><strong>1</strong>: free</li>
+             * </ul>
              * 
-             * *   **0**: paid
-             * *   **1**: free
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder checkSaleType(Integer checkSaleType) {
                 this.checkSaleType = checkSaleType;
@@ -502,7 +554,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS-PublicReadOpenManifestFileWithoutEncryption</p>
              */
             public Builder checkShowName(String checkShowName) {
                 this.checkShowName = checkShowName;
@@ -510,34 +565,43 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The asset subtype of the cloud service. Valid values:
-             * <p>
+             * <p>The asset subtype of the cloud service. Valid values:</p>
+             * <ul>
+             * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>ECS</strong>, this parameter supports the following valid values:</p>
+             * <ul>
+             * <li><strong>INSTANCE</strong></li>
+             * <li><strong>DISK</strong></li>
+             * <li><strong>SECURITY_GROUP</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>ACR</strong>, this parameter supports the following valid values:</p>
+             * <ul>
+             * <li><strong>REPOSITORY_ENTERPRISE</strong></li>
+             * <li><strong>REPOSITORY_PERSON</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>RAM</strong>, this parameter supports the following valid values:</p>
+             * <ul>
+             * <li><strong>ALIAS</strong></li>
+             * <li><strong>USER</strong></li>
+             * <li><strong>POLICY</strong></li>
+             * <li><strong>GROUP</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>If the <strong>InstanceType</strong> parameter is set to <strong>WAF</strong>, this parameter supports the following valid values:</p>
+             * <ul>
+             * <li><strong>DOMAIN</strong></li>
+             * </ul>
+             * </li>
+             * <li><p>If the <strong>InstanceType</strong> parameter is set to other values, this parameter supports the following valid values:</p>
+             * <ul>
+             * <li><strong>INSTANCE</strong></li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
-             * *   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:
-             * 
-             *     *   **INSTANCE**
-             *     *   **DISK**
-             *     *   **SECURITY_GROUP**
-             * 
-             * *   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:
-             * 
-             *     *   **REPOSITORY_ENTERPRISE**
-             *     *   **REPOSITORY_PERSON**
-             * 
-             * *   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:
-             * 
-             *     *   **ALIAS**
-             *     *   **USER**
-             *     *   **POLICY**
-             *     *   **GROUP**
-             * 
-             * *   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:
-             * 
-             *     *   **DOMAIN**
-             * 
-             * *   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:
-             * 
-             *     *   **INSTANCE**
+             * <strong>example:</strong>
+             * <p>DISK</p>
              */
             public Builder instanceSubType(String instanceSubType) {
                 this.instanceSubType = instanceSubType;
@@ -545,31 +609,34 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The asset type of the cloud service. Valid values:
-             * <p>
+             * <p>The asset type of the cloud service. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS</strong>: ECS</li>
+             * <li><strong>SLB</strong>: SLB</li>
+             * <li><strong>RDS</strong>: ApsaraDB RDS</li>
+             * <li><strong>MONGODB</strong>: MongoDB</li>
+             * <li><strong>KVSTORE</strong>: Redis</li>
+             * <li><strong>ACR</strong>: Container Registry</li>
+             * <li><strong>CSK</strong>: ACK</li>
+             * <li><strong>VPC</strong>: VPC</li>
+             * <li><strong>ACTIONTRAIL</strong>: ActionTrail</li>
+             * <li><strong>CDN</strong>: CDN</li>
+             * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
+             * <li><strong>RDC</strong>: Apsara Devops</li>
+             * <li><strong>RAM</strong>: RAM</li>
+             * <li><strong>DDOS</strong>: Anti-DDoS</li>
+             * <li><strong>WAF</strong>: WAF</li>
+             * <li><strong>OSS</strong>: OSS</li>
+             * <li><strong>POLARDB</strong>: PolarDB</li>
+             * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+             * <li><strong>MSE</strong>: MSE</li>
+             * <li><strong>NAS</strong>: NAS</li>
+             * <li><strong>SDDP</strong>: SDDP</li>
+             * <li><strong>EIP</strong>: EIP</li>
+             * </ul>
              * 
-             * *   **ECS**: ECS
-             * *   **SLB**: SLB
-             * *   **RDS**: ApsaraDB RDS
-             * *   **MONGODB**: MongoDB
-             * *   **KVSTORE**: Redis
-             * *   **ACR**: Container Registry
-             * *   **CSK**: ACK
-             * *   **VPC**: VPC
-             * *   **ACTIONTRAIL**: ActionTrail
-             * *   **CDN**: CDN
-             * *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
-             * *   **RDC**: Apsara Devops
-             * *   **RAM**: RAM
-             * *   **DDOS**: Anti-DDoS
-             * *   **WAF**: WAF
-             * *   **OSS**: OSS
-             * *   **POLARDB**: PolarDB
-             * *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
-             * *   **MSE**: MSE
-             * *   **NAS**: NAS
-             * *   **SDDP**: SDDP
-             * *   **EIP**: EIP
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -577,7 +644,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last check was performed. Unit: milliseconds.
+             * <p>The timestamp when the last check was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1657793398000</p>
              */
             public Builder lastCheckTime(Long lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -585,12 +655,23 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the check item. Valid values:
-             * <p>
+             * OperationType.
+             */
+            public Builder operationType(String operationType) {
+                this.operationType = operationType;
+                return this;
+            }
+
+            /**
+             * <p>The risk level of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>HIGH</strong></li>
+             * <li><strong>MEDIUM</strong></li>
+             * <li><strong>LOW</strong></li>
+             * </ul>
              * 
-             * *   **HIGH**
-             * *   **MEDIUM**
-             * *   **LOW**
+             * <strong>example:</strong>
+             * <p>HIGH</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -598,14 +679,17 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check item. Valid values:
-             * <p>
+             * <p>The status of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>PASS</strong>: passed</li>
+             * <li><strong>NOT_PASS</strong>: failed</li>
+             * <li><strong>CHECKING</strong>: being checked</li>
+             * <li><strong>NOT_CHECK</strong>: not checked</li>
+             * <li><strong>WHITELIST</strong>: added to the whitelist</li>
+             * </ul>
              * 
-             * *   **PASS**: passed
-             * *   **NOT_PASS**: failed
-             * *   **CHECKING**: being checked
-             * *   **NOT_CHECK**: not checked
-             * *   **WHITELIST**: added to the whitelist
+             * <strong>example:</strong>
+             * <p>PASS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -613,7 +697,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The message returned if the status of the check item is abnormal.
+             * <p>The message returned if the status of the check item is abnormal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TIMEOUT</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -621,7 +708,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check task.
+             * <p>The ID of the check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -629,7 +719,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the TRIAL permission is required.
+             * <p>Indicates whether the TRIAL permission is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder trialPermission(Boolean trialPermission) {
                 this.trialPermission = trialPermission;
@@ -637,7 +730,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service provider.
+             * <p>The cloud service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -645,7 +741,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud service provider.
+             * <p>The name of the cloud service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun</p>
              */
             public Builder vendorShowName(String vendorShowName) {
                 this.vendorShowName = vendorShowName;
@@ -659,6 +758,12 @@ public class ListCheckResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckResultResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -722,7 +827,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -730,7 +838,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -738,7 +849,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -746,7 +860,10 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

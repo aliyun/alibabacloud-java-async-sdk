@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveImageBaselineStrategyRequest} extends {@link RequestModel}
  *
  * <p>SaveImageBaselineStrategyRequest</p>
@@ -110,10 +111,14 @@ public class SaveImageBaselineStrategyRequest extends Request {
         } 
 
         /**
-         * The baseline check items.
-         * <p>
+         * <p>The baseline check items.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> operation to query baseline check items.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query baseline check items.
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         public Builder baselineItemList(String baselineItemList) {
             this.putQueryParameter("BaselineItemList", baselineItemList);
@@ -122,11 +127,14 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -135,11 +143,14 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * The data source. If this parameter is left empty, the baseline check policy for images is queried. Valid values:
-         * <p>
+         * <p>The data source. If this parameter is left empty, the baseline check policy for images is queried. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: the baseline check policy for images</li>
+         * <li><strong>agentless</strong>: agentless detection</li>
+         * </ul>
          * 
-         * *   **default**: the baseline check policy for images
-         * *   **agentless**: agentless detection
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -148,10 +159,13 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy.
-         * <p>
+         * <p>The ID of the baseline check policy.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> operation to query the IDs of baseline check policies.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeImageBaselineStrategy](~~DescribeImageBaselineStrategy~~) operation to query the IDs of baseline check policies.
+         * <strong>example:</strong>
+         * <p>8639</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -160,7 +174,10 @@ public class SaveImageBaselineStrategyRequest extends Request {
         }
 
         /**
-         * The name of the baseline check policy.
+         * <p>The name of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

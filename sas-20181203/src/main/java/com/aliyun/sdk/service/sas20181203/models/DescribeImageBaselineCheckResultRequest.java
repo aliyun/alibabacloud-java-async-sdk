@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBaselineCheckResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageBaselineCheckResultRequest</p>
@@ -152,7 +153,10 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         } 
 
         /**
-         * The search condition for the image baseline.
+         * <p>The search condition for the image baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -161,11 +165,14 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The type of the search condition. Valid values:
-         * <p>
+         * <p>The type of the search condition. Valid values:</p>
+         * <ul>
+         * <li><strong>BaselineNameAlias</strong>: baseline name</li>
+         * <li><strong>BaselineClassAlias</strong>: baseline category</li>
+         * </ul>
          * 
-         * *   **BaselineNameAlias**: baseline name
-         * *   **BaselineClassAlias**: baseline category
+         * <strong>example:</strong>
+         * <p>BaselineNameAlias</p>
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -174,7 +181,10 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -183,7 +193,11 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The UUID of the image.
+         * <p>The UUID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a910053dd4710173ecc9e9d8931f****</p>
          */
         public Builder imageUuid(String imageUuid) {
             this.putQueryParameter("ImageUuid", imageUuid);
@@ -192,11 +206,14 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -205,7 +222,10 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -214,12 +234,15 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The severity of the image baseline that you want to query. Separate multiple severities with commas (,). By default, all valid values are used. Valid values:
-         * <p>
+         * <p>The severity of the image baseline that you want to query. Separate multiple severities with commas (,). By default, all valid values are used. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
          * 
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * <strong>example:</strong>
+         * <p>high,medium,low</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -228,7 +251,7 @@ public class DescribeImageBaselineCheckResultRequest extends Request {
         }
 
         /**
-         * The types of the assets that you want to scan.
+         * <p>The types of the assets that you want to scan.</p>
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

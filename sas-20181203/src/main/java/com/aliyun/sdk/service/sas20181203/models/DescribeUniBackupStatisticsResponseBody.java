@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUniBackupStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUniBackupStatisticsResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         private Integer unprotectedDatabaseCount; 
 
         /**
-         * The number of protected database instances.
+         * <p>The number of protected database instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder protectedDatabaseCount(Integer protectedDatabaseCount) {
             this.protectedDatabaseCount = protectedDatabaseCount;
@@ -117,7 +121,7 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The regions of the database instances.
+         * <p>The regions of the database instances.</p>
          */
         public Builder regionCountList(java.util.List < RegionCountList> regionCountList) {
             this.regionCountList = regionCountList;
@@ -125,7 +129,10 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7532B7EE-7CE7-5F4D-BF04-B12447DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +140,10 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the restoration tasks that are running.
+         * <p>The number of the restoration tasks that are running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder restoringTaskCount(Integer restoringTaskCount) {
             this.restoringTaskCount = restoringTaskCount;
@@ -141,7 +151,10 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of database instances that can be restored.
+         * <p>The total number of database instances that can be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalRecoverableCount(Integer totalRecoverableCount) {
             this.totalRecoverableCount = totalRecoverableCount;
@@ -149,7 +162,10 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the restoration tasks.
+         * <p>The total number of the restoration tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalRestoreTaskCount(Integer totalRestoreTaskCount) {
             this.totalRestoreTaskCount = totalRestoreTaskCount;
@@ -157,7 +173,10 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unprotected database instances.
+         * <p>The number of unprotected database instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder unprotectedDatabaseCount(Integer unprotectedDatabaseCount) {
             this.unprotectedDatabaseCount = unprotectedDatabaseCount;
@@ -170,6 +189,12 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUniBackupStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUniBackupStatisticsResponseBody</p>
+     */
     public static class RegionCountList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutomaticCount")
         private String automaticCount;
@@ -209,7 +234,10 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The number of database instances that are automatically scanned.
+             * <p>The number of database instances that are automatically scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder automaticCount(String automaticCount) {
                 this.automaticCount = automaticCount;
@@ -217,7 +245,10 @@ public class DescribeUniBackupStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the database instance resides.
+             * <p>The ID of the region in which the database instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

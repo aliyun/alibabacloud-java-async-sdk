@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileProtectRuleRequest} extends {@link RequestModel}
  *
  * <p>GetFileProtectRuleRequest</p>
@@ -53,7 +54,10 @@ public class GetFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>245</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

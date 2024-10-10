@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenSensitiveFileScanResponseBody} extends {@link TeaModel}
  *
  * <p>OpenSensitiveFileScanResponseBody</p>
@@ -97,7 +98,10 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
         }
 
         /**
-         * The data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4A4C081-7F06-5481-9323-02A5419B9423</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OpenSensitiveFileScanResponseBody} extends {@link TeaModel}
+     *
+     * <p>OpenSensitiveFileScanResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SwitchOn")
         private String switchOn;
@@ -181,11 +203,14 @@ public class OpenSensitiveFileScanResponseBody extends TeaModel {
             private String switchOn; 
 
             /**
-             * Indicates whether sensitive file scan is enabled or disabled. Valid values:
-             * <p>
+             * <p>Indicates whether sensitive file scan is enabled or disabled. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled</li>
+             * <li><strong>off</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder switchOn(String switchOn) {
                 this.switchOn = switchOn;

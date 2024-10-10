@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoDelConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoDelConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeAutoDelConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of days during which a detected vulnerability is retained before the vulnerability is automatically deleted.
+         * <p>The number of days during which a detected vulnerability is retained before the vulnerability is automatically deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder days(Integer days) {
             this.days = days;
@@ -57,7 +61,10 @@ public class DescribeAutoDelConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C56F66FD-C4EE-4813-ABDC-4FF94B6C384E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

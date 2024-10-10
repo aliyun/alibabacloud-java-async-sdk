@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAutoTagRulesRequest} extends {@link RequestModel}
  *
  * <p>ListAutoTagRulesRequest</p>
@@ -81,7 +82,10 @@ public class ListAutoTagRulesRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -90,10 +94,13 @@ public class ListAutoTagRulesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -102,7 +109,10 @@ public class ListAutoTagRulesRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-001</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

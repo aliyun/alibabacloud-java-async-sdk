@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExcludeSystemPathRequest} extends {@link RequestModel}
  *
  * <p>DescribeExcludeSystemPathRequest</p>
@@ -69,7 +70,11 @@ public class DescribeExcludeSystemPathRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -78,7 +83,11 @@ public class DescribeExcludeSystemPathRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

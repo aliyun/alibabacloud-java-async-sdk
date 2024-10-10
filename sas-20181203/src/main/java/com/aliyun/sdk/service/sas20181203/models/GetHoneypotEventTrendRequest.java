@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHoneypotEventTrendRequest} extends {@link RequestModel}
  *
  * <p>GetHoneypotEventTrendRequest</p>
@@ -110,7 +111,10 @@ public class GetHoneypotEventTrendRequest extends Request {
         } 
 
         /**
-         * End time, timestamp format.
+         * <p>End time, timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687831329169</p>
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
@@ -119,11 +123,14 @@ public class GetHoneypotEventTrendRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -132,7 +139,7 @@ public class GetHoneypotEventTrendRequest extends Request {
         }
 
         /**
-         * The risk levels of the alert events.
+         * <p>The risk levels of the alert events.</p>
          */
         public Builder riskLevelList(java.util.List < String > riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
@@ -141,7 +148,11 @@ public class GetHoneypotEventTrendRequest extends Request {
         }
 
         /**
-         * The source IP address of the attack.
+         * <p>The source IP address of the attack.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.91.254.***</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -150,7 +161,10 @@ public class GetHoneypotEventTrendRequest extends Request {
         }
 
         /**
-         * Start time, timestamp format.
+         * <p>Start time, timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683516557757</p>
          */
         public Builder startTimeStamp(Long startTimeStamp) {
             this.putQueryParameter("StartTimeStamp", startTimeStamp);

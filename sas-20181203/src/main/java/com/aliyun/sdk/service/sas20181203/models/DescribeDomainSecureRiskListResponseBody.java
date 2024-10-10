@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSecureRiskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainSecureRiskListResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribeDomainSecureRiskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainSecureRiskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSecureRiskListResponseBody</p>
+     */
     public static class RiskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmCount")
         private Integer alarmCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSoarStrategyTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSoarStrategyTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateSoarStrategyTaskResponseBody extends TeaModel {
         private Long strategyTaskId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43313389-DED8-5BB7-8CB9-F22CDEB744DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateSoarStrategyTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the policy task.
+         * <p>The ID of the policy task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10688</p>
          */
         public Builder strategyTaskId(Long strategyTaskId) {
             this.strategyTaskId = strategyTaskId;

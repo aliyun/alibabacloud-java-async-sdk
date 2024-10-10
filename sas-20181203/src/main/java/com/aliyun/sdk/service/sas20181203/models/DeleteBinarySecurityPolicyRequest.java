@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBinarySecurityPolicyRequest} extends {@link RequestModel}
  *
  * <p>DeleteBinarySecurityPolicyRequest</p>
@@ -81,7 +82,10 @@ public class DeleteBinarySecurityPolicyRequest extends Request {
         } 
 
         /**
-         * The name of the binary security policy.
+         * <p>The name of the binary security policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-auto-bfu7pm</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -99,7 +103,10 @@ public class DeleteBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.120.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

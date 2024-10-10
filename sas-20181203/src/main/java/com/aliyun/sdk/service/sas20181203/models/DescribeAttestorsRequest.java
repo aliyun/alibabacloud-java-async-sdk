@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAttestorsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAttestorsRequest</p>
@@ -109,7 +110,10 @@ public class DescribeAttestorsRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,7 +122,10 @@ public class DescribeAttestorsRequest extends Request {
         }
 
         /**
-         * The name of the witness.
+         * <p>The name of the witness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attestor-auto-ad5316</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -127,7 +134,10 @@ public class DescribeAttestorsRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,7 +155,10 @@ public class DescribeAttestorsRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222.35.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HandleSecurityEventsRequest} extends {@link RequestModel}
  *
  * <p>HandleSecurityEventsRequest</p>
@@ -153,11 +154,14 @@ public class HandleSecurityEventsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to add multiple alert events to the whitelist at a time. Valid values:
-         * <p>
+         * <p>Specifies whether to add multiple alert events to the whitelist at a time. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder markBatch(String markBatch) {
             this.putQueryParameter("MarkBatch", markBatch);
@@ -166,27 +170,34 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * The whitelist rule. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The whitelist rule. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>field</strong>: The field based on which alert events are added to the whitelist.</p>
+         * </li>
+         * <li><p><strong>operate</strong>: The method that is used to added alert events to the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>notContains</strong>: does not contain</li>
+         * <li><strong>contains</strong>: contains</li>
+         * <li><strong>regex</strong>: matches by regular expression</li>
+         * <li><strong>strEqual</strong>: equals</li>
+         * <li><strong>strNotEqual</strong>: does not equal</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>fieldValue</strong>: The value of the field based on which alert events are added to the whitelist.</p>
+         * </li>
+         * <li><p><strong>uuid</strong>: The application scope of the whitelist rule. Valid values:</p>
+         * <ul>
+         * <li><strong>part</strong>: the current asset</li>
+         * <li><strong>ALL</strong>: all assets</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> operation to obtain the fields that you can specify for <strong>field</strong>.</p>
+         * </blockquote>
          * 
-         * *   **field**: The field based on which alert events are added to the whitelist.
-         * 
-         * *   **operate**: The method that is used to added alert events to the whitelist. Valid values:
-         * 
-         *     *   **notContains**: does not contain
-         *     *   **contains**: contains
-         *     *   **regex**: matches by regular expression
-         *     *   **strEqual**: equals
-         *     *   **strNotEqual**: does not equal
-         * 
-         * *   **fieldValue**: The value of the field based on which alert events are added to the whitelist.
-         * 
-         * *   **uuid**: The application scope of the whitelist rule. Valid values:
-         * 
-         *     *   **part**: the current asset
-         *     *   **ALL**: all assets
-         * 
-         * >  You can call the [DescribeSecurityEventOperations](~~DescribeSecurityEventOperations~~) operation to obtain the fields that you can specify for **field**.
+         * <strong>example:</strong>
+         * <p>[{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;gmtModified&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;asd&quot;},{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;loginUser&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;vff&quot;}]</p>
          */
         public Builder markMissParam(String markMissParam) {
             this.putQueryParameter("MarkMissParam", markMissParam);
@@ -195,19 +206,23 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform to handle the alert events. Valid values:
-         * <p>
+         * <p>The operation that you want to perform to handle the alert events. Valid values:</p>
+         * <ul>
+         * <li><strong>block_ip</strong>: blocks the source IP address.</li>
+         * <li><strong>advance_mark_mis_info</strong>: adds the alert events to the whitelist.</li>
+         * <li><strong>ignore</strong>: ignores the alert events.</li>
+         * <li><strong>manual_handled</strong>: marks the alert events as manually handled.</li>
+         * <li><strong>kill_process</strong>: terminates the malicious process.</li>
+         * <li><strong>cleanup</strong>: performs in-depth virus detection and removal.</li>
+         * <li><strong>kill_and_quara</strong>: kills the malicious processes and quarantines the source file.</li>
+         * <li><strong>disable_malicious_defense</strong>: stops the container on which the alerting files or processes exist.</li>
+         * <li><strong>client_problem_check</strong>: performs troubleshooting.</li>
+         * <li><strong>quara</strong>: quarantines the source file of the malicious process.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **block_ip**: blocks the source IP address.
-         * *   **advance\_mark\_mis_info**: adds the alert events to the whitelist.
-         * *   **ignore**: ignores the alert events.
-         * *   **manual_handled**: marks the alert events as manually handled.
-         * *   **kill_process**: terminates the malicious process.
-         * *   **cleanup**: performs in-depth virus detection and removal.
-         * *   **kill\_and_quara**: kills the malicious processes and quarantines the source file.
-         * *   **disable\_malicious_defense**: stops the container on which the alerting files or processes exist.
-         * *   **client\_problem_check**: performs troubleshooting.
-         * *   **quara**: quarantines the source file of the malicious process.
+         * <strong>example:</strong>
+         * <p>block_ip</p>
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -216,10 +231,13 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * The configuration of the operation that you want to perform to handle the alert events.
-         * <p>
+         * <p>The configuration of the operation that you want to perform to handle the alert events.</p>
+         * <blockquote>
+         * <p> If you set OperationCode to <code>kill_and_quara</code> or <code>block_ip</code>, you must specify OperationParams. If you set OperationCode to other values, you can leave OperationParams empty.</p>
+         * </blockquote>
          * 
-         * >  If you set OperationCode to `kill_and_quara` or `block_ip`, you must specify OperationParams. If you set OperationCode to other values, you can leave OperationParams empty.
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
@@ -228,7 +246,10 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * The remarks of the handling operation.
+         * <p>The remarks of the handling operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark test.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -237,10 +258,13 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * <strong>example:</strong>
+         * <p>16670360956*****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -249,7 +273,11 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * The IDs of the alert events.
+         * <p>The IDs of the alert events.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;909361&quot;]</p>
          */
         public Builder securityEventIds(java.util.List < String > securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);
@@ -258,7 +286,10 @@ public class HandleSecurityEventsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

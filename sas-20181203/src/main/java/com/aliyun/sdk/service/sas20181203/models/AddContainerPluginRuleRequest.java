@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddContainerPluginRuleRequest} extends {@link RequestModel}
  *
  * <p>AddContainerPluginRuleRequest</p>
@@ -141,11 +142,14 @@ public class AddContainerPluginRuleRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -154,11 +158,15 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The action that you want to specify for the rule. Valid values:
-         * <p>
+         * <p>The action that you want to specify for the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: triggers alerts.</li>
+         * <li><strong>2</strong>: blocks escapes.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: triggers alerts.
-         * *   **2**: blocks escapes.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mode(Integer mode) {
             this.putQueryParameter("Mode", mode);
@@ -167,7 +175,11 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_). The names of rules that are created for the same user must be unique.
+         * <p>The name of the rule. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_). The names of rules that are created for the same user must be unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tyest111</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -176,7 +188,11 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule template. You can call the ListSystemClientRules operation to query the ID of the rule template.
+         * <p>The ID of the rule template. You can call the ListSystemClientRules operation to query the ID of the rule template.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86863</p>
          */
         public Builder ruleTemplateId(Integer ruleTemplateId) {
             this.putQueryParameter("RuleTemplateId", ruleTemplateId);
@@ -185,11 +201,14 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The type of the rule. Valid values:
-         * <p>
+         * <p>The type of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: custom rule</li>
+         * <li><strong>1</strong>: system rule</li>
+         * </ul>
          * 
-         * *   **0**: custom rule
-         * *   **1**: system rule
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -198,7 +217,8 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The check items that are enabled for the rule.
+         * <p>The check items that are enabled for the rule.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
             this.putQueryParameter("SelectedPolicy", selectedPolicy);
@@ -207,7 +227,7 @@ public class AddContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The images that are added to the whitelist.
+         * <p>The images that are added to the whitelist.</p>
          */
         public Builder whiteImages(java.util.List < String > whiteImages) {
             this.putQueryParameter("WhiteImages", whiteImages);

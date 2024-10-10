@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePublishGraySwitchRequest} extends {@link RequestModel}
  *
  * <p>UpdatePublishGraySwitchRequest</p>
@@ -54,7 +55,10 @@ public class UpdatePublishGraySwitchRequest extends Request {
         } 
 
         /**
-         * GraySwitchStatus.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder graySwitchStatus(Integer graySwitchStatus) {
             this.putQueryParameter("GraySwitchStatus", graySwitchStatus);

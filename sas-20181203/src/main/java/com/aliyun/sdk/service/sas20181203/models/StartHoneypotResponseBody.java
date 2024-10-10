@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartHoneypotResponseBody} extends {@link TeaModel}
  *
  * <p>StartHoneypotResponseBody</p>
@@ -49,7 +50,7 @@ public class StartHoneypotResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the honeypot.
+         * <p>The information about the honeypot.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class StartHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20456DD5-5CBF-5015-9173-12CA4246B***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class StartHoneypotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StartHoneypotResponseBody} extends {@link TeaModel}
+     *
+     * <p>StartHoneypotResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ControlNodeName")
         private String controlNodeName;
@@ -181,7 +191,10 @@ public class StartHoneypotResponseBody extends TeaModel {
             private java.util.List < String > state; 
 
             /**
-             * The name of the management node to which the honeypot belongs.
+             * <p>The name of the management node to which the honeypot belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>managerNodename</p>
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -189,7 +202,10 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot.
+             * <p>The ID of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -197,7 +213,10 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the image.
+             * <p>The display name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Webmin</p>
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -205,7 +224,10 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image that is used for the honeypot.
+             * <p>The name of the image that is used for the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp_proxy</p>
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -213,7 +235,10 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The custom name of the honeypot.
+             * <p>The custom name of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ruoyi</p>
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -221,7 +246,10 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * <p>The ID of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -229,7 +257,10 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom configuration for the honeypot.
+             * <p>The ID of the custom configuration for the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddh3731641137fe4b72b245346a2721d4b6tdgg3731641137fe4b72b245346a2721***</p>
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;
@@ -237,7 +268,7 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The statuses of the honeypots.
+             * <p>The statuses of the honeypots.</p>
              */
             public Builder state(java.util.List < String > state) {
                 this.state = state;

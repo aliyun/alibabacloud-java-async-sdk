@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBuildRiskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageBuildRiskListResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageBuildRiskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBuildRiskListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -257,7 +276,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             private Integer unprocessedNum; 
 
             /**
-             * The number of affected images.
+             * <p>The number of affected images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -265,7 +287,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the first scan was performed. Unit: milliseconds.
+             * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723710827000</p>
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -273,7 +298,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the last scan was performed. Unit: milliseconds.
+             * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723710827999</p>
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -281,7 +309,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The type key of the risk.
+             * <p>The type key of the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>other</p>
              */
             public Builder riskClass(String riskClass) {
                 this.riskClass = riskClass;
@@ -289,7 +320,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The type name of the risk.
+             * <p>The type name of the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>other</p>
              */
             public Builder riskClassName(String riskClassName) {
                 this.riskClassName = riskClassName;
@@ -297,7 +331,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the risk. You can call the [DescribeImageBuildRiskList](~~~~) operation to obtain the value of **RiskKey**.
+             * <p>The key of the risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the value of <strong>RiskKey</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no_user</p>
              */
             public Builder riskKey(String riskKey) {
                 this.riskKey = riskKey;
@@ -305,7 +342,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name of the risk.
+             * <p>The rule name of the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no_user</p>
              */
             public Builder riskKeyName(String riskKeyName) {
                 this.riskKeyName = riskKeyName;
@@ -313,12 +353,15 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -326,7 +369,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unprocessed images.
+             * <p>The number of unprocessed images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unprocessedNum(Integer unprocessedNum) {
                 this.unprocessedNum = unprocessedNum;
@@ -340,6 +386,12 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageBuildRiskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBuildRiskListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -391,7 +443,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number. Default value: **1**.
+             * <p>The page number. Default value: <strong>1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -399,10 +454,13 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-             * <p>
+             * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+             * <blockquote>
+             * <p> We recommend that you do not leave this parameter empty.</p>
+             * </blockquote>
              * 
-             * >  We recommend that you do not leave this parameter empty.
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -410,7 +468,10 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -424,6 +485,12 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageBuildRiskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBuildRiskListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
@@ -463,7 +530,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             private PageInfo pageInfo; 
 
             /**
-             * The risks.
+             * <p>The risks.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -471,7 +538,7 @@ public class DescribeImageBuildRiskListResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination information.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

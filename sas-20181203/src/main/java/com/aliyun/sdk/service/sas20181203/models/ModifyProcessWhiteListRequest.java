@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyProcessWhiteListRequest} extends {@link RequestModel}
  *
  * <p>ModifyProcessWhiteListRequest</p>
@@ -112,11 +113,14 @@ public class ModifyProcessWhiteListRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -125,10 +129,14 @@ public class ModifyProcessWhiteListRequest extends Request {
         }
 
         /**
-         * The MD5 hash value of the process startup file.
-         * <p>
+         * <p>The MD5 hash value of the process startup file.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeWhiteListProcess~~">DescribeWhiteListProcess</a> operation to obtain the MD5 hash value.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeWhiteListProcess](~~DescribeWhiteListProcess~~) operation to obtain the MD5 hash value.
+         * <strong>example:</strong>
+         * <p>001d7f68c3b44147988f0dc81192****</p>
          */
         public Builder md5s(String md5s) {
             this.putQueryParameter("Md5s", md5s);
@@ -137,7 +145,10 @@ public class ModifyProcessWhiteListRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173.128.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -146,11 +157,15 @@ public class ModifyProcessWhiteListRequest extends Request {
         }
 
         /**
-         * The whitelist status of the process. Valid values:
-         * <p>
+         * <p>The whitelist status of the process. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: removes a process from the whitelist.</li>
+         * <li><strong>2</strong>: adds a process to the whitelist.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: removes a process from the whitelist.
-         * *   **2**: adds a process to the whitelist.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -159,10 +174,14 @@ public class ModifyProcessWhiteListRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
-         * <p>
+         * <p>The ID of the policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeWhiteListStrategyList](~~DescribeWhiteListStrategyList~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

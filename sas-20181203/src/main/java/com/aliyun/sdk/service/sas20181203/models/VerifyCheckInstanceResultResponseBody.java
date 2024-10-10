@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyCheckInstanceResultResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyCheckInstanceResultResponseBody</p>
@@ -49,7 +50,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B869E3A0-1147-539D-9920-47580700****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyCheckInstanceResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyCheckInstanceResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailInstances")
         private java.util.List < String > failInstances;
@@ -109,7 +119,7 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             private String operateCode; 
 
             /**
-             * An array consisting of instances that failed the check.
+             * <p>An array consisting of instances that failed the check.</p>
              */
             public Builder failInstances(java.util.List < String > failInstances) {
                 this.failInstances = failInstances;
@@ -117,11 +127,14 @@ public class VerifyCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The operation code of the task that checks the configurations of cloud services. Valid values:
-             * <p>
+             * <p>The operation code of the task that checks the configurations of cloud services. Valid values:</p>
+             * <ul>
+             * <li><strong>Throttling</strong></li>
+             * <li><strong>ActionTrialUnauthorized</strong></li>
+             * </ul>
              * 
-             * *   **Throttling**
-             * *   **ActionTrialUnauthorized**
+             * <strong>example:</strong>
+             * <p>ActionTrialUnauthorized</p>
              */
             public Builder operateCode(String operateCode) {
                 this.operateCode = operateCode;

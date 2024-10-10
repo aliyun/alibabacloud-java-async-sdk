@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMaliciousFileWhitelistConfigsResponse} extends {@link TeaModel}
  *
  * <p>ListMaliciousFileWhitelistConfigsResponse</p>

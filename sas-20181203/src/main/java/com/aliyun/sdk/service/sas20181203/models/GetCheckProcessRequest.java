@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckProcessRequest} extends {@link RequestModel}
  *
  * <p>GetCheckProcessRequest</p>
@@ -53,10 +54,13 @@ public class GetCheckProcessRequest extends Request {
         } 
 
         /**
-         * The ID of the task.
-         * <p>
+         * <p>The ID of the task.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~SubmitCheck~~">SubmitCheck</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * > You can call the [SubmitCheck](~~SubmitCheck~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>5347c7b6-c85c-4070-846a-3029e08e****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

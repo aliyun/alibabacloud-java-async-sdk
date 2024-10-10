@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHoneypotProbeBindRequest} extends {@link RequestModel}
  *
  * <p>DeleteHoneypotProbeBindRequest</p>
@@ -81,7 +82,10 @@ public class DeleteHoneypotProbeBindRequest extends Request {
         } 
 
         /**
-         * The unique ID of the bound service.
+         * <p>The unique ID of the bound service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa20815f-f0f3-4e3b-8e13-55771742****</p>
          */
         public Builder bindId(String bindId) {
             this.putQueryParameter("BindId", bindId);
@@ -90,11 +94,14 @@ public class DeleteHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -103,10 +110,13 @@ public class DeleteHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The probe ID.
-         * <p>
+         * <p>The probe ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * <strong>example:</strong>
+         * <p>aa234650-cfcf-4e25-b61f-c58f603f****</p>
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

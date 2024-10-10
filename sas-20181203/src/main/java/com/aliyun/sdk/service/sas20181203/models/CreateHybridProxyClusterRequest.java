@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHybridProxyClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateHybridProxyClusterRequest</p>
@@ -82,7 +83,11 @@ public class CreateHybridProxyClusterRequest extends Request {
         } 
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chester-Test</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -91,9 +96,13 @@ public class CreateHybridProxyClusterRequest extends Request {
         }
 
         /**
-         * The endpoint of the cluster.
-         * <p>
-         * >  You can specify an IP address or a domain name
+         * <p>The endpoint of the cluster.</p>
+         * <blockquote>
+         * <p> You can specify an IP address or a domain name</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -102,7 +111,10 @@ public class CreateHybridProxyClusterRequest extends Request {
         }
 
         /**
-         * The description of the cluster.
+         * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

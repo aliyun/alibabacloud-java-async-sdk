@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAttackTypeListResponseBody} extends {@link TeaModel}
  *
  * <p>GetAttackTypeListResponseBody</p>
@@ -70,6 +71,12 @@ public class GetAttackTypeListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAttackTypeListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAttackTypeListResponseBody</p>
+     */
     public static class AttackTypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallHybridProxyRequest} extends {@link RequestModel}
  *
  * <p>InstallHybridProxyRequest</p>
@@ -81,7 +82,10 @@ public class InstallHybridProxyRequest extends Request {
         } 
 
         /**
-         * The cluster name.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-test</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -90,7 +94,10 @@ public class InstallHybridProxyRequest extends Request {
         }
 
         /**
-         * The installation code.
+         * <p>The installation code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Z9c8SA</p>
          */
         public Builder installCode(String installCode) {
             this.putQueryParameter("InstallCode", installCode);
@@ -99,7 +106,7 @@ public class InstallHybridProxyRequest extends Request {
         }
 
         /**
-         * The UUIDs of the proxy servers.
+         * <p>The UUIDs of the proxy servers.</p>
          */
         public Builder yundunUuids(java.util.List < String > yundunUuids) {
             this.putQueryParameter("YundunUuids", yundunUuids);

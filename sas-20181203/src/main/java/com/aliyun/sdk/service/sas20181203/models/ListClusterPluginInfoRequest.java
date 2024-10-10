@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterPluginInfoRequest} extends {@link RequestModel}
  *
  * <p>ListClusterPluginInfoRequest</p>
@@ -82,7 +83,8 @@ public class ListClusterPluginInfoRequest extends Request {
         } 
 
         /**
-         * The IDs of the clusters.
+         * <p>The IDs of the clusters.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -91,11 +93,14 @@ public class ListClusterPluginInfoRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -104,7 +109,10 @@ public class ListClusterPluginInfoRequest extends Request {
         }
 
         /**
-         * The name of the plug-in.
+         * <p>The name of the plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alihips</p>
          */
         public Builder pluginName(String pluginName) {
             this.putQueryParameter("PluginName", pluginName);

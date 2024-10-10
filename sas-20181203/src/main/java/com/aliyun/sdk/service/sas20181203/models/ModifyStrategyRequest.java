@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyStrategyRequest} extends {@link RequestModel}
  *
  * <p>ModifyStrategyRequest</p>
@@ -200,11 +201,15 @@ public class ModifyStrategyRequest extends Request {
         } 
 
         /**
-         * The type of the baseline check policy. Valid values:
-         * <p>
+         * <p>The type of the baseline check policy. Valid values:</p>
+         * <ul>
+         * <li><strong>custom</strong>: a custom baseline check policy</li>
+         * <li><strong>common</strong>: a standard baseline check policy</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **custom**: a custom baseline check policy
-         * *   **common**: a standard baseline check policy
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder customType(String customType) {
             this.putQueryParameter("CustomType", customType);
@@ -213,13 +218,17 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The new interval of the baseline check. Valid values:
-         * <p>
+         * <p>The new interval of the baseline check. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: every 2 days</li>
+         * <li><strong>3</strong>: every 4 days</li>
+         * <li><strong>7</strong>: every 8 days</li>
+         * <li><strong>30</strong>: every 31 days</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: every 2 days
-         * *   **3**: every 4 days
-         * *   **7**: every 8 days
-         * *   **30**: every 31 days
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cycleDays(String cycleDays) {
             this.putQueryParameter("CycleDays", cycleDays);
@@ -228,15 +237,19 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The new time range during which the baseline check starts. Valid values:
-         * <p>
+         * <p>The new time range during which the baseline check starts. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The baseline check starts within the time range from 00:00 to 06:00.</li>
+         * <li><strong>6</strong>: The baseline check starts within the time range from 06:00 to 12:00.</li>
+         * <li><strong>12</strong>: The baseline check starts within the time range from 12:00 to 18:00.</li>
+         * <li><strong>18</strong>: The baseline check starts within the time range from 18:00 to 24:00.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is deprecated.</p>
+         * </blockquote>
          * 
-         * *   **0**: The baseline check starts within the time range from 00:00 to 06:00.
-         * *   **6**: The baseline check starts within the time range from 06:00 to 12:00.
-         * *   **12**: The baseline check starts within the time range from 12:00 to 18:00.
-         * *   **18**: The baseline check starts within the time range from 18:00 to 24:00.
-         * 
-         * >  This parameter is deprecated.
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder cycleStartTime(String cycleStartTime) {
             this.putQueryParameter("CycleStartTime", cycleStartTime);
@@ -245,7 +258,11 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The time when the baseline check based on the baseline check policy ends. Specify the time in the hh:mm:ss format.
+         * <p>The time when the baseline check based on the baseline check policy ends. Specify the time in the hh:mm:ss format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -254,7 +271,10 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy.
+         * <p>The ID of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>245</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -263,7 +283,11 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The new name of the baseline check policy.
+         * <p>The new name of the baseline check policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testStrategy</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -272,23 +296,32 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The custom configurations of the baseline. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The custom configurations of the baseline. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>typeName</strong>: the name of the baseline.</p>
+         * </li>
+         * <li><p><strong>checkDetails</strong>: the details of the baseline. The value is in the JSON format.</p>
+         * <ul>
+         * <li><p><strong>checkId</strong>: the ID of the check item.</p>
+         * </li>
+         * <li><p><strong>rules</strong>: the rule configurations. The value is in the JSON format.</p>
+         * <ul>
+         * <li><p><strong>ruleId</strong>: the ID of the rule.</p>
+         * </li>
+         * <li><p><strong>paramList</strong>: the list of parameters in the rule. The value is in the JSON format.</p>
+         * <ul>
+         * <li><strong>paramName</strong>: the name of the parameter.</li>
+         * <li><strong>value</strong>: the value of the parameter.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   **typeName**: the name of the baseline.
-         * 
-         * *   **checkDetails**: the details of the baseline. The value is in the JSON format.
-         * 
-         *     *   **checkId**: the ID of the check item.
-         * 
-         *     *   **rules**: the rule configurations. The value is in the JSON format.
-         * 
-         *         *   **ruleId**: the ID of the rule.
-         * 
-         *         *   **paramList**: the list of parameters in the rule. The value is in the JSON format.
-         * 
-         *             *   **paramName**: the name of the parameter.
-         *             *   **value**: the value of the parameter.
+         * <strong>example:</strong>
+         * <p>[{&quot;typeName&quot;:&quot;hc_centos_6_custom&quot;,&quot;checkDetails&quot;:[{&quot;checkId&quot;:4,&quot;rules&quot;:[{&quot;ruleId&quot;:&quot;pass_min_days_login_defs.must.cus&quot;,&quot;paramList&quot;:[{&quot;paramName&quot;:&quot;range_val&quot;,&quot;value&quot;:&quot;7&quot;}]}]}]}]</p>
          */
         public Builder riskCustomParams(String riskCustomParams) {
             this.putQueryParameter("RiskCustomParams", riskCustomParams);
@@ -297,7 +330,11 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The subtype of the baselines. You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the subtypes of baselines.
+         * <p>The subtype of the baselines. You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the subtypes of baselines.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_exploit_redis</p>
          */
         public Builder riskSubTypeName(String riskSubTypeName) {
             this.putQueryParameter("RiskSubTypeName", riskSubTypeName);
@@ -306,7 +343,10 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.X.X</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -315,7 +355,11 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The time when the baseline check based on the baseline check policy starts. Specify the time in the hh:mm:ss format.
+         * <p>The time when the baseline check based on the baseline check policy starts. Specify the time in the hh:mm:ss format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:01:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -324,11 +368,15 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * The method that is used to apply the baseline check policy. Valid values:
-         * <p>
+         * <p>The method that is used to apply the baseline check policy. Valid values:</p>
+         * <ul>
+         * <li><strong>groupId</strong>: asset groups</li>
+         * <li><strong>uuid</strong>: assets</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **groupId**: asset groups
-         * *   **uuid**: assets
+         * <strong>example:</strong>
+         * <p>groupId</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

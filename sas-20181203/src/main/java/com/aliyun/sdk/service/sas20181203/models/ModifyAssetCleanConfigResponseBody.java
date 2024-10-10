@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAssetCleanConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAssetCleanConfigResponseBody</p>
@@ -49,11 +50,14 @@ public class ModifyAssetCleanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -61,7 +65,10 @@ public class ModifyAssetCleanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952776BD-5546-59FC-8AF3-B54EBAD57***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

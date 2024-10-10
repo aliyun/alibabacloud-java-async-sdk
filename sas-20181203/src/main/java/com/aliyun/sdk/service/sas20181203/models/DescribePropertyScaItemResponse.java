@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyScaItemResponse} extends {@link TeaModel}
  *
  * <p>DescribePropertyScaItemResponse</p>

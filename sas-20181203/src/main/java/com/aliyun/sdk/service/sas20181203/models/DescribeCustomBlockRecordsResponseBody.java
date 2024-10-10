@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomBlockRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomBlockRecordsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the defense rules.
+         * <p>An array that consists of the defense rules.</p>
          */
         public Builder recordList(java.util.List < RecordList> recordList) {
             this.recordList = recordList;
@@ -77,7 +78,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028CF634-5268-5660-9575-48C9ED6B7T8Y</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomBlockRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomBlockRecordsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>708</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCustomBlockRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomBlockRecordsResponseBody</p>
+     */
     public static class TargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
@@ -230,7 +258,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The ID of the destination asset.
+             * <p>The ID of the destination asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>032b618f-b220-4a0d-bd37-fbdc6*******</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -238,10 +269,13 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the query. Valid values:
-             * <p>
+             * <p>The type of the query. Valid values:</p>
+             * <ul>
+             * <li>Set the value to <strong>uuid</strong>.</li>
+             * </ul>
              * 
-             * *   Set the value to **uuid**.
+             * <strong>example:</strong>
+             * <p>uuid</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -255,6 +289,12 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCustomBlockRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomBlockRecordsResponseBody</p>
+     */
     public static class RecordList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlockExpireDate")
         private Long blockExpireDate;
@@ -378,7 +418,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             private java.util.List < TargetList> targetList; 
 
             /**
-             * The timestamp generated when the block action on the IP address becomes invalid.
+             * <p>The timestamp generated when the block action on the IP address becomes invalid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671506882063</p>
              */
             public Builder blockExpireDate(Long blockExpireDate) {
                 this.blockExpireDate = blockExpireDate;
@@ -386,7 +429,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The blocked IP address.
+             * <p>The blocked IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45.227.XX.XX</p>
              */
             public Builder blockIp(String blockIp) {
                 this.blockIp = blockIp;
@@ -394,11 +440,14 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The direction of the traffic that is sent by the blocked IP address. Valid values:
-             * <p>
+             * <p>The direction of the traffic that is sent by the blocked IP address. Valid values:</p>
+             * <ul>
+             * <li><strong>in</strong></li>
+             * <li><strong>out</strong></li>
+             * </ul>
              * 
-             * *   **in**
-             * *   **out**
+             * <strong>example:</strong>
+             * <p>in</p>
              */
             public Builder bound(String bound) {
                 this.bound = bound;
@@ -406,7 +455,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers for which the defense rule is enabled.
+             * <p>The number of servers for which the defense rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder enableCount(Integer enableCount) {
                 this.enableCount = enableCount;
@@ -414,7 +466,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The record ID.
+             * <p>The record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>353376</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -422,7 +477,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers on which the IP address is blocked.
+             * <p>The total number of servers on which the IP address is blocked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder serverCount(Integer serverCount) {
                 this.serverCount = serverCount;
@@ -430,7 +488,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the defense rule.
+             * <p>The source of the defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserRule</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -438,12 +499,15 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the defense rule against brute-force attacks. Valid values:
-             * <p>
+             * <p>The status of the defense rule against brute-force attacks. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: invalid.</li>
+             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>2</strong>: failed.</li>
+             * </ul>
              * 
-             * *   **0**: invalid.
-             * *   **1**: enabled.
-             * *   **2**: failed.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -451,7 +515,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The servers for which the defense rule is enabled.
+             * <p>The servers for which the defense rule is enabled.</p>
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;

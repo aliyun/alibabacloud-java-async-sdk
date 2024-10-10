@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTargetRequest} extends {@link RequestModel}
  *
  * <p>DescribeTargetRequest</p>
@@ -67,13 +68,16 @@ public class DescribeTargetRequest extends Request {
         } 
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>cms</strong>: Web CMS vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * </ul>
          * 
-         * *   **cms**: Web CMS vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cve**: Linux software vulnerability
-         * *   **emg**: urgent vulnerability
+         * <strong>example:</strong>
+         * <p>{&quot;vulType&quot;:&quot;cms&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -82,7 +86,10 @@ public class DescribeTargetRequest extends Request {
         }
 
         /**
-         * The type of the query. Set the value to vul.
+         * <p>The type of the query. Set the value to vul.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vul</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulMetaCountStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulMetaCountStatisticsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         private Integer sysCount; 
 
         /**
-         * The number of application vulnerabilities.
+         * <p>The number of application vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder appCount(Integer appCount) {
             this.appCount = appCount;
@@ -93,7 +97,10 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Linux software vulnerabilities.
+         * <p>The number of Linux software vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder cveCount(Integer cveCount) {
             this.cveCount = cveCount;
@@ -101,7 +108,10 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that can be defended by the application protection feature.
+         * <p>The number of vulnerabilities that can be defended by the application protection feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder raspDefendCount(Integer raspDefendCount) {
             this.raspDefendCount = raspDefendCount;
@@ -109,7 +119,10 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>571B2642-BF51-5BDD-906B-D2340DB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of Windows system vulnerabilities.
+         * <p>The number of Windows system vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder sysCount(Integer sysCount) {
             this.sysCount = sysCount;

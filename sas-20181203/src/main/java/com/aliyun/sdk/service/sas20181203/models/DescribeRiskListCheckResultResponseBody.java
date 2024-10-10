@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskListCheckResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRiskListCheckResultResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of risk items for each cloud service.
+         * <p>The number of risk items for each cloud service.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -57,7 +58,10 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3BFB4989-A108-46A4-954E-FF7EF02D1078</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRiskListCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskListCheckResultResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -109,7 +119,10 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
             private Long riskCount; 
 
             /**
-             * The instance ID of the cloud service.
+             * <p>The instance ID of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1e8t4q15sr3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -117,7 +130,10 @@ public class DescribeRiskListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of risk items detected in the current cloud service.
+             * <p>The total number of risk items detected in the current cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;

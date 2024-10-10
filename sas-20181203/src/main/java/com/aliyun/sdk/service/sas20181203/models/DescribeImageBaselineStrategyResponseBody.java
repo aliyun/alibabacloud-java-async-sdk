@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBaselineStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageBaselineStrategyResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         private Strategy strategy; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F85AC10-A1FE-54D7-935A-F28D5256****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the baseline check policy.
+         * <p>The information about the baseline check policy.</p>
          */
         public Builder strategy(Strategy strategy) {
             this.strategy = strategy;
@@ -70,6 +74,12 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageBaselineStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBaselineStrategyResponseBody</p>
+     */
     public static class BaselineItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClassKey")
         private String classKey;
@@ -121,7 +131,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             private String nameKey; 
 
             /**
-             * The key of the baseline type.
+             * <p>The key of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification</p>
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -129,7 +142,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the baseline check item.
+             * <p>The key of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>duplicate_pwd_hash</p>
              */
             public Builder itemKey(String itemKey) {
                 this.itemKey = itemKey;
@@ -137,7 +153,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the name for the baseline.
+             * <p>The key of the name for the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -151,6 +170,12 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageBaselineStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBaselineStrategyResponseBody</p>
+     */
     public static class Strategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineItem")
         private String baselineItem;
@@ -250,7 +275,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The baseline check policy for agentless detection.
+             * <p>The baseline check policy for agentless detection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc_win2008_cis_rules</p>
              */
             public Builder baselineItem(String baselineItem) {
                 this.baselineItem = baselineItem;
@@ -258,7 +286,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * An array that contains the baselines.
+             * <p>An array that contains the baselines.</p>
              */
             public Builder baselineItemList(java.util.List < BaselineItemList> baselineItemList) {
                 this.baselineItemList = baselineItemList;
@@ -266,7 +294,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of selected baseline check items.
+             * <p>The number of selected baseline check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder selectedItemCount(Integer selectedItemCount) {
                 this.selectedItemCount = selectedItemCount;
@@ -274,7 +305,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the baseline check policy.
+             * <p>The ID of the baseline check policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8257</p>
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -282,7 +316,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline check policy.
+             * <p>The name of the baseline check policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -290,7 +327,10 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of baseline check items.
+             * <p>The total number of baseline check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalItemCount(Integer totalItemCount) {
                 this.totalItemCount = totalItemCount;
@@ -298,12 +338,15 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the baseline check policy. Valid values:
-             * <p>
+             * <p>The type of the baseline check policy. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: the default policy</li>
+             * <li><strong>full</strong>: a policy that uses all baselines</li>
+             * <li><strong>normal</strong>: a policy that uses general baselines</li>
+             * </ul>
              * 
-             * *   **default**: the default policy
-             * *   **full**: a policy that uses all baselines
-             * *   **normal**: a policy that uses general baselines
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder type(String type) {
                 this.type = type;

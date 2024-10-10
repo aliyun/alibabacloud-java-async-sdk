@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHoneypotProbeBindResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateHoneypotProbeBindResponseBody</p>
@@ -85,7 +86,10 @@ public class UpdateHoneypotProbeBindResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,10 @@ public class UpdateHoneypotProbeBindResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,7 +108,10 @@ public class UpdateHoneypotProbeBindResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class UpdateHoneypotProbeBindResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425D9617-4F4F-571E-A9CF-0245C9FC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +130,14 @@ public class UpdateHoneypotProbeBindResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAffectedAssetsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAffectedAssetsRequest</p>
@@ -81,7 +82,10 @@ public class DescribeAffectedAssetsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(String current) {
             this.putQueryParameter("Current", current);
@@ -90,12 +94,15 @@ public class DescribeAffectedAssetsRequest extends Request {
         }
 
         /**
-         * The severity. Separate multiple severities with commas (,). Valid values:
-         * <p>
+         * <p>The severity. Separate multiple severities with commas (,). Valid values:</p>
+         * <ul>
+         * <li>serious</li>
+         * <li>suspicious</li>
+         * <li>remind</li>
+         * </ul>
          * 
-         * *   serious
-         * *   suspicious
-         * *   remind
+         * <strong>example:</strong>
+         * <p>serious,suspicious,remind</p>
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -104,10 +111,13 @@ public class DescribeAffectedAssetsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

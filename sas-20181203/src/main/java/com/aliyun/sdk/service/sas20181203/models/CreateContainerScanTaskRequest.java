@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateContainerScanTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateContainerScanTaskRequest</p>
@@ -81,10 +82,13 @@ public class CreateContainerScanTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster to which the container belongs.
-         * <p>
+         * <p>The ID of the cluster to which the container belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>c22143730ab6e40b09ec7c1c51d4d****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +97,10 @@ public class CreateContainerScanTaskRequest extends Request {
         }
 
         /**
-         * The ID of the container.
+         * <p>The ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c927cf190e886696db53cda0efb57145394ccf0bf9f525353fa5c22a26e4****</p>
          */
         public Builder containerIds(String containerIds) {
             this.putQueryParameter("ContainerIds", containerIds);
@@ -102,11 +109,14 @@ public class CreateContainerScanTaskRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

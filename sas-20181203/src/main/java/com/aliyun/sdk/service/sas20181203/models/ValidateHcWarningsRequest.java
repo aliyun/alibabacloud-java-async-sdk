@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ValidateHcWarningsRequest} extends {@link RequestModel}
  *
  * <p>ValidateHcWarningsRequest</p>
@@ -95,9 +96,13 @@ public class ValidateHcWarningsRequest extends Request {
         } 
 
         /**
-         * The IDs of check items that you want to verify. Separate multiple IDs with commas (,).
-         * <p>
-         * > You can use [DescribeCheckWarningSummary](~~116179~~) to get IDs of check items.
+         * <p>The IDs of check items that you want to verify. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can use <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> to get IDs of check items.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>695,234</p>
          */
         public Builder checkIds(String checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -106,7 +111,10 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).
+         * <p>The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder riskIds(String riskIds) {
             this.putQueryParameter("RiskIds", riskIds);
@@ -115,12 +123,15 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The status of the check item that you want to verify.
-         * <p>
+         * <p>The status of the check item that you want to verify.</p>
+         * <ul>
+         * <li>1: failed</li>
+         * <li>3: passed</li>
+         * <li>5: expired</li>
+         * </ul>
          * 
-         * *   1: failed
-         * *   3: passed
-         * *   5: expired
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -129,10 +140,13 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers on which you want to verify the risk items. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The UUIDs of the servers on which you want to verify the risk items. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>78645c8e-2e89-441b-8eb,a9622a6b-adb5-4dd3-929e,0136460a-1cb5-44e8-****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

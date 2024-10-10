@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterInterceptionConfigRequest} extends {@link RequestModel}
  *
  * <p>ListClusterInterceptionConfigRequest</p>
@@ -109,13 +110,16 @@ public class ListClusterInterceptionConfigRequest extends Request {
         } 
 
         /**
-         * The status of the container firewall feature. Valid values:
-         * <p>
+         * <p>The status of the container firewall feature. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: unknown</li>
+         * <li><strong>0</strong>: abnormal</li>
+         * <li><strong>1</strong>: normal</li>
+         * <li><strong>2</strong>: normal to be confirmed</li>
+         * </ul>
          * 
-         * *   **-1**: unknown
-         * *   **0**: abnormal
-         * *   **1**: normal
-         * *   **2**: normal to be confirmed
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder clusterCNNFStatus(Integer clusterCNNFStatus) {
             this.putQueryParameter("ClusterCNNFStatus", clusterCNNFStatus);
@@ -124,10 +128,13 @@ public class ListClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeContainerInstances~~">DescribeContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeContainerInstances](~~DescribeContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>c22143730ab6e40b09ec7c1c51d4d****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -136,7 +143,10 @@ public class ListClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -145,7 +155,10 @@ public class ListClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -154,7 +167,10 @@ public class ListClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

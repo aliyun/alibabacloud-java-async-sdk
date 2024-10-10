@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertySoftwareDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertySoftwareDetailResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the software asset.
+         * <p>The details of the software asset.</p>
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -77,7 +78,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6AEE7412-0065-1135-B790-AE2C38BA68FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertySoftwareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertySoftwareDetailResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: **10**.
+             * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertySoftwareDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertySoftwareDetailResponseBody</p>
+     */
     public static class Propertys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
@@ -350,7 +378,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The timestamp generated when the last asset fingerprint collection is performed. Unit: milliseconds.
+             * <p>The timestamp generated when the last asset fingerprint collection is performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649149566000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -358,7 +389,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the software is installed.
+             * <p>The time at which the software is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-07 10:54:49</p>
              */
             public Builder installTime(String installTime) {
                 this.installTime = installTime;
@@ -366,7 +400,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the software is installed. Unit: milliseconds.
+             * <p>The timestamp generated when the software is installed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649066826000</p>
              */
             public Builder installTimeDt(Long installTimeDt) {
                 this.installTimeDt = installTimeDt;
@@ -374,7 +411,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp35tftuh52wbp1g****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -382,7 +422,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc-host-****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -390,7 +433,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -398,7 +444,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -406,7 +455,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the server.
+             * <p>The IP addresses of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -414,7 +466,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the software.
+             * <p>The name of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aaa_base</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -422,7 +477,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The installation path of the software.
+             * <p>The installation path of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/etc/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -430,7 +488,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -438,7 +499,10 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the software.
+             * <p>The version of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.10.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

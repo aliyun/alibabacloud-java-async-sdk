@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JoinWebLockProcessWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>JoinWebLockProcessWhiteListResponseBody</p>
@@ -37,7 +38,10 @@ public class JoinWebLockProcessWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A47D621A-193E-5BDA-ADFA-A0D3133E199C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

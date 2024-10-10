@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHybridProxyClusterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHybridProxyClusterResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateHybridProxyClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDCB0BBB-CFB2-5D38-BB49-500E2A21xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

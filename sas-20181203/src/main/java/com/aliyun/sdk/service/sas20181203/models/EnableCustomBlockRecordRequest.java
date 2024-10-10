@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableCustomBlockRecordRequest} extends {@link RequestModel}
  *
  * <p>EnableCustomBlockRecordRequest</p>
@@ -83,7 +84,11 @@ public class EnableCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that is specified in the policy.
+         * <p>The IP address that is specified in the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43.248.XX.XX</p>
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -92,11 +97,15 @@ public class EnableCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction that is specified in the policy. Valid values:
-         * <p>
+         * <p>The traffic direction that is specified in the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound</li>
+         * <li><strong>out</strong>: outbound</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);

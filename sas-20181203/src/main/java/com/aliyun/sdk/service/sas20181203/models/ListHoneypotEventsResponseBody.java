@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHoneypotEventsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The intrusion events.
+         * <p>The intrusion events.</p>
          */
         public Builder honeypotEvents(java.util.List < HoneypotEvents> honeypotEvents) {
             this.honeypotEvents = honeypotEvents;
@@ -69,7 +70,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FBD28009-6096-5E90-BFE6-62CCD67*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHoneypotEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotEventsResponseBody</p>
+     */
     public static class MergeFieldList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldExtInfo")
         private String fieldExtInfo;
@@ -153,7 +163,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private String fieldValue; 
 
             /**
-             * The supplementary information about the field.
+             * <p>The supplementary information about the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data</p>
              */
             public Builder fieldExtInfo(String fieldExtInfo) {
                 this.fieldExtInfo = fieldExtInfo;
@@ -161,7 +174,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the field.
+             * <p>The key of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -169,7 +185,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the field.
+             * <p>The type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>level2_item1</p>
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -177,7 +196,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the field key.
+             * <p>The value of the field key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web_access</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -191,6 +213,12 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotEventsResponseBody</p>
+     */
     public static class HoneypotEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private String agentId;
@@ -362,7 +390,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private String srcIp; 
 
             /**
-             * The probe ID.
+             * <p>The probe ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27d44bd5815d401992ea672874d9****</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -370,7 +401,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the probe.
+             * <p>The name of the probe.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1193474_test_****</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -378,7 +412,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert event.
+             * <p>The ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1900752</p>
              */
             public Builder alarmEventId(Long alarmEventId) {
                 this.alarmEventId = alarmEventId;
@@ -386,7 +423,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IP address of the attack.
+             * <p>The destination IP address of the attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112.126.205.***</p>
              */
             public Builder dstIp(String dstIp) {
                 this.dstIp = dstIp;
@@ -394,7 +434,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the event was first detected.
+             * <p>The timestamp at which the event was first detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1692670297</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -402,7 +445,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot.
+             * <p>The name of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>honeypot-2</p>
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -410,7 +456,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the event was last detected.
+             * <p>The timestamp at which the event was last detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1676558664</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -418,7 +467,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China Beijing</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -426,7 +478,7 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The extended values that correspond to the field key.
+             * <p>The extended values that correspond to the field key.</p>
              */
             public Builder mergeFieldList(java.util.List < MergeFieldList> mergeFieldList) {
                 this.mergeFieldList = mergeFieldList;
@@ -434,11 +486,14 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol. Valid values:
-             * <p>
+             * <p>The protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -446,12 +501,15 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: low</li>
+             * <li><strong>3</strong>: medium</li>
+             * <li><strong>4</strong>: high</li>
+             * </ul>
              * 
-             * *   **2**: low
-             * *   **3**: medium
-             * *   **4**: high
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -459,7 +517,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the intrusion event.
+             * <p>The ID of the intrusion event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70427821</p>
              */
             public Builder securityEventId(Long securityEventId) {
                 this.securityEventId = securityEventId;
@@ -467,7 +528,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the attack.
+             * <p>The source IP address of the attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.62.***</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -481,6 +545,12 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotEventsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -568,7 +638,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -576,7 +649,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -584,7 +660,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the last data entry.
+             * <p>The key of the last data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY*********</p>
              */
             public Builder lastRowKey(String lastRowKey) {
                 this.lastRowKey = lastRowKey;
@@ -592,7 +671,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the NextToken parameter that is returned by using the NextToken method.
+             * <p>The value of the NextToken parameter that is returned by using the NextToken method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B604532DEF982B875E8360A6EFA3B***</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -600,7 +682,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -608,7 +693,10 @@ public class ListHoneypotEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCommonSwitchConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateCommonSwitchConfigRequest</p>
@@ -67,11 +68,14 @@ public class UpdateCommonSwitchConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to turn on the switch for newly added servers. Valid values:
-         * <p>
+         * <p>Specifies whether to turn on the switch for newly added servers. Valid values:</p>
+         * <ul>
+         * <li><strong>add</strong>: yes</li>
+         * <li><strong>del</strong>: no</li>
+         * </ul>
          * 
-         * *   **add**: yes
-         * *   **del**: no
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         public Builder targetDefault(String targetDefault) {
             this.putQueryParameter("TargetDefault", targetDefault);
@@ -80,10 +84,13 @@ public class UpdateCommonSwitchConfigRequest extends Request {
         }
 
         /**
-         * The type of the switch.
-         * <p>
+         * <p>The type of the switch.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the type from the response parameter SwitchId.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) or [ListSystemClientRules](~~ListSystemClientRules~~) operation to obtain the type from the response parameter SwitchId.
+         * <strong>example:</strong>
+         * <p>USER-DEFINE-RULE-SWITCH-TYPE_190****</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

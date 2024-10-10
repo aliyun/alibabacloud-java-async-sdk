@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScanTaskStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScanTaskStatisticsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         private Long userNum; 
 
         /**
-         * The number of risks that are handled for the user.
+         * <p>The number of risks that are handled for the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder dealedRiskNum(Integer dealedRiskNum) {
             this.dealedRiskNum = dealedRiskNum;
@@ -93,7 +97,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tasks that are created for the user.
+         * <p>The total number of tasks that are created for the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder personalTaskNum(Long personalTaskNum) {
             this.personalTaskNum = personalTaskNum;
@@ -101,7 +108,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>765EDBDE-1686-5DBA-B76F-2E0XXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of virus detection tasks.
+         * <p>The total number of virus detection tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalTaskNum(Long totalTaskNum) {
             this.totalTaskNum = totalTaskNum;
@@ -117,7 +130,10 @@ public class DescribeScanTaskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of risks that are detected for the user.
+         * <p>The number of risks that are detected for the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder userNum(Long userNum) {
             this.userNum = userNum;

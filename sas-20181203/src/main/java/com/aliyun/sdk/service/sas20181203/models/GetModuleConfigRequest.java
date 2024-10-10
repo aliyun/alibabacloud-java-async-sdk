@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModuleConfigRequest} extends {@link RequestModel}
  *
  * <p>GetModuleConfigRequest</p>
@@ -67,7 +68,10 @@ public class GetModuleConfigRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -76,7 +80,10 @@ public class GetModuleConfigRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

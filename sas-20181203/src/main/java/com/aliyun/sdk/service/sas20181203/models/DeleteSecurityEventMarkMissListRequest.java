@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecurityEventMarkMissListRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecurityEventMarkMissListRequest</p>
@@ -67,7 +68,7 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
         } 
 
         /**
-         * The IDs of custom defense rule.
+         * <p>The IDs of custom defense rule.</p>
          */
         public Builder ids(java.util.List < Long > ids) {
             this.putQueryParameter("Ids", ids);

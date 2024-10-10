@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateApplicationRequest} extends {@link RequestModel}
  *
  * <p>OperateApplicationRequest</p>
@@ -69,7 +70,8 @@ public class OperateApplicationRequest extends Request {
         } 
 
         /**
-         * The container application that is protected from being tampered with.
+         * <p>The container application that is protected from being tampered with.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder containerWebDefenseApplicationDTOS(java.util.List < ContainerWebDefenseApplicationDTOS> containerWebDefenseApplicationDTOS) {
             this.putQueryParameter("ContainerWebDefenseApplicationDTOS", containerWebDefenseApplicationDTOS);
@@ -78,7 +80,11 @@ public class OperateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300566</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -93,6 +99,12 @@ public class OperateApplicationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link OperateApplicationRequest} extends {@link TeaModel}
+     *
+     * <p>OperateApplicationRequest</p>
+     */
     public static class ContainerWebDefenseApplicationDTOS extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -159,10 +171,14 @@ public class OperateApplicationRequest extends Request {
             private String tag; 
 
             /**
-             * The ID of the cluster to which the container belongs.
-             * <p>
+             * <p>The ID of the cluster to which the container belongs.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the cluster ID.
+             * <strong>example:</strong>
+             * <p>ceb68cc58234141828677e383bd21ff0c</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -170,11 +186,15 @@ public class OperateApplicationRequest extends Request {
             }
 
             /**
-             * Specifies whether to apply the configuration to the asset. Valid values:
-             * <p>
+             * <p>Specifies whether to apply the configuration to the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>add</strong>: applied</li>
+             * <li><strong>del</strong>: not applied</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **add**: applied
-             * *   **del**: not applied
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -182,7 +202,10 @@ public class OperateApplicationRequest extends Request {
             }
 
             /**
-             * The application ID. If the application is newly added, you do not need to specify this parameter.
+             * <p>The application ID. If the application is newly added, you do not need to specify this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -190,7 +213,11 @@ public class OperateApplicationRequest extends Request {
             }
 
             /**
-             * The value of the application tag.
+             * <p>The value of the application tag.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app:app-003</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

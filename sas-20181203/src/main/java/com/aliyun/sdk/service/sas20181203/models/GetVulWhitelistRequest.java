@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVulWhitelistRequest} extends {@link RequestModel}
  *
  * <p>GetVulWhitelistRequest</p>
@@ -53,7 +54,10 @@ public class GetVulWhitelistRequest extends Request {
         } 
 
         /**
-         * The ID of the whitelist.
+         * <p>The ID of the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1275</p>
          */
         public Builder vulWhitelistId(Long vulWhitelistId) {
             this.putQueryParameter("VulWhitelistId", vulWhitelistId);

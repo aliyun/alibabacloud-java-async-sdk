@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupClientsRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupClientsRequest</p>
@@ -54,9 +55,14 @@ public class DescribeBackupClientsRequest extends Request {
         } 
 
         /**
-         * The region in which the anti-ransomware feature is supported.
-         * <p>
-         * > You can call the [DescribeSupportRegion](~~DescribeSupportRegion~~) operation to query the regions in which the anti-ransomware feature is supported.
+         * <p>The region in which the anti-ransomware feature is supported.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions in which the anti-ransomware feature is supported.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder supportRegionId(String supportRegionId) {
             this.putQueryParameter("SupportRegionId", supportRegionId);

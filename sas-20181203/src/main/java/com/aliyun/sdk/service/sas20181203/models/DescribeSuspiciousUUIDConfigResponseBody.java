@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspiciousUUIDConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSuspiciousUUIDConfigResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         private java.util.List < String > UUIDList; 
 
         /**
-         * The total number of servers on which proactive defense of the specified type takes effect.
+         * <p>The total number of servers on which proactive defense of the specified type takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -69,7 +73,10 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6044DC07-86F1-5DDA-A611-EC578EA4EEE6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class DescribeSuspiciousUUIDConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The UUIDs of servers on which proactive defense of the specified type takes effect.
+         * <p>The UUIDs of servers on which proactive defense of the specified type takes effect.</p>
          */
         public Builder UUIDList(java.util.List < String > UUIDList) {
             this.UUIDList = UUIDList;

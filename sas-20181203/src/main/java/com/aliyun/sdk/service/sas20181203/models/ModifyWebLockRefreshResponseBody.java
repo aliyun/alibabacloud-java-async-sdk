@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebLockRefreshResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyWebLockRefreshResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyWebLockRefreshResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CF8C834-8028-5E01-96E2-0F065EA99F6D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

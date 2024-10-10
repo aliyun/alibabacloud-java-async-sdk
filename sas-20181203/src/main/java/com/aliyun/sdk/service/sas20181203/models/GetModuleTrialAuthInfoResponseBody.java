@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModuleTrialAuthInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetModuleTrialAuthInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetModuleTrialAuthInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleTrialAuthInfoResponseBody</p>
+     */
     public static class TrialRecordList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthLimit")
         private Long authLimit;
@@ -157,7 +167,10 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The quota.
+             * <p>The quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder authLimit(Long authLimit) {
                 this.authLimit = authLimit;
@@ -165,7 +178,10 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.
+             * <p>The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[1,100]</p>
              */
             public Builder authLimitList(String authLimitList) {
                 this.authLimitList = authLimitList;
@@ -173,7 +189,10 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the trial use.
+             * <p>The end time of the trial use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679760000000</p>
              */
             public Builder gmtEnd(Long gmtEnd) {
                 this.gmtEnd = gmtEnd;
@@ -181,7 +200,10 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the trial use.
+             * <p>The start time of the trial use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669824000000</p>
              */
             public Builder gmtStart(Long gmtStart) {
                 this.gmtStart = gmtStart;
@@ -189,11 +211,14 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the feature. Valid values:
-             * <p>
+             * <p>The code of the feature. Valid values:</p>
+             * <ul>
+             * <li><strong>vulFix</strong>: vulnerability fixing.</li>
+             * <li><strong>cloudSiem</strong>: threat analysis and response.</li>
+             * </ul>
              * 
-             * *   **vulFix**: vulnerability fixing.
-             * *   **cloudSiem**: threat analysis and response.
+             * <strong>example:</strong>
+             * <p>vulFix</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -201,11 +226,14 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the trial use. Valid values:
-             * <p>
+             * <p>The status of the trial use. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The feature is in trial use.</li>
+             * <li><strong>0</strong>: The trial use ends.</li>
+             * </ul>
              * 
-             * *   **1**: The feature is in trial use.
-             * *   **0**: The trial use ends.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -219,6 +247,12 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModuleTrialAuthInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleTrialAuthInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanTry")
         private Boolean canTry;
@@ -270,11 +304,14 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             private java.util.List < TrialRecordList> trialRecordList; 
 
             /**
-             * Indicates whether the user is qualified for the trial use. Valid values:
-             * <p>
+             * <p>Indicates whether the user is qualified for the trial use. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder canTry(Boolean canTry) {
                 this.canTry = canTry;
@@ -282,11 +319,14 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the feature. Valid values:
-             * <p>
+             * <p>The code of the feature. Valid values:</p>
+             * <ul>
+             * <li><strong>vulFix</strong>: vulnerability fixing.</li>
+             * <li><strong>cloudSiem</strong>: threat analysis and response.</li>
+             * </ul>
              * 
-             * *   **vulFix**: vulnerability fixing.
-             * *   **cloudSiem**: threat analysis and response.
+             * <strong>example:</strong>
+             * <p>vulFix</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -294,7 +334,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The trial use record.
+             * <p>The trial use record.</p>
              */
             public Builder trialRecordList(java.util.List < TrialRecordList> trialRecordList) {
                 this.trialRecordList = trialRecordList;

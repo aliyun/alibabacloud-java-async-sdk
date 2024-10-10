@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterCheckItemWarningStatisticsRequest} extends {@link RequestModel}
  *
  * <p>GetClusterCheckItemWarningStatisticsRequest</p>
@@ -67,10 +68,13 @@ public class GetClusterCheckItemWarningStatisticsRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>cd49575861a3044d49c954e4b3911****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,10 +83,13 @@ public class GetClusterCheckItemWarningStatisticsRequest extends Request {
         }
 
         /**
-         * The server UUID.
-         * <p>
+         * <p>The server UUID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the server UUID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.
+         * <strong>example:</strong>
+         * <p>e4af3620-6895-4e2f-a641-a9d8fb53****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

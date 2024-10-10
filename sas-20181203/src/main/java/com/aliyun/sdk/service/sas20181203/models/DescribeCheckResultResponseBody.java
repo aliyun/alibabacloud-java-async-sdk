@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCheckResultResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The check results.
+         * <p>The check results.</p>
          */
         public Builder checkResultList(java.util.List < CheckResultList> checkResultList) {
             this.checkResultList = checkResultList;
@@ -57,7 +58,10 @@ public class DescribeCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>571B2642-BF51-5BDD-906B-D2340DB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCheckResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckResultResponseBody</p>
+     */
     public static class CheckResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComplianceStatus")
         private Integer complianceStatus;
@@ -109,11 +119,14 @@ public class DescribeCheckResultResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The compliance status. Valid values:
-             * <p>
+             * <p>The compliance status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: compliant</li>
+             * <li><strong>0</strong>: non-compliant</li>
+             * </ul>
              * 
-             * *   **1**: compliant
-             * *   **0**: non-compliant
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder complianceStatus(Integer complianceStatus) {
                 this.complianceStatus = complianceStatus;
@@ -121,18 +134,21 @@ public class DescribeCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the corresponding section. Valid values:
-             * <p>
+             * <p>The name of the corresponding section. Valid values:</p>
+             * <ul>
+             * <li><strong>information_classification</strong>: information classification</li>
+             * <li><strong>information_mark</strong>: information labeling</li>
+             * <li><strong>network_security_policy</strong>: access to networks and network services</li>
+             * <li><strong>login_control</strong>: secure logon procedures</li>
+             * <li><strong>week_password</strong>: password management system</li>
+             * <li><strong>key_manage</strong>: key management</li>
+             * <li><strong>malicious_software</strong>: protection against malware</li>
+             * <li><strong>information_backup</strong>: information backup</li>
+             * <li><strong>audit_policy</strong>: information system audit control mechanisms</li>
+             * </ul>
              * 
-             * *   **information_classification**: information classification
-             * *   **information_mark**: information labeling
-             * *   **network_security_policy**: access to networks and network services
-             * *   **login_control**: secure logon procedures
-             * *   **week_password**: password management system
-             * *   **key_manage**: key management
-             * *   **malicious_software**: protection against malware
-             * *   **information_backup**: information backup
-             * *   **audit_policy**: information system audit control mechanisms
+             * <strong>example:</strong>
+             * <p>information_mark</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBinarySecurityPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteBinarySecurityPolicyResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteBinarySecurityPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A6CFADC0-1167-521A-9284-8CD8034C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

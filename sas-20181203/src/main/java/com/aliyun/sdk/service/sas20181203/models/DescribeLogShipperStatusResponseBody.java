@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLogShipperStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLogShipperStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status information.
+         * <p>The status information.</p>
          */
         public Builder logShipperStatus(LogShipperStatus logShipperStatus) {
             this.logShipperStatus = logShipperStatus;
@@ -57,7 +58,10 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLogShipperStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLogShipperStatusResponseBody</p>
+     */
     public static class LogShipperStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthStatus")
         private String authStatus;
@@ -181,11 +191,14 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             private String slsServiceStatus; 
 
             /**
-             * Indicates whether Security Center is authorized to access Log Service. Valid values:
-             * <p>
+             * <p>Indicates whether Security Center is authorized to access Log Service. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder authStatus(String authStatus) {
                 this.authStatus = authStatus;
@@ -193,11 +206,14 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the log analysis feature is purchased. Valid values:
-             * <p>
+             * <p>Indicates whether the log analysis feature is purchased. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder buyStatus(String buyStatus) {
                 this.buyStatus = buyStatus;
@@ -205,10 +221,14 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the log analysis field. Valid values:
-             * <p>
-             * - SAS_V1
-             * - SAS_V2
+             * <p>The version of the log analysis field. Valid values:</p>
+             * <ul>
+             * <li>SAS_V1</li>
+             * <li>SAS_V2</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SAS_V1</p>
              */
             public Builder etlMetaVersion(String etlMetaVersion) {
                 this.etlMetaVersion = etlMetaVersion;
@@ -216,11 +236,14 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the log analysis feature. Valid values:
-             * <p>
+             * <p>The status of the log analysis feature. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong>: enabled</li>
+             * <li><strong>no</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **yes**: enabled
-             * *   **no**: disabled
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder openStatus(String openStatus) {
                 this.openStatus = openStatus;
@@ -228,11 +251,14 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the pay-as-you-go billing method is used. Valid values:
-             * <p>
+             * <p>Indicates whether the pay-as-you-go billing method is used. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>no</p>
              */
             public Builder postPaidOpenStatus(String postPaidOpenStatus) {
                 this.postPaidOpenStatus = postPaidOpenStatus;
@@ -240,11 +266,14 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the log analysis feature supports the pay-as-you-go billing method. Valid values:
-             * <p>
+             * <p>Indicates whether the log analysis feature supports the pay-as-you-go billing method. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder postPaidSupportStatus(String postPaidSupportStatus) {
                 this.postPaidSupportStatus = postPaidSupportStatus;
@@ -252,11 +281,14 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the dedicated Log Service project. Valid values:
-             * <p>
+             * <p>The status of the dedicated Log Service project. Valid values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: normal</li>
+             * <li><strong>Disable</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **Normal**: normal
-             * *   **Disable**: disabled
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder slsProjectStatus(String slsProjectStatus) {
                 this.slsProjectStatus = slsProjectStatus;
@@ -264,11 +296,14 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Log Service is activated. Valid values:
-             * <p>
+             * <p>Indicates whether Log Service is activated. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder slsServiceStatus(String slsServiceStatus) {
                 this.slsServiceStatus = slsServiceStatus;

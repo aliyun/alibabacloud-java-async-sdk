@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListProcessResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWhiteListProcessResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -105,7 +109,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +120,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +131,7 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the processes.
+         * <p>The information about the processes.</p>
          */
         public Builder processes(java.util.List < Processes> processes) {
             this.processes = processes;
@@ -129,7 +139,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D81DD78E-E006-5C65-A171-C8CB09XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWhiteListProcessResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWhiteListProcessResponseBody</p>
+     */
     public static class Processes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FilePath")
         private String filePath;
@@ -261,7 +283,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The path to the process startup file.
+             * <p>The path to the process startup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/bash1</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -269,7 +294,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key of the process information.
+             * <p>The primary key of the process information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2100019</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -277,7 +305,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The trust score of the process.
+             * <p>The trust score of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -285,7 +316,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the process startup file.
+             * <p>The MD5 hash value of the process startup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a28e8eba54ece1f3748d80e57dc89400</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -293,7 +327,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the process.
+             * <p>The ID of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53090</p>
              */
             public Builder processId(Integer processId) {
                 this.processId = processId;
@@ -301,7 +338,10 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the process.
+             * <p>The name of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vim</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -309,12 +349,15 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the process. Valid values:
-             * <p>
+             * <p>The type of the process. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: trusted</li>
+             * <li><strong>2</strong>: suspicious</li>
+             * <li><strong>3</strong>: malicious</li>
+             * </ul>
              * 
-             * *   **1**: trusted
-             * *   **2**: suspicious
-             * *   **3**: malicious
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder processType(Integer processType) {
                 this.processType = processType;
@@ -322,11 +365,14 @@ public class DescribeWhiteListProcessResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the process is trusted. Valid values:
-             * <p>
+             * <p>Indicates whether the process is trusted. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: no</li>
+             * <li><strong>2</strong>: yes</li>
+             * </ul>
              * 
-             * *   **1**: no
-             * *   **2**: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

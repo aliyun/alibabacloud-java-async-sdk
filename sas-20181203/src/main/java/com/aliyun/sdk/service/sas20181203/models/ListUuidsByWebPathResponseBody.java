@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUuidsByWebPathResponseBody} extends {@link TeaModel}
  *
  * <p>ListUuidsByWebPathResponseBody</p>
@@ -61,7 +62,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the protected assets.
+         * <p>An array that consists of the protected assets.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -69,7 +70,7 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3C1240F-9DAC-5EE8-ADF5-2F930A95****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUuidsByWebPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUuidsByWebPathResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
@@ -153,7 +163,10 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -161,7 +174,10 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.25.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -169,7 +185,10 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****</p>
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -177,7 +196,10 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -191,6 +213,12 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUuidsByWebPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUuidsByWebPathResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -254,7 +282,10 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -262,7 +293,10 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -270,7 +304,10 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -278,7 +315,10 @@ public class ListUuidsByWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

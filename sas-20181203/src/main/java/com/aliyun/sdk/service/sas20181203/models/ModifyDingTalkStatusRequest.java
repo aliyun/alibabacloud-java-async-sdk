@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDingTalkStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyDingTalkStatusRequest</p>
@@ -69,10 +70,14 @@ public class ModifyDingTalkStatusRequest extends Request {
         } 
 
         /**
-         * The notification IDs of DingTalk chatbots. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The notification IDs of DingTalk chatbots. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeDingTalk~~">DescribeDingTalk</a> operation to query the notification IDs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDingTalk](~~DescribeDingTalk~~) operation to query the notification IDs.
+         * <strong>example:</strong>
+         * <p>2259</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -81,11 +86,15 @@ public class ModifyDingTalkStatusRequest extends Request {
         }
 
         /**
-         * The notification status of a DingTalk chatbot. Valid values:
-         * <p>
+         * <p>The notification status of a DingTalk chatbot. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: disabled
-         * *   **1**: enabled
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

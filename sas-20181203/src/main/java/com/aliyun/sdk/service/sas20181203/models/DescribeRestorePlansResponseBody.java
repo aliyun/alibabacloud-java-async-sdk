@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestorePlansResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRestorePlansResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         private java.util.List < RestorePlans> restorePlans; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the restoration tasks.
+         * <p>An array that consists of the restoration tasks.</p>
          */
         public Builder restorePlans(java.util.List < RestorePlans> restorePlans) {
             this.restorePlans = restorePlans;
@@ -90,6 +94,12 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRestorePlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestorePlansResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRestorePlansResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRestorePlansResponseBody</p>
+     */
     public static class RestorePlans extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private Long createdTime;
@@ -338,7 +366,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             private Long updatedTime; 
 
             /**
-             * The timestamp when the restoration task was created. Unit: milliseconds.
+             * <p>The timestamp when the restoration task was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1655174753****</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -346,7 +377,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bankup****</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -354,7 +388,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server on which the database resides.
+             * <p>The name of the server on which the database resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-001</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -362,7 +399,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware policy.
+             * <p>The ID of the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -370,7 +410,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the anti-ransomware policy.
+             * <p>The name of the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KtDataBase</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -378,7 +421,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time to which data is restored.
+             * <p>The point in time to which data is restored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165875100****</p>
              */
             public Builder restorePoint(Long restorePoint) {
                 this.restorePoint = restorePoint;
@@ -386,15 +432,18 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the restoration task. Valid values:
-             * <p>
+             * <p>The status of the restoration task. Valid values:</p>
+             * <ul>
+             * <li><strong>init</strong>: initializing</li>
+             * <li><strong>created</strong>: creating</li>
+             * <li><strong>running</strong>: running</li>
+             * <li><strong>completed</strong>: complete</li>
+             * <li><strong>error</strong>: failed</li>
+             * <li><strong>restoring</strong>: restoring</li>
+             * </ul>
              * 
-             * *   **init**: initializing
-             * *   **created**: creating
-             * *   **running**: running
-             * *   **completed**: complete
-             * *   **error**: failed
-             * *   **restoring**: restoring
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -402,7 +451,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination database.
+             * <p>The name of the destination database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OABak</p>
              */
             public Builder targetDatabaseName(String targetDatabaseName) {
                 this.targetDatabaseName = targetDatabaseName;
@@ -410,7 +462,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the destination server.
+             * <p>The ID of the destination server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zehqflgbl9ep2he****</p>
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -418,7 +473,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the destination server.
+             * <p>The name of the destination server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hbr-detection-hh</p>
              */
             public Builder targetInstanceName(String targetInstanceName) {
                 this.targetInstanceName = targetInstanceName;
@@ -426,7 +484,10 @@ public class DescribeRestorePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the restoration task was last updated. Unit: milliseconds.
+             * <p>The timestamp when the restoration task was last updated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>166849080****</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

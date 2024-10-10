@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventLevelCountRequest} extends {@link RequestModel}
  *
  * <p>DescribeEventLevelCountRequest</p>
@@ -137,10 +138,13 @@ public class DescribeEventLevelCountRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>c7e3c5b420a7947c2933303144688****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -149,21 +153,24 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * The key of the condition that is used to query alert events on containers. Valid values:
-         * <p>
+         * <p>The key of the condition that is used to query alert events on containers. Valid values:</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the ID of the asset</li>
+         * <li><strong>appName</strong>: the name of the application</li>
+         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * <li><strong>regionId</strong>: the ID of the region</li>
+         * <li><strong>nodeName</strong>: the name of the node</li>
+         * <li><strong>namespace</strong>: the namespace</li>
+         * <li><strong>clusterName</strong>: the name of the cluster</li>
+         * <li><strong>image</strong>: the name of the image</li>
+         * <li><strong>imageRepoName</strong>: the name of the image repository</li>
+         * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
+         * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
+         * <li><strong>imageDigest</strong>: the digest of the image</li>
+         * </ul>
          * 
-         * *   **instanceId**: the ID of the asset
-         * *   **appName**: the name of the application
-         * *   **clusterId**: the ID of the cluster
-         * *   **regionId**: the ID of the region
-         * *   **nodeName**: the name of the node
-         * *   **namespace**: the namespace
-         * *   **clusterName**: the name of the cluster
-         * *   **image**: the name of the image
-         * *   **imageRepoName**: the name of the image repository
-         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
-         * *   **imageRepoTag**: the tag that is added to the image
-         * *   **imageDigest**: the digest of the image
+         * <strong>example:</strong>
+         * <p>clusterId</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -172,7 +179,10 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * The value of the condition that is used to query alert events on containers. If you specify multiple values, separate them with commas (,).
+         * <p>The value of the condition that is used to query alert events on containers. If you specify multiple values, separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c951761046a9c4afe92be0a7b5bexxxxx</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -181,7 +191,10 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * The ID of the container.
+         * <p>The ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx30389a10c28f6d38f2398f0dcexxxxxxx922b9e8290dc7c3019d4a8,48b87f2c0662e334820f436cb9133f1ae4e053d39b6fad42xxxxxxxxxx</p>
          */
         public Builder containerIds(String containerIds) {
             this.putQueryParameter("ContainerIds", containerIds);
@@ -190,7 +203,10 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -208,11 +224,14 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * The type of the query condition. Valid values:
-         * <p>
+         * <p>The type of the query condition. Valid values:</p>
+         * <ul>
+         * <li><strong>containerId</strong>: the ID of the container</li>
+         * <li><strong>uuid</strong>: the UUID of the asset</li>
+         * </ul>
          * 
-         * *   **containerId**: the ID of the container
-         * *   **uuid**: the UUID of the asset
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

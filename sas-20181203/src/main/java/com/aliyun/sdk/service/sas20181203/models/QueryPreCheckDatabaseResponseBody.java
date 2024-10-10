@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryPreCheckDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>QueryPreCheckDatabaseResponseBody</p>
@@ -109,7 +110,10 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         private Long updatedTime; 
 
         /**
-         * The time when the precheck task was complete.
+         * <p>The time when the precheck task was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657524396</p>
          */
         public Builder completedTime(Long completedTime) {
             this.completedTime = completedTime;
@@ -117,7 +121,10 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the precheck task was started.
+         * <p>The time when the precheck task was started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1660448660</p>
          */
         public Builder createdTime(Long createdTime) {
             this.createdTime = createdTime;
@@ -125,12 +132,15 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the precheck task. Valid values:
-         * <p>
+         * <p>The status of the precheck task. Valid values:</p>
+         * <ul>
+         * <li><strong>completed</strong>: complete</li>
+         * <li><strong>created</strong>: started</li>
+         * <li><strong>error</strong>: failed</li>
+         * </ul>
          * 
-         * *   **completed**: complete
-         * *   **created**: started
-         * *   **error**: failed
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -138,7 +148,10 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The precheck progress in percentage. Valid values: 0 to 100.
+         * <p>The precheck progress in percentage. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -146,7 +159,10 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,43 +170,79 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the precheck task. The value is a JSON string that contains the following fields:
-         * <p>
+         * <p>The result of the precheck task. The value is a JSON string that contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>instanceId</strong>: the ID of the server that hosts the database</p>
+         * </li>
+         * <li><p><strong>checkTime</strong>: the precheck time</p>
+         * </li>
+         * <li><p><strong>sourceType</strong>: the database type</p>
+         * </li>
+         * <li><p><strong>results</strong>: the precheck item and result</p>
+         * <ul>
+         * <li><strong>item</strong>: the precheck item</li>
+         * <li><strong>result</strong>: the precheck result</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>The following section describes the precheck items:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>MSSQL</p>
+         * <ul>
+         * <li><strong>OSS_INTERNAL_ENDPOINT_CONNECTIVITY</strong>: OSS connectivity check</li>
+         * <li><strong>SERVICE_CONNECTIVITY</strong>: control network connectivity check</li>
+         * <li><strong>SQL_SERVER_DB_IN_SIMPLE_RECOVERY_MODE</strong>: recovery mode check</li>
+         * <li><strong>SQL_SERVER_DB_NOT_ONLINE</strong>: SQL Server database status check</li>
+         * </ul>
+         * </li>
+         * <li><p>ORACLE</p>
+         * <ul>
+         * <li><strong>OSS_INTERNAL_ENDPOINT_CONNECTIVITY</strong>: OSS connectivity check</li>
+         * <li><strong>SERVICE_CONNECTIVITY</strong>: control network connectivity check</li>
+         * <li><strong>ORACLE_INSTANCE_STATUS</strong>: Oracle instance status check</li>
+         * <li><strong>ORACLE_DB_STATUS</strong>: Oracle database status check</li>
+         * <li><strong>ARCHIVELOG</strong>: archive mode check</li>
+         * </ul>
+         * </li>
+         * <li><p>MYSQL</p>
+         * <ul>
+         * <li><strong>OSS_INTERNAL_ENDPOINT_CONNECTIVITY</strong>: OSS connectivity check</li>
+         * <li><strong>SERVICE_CONNECTIVITY</strong>: control network connectivity check</li>
+         * <li><strong>MYSQL_VERSION</strong>: Supports full backup version checking</li>
+         * <li><strong>MYSQL_BINLOG</strong>: BINLOG check</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   **instanceId**: the ID of the server that hosts the database
-         * 
-         * *   **checkTime**: the precheck time
-         * 
-         * *   **sourceType**: the database type
-         * 
-         * *   **results**: the precheck item and result
-         * 
-         *     *   **item**: the precheck item
-         *     *   **result**: the precheck result
-         * 
-         * > The following section describes the precheck items:
-         * 
-         * *   MSSQL
-         * 
-         *     *   **OSS_INTERNAL_ENDPOINT_CONNECTIVITY**: OSS connectivity check
-         *     *   **SERVICE_CONNECTIVITY**: control network connectivity check
-         *     *   **SQL_SERVER_DB_IN_SIMPLE_RECOVERY_MODE**: recovery mode check
-         *     *   **SQL_SERVER_DB_NOT_ONLINE**: SQL Server database status check
-         * 
-         * *   ORACLE
-         * 
-         *     *   **OSS_INTERNAL_ENDPOINT_CONNECTIVITY**: OSS connectivity check
-         *     *   **SERVICE_CONNECTIVITY**: control network connectivity check
-         *     *   **ORACLE_INSTANCE_STATUS**: Oracle instance status check
-         *     *   **ORACLE_DB_STATUS**: Oracle database status check
-         *     *   **ARCHIVELOG**: archive mode check
-         * 
-         * *   MYSQL
-         * 
-         *     *   **OSS_INTERNAL_ENDPOINT_CONNECTIVITY**: OSS connectivity check
-         *     *   **SERVICE_CONNECTIVITY**: control network connectivity check
-         *     *   **MYSQL_VERSION**: Supports full backup version checking
-         *     *   **MYSQL_BINLOG**: BINLOG check
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;instanceId&quot;: &quot;i-wz91if83t97xgtn2****&quot;,
+         *         &quot;checkTime&quot;: 1671245753,
+         *         &quot;sourceType&quot;: &quot;MSSQL&quot;,
+         *         &quot;results&quot;:
+         *         [
+         *             {
+         *                 &quot;item&quot;: &quot;OSS_INTERNAL_ENDPOINT_CONNECTIVITY&quot;,
+         *                 &quot;result&quot;: &quot;PASSED&quot;
+         *             },
+         *             {
+         *                 &quot;item&quot;: &quot;SERVICE_CONNECTIVITY&quot;,
+         *                 &quot;result&quot;: &quot;PASSED&quot;
+         *             },
+         *             {
+         *                 &quot;item&quot;: &quot;SQL_SERVER_DB_IN_SIMPLE_RECOVERY_MODE&quot;,
+         *                 &quot;result&quot;: &quot;WARNING&quot;
+         *             },
+         *             {
+         *                 &quot;item&quot;: &quot;SQL_SERVER_DB_NOT_ONLINE&quot;,
+         *                 &quot;result&quot;: &quot;PASSED&quot;
+         *             }
+         *         ]
+         *     }
+         * ]</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -198,7 +250,10 @@ public class QueryPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the precheck task was last updated.
+         * <p>The time when the precheck task was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1671084106</p>
          */
         public Builder updatedTime(Long updatedTime) {
             this.updatedTime = updatedTime;

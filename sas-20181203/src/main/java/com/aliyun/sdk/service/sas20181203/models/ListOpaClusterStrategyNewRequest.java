@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOpaClusterStrategyNewRequest} extends {@link RequestModel}
  *
  * <p>ListOpaClusterStrategyNewRequest</p>
@@ -109,7 +110,10 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,7 +122,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * The image names.
+         * <p>The image names.</p>
          */
         public Builder imageName(java.util.List < String > imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -127,7 +131,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * The tags that are added to the container.
+         * <p>The tags that are added to the container.</p>
          */
         public Builder label(java.util.List < String > label) {
             this.putQueryParameter("Label", label);
@@ -136,7 +140,10 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,7 +152,7 @@ public class ListOpaClusterStrategyNewRequest extends Request {
         }
 
         /**
-         * The rule names.
+         * <p>The rule names.</p>
          */
         public Builder strategyName(java.util.List < String > strategyName) {
             this.putQueryParameter("StrategyName", strategyName);

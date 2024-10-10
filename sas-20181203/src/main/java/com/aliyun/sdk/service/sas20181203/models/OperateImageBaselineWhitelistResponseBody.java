@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateImageBaselineWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>OperateImageBaselineWhitelistResponseBody</p>
@@ -37,7 +38,10 @@ public class OperateImageBaselineWhitelistResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75AD186B-B46A-56CC-BE35-987ADDF6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

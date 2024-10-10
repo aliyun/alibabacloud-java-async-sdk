@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaStrategyDetailNewRequest} extends {@link RequestModel}
  *
  * <p>GetOpaStrategyDetailNewRequest</p>
@@ -53,10 +54,13 @@ public class GetOpaStrategyDetailNewRequest extends Request {
         } 
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.
+         * <strong>example:</strong>
+         * <p>1349</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

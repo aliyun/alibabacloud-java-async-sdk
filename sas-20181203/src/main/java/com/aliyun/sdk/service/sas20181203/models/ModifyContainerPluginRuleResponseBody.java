@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyContainerPluginRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyContainerPluginRuleResponseBody</p>
@@ -49,7 +50,7 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The defense rule against container escapes.
+         * <p>The defense rule against container escapes.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyContainerPluginRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyContainerPluginRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -121,7 +131,10 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             private String switchId; 
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600640</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -129,7 +142,10 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test555</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -137,7 +153,10 @@ public class ModifyContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID.
+             * <p>The switch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER-CONTAINER-RULE-SWITCH-TYPE_xxx</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

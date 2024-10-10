@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAgentlessSensitiveFileByKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAgentlessSensitiveFileByKeyResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -81,7 +82,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FBBEB173-1F43-505F-A876-C03ECDF6CE4C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +93,7 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the sensitive files that are detected by using the agentless detection feature.
+         * <p>The information about the sensitive files that are detected by using the agentless detection feature.</p>
          */
         public Builder sensitiveFileList(java.util.List < SensitiveFileList> sensitiveFileList) {
             this.sensitiveFileList = sensitiveFileList;
@@ -97,11 +101,14 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -114,6 +121,12 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAgentlessSensitiveFileByKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAgentlessSensitiveFileByKeyResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -177,7 +190,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -185,7 +201,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -193,7 +212,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -201,7 +223,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -215,6 +240,12 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAgentlessSensitiveFileByKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAgentlessSensitiveFileByKeyResponseBody</p>
+     */
     public static class SensitiveFileList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FirstScanTime")
         private Long firstScanTime;
@@ -350,7 +381,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663321552000</p>
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -358,7 +392,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the asset.
+             * <p>The instance name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-server</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -366,7 +403,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the asset.
+             * <p>The public IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95.214.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -374,7 +414,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the asset.
+             * <p>The private IP address of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.68.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -382,7 +425,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1663691592000</p>
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -390,12 +436,15 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -403,7 +452,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the sensitive file.
+             * <p>The type of the sensitive file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pem</p>
              */
             public Builder sensitiveFileKey(String sensitiveFileKey) {
                 this.sensitiveFileKey = sensitiveFileKey;
@@ -411,12 +463,15 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the sensitive file. Valid values:
-             * <p>
+             * <p>The status of the sensitive file. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unhandled.</li>
+             * <li><strong>1</strong>: ignored.</li>
+             * <li><strong>2</strong>: false positive.</li>
+             * </ul>
              * 
-             * *   **0**: unhandled.
-             * *   **1**: ignored.
-             * *   **2**: false positive.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -424,7 +479,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SAS_Agentless_171869952****</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -432,7 +490,10 @@ public class DescribeAgentlessSensitiveFileByKeyResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
+             * <p>The UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73e6a851-e63b-49ef-9d7a-5542d765****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

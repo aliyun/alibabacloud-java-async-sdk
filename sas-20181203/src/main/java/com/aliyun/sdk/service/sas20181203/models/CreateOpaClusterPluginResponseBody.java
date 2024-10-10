@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOpaClusterPluginResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOpaClusterPluginResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The installation status of the components.
+         * <p>The installation status of the components.</p>
          */
         public Builder installStatus(java.util.List < InstallStatus> installStatus) {
             this.installStatus = installStatus;
@@ -57,7 +58,10 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0DC1F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateOpaClusterPluginResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateOpaClusterPluginResponseBody</p>
+     */
     public static class InstallStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -109,7 +119,10 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
             private Boolean installStatus; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c60b77fe62093480db6164a3c2fa****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -117,11 +130,14 @@ public class CreateOpaClusterPluginResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the component is installed. Valid values:
-             * <p>
+             * <p>Indicates whether the component is installed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder installStatus(Boolean installStatus) {
                 this.installStatus = installStatus;

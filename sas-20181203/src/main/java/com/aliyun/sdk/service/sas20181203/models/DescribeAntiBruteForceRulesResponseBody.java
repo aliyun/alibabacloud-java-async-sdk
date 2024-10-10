@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAntiBruteForceRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAntiBruteForceRulesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         private java.util.List < Rules> rules; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details of the defense rule.
+         * <p>An array that consists of the details of the defense rule.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -90,6 +94,12 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAntiBruteForceRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAntiBruteForceRulesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAntiBruteForceRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAntiBruteForceRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
@@ -326,7 +354,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             private java.util.List < String > uuidList; 
 
             /**
-             * The timestamp when the rule was created. Unit: milliseconds.
+             * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669800181000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -334,13 +365,17 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the defense rule is the default rule. Valid values:
-             * <p>
+             * <p>Indicates whether the defense rule is the default rule. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The defense rule is the default rule.</li>
+             * <li><strong>false</strong>: The defense rule is not the default rule.</li>
+             * </ul>
+             * <blockquote>
+             * <p>The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.</p>
+             * </blockquote>
              * 
-             * *   **true**: The defense rule is the default rule.
-             * *   **false**: The defense rule is not the default rule.
-             * 
-             * > The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultRule(Boolean defaultRule) {
                 this.defaultRule = defaultRule;
@@ -348,7 +383,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableSmartRule(Boolean enableSmartRule) {
                 this.enableSmartRule = enableSmartRule;
@@ -356,7 +394,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold of logon failures that is specified in the defense rule.
+             * <p>The threshold of logon failures that is specified in the defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -364,7 +405,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time during which logons from an account are not allowed. Unit: minutes.
+             * <p>The period of time during which logons from an account are not allowed. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>360</p>
              */
             public Builder forbiddenTime(Integer forbiddenTime) {
                 this.forbiddenTime = forbiddenTime;
@@ -372,7 +416,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the defense rule.
+             * <p>The ID of the defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1629</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -380,7 +427,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers to which the defense rule is applied.
+             * <p>The number of servers to which the defense rule is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder machineCount(Integer machineCount) {
                 this.machineCount = machineCount;
@@ -388,7 +438,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the defense rule.
+             * <p>The name of the defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AntiBruteForceRule01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -396,7 +449,10 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.
+             * <p>The period of time during which logon failures from an account are measured. Unit: minutes. If <strong>Span</strong> is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder span(Integer span) {
                 this.span = span;
@@ -404,7 +460,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the UUIDs of servers to which the defense rule is applied.
+             * <p>An array consisting of the UUIDs of servers to which the defense rule is applied.</p>
              */
             public Builder uuidList(java.util.List < String > uuidList) {
                 this.uuidList = uuidList;

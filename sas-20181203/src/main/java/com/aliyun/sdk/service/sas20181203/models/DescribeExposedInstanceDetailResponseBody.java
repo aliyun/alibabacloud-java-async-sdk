@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExposedInstanceDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExposedInstanceDetailResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The exposure details about the server.
+         * <p>The exposure details about the server.</p>
          */
         public Builder exposedChains(java.util.List < ExposedChains> exposedChains) {
             this.exposedChains = exposedChains;
@@ -57,7 +58,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C590482B-54A7-4273-8115-9DBE2DE46B26</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExposedInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedInstanceDetailResponseBody</p>
+     */
     public static class AllVulList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -145,7 +155,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RHSA-2022:0274-Important: polkit pkexec Local Privilege Escalation Vulnerability(CVE-2021-4034)</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -153,7 +166,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SCA:ACSV-2020-052801</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -161,14 +177,18 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The priority to fix the vulnerability. Valid values:
-             * <p>
+             * <p>The priority to fix the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>asap</strong>: high</li>
+             * <li><strong>later</strong>: medium</li>
+             * <li><strong>nntf</strong>: low</li>
+             * </ul>
+             * <blockquote>
+             * <p> We recommend that you fix the vulnerabilities that have the <strong>high</strong> priority at the earliest opportunity.</p>
+             * </blockquote>
              * 
-             * *   **asap**: high
-             * *   **later**: medium
-             * *   **nntf**: low
-             * 
-             * >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
+             * <strong>example:</strong>
+             * <p>asap</p>
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -176,15 +196,18 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: Linux software vulnerabilities</li>
+             * <li><strong>sys</strong>: Windows system vulnerabilities</li>
+             * <li><strong>cms</strong>: Web-CMS vulnerabilities</li>
+             * <li><strong>app</strong>: application vulnerabilities</li>
+             * <li><strong>emg</strong>: urgent vulnerabilities</li>
+             * <li><strong>sca</strong>: middleware vulnerabilities</li>
+             * </ul>
              * 
-             * *   **cve**: Linux software vulnerabilities
-             * *   **sys**: Windows system vulnerabilities
-             * *   **cms**: Web-CMS vulnerabilities
-             * *   **app**: application vulnerabilities
-             * *   **emg**: urgent vulnerabilities
-             * *   **sca**: middleware vulnerabilities
+             * <strong>example:</strong>
+             * <p>sca</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -192,7 +215,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4f9ce097-4a7d-48fe-baef-6960e5b6****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -206,6 +232,219 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExposedInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedInstanceDetailResponseBody</p>
+     */
+    public static class CspmRiskList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetSubType")
+        private Integer assetSubType;
+
+        @com.aliyun.core.annotation.NameInMap("AssetSubTypeName")
+        private String assetSubTypeName;
+
+        @com.aliyun.core.annotation.NameInMap("AssetType")
+        private Integer assetType;
+
+        @com.aliyun.core.annotation.NameInMap("AssetTypeName")
+        private String assetTypeName;
+
+        @com.aliyun.core.annotation.NameInMap("CheckName")
+        private String checkName;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
+        @com.aliyun.core.annotation.NameInMap("Vendor")
+        private Integer vendor;
+
+        private CspmRiskList(Builder builder) {
+            this.assetSubType = builder.assetSubType;
+            this.assetSubTypeName = builder.assetSubTypeName;
+            this.assetType = builder.assetType;
+            this.assetTypeName = builder.assetTypeName;
+            this.checkName = builder.checkName;
+            this.instanceId = builder.instanceId;
+            this.regionId = builder.regionId;
+            this.riskLevel = builder.riskLevel;
+            this.vendor = builder.vendor;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CspmRiskList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assetSubType
+         */
+        public Integer getAssetSubType() {
+            return this.assetSubType;
+        }
+
+        /**
+         * @return assetSubTypeName
+         */
+        public String getAssetSubTypeName() {
+            return this.assetSubTypeName;
+        }
+
+        /**
+         * @return assetType
+         */
+        public Integer getAssetType() {
+            return this.assetType;
+        }
+
+        /**
+         * @return assetTypeName
+         */
+        public String getAssetTypeName() {
+            return this.assetTypeName;
+        }
+
+        /**
+         * @return checkName
+         */
+        public String getCheckName() {
+            return this.checkName;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
+         * @return vendor
+         */
+        public Integer getVendor() {
+            return this.vendor;
+        }
+
+        public static final class Builder {
+            private Integer assetSubType; 
+            private String assetSubTypeName; 
+            private Integer assetType; 
+            private String assetTypeName; 
+            private String checkName; 
+            private String instanceId; 
+            private String regionId; 
+            private String riskLevel; 
+            private Integer vendor; 
+
+            /**
+             * AssetSubType.
+             */
+            public Builder assetSubType(Integer assetSubType) {
+                this.assetSubType = assetSubType;
+                return this;
+            }
+
+            /**
+             * AssetSubTypeName.
+             */
+            public Builder assetSubTypeName(String assetSubTypeName) {
+                this.assetSubTypeName = assetSubTypeName;
+                return this;
+            }
+
+            /**
+             * AssetType.
+             */
+            public Builder assetType(Integer assetType) {
+                this.assetType = assetType;
+                return this;
+            }
+
+            /**
+             * AssetTypeName.
+             */
+            public Builder assetTypeName(String assetTypeName) {
+                this.assetTypeName = assetTypeName;
+                return this;
+            }
+
+            /**
+             * CheckName.
+             */
+            public Builder checkName(String checkName) {
+                this.checkName = checkName;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * Vendor.
+             */
+            public Builder vendor(Integer vendor) {
+                this.vendor = vendor;
+                return this;
+            }
+
+            public CspmRiskList build() {
+                return new CspmRiskList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeExposedInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedInstanceDetailResponseBody</p>
+     */
     public static class RealVulList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -281,7 +520,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RHSA-2022:0274-Important: polkit pkexec Local Privilege Escalation Vulnerability(CVE-2021-4034)</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -289,7 +531,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SCA:ACSV-2020-052801</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -297,14 +542,18 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The priority to fix the vulnerability. Valid values:
-             * <p>
+             * <p>The priority to fix the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>asap</strong>: high</li>
+             * <li><strong>later</strong>: medium</li>
+             * <li><strong>nntf</strong>: low</li>
+             * </ul>
+             * <blockquote>
+             * <p> We recommend that you fix the vulnerabilities that have the <strong>high</strong> priority at the earliest opportunity.</p>
+             * </blockquote>
              * 
-             * *   **asap**: high
-             * *   **later**: medium
-             * *   **nntf**: low
-             * 
-             * >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
+             * <strong>example:</strong>
+             * <p>asap</p>
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -312,15 +561,18 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: Linux software vulnerabilities</li>
+             * <li><strong>sys</strong>: Windows system vulnerabilities</li>
+             * <li><strong>cms</strong>: Web-CMS vulnerabilities</li>
+             * <li><strong>app</strong>: application vulnerabilities</li>
+             * <li><strong>emg</strong>: urgent vulnerabilities</li>
+             * <li><strong>sca</strong>: middleware vulnerabilities</li>
+             * </ul>
              * 
-             * *   **cve**: Linux software vulnerabilities
-             * *   **sys**: Windows system vulnerabilities
-             * *   **cms**: Web-CMS vulnerabilities
-             * *   **app**: application vulnerabilities
-             * *   **emg**: urgent vulnerabilities
-             * *   **sca**: middleware vulnerabilities
+             * <strong>example:</strong>
+             * <p>sca</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -328,7 +580,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4f9ce097-4a7d-48fe-baef-6960e5b6****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -342,9 +597,18 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExposedInstanceDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedInstanceDetailResponseBody</p>
+     */
     public static class ExposedChains extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllVulList")
         private java.util.List < AllVulList> allVulList;
+
+        @com.aliyun.core.annotation.NameInMap("CspmRiskList")
+        private java.util.List < CspmRiskList> cspmRiskList;
 
         @com.aliyun.core.annotation.NameInMap("ExposureComponent")
         private String exposureComponent;
@@ -387,6 +651,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
         private ExposedChains(Builder builder) {
             this.allVulList = builder.allVulList;
+            this.cspmRiskList = builder.cspmRiskList;
             this.exposureComponent = builder.exposureComponent;
             this.exposureIp = builder.exposureIp;
             this.exposurePort = builder.exposurePort;
@@ -415,6 +680,13 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
          */
         public java.util.List < AllVulList> getAllVulList() {
             return this.allVulList;
+        }
+
+        /**
+         * @return cspmRiskList
+         */
+        public java.util.List < CspmRiskList> getCspmRiskList() {
+            return this.cspmRiskList;
         }
 
         /**
@@ -510,6 +782,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < AllVulList> allVulList; 
+            private java.util.List < CspmRiskList> cspmRiskList; 
             private String exposureComponent; 
             private String exposureIp; 
             private String exposurePort; 
@@ -525,7 +798,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The information about all vulnerabilities on the server.
+             * <p>The information about all vulnerabilities on the server.</p>
              */
             public Builder allVulList(java.util.List < AllVulList> allVulList) {
                 this.allVulList = allVulList;
@@ -533,7 +806,18 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The server component that is exposed on the Internet.
+             * CspmRiskList.
+             */
+            public Builder cspmRiskList(java.util.List < CspmRiskList> cspmRiskList) {
+                this.cspmRiskList = cspmRiskList;
+                return this;
+            }
+
+            /**
+             * <p>The server component that is exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openssl,openssh</p>
              */
             public Builder exposureComponent(String exposureComponent) {
                 this.exposureComponent = exposureComponent;
@@ -541,7 +825,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.99.XX.XX</p>
              */
             public Builder exposureIp(String exposureIp) {
                 this.exposureIp = exposureIp;
@@ -549,7 +836,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is exposed on the Internet.
+             * <p>The port that is exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder exposurePort(String exposurePort) {
                 this.exposurePort = exposurePort;
@@ -557,13 +847,16 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The resource from which the server is exposed. Valid values:
-             * <p>
+             * <p>The resource from which the server is exposed. Valid values:</p>
+             * <ul>
+             * <li><strong>INTERNET_IP</strong>: the public IP address of an Elastic Compute Service (ECS) instance</li>
+             * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance</li>
+             * <li><strong>EIP</strong>: an elastic IP address (EIP)</li>
+             * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the DNAT feature</li>
+             * </ul>
              * 
-             * *   **INTERNET_IP**: the public IP address of an Elastic Compute Service (ECS) instance
-             * *   **SLB**: the public IP address of a Server Load Balancer (SLB) instance
-             * *   **EIP**: an elastic IP address (EIP)
-             * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
+             * <strong>example:</strong>
+             * <p>INTERNET_IP</p>
              */
             public Builder exposureType(String exposureType) {
                 this.exposureType = exposureType;
@@ -571,13 +864,16 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.
-             * <p>
+             * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.</p>
+             * <ul>
+             * <li>If the value of the ExposureType parameter is <strong>INTERNET_IP</strong>, the value of this parameter is an empty string.</li>
+             * <li>If the value of the ExposureType parameter is <strong>SLB</strong>, the value of this parameter is the ID of the Internet-facing SLB instance.</li>
+             * <li>If the value of the ExposureType parameter is <strong>EIP</strong>, the value of this parameter is the ID of the EIP.</li>
+             * <li>If the value of the ExposureType parameter is <strong>DNAT</strong>, the value of this parameter is the ID of the NAT gateway.</li>
+             * </ul>
              * 
-             * *   If the value of the ExposureType parameter is **INTERNET_IP**, the value of this parameter is an empty string.
-             * *   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.
-             * *   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.
-             * *   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.
+             * <strong>example:</strong>
+             * <p>eip-bp1bkgowzam49rld3****</p>
              */
             public Builder exposureTypeId(String exposureTypeId) {
                 this.exposureTypeId = exposureTypeId;
@@ -585,7 +881,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The server group to which the server belongs.
+             * <p>The server group to which the server belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-bp1iw5enua6gf5i2xr7z</p>
              */
             public Builder groupNo(String groupNo) {
                 this.groupNo = groupNo;
@@ -593,7 +892,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp116qem8npvchqc****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -601,7 +903,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>worker-k8s-for-cs-c929ee2a145214f89a8b248005be5****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -609,7 +914,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.99.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -617,7 +925,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -625,7 +936,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+             * <p>The information about the vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
              */
             public Builder realVulList(java.util.List < RealVulList> realVulList) {
                 this.realVulList = realVulList;
@@ -633,10 +944,13 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the server resides.
-             * <p>
+             * <p>The region in which the server resides.</p>
+             * <blockquote>
+             * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+             * </blockquote>
              * 
-             * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -644,7 +958,10 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4f9ce097-4a7d-48fe-baef-6960e5b6****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

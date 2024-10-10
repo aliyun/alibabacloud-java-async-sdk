@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupPolicyRequest</p>
@@ -54,10 +55,14 @@ public class DescribeBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the anti-ransomware policy.
-         * <p>
+         * <p>The ID of the anti-ransomware policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
+         * <strong>example:</strong>
+         * <p>51880</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

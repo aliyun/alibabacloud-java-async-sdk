@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSimilarSecurityEventsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSimilarSecurityEventsRequest</p>
@@ -124,7 +125,10 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,11 +137,14 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -146,7 +153,10 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -164,7 +174,10 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -173,7 +186,11 @@ public class DescribeSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * The task ID. You can call the [CreateSimilarSecurityEventsQueryTask](~~CreateSimilarSecurityEventsQueryTask~~) operation to obtain the task ID.
+         * <p>The task ID. You can call the <a href="~~CreateSimilarSecurityEventsQueryTask~~">CreateSimilarSecurityEventsQueryTask</a> operation to obtain the task ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1689135</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

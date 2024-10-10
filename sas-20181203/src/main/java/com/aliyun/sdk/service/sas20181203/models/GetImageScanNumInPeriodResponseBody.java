@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageScanNumInPeriodResponseBody} extends {@link TeaModel}
  *
  * <p>GetImageScanNumInPeriodResponseBody</p>
@@ -49,7 +50,7 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder imageScanData(ImageScanData imageScanData) {
             this.imageScanData = imageScanData;
@@ -57,7 +58,10 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetImageScanNumInPeriodResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageScanNumInPeriodResponseBody</p>
+     */
     public static class ImageScanData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageScanCount")
         private Integer imageScanCount;
@@ -97,7 +107,10 @@ public class GetImageScanNumInPeriodResponseBody extends TeaModel {
             private Integer imageScanCount; 
 
             /**
-             * The number of image scans.
+             * <p>The number of image scans.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>150</p>
              */
             public Builder imageScanCount(Integer imageScanCount) {
                 this.imageScanCount = imageScanCount;

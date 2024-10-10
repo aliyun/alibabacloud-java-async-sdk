@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckStructureRequest} extends {@link RequestModel}
  *
  * <p>GetCheckStructureRequest</p>
@@ -95,7 +96,10 @@ public class GetCheckStructureRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -104,11 +108,14 @@ public class GetCheckStructureRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +124,10 @@ public class GetCheckStructureRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -126,11 +136,14 @@ public class GetCheckStructureRequest extends Request {
         }
 
         /**
-         * The region ID of the asset. Valid values:
-         * <p>
+         * <p>The region ID of the asset. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: China.</li>
+         * <li>ap-southeast-1: outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: China.
-         * *   ap-southeast-1: outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

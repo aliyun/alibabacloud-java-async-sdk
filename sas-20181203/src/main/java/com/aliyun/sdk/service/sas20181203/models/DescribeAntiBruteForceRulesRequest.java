@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAntiBruteForceRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeAntiBruteForceRulesRequest</p>
@@ -123,7 +124,10 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -132,10 +136,13 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * The ID of the defense rule.
-         * <p>
+         * <p>The ID of the defense rule.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> operation to query the IDs of defense rules.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAntiBruteForceRules](~~DescribeAntiBruteForceRules~~) operation to query the IDs of defense rules.
+         * <strong>example:</strong>
+         * <p>1141****</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -144,7 +151,10 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -153,7 +163,10 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +184,10 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.69.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebPathRequest} extends {@link RequestModel}
  *
  * <p>ModifyWebPathRequest</p>
@@ -81,11 +82,17 @@ public class ModifyWebPathRequest extends Request {
         } 
 
         /**
-         * The configuration of the web directory. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The configuration of the web directory. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><strong>webPathType</strong>: the type of the web directory</li>
+         * <li><strong>webPath</strong>: the web directory</li>
+         * </ul>
          * 
-         * *   **webPathType**: the type of the web directory
-         * *   **webPath**: the web directory
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;webPathType&quot;: &quot;customize&quot;,
+         *       &quot;webPath&quot;: &quot;/root/www****&quot;
+         * }</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -94,12 +101,15 @@ public class ModifyWebPathRequest extends Request {
         }
 
         /**
-         * The protected asset to which the web directory belongs. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The protected asset to which the web directory belongs. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><strong>target</strong>: the protected asset.</li>
+         * <li><strong>targetType</strong>: the type of the asset. Set the value to uuid.</li>
+         * <li><strong>flag</strong>: the type of the operation.</li>
+         * </ul>
          * 
-         * *   **target**: the protected asset.
-         * *   **targetType**: the type of the asset. Set the value to uuid.
-         * *   **flag**: the type of the operation.
+         * <strong>example:</strong>
+         * <p>[{&quot;target&quot;:&quot;0186127a-d33e-4d0c-94fb-8f25f87bc69f&quot;,&quot;targetType&quot;:&quot;uuid&quot;,&quot;flag&quot;:&quot;add&quot;}]</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -108,7 +118,10 @@ public class ModifyWebPathRequest extends Request {
         }
 
         /**
-         * The type of the configuration item. Set the value to **web_path**.
+         * <p>The type of the configuration item. Set the value to <strong>web_path</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web_path</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

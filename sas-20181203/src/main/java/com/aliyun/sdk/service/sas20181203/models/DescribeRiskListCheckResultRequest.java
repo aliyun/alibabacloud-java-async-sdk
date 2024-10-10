@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskListCheckResultRequest} extends {@link RequestModel}
  *
  * <p>DescribeRiskListCheckResultRequest</p>
@@ -123,7 +124,10 @@ public class DescribeRiskListCheckResultRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -132,10 +136,10 @@ public class DescribeRiskListCheckResultRequest extends Request {
         }
 
         /**
-         * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
-         * <p>
-         * 
-         * > If you do not specify this parameter, an empty list is returned.
+         * <p>The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, an empty list is returned.</p>
+         * </blockquote>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -144,11 +148,14 @@ public class DescribeRiskListCheckResultRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -157,7 +164,10 @@ public class DescribeRiskListCheckResultRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +185,10 @@ public class DescribeRiskListCheckResultRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59.57.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckWarningsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCheckWarningsRequest</p>
@@ -194,7 +195,10 @@ public class DescribeCheckWarningsRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
+         * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2546</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -203,17 +207,20 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The type of the check item. Valid values:
-         * <p>
+         * <p>The type of the check item. Valid values:</p>
+         * <ul>
+         * <li><strong>hc.check.type.identity_auth</strong>: identity authentication</li>
+         * <li><strong>hc.check.type.access_control</strong>: access control</li>
+         * <li><strong>hc.check.type.network_service</strong>: network and service</li>
+         * <li><strong>hc.check.type.service_conf</strong>: service configuration</li>
+         * <li><strong>hc.check.type.file_rights</strong>: file permission</li>
+         * <li><strong>hc.check.type.security_audit</strong>: security audit</li>
+         * <li><strong>hc.check.type.attack_defense</strong>: intrusion prevention</li>
+         * <li><strong>hc.check.type.others</strong>: others</li>
+         * </ul>
          * 
-         * *   **hc.check.type.identity_auth**: identity authentication
-         * *   **hc.check.type.access_control**: access control
-         * *   **hc.check.type.network_service**: network and service
-         * *   **hc.check.type.service_conf**: service configuration
-         * *   **hc.check.type.file_rights**: file permission
-         * *   **hc.check.type.security_audit**: security audit
-         * *   **hc.check.type.attack_defense**: intrusion prevention
-         * *   **hc.check.type.others**: others
+         * <strong>example:</strong>
+         * <p>hc.check.type.attack_defense</p>
          */
         public Builder checkType(String checkType) {
             this.putQueryParameter("CheckType", checkType);
@@ -222,7 +229,10 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The name of the container.
+         * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/redis</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -231,7 +241,10 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -240,11 +253,14 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -253,7 +269,10 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -262,10 +281,13 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> To obtain the Alibaba Cloud account ID, call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation.</p>
+         * </blockquote>
          * 
-         * >  To obtain the Alibaba Cloud account ID, call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation.
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -274,10 +296,13 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The ID of the risk item. This parameter is required.
-         * <p>
+         * <p>The ID of the risk item. This parameter is required.</p>
+         * <blockquote>
+         * <p> To query the information about the risk items and check items of a server, you must specify the IDs of the risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
+         * </blockquote>
          * 
-         * >  To query the information about the risk items and check items of a server, you must specify the IDs of the risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.
+         * <strong>example:</strong>
+         * <p>10354</p>
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -286,14 +311,17 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The status of the check item. Valid values:
-         * <p>
+         * <p>The status of the check item. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: failed</li>
+         * <li><strong>2</strong>: verifying</li>
+         * <li><strong>3</strong>: passed</li>
+         * <li><strong>5</strong>: expired</li>
+         * <li><strong>6</strong>: ignored</li>
+         * </ul>
          * 
-         * *   **1**: failed
-         * *   **2**: verifying
-         * *   **3**: passed
-         * *   **5**: expired
-         * *   **6**: ignored
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskStatus(Integer riskStatus) {
             this.putQueryParameter("RiskStatus", riskStatus);
@@ -302,7 +330,10 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -311,10 +342,14 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The UUID of the server on which the baseline check is performed.
-         * <p>
+         * <p>The UUID of the server on which the baseline check is performed.</p>
+         * <blockquote>
+         * <p>To query specified risk items and the check items of a specified server, you must provide the ID of the server on which the baseline check is performed. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to query the IDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > To query specified risk items and the check items of a specified server, you must provide the ID of the server on which the baseline check is performed. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the IDs of servers.
+         * <strong>example:</strong>
+         * <p>d42f938c-d962-48a0-90f9-05****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

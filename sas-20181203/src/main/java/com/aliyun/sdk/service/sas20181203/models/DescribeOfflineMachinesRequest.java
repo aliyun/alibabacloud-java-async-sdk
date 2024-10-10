@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeOfflineMachinesRequest} extends {@link RequestModel}
  *
  * <p>DescribeOfflineMachinesRequest</p>
@@ -151,7 +152,10 @@ public class DescribeOfflineMachinesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -160,10 +164,13 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The operating system of the server.
-         * <p>
+         * <p>The operating system of the server.</p>
+         * <blockquote>
+         * <p> The value of this parameter is the value of the Values parameter that is returned by calling the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation. If the value of the <strong>Name</strong> parameter in the response is <strong>osType</strong>, the value of the <strong>Values</strong> parameter indicates an operating system.</p>
+         * </blockquote>
          * 
-         * >  The value of this parameter is the value of the Values parameter that is returned by calling the [DescribeCriteria](~~DescribeCriteria~~) operation. If the value of the **Name** parameter in the response is **osType**, the value of the **Values** parameter indicates an operating system.
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder os(String os) {
             this.putQueryParameter("Os", os);
@@ -172,7 +179,10 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **5**.
+         * <p>The number of entries to return on each page. Default value: <strong>5</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -181,10 +191,13 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The region in which the server resides.
-         * <p>
+         * <p>The region in which the server resides.</p>
+         * <blockquote>
+         * <p> The value of this parameter is the value of the Values parameter that is returned by calling the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation. If the value of the <strong>Name</strong> parameter in the response is <strong>regionId</strong>, the value of the <strong>Values</strong> parameter indicates a region ID.</p>
+         * </blockquote>
          * 
-         * >  The value of this parameter is the value of the Values parameter that is returned by calling the [DescribeCriteria](~~DescribeCriteria~~) operation. If the value of the **Name** parameter in the response is **regionId**, the value of the **Values** parameter indicates a region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionIdStr(String regionIdStr) {
             this.putQueryParameter("RegionIdStr", regionIdStr);
@@ -193,10 +206,13 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The region in which the server resides.
-         * <p>
+         * <p>The region in which the server resides.</p>
+         * <blockquote>
+         * <p> The value of this parameter is the value of the Values parameter that is returned by calling the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation. If the value of the <strong>Name</strong> parameter in the response is <strong>regionId</strong>, the value of the <strong>Values</strong> parameter indicates a region ID.</p>
+         * </blockquote>
          * 
-         * >  The value of this parameter is the value of the Values parameter that is returned by calling the [DescribeCriteria](~~DescribeCriteria~~) operation. If the value of the **Name** parameter in the response is **regionId**, the value of the **Values** parameter indicates a region ID.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -205,7 +221,10 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The information about the server that you want to query. The value can be the name or the public IP address of the server.
+         * <p>The information about the server that you want to query. The value can be the name or the public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -214,7 +233,10 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180.113.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -223,14 +245,17 @@ public class DescribeOfflineMachinesRequest extends Request {
         }
 
         /**
-         * The source of the server. Valid values:
-         * <p>
+         * <p>The source of the server. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
+         * <li><strong>1</strong>: a third-party cloud server</li>
+         * <li><strong>2</strong>: a server in a data center</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+         * <li><strong>8</strong>: a lightweight asset</li>
+         * </ul>
          * 
-         * *   **0**: an asset provided by Alibaba Cloud.
-         * *   **1**: a third-party cloud server
-         * *   **2**: a server in a data center
-         * *   **3**, **4**, **5**, and **7**: other cloud asset
-         * *   **8**: a lightweight asset
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vendor(Integer vendor) {
             this.putQueryParameter("Vendor", vendor);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClientUserDefineRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListClientUserDefineRulesResponseBody</p>
@@ -61,7 +62,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         private java.util.List < UserDefineRuleList> userDefineRuleList; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the rules.
+         * <p>An array that consists of the rules.</p>
          */
         public Builder userDefineRuleList(java.util.List < UserDefineRuleList> userDefineRuleList) {
             this.userDefineRuleList = userDefineRuleList;
@@ -90,6 +94,12 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClientUserDefineRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClientUserDefineRulesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -141,7 +151,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -149,7 +162,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -157,7 +173,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -171,6 +190,12 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClientUserDefineRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClientUserDefineRulesResponseBody</p>
+     */
     public static class UserDefineRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionType")
         private Integer actionType;
@@ -258,11 +283,14 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The action of the rule. Valid values:
-             * <p>
+             * <p>The action of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: allow</li>
+             * <li><strong>1</strong>: block</li>
+             * </ul>
              * 
-             * *   **0**: allow
-             * *   **1**: block
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder actionType(Integer actionType) {
                 this.actionType = actionType;
@@ -270,7 +298,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200****</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -278,7 +309,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Rule****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -286,12 +320,15 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
-             * <p>
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux</li>
+             * <li><strong>all</strong>: all types</li>
+             * </ul>
              * 
-             * *   **windows**: Windows
-             * *   **linux**: Linux
-             * *   **all**: all types
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -299,7 +336,10 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID of the rule.
+             * <p>The switch ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER-DEFINE-RULE-SWITCH-TYPE_200****</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -307,16 +347,19 @@ public class ListClientUserDefineRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Process hash</li>
+             * <li><strong>2</strong>: Command line</li>
+             * <li><strong>3</strong>: Process Network</li>
+             * <li><strong>4</strong>: File Read and Write</li>
+             * <li><strong>5</strong>: Operation on Registry</li>
+             * <li><strong>6</strong>: Dynamic-link Library Loading</li>
+             * <li><strong>7</strong>: File Renaming</li>
+             * </ul>
              * 
-             * *   **1**: Process hash
-             * *   **2**: Command line
-             * *   **3**: Process Network
-             * *   **4**: File Read and Write
-             * *   **5**: Operation on Registry
-             * *   **6**: Dynamic-link Library Loading
-             * *   **7**: File Renaming
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

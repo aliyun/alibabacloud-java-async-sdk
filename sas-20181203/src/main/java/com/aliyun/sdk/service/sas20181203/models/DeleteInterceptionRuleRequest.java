@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInterceptionRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteInterceptionRuleRequest</p>
@@ -68,10 +69,14 @@ public class DeleteInterceptionRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to query.
-         * <p>
+         * <p>The ID of the cluster that you want to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>cdf629147cc3747d292a3f587xxxxxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -80,7 +85,7 @@ public class DeleteInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The IDs of the rules that you want to delete.
+         * <p>The IDs of the rules that you want to delete.</p>
          */
         public Builder ruleIds(java.util.List < Long > ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebLockStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyWebLockStatusRequest</p>
@@ -97,11 +98,14 @@ public class ModifyWebLockStatusRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -110,7 +114,10 @@ public class ModifyWebLockStatusRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125.71.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -119,13 +126,18 @@ public class ModifyWebLockStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable web tamper proofing for the specified server. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable web tamper proofing for the specified server. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enables web tamper proofing</li>
+         * <li><strong>off</strong>: disables web tamper proofing</li>
+         * </ul>
+         * <blockquote>
+         * <p>After you disable web tamper proofing for the specified server, one quota is released.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: enables web tamper proofing
-         * *   **off**: disables web tamper proofing
-         * 
-         * > After you disable web tamper proofing for the specified server, one quota is released.
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -134,7 +146,11 @@ public class ModifyWebLockStatusRequest extends Request {
         }
 
         /**
-         * The UUID of the server for which you want to enable or disable web tamper proofing. You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <p>The UUID of the server for which you want to enable or disable web tamper proofing. You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet-1234567****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

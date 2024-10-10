@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageScanAuthorizationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageScanAuthorizationResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The authorization status of image scans.
+         * <p>The authorization status of image scans.</p>
          */
         public Builder authStatus(AuthStatus authStatus) {
             this.authStatus = authStatus;
@@ -57,7 +58,10 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>340D7FC4-D575-1661-8ACD-CFA7BE57****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageScanAuthorizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageScanAuthorizationResponseBody</p>
+     */
     public static class AuthStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
@@ -97,10 +107,14 @@ public class DescribeImageScanAuthorizationResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * Indicates whether Security Center is authorized to scan images. Valid values:
-             * <p>
-             * * **true**: yes 
-             * * **false**: no
+             * <p>Indicates whether Security Center is authorized to scan images. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes </li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

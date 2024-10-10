@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterSuspEventStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterSuspEventStatisticsResponseBody</p>
@@ -49,7 +50,10 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
         private SuspStatistics suspStatistics; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACF97412-FD09-4D1F-994F-34DF12BR****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of alerts by risk level.
+         * <p>The number of alerts by risk level.</p>
          */
         public Builder suspStatistics(SuspStatistics suspStatistics) {
             this.suspStatistics = suspStatistics;
@@ -70,6 +74,12 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterSuspEventStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterSuspEventStatisticsResponseBody</p>
+     */
     public static class SuspStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remind")
         private Integer remind;
@@ -121,7 +131,10 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             private Integer suspicious; 
 
             /**
-             * The number of alerts whose Emergency level is Reminder.
+             * <p>The number of alerts whose Emergency level is Reminder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder remind(Integer remind) {
                 this.remind = remind;
@@ -129,7 +142,10 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts whose Emergency level is Urgent.
+             * <p>The number of alerts whose Emergency level is Urgent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serious(Integer serious) {
                 this.serious = serious;
@@ -137,7 +153,10 @@ public class GetClusterSuspEventStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts whose Emergency level is Suspicious.
+             * <p>The number of alerts whose Emergency level is Suspicious.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder suspicious(Integer suspicious) {
                 this.suspicious = suspicious;

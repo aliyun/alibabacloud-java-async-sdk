@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryJenkinsImageRegistryPersistenceDayResponseBody} extends {@link TeaModel}
  *
  * <p>QueryJenkinsImageRegistryPersistenceDayResponseBody</p>
@@ -73,7 +74,10 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         private Long timeCost; 
 
         /**
-         * The retention period. Unit: days.
+         * <p>The retention period. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -81,7 +85,10 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +96,10 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA4AC8B7-0C18-5BC1-9DA4-798B3BE4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +107,10 @@ public class QueryJenkinsImageRegistryPersistenceDayResponseBody extends TeaMode
         }
 
         /**
-         * The time consumed. Unit: seconds.
+         * <p>The time consumed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

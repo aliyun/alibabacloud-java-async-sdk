@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeAssetRefreshTaskConfigRequest} extends {@link RequestModel}
  *
  * <p>ChangeAssetRefreshTaskConfigRequest</p>
@@ -67,7 +68,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
         } 
 
         /**
-         * The asset synchronization configuration.
+         * <p>The asset synchronization configuration.</p>
          */
         public Builder assetRefreshConfigs(java.util.List < AssetRefreshConfigs> assetRefreshConfigs) {
             this.putQueryParameter("AssetRefreshConfigs", assetRefreshConfigs);
@@ -76,7 +77,10 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
         }
 
         /**
-         * The region in which your Security Center service resides.
+         * <p>The region in which your Security Center service resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -91,6 +95,12 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeAssetRefreshTaskConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeAssetRefreshTaskConfigRequest</p>
+     */
     public static class AssetRefreshConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RefreshConfigType")
         private Integer refreshConfigType;
@@ -166,12 +176,15 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             private Integer vendor; 
 
             /**
-             * The type of the configuration. Valid values:
-             * <p>
+             * <p>The type of the configuration. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: server synchronization task</li>
+             * <li><strong>1</strong>: cloud service synchronization task</li>
+             * <li><strong>2</strong>: scheduled AccessKey pair verification task</li>
+             * </ul>
              * 
-             * *   **0**: server synchronization task
-             * *   **1**: cloud service synchronization task
-             * *   **2**: scheduled AccessKey pair verification task
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder refreshConfigType(Integer refreshConfigType) {
                 this.refreshConfigType = refreshConfigType;
@@ -179,15 +192,18 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             }
 
             /**
-             * The synchronization cycle. Valid values:
-             * <p>
+             * <p>The synchronization cycle. Valid values:</p>
+             * <ul>
+             * <li><strong>60</strong>: 60 minutes</li>
+             * <li><strong>180</strong>: 3 hours</li>
+             * <li><strong>360</strong>: 6 hours</li>
+             * <li><strong>720</strong>: 12 hours</li>
+             * <li><strong>1440</strong>: 1 day</li>
+             * <li><strong>10080</strong>: 7 days</li>
+             * </ul>
              * 
-             * *   **60**: 60 minutes
-             * *   **180**: 3 hours
-             * *   **360**: 6 hours
-             * *   **720**: 12 hours
-             * *   **1440**: 1 day
-             * *   **10080**: 7 days
+             * <strong>example:</strong>
+             * <p>360</p>
              */
             public Builder schedulePeriod(Integer schedulePeriod) {
                 this.schedulePeriod = schedulePeriod;
@@ -195,11 +211,14 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             }
 
             /**
-             * The status of the configuration. Valid values:
-             * <p>
+             * <p>The status of the configuration. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: enabled</li>
+             * <li><strong>0</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **1**: enabled
-             * *   **0**: disabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -207,7 +226,10 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             }
 
             /**
-             * The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.
+             * <p>The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2308</p>
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -215,12 +237,15 @@ public class ChangeAssetRefreshTaskConfigRequest extends Request {
             }
 
             /**
-             * The service provider of the cloud asset. Valid values:
-             * <p>
+             * <p>The service provider of the cloud asset. Valid values:</p>
+             * <ul>
+             * <li><strong>3</strong>: Tencent Cloud</li>
+             * <li><strong>4</strong>: Huawei Cloud</li>
+             * <li><strong>7</strong>: Amazon Web Services (AWS) Cloud</li>
+             * </ul>
              * 
-             * *   **3**: Tencent Cloud
-             * *   **4**: Huawei Cloud
-             * *   **7**: Amazon Web Services (AWS) Cloud
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;

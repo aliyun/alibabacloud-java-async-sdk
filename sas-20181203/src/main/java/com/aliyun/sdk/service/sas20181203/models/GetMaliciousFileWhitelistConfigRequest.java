@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMaliciousFileWhitelistConfigRequest} extends {@link RequestModel}
  *
  * <p>GetMaliciousFileWhitelistConfigRequest</p>
@@ -53,7 +54,10 @@ public class GetMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the whitelist rule.
+         * <p>The ID of the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);

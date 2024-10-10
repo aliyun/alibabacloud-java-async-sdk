@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageRepoDetailListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageRepoDetailListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about image repositories.
+         * <p>An array that consists of the information about image repositories.</p>
          */
         public Builder imageRepoResponses(java.util.List < ImageRepoResponses> imageRepoResponses) {
             this.imageRepoResponses = imageRepoResponses;
@@ -69,7 +70,7 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageRepoDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageRepoDetailListResponseBody</p>
+     */
     public static class ImageRepoResponses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmCount")
         private Integer alarmCount;
@@ -285,7 +295,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             private String vulStatus; 
 
             /**
-             * The number of alerts that are generated for the image repository.
+             * <p>The number of alerts that are generated for the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -293,11 +306,14 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether alerts are generated for the image repository. Valid values:
-             * <p>
+             * <p>Indicates whether alerts are generated for the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong></li>
+             * </ul>
              * 
-             * *   **YES**
-             * *   **NO**
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -305,7 +321,29 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The address of the image repository.
+             * <p>The address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *       {
+             *             &quot;domains&quot;: [
+             *                   &quot;<strong><strong>.cn-shenzhen.cr.aliyuncs.com&quot;
+             *             ],
+             *             &quot;type&quot;: &quot;internet&quot;
+             *       },
+             *       {
+             *             &quot;domains&quot;: [
+             *                   &quot;</strong></strong>.cn-shenzhen.cr.aliyuncs.com&quot;
+             *             ],
+             *             &quot;type&quot;: &quot;intranet&quot;
+             *       },
+             *       {
+             *             &quot;domains&quot;: [
+             *                   &quot;****.cn-shenzhen.cr.aliyuncs.com&quot;
+             *             ],
+             *             &quot;type&quot;: &quot;vpc&quot;
+             *       }
+             * ]</p>
              */
             public Builder endpoints(String endpoints) {
                 this.endpoints = endpoints;
@@ -313,7 +351,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risk items on the image repository.
+             * <p>The number of baseline risk items on the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder hcCount(Integer hcCount) {
                 this.hcCount = hcCount;
@@ -321,11 +362,14 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether baseline risk items are detected on the image repository. Valid values:
-             * <p>
+             * <p>Indicates whether baseline risk items are detected on the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>NO</strong></li>
+             * <li><strong>YES</strong></li>
+             * </ul>
              * 
-             * *   **NO**
-             * *   **YES**
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder hcStatus(String hcStatus) {
                 this.hcStatus = hcStatus;
@@ -333,7 +377,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images.
+             * <p>The number of images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder imageCount(Integer imageCount) {
                 this.imageCount = imageCount;
@@ -341,7 +388,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6fsg6xlmorug5****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -349,7 +399,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image.
+             * <p>The region ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -357,13 +410,16 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image repository. Valid values:
-             * <p>
+             * <p>The type of the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>acr</strong></li>
+             * <li><strong>harbor</strong></li>
+             * <li><strong>quay</strong></li>
+             * <li><strong>CI/CD</strong></li>
+             * </ul>
              * 
-             * *   **acr**
-             * *   **harbor**
-             * *   **quay**
-             * *   **CI/CD**
+             * <strong>example:</strong>
+             * <p>acr</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -371,7 +427,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-2chlzf47w2rk****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -379,7 +438,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zeus</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -387,7 +449,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * <p>The namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-dev</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -395,11 +460,14 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image repository is at risk. Valid values:
-             * <p>
+             * <p>Indicates whether the image repository is at risk. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong></li>
+             * </ul>
              * 
-             * *   **YES**
-             * *   **NO**
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -407,7 +475,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities detected on the image repository.
+             * <p>The number of vulnerabilities detected on the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -415,11 +486,14 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether vulnerabilities are detected on the image repository. Valid values:
-             * <p>
+             * <p>Indicates whether vulnerabilities are detected on the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong></li>
+             * </ul>
              * 
-             * *   **YES**
-             * *   **NO**
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;
@@ -433,6 +507,12 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageRepoDetailListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageRepoDetailListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -496,7 +576,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -504,7 +587,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -512,7 +598,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -520,7 +609,10 @@ public class DescribeImageRepoDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of image repositories.
+             * <p>The total number of image repositories.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

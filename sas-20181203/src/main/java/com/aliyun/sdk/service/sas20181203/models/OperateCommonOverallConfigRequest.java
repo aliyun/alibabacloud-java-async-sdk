@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateCommonOverallConfigRequest} extends {@link RequestModel}
  *
  * <p>OperateCommonOverallConfigRequest</p>
@@ -97,11 +98,15 @@ public class OperateCommonOverallConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable or disable the feature. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enable</li>
+         * <li><strong>off</strong>: disable</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: enable
-         * *   **off**: disable
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -110,13 +115,17 @@ public class OperateCommonOverallConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to configure assets for the feature. Default value: **false**. Valid values:
-         * <p>
+         * <p>Specifies whether to configure assets for the feature. Default value: <strong>false</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when you set <strong>Config</strong> to <strong>on</strong>.</p>
+         * </blockquote>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * >  This parameter takes effect only when you set **Config** to **on**.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder noTargetAsOn(Boolean noTargetAsOn) {
             this.putQueryParameter("NoTargetAsOn", noTargetAsOn);
@@ -125,7 +134,10 @@ public class OperateCommonOverallConfigRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223.79.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -134,79 +146,83 @@ public class OperateCommonOverallConfigRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
-         * <p>
+         * <p>The type of the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>kdump_switch</strong>: Active defense experience optimization</li>
+         * <li><strong>threat_detect</strong>: Dynamic adaptive threat detection capability</li>
+         * <li><strong>suspicious_aggregation</strong>: Alert Association</li>
+         * <li><strong>alidetect</strong>: File Test</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_38857</strong>: Entrance service execution high-risk operation (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50858</strong>: Web service performs high-risk operations (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50859</strong>: Entrance service execution suspicious operation (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50862</strong>: Cloud Assistant Advanced Protection (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50867</strong>: Create malicious files (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50868</strong>: Create suspicious files (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_64025</strong>: Ingress service execute command [enhanced mode] (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51229</strong>: Browser service execution a high-risk operation (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51230</strong>: Entrance service execution suspicious operation (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51232</strong>: System processes execution high-risk operations (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51233</strong>: Java service execution high-risk operations (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51234</strong>: Office components execution high-risk operations (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51235</strong>: Web service performs high-risk operations (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52820</strong>: Create malicious files (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52826</strong>: Entrance service execution high-risk operation (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_55251</strong>: Database services execution high-risk operations (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_63725</strong>: Ingress service implants suspicious script/binary file (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_3277</strong>: Suspicious process startup (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50983</strong>: obfuscated command (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51200</strong>: Command line download and run malicious files (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_71131</strong>: Ingress service executes sequence of suspicious behavior (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51225</strong>: Powershell executes high-risk commands (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51226</strong>: Powershell execute suspicious command (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52821</strong>: Suspicious process startup (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_57242</strong>: Malicious command execution (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_57340</strong>: Command line download and run malicious files (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_39659</strong>: Sensitive Registry Key Protection (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52816</strong>: high-risk account manipulation behavior (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54365</strong>: Create service autorun item (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54366</strong>: Create high-risk autorun item (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54367</strong>: Create scheduled task autorun item (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54368</strong>: Create registry autorun item (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54369</strong>: Create WMI autorun item (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50869</strong>: Unauthorized execution of high-risk orders (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_53272</strong>: Exploiting Kernel Vulnerabilities to Elevate Privileges (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54395</strong>: Unauthorized reading and writing of sensitive files (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_57897</strong>: suspected privilege escalation (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52825</strong>: Unauthorized execution of high-risk orders (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_5507</strong>: malicious drivers (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50876</strong>: Against security software (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_53168</strong>: process debugging (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54699</strong>: Hijack dynamic link library (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_62981</strong>: Bypassing security monitoring (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52815</strong>: Load high-risk drivers (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52823</strong>: Running high-risk ARK tools (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54373</strong>: Against security software (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54374</strong>: Intrusion trace cleanup (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54265</strong>: Hijacking the PAM Module (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54953</strong>: Hashdump Attack (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54383</strong>: MimiKatz Credential Stealing (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54384</strong>: Hashdump Attack (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50861</strong>: Information detection (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52818</strong>: Information detection (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_54034</strong>: Intranet scan (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51228</strong>: High-risk lateral penetration tools (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50870</strong>: Rebound Shell (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50873</strong>: WebShell execute command</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51236</strong>: Rebound Shell (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50877</strong>: Malicious soft communication (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50884</strong>: Suspicious worm script behavior (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_50885</strong>: malicious script behavior (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51201</strong>: ransomware (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_51202</strong>: Suspected Extortion (Linux)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52827</strong>: ransomware (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52828</strong>: Suspected Extortion (Windows)</li>
+         * <li><strong>USER-ENABLE-SWITCH-TYPE_52829</strong>: delete system backup behavior (Windows)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **kdump_switch**: Active defense experience optimization
-         * *   **threat_detect**: Dynamic adaptive threat detection capability
-         * *   **suspicious_aggregation**: Alert Association
-         * *   **alidetect**: File Test
-         * *   **USER-ENABLE-SWITCH-TYPE\_38857**: Entrance service execution high-risk operation (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50858**: Web service performs high-risk operations (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50859**: Entrance service execution suspicious operation (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50862**: Cloud Assistant Advanced Protection (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50867**: Create malicious files (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50868**: Create suspicious files (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_64025**: Ingress service execute command \[enhanced mode] (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51229**: Browser service execution a high-risk operation (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51230**: Entrance service execution suspicious operation (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51232**: System processes execution high-risk operations (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51233**: Java service execution high-risk operations (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51234**: Office components execution high-risk operations (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51235**: Web service performs high-risk operations (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52820**: Create malicious files (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52826**: Entrance service execution high-risk operation (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_55251**: Database services execution high-risk operations (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_63725**: Ingress service implants suspicious script/binary file (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_3277**: Suspicious process startup (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50983**: obfuscated command (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51200**: Command line download and run malicious files (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_71131**: Ingress service executes sequence of suspicious behavior (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51225**: Powershell executes high-risk commands (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51226**: Powershell execute suspicious command (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52821**: Suspicious process startup (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_57242**: Malicious command execution (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_57340**: Command line download and run malicious files (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_39659**: Sensitive Registry Key Protection (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52816**: high-risk account manipulation behavior (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54365**: Create service autorun item (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54366**: Create high-risk autorun item (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54367**: Create scheduled task autorun item (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54368**: Create registry autorun item (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54369**: Create WMI autorun item (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50869**: Unauthorized execution of high-risk orders (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_53272**: Exploiting Kernel Vulnerabilities to Elevate Privileges (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54395**: Unauthorized reading and writing of sensitive files (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_57897**: suspected privilege escalation (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52825**: Unauthorized execution of high-risk orders (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_5507**: malicious drivers (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50876**: Against security software (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_53168**: process debugging (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54699**: Hijack dynamic link library (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_62981**: Bypassing security monitoring (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52815**: Load high-risk drivers (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52823**: Running high-risk ARK tools (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54373**: Against security software (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54374**: Intrusion trace cleanup (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54265**: Hijacking the PAM Module (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54953**: Hashdump Attack (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54383**: MimiKatz Credential Stealing (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54384**: Hashdump Attack (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50861**: Information detection (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52818**: Information detection (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_54034**: Intranet scan (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51228**: High-risk lateral penetration tools (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50870**: Rebound Shell (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50873**: WebShell execute command
-         * *   **USER-ENABLE-SWITCH-TYPE\_51236**: Rebound Shell (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50877**: Malicious soft communication (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50884**: Suspicious worm script behavior (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_50885**: malicious script behavior (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51201**: ransomware (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_51202**: Suspected Extortion (Linux)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52827**: ransomware (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52828**: Suspected Extortion (Windows)
-         * *   **USER-ENABLE-SWITCH-TYPE\_52829**: delete system backup behavior (Windows)
+         * <strong>example:</strong>
+         * <p>kdump_switch</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

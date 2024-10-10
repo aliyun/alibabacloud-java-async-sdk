@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWarningExportInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWarningExportInfoResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of baseline entries that are exported.
+         * <p>The number of baseline entries that are exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentCount(Integer currentCount) {
             this.currentCount = currentCount;
@@ -141,14 +145,16 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the export task.
-         * <p>
+         * <p>The status of the export task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The task is being initialized.</li>
+         * <li><strong>exporting</strong>: The task is in progress.</li>
+         * <li><strong>success</strong>: The task is successful.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **init**: The task is being initialized.
-         * *   **exporting**: The task is in progress.
-         * *   **success**: The task is successful.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -156,7 +162,10 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the exported Excel file.
+         * <p>The name of the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_20210917</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -164,7 +173,10 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the export task for the baseline check result.
+         * <p>The ID of the export task for the baseline check result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131231</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -172,7 +184,10 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The URL at which you can download the exported Excel file.
+         * <p>The URL at which you can download the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://eds.aliyun.com/notification/entitle/64b5c3e2-e52b-4d29-9617-e7e6d74XXXX">https://eds.aliyun.com/notification/entitle/64b5c3e2-e52b-4d29-9617-e7e6d74XXXX</a></p>
          */
         public Builder link(String link) {
             this.link = link;
@@ -180,7 +195,10 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message that shows the task result. The value is fixed as **successful**, which indicates that the export task is complete.
+         * <p>The message that shows the task result. The value is fixed as <strong>successful</strong>, which indicates that the export task is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -188,7 +206,10 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The progress percentage of the export task.
+         * <p>The progress percentage of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -196,7 +217,10 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +228,10 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of baseline entries returned.
+         * <p>The total number of baseline entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

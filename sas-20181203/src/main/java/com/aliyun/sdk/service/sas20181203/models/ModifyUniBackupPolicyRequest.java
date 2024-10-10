@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUniBackupPolicyRequest} extends {@link RequestModel}
  *
  * <p>ModifyUniBackupPolicyRequest</p>
@@ -166,7 +167,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         } 
 
         /**
-         * The name of the database account.
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sa</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -175,7 +179,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The password of the database account.
+         * <p>The password of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sa@****</p>
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -184,13 +191,16 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for full backup. The value of this parameter is a JSON string that contains the following fields:
-         * <p>
+         * <p>The policy for full backup. The value of this parameter is a JSON string that contains the following fields:</p>
+         * <ul>
+         * <li><strong>start</strong>: the start time of a backup task</li>
+         * <li><strong>interval</strong>: the interval of backup tasks</li>
+         * <li><strong>type</strong>: the unit of the interval</li>
+         * <li><strong>days</strong>: the days of a week on which a backup task is performed</li>
+         * </ul>
          * 
-         * *   **start**: the start time of a backup task
-         * *   **interval**: the interval of backup tasks
-         * *   **type**: the unit of the interval
-         * *   **days**: the days of a week on which a backup task is performed
+         * <strong>example:</strong>
+         * <p>{&quot;days&quot;:[4],&quot;interval&quot;:1,&quot;planType&quot;:&quot;weekly&quot;,&quot;startTime&quot;:&quot;22:00:00&quot;}</p>
          */
         public Builder fullPlan(java.util.Map < String, ? > fullPlan) {
             String fullPlanShrink = shrink(fullPlan, "FullPlan", "json");
@@ -200,13 +210,16 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:
-         * <p>
+         * <p>The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:</p>
+         * <ul>
+         * <li><strong>start</strong>: the start time of a backup task</li>
+         * <li><strong>interval</strong>: the interval of backup tasks</li>
+         * <li><strong>type</strong>: the unit of the interval</li>
+         * <li><strong>days</strong>: the days of a week on which a backup task is performed</li>
+         * </ul>
          * 
-         * *   **start**: the start time of a backup task
-         * *   **interval**: the interval of backup tasks
-         * *   **type**: the unit of the interval
-         * *   **days**: the days of a week on which a backup task is performed
+         * <strong>example:</strong>
+         * <p>{&quot;interval&quot;:1,&quot;planType&quot;:&quot;daily&quot;,&quot;startTime&quot;:&quot;23:30:00&quot;}</p>
          */
         public Builder incPlan(java.util.Map < String, ? > incPlan) {
             String incPlanShrink = shrink(incPlan, "IncPlan", "json");
@@ -216,10 +229,14 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the anti-ransomware policy.
-         * <p>
+         * <p>The ID of the anti-ransomware policy.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeUniBackupPolicies](~~DescribeUniBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -228,7 +245,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The name of the anti-ransomware policy.
+         * <p>The name of the anti-ransomware policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>databak</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -237,11 +257,14 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The status of the anti-ransomware policy. Valid values:
-         * <p>
+         * <p>The status of the anti-ransomware policy. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
          * 
-         * *   **enabled**
-         * *   **disabled**
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder policyStatus(String policyStatus) {
             this.putQueryParameter("PolicyStatus", policyStatus);
@@ -250,7 +273,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The retention period of the backup snapshot.
+         * <p>The retention period of the backup snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);
@@ -259,7 +285,10 @@ public class ModifyUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The maximum network bandwidth that is allowed during data backup. Unit: bytes.
+         * <p>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
          */
         public Builder speedLimiter(Long speedLimiter) {
             this.putQueryParameter("SpeedLimiter", speedLimiter);

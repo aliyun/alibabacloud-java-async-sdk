@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaClusterBaseLineListResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpaClusterBaseLineListResponseBody</p>
@@ -85,7 +86,10 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about baselines.
+         * <p>The information about baselines.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2F2A020-1CAB-5F52-8CAF-B2ACDDFAC247</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpaClusterBaseLineListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaClusterBaseLineListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -197,7 +216,10 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
             private String nameKey; 
 
             /**
-             * The alias of the baseline.
+             * <p>The alias of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Make sure there are no duplicate usernames or UIDs</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -205,7 +227,10 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the baseline type.
+             * <p>The key of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification</p>
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -213,7 +238,10 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the name for the baseline check item.
+             * <p>The key of the name for the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>duplicate_uid</p>
              */
             public Builder itemKey(String itemKey) {
                 this.itemKey = itemKey;
@@ -221,7 +249,10 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the name for the baseline.
+             * <p>The key of the name for the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;

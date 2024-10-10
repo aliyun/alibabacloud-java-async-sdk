@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCreateVulWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCreateVulWhitelistResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         private java.util.List < VulWhitelistList> vulWhitelistList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B23A612-D997-5176-8C3B-D640DFD65772</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the whitelist.
+         * <p>An array that consists of the information about the whitelist.</p>
          */
         public Builder vulWhitelistList(java.util.List < VulWhitelistList> vulWhitelistList) {
             this.vulWhitelistList = vulWhitelistList;
@@ -70,6 +74,12 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCreateVulWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyCreateVulWhitelistResponseBody</p>
+     */
     public static class VulWhitelistList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -97,7 +107,10 @@ public class ModifyCreateVulWhitelistResponseBody extends TeaModel {
             private Long id; 
 
             /**
-             * The ID of the whitelist.
+             * <p>The ID of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30376</p>
              */
             public Builder id(Long id) {
                 this.id = id;

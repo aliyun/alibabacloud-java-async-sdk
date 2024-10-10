@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCheckResultWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>AddCheckResultWhiteListResponseBody</p>
@@ -61,7 +62,7 @@ public class AddCheckResultWhiteListResponseBody extends TeaModel {
         private java.util.List < Long > ruleIds; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class AddCheckResultWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C699E4E4-F2F4-58FC-A949-457FFE59****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClientUserDefineRulesRequest} extends {@link RequestModel}
  *
  * <p>ListClientUserDefineRulesRequest</p>
@@ -97,7 +98,11 @@ public class ListClientUserDefineRulesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -106,7 +111,10 @@ public class ListClientUserDefineRulesRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -115,7 +123,11 @@ public class ListClientUserDefineRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +136,7 @@ public class ListClientUserDefineRulesRequest extends Request {
         }
 
         /**
-         * The types of rules.
+         * <p>The types of rules.</p>
          */
         public Builder type(java.util.List < Integer > type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindHybridProxyRequest} extends {@link RequestModel}
  *
  * <p>BindHybridProxyRequest</p>
@@ -69,7 +70,11 @@ public class BindHybridProxyRequest extends Request {
         } 
 
         /**
-         * The name of the proxy cluster.
+         * <p>The name of the proxy cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-proxy</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -78,7 +83,8 @@ public class BindHybridProxyRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers that you want to add to Security Center over the proxy server.
+         * <p>The UUIDs of servers that you want to add to Security Center over the proxy server.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder yundunUuids(java.util.List < String > yundunUuids) {
             this.putQueryParameter("YundunUuids", yundunUuids);

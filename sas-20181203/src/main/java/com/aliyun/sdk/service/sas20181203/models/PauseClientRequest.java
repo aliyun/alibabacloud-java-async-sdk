@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PauseClientRequest} extends {@link RequestModel}
  *
  * <p>PauseClientRequest</p>
@@ -69,7 +70,11 @@ public class PauseClientRequest extends Request {
         } 
 
         /**
-         * The UUIDs of servers for which you want to enable or disable the Security Center agent.
+         * <p>The UUIDs of servers for which you want to enable or disable the Security Center agent.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uuid-1211-sadsd-2131</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);
@@ -78,11 +83,15 @@ public class PauseClientRequest extends Request {
         }
 
         /**
-         * The status of the Security Center agent. Valid values:
-         * <p>
+         * <p>The status of the Security Center agent. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: disabled
-         * *   **1**: enabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGuidTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGuidTaskListResponseBody</p>
@@ -49,7 +50,7 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of beginner tasks.
+         * <p>The list of beginner tasks.</p>
          */
         public Builder guideTaskConfigList(java.util.List < GuideTaskConfigList> guideTaskConfigList) {
             this.guideTaskConfigList = guideTaskConfigList;
@@ -57,7 +58,10 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7532B7EE-7CE7-5F4D-BF04-B12447D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryGuidTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGuidTaskListResponseBody</p>
+     */
     public static class RewardData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsRewardTaked")
         private String isRewardTaked;
@@ -121,11 +131,14 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             private String rewardConfig; 
 
             /**
-             * Indicates whether the reward is claimed. Valid values:
-             * <p>
+             * <p>Indicates whether the reward is claimed. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: no.</li>
+             * <li><strong>2</strong>: yes.</li>
+             * </ul>
              * 
-             * *   **1**: no.
-             * *   **2**: yes.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isRewardTaked(String isRewardTaked) {
                 this.isRewardTaked = isRewardTaked;
@@ -133,14 +146,17 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the reward. Valid values:
-             * <p>
+             * <p>The name of the reward. Valid values:</p>
+             * <ul>
+             * <li><strong>addTrialDay</strong>: the days of trial use.</li>
+             * <li><strong>addAntiRansomwareCapacity</strong>: the anti-ransomware capacity.</li>
+             * <li><strong>addImageScanAuthCount</strong>: the quota for container image scan.</li>
+             * <li><strong>addWebLockAuthCount</strong>: the quota for web tamper proofing.</li>
+             * <li><strong>addSlsCapacity</strong>: the log storage capacity.</li>
+             * </ul>
              * 
-             * *   **addTrialDay**: the days of trial use.
-             * *   **addAntiRansomwareCapacity**: the anti-ransomware capacity.
-             * *   **addImageScanAuthCount**: the quota for container image scan.
-             * *   **addWebLockAuthCount**: the quota for web tamper proofing.
-             * *   **addSlsCapacity**: the log storage capacity.
+             * <strong>example:</strong>
+             * <p>addWebLockAuthCount</p>
              */
             public Builder reward(String reward) {
                 this.reward = reward;
@@ -148,17 +164,21 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The reward configuration. The value of this parameter is in the JSON format.
-             * <p>
+             * <p>The reward configuration. The value of this parameter is in the JSON format.</p>
+             * <blockquote>
+             * <p> The key indicates the reward type, and the value indicates the number of rewards. Valid values of key:</p>
+             * </blockquote>
+             * <ul>
+             * <li><strong>webLockAuthCount</strong>: the quota for web tamper proofing.</li>
+             * <li><strong>webLockAuthCount</strong>: the anti-ransomware capacity. Unit: GB.</li>
+             * <li><strong>slsCapacity</strong>: the log storage capacity. Unit: GB.</li>
+             * <li><strong>days</strong>: the days of trial use.</li>
+             * <li><strong>imageScanAuthCount</strong>: the quota for container image scan.</li>
+             * <li><strong>honeypotAuthCount</strong>: the quota for cloud honeypot.</li>
+             * </ul>
              * 
-             * >  The key indicates the reward type, and the value indicates the number of rewards. Valid values of key:
-             * 
-             * *   **webLockAuthCount**: the quota for web tamper proofing.
-             * *   **webLockAuthCount**: the anti-ransomware capacity. Unit: GB.
-             * *   **slsCapacity**: the log storage capacity. Unit: GB.
-             * *   **days**: the days of trial use.
-             * *   **imageScanAuthCount**: the quota for container image scan.
-             * *   **honeypotAuthCount**: the quota for cloud honeypot.
+             * <strong>example:</strong>
+             * <p>{&quot;days&quot;:60,&quot;ransomwareCapacity&quot;:100}</p>
              */
             public Builder rewardConfig(String rewardConfig) {
                 this.rewardConfig = rewardConfig;
@@ -172,6 +192,12 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryGuidTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGuidTaskListResponseBody</p>
+     */
     public static class GuideTaskConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RewardData")
         private RewardData rewardData;
@@ -247,7 +273,7 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             private String taskTypeName; 
 
             /**
-             * The information about the reward for a complete task.
+             * <p>The information about the reward for a complete task.</p>
              */
             public Builder rewardData(RewardData rewardData) {
                 this.rewardData = rewardData;
@@ -255,7 +281,10 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The security score that is increased after you complete the task.
+             * <p>The security score that is increased after you complete the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder securityScore(Integer securityScore) {
                 this.securityScore = securityScore;
@@ -263,12 +292,15 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the beginner task. Valid values:
-             * <p>
+             * <p>The status of the beginner task. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>1</strong>: in progress.</li>
+             * <li><strong>2</strong>: complete.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **1**: in progress.
-             * *   **2**: complete.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -276,7 +308,10 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the beginner task.
+             * <p>The ID of the beginner task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-000d8slfgx4p40kb64ad</p>
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;
@@ -284,22 +319,25 @@ public class QueryGuidTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task type. Valid values:
-             * <p>
+             * <p>The name of the task type. Valid values:</p>
+             * <ul>
+             * <li><strong>guid_task_security_score_promote_video</strong>: the task of viewing a video tutorial for beginners.</li>
+             * <li><strong>guide_sub_task_config_defence_hbr</strong>: the task of configuring anti-ransomware for servers.</li>
+             * <li><strong>guide_sub_task_config_uni_defence_hbr</strong>: the task of configuring anti-ransomware for databases.</li>
+             * <li><strong>guid_task_log_analysis_config</strong>: the task of configuring log analysis.</li>
+             * <li><strong>guide_sub_task_web_lock_config</strong>: the task of configuring web tamper proofing.</li>
+             * <li><strong>guide_sub_task_config_anti_crack</strong>: the task of configuring protection against brute-force attacks.</li>
+             * <li><strong>guid_task_container_security_video</strong>: the task of viewing the video on how to protect containers.</li>
+             * <li><strong>guid_task_container_image_scan_config</strong>: the task of configuring container image scan.</li>
+             * <li><strong>guid_task_k8s_log_analysis_config</strong>: the task of configuring threat detection on Kubernetes containers.</li>
+             * <li><strong>guid_task_container_network</strong>: the task of configuring container network visualization.</li>
+             * <li><strong>guide_sub_task_config_add_collection</strong>: the task of saving a console URL.</li>
+             * <li><strong>guide_sub_task_vul_scan</strong>: the task of scanning for vulnerabilities.</li>
+             * <li><strong>guide_sub_task_virusKill</strong>: the task of configuring virus detection and removal.</li>
+             * </ul>
              * 
-             * *   **guid_task_security_score_promote_video**: the task of viewing a video tutorial for beginners.
-             * *   **guide_sub_task_config_defence_hbr**: the task of configuring anti-ransomware for servers.
-             * *   **guide_sub_task_config_uni_defence_hbr**: the task of configuring anti-ransomware for databases.
-             * *   **guid_task_log_analysis_config**: the task of configuring log analysis.
-             * *   **guide_sub_task_web_lock_config**: the task of configuring web tamper proofing.
-             * *   **guide_sub_task_config_anti_crack**: the task of configuring protection against brute-force attacks.
-             * *   **guid_task_container_security_video**: the task of viewing the video on how to protect containers.
-             * *   **guid_task_container_image_scan_config**: the task of configuring container image scan.
-             * *   **guid_task_k8s_log_analysis_config**: the task of configuring threat detection on Kubernetes containers.
-             * *   **guid_task_container_network**: the task of configuring container network visualization.
-             * *   **guide_sub_task_config_add_collection**: the task of saving a console URL.
-             * *   **guide_sub_task_vul_scan**: the task of scanning for vulnerabilities.
-             * *   **guide_sub_task_virusKill**: the task of configuring virus detection and removal.
+             * <strong>example:</strong>
+             * <p>guide_sub_task_config_add_collection</p>
              */
             public Builder taskTypeName(String taskTypeName) {
                 this.taskTypeName = taskTypeName;

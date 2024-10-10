@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGroupedSecurityEventMarkMissListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGroupedSecurityEventMarkMissListResponseBody</p>
@@ -97,7 +98,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * An array that consists of the whitelist rules.
+         * <p>An array that consists of the whitelist rules.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -113,7 +117,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>There was an error with your request.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +128,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -129,7 +136,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>965F9282-D403-4FA2-B1B9-10F62DC719BF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +147,14 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +167,12 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link QueryGroupedSecurityEventMarkMissListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGroupedSecurityEventMarkMissListResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -301,7 +320,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             private String uuids; 
 
             /**
-             * The ID of the user.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31412647</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -309,11 +331,14 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The handling method. Valid values:
-             * <p>
+             * <p>The handling method. Valid values:</p>
+             * <ul>
+             * <li><strong>auto_add_white</strong>: Automatically Added to Whitelist</li>
+             * <li><strong>defense_not_notification</strong>: Defense Without Notification</li>
+             * </ul>
              * 
-             * *   **auto\_add_white**: Automatically Added to Whitelist
-             * *   **defense\_not_notification**: Defense Without Notification
+             * <strong>example:</strong>
+             * <p>auto_add_white</p>
              */
             public Builder disposalWay(String disposalWay) {
                 this.disposalWay = disposalWay;
@@ -321,7 +346,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the alert event. The value indicates a subtype.
+             * <p>The name of the alert event. The value indicates a subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Login with unusual location</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -329,7 +357,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the alert event. The value indicates a type.
+             * <p>The name of the alert event. The value indicates a type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_common_location</p>
              */
             public Builder eventNameOriginal(String eventNameOriginal) {
                 this.eventNameOriginal = eventNameOriginal;
@@ -337,7 +368,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The subtype of the alert event.
+             * <p>The subtype of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -345,7 +379,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The type of the alert event.
+             * <p>The type of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual logon</p>
              */
             public Builder eventTypeOriginal(String eventTypeOriginal) {
                 this.eventTypeOriginal = eventTypeOriginal;
@@ -353,7 +390,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The field that is used in the whitelist rule.
+             * <p>The field that is used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -361,7 +401,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The value of the field.
+             * <p>The value of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -369,7 +412,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The alias of the field.
+             * <p>The alias of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Logon Time</p>
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
@@ -377,14 +423,17 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The operator. Valid values:
-             * <p>
+             * <p>The operator. Valid values:</p>
+             * <ul>
+             * <li><strong>contains</strong>: contains</li>
+             * <li><strong>notContains</strong>: does not contain</li>
+             * <li><strong>strEqual</strong>: equals</li>
+             * <li><strong>strNotEqual</strong>: does not equal</li>
+             * <li><strong>regex</strong>: regular expression</li>
+             * </ul>
              * 
-             * *   **contains**: contains
-             * *   **notContains**: does not contain
-             * *   **strEqual**: equals
-             * *   **strNotEqual**: does not equal
-             * *   **regex**: regular expression
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder operate(String operate) {
                 this.operate = operate;
@@ -392,7 +441,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The UUIDs of assets. Multiple UUIDs are separated by commas (,).
+             * <p>The UUIDs of assets. Multiple UUIDs are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6985b88c-eb19-4d27-98ad-e4a42312****,5721d503-9b04-4243-89ca-1fb8ca5e****,db2678c3-10e3-4a20-92f1-265f6****</p>
              */
             public Builder uuids(String uuids) {
                 this.uuids = uuids;
@@ -406,6 +458,12 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link QueryGroupedSecurityEventMarkMissListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryGroupedSecurityEventMarkMissListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -469,7 +527,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -477,7 +538,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -485,7 +549,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -493,7 +560,10 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

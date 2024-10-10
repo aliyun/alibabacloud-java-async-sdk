@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileProtectEventRequest} extends {@link RequestModel}
  *
  * <p>GetFileProtectEventRequest</p>
@@ -53,7 +54,10 @@ public class GetFileProtectEventRequest extends Request {
         } 
 
         /**
-         * The ID of the event.
+         * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

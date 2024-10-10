@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListStrategyListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWhiteListStrategyListResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
         private java.util.List < Strategies> strategies; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>571B2642-BF51-5BDD-906B-D2340DB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the policies.
+         * <p>The information about the policies.</p>
          */
         public Builder strategies(java.util.List < Strategies> strategies) {
             this.strategies = strategies;
@@ -70,6 +74,12 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWhiteListStrategyListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWhiteListStrategyListResponseBody</p>
+     */
     public static class Strategies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -133,14 +143,17 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
             private Integer studyTime; 
 
             /**
-             * The status of the policy. Valid values:
-             * <p>
+             * <p>The status of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: learning</li>
+             * <li><strong>2</strong>: paused</li>
+             * <li><strong>3</strong>: learning completed</li>
+             * <li><strong>4</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: learning
-             * *   **2**: paused
-             * *   **3**: learning completed
-             * *   **4**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -148,7 +161,10 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8795555</p>
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -156,7 +172,10 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -164,7 +183,10 @@ public class DescribeWhiteListStrategyListResponseBody extends TeaModel {
             }
 
             /**
-             * The intelligent learning duration. Unit: hour.
+             * <p>The intelligent learning duration. Unit: hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder studyTime(Integer studyTime) {
                 this.studyTime = studyTime;

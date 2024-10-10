@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupPoliciesRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackupPoliciesRequest</p>
@@ -111,7 +112,11 @@ public class DescribeBackupPoliciesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -120,7 +125,10 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.
+         * <p>The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder machineRemark(String machineRemark) {
             this.putQueryParameter("MachineRemark", machineRemark);
@@ -129,7 +137,10 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * The name of the anti-ransomware policy that you want to query.
+         * <p>The name of the anti-ransomware policy that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SecurityStrategy-20200303</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -138,7 +149,11 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,12 +162,15 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * The status of the anti-ransomware policy. Valid values:
-         * <p>
+         * <p>The status of the anti-ransomware policy. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong>: The anti-ransomware policy is manually enabled.</li>
+         * <li><strong>disabled</strong>: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</li>
+         * <li><strong>closed</strong>: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</li>
+         * </ul>
          * 
-         * *   **enabled**: The anti-ransomware policy is manually enabled.
-         * *   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.
-         * *   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

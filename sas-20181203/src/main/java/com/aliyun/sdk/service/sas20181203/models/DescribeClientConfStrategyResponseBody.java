@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClientConfStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClientConfStrategyResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BD95679-D63A-4151-97D0-188432F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the configurations.
+         * <p>An array that consists of the configurations.</p>
          */
         public Builder targetList(java.util.List < TargetList> targetList) {
             this.targetList = targetList;
@@ -77,7 +81,10 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClientConfStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClientConfStrategyResponseBody</p>
+     */
     public static class TargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
@@ -117,7 +130,10 @@ public class DescribeClientConfStrategyResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The UUID of the Security Center agent.
+             * <p>The UUID of the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2b1753a6-04d9-448e-ad17-7abdf19f****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

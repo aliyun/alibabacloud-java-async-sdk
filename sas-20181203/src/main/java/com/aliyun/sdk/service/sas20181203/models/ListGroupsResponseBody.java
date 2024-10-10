@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListGroupsResponseBody</p>
@@ -109,7 +110,10 @@ public class ListGroupsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -125,7 +132,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The groups.
+         * <p>The groups.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -133,7 +140,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +151,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -149,7 +159,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB414DB5-F692-5DAB-9F0F-975C060AF***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +170,14 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether exceptions are handled. Valid values:
-         * <p>
+         * <p>Indicates whether exceptions are handled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +190,12 @@ public class ListGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupFlag")
         private Integer groupFlag;
@@ -225,11 +247,14 @@ public class ListGroupsResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The server group type. Valid values:
-             * <p>
+             * <p>The server group type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: default group</li>
+             * <li><strong>1</strong>: other group</li>
+             * </ul>
              * 
-             * *   **0**: default group
-             * *   **1**: other group
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
@@ -237,7 +262,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The server group ID.
+             * <p>The server group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11028542</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -245,7 +273,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The server group name.
+             * <p>The server group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen+dir-1440978***</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -259,6 +290,12 @@ public class ListGroupsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListGroupsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -334,7 +371,10 @@ public class ListGroupsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -342,7 +382,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -350,7 +393,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * A pagination token. It can be used in the next request to retrieve a new page of results.
+             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B604532DEF982B875E8360A6EFA3B***</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -358,7 +404,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -366,7 +415,10 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

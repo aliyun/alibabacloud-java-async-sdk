@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListAssetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWhiteListAssetResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the servers.
+         * <p>The information about the servers.</p>
          */
         public Builder assets(java.util.List < Assets> assets) {
             this.assets = assets;
@@ -57,7 +58,10 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWhiteListAssetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWhiteListAssetResponseBody</p>
+     */
     public static class Assets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowSelected")
         private Integer allowSelected;
@@ -169,11 +179,14 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Indicates whether the server can be selected. Valid values:
-             * <p>
+             * <p>Indicates whether the server can be selected. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allowSelected(Integer allowSelected) {
                 this.allowSelected = allowSelected;
@@ -181,7 +194,10 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
             }
 
             /**
-             * The group ID of the server.
+             * <p>The group ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11028551</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -189,7 +205,10 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -197,7 +216,10 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.41.XX.XX</p>
              */
             public Builder machineIp(String machineIp) {
                 this.machineIp = machineIp;
@@ -205,7 +227,10 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -213,11 +238,14 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the server is selected. Valid values:
-             * <p>
+             * <p>Indicates whether the server is selected. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder selected(Integer selected) {
                 this.selected = selected;
@@ -225,7 +253,10 @@ public class DescribeWhiteListAssetResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5c081b02-f66a-47a4-bd2f-79ee3eaf806a</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

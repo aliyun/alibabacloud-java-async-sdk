@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerServiceK8sClusterNamespacesResponse} extends {@link TeaModel}
  *
  * <p>DescribeContainerServiceK8sClusterNamespacesResponse</p>

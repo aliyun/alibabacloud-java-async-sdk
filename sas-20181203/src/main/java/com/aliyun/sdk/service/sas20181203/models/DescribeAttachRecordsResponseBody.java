@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAttachRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAttachRecordsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The results of automatically connecting applications on the ECS instance to the application protection feature.
+         * <p>The results of automatically connecting applications on the ECS instance to the application protection feature.</p>
          */
         public Builder accessList(java.util.List < AccessList> accessList) {
             this.accessList = accessList;
@@ -57,7 +58,10 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAttachRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAttachRecordsResponseBody</p>
+     */
     public static class AccessList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachState")
         private Long attachState;
@@ -145,14 +155,17 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             private Long installState; 
 
             /**
-             * The status of connecting applications on the ECS instance to the application protection feature. Valid values:
-             * <p>
+             * <p>The status of connecting applications on the ECS instance to the application protection feature. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: All applications are connected to the application protection feature.</li>
+             * <li><strong>1</strong>: Partial applications are connected to the application protection feature.</li>
+             * <li><strong>2</strong>: Applications failed to be connected to the application protection feature.</li>
+             * <li><strong>3</strong>: Applications are being connected to the application protection feature.</li>
+             * <li><strong>4</strong>: Applications are not connected to the application protection feature.</li>
+             * </ul>
              * 
-             * *   **0**: All applications are connected to the application protection feature.
-             * *   **1**: Partial applications are connected to the application protection feature.
-             * *   **2**: Applications failed to be connected to the application protection feature.
-             * *   **3**: Applications are being connected to the application protection feature.
-             * *   **4**: Applications are not connected to the application protection feature.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder attachState(Long attachState) {
                 this.attachState = attachState;
@@ -160,11 +173,14 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic protection is enabled for the applications on the ECS instance. Valid values:
-             * <p>
+             * <p>Indicates whether automatic protection is enabled for the applications on the ECS instance. Valid values:</p>
+             * <ul>
+             * <li><strong>ON</strong>: Automatic protection is enabled for the applications on the ECS instance.</li>
+             * <li><strong>OFF</strong>: Automatic protection is disabled for the applications on the ECS instance.</li>
+             * </ul>
              * 
-             * *   **ON**: Automatic protection is enabled for the applications on the ECS instance.
-             * *   **OFF**: Automatic protection is disabled for the applications on the ECS instance.
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder attachSwitch(String attachSwitch) {
                 this.attachSwitch = attachSwitch;
@@ -172,7 +188,10 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the ECS instance.
+             * <p>The UUID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cd405430-c027-4937-8398-10152dac****</p>
              */
             public Builder ecsUUID(String ecsUUID) {
                 this.ecsUUID = ecsUUID;
@@ -180,7 +199,10 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The message that shows the results of installing the RASP agent on the ECS instance.
+             * <p>The message that shows the results of installing the RASP agent on the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder installMsg(String installMsg) {
                 this.installMsg = installMsg;
@@ -188,17 +210,20 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of installing the RASP agent on the ECS instance to enable automatic application connection. Valid values:
-             * <p>
+             * <p>The status of installing the RASP agent on the ECS instance to enable automatic application connection. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: installed</li>
+             * <li><strong>1</strong>: installing</li>
+             * <li><strong>2</strong>: installation failed</li>
+             * <li><strong>3</strong>: installation timeout</li>
+             * <li><strong>4</strong>: uninstalled</li>
+             * <li><strong>5</strong>: uninstalling</li>
+             * <li><strong>6</strong>: uninstallation failed</li>
+             * <li><strong>7</strong>: uninstallation timeout</li>
+             * </ul>
              * 
-             * *   **0**: installed
-             * *   **1**: installing
-             * *   **2**: installation failed
-             * *   **3**: installation timeout
-             * *   **4**: uninstalled
-             * *   **5**: uninstalling
-             * *   **6**: uninstallation failed
-             * *   **7**: uninstallation timeout
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder installState(Long installState) {
                 this.installState = installState;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableCustomInstanceBlockRecordResponseBody} extends {@link TeaModel}
  *
  * <p>EnableCustomInstanceBlockRecordResponseBody</p>
@@ -37,7 +38,10 @@ public class EnableCustomInstanceBlockRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>571B2642-BF51-5BDD-906B-D2340DB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddImageEventOperationRequest} extends {@link RequestModel}
  *
  * <p>AddImageEventOperationRequest</p>
@@ -123,12 +124,15 @@ public class AddImageEventOperationRequest extends Request {
         } 
 
         /**
-         * The rule conditions. The value is in the JSON format. Valid values of keys:
-         * <p>
+         * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
+         * <ul>
+         * <li><strong>condition</strong>: the matching condition.</li>
+         * <li><strong>type</strong>: the matching type.</li>
+         * <li><strong>value</strong>: the matching value.</li>
+         * </ul>
          * 
-         * *   **condition**: the matching condition.
-         * *   **type**: the matching type.
-         * *   **value**: the matching value.
+         * <strong>example:</strong>
+         * <p>[{&quot;condition&quot;: &quot;MD5&quot;, &quot;type&quot;: &quot;equals&quot;, &quot;value&quot;: &quot;0083a31cc0083a31ccf7c10367a6e783e&quot;}]</p>
          */
         public Builder conditions(String conditions) {
             this.putQueryParameter("Conditions", conditions);
@@ -137,7 +141,10 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * The keyword of the alert item.
+         * <p>The keyword of the alert item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM</p>
          */
         public Builder eventKey(String eventKey) {
             this.putQueryParameter("EventKey", eventKey);
@@ -146,7 +153,10 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * The name of the alert item.
+         * <p>The name of the alert item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -155,10 +165,13 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * The alert type.
-         * <p>
+         * <p>The alert type.</p>
+         * <ul>
+         * <li>Set the value to <strong>sensitiveFile</strong>.</li>
+         * </ul>
          * 
-         * *   Set the value to **sensitiveFile**.
+         * <strong>example:</strong>
+         * <p>sensitiveFile</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -167,10 +180,13 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * The operation code.
-         * <p>
+         * <p>The operation code.</p>
+         * <ul>
+         * <li>Set the value to <strong>whitelist</strong> to add the alert item to the whitelist.</li>
+         * </ul>
          * 
-         * *   Set the value to **whitelist** to add the alert item to the whitelist.
+         * <strong>example:</strong>
+         * <p>whitelist</p>
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -179,11 +195,14 @@ public class AddImageEventOperationRequest extends Request {
         }
 
         /**
-         * The application scope of the rule. The value is in the JSON format. Valid values of keys:
-         * <p>
+         * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
+         * <ul>
+         * <li><strong>type</strong></li>
+         * <li><strong>value</strong></li>
+         * </ul>
          * 
-         * *   **type**
-         * *   **value**
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;: &quot;repo&quot;, &quot;value&quot;: &quot;test-aaa/shenzhen-repo-01&quot;}</p>
          */
         public Builder scenarios(String scenarios) {
             this.putQueryParameter("Scenarios", scenarios);

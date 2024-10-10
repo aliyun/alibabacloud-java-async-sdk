@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckTypesRequest} extends {@link RequestModel}
  *
  * <p>ListCheckTypesRequest</p>
@@ -137,7 +138,10 @@ public class ListCheckTypesRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -146,11 +150,14 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -159,10 +166,13 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.
-         * <p>
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,10 +181,13 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * The ID of the baseline.
-         * <p>
+         * <p>The ID of the baseline.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of baselines.
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -183,11 +196,14 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * Whether to query the check item list. The default value is false. Valid values:
-         * <p>
+         * <p>Whether to query the check item list. The default value is false. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: Not Query</li>
+         * <li><strong>true</strong>: Query</li>
+         * </ul>
          * 
-         * - **false**: Not Query
-         * - **true**: Query
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showChecks(Boolean showChecks) {
             this.putQueryParameter("ShowChecks", showChecks);
@@ -196,11 +212,14 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * The data source. Default value: **default**. Valid values:
-         * <p>
+         * <p>The data source. Default value: <strong>default</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>agentless</strong>: The check items of baselines for agentless detection.</li>
+         * <li><strong>default</strong>: The check items of baselines for hosts.</li>
+         * </ul>
          * 
-         * *   **agentless**: The check items of baselines for agentless detection.
-         * *   **default**: The check items of baselines for hosts.
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -209,10 +228,13 @@ public class ListCheckTypesRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>293b07cb-db2d-4f39-941f-b2e4abb8****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

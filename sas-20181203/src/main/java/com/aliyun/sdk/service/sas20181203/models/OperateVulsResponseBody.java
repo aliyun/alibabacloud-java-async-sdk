@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateVulsResponseBody} extends {@link TeaModel}
  *
  * <p>OperateVulsResponseBody</p>
@@ -37,7 +38,10 @@ public class OperateVulsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2677612-7207-4AEB-BD48-8BA528F86777</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

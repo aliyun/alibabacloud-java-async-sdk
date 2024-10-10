@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulDefendCountStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVulDefendCountStatisticsRequest</p>
@@ -53,11 +54,14 @@ public class DescribeVulDefendCountStatisticsRequest extends Request {
         } 
 
         /**
-         * The type of the vulnerabilities. Valid values:
-         * <p>
+         * <p>The type of the vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li>app: application vulnerabilities</li>
+         * <li>emg: urgent vulnerabilities</li>
+         * </ul>
          * 
-         * *   app: application vulnerabilities
-         * *   emg: urgent vulnerabilities
+         * <strong>example:</strong>
+         * <p>emg</p>
          */
         public Builder vulType(String vulType) {
             this.putQueryParameter("VulType", vulType);

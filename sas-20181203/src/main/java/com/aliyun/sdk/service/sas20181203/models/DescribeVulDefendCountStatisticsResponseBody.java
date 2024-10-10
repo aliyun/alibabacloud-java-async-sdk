@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulDefendCountStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulDefendCountStatisticsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of defended vulnerabilities.
+         * <p>The number of defended vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder raspDefendedCount(Integer raspDefendedCount) {
             this.raspDefendedCount = raspDefendedCount;
@@ -69,7 +73,10 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of supported vulnerabilities.
+         * <p>The number of supported vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder raspDefensibleCount(Integer raspDefensibleCount) {
             this.raspDefensibleCount = raspDefensibleCount;
@@ -77,7 +84,10 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBuildRiskListRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageBuildRiskListRequest</p>
@@ -123,11 +124,14 @@ public class DescribeImageBuildRiskListRequest extends Request {
         } 
 
         /**
-         * The **rule name** or **type name** of the risk. You can call the [DescribeImageBuildRiskList](~~~~) operation to obtain the name. Optional parameters:
-         * <p>
+         * <p>The <strong>rule name</strong> or <strong>type name</strong> of the risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the name. Optional parameters:</p>
+         * <ul>
+         * <li>If <strong>CriteriaType</strong> is set to <strong>RiskKeyName</strong>, you must specify a <strong>rule name</strong> for this parameter.</li>
+         * <li>If <strong>CriteriaType</strong> is set to<strong>RiskClassName</strong>, you must specify a <strong>type name</strong> for this parameter.</li>
+         * </ul>
          * 
-         * *   If **CriteriaType** is set to **RiskKeyName**, you must specify a **rule name** for this parameter.
-         * *   If **CriteriaType** is set to**RiskClassName**, you must specify a **type name** for this parameter.
+         * <strong>example:</strong>
+         * <p>no_user</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -136,11 +140,14 @@ public class DescribeImageBuildRiskListRequest extends Request {
         }
 
         /**
-         * The query type.of the risk. Valid values:
-         * <p>
+         * <p>The query type.of the risk. Valid values:</p>
+         * <ul>
+         * <li><strong>RiskKeyName</strong>: the rule name of the risk</li>
+         * <li><strong>RiskClassName</strong>: the type name of the risk</li>
+         * </ul>
          * 
-         * *   **RiskKeyName**: the rule name of the risk
-         * *   **RiskClassName**: the type name of the risk
+         * <strong>example:</strong>
+         * <p>RiskKeyName</p>
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -149,7 +156,10 @@ public class DescribeImageBuildRiskListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -158,11 +168,14 @@ public class DescribeImageBuildRiskListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -171,10 +184,13 @@ public class DescribeImageBuildRiskListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,12 +199,15 @@ public class DescribeImageBuildRiskListRequest extends Request {
         }
 
         /**
-         * The risk level. Valid values:
-         * <p>
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
          * 
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);

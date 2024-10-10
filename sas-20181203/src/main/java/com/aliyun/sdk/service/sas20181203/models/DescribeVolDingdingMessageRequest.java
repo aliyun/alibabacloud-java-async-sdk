@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVolDingdingMessageRequest} extends {@link RequestModel}
  *
  * <p>DescribeVolDingdingMessageRequest</p>

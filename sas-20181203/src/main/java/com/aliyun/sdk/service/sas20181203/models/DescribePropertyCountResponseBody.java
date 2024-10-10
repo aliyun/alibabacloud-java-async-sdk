@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyCountResponseBody</p>
@@ -169,7 +170,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         private Integer webserver; 
 
         /**
-         * The number of startup items.
+         * <p>The number of startup items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder autorun(Integer autorun) {
             this.autorun = autorun;
@@ -177,7 +181,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of scheduled tasks.
+         * <p>The number of scheduled tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder cron(Integer cron) {
             this.cron = cron;
@@ -185,7 +192,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of databases.
+         * <p>The number of databases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder database(Integer database) {
             this.database = database;
@@ -193,7 +203,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of kernel modules.
+         * <p>The number of kernel modules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder lkm(Integer lkm) {
             this.lkm = lkm;
@@ -201,7 +214,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of ports.
+         * <p>The number of ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -209,7 +225,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of processes.
+         * <p>The number of processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>367</p>
          */
         public Builder process(Integer process) {
             this.process = process;
@@ -217,7 +236,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +247,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of middleware assets.
+         * <p>The number of middleware assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112</p>
          */
         public Builder sca(Integer sca) {
             this.sca = sca;
@@ -233,7 +258,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of software assets.
+         * <p>The number of software assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         public Builder software(Integer software) {
             this.software = software;
@@ -241,7 +269,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of accounts.
+         * <p>The number of accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>214</p>
          */
         public Builder user(Integer user) {
             this.user = user;
@@ -249,7 +280,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of websites.
+         * <p>The number of websites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65</p>
          */
         public Builder web(Integer web) {
             this.web = web;
@@ -257,7 +291,10 @@ public class DescribePropertyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of web services.
+         * <p>The number of web services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder webserver(Integer webserver) {
             this.webserver = webserver;

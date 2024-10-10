@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartPreCheckDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>StartPreCheckDatabaseResponseBody</p>
@@ -49,7 +50,10 @@ public class StartPreCheckDatabaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the database precheck task.
+         * <p>The ID of the database precheck task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-0006d4pydyir6l1k****</p>
          */
         public Builder createMark(String createMark) {
             this.createMark = createMark;
@@ -57,7 +61,10 @@ public class StartPreCheckDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6DC2DFF-AB3A-563A-8FC2-3D0D991E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

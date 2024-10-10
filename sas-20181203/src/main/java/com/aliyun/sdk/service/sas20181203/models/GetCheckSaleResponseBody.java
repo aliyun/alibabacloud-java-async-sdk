@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckSaleResponseBody} extends {@link TeaModel}
  *
  * <p>GetCheckSaleResponseBody</p>
@@ -49,7 +50,7 @@ public class GetCheckSaleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The sales information about the configuration assessment quota.
+         * <p>The sales information about the configuration assessment quota.</p>
          */
         public Builder checkSale(CheckSale checkSale) {
             this.checkSale = checkSale;
@@ -57,7 +58,10 @@ public class GetCheckSaleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetCheckSaleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCheckSaleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckSaleResponseBody</p>
+     */
     public static class CheckSale extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsumeCount")
         private Long consumeCount;
@@ -133,7 +143,10 @@ public class GetCheckSaleResponseBody extends TeaModel {
             private Integer saleUserType; 
 
             /**
-             * The consumed quota.
+             * <p>The consumed quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder consumeCount(Long consumeCount) {
                 this.consumeCount = consumeCount;
@@ -141,11 +154,14 @@ public class GetCheckSaleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the user is an existing user and whether the user uses the configuration assessment feature before the feature is released for sale on July 07, 2023. Valid values:
-             * <p>
+             * <p>Indicates whether the user is an existing user and whether the user uses the configuration assessment feature before the feature is released for sale on July 07, 2023. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: existing user</li>
+             * <li><strong>false</strong>: new user</li>
+             * </ul>
              * 
-             * *   **true**: existing user
-             * *   **false**: new user
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder loyalUser(Boolean loyalUser) {
                 this.loyalUser = loyalUser;
@@ -153,7 +169,10 @@ public class GetCheckSaleResponseBody extends TeaModel {
             }
 
             /**
-             * The purchased quota.
+             * <p>The purchased quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder purchaseCount(Long purchaseCount) {
                 this.purchaseCount = purchaseCount;
@@ -161,12 +180,15 @@ public class GetCheckSaleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the user. Valid values:
-             * <p>
+             * <p>The type of the user. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: a user who can use all check items.</li>
+             * <li><strong>2</strong>: an user who can only use the check items before the release of the feature on July 07, 2023. This type of users must upgrade Security Center before the users can use all check items.</li>
+             * <li><strong>3</strong>: a new user who cannot use the configuration assessment feature. This type of users must make a purchase before the users can use the feature.</li>
+             * </ul>
              * 
-             * *   **1**: a user who can use all check items.
-             * *   **2**: an user who can only use the check items before the release of the feature on July 07, 2023. This type of users must upgrade Security Center before the users can use all check items.
-             * *   **3**: a new user who cannot use the configuration assessment feature. This type of users must make a purchase before the users can use the feature.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder saleUserType(Integer saleUserType) {
                 this.saleUserType = saleUserType;

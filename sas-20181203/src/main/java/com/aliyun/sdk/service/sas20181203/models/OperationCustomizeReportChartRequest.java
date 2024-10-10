@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperationCustomizeReportChartRequest} extends {@link RequestModel}
  *
  * <p>OperationCustomizeReportChartRequest</p>
@@ -69,10 +70,14 @@ public class OperationCustomizeReportChartRequest extends Request {
         } 
 
         /**
-         * The ID of the chart that is included in the report. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the chart that is included in the report. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeChartList](~~DescribeChartList~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>CID_VUL_SUMMARY,CID_VUL_TREND,CID_VUL_OPERATION_TREND,CID_BASELINE_CHECK_SUMMARY,CID_BASELINE_CHECK_TREND,CID_BASELINE_CHECK_OPERATION_TREND</p>
          */
         public Builder chartIds(String chartIds) {
             this.putQueryParameter("ChartIds", chartIds);
@@ -81,10 +86,14 @@ public class OperationCustomizeReportChartRequest extends Request {
         }
 
         /**
-         * The ID of the report.
-         * <p>
+         * <p>The ID of the report.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCustomizeReportList](~~DescribeCustomizeReportList~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);

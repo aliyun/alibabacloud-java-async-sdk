@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCheckTypesResponseBody</p>
@@ -109,7 +110,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -125,7 +132,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -133,7 +140,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -141,7 +151,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +162,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +173,14 @@ public class ListCheckTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +193,12 @@ public class ListCheckTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCheckTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckTypesResponseBody</p>
+     */
     public static class CheckDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffiliatedRiskTypes")
         private java.util.List < String > affiliatedRiskTypes;
@@ -237,7 +262,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             private String checkItem; 
 
             /**
-             * The list of the baseline categories of attribution.
+             * <p>The list of the baseline categories of attribution.</p>
              */
             public Builder affiliatedRiskTypes(java.util.List < String > affiliatedRiskTypes) {
                 this.affiliatedRiskTypes = affiliatedRiskTypes;
@@ -245,7 +270,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of baselines attribution.
+             * <p>The list of baselines attribution.</p>
              */
             public Builder affiliatedRisks(java.util.List < String > affiliatedRisks) {
                 this.affiliatedRisks = affiliatedRisks;
@@ -253,7 +278,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -261,7 +289,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the check item.
+             * <p>The description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Configure the idle session timeout period.</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -275,6 +306,12 @@ public class ListCheckTypesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckTypesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckDetails")
         private java.util.List < CheckDetails> checkDetails;
@@ -326,7 +363,7 @@ public class ListCheckTypesResponseBody extends TeaModel {
             private String checkTypeDisName; 
 
             /**
-             * The detail of check items.
+             * <p>The detail of check items.</p>
              */
             public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
@@ -334,7 +371,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item.
+             * <p>The type of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_integrity</p>
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -342,7 +382,10 @@ public class ListCheckTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the check item type.
+             * <p>The display name of the check item type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Integrity</p>
              */
             public Builder checkTypeDisName(String checkTypeDisName) {
                 this.checkTypeDisName = checkTypeDisName;

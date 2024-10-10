@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCriteriaStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>ListCriteriaStrategyResponseBody</p>
@@ -85,7 +86,10 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs and names of the rules.
+         * <p>The IDs and names of the rules.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>835851E3-AFA2-5EA7-93E9-4FC9BCF3F973</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCriteriaStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCriteriaStrategyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -173,7 +192,10 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The unique identifier of the rule.
+             * <p>The unique identifier of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -181,7 +203,10 @@ public class ListCriteriaStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

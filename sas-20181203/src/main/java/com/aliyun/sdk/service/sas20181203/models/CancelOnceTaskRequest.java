@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelOnceTaskRequest} extends {@link RequestModel}
  *
  * <p>CancelOnceTaskRequest</p>
@@ -54,10 +55,14 @@ public class CancelOnceTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task.
-         * <p>
+         * <p>The ID of the task.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~GenerateOnceTask~~">GenerateOnceTask</a> operation to query the IDs of tasks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [GenerateOnceTask](~~GenerateOnceTask~~) operation to query the IDs of tasks.
+         * <strong>example:</strong>
+         * <p>ec9c0d88f36cc27765a98c554ee2****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

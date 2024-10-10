@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeHoneypotNodeRequest} extends {@link RequestModel}
  *
  * <p>UpgradeHoneypotNodeRequest</p>
@@ -81,11 +82,14 @@ public class UpgradeHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * Specifies whether to allow the honeypot to access the Internet. Valid values:
-         * <p>
+         * <p>Specifies whether to allow the honeypot to access the Internet. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowHoneypotAccessInternet(Boolean allowHoneypotAccessInternet) {
             this.putQueryParameter("AllowHoneypotAccessInternet", allowHoneypotAccessInternet);
@@ -94,11 +98,14 @@ public class UpgradeHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response.
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -107,10 +114,13 @@ public class UpgradeHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The ID of the management node that you want to upgrade.
-         * <p>
+         * <p>The ID of the management node that you want to upgrade.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

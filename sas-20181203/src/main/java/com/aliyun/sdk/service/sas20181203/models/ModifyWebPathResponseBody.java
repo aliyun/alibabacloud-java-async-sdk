@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebPathResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyWebPathResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyWebPathResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20623245-7E5E-52CA-9640-7502F119****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class ModifyWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

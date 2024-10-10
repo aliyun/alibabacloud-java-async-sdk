@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileDetectReportRequest} extends {@link RequestModel}
  *
  * <p>GetFileDetectReportRequest</p>
@@ -109,7 +110,10 @@ public class GetFileDetectReportRequest extends Request {
         } 
 
         /**
-         * The event ID that corresponds to the file to be detected.
+         * <p>The event ID that corresponds to the file to be detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81****</p>
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -118,16 +122,18 @@ public class GetFileDetectReportRequest extends Request {
         }
 
         /**
-         * The field that you want to query. You can enter multiple fields and separate them with commas (,).
-         * <p>
+         * <p>The field that you want to query. You can enter multiple fields and separate them with commas (,).</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>ThreatTypes</strong>: the type of the threat intelligence event</li>
+         * <li><strong>Intelligences</strong>: the threat intelligence event</li>
+         * <li><strong>ThreatLevel</strong>: the level of the threat intelligence event</li>
+         * <li><strong>Basic</strong>: the basic information about the report (the scan result)</li>
+         * <li><strong>Sandbox</strong>: the cloud sandbox check report</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **ThreatTypes**: the type of the threat intelligence event
-         * *   **Intelligences**: the threat intelligence event
-         * *   **ThreatLevel**: the level of the threat intelligence event
-         * *   **Basic**: the basic information about the report (the scan result)
-         * *   **Sandbox**: the cloud sandbox check report
+         * <strong>example:</strong>
+         * <p>Basic,,ThreatTypes,Intelligences,Sandbox</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -136,7 +142,10 @@ public class GetFileDetectReportRequest extends Request {
         }
 
         /**
-         * The hash value of the file to be detected.
+         * <p>The hash value of the file to be detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b63917332950e5d219d0737ffe31****</p>
          */
         public Builder fileHash(String fileHash) {
             this.putQueryParameter("FileHash", fileHash);
@@ -145,11 +154,14 @@ public class GetFileDetectReportRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -158,11 +170,14 @@ public class GetFileDetectReportRequest extends Request {
         }
 
         /**
-         * The data source type. Valid values:
-         * <p>
+         * <p>The data source type. Valid values:</p>
+         * <ul>
+         * <li><strong>machine</strong>: host alerts</li>
+         * <li><strong>object_scan</strong>: file detection alerts</li>
+         * </ul>
          * 
-         * *   **machine**: host alerts
-         * *   **object_scan**: file detection alerts
+         * <strong>example:</strong>
+         * <p>object_scan</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

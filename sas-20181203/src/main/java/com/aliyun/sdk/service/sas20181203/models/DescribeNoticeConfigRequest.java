@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNoticeConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeNoticeConfigRequest</p>
@@ -53,7 +54,10 @@ public class DescribeNoticeConfigRequest extends Request {
         } 
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.191.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

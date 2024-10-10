@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskCheckResultResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRiskCheckResultResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -117,7 +121,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -125,7 +132,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The check items.
+         * <p>The check items.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -133,7 +140,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageCount(Integer pageCount) {
             this.pageCount = pageCount;
@@ -141,7 +151,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: **20**.
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -149,7 +162,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD271C07-4ACE-413D-AA9B-F14FD3B7717F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +173,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,6 +189,12 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRiskCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskCheckResultResponseBody</p>
+     */
     public static class RiskItemResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContentResource")
         private java.util.Map < String, ? > contentResource;
@@ -209,7 +234,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             private String resourceName; 
 
             /**
-             * The details about the check results.
+             * <p>The details about the check results.</p>
              */
             public Builder contentResource(java.util.Map < String, ? > contentResource) {
                 this.contentResource = contentResource;
@@ -217,13 +242,16 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The title in the details. Valid values:
-             * <p>
+             * <p>The title in the details. Valid values:</p>
+             * <ul>
+             * <li><strong>bestPractice</strong>: description</li>
+             * <li><strong>influence</strong>: risk</li>
+             * <li><strong>suggestion</strong>: solution</li>
+             * <li><strong>helpResource</strong>: reference</li>
+             * </ul>
              * 
-             * *   **bestPractice**: description
-             * *   **influence**: risk
-             * *   **suggestion**: solution
-             * *   **helpResource**: reference
+             * <strong>example:</strong>
+             * <p>bestPractice</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -237,6 +265,12 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRiskCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskCheckResultResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffectedCount")
         private Integer affectedCount;
@@ -420,7 +454,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of affected assets.
+             * <p>The number of affected assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder affectedCount(Integer affectedCount) {
                 this.affectedCount = affectedCount;
@@ -428,7 +465,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last check was performed. Unit: milliseconds.
+             * <p>The timestamp when the last check was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639429164000</p>
              */
             public Builder checkTime(Long checkTime) {
                 this.checkTime = checkTime;
@@ -436,7 +476,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item. For more information about the check item, see the check item table in the "Response parameters" section of this topic.
+             * <p>The ID of the check item. For more information about the check item, see the check item table in the &quot;Response parameters&quot; section of this topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -444,7 +487,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the next check will be performed.
+             * <p>The time when the next check will be performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remainingTime(Integer remainingTime) {
                 this.remainingTime = remainingTime;
@@ -452,11 +498,14 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the risks that are detected based on the check item can be fixed. Valid values:
-             * <p>
+             * <p>Indicates whether the risks that are detected based on the check item can be fixed. Valid values:</p>
+             * <ul>
+             * <li><strong>enabled</strong>: yes</li>
+             * <li><strong>disabled</strong>: no</li>
+             * </ul>
              * 
-             * *   **enabled**: yes
-             * *   **disabled**: no
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder repairStatus(String repairStatus) {
                 this.repairStatus = repairStatus;
@@ -464,7 +513,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the affected assets.
+             * <p>The type of the affected assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder riskAssertType(String riskAssertType) {
                 this.riskAssertType = riskAssertType;
@@ -472,7 +524,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details about the check item.
+             * <p>An array that consists of the details about the check item.</p>
              */
             public Builder riskItemResources(java.util.List < RiskItemResources> riskItemResources) {
                 this.riskItemResources = riskItemResources;
@@ -480,12 +532,15 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the check item. Valid values:
-             * <p>
+             * <p>The risk level of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -493,7 +548,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number in the check results. The check items are sorted based on the sequence number.
+             * <p>The sequence number in the check results. The check items are sorted based on the sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sort(Integer sort) {
                 this.sort = sort;
@@ -501,11 +559,14 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the check item is supported by the edition of Security Center that you purchase. Valid values:
-             * <p>
+             * <p>Indicates whether the check item is supported by the edition of Security Center that you purchase. Valid values:</p>
+             * <ul>
+             * <li><strong>enabled</strong>: yes</li>
+             * <li><strong>disable</strong>: no</li>
+             * </ul>
              * 
-             * *   **enabled**: yes
-             * *   **disable**: no
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder startStatus(String startStatus) {
                 this.startStatus = startStatus;
@@ -513,15 +574,18 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check results. Valid values:
-             * <p>
+             * <p>The status of the check results. Valid values:</p>
+             * <ul>
+             * <li><strong>pass</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>running</strong></li>
+             * <li><strong>waiting</strong></li>
+             * <li><strong>ignored</strong></li>
+             * <li><strong>falsePositive</strong></li>
+             * </ul>
              * 
-             * *   **pass**
-             * *   **failed**
-             * *   **running**
-             * *   **waiting**
-             * *   **ignored**
-             * *   **falsePositive**
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -529,7 +593,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check task.
+             * <p>The ID of the check task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15384933</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -537,7 +604,10 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS - Whitelist Configuration</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -545,15 +615,18 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item. Valid values:
-             * <p>
+             * <p>The type of the check item. Valid values:</p>
+             * <ul>
+             * <li>Identity authentication and permissions</li>
+             * <li>Network access control</li>
+             * <li>Log audit</li>
+             * <li>Data security</li>
+             * <li>Monitoring and alerting</li>
+             * <li>Basic security protection</li>
+             * </ul>
              * 
-             * *   Identity authentication and permissions
-             * *   Network access control
-             * *   Log audit
-             * *   Data security
-             * *   Monitoring and alerting
-             * *   Basic security protection
+             * <strong>example:</strong>
+             * <p>Log audit</p>
              */
             public Builder type(String type) {
                 this.type = type;

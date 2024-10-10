@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RefreshRegistryTokenRequest} extends {@link RequestModel}
  *
  * <p>RefreshRegistryTokenRequest</p>
@@ -54,7 +55,10 @@ public class RefreshRegistryTokenRequest extends Request {
         } 
 
         /**
-         * RegistryId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registryId(Long registryId) {
             this.putQueryParameter("RegistryId", registryId);

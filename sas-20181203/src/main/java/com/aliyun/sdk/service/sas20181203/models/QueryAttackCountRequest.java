@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAttackCountRequest} extends {@link RequestModel}
  *
  * <p>QueryAttackCountRequest</p>
@@ -95,7 +96,10 @@ public class QueryAttackCountRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Set the value to sas.
+         * <p>The ID of the request source. Set the value to sas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -104,11 +108,14 @@ public class QueryAttackCountRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -117,7 +124,10 @@ public class QueryAttackCountRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>175.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -126,10 +136,13 @@ public class QueryAttackCountRequest extends Request {
         }
 
         /**
-         * The UUID of the asset.
-         * <p>
+         * <p>The UUID of the asset.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of assets.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
+         * <strong>example:</strong>
+         * <p>0c1714dc-f7a3-4265-8364-7aa3fce8****,1cc45e7d-7698-4b2c-89d8-e8cba407****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVpcHoneyPotRequest} extends {@link RequestModel}
  *
  * <p>ModifyVpcHoneyPotRequest</p>
@@ -69,11 +70,15 @@ public class ModifyVpcHoneyPotRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable or disable the honeypot. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable the honeypot. Valid values:</p>
+         * <ul>
+         * <li><strong>disable</strong></li>
+         * <li><strong>enable</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **disable**
-         * *   **enable**
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         public Builder honeyPotAction(String honeyPotAction) {
             this.putQueryParameter("HoneyPotAction", honeyPotAction);
@@ -82,10 +87,14 @@ public class ModifyVpcHoneyPotRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) on which the honeypot is deployed.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC) on which the honeypot is deployed.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to query the IDs of VPCs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeVpcHoneyPotList](~~DescribeVpcHoneyPotList~~) operation to query the IDs of VPCs.
+         * <strong>example:</strong>
+         * <p>vpc-d7o009q63fqy21r8u****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

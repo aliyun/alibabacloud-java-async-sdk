@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateBucketScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>OperateBucketScanTaskResponseBody</p>
@@ -37,7 +38,10 @@ public class OperateBucketScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C8487EF-50C2-54BB-8634-10F8C35D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

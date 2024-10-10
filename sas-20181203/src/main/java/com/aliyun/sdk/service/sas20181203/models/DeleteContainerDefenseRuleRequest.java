@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContainerDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteContainerDefenseRuleRequest</p>
@@ -53,10 +54,10 @@ public class DeleteContainerDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The IDs of the rules that you want to delete.
-         * <p>
-         * 
-         * >  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule IDs.
+         * <p>The IDs of the rules that you want to delete.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the rule IDs.</p>
+         * </blockquote>
          */
         public Builder ruleIds(java.util.List < Long > ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);

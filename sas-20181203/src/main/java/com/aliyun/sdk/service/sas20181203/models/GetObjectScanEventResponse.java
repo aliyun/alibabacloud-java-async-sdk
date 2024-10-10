@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetObjectScanEventResponse} extends {@link TeaModel}
  *
  * <p>GetObjectScanEventResponse</p>

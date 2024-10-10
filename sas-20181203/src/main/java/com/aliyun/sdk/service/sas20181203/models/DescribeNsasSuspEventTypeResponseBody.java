@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNsasSuspEventTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNsasSuspEventTypeResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about the alert type.
+         * <p>An array that consists of the information about the alert type.</p>
          */
         public Builder eventTypes(java.util.List < EventTypes> eventTypes) {
             this.eventTypes = eventTypes;
@@ -57,7 +58,10 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FBC6E47-7508-58C9-9E76-528E118CB1CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeNsasSuspEventTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeNsasSuspEventTypeResponseBody</p>
+     */
     public static class EventTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -121,7 +131,10 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the alert type.
+             * <p>The name of the alert type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -129,7 +142,10 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets for which an alert of the type is generated.
+             * <p>The number of assets for which an alert of the type is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder suspEventCount(Integer suspEventCount) {
                 this.suspEventCount = suspEventCount;
@@ -137,7 +153,10 @@ public class DescribeNsasSuspEventTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type.
+             * <p>The alert type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder type(String type) {
                 this.type = type;

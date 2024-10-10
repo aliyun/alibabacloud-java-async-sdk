@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVulGlobalConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListVulGlobalConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
         private java.util.List < VulGlobalConfigList> vulGlobalConfigList; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations.
+         * <p>The configurations.</p>
          */
         public Builder vulGlobalConfigList(java.util.List < VulGlobalConfigList> vulGlobalConfigList) {
             this.vulGlobalConfigList = vulGlobalConfigList;
@@ -70,6 +74,12 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVulGlobalConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVulGlobalConfigResponseBody</p>
+     */
     public static class VulGlobalConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigKey")
         private String configKey;
@@ -109,7 +119,10 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
             private String configValue; 
 
             /**
-             * The key of the configuration item.
+             * <p>The key of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vul_scan_ip_list</p>
              */
             public Builder configKey(String configKey) {
                 this.configKey = configKey;
@@ -117,7 +130,10 @@ public class ListVulGlobalConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the configuration item.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.<em>.</em>,127.0.<em>.</em></p>
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;

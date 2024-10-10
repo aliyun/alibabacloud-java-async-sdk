@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRiskItemTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRiskItemTypeResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of information about the type of the check item.
+         * <p>An array that consists of information about the type of the check item.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -57,7 +58,10 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3B3F3A90-46A5-4023-A2D8-D68B14262F96</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRiskItemTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRiskItemTypeResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -109,7 +119,10 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37625</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -117,7 +130,10 @@ public class DescribeRiskItemTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check type.
+             * <p>The name of the check type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity authentication and permissions</p>
              */
             public Builder title(String title) {
                 this.title = title;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFixUsedCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFixUsedCountResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         private Integer usedCountSg; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1CE824-7F80-546D-8AF8-4A5209F9B698</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +85,10 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that are fixed by the vulnerability fixing feature.
+         * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder usedCount(Integer usedCount) {
             this.usedCount = usedCount;
@@ -89,7 +96,10 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that are fixed by the vulnerability fixing feature in China.
+         * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature in China.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder usedCountCn(Integer usedCountCn) {
             this.usedCountCn = usedCountCn;
@@ -97,7 +107,10 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vulnerabilities that are fixed by the vulnerability fixing feature outside China.
+         * <p>The number of vulnerabilities that are fixed by the vulnerability fixing feature outside China.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder usedCountSg(Integer usedCountSg) {
             this.usedCountSg = usedCountSg;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInterceptionTargetRequest} extends {@link RequestModel}
  *
  * <p>DeleteInterceptionTargetRequest</p>
@@ -54,7 +55,11 @@ public class DeleteInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * The IDs of the network objects that you want to remove. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of the network objects.
+         * <p>The IDs of the network objects that you want to remove. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of the network objects.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,11,111</p>
          */
         public Builder targetIds(String targetIds) {
             this.putQueryParameter("TargetIds", targetIds);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteOssScanConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteOssScanConfigResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteOssScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

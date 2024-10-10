@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BindAuthToMachineResponseBody} extends {@link TeaModel}
  *
  * <p>BindAuthToMachineResponseBody</p>
@@ -97,7 +98,10 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         private Integer unBindCount; 
 
         /**
-         * The number of bound servers.
+         * <p>The number of bound servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bindCount(Integer bindCount) {
             this.bindCount = bindCount;
@@ -105,7 +109,10 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The shortage in the quota for cores of servers that can be protected.
+         * <p>The shortage in the quota for cores of servers that can be protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder insufficientCoreCount(Integer insufficientCoreCount) {
             this.insufficientCoreCount = insufficientCoreCount;
@@ -113,7 +120,10 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The shortage in the quota for servers that can be protected.
+         * <p>The shortage in the quota for servers that can be protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder insufficientEcsCount(Integer insufficientEcsCount) {
             this.insufficientEcsCount = insufficientEcsCount;
@@ -121,7 +131,10 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23AD0BD2-8771-5647-819E-6BA51E212F80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,13 +142,16 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The status code that indicates the result. Valid values:
-         * <p>
+         * <p>The status code that indicates the result. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The servers are bound to or unbound from Security Center.</li>
+         * <li><strong>1</strong>: The values that you specified for the parameters are invalid.</li>
+         * <li><strong>2</strong>: The quota for servers that can be protected is insufficient.</li>
+         * <li><strong>3</strong>: The quota for cores of servers that can be protected is insufficient.</li>
+         * </ul>
          * 
-         * *   **0**: The servers are bound to or unbound from Security Center.
-         * *   **1**: The values that you specified for the parameters are invalid.
-         * *   **2**: The quota for servers that can be protected is insufficient.
-         * *   **3**: The quota for cores of servers that can be protected is insufficient.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder resultCode(Integer resultCode) {
             this.resultCode = resultCode;
@@ -143,7 +159,10 @@ public class BindAuthToMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The number of unbound servers.
+         * <p>The number of unbound servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder unBindCount(Integer unBindCount) {
             this.unBindCount = unBindCount;

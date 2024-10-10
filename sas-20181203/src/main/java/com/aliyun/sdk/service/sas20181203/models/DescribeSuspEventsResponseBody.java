@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSuspEventsResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -105,7 +109,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +120,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +131,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D6E20E4-8326-1D03-A553-2182BE9E82F9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the alert events.
+         * <p>The information about the alert events.</p>
          */
         public Builder suspEvents(java.util.List < SuspEvents> suspEvents) {
             this.suspEvents = suspEvents;
@@ -137,7 +150,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of alert events.
+         * <p>The total number of alert events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSuspEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSuspEventsResponseBody</p>
+     */
     public static class Details extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameDisplay")
         private String nameDisplay;
@@ -213,7 +235,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String valueDisplay; 
 
             /**
-             * The display name of the alert event.
+             * <p>The display name of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Login with unusual location</p>
              */
             public Builder nameDisplay(String nameDisplay) {
                 this.nameDisplay = nameDisplay;
@@ -221,7 +246,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert event.
+             * <p>The type of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -229,7 +257,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the alert event.
+             * <p>The path of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/etc/crontab</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -237,7 +268,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the path of the alert event.
+             * <p>The display name of the path of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/etc/crontab</p>
              */
             public Builder valueDisplay(String valueDisplay) {
                 this.valueDisplay = valueDisplay;
@@ -251,6 +285,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSuspEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSuspEventsResponseBody</p>
+     */
     public static class EventNotes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
@@ -302,7 +342,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String noteTime; 
 
             /**
-             * The note.
+             * <p>The note.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -310,7 +353,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the note.
+             * <p>The ID of the note.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder noteId(Long noteId) {
                 this.noteId = noteId;
@@ -318,7 +364,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the note was created.
+             * <p>The time when the note was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-26 01:51:01</p>
              */
             public Builder noteTime(String noteTime) {
                 this.noteTime = noteTime;
@@ -332,6 +381,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSuspEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSuspEventsResponseBody</p>
+     */
     public static class TacticItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TacticDisplayName")
         private String tacticDisplayName;
@@ -371,7 +426,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String tacticId; 
 
             /**
-             * The tactic name of ATT\&CK.
+             * <p>The tactic name of ATT&amp;CK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Malicious scripts-Malicious script code execution</p>
              */
             public Builder tacticDisplayName(String tacticDisplayName) {
                 this.tacticDisplayName = tacticDisplayName;
@@ -379,7 +437,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The stage information about ATT\&CK.
+             * <p>The stage information about ATT&amp;CK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TA0001</p>
              */
             public Builder tacticId(String tacticId) {
                 this.tacticId = tacticId;
@@ -393,6 +454,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSuspEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSuspEventsResponseBody</p>
+     */
     public static class SuspEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Advanced")
         private Boolean advanced;
@@ -1068,7 +1135,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String clusterId; 
 
             /**
-             * Indicates whether the alert event was analyzed offline.
+             * <p>Indicates whether the alert event was analyzed offline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder advanced(Boolean advanced) {
                 this.advanced = advanced;
@@ -1076,7 +1146,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert event.
+             * <p>The name of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_common_location</p>
              */
             public Builder alarmEventName(String alarmEventName) {
                 this.alarmEventName = alarmEventName;
@@ -1084,7 +1157,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert.
+             * <p>The name of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Login with unusual location</p>
              */
             public Builder alarmEventNameDisplay(String alarmEventNameDisplay) {
                 this.alarmEventNameDisplay = alarmEventNameDisplay;
@@ -1092,7 +1168,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert event.
+             * <p>The type of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder alarmEventType(String alarmEventType) {
                 this.alarmEventType = alarmEventType;
@@ -1100,7 +1179,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the type of the alert event.
+             * <p>The display name of the type of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder alarmEventTypeDisplay(String alarmEventTypeDisplay) {
                 this.alarmEventTypeDisplay = alarmEventTypeDisplay;
@@ -1108,7 +1190,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the alert event.
+             * <p>The unique ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8df914418f****</p>
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -1116,7 +1201,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application to which the alert event belongs.
+             * <p>The name of the application to which the alert event belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pro-deploy-tibasic</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -1124,7 +1212,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether automatic defense is enabled.
+             * <p>Indicates whether automatic defense is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoBreaking(Boolean autoBreaking) {
                 this.autoBreaking = autoBreaking;
@@ -1132,11 +1223,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether you can handle the alert event online, such as quarantining the source file of the malicious process. Valid values:
-             * <p>
+             * <p>Indicates whether you can handle the alert event online, such as quarantining the source file of the malicious process. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canBeDealOnLine(Boolean canBeDealOnLine) {
                 this.canBeDealOnLine = canBeDealOnLine;
@@ -1144,11 +1238,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether you can cancel marking the alert event as a false positive. Valid values:
-             * <p>
+             * <p>Indicates whether you can cancel marking the alert event as a false positive. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder canCancelFault(Boolean canCancelFault) {
                 this.canCancelFault = canCancelFault;
@@ -1156,11 +1253,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the safeguard mode for major activities is enabled for the server. Valid values:
-             * <p>
+             * <p>Indicates whether the safeguard mode for major activities is enabled for the server. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder containHwMode(Boolean containHwMode) {
                 this.containHwMode = containHwMode;
@@ -1168,7 +1268,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * <p>The ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>container_1648601865161_14925_02_000****</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -1176,7 +1279,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container image.
+             * <p>The ID of the container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha256:2e5a3b0ae5f452b3cb458789a9a7542ef40035a84318469a8528c5e444db1****</p>
              */
             public Builder containerImageId(String containerImageId) {
                 this.containerImageId = containerImageId;
@@ -1184,7 +1290,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container image.
+             * <p>The name of the container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos7_apache:v1.0.1</p>
              */
             public Builder containerImageName(String containerImageName) {
                 this.containerImageName = containerImageName;
@@ -1192,7 +1301,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of data. This parameter can be ignored.
+             * <p>The source of data. This parameter can be ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aegis_suspicious_****</p>
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -1200,7 +1312,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The impact of the alert event.
+             * <p>The impact of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>webshell</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -1208,7 +1323,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the alert event.
+             * <p>The details of the alert event.</p>
              */
             public Builder details(java.util.List < Details> details) {
                 this.details = details;
@@ -1216,11 +1331,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert event can be detected by cloud sandbox. Valid values:
-             * <p>
+             * <p>Indicates whether the alert event can be detected by cloud sandbox. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder displaySandboxResult(Boolean displaySandboxResult) {
                 this.displaySandboxResult = displaySandboxResult;
@@ -1228,7 +1346,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The note information about the alert event.
+             * <p>The note information about the alert event.</p>
              */
             public Builder eventNotes(java.util.List < EventNotes> eventNotes) {
                 this.eventNotes = eventNotes;
@@ -1236,16 +1354,19 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the alert event. Valid values:
-             * <p>
+             * <p>The status of the alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: pending handling</li>
+             * <li><strong>2</strong>: ignored</li>
+             * <li><strong>4</strong>: confirmed</li>
+             * <li><strong>8</strong>: marked as a false positive</li>
+             * <li><strong>16</strong>: handling</li>
+             * <li><strong>32</strong>: handled</li>
+             * <li><strong>64</strong>: expired</li>
+             * </ul>
              * 
-             * *   **1**: pending handling
-             * *   **2**: ignored
-             * *   **4**: confirmed
-             * *   **8**: marked as a false positive
-             * *   **16**: handling
-             * *   **32**: handled
-             * *   **64**: expired
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eventStatus(Integer eventStatus) {
                 this.eventStatus = eventStatus;
@@ -1253,7 +1374,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the alert event.
+             * <p>The subtype of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_common_location</p>
              */
             public Builder eventSubType(String eventSubType) {
                 this.eventSubType = eventSubType;
@@ -1261,11 +1385,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert event has tracing information. Valid values:
-             * <p>
+             * <p>Indicates whether the alert event has tracing information. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasTraceInfo(Boolean hasTraceInfo) {
                 this.hasTraceInfo = hasTraceInfo;
@@ -1273,7 +1400,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the alert event.
+             * <p>The unique ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1281,7 +1411,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image.
+             * <p>The UUID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70489fb520cea585ad9761d5a842****</p>
              */
             public Builder imageUuid(String imageUuid) {
                 this.imageUuid = imageUuid;
@@ -1289,7 +1422,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the affected asset.
+             * <p>The instance ID of the affected asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-9dp6dwsxdl9z5u1e2f****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1297,7 +1433,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the associated instance.
+             * <p>The name of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1305,7 +1444,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the associated instance.
+             * <p>The public IP address of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -1313,7 +1455,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the associated instance.
+             * <p>The private IP address of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.100.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -1321,7 +1466,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Kubernetes cluster.
+             * <p>The ID of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c517b37e1401e4961b3951863a49a****</p>
              */
             public Builder k8sClusterId(String k8sClusterId) {
                 this.k8sClusterId = k8sClusterId;
@@ -1329,7 +1477,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Kubernetes cluster.
+             * <p>The name of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-daily</p>
              */
             public Builder k8sClusterName(String k8sClusterName) {
                 this.k8sClusterName = k8sClusterName;
@@ -1337,7 +1488,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the Kubernetes cluster.
+             * <p>The namespace of the Kubernetes cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder k8sNamespace(String k8sNamespace) {
                 this.k8sNamespace = k8sNamespace;
@@ -1345,7 +1499,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Kubernetes node.
+             * <p>The ID of the Kubernetes node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp14a1ay8e0aa9t0****</p>
              */
             public Builder k8sNodeId(String k8sNodeId) {
                 this.k8sNodeId = k8sNodeId;
@@ -1353,7 +1510,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Kubernetes node.
+             * <p>The name of the Kubernetes node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N/A</p>
              */
             public Builder k8sNodeName(String k8sNodeName) {
                 this.k8sNodeName = k8sNodeName;
@@ -1361,7 +1521,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Kubernetes pod.
+             * <p>The name of the Kubernetes pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myapp-pod</p>
              */
             public Builder k8sPodName(String k8sPodName) {
                 this.k8sPodName = k8sPodName;
@@ -1369,11 +1532,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the large model analysis tag is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the large model analysis tag is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder largeModel(Boolean largeModel) {
                 this.largeModel = largeModel;
@@ -1381,7 +1547,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert event was last detected.
+             * <p>The time when the alert event was last detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-26 01:51:01</p>
              */
             public Builder lastTime(String lastTime) {
                 this.lastTime = lastTime;
@@ -1389,7 +1558,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was last detected. Unit: milliseconds.
+             * <p>The timestamp when the alert event was last detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631699497000</p>
              */
             public Builder lastTimeStamp(Long lastTimeStamp) {
                 this.lastTimeStamp = lastTimeStamp;
@@ -1397,12 +1569,15 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the alert event. Valid values:
-             * <p>
+             * <p>The severity of the alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>serious</strong></li>
+             * <li><strong>suspicious</strong></li>
+             * <li><strong>remind</strong></li>
+             * </ul>
              * 
-             * *   **serious**
-             * *   **suspicious**
-             * *   **remind**
+             * <strong>example:</strong>
+             * <p>serious</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1410,11 +1585,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the malicious behavior defense rule. Valid values:
-             * <p>
+             * <p>The status of the malicious behavior defense rule. Valid values:</p>
+             * <ul>
+             * <li><strong>open</strong></li>
+             * <li><strong>close</strong></li>
+             * </ul>
              * 
-             * *   **open**
-             * *   **close**
+             * <strong>example:</strong>
+             * <p>open</p>
              */
             public Builder maliciousRuleStatus(String maliciousRuleStatus) {
                 this.maliciousRuleStatus = maliciousRuleStatus;
@@ -1422,7 +1600,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The labels of alarm event.
+             * <p>The labels of alarm event.</p>
              */
             public Builder markList(java.util.List < String > markList) {
                 this.markList = markList;
@@ -1430,7 +1608,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The advanced whitelist rule.
+             * <p>The advanced whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;uuid&quot;:&quot;ALL&quot;,&quot;field&quot;:&quot;gmtModified&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;222&quot;}]</p>
              */
             public Builder markMisRules(String markMisRules) {
                 this.markMisRules = markMisRules;
@@ -1438,7 +1619,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The complete name of the alert event.
+             * <p>The complete name of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon-Login with unusual location</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1446,7 +1630,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert event was first detected.
+             * <p>The time when the alert event was first detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-26 01:51:01</p>
              */
             public Builder occurrenceTime(String occurrenceTime) {
                 this.occurrenceTime = occurrenceTime;
@@ -1454,7 +1641,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was first detected. Unit: milliseconds.
+             * <p>The timestamp when the alert event was first detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631699497000</p>
              */
             public Builder occurrenceTimeStamp(Long occurrenceTimeStamp) {
                 this.occurrenceTimeStamp = occurrenceTimeStamp;
@@ -1462,7 +1652,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The handling result code of the alert event.
+             * <p>The handling result code of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kill_and_quara.Success</p>
              */
             public Builder operateErrorCode(String operateErrorCode) {
                 this.operateErrorCode = operateErrorCode;
@@ -1470,7 +1663,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The handing result message of the alert event.
+             * <p>The handing result message of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder operateMsg(String operateMsg) {
                 this.operateMsg = operateMsg;
@@ -1478,7 +1674,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The handling timestamp of the alert event. Unit: milliseconds.
+             * <p>The handling timestamp of the alert event. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1631699497000</p>
              */
             public Builder operateTime(Long operateTime) {
                 this.operateTime = operateTime;
@@ -1486,11 +1685,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Security Center in which the alert event can be detected. Valid values:
-             * <p>
+             * <p>The edition of Security Center in which the alert event can be detected. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Basic edition</li>
+             * <li><strong>1</strong>: Enterprise edition</li>
+             * </ul>
              * 
-             * *   **0**: Basic edition
-             * *   **1**: Enterprise edition
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder saleVersion(String saleVersion) {
                 this.saleVersion = saleVersion;
@@ -1498,7 +1700,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated alert event.
+             * <p>The ID of the associated alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>270789</p>
              */
             public Builder securityEventIds(String securityEventIds) {
                 this.securityEventIds = securityEventIds;
@@ -1514,7 +1719,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The stage at which the attack is detected.
+             * <p>The stage at which the attack is detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;[&quot;authority_maintenance&quot;]&quot;</p>
              */
             public Builder stages(String stages) {
                 this.stages = stages;
@@ -1522,7 +1730,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the attack stage.
+             * <p>The display name of the attack stage.</p>
              */
             public Builder tacticItems(java.util.List < TacticItems> tacticItems) {
                 this.tacticItems = tacticItems;
@@ -1530,7 +1738,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique key of the alert.
+             * <p>The unique key of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e17e****</p>
              */
             public Builder uniqueInfo(String uniqueInfo) {
                 this.uniqueInfo = uniqueInfo;
@@ -1538,7 +1749,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the associated instance.
+             * <p>The unique ID of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bf6b30d3-eea8-4924-9f0a-****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1546,7 +1760,10 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2051775877374cccbf68af596e6****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockProcessBlockStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebLockProcessBlockStatisticsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         }
 
         /**
-         * An array consisting of the statistics on processes.
+         * <p>An array consisting of the statistics on processes.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -101,7 +105,10 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
         }
 
         /**
-         * The total number of processes.
+         * <p>The total number of processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebLockProcessBlockStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebLockProcessBlockStatisticsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -169,7 +188,10 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
             private String process; 
 
             /**
-             * The number of processes that are returned on the current page.
+             * <p>The number of processes that are returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -177,7 +199,10 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
             }
 
             /**
-             * The process.
+             * <p>The process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
              */
             public Builder process(String process) {
                 this.process = process;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupedVulResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupedVulResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the vulnerability.
+         * <p>The information about the vulnerability.</p>
          */
         public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -101,7 +105,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page. Default value: 10.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9BFA6D78-07EA-5C0A-9358-E4434573507B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupedVulResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupedVulResponseBody</p>
+     */
     public static class GroupedVulItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -289,7 +308,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RHSA-2017:0184-Important: mysql security update</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -297,7 +319,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that have the **high** priority.
+             * <p>The number of vulnerabilities that have the <strong>high</strong> priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder asapCount(Integer asapCount) {
                 this.asapCount = asapCount;
@@ -305,7 +330,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vulnerability was last detected. Unit: milliseconds.
+             * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1639371446000</p>
              */
             public Builder gmtLast(Long gmtLast) {
                 this.gmtLast = gmtLast;
@@ -313,7 +341,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The number of handled vulnerabilities.
+             * <p>The number of handled vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder handledCount(Integer handledCount) {
                 this.handledCount = handledCount;
@@ -321,7 +352,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that have the **medium** priority.
+             * <p>The number of vulnerabilities that have the <strong>medium</strong> priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder laterCount(Integer laterCount) {
                 this.laterCount = laterCount;
@@ -329,7 +363,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oval:com.redhat.rhsa:def:20170184</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -337,7 +374,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that have the **low** priority.
+             * <p>The number of vulnerabilities that have the <strong>low</strong> priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59</p>
              */
             public Builder nntfCount(Integer nntfCount) {
                 this.nntfCount = nntfCount;
@@ -345,13 +385,17 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application protection feature is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: not supported</li>
+             * <li><strong>1</strong>: supported</li>
+             * </ul>
+             * <blockquote>
+             * <p> If this parameter is not returned, the application protection feature is not supported.</p>
+             * </blockquote>
              * 
-             * *   **0**: not supported
-             * *   **1**: supported
-             * 
-             * >  If this parameter is not returned, the application protection feature is not supported.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder raspDefend(Integer raspDefend) {
                 this.raspDefend = raspDefend;
@@ -359,7 +403,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.
+             * <p>The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2023-24881,CVE-2023-24898</p>
              */
             public Builder related(String related) {
                 this.related = related;
@@ -367,15 +414,18 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the vulnerability. Valid values:
-             * <p>
+             * <p>The tag of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>Restart required</strong></li>
+             * <li><strong>Remote utilization</strong></li>
+             * <li><strong>EXP exists</strong></li>
+             * <li><strong>Available</strong></li>
+             * <li><strong>Elevation of Privilege</strong></li>
+             * <li><strong>Code Execution</strong></li>
+             * </ul>
              * 
-             * *   **Restart required**
-             * *   **Remote utilization**
-             * *   **EXP exists**
-             * *   **Available**
-             * *   **Elevation of Privilege**
-             * *   **Code Execution**
+             * <strong>example:</strong>
+             * <p>Code Execution</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -383,7 +433,10 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of fixed vulnerabilities.
+             * <p>The total number of fixed vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalFixCount(Long totalFixCount) {
                 this.totalFixCount = totalFixCount;
@@ -391,15 +444,18 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: Linux software vulnerability</li>
+             * <li><strong>sys</strong>: Windows system vulnerability</li>
+             * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+             * <li><strong>app</strong>: application vulnerability</li>
+             * <li><strong>emg</strong>: urgent vulnerability</li>
+             * <li><strong>sca</strong>: vulnerability that is detected by software component analysis</li>
+             * </ul>
              * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
-             * *   **cms**: Web-CMS vulnerability
-             * *   **app**: application vulnerability
-             * *   **emg**: urgent vulnerability
-             * *   **sca**: vulnerability that is detected by software component analysis
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder type(String type) {
                 this.type = type;

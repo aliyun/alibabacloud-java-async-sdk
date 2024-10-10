@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebPathRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebPathRequest</p>
@@ -81,7 +82,10 @@ public class DescribeWebPathRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -90,7 +94,10 @@ public class DescribeWebPathRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -99,10 +106,13 @@ public class DescribeWebPathRequest extends Request {
         }
 
         /**
-         * The type of the alert configuration. Valid values:
-         * <p>
+         * <p>The type of the alert configuration. Valid values:</p>
+         * <ul>
+         * <li><strong>web_path</strong></li>
+         * </ul>
          * 
-         * *   **web_path**
+         * <strong>example:</strong>
+         * <p>web_path</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

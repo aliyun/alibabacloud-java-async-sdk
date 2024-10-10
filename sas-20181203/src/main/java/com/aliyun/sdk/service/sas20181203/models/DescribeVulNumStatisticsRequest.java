@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulNumStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVulNumStatisticsRequest</p>
@@ -53,11 +54,14 @@ public class DescribeVulNumStatisticsRequest extends Request {
         } 
 
         /**
-         * The source of the request.
-         * <p>
+         * <p>The source of the request.</p>
+         * <ul>
+         * <li>If you want to query Security Center-related data, set the value to <strong>sas</strong>.</li>
+         * <li>If you want to query Server Guard-related data, you do not need to specify this parameter.</li>
+         * </ul>
          * 
-         * *   If you want to query Security Center-related data, set the value to **sas**.
-         * *   If you want to query Server Guard-related data, you do not need to specify this parameter.
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

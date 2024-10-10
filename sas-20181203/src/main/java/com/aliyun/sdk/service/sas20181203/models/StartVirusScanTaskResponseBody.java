@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartVirusScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>StartVirusScanTaskResponseBody</p>
@@ -49,7 +50,10 @@ public class StartVirusScanTaskResponseBody extends TeaModel {
         private Long scanTaskId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAE17926-4ABE-4DBD-9600-DDCB9B200F35</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class StartVirusScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the virus scan task.
+         * <p>The ID of the virus scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>282832</p>
          */
         public Builder scanTaskId(Long scanTaskId) {
             this.scanTaskId = scanTaskId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterImageSecuritySummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterImageSecuritySummaryResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the image-related security events.
+         * <p>The information about the image-related security events.</p>
          */
         public Builder clusterImageEvent(ClusterImageEvent clusterImageEvent) {
             this.clusterImageEvent = clusterImageEvent;
@@ -57,7 +58,10 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterImageSecuritySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterImageSecuritySummaryResponseBody</p>
+     */
     public static class ImageBaseline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The number of baselines.
+             * <p>The number of baselines.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,12 +130,15 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -136,6 +152,12 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterImageSecuritySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterImageSecuritySummaryResponseBody</p>
+     */
     public static class ImageCveVul extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -175,7 +197,10 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The number of vulnerabilities.
+             * <p>The number of vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -183,12 +208,15 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The alert level. Valid values:
-             * <p>
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
+             * <li><strong>nntf</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
+             * <li><strong>later</strong>: low. You can ignore the vulnerability.</li>
+             * </ul>
              * 
-             * *   **asap**: high. You must fix the vulnerability at the earliest opportunity.
-             * *   **nntf**: medium. You can fix the vulnerability based on your business requirements.
-             * *   **later**: low. You can ignore the vulnerability.
+             * <strong>example:</strong>
+             * <p>later</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -202,6 +230,12 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterImageSecuritySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterImageSecuritySummaryResponseBody</p>
+     */
     public static class ImageMaliciousFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -241,7 +275,10 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The number of malicious samples.
+             * <p>The number of malicious samples.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -249,12 +286,15 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -268,6 +308,12 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterImageSecuritySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterImageSecuritySummaryResponseBody</p>
+     */
     public static class ImageScaVul extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -307,7 +353,10 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The number of image application vulnerabilities.
+             * <p>The number of image application vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -315,12 +364,15 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The alert level. Valid values:
-             * <p>
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
+             * <li><strong>nntf</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
+             * <li><strong>later</strong>: low. You can ignore the vulnerability.</li>
+             * </ul>
              * 
-             * *   **asap**: high. You must fix the vulnerability at the earliest opportunity.
-             * *   **nntf**: medium. You can fix the vulnerability based on your business requirements.
-             * *   **later**: low. You can ignore the vulnerability.
+             * <strong>example:</strong>
+             * <p>later</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -334,6 +386,12 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterImageSecuritySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterImageSecuritySummaryResponseBody</p>
+     */
     public static class ClusterImageEvent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageBaseline")
         private java.util.List < ImageBaseline> imageBaseline;
@@ -397,7 +455,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             private java.util.List < ImageScaVul> imageScaVul; 
 
             /**
-             * The information about image baseline risks.
+             * <p>The information about image baseline risks.</p>
              */
             public Builder imageBaseline(java.util.List < ImageBaseline> imageBaseline) {
                 this.imageBaseline = imageBaseline;
@@ -405,7 +463,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The information about image system vulnerabilities.
+             * <p>The information about image system vulnerabilities.</p>
              */
             public Builder imageCveVul(java.util.List < ImageCveVul> imageCveVul) {
                 this.imageCveVul = imageCveVul;
@@ -413,7 +471,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The information about malicious image samples.
+             * <p>The information about malicious image samples.</p>
              */
             public Builder imageMaliciousFile(java.util.List < ImageMaliciousFile> imageMaliciousFile) {
                 this.imageMaliciousFile = imageMaliciousFile;
@@ -421,7 +479,7 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The information about image application vulnerabilities.
+             * <p>The information about image application vulnerabilities.</p>
              */
             public Builder imageScaVul(java.util.List < ImageScaVul> imageScaVul) {
                 this.imageScaVul = imageScaVul;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupedTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupedTagsResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -93,7 +97,7 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the statistics of the asset tags.
+         * <p>An array that consists of the statistics of the asset tags.</p>
          */
         public Builder groupedFileds(java.util.List < GroupedFileds> groupedFileds) {
             this.groupedFileds = groupedFileds;
@@ -101,7 +105,10 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code of the request.
+         * <p>The HTTP status code of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -109,7 +116,10 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151F6EB6-D5F3-417A-AF7B-4D84975DB586</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupedTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupedTagsResponseBody</p>
+     */
     public static class GroupedFileds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
@@ -185,7 +204,10 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
             private Integer tagId; 
 
             /**
-             * The number of assets to which the tag is added.
+             * <p>The number of assets to which the tag is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>152</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -193,7 +215,10 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tag.
+             * <p>The name of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternetIp</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -201,7 +226,10 @@ public class DescribeGroupedTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tag.
+             * <p>The ID of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3252366</p>
              */
             public Builder tagId(Integer tagId) {
                 this.tagId = tagId;

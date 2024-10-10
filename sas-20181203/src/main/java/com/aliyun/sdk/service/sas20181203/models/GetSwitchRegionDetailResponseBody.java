@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSwitchRegionDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetSwitchRegionDetailResponseBody</p>
@@ -49,7 +50,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSwitchRegionDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSwitchRegionDetailResponseBody</p>
+     */
     public static class RegionStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsCount")
         private Integer ecsCount;
@@ -133,7 +143,10 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The number of ECS instances.
+             * <p>The number of ECS instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -141,7 +154,10 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration is scheduled.
+             * <p>The time when the migration is scheduled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1692858597000</p>
              */
             public Builder gmtPlanSwitchTime(Long gmtPlanSwitchTime) {
                 this.gmtPlanSwitchTime = gmtPlanSwitchTime;
@@ -149,7 +165,10 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the server resides.
+             * <p>The region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-east-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -157,11 +176,14 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The migration status. Valid values:
-             * <p>
+             * <p>The migration status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: pending</li>
+             * <li><strong>1</strong>: successful</li>
+             * </ul>
              * 
-             * *   **0**: pending
-             * *   **1**: successful
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -175,6 +197,12 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSwitchRegionDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSwitchRegionDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtIsAgreeModified")
         private Long gmtIsAgreeModified;
@@ -250,7 +278,10 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             private java.util.List < RegionStatus> regionStatus; 
 
             /**
-             * The time when the permissions were modified.
+             * <p>The time when the permissions were modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1692858597000</p>
              */
             public Builder gmtIsAgreeModified(Long gmtIsAgreeModified) {
                 this.gmtIsAgreeModified = gmtIsAgreeModified;
@@ -258,7 +289,10 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The notification time.
+             * <p>The notification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1692858597000</p>
              */
             public Builder gmtNoticed(Long gmtNoticed) {
                 this.gmtNoticed = gmtNoticed;
@@ -266,7 +300,10 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the migration is approved.
+             * <p>Indicates whether the migration is approved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAgree(String isAgree) {
                 this.isAgree = isAgree;
@@ -274,7 +311,10 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the notification is sent.
+             * <p>Indicates whether the notification is sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder isNoticed(String isNoticed) {
                 this.isNoticed = isNoticed;
@@ -282,7 +322,7 @@ public class GetSwitchRegionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the switching to the region.
+             * <p>The status of the switching to the region.</p>
              */
             public Builder regionStatus(java.util.List < RegionStatus> regionStatus) {
                 this.regionStatus = regionStatus;

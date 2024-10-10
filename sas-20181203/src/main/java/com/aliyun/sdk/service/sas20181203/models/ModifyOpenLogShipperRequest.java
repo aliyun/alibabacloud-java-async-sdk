@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyOpenLogShipperRequest} extends {@link RequestModel}
  *
  * <p>ModifyOpenLogShipperRequest</p>
@@ -67,13 +68,17 @@ public class ModifyOpenLogShipperRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Default value: **aegis**. Valid values:
-         * <p>
+         * <p>The ID of the request source. Default value: <strong>aegis</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>aegis</strong>: Server Guard</li>
+         * <li><strong>sas</strong>: Security Center</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you use Server Guard, set the value to <strong>aegis</strong>. If you use Security Center, set the value to <strong>sas</strong>.</p>
+         * </blockquote>
          * 
-         * *   **aegis**: Server Guard
-         * *   **sas**: Security Center
-         * 
-         * >  If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -82,10 +87,13 @@ public class ModifyOpenLogShipperRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

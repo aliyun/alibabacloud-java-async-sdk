@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarStrategyTaskDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeSoarStrategyTaskDetailRequest</p>
@@ -68,11 +69,14 @@ public class DescribeSoarStrategyTaskDetailRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,10 +85,14 @@ public class DescribeSoarStrategyTaskDetailRequest extends Request {
         }
 
         /**
-         * The ID of the policy task.
-         * <p>
+         * <p>The ID of the policy task.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeSoarStrategyTasks](~~DescribeSoarStrategyTasks~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>10585</p>
          */
         public Builder strategyTaskId(Long strategyTaskId) {
             this.putQueryParameter("StrategyTaskId", strategyTaskId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFileProtectEventStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateFileProtectEventStatusRequest</p>
@@ -67,7 +68,7 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         } 
 
         /**
-         * The IDs of the events.
+         * <p>The IDs of the events.</p>
          */
         public Builder id(java.util.List < Long > id) {
             this.putQueryParameter("Id", id);
@@ -76,12 +77,15 @@ public class UpdateFileProtectEventStatusRequest extends Request {
         }
 
         /**
-         * The handling status of the event. Valid values:
-         * <p>
+         * <p>The handling status of the event. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled</li>
+         * <li><strong>1</strong>: handled</li>
+         * <li><strong>2</strong>: added to the whitelist</li>
+         * </ul>
          * 
-         * *   **0**: unhandled
-         * *   **1**: handled
-         * *   **2**: added to the whitelist
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

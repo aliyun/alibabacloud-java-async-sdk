@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDynamicDictResponseBody} extends {@link TeaModel}
  *
  * <p>CreateDynamicDictResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateDynamicDictResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EACE89CB-F32B-5A85-9242-D474A2ED****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

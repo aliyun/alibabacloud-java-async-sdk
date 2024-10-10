@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryIncidentTracingJudgeResponseBody} extends {@link TeaModel}
  *
  * <p>QueryIncidentTracingJudgeResponseBody</p>
@@ -61,7 +62,10 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
         private java.util.Map < String, Integer > tracingJudge; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73563FEF-BBCB-151C-88AA-8A409CBAF0C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,11 +73,14 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -81,7 +88,7 @@ public class QueryIncidentTracingJudgeResponseBody extends TeaModel {
         }
 
         /**
-         * The request result.
+         * <p>The request result.</p>
          */
         public Builder tracingJudge(java.util.Map < String, Integer > tracingJudge) {
             this.tracingJudge = tracingJudge;

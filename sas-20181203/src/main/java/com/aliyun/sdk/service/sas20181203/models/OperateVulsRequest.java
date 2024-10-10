@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateVulsRequest} extends {@link RequestModel}
  *
  * <p>OperateVulsRequest</p>
@@ -99,7 +100,11 @@ public class OperateVulsRequest extends Request {
         } 
 
         /**
-         * The operation on the vulnerabilities. Set the value to **vul_fix**, which indicates vulnerability fixing.
+         * <p>The operation on the vulnerabilities. Set the value to <strong>vul_fix</strong>, which indicates vulnerability fixing.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vul_fix</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -108,7 +113,11 @@ public class OperateVulsRequest extends Request {
         }
 
         /**
-         * The type of the vulnerabilities that you want to fix. Set the value to **cve**, which indicates Linux software vulnerabilities.
+         * <p>The type of the vulnerabilities that you want to fix. Set the value to <strong>cve</strong>, which indicates Linux software vulnerabilities.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -117,7 +126,8 @@ public class OperateVulsRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers for which you want to fix vulnerabilities.
+         * <p>The UUIDs of servers for which you want to fix vulnerabilities.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder uuids(java.util.List < String > uuids) {
             this.putQueryParameter("Uuids", uuids);
@@ -126,7 +136,8 @@ public class OperateVulsRequest extends Request {
         }
 
         /**
-         * The names of the vulnerabilities that you want to fix.
+         * <p>The names of the vulnerabilities that you want to fix.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder vulNames(java.util.List < String > vulNames) {
             this.putQueryParameter("VulNames", vulNames);

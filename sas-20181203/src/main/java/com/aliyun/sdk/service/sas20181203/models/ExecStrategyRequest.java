@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecStrategyRequest} extends {@link RequestModel}
  *
  * <p>ExecStrategyRequest</p>
@@ -67,11 +68,14 @@ public class ExecStrategyRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -80,10 +84,13 @@ public class ExecStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy.
-         * <p>
+         * <p>The ID of the baseline check policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeStrategy~~">DescribeStrategy</a> operation to query the IDs of baseline check policies.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeStrategy](~~DescribeStrategy~~) operation to query the IDs of baseline check policies.
+         * <strong>example:</strong>
+         * <p>215421</p>
          */
         public Builder strategyId(Integer strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

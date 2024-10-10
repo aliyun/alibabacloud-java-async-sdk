@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspEventExportInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSuspEventExportInfoResponseBody</p>
@@ -157,13 +158,16 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * The handling status for the exception. Valid values:
-         * <p>
+         * <p>The handling status for the exception. Valid values:</p>
+         * <ul>
+         * <li><strong>exporting</strong>: in progress</li>
+         * <li><strong>success</strong>: successful</li>
+         * <li><strong>failed</strong>: failed</li>
+         * <li><strong>pending</strong>: pending</li>
+         * </ul>
          * 
-         * *   **exporting**: in progress
-         * *   **success**: successful
-         * *   **failed**: failed
-         * *   **pending**: pending
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -171,7 +175,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the exported file.
+         * <p>The name of the exported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>suspicious_event_20221221_1671590521234.zip</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -179,7 +186,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the export task was created.
+         * <p>The time when the export task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-20T15:18Z</p>
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -187,7 +197,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the export task was modified.
+         * <p>The time when the export task was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-20T15:18Z</p>
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -195,7 +208,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the export task.
+         * <p>The ID of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -203,7 +219,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The URL at which you can download the exported Excel file.
+         * <p>The URL at which you can download the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&OSSAccessKeyId=LTAIxxxxxxxxxxxxxx&Signature=xxxxxxxxxxxxxxxxxx">http://suspicious-xxxxxxx.oss-cn-shanghai.aliyuncs.com/xxxxxxxxxxx/suspicious_event_20221221_1671590525269.zip?Expires=1671594125&amp;OSSAccessKeyId=LTAIxxxxxxxxxxxxxx&amp;Signature=xxxxxxxxxxxxxxxxxx</a></p>
          */
         public Builder link(String link) {
             this.link = link;
@@ -211,7 +230,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The progress percentage of the export task.
+         * <p>The progress percentage of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -219,7 +241,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The exported parameters of exceptions.
+         * <p>The exported parameters of exceptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id,eventSubType,eventDetail,level,status,ip,instanceName,desc,lastTime,operateTime,note</p>
          */
         public Builder properties(String properties) {
             this.properties = properties;
@@ -227,7 +252,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578AXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +263,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of exceptions exported.
+         * <p>The total number of exceptions exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +274,10 @@ public class DescribeSuspEventExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the export task. The value is fixed as suspiciousEvent.
+         * <p>The type of the export task. The value is fixed as suspiciousEvent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>suspiciousEvent</p>
          */
         public Builder type(String type) {
             this.type = type;

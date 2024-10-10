@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckStructureResponseBody} extends {@link TeaModel}
  *
  * <p>GetCheckStructureResponseBody</p>
@@ -49,7 +50,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The structure information about check items provided by the configuration assessment feature.
+         * <p>The structure information about check items provided by the configuration assessment feature.</p>
          */
         public Builder checkStructureResponse(java.util.List < CheckStructureResponse> checkStructureResponse) {
             this.checkStructureResponse = checkStructureResponse;
@@ -57,7 +58,10 @@ public class GetCheckStructureResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>379a9b8f-107b-4630-9e95-2299a1ea****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetCheckStructureResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCheckStructureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckStructureResponseBody</p>
+     */
     public static class Sections extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -109,7 +119,10 @@ public class GetCheckStructureResponseBody extends TeaModel {
             private String showName; 
 
             /**
-             * The ID of the section for the check item.
+             * <p>The ID of the section for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>177</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -117,7 +130,10 @@ public class GetCheckStructureResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the section for the check item.
+             * <p>The display name of the section for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Access Control</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -131,6 +147,12 @@ public class GetCheckStructureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckStructureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckStructureResponseBody</p>
+     */
     public static class Requirements extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -194,7 +216,10 @@ public class GetCheckStructureResponseBody extends TeaModel {
             private Integer totalCheckCount; 
 
             /**
-             * The ID of the requirement item for the check item.
+             * <p>The ID of the requirement item for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -202,7 +227,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the sections of check items.
+             * <p>The information about the sections of check items.</p>
              */
             public Builder sections(java.util.List < Sections> sections) {
                 this.sections = sections;
@@ -210,7 +235,10 @@ public class GetCheckStructureResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the requirement item for the check item.
+             * <p>The display name of the requirement item for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Networking</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -218,7 +246,10 @@ public class GetCheckStructureResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of check items for the requirement.
+             * <p>The total number of check items for the requirement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder totalCheckCount(Integer totalCheckCount) {
                 this.totalCheckCount = totalCheckCount;
@@ -232,6 +263,12 @@ public class GetCheckStructureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckStructureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckStructureResponseBody</p>
+     */
     public static class Standards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -295,7 +332,10 @@ public class GetCheckStructureResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The standard ID of the check item.
+             * <p>The standard ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -303,7 +343,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
             }
 
             /**
-             * The standards of the check items.
+             * <p>The standards of the check items.</p>
              */
             public Builder requirements(java.util.List < Requirements> requirements) {
                 this.requirements = requirements;
@@ -311,7 +351,10 @@ public class GetCheckStructureResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the standard for the check item.
+             * <p>The display name of the standard for the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud best security practices</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -319,12 +362,15 @@ public class GetCheckStructureResponseBody extends TeaModel {
             }
 
             /**
-             * The standard type of the check item. Valid values:
-             * <p>
+             * <p>The standard type of the check item. Valid values:</p>
+             * <ul>
+             * <li>RISK: security risk.</li>
+             * <li>IDENTITY_PERMISSION: CIEM.</li>
+             * <li>COMPLIANCE: security compliance.</li>
+             * </ul>
              * 
-             * *   RISK: security risk.
-             * *   IDENTITY_PERMISSION: CIEM.
-             * *   COMPLIANCE: security compliance.
+             * <strong>example:</strong>
+             * <p>IDENTITY_PERMISSION</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -338,6 +384,12 @@ public class GetCheckStructureResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckStructureResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckStructureResponseBody</p>
+     */
     public static class CheckStructureResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StandardType")
         private String standardType;
@@ -377,12 +429,15 @@ public class GetCheckStructureResponseBody extends TeaModel {
             private java.util.List < Standards> standards; 
 
             /**
-             * The type of the check item.
-             * <p>
+             * <p>The type of the check item.</p>
+             * <ul>
+             * <li>RISK: security risk.</li>
+             * <li>IDENTITY_PERMISSION: Cloud Infrastructure Entitlement Management (CIEM).</li>
+             * <li>COMPLIANCE: security compliance.</li>
+             * </ul>
              * 
-             * *   RISK: security risk.
-             * *   IDENTITY_PERMISSION: Cloud Infrastructure Entitlement Management (CIEM).
-             * *   COMPLIANCE: security compliance.
+             * <strong>example:</strong>
+             * <p>RISK</p>
              */
             public Builder standardType(String standardType) {
                 this.standardType = standardType;
@@ -390,7 +445,7 @@ public class GetCheckStructureResponseBody extends TeaModel {
             }
 
             /**
-             * The structure information about the check items of the business type.
+             * <p>The structure information about the check items of the business type.</p>
              */
             public Builder standards(java.util.List < Standards> standards) {
                 this.standards = standards;

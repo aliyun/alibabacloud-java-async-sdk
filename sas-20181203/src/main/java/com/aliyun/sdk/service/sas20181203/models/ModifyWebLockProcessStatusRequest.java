@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebLockProcessStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyWebLockProcessStatusRequest</p>
@@ -109,11 +110,14 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         } 
 
         /**
-         * Specifies whether to change the status of the process on multiple servers on which the process runs at the same time. Valid values:
-         * <p>
+         * <p>Specifies whether to change the status of the process on multiple servers on which the process runs at the same time. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder dealAll(Integer dealAll) {
             this.putQueryParameter("DealAll", dealAll);
@@ -122,7 +126,10 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         }
 
         /**
-         * The parameters required to change the status of multiple processes at a time. The value is in the JSON format.
+         * <p>The parameters required to change the status of multiple processes at a time. The value is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;processPath&quot;:&quot;/etc/test1&quot;,&quot;uuid&quot;:&quot;0c1714dc-f7a3-4265-8364-7aa3fce8****&quot;},{&quot;processPath&quot;:&quot;/etc/test2&quot;,&quot;uuid&quot;:&quot;1cc45e7d-7698-4b2c-89d8-e8cba407****&quot;}]</p>
          */
         public Builder operateInfo(String operateInfo) {
             this.putQueryParameter("OperateInfo", operateInfo);
@@ -131,7 +138,7 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         }
 
         /**
-         * The paths to the processes.
+         * <p>The paths to the processes.</p>
          */
         public Builder processPath(java.util.List < String > processPath) {
             this.putQueryParameter("ProcessPath", processPath);
@@ -140,11 +147,14 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         }
 
         /**
-         * The status of the process. Valid values:
-         * <p>
+         * <p>The status of the process. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: cancels adding the process to the process whitelist</li>
+         * <li><strong>1</strong>: adds the process to the process whitelist</li>
+         * </ul>
          * 
-         * *   **0**: cancels adding the process to the process whitelist
-         * *   **1**: adds the process to the process whitelist
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -153,7 +163,10 @@ public class ModifyWebLockProcessStatusRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bc8510e7-7327-4030-b75c-956e434d****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

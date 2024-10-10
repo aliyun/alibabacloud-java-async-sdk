@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotResponseBody} extends {@link TeaModel}
  *
  * <p>ListHoneypotResponseBody</p>
@@ -109,7 +110,10 @@ public class ListHoneypotResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -125,7 +132,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the honeypots.
+         * <p>An array that consists of the information about the honeypots.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -133,7 +140,10 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +151,7 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -149,7 +159,10 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C80AFF1F-CC20-502C-A4D4-F5433E529B69</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +170,14 @@ public class ListHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +190,12 @@ public class ListHoneypotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHoneypotResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ControlNodeName")
         private String controlNodeName;
@@ -297,7 +319,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             private java.util.List < String > state; 
 
             /**
-             * The name of the management node.
+             * <p>The name of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0804-pre</p>
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -305,7 +330,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot.
+             * <p>The ID of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>76c2a1c72ef259777d96d55a7834e5f5d98f85666c49f76ad9caa447d8b7****</p>
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -313,7 +341,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the honeypot image.
+             * <p>The display name of the honeypot image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MongoDB</p>
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -321,7 +352,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot image.
+             * <p>The ID of the honeypot image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sha256:eca5ced3757e46c24701e9ced4e652f2d730262d5685a4e001da22c4fb418fd4</p>
              */
             public Builder honeypotImageId(String honeypotImageId) {
                 this.honeypotImageId = honeypotImageId;
@@ -329,7 +363,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot image.
+             * <p>The name of the honeypot image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp_proxy</p>
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -337,7 +374,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot.
+             * <p>The name of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mx-rouyi</p>
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -345,7 +385,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * <p>The ID of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c94eff5b-ea48-4805-8b7f-e04d3509b117</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -353,7 +396,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom configuration for the honeypot.
+             * <p>The ID of the custom configuration for the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;
@@ -361,7 +407,7 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the status information about the honeypot.
+             * <p>An array that consists of the status information about the honeypot.</p>
              */
             public Builder state(java.util.List < String > state) {
                 this.state = state;
@@ -375,6 +421,12 @@ public class ListHoneypotResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -438,7 +490,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -446,7 +501,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -454,7 +512,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -462,7 +523,10 @@ public class ListHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

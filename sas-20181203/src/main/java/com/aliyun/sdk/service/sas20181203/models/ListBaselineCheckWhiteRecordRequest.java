@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBaselineCheckWhiteRecordRequest} extends {@link RequestModel}
  *
  * <p>ListBaselineCheckWhiteRecordRequest</p>
@@ -137,7 +138,7 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
         } 
 
         /**
-         * The IDs of check items.
+         * <p>The IDs of check items.</p>
          */
         public Builder checkIds(java.util.List < Long > checkIds) {
             String checkIdsShrink = shrink(checkIds, "CheckIds", "json");
@@ -147,7 +148,10 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The name of the check item. Fuzzy match is supported.
+         * <p>The name of the check item. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redis</p>
          */
         public Builder checkItemFuzzy(String checkItemFuzzy) {
             this.putQueryParameter("CheckItemFuzzy", checkItemFuzzy);
@@ -156,7 +160,10 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -165,11 +172,14 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -178,7 +188,10 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -187,7 +200,7 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The IDs of the whitelist rules.
+         * <p>The IDs of the whitelist rules.</p>
          */
         public Builder recordIds(java.util.List < Long > recordIds) {
             String recordIdsShrink = shrink(recordIds, "RecordIds", "json");
@@ -197,11 +210,14 @@ public class ListBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The data source. If you leave this parameter empty, the default value is used. Valid values:
-         * <p>
+         * <p>The data source. If you leave this parameter empty, the default value is used. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: server</li>
+         * <li><strong>agentless</strong>: agentless detection</li>
+         * </ul>
          * 
-         * *   **default**: server
-         * *   **agentless**: agentless detection
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

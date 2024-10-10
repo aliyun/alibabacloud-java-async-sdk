@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportCustomizeReportRequest} extends {@link RequestModel}
  *
  * <p>ExportCustomizeReportRequest</p>
@@ -68,13 +69,17 @@ public class ExportCustomizeReportRequest extends Request {
         } 
 
         /**
-         * The type of the security report that you want to export. Valid values:
-         * <p>
+         * <p>The type of the security report that you want to export. Valid values:</p>
+         * <ul>
+         * <li><strong>HTML</strong></li>
+         * <li><strong>PDF</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is HTML. PDF is supported only for security reports in version 2.0.0.</p>
+         * </blockquote>
          * 
-         * *   **HTML**
-         * *   **PDF**
-         * 
-         * >  The default value is HTML. PDF is supported only for security reports in version 2.0.0.
+         * <strong>example:</strong>
+         * <p>HTML</p>
          */
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);
@@ -83,10 +88,14 @@ public class ExportCustomizeReportRequest extends Request {
         }
 
         /**
-         * The ID of the security report.
-         * <p>
+         * <p>The ID of the security report.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCustomizeReportList](~~DescribeCustomizeReportList~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);

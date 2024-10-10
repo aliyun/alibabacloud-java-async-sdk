@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulListPageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulListPageResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4347E985-6E64-467B-96EC-30D4EA9E32FB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeVulListPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVulListPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulListPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CveId")
         private String cveId;
@@ -201,7 +214,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * The common vulnerabilities and exposures (CVE) ID of the vulnerability.
+             * <p>The common vulnerabilities and exposures (CVE) ID of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2022-42836</p>
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
@@ -209,7 +225,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The extended field for Server Guard.
+             * <p>The extended field for Server Guard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;relatedType&quot;:[{&quot;type&quot;:&quot;sys&quot;}]}</p>
              */
             public Builder extAegis(String extAegis) {
                 this.extAegis = extAegis;
@@ -217,7 +236,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key ID of the database.
+             * <p>The primary key ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40586</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -225,11 +247,14 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vulnerability was detected based on version comparison. Valid values:
-             * <p>
+             * <p>Indicates whether the vulnerability was detected based on version comparison. Valid values:</p>
+             * <ul>
+             * <li>1: The vulnerability was detected based on version comparison.</li>
+             * <li>0: The vulnerability was not detected based on version comparison.</li>
+             * </ul>
              * 
-             * *   1: The vulnerability was detected based on version comparison.
-             * *   0: The vulnerability was not detected based on version comparison.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isAegis(Integer isAegis) {
                 this.isAegis = isAegis;
@@ -237,11 +262,14 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:
-             * <p>
+             * <p>Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:</p>
+             * <ul>
+             * <li>1: The vulnerability was detected based on POC verification.</li>
+             * <li>0: The vulnerability was not detected based on POC verification.</li>
+             * </ul>
              * 
-             * *   1: The vulnerability was detected based on POC verification.
-             * *   0: The vulnerability was not detected based on POC verification.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isSas(Integer isSas) {
                 this.isSas = isSas;
@@ -249,7 +277,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vulnerability.
+             * <p>The ID of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVD-2018-8218</p>
              */
             public Builder otherId(String otherId) {
                 this.otherId = otherId;
@@ -257,7 +288,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the vulnerability was disclosed.
+             * <p>The time when the vulnerability was disclosed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-13T08:00Z</p>
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -265,7 +299,10 @@ public class DescribeVulListPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows RCE vulnerability</p>
              */
             public Builder title(String title) {
                 this.title = title;

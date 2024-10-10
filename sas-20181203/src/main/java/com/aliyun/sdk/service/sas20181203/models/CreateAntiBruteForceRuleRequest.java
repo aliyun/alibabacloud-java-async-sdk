@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAntiBruteForceRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateAntiBruteForceRuleRequest</p>
@@ -156,13 +157,17 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         } 
 
         /**
-         * Specifies whether to set the defense rule as the default rule. Valid values:
-         * <p>
+         * <p>Specifies whether to set the defense rule as the default rule. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> If no defense rule is created for a server, the default rule is applied to the server.</p>
+         * </blockquote>
          * 
-         * *   **true**: yes
-         * *   **false**: no
-         * 
-         * >  If no defense rule is created for a server, the default rule is applied to the server.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder defaultRule(Boolean defaultRule) {
             this.putQueryParameter("DefaultRule", defaultRule);
@@ -171,7 +176,11 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The maximum number of failed logon attempts from an account. Valid values: 2, 3, 4, 5, 10, 50, 80, and 100.
+         * <p>The maximum number of failed logon attempts from an account. Valid values: 2, 3, 4, 5, 10, 50, 80, and 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder failCount(Integer failCount) {
             this.putQueryParameter("FailCount", failCount);
@@ -180,19 +189,23 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:
-         * <p>
+         * <p>The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:</p>
+         * <ul>
+         * <li><strong>5</strong>: 5 minutes</li>
+         * <li><strong>15</strong>: 15 minutes</li>
+         * <li><strong>30</strong>: 30 minutes</li>
+         * <li><strong>60</strong>: 1 hour</li>
+         * <li><strong>120</strong>: 2 hours</li>
+         * <li><strong>360</strong>: 6 hours</li>
+         * <li><strong>720</strong>: 12 hours</li>
+         * <li><strong>1440</strong>: 24 hours</li>
+         * <li><strong>10080</strong>: 7 days</li>
+         * <li><strong>52560000</strong>: permanent</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **5**: 5 minutes
-         * *   **15**: 15 minutes
-         * *   **30**: 30 minutes
-         * *   **60**: 1 hour
-         * *   **120**: 2 hours
-         * *   **360**: 6 hours
-         * *   **720**: 12 hours
-         * *   **1440**: 24 hours
-         * *   **10080**: 7 days
-         * *   **52560000**: permanent
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder forbiddenTime(Integer forbiddenTime) {
             this.putQueryParameter("ForbiddenTime", forbiddenTime);
@@ -201,7 +214,11 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The name of the defense rule.
+         * <p>The name of the defense rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAntiBruteForceRule</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -219,7 +236,10 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -228,16 +248,21 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The maximum period of time during which failed logon attempts from an account can occur. Unit: minutes. Valid values:
-         * <p>
+         * <p>The maximum period of time during which failed logon attempts from an account can occur. Unit: minutes. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong></li>
+         * <li><strong>2</strong></li>
+         * <li><strong>5</strong></li>
+         * <li><strong>10</strong></li>
+         * <li><strong>15</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> To configure a defense rule, you must specify the Span, FailCount, and ForbiddenTime parameters. If the number of failed logon attempts from an account within the minutes specified by Span exceeds the value specified by FailCount, the account cannot be used for logons within the minutes specified by ForbiddenTime.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**
-         * *   **2**
-         * *   **5**
-         * *   **10**
-         * *   **15**
-         * 
-         * >  To configure a defense rule, you must specify the Span, FailCount, and ForbiddenTime parameters. If the number of failed logon attempts from an account within the minutes specified by Span exceeds the value specified by FailCount, the account cannot be used for logons within the minutes specified by ForbiddenTime.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder span(Integer span) {
             this.putQueryParameter("Span", span);
@@ -246,7 +271,8 @@ public class CreateAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers to which you want to apply the defense rule.
+         * <p>The UUIDs of the servers to which you want to apply the defense rule.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListContainerDefenseRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListContainerDefenseRuleResponseBody</p>
@@ -109,7 +110,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -125,7 +132,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The rules.
+         * <p>The rules.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -133,7 +140,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +151,7 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -149,7 +159,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E3A63BA-***843</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +170,14 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +190,12 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListContainerDefenseRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListContainerDefenseRuleResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterCount")
         private Integer clusterCount;
@@ -285,7 +307,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             private Integer ruleType; 
 
             /**
-             * The total number of clusters.
+             * <p>The total number of clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
@@ -293,7 +318,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The clusters specified in the rule.
+             * <p>The clusters specified in the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfb41a8**8a106</p>
              */
             public Builder clusterIdList(String clusterIdList) {
                 this.clusterIdList = clusterIdList;
@@ -301,7 +329,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>defense rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -309,11 +340,14 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The action specified in the rule. Valid values:
-             * <p>
+             * <p>The action specified in the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: alert</li>
+             * <li><strong>2</strong>: block</li>
+             * </ul>
              * 
-             * *   **1**: alert
-             * *   **2**: block
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleAction(Integer ruleAction) {
                 this.ruleAction = ruleAction;
@@ -321,7 +355,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>181</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -329,7 +366,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-rule-01</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -337,11 +377,14 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: enabled</li>
+             * <li><strong>0</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **1**: enabled
-             * *   **0**: disabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleSwitch(Integer ruleSwitch) {
                 this.ruleSwitch = ruleSwitch;
@@ -349,11 +392,14 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: system rule</li>
+             * <li><strong>2</strong>: custom rule</li>
+             * </ul>
              * 
-             * *   **1**: system rule
-             * *   **2**: custom rule
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;
@@ -367,6 +413,12 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListContainerDefenseRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListContainerDefenseRuleResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -454,7 +506,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -462,7 +517,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -470,7 +528,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the last data entry.
+             * <p>The key of the last data entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAESGgo***jE2NDc4NjE=</p>
              */
             public Builder lastRowKey(String lastRowKey) {
                 this.lastRowKey = lastRowKey;
@@ -478,7 +539,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The query credential.
+             * <p>The query credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B60***</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -486,7 +550,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -494,7 +561,10 @@ public class ListContainerDefenseRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

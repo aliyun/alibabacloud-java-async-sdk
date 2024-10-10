@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerStatisticsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The alert statistics of container assets.
+         * <p>The alert statistics of container assets.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21DA46CA-2DCE-4FF6-907D-D5DBBB7518C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RemindAlarmCount")
         private Integer remindAlarmCount;
@@ -157,7 +167,10 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             private Integer hasRiskNode; 
 
             /**
-             * The number of alerts whose risk level is **Reminder**.
+             * <p>The number of alerts whose risk level is <strong>Reminder</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder remindAlarmCount(Integer remindAlarmCount) {
                 this.remindAlarmCount = remindAlarmCount;
@@ -165,7 +178,10 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts whose risk level is **Urgent**.
+             * <p>The number of alerts whose risk level is <strong>Urgent</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder seriousAlarmCount(Integer seriousAlarmCount) {
                 this.seriousAlarmCount = seriousAlarmCount;
@@ -173,7 +189,10 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts whose risk level is **Suspicious**.
+             * <p>The number of alerts whose risk level is <strong>Suspicious</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder suspiciousAlarmCount(Integer suspiciousAlarmCount) {
                 this.suspiciousAlarmCount = suspiciousAlarmCount;
@@ -181,7 +200,10 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of alerts that are generated in the current container cluster.
+             * <p>The total number of alerts that are generated in the current container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalAlarmCount(Integer totalAlarmCount) {
                 this.totalAlarmCount = totalAlarmCount;
@@ -189,7 +211,10 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of nodes in the current container cluster.
+             * <p>The total number of nodes in the current container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalNode(Integer totalNode) {
                 this.totalNode = totalNode;
@@ -197,7 +222,10 @@ public class DescribeContainerStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes on which alerts are generated in the current container cluster.
+             * <p>The number of nodes on which alerts are generated in the current container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder hasRiskNode(Integer hasRiskNode) {
                 this.hasRiskNode = hasRiskNode;

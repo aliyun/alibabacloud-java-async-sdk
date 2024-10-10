@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterImageSecuritySummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterImageSecuritySummaryRequest</p>
@@ -165,7 +166,10 @@ public class DescribeClusterImageSecuritySummaryRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c3aaf6c8085f84791882eef200cd2****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -174,28 +178,31 @@ public class DescribeClusterImageSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The key of the condition that is used to query containers. Valid values:
-         * <p>
+         * <p>The key of the condition that is used to query containers. Valid values:</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the instance ID of the container</li>
+         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * <li><strong>regionId</strong>: the region ID of the container</li>
+         * <li><strong>clusterName</strong>: the name of the cluster</li>
+         * <li><strong>image</strong>: the name of the image</li>
+         * <li><strong>imageRepoName</strong>: the name of the image repository</li>
+         * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
+         * <li><strong>imageRepoTag</strong>: the tag that is added to the image repository</li>
+         * <li><strong>imageDigest</strong>: the digest of the image</li>
+         * <li><strong>clusterType</strong>: the type of the cluster</li>
+         * <li><strong>hostIp</strong>: the public IP address</li>
+         * <li><strong>pod</strong>: the pod</li>
+         * <li><strong>podIp</strong>: the IP address of the pod</li>
+         * <li><strong>containerId</strong>: the ID of the container</li>
+         * <li><strong>vulStatus</strong>: whether vulnerabilities are detected on the container</li>
+         * <li><strong>alarmStatus</strong>: whether alerts are generated for the container</li>
+         * <li><strong>riskStatus</strong>: whether risks are detected on the container</li>
+         * <li><strong>riskLevel</strong>: the risk level of the container</li>
+         * <li><strong>containerScope</strong>: the type of the container</li>
+         * </ul>
          * 
-         * *   **instanceId**: the instance ID of the container
-         * *   **clusterId**: the ID of the cluster
-         * *   **regionId**: the region ID of the container
-         * *   **clusterName**: the name of the cluster
-         * *   **image**: the name of the image
-         * *   **imageRepoName**: the name of the image repository
-         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
-         * *   **imageRepoTag**: the tag that is added to the image repository
-         * *   **imageDigest**: the digest of the image
-         * *   **clusterType**: the type of the cluster
-         * *   **hostIp**: the public IP address
-         * *   **pod**: the pod
-         * *   **podIp**: the IP address of the pod
-         * *   **containerId**: the ID of the container
-         * *   **vulStatus**: whether vulnerabilities are detected on the container
-         * *   **alarmStatus**: whether alerts are generated for the container
-         * *   **riskStatus**: whether risks are detected on the container
-         * *   **riskLevel**: the risk level of the container
-         * *   **containerScope**: the type of the container
+         * <strong>example:</strong>
+         * <p>clusterId</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -204,7 +211,10 @@ public class DescribeClusterImageSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The value of the condition that is used to query containers.
+         * <p>The value of the condition that is used to query containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2ac28b2d0c734df29a21d29f18ac****</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -213,7 +223,10 @@ public class DescribeClusterImageSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The digest of the image.
+         * <p>The digest of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>402902de6480a020b9f29e7105e77b8a218bc1cccbc3935d3b38c8ea9ba2****</p>
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -222,7 +235,10 @@ public class DescribeClusterImageSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
+         * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo</p>
          */
         public Builder imageRepoName(String imageRepoName) {
             this.putQueryParameter("ImageRepoName", imageRepoName);
@@ -231,7 +247,10 @@ public class DescribeClusterImageSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The namespace of the image repository.
+         * <p>The namespace of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace</p>
          */
         public Builder imageRepoNamespace(String imageRepoNamespace) {
             this.putQueryParameter("ImageRepoNamespace", imageRepoNamespace);
@@ -240,7 +259,10 @@ public class DescribeClusterImageSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The tag of the image.
+         * <p>The tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.54.0.1</p>
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -258,7 +280,10 @@ public class DescribeClusterImageSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.190.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

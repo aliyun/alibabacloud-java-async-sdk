@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExposedInstanceListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExposedInstanceListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the details about the exposed asset.
+         * <p>An array that consists of the details about the exposed asset.</p>
          */
         public Builder exposedInstances(java.util.List < ExposedInstances> exposedInstances) {
             this.exposedInstances = exposedInstances;
@@ -69,7 +70,7 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>598A4A61-ABA7-456B-8725-7378258276D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,9 +94,24 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeExposedInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedInstanceListResponseBody</p>
+     */
     public static class ExposedInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsapVulCount")
         private Integer asapVulCount;
+
+        @com.aliyun.core.annotation.NameInMap("AssetType")
+        private Integer assetType;
+
+        @com.aliyun.core.annotation.NameInMap("CloudAssetInfo")
+        private String cloudAssetInfo;
+
+        @com.aliyun.core.annotation.NameInMap("CspmAlarmCount")
+        private Integer cspmAlarmCount;
 
         @com.aliyun.core.annotation.NameInMap("ExploitHealthCount")
         private Integer exploitHealthCount;
@@ -147,6 +166,9 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
 
         private ExposedInstances(Builder builder) {
             this.asapVulCount = builder.asapVulCount;
+            this.assetType = builder.assetType;
+            this.cloudAssetInfo = builder.cloudAssetInfo;
+            this.cspmAlarmCount = builder.cspmAlarmCount;
             this.exploitHealthCount = builder.exploitHealthCount;
             this.exposureComponent = builder.exposureComponent;
             this.exposureIp = builder.exposureIp;
@@ -179,6 +201,27 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
          */
         public Integer getAsapVulCount() {
             return this.asapVulCount;
+        }
+
+        /**
+         * @return assetType
+         */
+        public Integer getAssetType() {
+            return this.assetType;
+        }
+
+        /**
+         * @return cloudAssetInfo
+         */
+        public String getCloudAssetInfo() {
+            return this.cloudAssetInfo;
+        }
+
+        /**
+         * @return cspmAlarmCount
+         */
+        public Integer getCspmAlarmCount() {
+            return this.cspmAlarmCount;
         }
 
         /**
@@ -302,6 +345,9 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer asapVulCount; 
+            private Integer assetType; 
+            private String cloudAssetInfo; 
+            private Integer cspmAlarmCount; 
             private Integer exploitHealthCount; 
             private String exposureComponent; 
             private String exposureIp; 
@@ -321,7 +367,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The number of high-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+             * <p>The number of high-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder asapVulCount(Integer asapVulCount) {
                 this.asapVulCount = asapVulCount;
@@ -329,7 +378,34 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers that are exposed on the Internet.
+             * AssetType.
+             */
+            public Builder assetType(Integer assetType) {
+                this.assetType = assetType;
+                return this;
+            }
+
+            /**
+             * CloudAssetInfo.
+             */
+            public Builder cloudAssetInfo(String cloudAssetInfo) {
+                this.cloudAssetInfo = cloudAssetInfo;
+                return this;
+            }
+
+            /**
+             * CspmAlarmCount.
+             */
+            public Builder cspmAlarmCount(Integer cspmAlarmCount) {
+                this.cspmAlarmCount = cspmAlarmCount;
+                return this;
+            }
+
+            /**
+             * <p>The total number of servers that are exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exploitHealthCount(Integer exploitHealthCount) {
                 this.exploitHealthCount = exploitHealthCount;
@@ -337,7 +413,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The server component that is exposed on the Internet.
+             * <p>The server component that is exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openssl,openssh</p>
              */
             public Builder exposureComponent(String exposureComponent) {
                 this.exposureComponent = exposureComponent;
@@ -345,7 +424,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address that is exposed on the Internet.
+             * <p>The public IP address that is exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.12.XX.XX</p>
              */
             public Builder exposureIp(String exposureIp) {
                 this.exposureIp = exposureIp;
@@ -353,7 +435,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is exposed on the Internet.
+             * <p>The port that is exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder exposurePort(String exposurePort) {
                 this.exposurePort = exposurePort;
@@ -361,13 +446,16 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The resource from which the asset is exposed. Valid values:
-             * <p>
+             * <p>The resource from which the asset is exposed. Valid values:</p>
+             * <ul>
+             * <li><strong>INTERNET_IP</strong>: the public IP address of an ECS instance</li>
+             * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance</li>
+             * <li><strong>EIP</strong>: an elastic IP address (EIP)</li>
+             * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the DNAT feature</li>
+             * </ul>
              * 
-             * *   **INTERNET_IP**: the public IP address of an ECS instance
-             * *   **SLB**: the public IP address of a Server Load Balancer (SLB) instance
-             * *   **EIP**: an elastic IP address (EIP)
-             * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
+             * <strong>example:</strong>
+             * <p>INTERNET_IP</p>
              */
             public Builder exposureType(String exposureType) {
                 this.exposureType = exposureType;
@@ -375,13 +463,16 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the ExposureType parameter.
-             * <p>
+             * <p>The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the ExposureType parameter.</p>
+             * <ul>
+             * <li>If the value of the ExposureType parameter is <strong>INTERNET_IP</strong>, this parameter is empty.</li>
+             * <li>If the value of the ExposureType parameter is <strong>SLB</strong>, the value of this parameter is the ID of the SLB instance.</li>
+             * <li>If the value of the ExposureType parameter is <strong>EIP</strong>, the value of this parameter is the ID of the EIP.</li>
+             * <li>If the value of the ExposureType parameter is <strong>DNAT</strong>, the value of this parameter is the ID of the NAT gateway.</li>
+             * </ul>
              * 
-             * *   If the value of the ExposureType parameter is **INTERNET_IP**, this parameter is empty.
-             * *   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the SLB instance.
-             * *   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.
-             * *   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.
+             * <strong>example:</strong>
+             * <p>i-ew11313a****</p>
              */
             public Builder exposureTypeId(String exposureTypeId) {
                 this.exposureTypeId = exposureTypeId;
@@ -389,7 +480,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server group.
+             * <p>The ID of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9469268</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -397,7 +491,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group.
+             * <p>The name of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -405,7 +502,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp1g6wxdwps7s9dz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -413,7 +513,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc_centos7.2_005</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -421,7 +524,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.12.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -429,7 +535,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -437,7 +546,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+             * <p>The number of medium-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder laterVulCount(Integer laterVulCount) {
                 this.laterVulCount = laterVulCount;
@@ -445,7 +557,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+             * <p>The number of low-severity vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nntfVulCount(Integer nntfVulCount) {
                 this.nntfVulCount = nntfVulCount;
@@ -453,10 +568,13 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the server resides.
-             * <p>
+             * <p>The ID of the region where the server resides.</p>
+             * <blockquote>
+             * <p> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+             * </blockquote>
              * 
-             * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -464,7 +582,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+             * <p>The total number of vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalVulCount(Integer totalVulCount) {
                 this.totalVulCount = totalVulCount;
@@ -472,7 +593,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dd803d9e-a337-4add-9c5b-7d503e08****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -486,6 +610,12 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeExposedInstanceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeExposedInstanceListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -549,7 +679,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -557,7 +690,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -565,7 +701,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -573,7 +712,10 @@ public class DescribeExposedInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries about the servers that are exposed on the Internet.
+             * <p>The total number of entries about the servers that are exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEmgVulSubmitResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyEmgVulSubmitResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyEmgVulSubmitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52A3AEE6-114A-499D-8990-4BA9B27FE0AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

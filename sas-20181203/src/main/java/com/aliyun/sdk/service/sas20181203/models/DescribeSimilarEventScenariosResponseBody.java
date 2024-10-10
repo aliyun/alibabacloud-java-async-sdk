@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSimilarEventScenariosResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSimilarEventScenariosResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeSimilarEventScenariosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSimilarEventScenariosResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSimilarEventScenariosResponseBody</p>
+     */
     public static class Scenarios extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;

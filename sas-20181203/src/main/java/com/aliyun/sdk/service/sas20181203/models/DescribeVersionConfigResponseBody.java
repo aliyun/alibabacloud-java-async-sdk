@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVersionConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVersionConfigResponseBody</p>
@@ -505,10 +506,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         private Long webLockAuthCount; 
 
         /**
-         * The quota for agentless detection.
-         * <p>
+         * <p>The quota for agentless detection.</p>
+         * <blockquote>
+         * <p> The agentless detection feature is unavailable for purchase. You can ignore this parameter.</p>
+         * </blockquote>
          * 
-         * >  The agentless detection feature is unavailable for purchase. You can ignore this parameter.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder agentlessCapacity(Long agentlessCapacity) {
             this.agentlessCapacity = agentlessCapacity;
@@ -516,11 +520,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the pay-as-you-go billing method is supported.
-         * <p>
+         * <p>Indicates whether the pay-as-you-go billing method is supported.</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder allowPartialBuy(Integer allowPartialBuy) {
             this.allowPartialBuy = allowPartialBuy;
@@ -528,11 +535,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Switch of anti-ransomware hosting service. Valid values:
-         * <p>
+         * <p>Switch of anti-ransomware hosting service. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: off</li>
+         * <li><strong>1</strong>: on</li>
+         * </ul>
          * 
-         * *   **0**: off
-         * *   **1**: on
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder antiRansomwareService(Integer antiRansomwareService) {
             this.antiRansomwareService = antiRansomwareService;
@@ -540,11 +550,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the application whitelist feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the application whitelist feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>2</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **2**: yes
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder appWhiteList(Integer appWhiteList) {
             this.appWhiteList = appWhiteList;
@@ -552,10 +565,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for the application whitelist feature.
-         * <p>
+         * <p>The quota for the application whitelist feature.</p>
+         * <blockquote>
+         * <p> The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.</p>
+         * </blockquote>
          * 
-         * >  The quantity of servers that are allowed by the quota is deducted by one each time you apply an application whitelist to a server. After you enable the application whitelist feature, the quota is 20 by default.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder appWhiteListAuthCount(Long appWhiteListAuthCount) {
             this.appWhiteListAuthCount = appWhiteListAuthCount;
@@ -563,7 +579,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for servers that can be protected.
+         * <p>The quota for servers that can be protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder assetLevel(Integer assetLevel) {
             this.assetLevel = assetLevel;
@@ -571,7 +590,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The purchased quota for configuration assessment. Unit: times/month.
+         * <p>The purchased quota for configuration assessment. Unit: times/month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder cspmCapacity(Long cspmCapacity) {
             this.cspmCapacity = cspmCapacity;
@@ -579,17 +601,21 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The most advanced edition that is used. Valid values:
-         * <p>
+         * <p>The most advanced edition that is used. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Basic edition</li>
+         * <li><strong>3</strong>: Enterprise edition</li>
+         * <li><strong>5</strong>: Advanced edition</li>
+         * <li><strong>6</strong>: Anti-virus edition</li>
+         * <li><strong>7</strong>: Ultimate edition</li>
+         * <li><strong>10</strong>: Value-added Plan edition</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.</p>
+         * </blockquote>
          * 
-         * *   **1**: Basic edition
-         * *   **3**: Enterprise edition
-         * *   **5**: Advanced edition
-         * *   **6**: Anti-virus edition
-         * *   **7**: Ultimate edition
-         * *   **10**: Value-added Plan edition
-         * 
-         * >  If you purchase the Multi-version edition of Security Center, the value indicates the most advanced edition that is used in the Multi-version edition. If you do not purchase the Multi-version edition of Security Center, the value indicates the edition of Security Center.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder highestVersion(Integer highestVersion) {
             this.highestVersion = highestVersion;
@@ -597,7 +623,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The purchased quota for the cloud honeypot feature.
+         * <p>The purchased quota for the cloud honeypot feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder honeypotCapacity(Long honeypotCapacity) {
             this.honeypotCapacity = honeypotCapacity;
@@ -605,7 +634,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The purchased quota for the container image scan feature.
+         * <p>The purchased quota for the container image scan feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8954</p>
          */
         public Builder imageScanCapacity(Long imageScanCapacity) {
             this.imageScanCapacity = imageScanCapacity;
@@ -613,7 +645,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of purchased Security Center.
+         * <p>The ID of purchased Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-vg6hafdsafs****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -621,11 +656,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Security Center runs the latest version of the Ultimate edition.
-         * <p>
+         * <p>Indicates whether Security Center runs the latest version of the Ultimate edition.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isNewContainerVersion(Boolean isNewContainerVersion) {
             this.isNewContainerVersion = isNewContainerVersion;
@@ -633,11 +671,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Security Center runs the latest version of the Multi-version edition. Valid values:
-         * <p>
+         * <p>Indicates whether Security Center runs the latest version of the Multi-version edition. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isNewMultiVersion(Boolean isNewMultiVersion) {
             this.isNewMultiVersion = isNewMultiVersion;
@@ -645,12 +686,17 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the number of existing servers exceeds the purchased quota. Valid values:
-         * <p>
+         * <p>Indicates whether the number of existing servers exceeds the purchased quota. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: yes<blockquote>
+         * <p>Notice: This parameter is deprecated. You can ignore it.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * 
-         * *   **false**: no
-         * *   **true**: yes
-         * ><notice>This parameter is deprecated. You can ignore it.></notice>
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isOverBalance(Boolean isOverBalance) {
             this.isOverBalance = isOverBalance;
@@ -658,11 +704,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the pay-as-you-go billing method is used. Valid values:
-         * <p>
+         * <p>Indicates whether the pay-as-you-go billing method is used. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isPostpay(Boolean isPostpay) {
             this.isPostpay = isPostpay;
@@ -670,11 +719,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Security Center runs the free trial edition. Valid values:
-         * <p>
+         * <p>Indicates whether Security Center runs the free trial edition. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isTrialVersion(Integer isTrialVersion) {
             this.isTrialVersion = isTrialVersion;
@@ -682,7 +734,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the last trial of Security Center ends. Unit: milliseconds.
+         * <p>The timestamp when the last trial of Security Center ends. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603934844000</p>
          */
         public Builder lastTrailEndTime(Long lastTrailEndTime) {
             this.lastTrailEndTime = lastTrailEndTime;
@@ -690,7 +745,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The total quota in the Multi-version edition of purchased Security Center.
+         * <p>The total quota in the Multi-version edition of purchased Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder MVAuthCount(Integer MVAuthCount) {
             this.MVAuthCount = MVAuthCount;
@@ -698,7 +756,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The total remaining quota in the Multi-version edition of purchased Security Center.
+         * <p>The total remaining quota in the Multi-version edition of purchased Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder MVUnusedAuthCount(Integer MVUnusedAuthCount) {
             this.MVUnusedAuthCount = MVUnusedAuthCount;
@@ -706,11 +767,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:
-         * <p>
+         * <p>Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder newThreatAnalysis(Integer newThreatAnalysis) {
             this.newThreatAnalysis = newThreatAnalysis;
@@ -718,7 +782,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when Security Center is purchased. Unit: milliseconds.
+         * <p>The timestamp when Security Center is purchased. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657244824669</p>
          */
         public Builder openTime(Long openTime) {
             this.openTime = openTime;
@@ -726,7 +793,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID of Security Center that uses the pay-as-you-go billing method.
+         * <p>The instance ID of Security Center that uses the pay-as-you-go billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postpay-sas-**</p>
          */
         public Builder postPayInstanceId(String postPayInstanceId) {
             this.postPayInstanceId = postPayInstanceId;
@@ -734,10 +804,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of the pay-as-you-go module. Valid values:
-         * <p>
+         * <p>The configuration of the pay-as-you-go module. Valid values:</p>
+         * <ul>
+         * <li><strong>VUL</strong>: vulnerability fixing module</li>
+         * </ul>
          * 
-         * *   **VUL**: vulnerability fixing module
+         * <strong>example:</strong>
+         * <p>{&quot;VUL&quot;:1}</p>
          */
         public Builder postPayModuleSwitch(String postPayModuleSwitch) {
             this.postPayModuleSwitch = postPayModuleSwitch;
@@ -745,7 +818,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The creation time of Security Center that uses the pay-as-you-go billing method.
+         * <p>The creation time of Security Center that uses the pay-as-you-go billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698915219000</p>
          */
         public Builder postPayOpenTime(Long postPayOpenTime) {
             this.postPayOpenTime = postPayOpenTime;
@@ -753,11 +829,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The status of Security Center that uses the pay-as-you-go billing method. Valid values:
-         * <p>
+         * <p>The status of Security Center that uses the pay-as-you-go billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The instance runs as expected.</li>
+         * <li><strong>2</strong>: The instance is stopped due to overdue payments.</li>
+         * </ul>
          * 
-         * *   **1**: The instance runs as expected.
-         * *   **2**: The instance is stopped due to overdue payments.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder postPayStatus(Integer postPayStatus) {
             this.postPayStatus = postPayStatus;
@@ -765,7 +844,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The purchased quota for application protection. Unit: process/month.
+         * <p>The purchased quota for application protection. Unit: process/month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder raspCapacity(Long raspCapacity) {
             this.raspCapacity = raspCapacity;
@@ -773,10 +855,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the Security Center subscription ends. Unit: milliseconds.
-         * <p>
+         * <p>The timestamp when the Security Center subscription ends. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p> If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see <a href="https://help.aliyun.com/document_detail/42308.html">Purchase Security Center</a>.</p>
+         * </blockquote>
          * 
-         * >  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](~~42308~~).
+         * <strong>example:</strong>
+         * <p>1625846400000</p>
          */
         public Builder releaseTime(Long releaseTime) {
             this.releaseTime = releaseTime;
@@ -784,7 +869,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2DC96D2-DD2E-49D9-A28E-85590475DF55</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -792,11 +880,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether log analysis is purchased. Valid values:
-         * <p>
+         * <p>Indicates whether log analysis is purchased. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sasLog(Integer sasLog) {
             this.sasLog = sasLog;
@@ -804,11 +895,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the security screen feature is purchased. Valid values:
-         * <p>
+         * <p>Indicates whether the security screen feature is purchased. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sasScreen(Integer sasScreen) {
             this.sasScreen = sasScreen;
@@ -816,7 +910,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The purchased quota for malicious file detection SDK. Unit: process/month.
+         * <p>The purchased quota for malicious file detection SDK. Unit: process/month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder sdkCapacity(Long sdkCapacity) {
             this.sdkCapacity = sdkCapacity;
@@ -824,7 +921,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The log storage capacity that you purchase. Unit: GB. Valid values: 0 to 200000.
+         * <p>The log storage capacity that you purchase. Unit: GB. Valid values: 0 to 200000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder slsCapacity(Long slsCapacity) {
             this.slsCapacity = slsCapacity;
@@ -832,7 +932,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The purchased log storage capacity for threat analysis. Unit: GB.
+         * <p>The purchased log storage capacity for threat analysis. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder threatAnalysisCapacity(Long threatAnalysisCapacity) {
             this.threatAnalysisCapacity = threatAnalysisCapacity;
@@ -840,7 +943,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The amount of log data that you purchase for the threat analysis and response feature. Unit: GB-day.
+         * <p>The amount of log data that you purchase for the threat analysis and response feature. Unit: GB-day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder threatAnalysisFlow(Integer threatAnalysisFlow) {
             this.threatAnalysisFlow = threatAnalysisFlow;
@@ -848,11 +954,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the custom alert feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the custom alert feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>2</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **2**: yes
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder userDefinedAlarms(Integer userDefinedAlarms) {
             this.userDefinedAlarms = userDefinedAlarms;
@@ -860,16 +969,19 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The edition of purchased Security Center. Valid values:
-         * <p>
+         * <p>The edition of purchased Security Center. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Basic edition</li>
+         * <li><strong>3</strong>: Enterprise edition</li>
+         * <li><strong>5</strong>: Advanced edition</li>
+         * <li><strong>6</strong>: Anti-virus edition</li>
+         * <li><strong>7</strong>: Ultimate edition</li>
+         * <li><strong>8</strong>: Multi-version edition</li>
+         * <li><strong>10</strong>: Value-added Plan edition</li>
+         * </ul>
          * 
-         * *   **1**: Basic edition
-         * *   **3**: Enterprise edition
-         * *   **5**: Advanced edition
-         * *   **6**: Anti-virus edition
-         * *   **7**: Ultimate edition
-         * *   **8**: Multi-version edition
-         * *   **10**: Value-added Plan edition
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder version(Integer version) {
             this.version = version;
@@ -877,7 +989,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for the cores of servers that can be protected.
+         * <p>The quota for the cores of servers that can be protected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder vmCores(Integer vmCores) {
             this.vmCores = vmCores;
@@ -885,7 +1000,10 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The purchased quota for vulnerability fixing. Unit: times/month.
+         * <p>The purchased quota for vulnerability fixing. Unit: times/month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder vulFixCapacity(Long vulFixCapacity) {
             this.vulFixCapacity = vulFixCapacity;
@@ -893,11 +1011,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the web tamper proofing feature is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the web tamper proofing feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder webLock(Integer webLock) {
             this.webLock = webLock;
@@ -905,10 +1026,13 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time a server is protected by the web tamper proofing feature. Valid values: 0 to N.
-         * <p>
+         * <p>The quota for the web tamper proofing feature. The quantity of servers that are allowed by the quota is deducted by one each time a server is protected by the web tamper proofing feature. Valid values: 0 to N.</p>
+         * <blockquote>
+         * <p> N indicates the number of servers that you own.</p>
+         * </blockquote>
          * 
-         * >  N indicates the number of servers that you own.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder webLockAuthCount(Long webLockAuthCount) {
             this.webLockAuthCount = webLockAuthCount;

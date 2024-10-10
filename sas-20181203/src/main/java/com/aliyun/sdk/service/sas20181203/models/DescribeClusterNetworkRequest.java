@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterNetworkRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterNetworkRequest</p>
@@ -69,10 +70,14 @@ public class DescribeClusterNetworkRequest extends Request {
         } 
 
         /**
-         * The end timestamp of the query. Unit: milliseconds.
-         * <p>
+         * <p>The end timestamp of the query. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+         * <strong>example:</strong>
+         * <p>1656038940435</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -81,10 +86,14 @@ public class DescribeClusterNetworkRequest extends Request {
         }
 
         /**
-         * The start timestamp of the query. Unit: milliseconds.
-         * <p>
+         * <p>The start timestamp of the query. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>The days between the start timestamp and the end timestamp cannot exceed <strong>seven</strong> days.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
+         * <strong>example:</strong>
+         * <p>1656038740435</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

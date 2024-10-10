@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteFileProtectRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteFileProtectRuleRequest</p>
@@ -53,7 +54,7 @@ public class DeleteFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * The IDs of the core file monitoring rules that you want to delete.
+         * <p>The IDs of the core file monitoring rules that you want to delete.</p>
          */
         public Builder id(java.util.List < Long > id) {
             this.putQueryParameter("Id", id);

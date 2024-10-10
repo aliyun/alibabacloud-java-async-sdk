@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVirusScanMachineResponseBody} extends {@link TeaModel}
  *
  * <p>ListVirusScanMachineResponseBody</p>
@@ -61,7 +62,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -69,7 +70,7 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A27C1C09-828B-5CB8-9203-F55423BE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListVirusScanMachineResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirusScanMachineResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventCount")
         private Integer eventCount;
@@ -177,7 +187,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The number of times that the alert is triggered.
+             * <p>The number of times that the alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28</p>
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -185,7 +198,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the server.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp180bogui4fc0z4****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -193,7 +209,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -201,7 +220,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the associated server.
+             * <p>The public IP address of the associated server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -209,7 +231,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the associated server.
+             * <p>The private IP address of the associated server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.42.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -217,7 +242,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -231,6 +259,12 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListVirusScanMachineResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListVirusScanMachineResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -282,7 +316,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -290,7 +327,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -298,7 +338,10 @@ public class ListVirusScanMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

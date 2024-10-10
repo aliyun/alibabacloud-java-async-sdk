@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileProtectPluginStatusRequest} extends {@link RequestModel}
  *
  * <p>ListFileProtectPluginStatusRequest</p>
@@ -82,7 +83,10 @@ public class ListFileProtectPluginStatusRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -91,7 +95,10 @@ public class ListFileProtectPluginStatusRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,7 +107,10 @@ public class ListFileProtectPluginStatusRequest extends Request {
         }
 
         /**
-         * The ID of the core file monitoring rule.
+         * <p>The ID of the core file monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE_PROTECT_RULE_SWITCH_TYPE_1693474122927</p>
          */
         public Builder switchId(String switchId) {
             this.putQueryParameter("SwitchId", switchId);

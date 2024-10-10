@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBaselineCheckWhiteRecordResponseBody} extends {@link TeaModel}
  *
  * <p>ListBaselineCheckWhiteRecordResponseBody</p>
@@ -61,7 +62,7 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The whitelist rules.
+         * <p>The whitelist rules.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -69,7 +70,7 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9F4E6157-9600-5588-86B9-38F09067****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBaselineCheckWhiteRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBaselineCheckWhiteRecordResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
@@ -225,7 +235,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>696</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -233,7 +246,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the check item.
+             * <p>The description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Config the Event Audit policys</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -241,7 +257,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item.
+             * <p>The type of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security audit</p>
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -249,7 +268,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the check item type.
+             * <p>The display name of the check item type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security audit</p>
              */
             public Builder checkTypeDisName(String checkTypeDisName) {
                 this.checkTypeDisName = checkTypeDisName;
@@ -257,11 +279,14 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the content within the request and response. Default value: **zh**. Valid values:
-             * <p>
+             * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>zh</strong>: Chinese</li>
+             * <li><strong>en</strong>: English</li>
+             * </ul>
              * 
-             * *   **zh**: Chinese
-             * *   **en**: English
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -269,7 +294,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the check item is added to the whitelist.
+             * <p>The reason why the check item is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AutoTest</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -277,7 +305,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the whitelist rule.
+             * <p>The ID of the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>79412</p>
              */
             public Builder recordId(Long recordId) {
                 this.recordId = recordId;
@@ -285,11 +316,14 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The data source. Valid values:
-             * <p>
+             * <p>The data source. Valid values:</p>
+             * <ul>
+             * <li><strong>default</strong>: server</li>
+             * <li><strong>agentless</strong>: agentless detection</li>
+             * </ul>
              * 
-             * *   **default**: server
-             * *   **agentless**: agentless detection
+             * <strong>example:</strong>
+             * <p>agentless</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -297,7 +331,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The object that is added to the whitelist.
+             * <p>The object that is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOST_BASELINE_WHITE_LIST_21</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -305,11 +342,14 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the assets on which the whitelist rule takes effect. Valid values:
-             * <p>
+             * <p>The type of the assets on which the whitelist rule takes effect. Valid values:</p>
+             * <ul>
+             * <li><strong>all_instance</strong>: all servers</li>
+             * <li><strong>instance</strong>: specific servers</li>
+             * </ul>
              * 
-             * *   **all_instance**: all servers
-             * *   **instance**: specific servers
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -323,6 +363,12 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListBaselineCheckWhiteRecordResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBaselineCheckWhiteRecordResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -386,7 +432,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -394,7 +443,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -402,7 +454,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -410,7 +465,10 @@ public class ListBaselineCheckWhiteRecordResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

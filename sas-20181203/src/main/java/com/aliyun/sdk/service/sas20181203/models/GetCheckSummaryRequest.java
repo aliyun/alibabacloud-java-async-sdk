@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetCheckSummaryRequest</p>
@@ -95,7 +96,7 @@ public class GetCheckSummaryRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you.
+         * <p>Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you.</p>
          */
         public Builder isItemStatistic(Boolean isItemStatistic) {
             this.putQueryParameter("IsItemStatistic", isItemStatistic);
@@ -104,11 +105,14 @@ public class GetCheckSummaryRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +121,10 @@ public class GetCheckSummaryRequest extends Request {
         }
 
         /**
-         * The account ID of the resource directory.
+         * <p>The account ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000</p>
          */
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -126,7 +133,7 @@ public class GetCheckSummaryRequest extends Request {
         }
 
         /**
-         * The cloud service providers.
+         * <p>The cloud service providers.</p>
          */
         public Builder vendors(java.util.List < String > vendors) {
             this.putQueryParameter("Vendors", vendors);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefaultKeyInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefaultKeyInfoResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDefaultKeyInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The domain names.
+         * <p>The domain names.</p>
          */
         public Builder domainList(java.util.List < String > domainList) {
             this.domainList = domainList;
@@ -69,7 +70,10 @@ public class DescribeDefaultKeyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The company name.
+         * <p>The company name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         public Builder names(String names) {
             this.names = names;
@@ -77,7 +81,10 @@ public class DescribeDefaultKeyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyCheckInstanceResultRequest} extends {@link RequestModel}
  *
  * <p>VerifyCheckInstanceResultRequest</p>
@@ -67,10 +68,13 @@ public class VerifyCheckInstanceResultRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
-         * <p>
+         * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+         * </blockquote>
          * 
-         * > You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the IDs of check items.
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -79,7 +83,7 @@ public class VerifyCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The instance IDs of the assets on which risks are detected based on the check item.
+         * <p>The instance IDs of the assets on which risks are detected based on the check item.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

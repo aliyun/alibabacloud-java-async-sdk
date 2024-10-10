@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaClusterLabelListResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpaClusterLabelListResponseBody</p>
@@ -97,7 +98,10 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -113,7 +120,7 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the tags that are added to containers.
+         * <p>The information about the tags that are added to containers.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -121,7 +128,10 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95D35EB3-1F8E-5E07-A68E-BE018C9B80CB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpaClusterLabelListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaClusterLabelListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
@@ -181,7 +203,10 @@ public class GetOpaClusterLabelListResponseBody extends TeaModel {
             private String tagName; 
 
             /**
-             * The name of the tag that is added to the container.
+             * <p>The name of the tag that is added to the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;

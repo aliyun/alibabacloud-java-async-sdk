@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListStrategyUuidCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWhiteListStrategyUuidCountResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeWhiteListStrategyUuidCountResponseBody extends TeaModel {
         private Integer uuidCount; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class DescribeWhiteListStrategyUuidCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the servers on which the application whitelist policy takes effect.
+         * <p>The number of the servers on which the application whitelist policy takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder uuidCount(Integer uuidCount) {
             this.uuidCount = uuidCount;

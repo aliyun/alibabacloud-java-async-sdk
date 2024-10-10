@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryIncidentSubNodesCountResponseBody} extends {@link TeaModel}
  *
  * <p>QueryIncidentSubNodesCountResponseBody</p>
@@ -61,7 +62,10 @@ public class QueryIncidentSubNodesCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class QueryIncidentSubNodesCountResponseBody extends TeaModel {
         }
 
         /**
-         * The child nodes.
+         * <p>The child nodes.</p>
          */
         public Builder subNodesCount(java.util.Map < String, Integer > subNodesCount) {
             this.subNodesCount = subNodesCount;
@@ -77,7 +81,10 @@ public class QueryIncidentSubNodesCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

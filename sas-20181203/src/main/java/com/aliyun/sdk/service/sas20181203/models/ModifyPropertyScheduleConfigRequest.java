@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPropertyScheduleConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyPropertyScheduleConfigRequest</p>
@@ -69,7 +70,10 @@ public class ModifyPropertyScheduleConfigRequest extends Request {
         } 
 
         /**
-         * ScheduleTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder scheduleTime(String scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);
@@ -78,7 +82,10 @@ public class ModifyPropertyScheduleConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scheduler_port_period</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

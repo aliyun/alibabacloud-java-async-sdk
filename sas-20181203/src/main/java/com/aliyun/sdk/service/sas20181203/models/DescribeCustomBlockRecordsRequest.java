@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomBlockRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomBlockRecordsRequest</p>
@@ -109,7 +110,10 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         } 
 
         /**
-         * The IP address that you want to block by using the defense rule.
+         * <p>The IP address that you want to block by using the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117.66.XX.XX</p>
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -118,7 +122,10 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -127,7 +134,10 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,12 +155,15 @@ public class DescribeCustomBlockRecordsRequest extends Request {
         }
 
         /**
-         * The status of the defense rule. Valid values:
-         * <p>
+         * <p>The status of the defense rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: invalid</li>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>2</strong>: failed</li>
+         * </ul>
          * 
-         * *   **0**: invalid
-         * *   **1**: enabled
-         * *   **2**: failed
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExposedStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExposedStatisticsResponseBody</p>
@@ -17,11 +18,20 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExposedComponentCount")
     private Integer exposedComponentCount;
 
+    @com.aliyun.core.annotation.NameInMap("ExposedDdsCount")
+    private Integer exposedDdsCount;
+
+    @com.aliyun.core.annotation.NameInMap("ExposedEcsCount")
+    private Integer exposedEcsCount;
+
     @com.aliyun.core.annotation.NameInMap("ExposedInstanceCount")
     private Integer exposedInstanceCount;
 
     @com.aliyun.core.annotation.NameInMap("ExposedIpCount")
     private Integer exposedIpCount;
+
+    @com.aliyun.core.annotation.NameInMap("ExposedKvstoreCount")
+    private Integer exposedKvstoreCount;
 
     @com.aliyun.core.annotation.NameInMap("ExposedLaterVulCount")
     private Integer exposedLaterVulCount;
@@ -31,6 +41,9 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ExposedPortCount")
     private Integer exposedPortCount;
+
+    @com.aliyun.core.annotation.NameInMap("ExposedRdsCount")
+    private Integer exposedRdsCount;
 
     @com.aliyun.core.annotation.NameInMap("ExposedWeekPasswordMachineCount")
     private Integer exposedWeekPasswordMachineCount;
@@ -44,11 +57,15 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     private DescribeExposedStatisticsResponseBody(Builder builder) {
         this.exposedAsapVulCount = builder.exposedAsapVulCount;
         this.exposedComponentCount = builder.exposedComponentCount;
+        this.exposedDdsCount = builder.exposedDdsCount;
+        this.exposedEcsCount = builder.exposedEcsCount;
         this.exposedInstanceCount = builder.exposedInstanceCount;
         this.exposedIpCount = builder.exposedIpCount;
+        this.exposedKvstoreCount = builder.exposedKvstoreCount;
         this.exposedLaterVulCount = builder.exposedLaterVulCount;
         this.exposedNntfVulCount = builder.exposedNntfVulCount;
         this.exposedPortCount = builder.exposedPortCount;
+        this.exposedRdsCount = builder.exposedRdsCount;
         this.exposedWeekPasswordMachineCount = builder.exposedWeekPasswordMachineCount;
         this.gatewayAssetCount = builder.gatewayAssetCount;
         this.requestId = builder.requestId;
@@ -77,6 +94,20 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     }
 
     /**
+     * @return exposedDdsCount
+     */
+    public Integer getExposedDdsCount() {
+        return this.exposedDdsCount;
+    }
+
+    /**
+     * @return exposedEcsCount
+     */
+    public Integer getExposedEcsCount() {
+        return this.exposedEcsCount;
+    }
+
+    /**
      * @return exposedInstanceCount
      */
     public Integer getExposedInstanceCount() {
@@ -88,6 +119,13 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
      */
     public Integer getExposedIpCount() {
         return this.exposedIpCount;
+    }
+
+    /**
+     * @return exposedKvstoreCount
+     */
+    public Integer getExposedKvstoreCount() {
+        return this.exposedKvstoreCount;
     }
 
     /**
@@ -109,6 +147,13 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
      */
     public Integer getExposedPortCount() {
         return this.exposedPortCount;
+    }
+
+    /**
+     * @return exposedRdsCount
+     */
+    public Integer getExposedRdsCount() {
+        return this.exposedRdsCount;
     }
 
     /**
@@ -135,17 +180,24 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer exposedAsapVulCount; 
         private Integer exposedComponentCount; 
+        private Integer exposedDdsCount; 
+        private Integer exposedEcsCount; 
         private Integer exposedInstanceCount; 
         private Integer exposedIpCount; 
+        private Integer exposedKvstoreCount; 
         private Integer exposedLaterVulCount; 
         private Integer exposedNntfVulCount; 
         private Integer exposedPortCount; 
+        private Integer exposedRdsCount; 
         private Integer exposedWeekPasswordMachineCount; 
         private Integer gatewayAssetCount; 
         private String requestId; 
 
         /**
-         * The total number of high-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+         * <p>The total number of high-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder exposedAsapVulCount(Integer exposedAsapVulCount) {
             this.exposedAsapVulCount = exposedAsapVulCount;
@@ -153,7 +205,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of system components that are exposed on the Internet. The components include OpenSSL and OpenSSH.
+         * <p>The total number of system components that are exposed on the Internet. The components include OpenSSL and OpenSSH.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder exposedComponentCount(Integer exposedComponentCount) {
             this.exposedComponentCount = exposedComponentCount;
@@ -161,7 +216,26 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of servers that are exposed on the Internet.
+         * ExposedDdsCount.
+         */
+        public Builder exposedDdsCount(Integer exposedDdsCount) {
+            this.exposedDdsCount = exposedDdsCount;
+            return this;
+        }
+
+        /**
+         * ExposedEcsCount.
+         */
+        public Builder exposedEcsCount(Integer exposedEcsCount) {
+            this.exposedEcsCount = exposedEcsCount;
+            return this;
+        }
+
+        /**
+         * <p>The total number of servers that are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder exposedInstanceCount(Integer exposedInstanceCount) {
             this.exposedInstanceCount = exposedInstanceCount;
@@ -169,7 +243,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of IP addresses that are exposed on the Internet.
+         * <p>The total number of IP addresses that are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder exposedIpCount(Integer exposedIpCount) {
             this.exposedIpCount = exposedIpCount;
@@ -177,7 +254,18 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+         * ExposedKvstoreCount.
+         */
+        public Builder exposedKvstoreCount(Integer exposedKvstoreCount) {
+            this.exposedKvstoreCount = exposedKvstoreCount;
+            return this;
+        }
+
+        /**
+         * <p>The total number of medium-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder exposedLaterVulCount(Integer exposedLaterVulCount) {
             this.exposedLaterVulCount = exposedLaterVulCount;
@@ -185,7 +273,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of low-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.
+         * <p>The total number of low-risk vulnerabilities that are exposed on the Internet and can be exploited by attackers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder exposedNntfVulCount(Integer exposedNntfVulCount) {
             this.exposedNntfVulCount = exposedNntfVulCount;
@@ -193,7 +284,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of ports that are exposed on the Internet.
+         * <p>The total number of ports that are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder exposedPortCount(Integer exposedPortCount) {
             this.exposedPortCount = exposedPortCount;
@@ -201,7 +295,18 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of system keys that are detected on your servers and are exposed on the Internet.
+         * ExposedRdsCount.
+         */
+        public Builder exposedRdsCount(Integer exposedRdsCount) {
+            this.exposedRdsCount = exposedRdsCount;
+            return this;
+        }
+
+        /**
+         * <p>The total number of system keys that are detected on your servers and are exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder exposedWeekPasswordMachineCount(Integer exposedWeekPasswordMachineCount) {
             this.exposedWeekPasswordMachineCount = exposedWeekPasswordMachineCount;
@@ -209,7 +314,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of gateway assets that are exposed on the Internet. The gateway assets include NAT gateways and Server Load Balancer (SLB) instances.
+         * <p>The total number of gateway assets that are exposed on the Internet. The gateway assets include NAT gateways and Server Load Balancer (SLB) instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder gatewayAssetCount(Integer gatewayAssetCount) {
             this.gatewayAssetCount = gatewayAssetCount;
@@ -217,7 +325,10 @@ public class DescribeExposedStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B897D10-B3CD-4A93-A5FA-591F3ED12A86</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetSyncRefreshRegionResponseBody} extends {@link TeaModel}
  *
  * <p>SetSyncRefreshRegionResponseBody</p>
@@ -37,7 +38,10 @@ public class SetSyncRefreshRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9BB78BC9-07B9-578B-B020-C954E6FC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

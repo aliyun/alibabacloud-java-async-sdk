@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBinarySecurityPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBinarySecurityPoliciesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about security policies.
+         * <p>The information about security policies.</p>
          */
         public Builder binarySecurityPolicies(java.util.List < BinarySecurityPolicies> binarySecurityPolicies) {
             this.binarySecurityPolicies = binarySecurityPolicies;
@@ -69,7 +70,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBinarySecurityPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBinarySecurityPoliciesResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -129,7 +139,10 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             private java.util.List < String > namespaces; 
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c316702acdf5f45e1a9dc7fc52f21****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -137,7 +150,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespaces.
+             * <p>The namespaces.</p>
              */
             public Builder namespaces(java.util.List < String > namespaces) {
                 this.namespaces = namespaces;
@@ -151,6 +164,12 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBinarySecurityPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBinarySecurityPoliciesResponseBody</p>
+     */
     public static class BinarySecurityPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Clusters")
         private java.util.List < Clusters> clusters;
@@ -226,7 +245,7 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The information about clusters.
+             * <p>The information about clusters.</p>
              */
             public Builder clusters(java.util.List < Clusters> clusters) {
                 this.clusters = clusters;
@@ -234,7 +253,10 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logtail</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -242,11 +264,14 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the policy. The value is in the JSON format. A key supports the following values:
-             * <p>
+             * <p>The content of the policy. The value is in the JSON format. A key supports the following values:</p>
+             * <ul>
+             * <li><strong>policyMode</strong>: the type of the policy. Default value: requireAttestor.</li>
+             * <li><strong>requiredAttestors</strong>: the required witnesses.</li>
+             * </ul>
              * 
-             * *   **policyMode**: the type of the policy. Default value: requireAttestor.
-             * *   **requiredAttestors**: the required witnesses.
+             * <strong>example:</strong>
+             * <p>{&quot;PolicyMode&quot;:&quot;requireAttestor&quot;,&quot;RequiredAttestors&quot;:[&quot;test-xcs-04-11-hhht&quot;]}</p>
              */
             public Builder policy(java.util.Map < String, ? > policy) {
                 this.policy = policy;
@@ -254,7 +279,10 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -262,11 +290,14 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the policy. Valid values:
-             * <p>
+             * <p>The status of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>enabled</strong></li>
+             * <li><strong>disabled</strong></li>
+             * </ul>
              * 
-             * *   **enabled**
-             * *   **disabled**
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -280,6 +311,12 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBinarySecurityPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBinarySecurityPoliciesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -343,7 +380,10 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on each page.
+             * <p>The number of entries returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -351,7 +391,10 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -359,7 +402,10 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -367,7 +413,10 @@ public class DescribeBinarySecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>218</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupMachineStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupMachineStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The backup status of the server.
+         * <p>The backup status of the server.</p>
          */
         public Builder backupMachineStatus(BackupMachineStatus backupMachineStatus) {
             this.backupMachineStatus = backupMachineStatus;
@@ -57,7 +58,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupMachineStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupMachineStatusResponseBody</p>
+     */
     public static class ErrorList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -109,7 +119,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             private String errorStatus; 
 
             /**
-             * The error code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TARGET_NOT_EXIST</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -117,7 +130,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The error message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FAILED</p>
              */
             public Builder errorStatus(String errorStatus) {
                 this.errorStatus = errorStatus;
@@ -131,6 +147,12 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupMachineStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupMachineStatusResponseBody</p>
+     */
     public static class BackupMachineStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
@@ -290,7 +312,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             private String vaultId; 
 
             /**
-             * The ID of the anti-ransomware agent.
+             * <p>The ID of the anti-ransomware agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-000dbefaw9f7gnbw****</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -298,15 +323,18 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the anti-ransomware agent. Valid values:
-             * <p>
+             * <p>The status of the anti-ransomware agent. Valid values:</p>
+             * <ul>
+             * <li><strong>ONLINE</strong>: normal</li>
+             * <li><strong>CLIENT_CONNECTION_ERROR</strong>: abnormal</li>
+             * <li><strong>UNINSTALLING</strong>: being uninstalled</li>
+             * <li><strong>UNINSTALL_FAILED</strong>: failed to be uninstalled</li>
+             * <li><strong>UPGRADING</strong>: being upgraded</li>
+             * <li><strong>UPGRADE_FAILED</strong>: failed to be upgraded</li>
+             * </ul>
              * 
-             * *   **ONLINE**: normal
-             * *   **CLIENT_CONNECTION_ERROR**: abnormal
-             * *   **UNINSTALLING**: being uninstalled
-             * *   **UNINSTALL_FAILED**: failed to be uninstalled
-             * *   **UPGRADING**: being upgraded
-             * *   **UPGRADE_FAILED**: failed to be upgraded
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -314,7 +342,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the anti-ransomware agent.
+             * <p>The version of the anti-ransomware agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.11.0</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -322,7 +353,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLIENT_CONNECTION_ERROR</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -330,7 +364,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the error information reported by the backup server.
+             * <p>An array that consists of the error information reported by the backup server.</p>
              */
             public Builder errorList(java.util.List < ErrorList> errorList) {
                 this.errorList = errorList;
@@ -338,7 +372,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zeaqkb80vloxjcj****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -346,7 +383,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the server resides.
+             * <p>The ID of the region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -354,7 +394,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of backup versions.
+             * <p>The number of backup versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder savedBackupCount(Integer savedBackupCount) {
                 this.savedBackupCount = savedBackupCount;
@@ -362,11 +405,15 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the anti-ransomware service. Valid values:
-             * <p>
-             * *   **SERVICE_EXCEPTION**: Service exception
-             * *   **RESTORING**: Restoring
-             * *   **BACKING_UP**: Backup in process
+             * <p>The status of the anti-ransomware service. Valid values:</p>
+             * <ul>
+             * <li><strong>SERVICE_EXCEPTION</strong>: Service exception</li>
+             * <li><strong>RESTORING</strong>: Restoring</li>
+             * <li><strong>BACKING_UP</strong>: Backup in process</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RESTORING</p>
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -374,12 +421,15 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the anti-ransomware agent. Valid values:
-             * <p>
+             * <p>The status of the anti-ransomware agent. Valid values:</p>
+             * <ul>
+             * <li><strong>NOT_INSTALLED</strong>: not installed</li>
+             * <li><strong>CLIENT_CONNECTION_ERROR</strong>: abnormal</li>
+             * <li><strong>ACTIVATED</strong>: normal</li>
+             * </ul>
              * 
-             * *   **NOT_INSTALLED**: not installed
-             * *   **CLIENT_CONNECTION_ERROR**: abnormal
-             * *   **ACTIVATED**: normal
+             * <strong>example:</strong>
+             * <p>ACTIVATED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -387,7 +437,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eb2c782e-64f2-4590-a86c-d90164df****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -395,7 +448,10 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the backup vault in which the backup data is stored.
+             * <p>The ID of the backup vault in which the backup data is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v-0005i2qh5fcr6seo****</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

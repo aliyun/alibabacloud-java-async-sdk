@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckWarningSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCheckWarningSummaryResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         private java.util.List < WarningSummarys> warningSummarys; 
 
         /**
-         * The number of check items returned on the current page.
+         * <p>The number of check items returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -105,7 +109,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the current page.
+         * <p>The page number of the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +120,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +131,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00BD7CE2-284A-4534-BD09-FB69836DD750</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of check items.
+         * <p>The total number of check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,7 +153,7 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics of check items.
+         * <p>The statistics of check items.</p>
          */
         public Builder warningSummarys(java.util.List < WarningSummarys> warningSummarys) {
             this.warningSummarys = warningSummarys;
@@ -150,6 +166,12 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCheckWarningSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckWarningSummaryResponseBody</p>
+     */
     public static class WarningSummarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckCount")
         private Integer checkCount;
@@ -333,7 +355,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             private Integer warningMachineCount; 
 
             /**
-             * The number of check items.
+             * <p>The number of check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder checkCount(Integer checkCount) {
                 this.checkCount = checkCount;
@@ -341,11 +366,14 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the risk item can be exploited. Valid values:
-             * <p>
+             * <p>Indicates whether the risk item can be exploited. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder checkExploit(Boolean checkExploit) {
                 this.checkExploit = checkExploit;
@@ -353,11 +381,14 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates  whether the risk item is a container runtime risk item. Valid values:
-             * <p>
+             * <p>Indicates  whether the risk item is a container runtime risk item. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder containerRisk(Boolean containerRisk) {
                 this.containerRisk = containerRisk;
@@ -365,11 +396,14 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the risk item is a database risk item. Valid values:
-             * <p>
+             * <p>Indicates whether the risk item is a database risk item. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder databaseRisk(Boolean databaseRisk) {
                 this.databaseRisk = databaseRisk;
@@ -377,7 +411,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk items.
+             * <p>The number of high-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -385,7 +422,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last baseline check was performed.
+             * <p>The time when the last baseline check was performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-01-01 12:23:00</p>
              */
             public Builder lastFoundTime(String lastFoundTime) {
                 this.lastFoundTime = lastFoundTime;
@@ -393,12 +433,15 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the risk item. Valid values:
-             * <p>
+             * <p>The risk level of the risk item. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -406,7 +449,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * <p>The number of low-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -414,7 +460,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk items.
+             * <p>The number of medium-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -422,7 +471,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the risk item.
+             * <p>The ID of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>118</p>
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -430,7 +482,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the risk item.
+             * <p>The name of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Redis</p>
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -438,7 +493,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The level-2 type of the risk item.
+             * <p>The level-2 type of the risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Redis</p>
              */
             public Builder subTypeAlias(String subTypeAlias) {
                 this.subTypeAlias = subTypeAlias;
@@ -446,7 +504,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The level-1 type of the check item. Examples: database, system, weak password, and middleware.
+             * <p>The level-1 type of the check item. Examples: database, system, weak password, and middleware.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>databases</p>
              */
             public Builder typeAlias(String typeAlias) {
                 this.typeAlias = typeAlias;
@@ -454,7 +515,10 @@ public class DescribeCheckWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets on which risk items are detected.
+             * <p>The number of assets on which risk items are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder warningMachineCount(Integer warningMachineCount) {
                 this.warningMachineCount = warningMachineCount;

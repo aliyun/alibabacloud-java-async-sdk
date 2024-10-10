@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaPluginStatusRequest} extends {@link RequestModel}
  *
  * <p>GetOpaPluginStatusRequest</p>
@@ -54,10 +55,11 @@ public class GetOpaPluginStatusRequest extends Request {
         } 
 
         /**
-         * The cluster IDs.
-         * <p>
-         * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <p>The cluster IDs.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListStrategyStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWhiteListStrategyStatisticsResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -105,7 +109,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +120,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +131,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>571B2642-BF51-5BDD-906B-D2340DB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,7 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics of the policies.
+         * <p>The statistics of the policies.</p>
          */
         public Builder strategies(java.util.List < Strategies> strategies) {
             this.strategies = strategies;
@@ -137,7 +150,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWhiteListStrategyStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWhiteListStrategyStatisticsResponseBody</p>
+     */
     public static class Strategies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetCount")
         private Integer assetCount;
@@ -273,7 +295,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             private Integer virusProcCount; 
 
             /**
-             * The number of the servers on which the policy takes effect.
+             * <p>The number of the servers on which the policy takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder assetCount(Integer assetCount) {
                 this.assetCount = assetCount;
@@ -281,7 +306,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The learning progress of the policy. Unit: percent (%).
+             * <p>The learning progress of the policy. Unit: percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -289,14 +317,17 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the policy. Valid values:
-             * <p>
+             * <p>The status of the policy. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: learning</li>
+             * <li><strong>2</strong>: paused</li>
+             * <li><strong>3</strong>: learning completed</li>
+             * <li><strong>4</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: learning
-             * *   **2**: paused
-             * *   **3**: learning completed
-             * *   **4**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -304,7 +335,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11906</p>
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -312,7 +346,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>win</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -320,7 +357,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The intelligent learning duration. Unit: hour.
+             * <p>The intelligent learning duration. Unit: hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder studyTime(Integer studyTime) {
                 this.studyTime = studyTime;
@@ -328,7 +368,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of suspicious processes.
+             * <p>The number of suspicious processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder suspiciousProcCount(Integer suspiciousProcCount) {
                 this.suspiciousProcCount = suspiciousProcCount;
@@ -336,7 +379,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of trusted processes.
+             * <p>The number of trusted processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder trustProcCount(Integer trustProcCount) {
                 this.trustProcCount = trustProcCount;
@@ -344,7 +390,10 @@ public class DescribeWhiteListStrategyStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of malicious processes.
+             * <p>The number of malicious processes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder virusProcCount(Integer virusProcCount) {
                 this.virusProcCount = virusProcCount;

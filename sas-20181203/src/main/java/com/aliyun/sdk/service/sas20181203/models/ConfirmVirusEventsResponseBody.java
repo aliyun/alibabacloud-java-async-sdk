@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmVirusEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ConfirmVirusEventsResponseBody</p>
@@ -49,7 +50,10 @@ public class ConfirmVirusEventsResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DFD6277-CC36-57F7-ACE6-F5952XXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class ConfirmVirusEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

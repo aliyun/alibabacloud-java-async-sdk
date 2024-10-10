@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteGroupRequest</p>
@@ -68,10 +69,14 @@ public class DeleteGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the server group that you want to delete.
-         * <p>
+         * <p>The ID of the server group that you want to delete.</p>
+         * <blockquote>
+         * <p> To delete a server group, you must provide the ID of the server group. You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  To delete a server group, you must provide the ID of the server group. You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>9454789</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -80,7 +85,10 @@ public class DeleteGroupRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.172.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

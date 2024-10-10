@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSearchConditionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSearchConditionResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeSearchConditionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSearchConditionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSearchConditionResponseBody</p>
+     */
     public static class ConditionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConditionType")
         private String conditionType;

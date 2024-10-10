@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAssetsPropertyDetailRequest} extends {@link RequestModel}
  *
  * <p>GetAssetsPropertyDetailRequest</p>
@@ -152,12 +153,16 @@ public class GetAssetsPropertyDetailRequest extends Request {
         } 
 
         /**
-         * The type of the asset fingerprint that you want to query. Default value: **sca**. Valid values:
-         * <p>
+         * <p>The type of the asset fingerprint that you want to query. Default value: <strong>sca</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>lkm</strong>: kernel module</li>
+         * <li><strong>autorun</strong>: startup item</li>
+         * <li><strong>web_server</strong>: website</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **lkm**: kernel module
-         * *   **autorun**: startup item
-         * *   **web_server**: website
+         * <strong>example:</strong>
+         * <p>lkm</p>
          */
         public Builder biz(String biz) {
             this.putQueryParameter("Biz", biz);
@@ -166,7 +171,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -175,10 +183,13 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * The name of the aggregation item for the asset fingerprint that you want to query.
-         * <p>
+         * <p>The name of the aggregation item for the asset fingerprint that you want to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~GetAssetsPropertyItem~~">GetAssetsPropertyItem</a> operation to query the names of aggregation items.</p>
+         * </blockquote>
          * 
-         * > You can call the [GetAssetsPropertyItem](~~GetAssetsPropertyItem~~) operation to query the names of aggregation items.
+         * <strong>example:</strong>
+         * <p>virtio</p>
          */
         public Builder itemName(String itemName) {
             this.putQueryParameter("ItemName", itemName);
@@ -187,11 +198,14 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -200,10 +214,13 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +229,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * The name or IP address of the server.
+         * <p>The name or IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -221,7 +241,7 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * The conditions that are used to query the details about the asset fingerprint.
+         * <p>The conditions that are used to query the details about the asset fingerprint.</p>
          */
         public Builder searchCriteriaList(java.util.List < SearchCriteriaList> searchCriteriaList) {
             this.putQueryParameter("SearchCriteriaList", searchCriteriaList);
@@ -230,10 +250,13 @@ public class GetAssetsPropertyDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>38f72ea4-4c9f-4df1-bc6c-0f267614****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -248,6 +271,12 @@ public class GetAssetsPropertyDetailRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetAssetsPropertyDetailRequest} extends {@link TeaModel}
+     *
+     * <p>GetAssetsPropertyDetailRequest</p>
+     */
     public static class SearchCriteriaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -287,14 +316,20 @@ public class GetAssetsPropertyDetailRequest extends Request {
             private String value; 
 
             /**
-             * The name of the condition. Valid values:
-             * <p>
+             * <p>The name of the condition. Valid values:</p>
+             * <ul>
+             * <li><strong>remarkItemName</strong>: the aggregation item of the asset fingerprints. Fuzzy match is supported.</li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li>If <strong>Biz</strong> is set to <strong>web_server</strong>, <strong>remarkItemName</strong> specifies a domain name. </li>
+             * <li>If <strong>Biz</strong> is set to <strong>lkm</strong>, <strong>remarkItemName</strong> specifies a module name.</li>
+             * <li>If <strong>Biz</strong> is set to <strong>autorun</strong>, <strong>remarkItemName</strong> specifies the path to a startup item.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * *   **remarkItemName**: the aggregation item of the asset fingerprints. Fuzzy match is supported.
-             * 
-             * > *   If **Biz** is set to **web_server**, **remarkItemName** specifies a domain name. 
-             * > *   If **Biz** is set to **lkm**, **remarkItemName** specifies a module name.
-             * > *   If **Biz** is set to **autorun**, **remarkItemName** specifies the path to a startup item.
+             * <strong>example:</strong>
+             * <p>remarkItemName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -302,7 +337,10 @@ public class GetAssetsPropertyDetailRequest extends Request {
             }
 
             /**
-             * The value of the condition.
+             * <p>The value of the condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>virtio</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulExportInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeVulExportInfoRequest</p>
@@ -54,7 +55,11 @@ public class DescribeVulExportInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14356</p>
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

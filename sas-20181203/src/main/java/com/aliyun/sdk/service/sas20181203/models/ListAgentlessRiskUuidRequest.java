@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentlessRiskUuidRequest} extends {@link RequestModel}
  *
  * <p>ListAgentlessRiskUuidRequest</p>
@@ -179,7 +180,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -188,7 +192,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * The instance ID of the asset.
+         * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1g6wxdwps7s9dz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -197,7 +204,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * The instance name of the asset.
+         * <p>The instance name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca_cpm_****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -206,7 +216,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * The public IP address of the asset that you want to query.
+         * <p>The public IP address of the asset that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -215,7 +228,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * The private IP address of the asset that you want to query.
+         * <p>The private IP address of the asset that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.26.XX.XX</p>
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -224,7 +240,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oracle-win-001****</p>
          */
         public Builder machineName(String machineName) {
             this.putQueryParameter("MachineName", machineName);
@@ -233,7 +252,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,11 +264,14 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * Specifies whether risks exist. Valid values:
-         * <p>
+         * <p>Specifies whether risks exist. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Risks exist.</li>
+         * <li><strong>false</strong>: Risks do not exist.</li>
+         * </ul>
          * 
-         * *   **true**: Risks exist.
-         * *   **false**: Risks do not exist.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder risk(Boolean risk) {
             this.putQueryParameter("Risk", risk);
@@ -255,7 +280,10 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * The name of the detection object.
+         * <p>The name of the detection object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source-test-obj-0****</p>
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -264,13 +292,16 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * Specifies the type of the object being inspected. Valid values:
-         * <p>
+         * <p>Specifies the type of the object being inspected. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Host Snapshot.</li>
+         * <li><strong>2</strong>: Host Image.</li>
+         * <li><strong>3</strong>: User Snapshot.</li>
+         * <li><strong>4</strong>: User Image.</li>
+         * </ul>
          * 
-         * *   **1**: Host Snapshot.
-         * *   **2**: Host Image.
-         * *   **3**: User Snapshot.
-         * *   **4**: User Image.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder targetType(Integer targetType) {
             this.putQueryParameter("TargetType", targetType);

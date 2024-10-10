@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterCnnfStatusUserConfirmResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyClusterCnnfStatusUserConfirmResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyClusterCnnfStatusUserConfirmResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FFBEDBD-FA63-5213-9103-306519EE4857</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

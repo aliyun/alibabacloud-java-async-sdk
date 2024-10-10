@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAutoTagRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAutoTagRulesResponseBody</p>
@@ -61,7 +62,7 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The asset auto-tagging rules.
+         * <p>The asset auto-tagging rules.</p>
          */
         public Builder autoTagRuleList(java.util.List < AutoTagRuleList> autoTagRuleList) {
             this.autoTagRuleList = autoTagRuleList;
@@ -69,7 +70,7 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1383B0DB-D5D6-4B0C-9E6B-75939C8E67FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAutoTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAutoTagRulesResponseBody</p>
+     */
     public static class AutoTagRuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -213,7 +223,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             private String tagType; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>558463566374****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -221,7 +234,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the rule was created. Unit: milliseconds.
+             * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614674401000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -229,7 +245,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The expression of the rule.
+             * <p>The expression of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;groups&quot;:&quot;0&quot;,&quot;fieldValueType&quot;:&quot;string&quot;,&quot;field&quot;:&quot;internetIp&quot;,&quot;operator&quot;:&quot;equals&quot;,&quot;value&quot;:&quot;12.0.0.1&quot;}]</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -237,7 +256,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>900029</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -245,7 +267,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the rule was last updated. Unit: milliseconds.
+             * <p>The timestamp when the rule was last updated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1614674401000</p>
              */
             public Builder modifiedTimestamp(Long modifiedTimestamp) {
                 this.modifiedTimestamp = modifiedTimestamp;
@@ -253,7 +278,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describe</p>
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -261,7 +289,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto_test_rule</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -269,7 +300,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag specified by the operation type of the rule.
+             * <p>The tag specified by the operation type of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;tagId&quot;:4577447}</p>
              */
             public Builder tagContext(String tagContext) {
                 this.tagContext = tagContext;
@@ -277,11 +311,14 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The operation type of the rule. Valid values:
-             * <p>
+             * <p>The operation type of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>group</strong></li>
+             * <li><strong>tag</strong></li>
+             * </ul>
              * 
-             * *   **group**
-             * *   **tag**
+             * <strong>example:</strong>
+             * <p>group</p>
              */
             public Builder tagType(String tagType) {
                 this.tagType = tagType;
@@ -295,6 +332,12 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAutoTagRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAutoTagRulesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -358,7 +401,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -366,7 +412,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -374,7 +423,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -382,7 +434,10 @@ public class ListAutoTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

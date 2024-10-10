@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityEventOperationStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityEventOperationStatusRequest</p>
@@ -106,10 +107,14 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         }
 
         /**
-         * The IDs of the alert events.
-         * <p>
+         * <p>The IDs of the alert events.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the TaskId and SecurityEventIds parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must specify at least one of the TaskId and SecurityEventIds parameters.
+         * <strong>example:</strong>
+         * <p>[&quot;909361&quot;]</p>
          */
         public Builder securityEventIds(java.util.List < String > securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);
@@ -118,7 +123,10 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -127,10 +135,14 @@ public class DescribeSecurityEventOperationStatusRequest extends Request {
         }
 
         /**
-         * The ID of the task that handles the alert events.
-         * <p>
+         * <p>The ID of the task that handles the alert events.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the TaskId and SecurityEventIds parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must specify at least one of the TaskId and SecurityEventIds parameters.
+         * <strong>example:</strong>
+         * <p>12121</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

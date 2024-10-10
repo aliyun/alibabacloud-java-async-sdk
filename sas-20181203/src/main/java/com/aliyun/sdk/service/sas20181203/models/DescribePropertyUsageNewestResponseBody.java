@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyUsageNewestResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyUsageNewestResponseBody</p>
@@ -110,6 +111,12 @@ public class DescribePropertyUsageNewestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyUsageNewestResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyUsageNewestResponseBody</p>
+     */
     public static class NewestStatisticItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Create")
         private Long create;

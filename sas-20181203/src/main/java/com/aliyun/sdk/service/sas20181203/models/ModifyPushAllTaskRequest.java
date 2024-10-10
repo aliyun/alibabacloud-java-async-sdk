@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPushAllTaskRequest} extends {@link RequestModel}
  *
  * <p>ModifyPushAllTaskRequest</p>
@@ -83,7 +84,10 @@ public class ModifyPushAllTaskRequest extends Request {
         } 
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -92,20 +96,24 @@ public class ModifyPushAllTaskRequest extends Request {
         }
 
         /**
-         * The check items. Separate multiple check items with commas (,). Valid values:
-         * <p>
+         * <p>The check items. Separate multiple check items with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>OVAL_ENTITY</strong>: Common Vulnerabilities and Exposures (CVE) vulnerabilities</li>
+         * <li><strong>CMS</strong>: Web-CMS vulnerabilities</li>
+         * <li><strong>SYSVUL</strong>: Windows system vulnerabilities</li>
+         * <li><strong>SCA</strong>: application vulnerabilities</li>
+         * <li><strong>HEALTH_CHECK</strong>: baselines</li>
+         * <li><strong>WEBSHELL</strong>: webshells</li>
+         * <li><strong>PROC_SNAPSHOT</strong>: processes</li>
+         * <li><strong>PORT_SNAPSHOT</strong>: ports</li>
+         * <li><strong>ACCOUNT_SNAPSHOT</strong>: accounts</li>
+         * <li><strong>SOFTWARE_SNAPSHOT</strong>: software assets</li>
+         * <li><strong>SCA_SNAPSHOT</strong>: middleware</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **OVAL_ENTITY**: Common Vulnerabilities and Exposures (CVE) vulnerabilities
-         * *   **CMS**: Web-CMS vulnerabilities
-         * *   **SYSVUL**: Windows system vulnerabilities
-         * *   **SCA**: application vulnerabilities
-         * *   **HEALTH_CHECK**: baselines
-         * *   **WEBSHELL**: webshells
-         * *   **PROC_SNAPSHOT**: processes
-         * *   **PORT_SNAPSHOT**: ports
-         * *   **ACCOUNT_SNAPSHOT**: accounts
-         * *   **SOFTWARE_SNAPSHOT**: software assets
-         * *   **SCA_SNAPSHOT**: middleware
+         * <strong>example:</strong>
+         * <p>HEALTH_CHECK,OVAL_ENTITY</p>
          */
         public Builder tasks(String tasks) {
             this.putQueryParameter("Tasks", tasks);
@@ -114,7 +122,11 @@ public class ModifyPushAllTaskRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers on which you want to perform security check tasks. Separate multiple UUIDs with commas (,).
+         * <p>The UUIDs of servers on which you want to perform security check tasks. Separate multiple UUIDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet-923b4538-0e88-409d-80ba-cb2e7487****,dc1691eb-656f-472f-b2aa-04f621f4****,70452f92-9fc1-45c5-ab35-e7bf8552****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

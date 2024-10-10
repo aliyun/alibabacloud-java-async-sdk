@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterHostSecuritySummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterHostSecuritySummaryResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The alert details of the hosts.
+         * <p>The alert details of the hosts.</p>
          */
         public Builder clusterHostEvent(ClusterHostEvent clusterHostEvent) {
             this.clusterHostEvent = clusterHostEvent;
@@ -57,7 +58,10 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterHostSecuritySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterHostSecuritySummaryResponseBody</p>
+     */
     public static class AlarmEvent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -109,7 +119,10 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The number of alerts.
+             * <p>The number of alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -117,12 +130,15 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The alert level. Valid values:
-             * <p>
+             * <p>The alert level. Valid values:</p>
+             * <ul>
+             * <li><strong>serious</strong></li>
+             * <li><strong>suspicious</strong></li>
+             * <li><strong>remind</strong></li>
+             * </ul>
              * 
-             * *   **serious**
-             * *   **suspicious**
-             * *   **remind**
+             * <strong>example:</strong>
+             * <p>remind</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -136,6 +152,12 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterHostSecuritySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterHostSecuritySummaryResponseBody</p>
+     */
     public static class BaselineEvent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -175,7 +197,10 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The number of baselines.
+             * <p>The number of baselines.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -183,12 +208,15 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the baseline. Valid values:
-             * <p>
+             * <p>The risk level of the baseline. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -202,6 +230,12 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterHostSecuritySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterHostSecuritySummaryResponseBody</p>
+     */
     public static class VulEvent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -241,7 +275,10 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The number of vulnerabilities.
+             * <p>The number of vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -249,12 +286,15 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the vulnerability. Valid values:
-             * <p>
+             * <p>The risk level of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>asap</strong>: high. You must fix the vulnerability at the earliest opportunity.</li>
+             * <li><strong>nntf</strong>: medium. You can fix the vulnerability based on your business requirements.</li>
+             * <li><strong>later</strong>: low. You can ignore the vulnerability.</li>
+             * </ul>
              * 
-             * *   **asap**: high. You must fix the vulnerability at the earliest opportunity.
-             * *   **nntf**: medium. You can fix the vulnerability based on your business requirements.
-             * *   **later**: low. You can ignore the vulnerability.
+             * <strong>example:</strong>
+             * <p>later</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -268,6 +308,12 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeClusterHostSecuritySummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterHostSecuritySummaryResponseBody</p>
+     */
     public static class ClusterHostEvent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmEvent")
         private java.util.List < AlarmEvent> alarmEvent;
@@ -319,7 +365,7 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             private java.util.List < VulEvent> vulEvent; 
 
             /**
-             * The alert details of the host.
+             * <p>The alert details of the host.</p>
              */
             public Builder alarmEvent(java.util.List < AlarmEvent> alarmEvent) {
                 this.alarmEvent = alarmEvent;
@@ -327,7 +373,7 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline details of the host.
+             * <p>The baseline details of the host.</p>
              */
             public Builder baselineEvent(java.util.List < BaselineEvent> baselineEvent) {
                 this.baselineEvent = baselineEvent;
@@ -335,7 +381,7 @@ public class DescribeClusterHostSecuritySummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The vulnerability details of the host.
+             * <p>The vulnerability details of the host.</p>
              */
             public Builder vulEvent(java.util.List < VulEvent> vulEvent) {
                 this.vulEvent = vulEvent;

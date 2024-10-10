@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpgradeVersionByUuidsRequest} extends {@link RequestModel}
  *
  * <p>UpgradeVersionByUuidsRequest</p>
@@ -69,7 +70,10 @@ public class UpgradeVersionByUuidsRequest extends Request {
         } 
 
         /**
-         * UpgradeVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.9</p>
          */
         public Builder upgradeVersion(String upgradeVersion) {
             this.putQueryParameter("UpgradeVersion", upgradeVersion);
@@ -78,7 +82,7 @@ public class UpgradeVersionByUuidsRequest extends Request {
         }
 
         /**
-         * UuidList.
+         * <p>This parameter is required.</p>
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

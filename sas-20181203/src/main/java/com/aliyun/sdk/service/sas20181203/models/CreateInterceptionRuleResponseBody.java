@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInterceptionRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateInterceptionRuleResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateInterceptionRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A01810A0-xxx5E2676</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

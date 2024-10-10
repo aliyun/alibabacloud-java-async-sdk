@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizeReportListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomizeReportListRequest</p>
@@ -123,11 +124,14 @@ public class DescribeCustomizeReportListRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,11 +140,14 @@ public class DescribeCustomizeReportListRequest extends Request {
         }
 
         /**
-         * Specifies whether to pin the report. Valid values:
-         * <p>
+         * <p>Specifies whether to pin the report. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
          * 
-         * *   **false**
-         * *   **true**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder pinned(Boolean pinned) {
             this.putQueryParameter("Pinned", pinned);
@@ -149,11 +156,14 @@ public class DescribeCustomizeReportListRequest extends Request {
         }
 
         /**
-         * The state of the report. Valid values:
-         * <p>
+         * <p>The state of the report. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
          * 
-         * *   **0**: disabled
-         * *   **1**: enabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reportStatus(Integer reportStatus) {
             this.putQueryParameter("ReportStatus", reportStatus);
@@ -162,13 +172,16 @@ public class DescribeCustomizeReportListRequest extends Request {
         }
 
         /**
-         * The type of the report. Valid values:
-         * <p>
+         * <p>The type of the report. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: daily report</li>
+         * <li><strong>1</strong>: weekly report</li>
+         * <li><strong>2</strong>: monthly report</li>
+         * <li><strong>3</strong>: report whose statistics are collected in a custom time range</li>
+         * </ul>
          * 
-         * *   **0**: daily report
-         * *   **1**: weekly report
-         * *   **2**: monthly report
-         * *   **3**: report whose statistics are collected in a custom time range
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder reportType(Integer reportType) {
             this.putQueryParameter("ReportType", reportType);
@@ -177,11 +190,14 @@ public class DescribeCustomizeReportListRequest extends Request {
         }
 
         /**
-         * The report version. Valid values:
-         * <p>
+         * <p>The report version. Valid values:</p>
+         * <ul>
+         * <li><strong>1.0.0</strong></li>
+         * <li><strong>2.0.0</strong></li>
+         * </ul>
          * 
-         * *   **1.0.0**
-         * *   **2.0.0**
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder reportVersion(String reportVersion) {
             this.putQueryParameter("ReportVersion", reportVersion);
@@ -190,7 +206,10 @@ public class DescribeCustomizeReportListRequest extends Request {
         }
 
         /**
-         * The name of the report.
+         * <p>The name of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

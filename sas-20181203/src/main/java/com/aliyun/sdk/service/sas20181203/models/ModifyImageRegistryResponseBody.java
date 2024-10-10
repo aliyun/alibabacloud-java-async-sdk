@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageRegistryResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyImageRegistryResponseBody</p>
@@ -109,7 +110,10 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * N/A
+         * <p>N/A</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -125,7 +132,10 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -133,7 +143,10 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +154,10 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>379a9b8f-107b-4630-9e95-2299a1ea****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,11 +165,14 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -161,7 +180,10 @@ public class ModifyImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * The execution duration.
+         * <p>The execution duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

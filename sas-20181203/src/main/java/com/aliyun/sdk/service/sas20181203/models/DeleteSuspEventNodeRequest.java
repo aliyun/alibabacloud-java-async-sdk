@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSuspEventNodeRequest} extends {@link RequestModel}
  *
  * <p>DeleteSuspEventNodeRequest</p>
@@ -54,10 +55,14 @@ public class DeleteSuspEventNodeRequest extends Request {
         } 
 
         /**
-         * The ID of the description.
-         * <p>
+         * <p>The ID of the description.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to obtain the ID of the description by using the EventNotes field.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the ID of the description by using the EventNotes field.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder noteId(Long noteId) {
             this.putQueryParameter("NoteId", noteId);

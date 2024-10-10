@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVpcHoneyPotRequest} extends {@link RequestModel}
  *
  * <p>DeleteVpcHoneyPotRequest</p>
@@ -54,10 +55,14 @@ public class DeleteVpcHoneyPotRequest extends Request {
         } 
 
         /**
-         * The ID of the virtual private cloud (VPC) on which the honeypot is deployed.
-         * <p>
+         * <p>The ID of the virtual private cloud (VPC) on which the honeypot is deployed.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to query the IDs of VPCs.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeVpcHoneyPotList](~~DescribeVpcHoneyPotList~~) operation to query the IDs of VPCs.
+         * <strong>example:</strong>
+         * <p>vpc-d7o009q63fqy21r8u****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGroupIdByGroupNameResponseBody} extends {@link TeaModel}
  *
  * <p>QueryGroupIdByGroupNameResponseBody</p>
@@ -49,7 +50,10 @@ public class QueryGroupIdByGroupNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the asset group.
+         * <p>The ID of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9935302</p>
          */
         public Builder groupId(Long groupId) {
             this.groupId = groupId;
@@ -57,7 +61,10 @@ public class QueryGroupIdByGroupNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

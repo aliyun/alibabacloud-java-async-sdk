@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChartListRequest} extends {@link RequestModel}
  *
  * <p>DescribeChartListRequest</p>
@@ -82,11 +83,14 @@ public class DescribeChartListRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -95,10 +99,14 @@ public class DescribeChartListRequest extends Request {
         }
 
         /**
-         * The code of the report. Valid value:
-         * <p>
+         * <p>The code of the report. Valid value:</p>
+         * <ul>
+         * <li><strong>customize_report</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **customize_report**
+         * <strong>example:</strong>
+         * <p>customize_report</p>
          */
         public Builder projectCode(String projectCode) {
             this.putQueryParameter("ProjectCode", projectCode);
@@ -107,10 +115,13 @@ public class DescribeChartListRequest extends Request {
         }
 
         /**
-         * The ID of the report.
-         * <p>
+         * <p>The ID of the report.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCustomizeReportList](~~DescribeCustomizeReportList~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>720549</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("ReportId", reportId);

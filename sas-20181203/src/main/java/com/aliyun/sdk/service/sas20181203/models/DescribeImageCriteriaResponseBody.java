@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageCriteriaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageCriteriaResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of the search conditions.
+         * <p>The list of the search conditions.</p>
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -57,7 +58,10 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageCriteriaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageCriteriaResponseBody</p>
+     */
     public static class CriteriaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -121,14 +131,18 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The name of the search condition.
-             * <p>
-             * - **tag**: the tag of the image
-             * - **digest**: the digest of the image
-             * - **vulStatus**: the status of the vulnerability
-             * - **alarmStatus**: the status of the alert
-             * - **riskStatus**: the status of the risk
-             * - **registryType**: the type of the image repository
+             * <p>The name of the search condition.</p>
+             * <ul>
+             * <li><strong>tag</strong>: the tag of the image</li>
+             * <li><strong>digest</strong>: the digest of the image</li>
+             * <li><strong>vulStatus</strong>: the status of the vulnerability</li>
+             * <li><strong>alarmStatus</strong>: the status of the alert</li>
+             * <li><strong>riskStatus</strong>: the status of the risk</li>
+             * <li><strong>registryType</strong>: the type of the image repository</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vulStatus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -136,10 +150,14 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the search condition. Valid values:
-             * <p>
-             * - **input**: The search condition needs to be specified.
-             * - **select**: The search condition is an option that can be selected from the drop-down list.
+             * <p>The type of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>input</strong>: The search condition needs to be specified.</li>
+             * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>input</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -147,9 +165,13 @@ public class DescribeImageCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the search condition. This parameter is returned only if the value of Type is select.
-             * <p>
-             * > If the value of **Type** is **input**, the value of this parameter is an empty string.
+             * <p>The values of the search condition. This parameter is returned only if the value of Type is select.</p>
+             * <blockquote>
+             * <p>If the value of <strong>Type</strong> is <strong>input</strong>, the value of this parameter is an empty string.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>NO,YES</p>
              */
             public Builder values(String values) {
                 this.values = values;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RetryInstallProbeRequest} extends {@link RequestModel}
  *
  * <p>RetryInstallProbeRequest</p>
@@ -53,10 +54,13 @@ public class RetryInstallProbeRequest extends Request {
         } 
 
         /**
-         * The probe ID.
-         * <p>
+         * <p>The probe ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * <strong>example:</strong>
+         * <p>c4c47cc1-f60a-4b2f-bcdb-9aed6644****</p>
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAlarmMachineCountRequest} extends {@link RequestModel}
  *
  * <p>GetAlarmMachineCountRequest</p>
@@ -53,7 +54,10 @@ public class GetAlarmMachineCountRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Set the value to sas.
+         * <p>The ID of the request source. Set the value to sas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);

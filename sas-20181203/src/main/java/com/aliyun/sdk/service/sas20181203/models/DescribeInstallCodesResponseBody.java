@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstallCodesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstallCodesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the installation commands.
+         * <p>The information about the installation commands.</p>
          */
         public Builder installCodes(java.util.List < InstallCodes> installCodes) {
             this.installCodes = installCodes;
@@ -57,7 +58,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C0D6119F-92EE-1276-B8B6-C81A7F9D57F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstallCodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstallCodesResponseBody</p>
+     */
     public static class InstallCodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CaptchaCode")
         private String captchaCode;
@@ -181,7 +191,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             private String vendorName; 
 
             /**
-             * The verification code for you to manually install the Security Center agent.
+             * <p>The verification code for you to manually install the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15v02r</p>
              */
             public Builder captchaCode(String captchaCode) {
                 this.captchaCode = captchaCode;
@@ -189,7 +202,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the commands used to install the Security Center agent expire. Unit: milliseconds.
+             * <p>The timestamp generated when the commands used to install the Security Center agent expire. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637810007000</p>
              */
             public Builder expiredDate(Long expiredDate) {
                 this.expiredDate = expiredDate;
@@ -197,7 +213,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server group to which the server belongs.
+             * <p>The ID of the server group to which the server belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9165712</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -205,7 +224,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group to which the server belongs.
+             * <p>The name of the server group to which the server belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -213,11 +235,14 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an image is used to install the Security Center agent. Valid values:
-             * <p>
+             * <p>Indicates whether an image is used to install the Security Center agent. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder onlyImage(Boolean onlyImage) {
                 this.onlyImage = onlyImage;
@@ -225,11 +250,14 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the server. Valid values:
-             * <p>
+             * <p>The operating system of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>linux</strong></li>
+             * <li><strong>windows</strong></li>
+             * </ul>
              * 
-             * *   **linux**
-             * *   **windows**
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -237,7 +265,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the proxy cluster.
+             * <p>The name of the proxy cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy_test</p>
              */
             public Builder proxyCluster(String proxyCluster) {
                 this.proxyCluster = proxyCluster;
@@ -245,7 +276,10 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server provider.
+             * <p>The name of the server provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder vendorName(String vendorName) {
                 this.vendorName = vendorName;

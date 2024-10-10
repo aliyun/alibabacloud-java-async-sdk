@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListProcessRequest} extends {@link RequestModel}
  *
  * <p>DescribeWhiteListProcessRequest</p>
@@ -166,7 +167,10 @@ public class DescribeWhiteListProcessRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**. Pages start from page 1.
+         * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -175,11 +179,14 @@ public class DescribeWhiteListProcessRequest extends Request {
         }
 
         /**
-         * The sort order. Default value: descending order. Valid values:
-         * <p>
+         * <p>The sort order. Default value: descending order. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: ascending order</li>
+         * <li><strong>2</strong>: descending order</li>
+         * </ul>
          * 
-         * *   **1**: ascending order
-         * *   **2**: descending order
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder desc(Integer desc) {
             this.putQueryParameter("Desc", desc);
@@ -188,11 +195,14 @@ public class DescribeWhiteListProcessRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -201,11 +211,14 @@ public class DescribeWhiteListProcessRequest extends Request {
         }
 
         /**
-         * The item based on which you want to sort the returned results. Default value: **process type**. Valid values:
-         * <p>
+         * <p>The item based on which you want to sort the returned results. Default value: <strong>process type</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: process type</li>
+         * <li><strong>2</strong>: degree of trustability</li>
+         * </ul>
          * 
-         * *   **1**: process type
-         * *   **2**: degree of trustability
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderBy(Integer orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -214,10 +227,13 @@ public class DescribeWhiteListProcessRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 1000. Default value: 20. If you leave this parameter empty, 20 data entries are returned per page.
-         * <p>
+         * <p>The number of entries per page. Maximum value: 1000. Default value: 20. If you leave this parameter empty, 20 data entries are returned per page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -226,7 +242,10 @@ public class DescribeWhiteListProcessRequest extends Request {
         }
 
         /**
-         * The name of the process.
+         * <p>The name of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sys_creat</p>
          */
         public Builder processName(String processName) {
             this.putQueryParameter("ProcessName", processName);
@@ -235,12 +254,15 @@ public class DescribeWhiteListProcessRequest extends Request {
         }
 
         /**
-         * The type of the process. Valid values:
-         * <p>
+         * <p>The type of the process. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: trusted</li>
+         * <li><strong>2</strong>: suspicious</li>
+         * <li><strong>3</strong>: malicious</li>
+         * </ul>
          * 
-         * *   **1**: trusted
-         * *   **2**: suspicious
-         * *   **3**: malicious
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder processType(Integer processType) {
             this.putQueryParameter("ProcessType", processType);
@@ -249,7 +271,10 @@ public class DescribeWhiteListProcessRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27.223.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -258,10 +283,14 @@ public class DescribeWhiteListProcessRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
-         * <p>
+         * <p>The ID of the policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeWhiteListStrategyList](~~DescribeWhiteListStrategyList~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>8562</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

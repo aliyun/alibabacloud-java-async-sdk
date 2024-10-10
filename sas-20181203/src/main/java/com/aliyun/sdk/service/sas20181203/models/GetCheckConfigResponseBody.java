@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetCheckConfigResponseBody</p>
@@ -121,7 +122,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         private Integer startTime; 
 
         /**
-         * The days in a week on which an automatic check is performed.
+         * <p>The days in a week on which an automatic check is performed.</p>
          */
         public Builder cycleDays(java.util.List < Integer > cycleDays) {
             this.cycleDays = cycleDays;
@@ -129,11 +130,14 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the check for new check items in the selected requirement item is enabled by default. Valid values:
-         * <p>
+         * <p>Indicates whether the check for new check items in the selected requirement item is enabled by default. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableAddCheck(Boolean enableAddCheck) {
             this.enableAddCheck = enableAddCheck;
@@ -141,11 +145,14 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the automatic check is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether the automatic check is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutoCheck(Boolean enableAutoCheck) {
             this.enableAutoCheck = enableAutoCheck;
@@ -153,13 +160,16 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:
-         * <p>
+         * <p>The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:</p>
+         * <ul>
+         * <li><strong>00:00 to 06:00</strong>: If StartTime is set to 00:00, EndTime must be set to 06:00.</li>
+         * <li><strong>06:00 to 12:00</strong>: If StartTime is set to 06:00, EndTime must be set to 12:00.</li>
+         * <li><strong>12:00 to 18:00</strong>: If StartTime is set to 12:00, EndTime must be set to 18:00.</li>
+         * <li><strong>18:00 to 24:00</strong>: If StartTime is set to 18:00, EndTime must be set to 24:00.</li>
+         * </ul>
          * 
-         * *   **00:00 to 06:00**: If StartTime is set to 00:00, EndTime must be set to 06:00.
-         * *   **06:00 to 12:00**: If StartTime is set to 06:00, EndTime must be set to 12:00.
-         * *   **12:00 to 18:00**: If StartTime is set to 12:00, EndTime must be set to 18:00.
-         * *   **18:00 to 24:00**: If StartTime is set to 18:00, EndTime must be set to 24:00.
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder endTime(Integer endTime) {
             this.endTime = endTime;
@@ -167,7 +177,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A3D5C8F-2A42-5477-BDD8-27E64B5F1739</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +188,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The check items selected in the policy.
+         * <p>The check items selected in the policy.</p>
          */
         public Builder selectedChecks(java.util.List < SelectedChecks> selectedChecks) {
             this.selectedChecks = selectedChecks;
@@ -183,7 +196,7 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the check items.
+         * <p>The information about the check items.</p>
          */
         public Builder standards(java.util.List < Standards> standards) {
             this.standards = standards;
@@ -191,7 +204,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The start time of the check. The value indicates a point in time.
+         * <p>The start time of the check. The value indicates a point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder startTime(Integer startTime) {
             this.startTime = startTime;
@@ -204,6 +220,12 @@ public class GetCheckConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCheckConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckConfigResponseBody</p>
+     */
     public static class SelectedChecks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
@@ -243,7 +265,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
             private Long sectionId; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -251,7 +276,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The section ID of the check item.
+             * <p>The section ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder sectionId(Long sectionId) {
                 this.sectionId = sectionId;
@@ -265,6 +293,12 @@ public class GetCheckConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckConfigResponseBody</p>
+     */
     public static class Standards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -328,7 +362,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -336,7 +373,10 @@ public class GetCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud service configuration management</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -344,11 +384,14 @@ public class GetCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check item. Valid values:
-             * <p>
+             * <p>The status of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>ON</strong>: The check item is enabled.</li>
+             * <li><strong>OFF</strong>: The check item is disabled.</li>
+             * </ul>
              * 
-             * *   **ON**: The check item is enabled.
-             * *   **OFF**: The check item is disabled.
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -356,12 +399,15 @@ public class GetCheckConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item. Valid values:
-             * <p>
+             * <p>The type of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>RISK</strong>: cloud service configuration management</li>
+             * <li><strong>IDENTITY_PERMISSION</strong>: identity and permission management</li>
+             * <li><strong>COMPLIANCE</strong>: compliance</li>
+             * </ul>
              * 
-             * *   **RISK**: cloud service configuration management
-             * *   **IDENTITY_PERMISSION**: identity and permission management
-             * *   **COMPLIANCE**: compliance
+             * <strong>example:</strong>
+             * <p>RISK</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterStrategyCountResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterStrategyCountResponseBody</p>
@@ -109,7 +110,10 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -125,7 +132,7 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -133,7 +140,10 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -141,7 +151,10 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +162,10 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>796348B5-115C-5BFB-83EA-B5C3C12F822F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +173,14 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +193,12 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterStrategyCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterStrategyCountResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -213,7 +238,10 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
             private Integer strategyCount; 
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -221,7 +249,10 @@ public class GetClusterStrategyCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of policies.
+             * <p>The number of policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder strategyCount(Integer strategyCount) {
                 this.strategyCount = strategyCount;

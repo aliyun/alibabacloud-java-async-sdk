@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAntiBruteForceRuleResponse} extends {@link TeaModel}
  *
  * <p>ModifyAntiBruteForceRuleResponse</p>

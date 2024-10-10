@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportCustomizeReportResponseBody} extends {@link TeaModel}
  *
  * <p>ExportCustomizeReportResponseBody</p>
@@ -121,7 +122,10 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         private Long urlExpiredTime; 
 
         /**
-         * The download URL of the security report.
+         * <p>The download URL of the security report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -129,7 +133,10 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the security report was exported.
+         * <p>The time when the security report was exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-10</p>
          */
         public Builder exportDate(String exportDate) {
             this.exportDate = exportDate;
@@ -137,7 +144,10 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the export task.
+         * <p>The ID of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder exportId(Long exportId) {
             this.exportId = exportId;
@@ -145,12 +155,15 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the export task. Valid values:
-         * <p>
+         * <p>The status of the export task. Valid values:</p>
+         * <ul>
+         * <li><strong>fail</strong>: The export task fails.</li>
+         * <li><strong>exporting</strong>: The export task is being executed.</li>
+         * <li><strong>success</strong>: The export task is successful.</li>
+         * </ul>
          * 
-         * *   **fail**: The export task fails.
-         * *   **exporting**: The export task is being executed.
-         * *   **success**: The export task is successful.
+         * <strong>example:</strong>
+         * <p>exporting</p>
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -158,7 +171,10 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the report file that is exported.
+         * <p>The name of the report file that is exported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_xxxx.html</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -166,7 +182,10 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the security report.
+         * <p>The ID of the security report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder reportId(Long reportId) {
             this.reportId = reportId;
@@ -174,7 +193,10 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFDFCEB3-A5EE-590A-8E70-283EBC5D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +204,10 @@ public class ExportCustomizeReportResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the download URL expires. Unit: seconds.
+         * <p>The timestamp when the download URL expires. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1673335497000</p>
          */
         public Builder urlExpiredTime(Long urlExpiredTime) {
             this.urlExpiredTime = urlExpiredTime;

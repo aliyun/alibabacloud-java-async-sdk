@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDefenceCountResponseBody} extends {@link TeaModel}
  *
  * <p>GetDefenceCountResponseBody</p>
@@ -85,7 +86,10 @@ public class GetDefenceCountResponseBody extends TeaModel {
         private Integer tamperProofTotal; 
 
         /**
-         * The number of handled alerts of the precise defense type in the last 15 days.
+         * <p>The number of handled alerts of the precise defense type in the last 15 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defenceCount15Days(Integer defenceCount15Days) {
             this.defenceCount15Days = defenceCount15Days;
@@ -93,7 +97,10 @@ public class GetDefenceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of handled alerts of the precision defense type.
+         * <p>The number of handled alerts of the precision defense type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defenceCountTotal(Integer defenceCountTotal) {
             this.defenceCountTotal = defenceCountTotal;
@@ -101,7 +108,10 @@ public class GetDefenceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89AD16CC-97EE-50F3-9B12-9E28E5C8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,10 @@ public class GetDefenceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of handled alerts of the web tamper proofing type in the last 15 days.
+         * <p>The number of handled alerts of the web tamper proofing type in the last 15 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder tamperProof15Days(Integer tamperProof15Days) {
             this.tamperProof15Days = tamperProof15Days;
@@ -117,7 +130,10 @@ public class GetDefenceCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of handled alerts of the web tamper proofing type.
+         * <p>The number of handled alerts of the web tamper proofing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tamperProofTotal(Integer tamperProofTotal) {
             this.tamperProofTotal = tamperProofTotal;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImageRiskResponseBody} extends {@link TeaModel}
  *
  * <p>ListImageRiskResponseBody</p>
@@ -61,7 +62,7 @@ public class ListImageRiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of security information about the image.
+         * <p>An array that consists of security information about the image.</p>
          */
         public Builder imageRiskList(java.util.List < ImageRiskList> imageRiskList) {
             this.imageRiskList = imageRiskList;
@@ -69,7 +70,7 @@ public class ListImageRiskResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListImageRiskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>050ACC7A-D4FD-55C6-B861-BA9569C1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListImageRiskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImageRiskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageRiskResponseBody</p>
+     */
     public static class EndPointList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < String > domains;
@@ -129,7 +139,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * An array that consists the details of the domain name in the endpoint.
+             * <p>An array that consists the details of the domain name in the endpoint.</p>
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -137,11 +147,14 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the domain name in the endpoint. Valid values:
-             * <p>
+             * <p>The type of the domain name in the endpoint. Valid values:</p>
+             * <ul>
+             * <li><strong>internet</strong>: Internet</li>
+             * <li><strong>intranet</strong>: internal network</li>
+             * </ul>
              * 
-             * *   **internet**: Internet
-             * *   **intranet**: internal network
+             * <strong>example:</strong>
+             * <p>internet</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -155,6 +168,12 @@ public class ListImageRiskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListImageRiskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageRiskResponseBody</p>
+     */
     public static class ImageRiskList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Digest")
         private String digest;
@@ -386,7 +405,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             private String vpcURLs; 
 
             /**
-             * The digest value of the image.
+             * <p>The digest value of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3f8efc2184cf1d24936b49c27286a284714b77be34c80c9ee38ca6bf322445****</p>
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -394,7 +416,7 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details of the endpoint.
+             * <p>An array that consists of the details of the endpoint.</p>
              */
             public Builder endPointList(java.util.List < EndPointList> endPointList) {
                 this.endPointList = endPointList;
@@ -402,7 +424,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of Container Registry.
+             * <p>The endpoint of Container Registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://172.20.XXX.XXX/test">https://172.20.XXX.XXX/test</a></p>
              */
             public Builder endpoints(String endpoints) {
                 this.endpoints = endpoints;
@@ -410,7 +435,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The image of the container.
+             * <p>The image of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.aliyuncs.com/sas_test/baseline:exploit</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -418,11 +446,14 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The registration status of the image repository. Valid values:
-             * <p>
+             * <p>The registration status of the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>IN_SAS</strong>: The image repository is registered with Security Center.</li>
+             * <li><strong>NOT_IN_SAS</strong>: The image repository is not registered with Security Center.</li>
+             * </ul>
              * 
-             * *   **IN_SAS**: The image repository is registered with Security Center.
-             * *   **NOT_IN_SAS**: The image repository is not registered with Security Center.
+             * <strong>example:</strong>
+             * <p>IN_SAS</p>
              */
             public Builder imageAccessType(String imageAccessType) {
                 this.imageAccessType = imageAccessType;
@@ -430,7 +461,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f922bfeb6960436fe3f0e7b62fc6b9a0b47980986669c367c22433269404****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -438,7 +472,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The public endpoint of the image repository.
+             * <p>The public endpoint of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>registry-registry.cn-shenzhen-finance-1.cr.aliyuncs.com/xxxx/docker-</strong></strong></p>
              */
             public Builder internetURLs(String internetURLs) {
                 this.internetURLs = internetURLs;
@@ -446,7 +483,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the image repository.
+             * <p>The region of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -454,13 +494,16 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image repository. Valid values:
-             * <p>
+             * <p>The type of the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>acr</strong></li>
+             * <li><strong>harbor</strong></li>
+             * <li><strong>quay</strong></li>
+             * <li><strong>CI/CD</strong>: Jenkins</li>
+             * </ul>
              * 
-             * *   **acr**
-             * *   **harbor**
-             * *   **quay**
-             * *   **CI/CD**: Jenkins
+             * <strong>example:</strong>
+             * <p>harbor</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -468,7 +511,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-bk2l746eyxca1****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -476,7 +522,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scan_test</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -484,7 +533,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace to which the repository belongs.
+             * <p>The name of the namespace to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vultar***</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -492,11 +544,14 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the repository. Valid values:
-             * <p>
+             * <p>The type of the repository. Valid values:</p>
+             * <ul>
+             * <li><code>PUBLIC</code></li>
+             * <li><code>PRIVATE</code></li>
+             * </ul>
              * 
-             * *   `PUBLIC`
-             * *   `PRIVATE`
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -504,7 +559,14 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics on a security event.
+             * <p>The statistics on a security event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;baselineNum&quot;: 0,
+             *     &quot;newSuspicious&quot;: 0,
+             *     &quot;vul&quot;: 0
+             * }</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -512,7 +574,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the image.
+             * <p>The tag that is added to the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1.0</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -520,11 +585,14 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image version is immutable. If the image version is immutable, only the image of the latest version in the image repository can be overwritten. Valid values:
-             * <p>
+             * <p>Indicates whether the image version is immutable. If the image version is immutable, only the image of the latest version in the image repository can be overwritten. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The image version is mutable.</li>
+             * <li><strong>1</strong>: The image version is immutable.</li>
+             * </ul>
              * 
-             * *   **0**: The image version is mutable.
-             * *   **1**: The image version is immutable.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder tagImmutable(Integer tagImmutable) {
                 this.tagImmutable = tagImmutable;
@@ -532,7 +600,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image.
+             * <p>The UUID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>624778f3-5bf2-423c-ac0c-47a62c05****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -540,7 +611,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the image repository in the VPC.
+             * <p>The endpoint of the image repository in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>-registry-registry-vpc.cn-shenzhen-finance-1.cr.aliyuncs.com/xxxx/docker-</strong></strong></p>
              */
             public Builder vpcURLs(String vpcURLs) {
                 this.vpcURLs = vpcURLs;
@@ -554,6 +628,12 @@ public class ListImageRiskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListImageRiskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageRiskResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -617,7 +697,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -625,7 +708,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -633,7 +719,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -641,7 +730,10 @@ public class ListImageRiskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

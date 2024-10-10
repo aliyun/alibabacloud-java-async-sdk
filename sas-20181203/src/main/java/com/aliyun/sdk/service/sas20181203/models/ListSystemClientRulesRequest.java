@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemClientRulesRequest} extends {@link RequestModel}
  *
  * <p>ListSystemClientRulesRequest</p>
@@ -153,7 +154,7 @@ public class ListSystemClientRulesRequest extends Request {
         } 
 
         /**
-         * The IDs of the aggregation types for rules.
+         * <p>The IDs of the aggregation types for rules.</p>
          */
         public Builder aggregationIds(java.util.List < Integer > aggregationIds) {
             this.putQueryParameter("AggregationIds", aggregationIds);
@@ -162,7 +163,11 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -171,11 +176,14 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query only container images. Valid values:
-         * <p>
+         * <p>Specifies whether to query only container images. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isContainer(Integer isContainer) {
             this.putQueryParameter("IsContainer", isContainer);
@@ -184,11 +192,14 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -197,7 +208,11 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +221,10 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * The name of the system defense rule.
+         * <p>The name of the system defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule****</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -215,7 +233,7 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * The types of the system defense rules.
+         * <p>The types of the system defense rules.</p>
          */
         public Builder ruleTypes(java.util.List < Integer > ruleTypes) {
             this.putQueryParameter("RuleTypes", ruleTypes);
@@ -224,12 +242,15 @@ public class ListSystemClientRulesRequest extends Request {
         }
 
         /**
-         * The type of the OS. Valid values:
-         * <p>
+         * <p>The type of the OS. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: Windows</li>
+         * <li><strong>1</strong>: Linux</li>
+         * <li><strong>0</strong>: all types</li>
+         * </ul>
          * 
-         * *   **2**: Windows
-         * *   **1**: Linux
-         * *   **0**: all types
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder systemType(Integer systemType) {
             this.putQueryParameter("SystemType", systemType);

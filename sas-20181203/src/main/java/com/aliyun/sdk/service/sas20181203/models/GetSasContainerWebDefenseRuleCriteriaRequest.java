@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSasContainerWebDefenseRuleCriteriaRequest} extends {@link RequestModel}
  *
  * <p>GetSasContainerWebDefenseRuleCriteriaRequest</p>
@@ -53,7 +54,10 @@ public class GetSasContainerWebDefenseRuleCriteriaRequest extends Request {
         } 
 
         /**
-         * The value of the search condition. Fuzzy match is supported.
+         * <p>The value of the search condition. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>525</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecurityEventMarkMissListResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSecurityEventMarkMissListResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteSecurityEventMarkMissListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23AD0BD2-8771-5647-819E-6BA51E2XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

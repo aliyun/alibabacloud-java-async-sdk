@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityEventMarkMissListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityEventMarkMissListRequest</p>
@@ -125,7 +126,11 @@ public class DescribeSecurityEventMarkMissListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -134,7 +139,10 @@ public class DescribeSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The name of the alert event. The value indicates a subtype.
+         * <p>The name of the alert event. The value indicates a subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login with unusual location</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -143,7 +151,11 @@ public class DescribeSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,7 +164,10 @@ public class DescribeSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The condition that is used to query alert events by asset. You can enter an IP address, a public IP address, an internal IP address, or an asset name for fuzzy match.
+         * <p>The condition that is used to query alert events by asset. You can enter an IP address, a public IP address, an internal IP address, or an asset name for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -170,7 +185,10 @@ public class DescribeSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125.210.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

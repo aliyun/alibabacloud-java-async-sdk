@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckStandardResponseBody} extends {@link TeaModel}
  *
  * <p>ListCheckStandardResponseBody</p>
@@ -49,7 +50,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
         private java.util.List < Standards> standards; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FA91FBDA-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the check items.
+         * <p>An array that consists of the check items.</p>
          */
         public Builder standards(java.util.List < Standards> standards) {
             this.standards = standards;
@@ -70,6 +74,12 @@ public class ListCheckStandardResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCheckStandardResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckStandardResponseBody</p>
+     */
     public static class Requirements extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -133,7 +143,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
             private Integer showPriorityLevel; 
 
             /**
-             * The ID of the search condition.
+             * <p>The ID of the search condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -141,7 +154,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items queried by using the search condition.
+             * <p>The number of check items queried by using the search condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder riskCheckCount(Long riskCheckCount) {
                 this.riskCheckCount = riskCheckCount;
@@ -149,7 +165,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the search condition.
+             * <p>The display name of the search condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RAM identity authentication</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -157,7 +176,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * The priority field indicates the level of prominence.
+             * <p>The priority field indicates the level of prominence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder showPriorityLevel(Integer showPriorityLevel) {
                 this.showPriorityLevel = showPriorityLevel;
@@ -171,6 +193,12 @@ public class ListCheckStandardResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckStandardResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckStandardResponseBody</p>
+     */
     public static class Standards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -246,7 +274,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -254,7 +285,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of search conditions.
+             * <p>An array that consists of search conditions.</p>
              */
             public Builder requirements(java.util.List < Requirements> requirements) {
                 this.requirements = requirements;
@@ -262,7 +293,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the check item.
+             * <p>The display name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity and permission management</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -270,7 +304,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * The priority field indicates the level of prominence.
+             * <p>The priority field indicates the level of prominence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder showPriorityLevel(Integer showPriorityLevel) {
                 this.showPriorityLevel = showPriorityLevel;
@@ -278,7 +315,10 @@ public class ListCheckStandardResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item.
+             * <p>The type of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDENTITY_PERMISSION</p>
              */
             public Builder type(String type) {
                 this.type = type;

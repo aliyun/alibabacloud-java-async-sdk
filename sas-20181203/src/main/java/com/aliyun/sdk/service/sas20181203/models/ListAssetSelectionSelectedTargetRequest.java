@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAssetSelectionSelectedTargetRequest} extends {@link RequestModel}
  *
  * <p>ListAssetSelectionSelectedTargetRequest</p>
@@ -68,7 +69,11 @@ public class ListAssetSelectionSelectedTargetRequest extends Request {
         } 
 
         /**
-         * The unique ID of the asset.
+         * <p>The unique ID of the asset.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e6ab33d-4e00-4581-ac16-0dd1f9ad****</p>
          */
         public Builder selectionKey(String selectionKey) {
             this.putQueryParameter("SelectionKey", selectionKey);
@@ -77,7 +82,7 @@ public class ListAssetSelectionSelectedTargetRequest extends Request {
         }
 
         /**
-         * The details of queries.
+         * <p>The details of queries.</p>
          */
         public Builder targetList(java.util.List < String > targetList) {
             this.putQueryParameter("TargetList", targetList);

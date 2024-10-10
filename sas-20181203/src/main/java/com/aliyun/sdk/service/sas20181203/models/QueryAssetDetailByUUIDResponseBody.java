@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAssetDetailByUUIDResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAssetDetailByUUIDResponseBody</p>
@@ -190,6 +191,12 @@ public class QueryAssetDetailByUUIDResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAssetDetailByUUIDResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAssetDetailByUUIDResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;

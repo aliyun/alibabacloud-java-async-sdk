@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSasTrialRequest} extends {@link RequestModel}
  *
  * <p>CreateSasTrialRequest</p>
@@ -109,11 +110,14 @@ public class CreateSasTrialRequest extends Request {
         } 
 
         /**
-         * Specifies whether the request is redirected from the Elastic Compute Service (ECS) console. Valid values:
-         * <p>
+         * <p>Specifies whether the request is redirected from the Elastic Compute Service (ECS) console. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fromEcs(Boolean fromEcs) {
             this.putBodyParameter("FromEcs", fromEcs);
@@ -122,11 +126,14 @@ public class CreateSasTrialRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -135,7 +142,7 @@ public class CreateSasTrialRequest extends Request {
         }
 
         /**
-         * The reason why you apply for the trial. You must specify the reason for the second trial.
+         * <p>The reason why you apply for the trial. You must specify the reason for the second trial.</p>
          */
         public Builder requestForm(RequestForm requestForm) {
             String requestFormShrink = shrink(requestForm, "RequestForm", "json");
@@ -145,14 +152,18 @@ public class CreateSasTrialRequest extends Request {
         }
 
         /**
-         * The trial type. Valid values:
-         * <p>
+         * <p>The trial type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: trial prohibited</li>
+         * <li><strong>1</strong>: first trial</li>
+         * <li><strong>2</strong>: second trial</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain the trial type. You can start a trial only if this parameter is not set to 0.</p>
+         * </blockquote>
          * 
-         * *   **0**: trial prohibited
-         * *   **1**: first trial
-         * *   **2**: second trial
-         * 
-         * >  You can call the [GetCanTrySas](~~2623574~~) operation to obtain the trial type. You can start a trial only if this parameter is not set to 0.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tryType(Integer tryType) {
             this.putBodyParameter("TryType", tryType);
@@ -161,13 +172,17 @@ public class CreateSasTrialRequest extends Request {
         }
 
         /**
-         * The trial edition. Valid values:
-         * <p>
+         * <p>The trial edition. Valid values:</p>
+         * <ul>
+         * <li><strong>3</strong>: Enterprise</li>
+         * <li><strong>7</strong>: Ultimate</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain the trial edition.</p>
+         * </blockquote>
          * 
-         * *   **3**: Enterprise
-         * *   **7**: Ultimate
-         * 
-         * >  You can call the [GetCanTrySas](~~2623574~~) operation to obtain the trial edition.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder tryVersion(Integer tryVersion) {
             this.putBodyParameter("TryVersion", tryVersion);
@@ -182,6 +197,12 @@ public class CreateSasTrialRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateSasTrialRequest} extends {@link TeaModel}
+     *
+     * <p>CreateSasTrialRequest</p>
+     */
     public static class RequestForm extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TryReason")
         private String tryReason;
@@ -209,7 +230,10 @@ public class CreateSasTrialRequest extends Request {
             private String tryReason; 
 
             /**
-             * The reason why you apply for the trial.
+             * <p>The reason why you apply for the trial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>for poc</p>
              */
             public Builder tryReason(String tryReason) {
                 this.tryReason = tryReason;

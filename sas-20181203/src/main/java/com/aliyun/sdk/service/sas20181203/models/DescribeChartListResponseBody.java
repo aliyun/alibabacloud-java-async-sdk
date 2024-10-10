@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChartListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChartListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeChartListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The charts.
+         * <p>The charts.</p>
          */
         public Builder chartList(java.util.List < ChartList> chartList) {
             this.chartList = chartList;
@@ -57,7 +58,10 @@ public class DescribeChartListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35B434CC-1615-5937-A04E-A9BC2868DB45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeChartListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChartListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChartListResponseBody</p>
+     */
     public static class ChartList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessName")
         private String businessName;
@@ -145,16 +155,19 @@ public class DescribeChartListResponseBody extends TeaModel {
             private String chartType; 
 
             /**
-             * The name of the business type. Valid values:
-             * <p>
+             * <p>The name of the business type. Valid values:</p>
+             * <ul>
+             * <li>Overall Operations Metrics</li>
+             * <li>Asset Operations Metrics</li>
+             * <li>Security Alert Operations Metrics</li>
+             * <li>Vulnerability Operations Metrics</li>
+             * <li>Baseline Operations Metrics</li>
+             * <li>Cloud Product Operations Metrics</li>
+             * <li>Honeypot Operations Metrics</li>
+             * </ul>
              * 
-             * *   Overall Operations Metrics
-             * *   Asset Operations Metrics
-             * *   Security Alert Operations Metrics
-             * *   Vulnerability Operations Metrics
-             * *   Baseline Operations Metrics
-             * *   Cloud Product Operations Metrics
-             * *   Honeypot Operations Metrics
+             * <strong>example:</strong>
+             * <p>Overall Operation Metrics</p>
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -162,16 +175,19 @@ public class DescribeChartListResponseBody extends TeaModel {
             }
 
             /**
-             * The business type. Valid values:
-             * <p>
+             * <p>The business type. Valid values:</p>
+             * <ul>
+             * <li>INDEX_SECURITY_OVERALL_OPERATION</li>
+             * <li>INDEX_ASSET_OPERATION</li>
+             * <li>INDEX_SUSPICIOUS_OPERATION</li>
+             * <li>INDEX_VUL_OPERATION</li>
+             * <li>INDEX_BASELINE_CHECK_OPERATION</li>
+             * <li>INDEX_CLOUD_ASSET_OPERATION</li>
+             * <li>INDEX_HONEYPOT_RISK_OPERATION</li>
+             * </ul>
              * 
-             * *   INDEX_SECURITY_OVERALL_OPERATION
-             * *   INDEX_ASSET_OPERATION
-             * *   INDEX_SUSPICIOUS_OPERATION
-             * *   INDEX_VUL_OPERATION
-             * *   INDEX_BASELINE_CHECK_OPERATION
-             * *   INDEX_CLOUD_ASSET_OPERATION
-             * *   INDEX_HONEYPOT_RISK_OPERATION
+             * <strong>example:</strong>
+             * <p>INDEX_SECURITY_OVERALL_OPERATION</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -179,7 +195,10 @@ public class DescribeChartListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the chart.
+             * <p>The ID of the chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CID_CLOUD_ASSET_SUMMARY</p>
              */
             public Builder chartId(String chartId) {
                 this.chartId = chartId;
@@ -187,7 +206,10 @@ public class DescribeChartListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the chart.
+             * <p>The name of the chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security Score</p>
              */
             public Builder chartName(String chartName) {
                 this.chartName = chartName;
@@ -195,17 +217,20 @@ public class DescribeChartListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the chart. Valid values:
-             * <p>
+             * <p>The type of the chart. Valid values:</p>
+             * <ul>
+             * <li><strong>text</strong></li>
+             * <li><strong>table</strong></li>
+             * <li><strong>gauge</strong></li>
+             * <li><strong>pie</strong></li>
+             * <li><strong>line</strong></li>
+             * <li><strong>bar</strong></li>
+             * <li><strong>timeBar</strong></li>
+             * <li><strong>timeLine</strong></li>
+             * </ul>
              * 
-             * *   **text**
-             * *   **table**
-             * *   **gauge**
-             * *   **pie**
-             * *   **line**
-             * *   **bar**
-             * *   **timeBar**
-             * *   **timeLine**
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder chartType(String chartType) {
                 this.chartType = chartType;

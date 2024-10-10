@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoginBaseConfigsRequest} extends {@link RequestModel}
  *
  * <p>DescribeLoginBaseConfigsRequest</p>
@@ -96,7 +97,10 @@ public class DescribeLoginBaseConfigsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +109,10 @@ public class DescribeLoginBaseConfigsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **5**.
+         * <p>The number of entries to return on each page. Default value: <strong>5</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -114,18 +121,25 @@ public class DescribeLoginBaseConfigsRequest extends Request {
         }
 
         /**
-         * The server to which the configuration is applied. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The server to which the configuration is applied. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><strong>Target</strong>: the UUID or group ID of the server to add or delete.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If targetType is set to uuid, the value of Target is the UUID of the server. If targetType is set to groupId, the value of Target is the group ID of the server. If targetType is set to global, the value of Target is a hyphen (-).</p>
+         * </blockquote>
+         * <ul>
+         * <li><p><strong>targetType</strong>: the type of the server to which the configuration is applied. Valid values:</p>
+         * <ul>
+         * <li><strong>uuid</strong>: a server</li>
+         * <li><strong>groupId</strong>: a server group</li>
+         * <li><strong>global</strong>: all servers</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   **Target**: the UUID or group ID of the server to add or delete.
-         * 
-         * > If targetType is set to uuid, the value of Target is the UUID of the server. If targetType is set to groupId, the value of Target is the group ID of the server. If targetType is set to global, the value of Target is a hyphen (-).
-         * 
-         * *   **targetType**: the type of the server to which the configuration is applied. Valid values:
-         * 
-         *     *   **uuid**: a server
-         *     *   **groupId**: a server group
-         *     *   **global**: all servers
+         * <strong>example:</strong>
+         * <p>[ {&quot;target&quot;: &quot;inet-7c676676-06fa-442e-90fb-b802e5d6****&quot;, &quot;targetType&quot;: &quot;uuid&quot; } ]</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -134,13 +148,17 @@ public class DescribeLoginBaseConfigsRequest extends Request {
         }
 
         /**
-         * The logon type of the configuration to query. Valid values:
-         * <p>
+         * <p>The logon type of the configuration to query. Valid values:</p>
+         * <ul>
+         * <li><strong>login_common_location</strong>: common logon location</li>
+         * <li><strong>login_common_ip</strong>: common logon IP address</li>
+         * <li><strong>login_common_time</strong>: common logon time range</li>
+         * <li><strong>login_common_account</strong>: common logon account</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **login\_common_location**: common logon location
-         * *   **login\_common_ip**: common logon IP address
-         * *   **login\_common_time**: common logon time range
-         * *   **login\_common_account**: common logon account
+         * <strong>example:</strong>
+         * <p>login_common_location</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

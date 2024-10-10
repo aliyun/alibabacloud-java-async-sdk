@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveCheckInstanceResultWhiteListRequest} extends {@link RequestModel}
  *
  * <p>RemoveCheckInstanceResultWhiteListRequest</p>
@@ -67,7 +68,10 @@ public class RemoveCheckInstanceResultWhiteListRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
+         * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -76,7 +80,7 @@ public class RemoveCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * The IDs of instances. Separate multiple IDs with commas (,).
+         * <p>The IDs of instances. Separate multiple IDs with commas (,).</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

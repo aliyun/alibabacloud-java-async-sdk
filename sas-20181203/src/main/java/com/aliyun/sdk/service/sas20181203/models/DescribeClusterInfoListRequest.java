@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterInfoListRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterInfoListRequest</p>
@@ -83,7 +84,10 @@ public class DescribeClusterInfoListRequest extends Request {
         } 
 
         /**
-         * The operation value. The value specifies the ID of the cluster.
+         * <p>The operation value. The value specifies the ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c23551de6149343e8a54e69fbefe6****</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -92,10 +96,14 @@ public class DescribeClusterInfoListRequest extends Request {
         }
 
         /**
-         * The dimension based on which you want to configure the feature. Valid values:
-         * <p>
+         * <p>The dimension based on which you want to configure the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>Cluster</strong>: the ID of the cluster</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Cluster**: the ID of the cluster
+         * <strong>example:</strong>
+         * <p>Cluster</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -104,11 +112,15 @@ public class DescribeClusterInfoListRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
-         * <p>
+         * <p>The type of the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>containerNetwork</strong>: container network</li>
+         * <li><strong>interceptionSwitch</strong>: cluster microsegmentation</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **containerNetwork**: container network
-         * *   **interceptionSwitch**: cluster microsegmentation
+         * <strong>example:</strong>
+         * <p>containerNetwork</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

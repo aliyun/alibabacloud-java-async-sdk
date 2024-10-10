@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMonitorAccountRequest} extends {@link RequestModel}
  *
  * <p>DeleteMonitorAccountRequest</p>
@@ -54,10 +55,14 @@ public class DeleteMonitorAccountRequest extends Request {
         } 
 
         /**
-         * The ID of the member that you want to delete.
-         * <p>
+         * <p>The ID of the member that you want to delete.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of the members in the Security Center console.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the IDs of the members in the Security Center console.
+         * <strong>example:</strong>
+         * <p>1840517068******</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClientAlertModeRequest} extends {@link RequestModel}
  *
  * <p>ListClientAlertModeRequest</p>
@@ -53,11 +54,14 @@ public class ListClientAlertModeRequest extends Request {
         } 
 
         /**
-         * The protection mode. Valid values:
-         * <p>
+         * <p>The protection mode. Valid values:</p>
+         * <ul>
+         * <li><strong>strict</strong>: The strict mode. False positives may be generated. We recommend that you enable this mode during major events.</li>
+         * <li><strong>balance</strong>: The balanced mode. More risks can be detected with less false positives in this mode.</li>
+         * </ul>
          * 
-         * *   **strict**: The strict mode. False positives may be generated. We recommend that you enable this mode during major events.
-         * *   **balance**: The balanced mode. More risks can be detected with less false positives in this mode.
+         * <strong>example:</strong>
+         * <p>strict</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

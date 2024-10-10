@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyContainerDefenseRuleSwitchResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyContainerDefenseRuleSwitchResponseBody</p>
@@ -97,7 +98,10 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -113,7 +120,10 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +131,10 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +142,10 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8A137FB-6E18-5741-9B47-D9A0EBA3495F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +153,14 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

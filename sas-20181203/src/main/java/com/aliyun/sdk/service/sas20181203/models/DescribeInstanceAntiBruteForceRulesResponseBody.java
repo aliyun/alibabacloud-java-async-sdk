@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceAntiBruteForceRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceAntiBruteForceRulesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         private java.util.List < Rules> rules; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97286A-4A6B-4A4-95FA-EC7E3E2451</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the servers to which a defense rule is applied.
+         * <p>An array consisting of the servers to which a defense rule is applied.</p>
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -90,6 +94,12 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceAntiBruteForceRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAntiBruteForceRulesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of servers returned on the current page.
+             * <p>The number of servers returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers returned.
+             * <p>The total number of servers returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeInstanceAntiBruteForceRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAntiBruteForceRulesResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -242,7 +270,10 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the defense rule.
+             * <p>The ID of the defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>215779601</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -250,7 +281,10 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the defense rule.
+             * <p>The name of the defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestRule</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -258,7 +292,10 @@ public class DescribeInstanceAntiBruteForceRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server to which the defense rule is applied.
+             * <p>The UUID of the server to which the defense rule is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

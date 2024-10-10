@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyScaItemResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyScaItemResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about middleware fingerprints.
+         * <p>An array that consists of the information about middleware fingerprints.</p>
          */
         public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -77,7 +78,10 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F4236AB-7070-538D-85EB-98EBFE6C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyScaItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyScaItemResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyScaItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyScaItemResponseBody</p>
+     */
     public static class PropertyItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
@@ -254,16 +282,19 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             private String typeDisplay; 
 
             /**
-             * The type of the middleware, database, or web service. Valid values:
-             * <p>
+             * <p>The type of the middleware, database, or web service. Valid values:</p>
+             * <ul>
+             * <li><strong>system_service</strong>: system service</li>
+             * <li><strong>software_library</strong>: software library</li>
+             * <li><strong>docker_component</strong>: container component</li>
+             * <li><strong>database</strong>: database</li>
+             * <li><strong>web_container</strong>: web container</li>
+             * <li><strong>jar</strong>: JAR package</li>
+             * <li><strong>web_framework</strong>: web framework</li>
+             * </ul>
              * 
-             * *   **system_service**: system service
-             * *   **software_library**: software library
-             * *   **docker_component**: container component
-             * *   **database**: database
-             * *   **web_container**: web container
-             * *   **jar**: JAR package
-             * *   **web_framework**: web framework
+             * <strong>example:</strong>
+             * <p>docker_component</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -271,7 +302,10 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers on which the middleware is run.
+             * <p>The number of servers on which the middleware is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -279,7 +313,10 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the middleware.
+             * <p>The name of the middleware.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kubelet</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -287,7 +324,10 @@ public class DescribePropertyScaItemResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the middleware type.
+             * <p>The display name of the middleware type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Docker Component</p>
              */
             public Builder typeDisplay(String typeDisplay) {
                 this.typeDisplay = typeDisplay;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaStrategyTemplateSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpaStrategyTemplateSummaryResponseBody</p>
@@ -85,7 +86,10 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The usage statistics about the templates provided for rules of the at-risk image blocking type.
+         * <p>The usage statistics about the templates provided for rules of the at-risk image blocking type.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54572138-3390-5774-B71D-799DC8C2161B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpaStrategyTemplateSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyTemplateSummaryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -197,7 +216,10 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * The number of times that the template is used.
+             * <p>The number of times that the template is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -205,7 +227,10 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the template.
+             * <p>The description of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom defense configuration</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -213,7 +238,10 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -221,7 +249,10 @@ public class GetOpaStrategyTemplateSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the template.
+             * <p>The name of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Blank template</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

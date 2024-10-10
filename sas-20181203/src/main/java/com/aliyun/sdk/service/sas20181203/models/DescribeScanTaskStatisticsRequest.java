@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScanTaskStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeScanTaskStatisticsRequest</p>
@@ -53,12 +54,15 @@ public class DescribeScanTaskStatisticsRequest extends Request {
         } 
 
         /**
-         * The severities of the alert events handled by the virus detection task. Separate multiple severities with commas (,). The severities decrease in descending order. Valid values:
-         * <p>
+         * <p>The severities of the alert events handled by the virus detection task. Separate multiple severities with commas (,). The severities decrease in descending order. Valid values:</p>
+         * <ul>
+         * <li><strong>serious</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>remind</strong></li>
+         * </ul>
          * 
-         * *   **serious**
-         * *   **suspicious**
-         * *   **remind**
+         * <strong>example:</strong>
+         * <p>serious,suspicious,remind</p>
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);

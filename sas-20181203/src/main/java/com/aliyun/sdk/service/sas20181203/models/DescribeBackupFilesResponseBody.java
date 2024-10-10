@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupFilesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupFilesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the backup files returned.
+         * <p>An array that consists of the backup files returned.</p>
          */
         public Builder backupFiles(java.util.List < BackupFiles> backupFiles) {
             this.backupFiles = backupFiles;
@@ -69,7 +70,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00A60A6D-33E0-5D5A-9B7C-E5D4DCA88148</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupFilesResponseBody</p>
+     */
     public static class BackupFiles extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -153,7 +163,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the anti-ransomware policy.
+             * <p>The name of the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Group 1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -161,7 +174,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the backup file. Unit: bytes.
+             * <p>The size of the backup file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -169,7 +185,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the subdirectory of the backup file.
+             * <p>The path to the subdirectory of the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Python27\</p>
              */
             public Builder subtree(String subtree) {
                 this.subtree = subtree;
@@ -177,11 +196,14 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protected file. Valid values:
-             * <p>
+             * <p>The type of the protected file. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: files</li>
+             * <li><strong>dir</strong>: folders</li>
+             * </ul>
              * 
-             * *   **file**: files
-             * *   **dir**: folders
+             * <strong>example:</strong>
+             * <p>dir</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -195,6 +217,12 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackupFilesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupFilesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -258,7 +286,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of backup files returned on the current page.
+             * <p>The number of backup files returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -266,7 +297,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -274,7 +308,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -282,7 +319,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of backup files returned.
+             * <p>The total number of backup files returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

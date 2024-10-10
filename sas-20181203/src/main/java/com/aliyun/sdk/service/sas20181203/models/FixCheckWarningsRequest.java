@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FixCheckWarningsRequest} extends {@link RequestModel}
  *
  * <p>FixCheckWarningsRequest</p>
@@ -110,18 +111,22 @@ public class FixCheckWarningsRequest extends Request {
         } 
 
         /**
-         * The parameters for the baseline risk item that you want to fix.
-         * <p>
+         * <p>The parameters for the baseline risk item that you want to fix.</p>
+         * <ul>
+         * <li><p><strong>checkId</strong>: the ID of the check item that corresponds to the baseline risk item.</p>
+         * </li>
+         * <li><p><strong>rules</strong>: an array that consists of the rules applied to fixes.</p>
+         * <ul>
+         * <li><strong>value</strong>: specifies whether a fix method is selected. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that no fix method is selected and the value 1 indicates that a fix method is selected.</li>
+         * <li><strong>ruleId</strong>: the ID of the fix method.</li>
+         * <li><strong>paramList</strong>: an array that consists of the details about the fix method.<br>• <strong>paramName</strong>: the name of the fix method.<br>• <strong>value</strong>: the value of the fix method.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **checkId**: the ID of the check item that corresponds to the baseline risk item.
-         * 
-         * *   **rules**: an array that consists of the rules applied to fixes.
-         * 
-         *     *   **value**: specifies whether a fix method is selected. Valid values: **0** and **1**. The value 0 indicates that no fix method is selected and the value 1 indicates that a fix method is selected.
-         *     *   **ruleId**: the ID of the fix method.
-         *     *   **paramList**: an array that consists of the details about the fix method.\
-         *         • **paramName**: the name of the fix method.\
-         *         • **value**: the value of the fix method.
+         * <strong>example:</strong>
+         * <p>[{&quot;checkId&quot;:8,&quot;rules&quot;:[{&quot;ruleId&quot;:&quot;rule.ssh_Idle.interval&quot;,&quot;value&quot;:1,&quot;paramList&quot;:[{&quot;paramName&quot;:&quot;range_val&quot;,&quot;value&quot;:&quot;600&quot;},{&quot;paramName&quot;:&quot;range_val&quot;,&quot;value&quot;:&quot;600&quot;}]},{&quot;ruleId&quot;:&quot;rule.ssh_Idle.count&quot;,&quot;value&quot;:1,&quot;paramList&quot;:[{&quot;paramName&quot;:&quot;range_val&quot;,&quot;value&quot;:&quot;3&quot;}]}]}]</p>
          */
         public Builder checkParams(String checkParams) {
             this.putQueryParameter("CheckParams", checkParams);
@@ -130,11 +135,14 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -143,10 +151,13 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * The ID of the baseline risk item.
-         * <p>
+         * <p>The ID of the baseline risk item.</p>
+         * <blockquote>
+         * <p> To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs.</p>
+         * </blockquote>
          * 
-         * >  To query specified baseline risk items and the check items of a specified server, you must provide the IDs of the baseline risk items. You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs.
+         * <strong>example:</strong>
+         * <p>10354</p>
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -155,7 +166,10 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>165.225.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -164,7 +178,10 @@ public class FixCheckWarningsRequest extends Request {
         }
 
         /**
-         * The UUID of the asset for which you want to fix the baseline risk item. You can call the [DescribeWarningMachines](~~DescribeWarningMachines~~) operation to query the UUIDs of assets.
+         * <p>The UUID of the asset for which you want to fix the baseline risk item. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to query the UUIDs of assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75a417dda5f25edb5bed8f208a9a****,c7e10fd794262a1510d5648f9e5d****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

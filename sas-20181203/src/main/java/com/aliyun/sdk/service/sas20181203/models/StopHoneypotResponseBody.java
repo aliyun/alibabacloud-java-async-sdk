@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopHoneypotResponseBody} extends {@link TeaModel}
  *
  * <p>StopHoneypotResponseBody</p>
@@ -97,7 +98,10 @@ public class StopHoneypotResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class StopHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class StopHoneypotResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link StopHoneypotResponseBody} extends {@link TeaModel}
+     *
+     * <p>StopHoneypotResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ControlNodeName")
         private String controlNodeName;
@@ -265,7 +287,10 @@ public class StopHoneypotResponseBody extends TeaModel {
             private java.util.List < String > state; 
 
             /**
-             * The name of the management node to which the honeypot belongs.
+             * <p>The name of the management node to which the honeypot belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>managerNoden****</p>
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -273,7 +298,10 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot.
+             * <p>The ID of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9bf8cd373112263d4bc102fc5dba9d9f812ee05d4d35c487d330d52e937f****</p>
              */
             public Builder honeypotId(String honeypotId) {
                 this.honeypotId = honeypotId;
@@ -281,7 +309,10 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the image.
+             * <p>The display name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RuoYi</p>
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -289,7 +320,10 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image that is used for the honeypot.
+             * <p>The name of the image that is used for the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>metabase</p>
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -297,7 +331,10 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot.
+             * <p>The name of the honeypot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hyl-phpmya****</p>
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -305,7 +342,10 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * <p>The ID of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -313,7 +353,10 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot custom parameter.
+             * <p>The ID of the honeypot custom parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>868a7579-00b5-4a74-999d-8bd3f411****</p>
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;
@@ -321,7 +364,7 @@ public class StopHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The statuses of the honeypots.
+             * <p>The statuses of the honeypots.</p>
              */
             public Builder state(java.util.List < String > state) {
                 this.state = state;

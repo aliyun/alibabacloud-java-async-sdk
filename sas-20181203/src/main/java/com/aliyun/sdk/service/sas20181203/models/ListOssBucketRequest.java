@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOssBucketRequest} extends {@link RequestModel}
  *
  * <p>ListOssBucketRequest</p>
@@ -67,7 +68,10 @@ public class ListOssBucketRequest extends Request {
         } 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iboxpublic****</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -76,11 +80,14 @@ public class ListOssBucketRequest extends Request {
         }
 
         /**
-         * The language of the content in the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

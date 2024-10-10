@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceVulStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceVulStatisticsRequest</p>
@@ -77,7 +78,10 @@ public class DescribeInstanceVulStatisticsRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b268326-273e-44fc-a0e3-9482435c****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

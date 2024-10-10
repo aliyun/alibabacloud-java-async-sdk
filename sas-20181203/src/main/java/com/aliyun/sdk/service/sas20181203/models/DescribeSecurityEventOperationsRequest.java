@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityEventOperationsRequest} extends {@link RequestModel}
  *
  * <p>DescribeSecurityEventOperationsRequest</p>
@@ -96,11 +97,14 @@ public class DescribeSecurityEventOperationsRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -118,7 +122,11 @@ public class DescribeSecurityEventOperationsRequest extends Request {
         }
 
         /**
-         * The ID of the alert event that you want to handle.
+         * <p>The ID of the alert event that you want to handle.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61352054</p>
          */
         public Builder securityEventId(Long securityEventId) {
             this.putQueryParameter("SecurityEventId", securityEventId);
@@ -127,7 +135,10 @@ public class DescribeSecurityEventOperationsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

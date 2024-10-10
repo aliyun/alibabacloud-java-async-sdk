@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterVulStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClusterVulStatisticsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
         private VulStat vulStat; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics of the vulnerabilities.
+         * <p>The statistics of the vulnerabilities.</p>
          */
         public Builder vulStat(VulStat vulStat) {
             this.vulStat = vulStat;
@@ -70,6 +74,12 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterVulStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterVulStatisticsResponseBody</p>
+     */
     public static class VulStat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsapCount")
         private String asapCount;
@@ -121,7 +131,10 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             private String nntfCount; 
 
             /**
-             * The number of high-risk vulnerabilities.
+             * <p>The number of high-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder asapCount(String asapCount) {
                 this.asapCount = asapCount;
@@ -129,7 +142,10 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk vulnerabilities.
+             * <p>The number of medium-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder laterCount(String laterCount) {
                 this.laterCount = laterCount;
@@ -137,7 +153,10 @@ public class DescribeClusterVulStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk vulnerabilities.
+             * <p>The number of low-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nntfCount(String nntfCount) {
                 this.nntfCount = nntfCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAssetSelectionConfigResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAssetSelectionConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3D7C47D-3F11-57BB-90E8-E5C20C619F37</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAssetSelectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAssetSelectionConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
@@ -121,11 +131,14 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The business type that is selected for the asset. Valid values:
-             * <p>
+             * <p>The business type that is selected for the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: virus detection configuration</li>
+             * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: one-time scan for virus detection</li>
+             * </ul>
              * 
-             * *   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection configuration
-             * *   **VIRUS_SCAN_ONCE_TASK**: one-time scan for virus detection
+             * <strong>example:</strong>
+             * <p>VIRUS_SCAN_CYCLE_CONFIG</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -133,7 +146,10 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the current asset selection. It can be used to query and modify the asset that is selected.
+             * <p>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53e93435-d694-4c03-9ce7-da12bee1****</p>
              */
             public Builder selectionKey(Long selectionKey) {
                 this.selectionKey = selectionKey;
@@ -141,12 +157,15 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension based on which the asset is selected. Valid values:
-             * <p>
+             * <p>The dimension based on which the asset is selected. Valid values:</p>
+             * <ul>
+             * <li><strong>group</strong>: The asset is selected by server.</li>
+             * <li><strong>group</strong>: The asset is selected by group.</li>
+             * <li><strong>vpc</strong>: The asset is selected by VPC.</li>
+             * </ul>
              * 
-             * *   **group**: The asset is selected by server.
-             * *   **group**: The asset is selected by group.
-             * *   **vpc**: The asset is selected by VPC.
+             * <strong>example:</strong>
+             * <p>group</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

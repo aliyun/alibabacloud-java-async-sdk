@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupedMaliciousFilesRequest} extends {@link RequestModel}
  *
  * <p>DescribeGroupedMaliciousFilesRequest</p>
@@ -265,7 +266,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         } 
 
         /**
-         * The cluster ID of the container on which the malicious image sample is detected.
+         * <p>The cluster ID of the container on which the malicious image sample is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c556c8133b5ad4378b7fc533ddbda****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -274,7 +278,11 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -283,10 +291,13 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The name of the malicious image sample that you want to query.
-         * <p>
+         * <p>The name of the malicious image sample that you want to query.</p>
+         * <blockquote>
+         * <p> Fuzzy match is supported.</p>
+         * </blockquote>
          * 
-         * >  Fuzzy match is supported.
+         * <strong>example:</strong>
+         * <p>Mining</p>
          */
         public Builder fuzzyMaliciousName(String fuzzyMaliciousName) {
             this.putQueryParameter("FuzzyMaliciousName", fuzzyMaliciousName);
@@ -295,7 +306,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The image digest.
+         * <p>The image digest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a5e103187b31a94592a47a5858617f7****</p>
          */
         public Builder imageDigest(String imageDigest) {
             this.putQueryParameter("ImageDigest", imageDigest);
@@ -304,7 +318,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The image layer.
+         * <p>The image layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27213ad375b53628dd152a5ca****</p>
          */
         public Builder imageLayer(String imageLayer) {
             this.putQueryParameter("ImageLayer", imageLayer);
@@ -313,7 +330,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The image tag.
+         * <p>The image tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         public Builder imageTag(String imageTag) {
             this.putQueryParameter("ImageTag", imageTag);
@@ -322,11 +342,14 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -335,12 +358,15 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:
-         * <p>
+         * <p>The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>serious</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>remind</strong></li>
+         * </ul>
          * 
-         * *   **serious**
-         * *   **suspicious**
-         * *   **remind**
+         * <strong>example:</strong>
+         * <p>serious</p>
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -349,7 +375,10 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The MD5 hash value of the malicious image sample.
+         * <p>The MD5 hash value of the malicious image sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d836968041f7683b5459****</p>
          */
         public Builder maliciousMd5(String maliciousMd5) {
             this.putQueryParameter("MaliciousMd5", maliciousMd5);
@@ -358,7 +387,11 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -367,10 +400,13 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
-         * <p>
+         * <p>The ID of the image repository.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation to query the IDs of image repositories from the value of the <strong>RepoId</strong> response parameter.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListRepository](~~145293~~) operation to query the IDs of image repositories from the value of the **RepoId** response parameter.
+         * <strong>example:</strong>
+         * <p>crr-vridcl4****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -379,10 +415,13 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The ID of the container image.
-         * <p>
+         * <p>The ID of the container image.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation to query the IDs of container images from the value of the <strong>InstanceId</strong> response parameter.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListRepository](~~145293~~) operation to query the IDs of container images from the value of the **InstanceId** response parameter.
+         * <strong>example:</strong>
+         * <p>cri-datvailb****</p>
          */
         public Builder repoInstanceId(String repoInstanceId) {
             this.putQueryParameter("RepoInstanceId", repoInstanceId);
@@ -391,10 +430,13 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
-         * <p>
+         * <p>The name of the image repository.</p>
+         * <blockquote>
+         * <p> Fuzzy match is supported.</p>
+         * </blockquote>
          * 
-         * >  Fuzzy match is supported.
+         * <strong>example:</strong>
+         * <p>centos</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -403,10 +445,13 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The namespace to which the image repository belongs.
-         * <p>
+         * <p>The namespace to which the image repository belongs.</p>
+         * <blockquote>
+         * <p> Fuzzy match is supported.</p>
+         * </blockquote>
          * 
-         * >  Fuzzy match is supported.
+         * <strong>example:</strong>
+         * <p>hanghai-namespace</p>
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -415,21 +460,24 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The region ID of the image repository. Valid values:
-         * <p>
+         * <p>The region ID of the image repository. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+         * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
+         * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+         * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+         * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+         * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta)</li>
+         * <li><strong>us-east-1</strong>: US (Virginia)</li>
+         * <li><strong>us-west-1</strong>: US (Silicon Valley)</li>
+         * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+         * <li><strong>eu-west-1</strong>: UK (London)</li>
+         * </ul>
          * 
-         * *   **cn-beijing**: China (Beijing)
-         * *   **cn-zhangjiakou**: China (Zhangjiakou)
-         * *   **cn-hangzhou**: China (Hangzhou)
-         * *   **cn-shanghai**: China (Shanghai)
-         * *   **cn-shenzhen**: China (Shenzhen)
-         * *   **cn-hongkong**: China (Hong Kong)
-         * *   **ap-southeast-1**: Singapore
-         * *   **ap-southeast-5**: Indonesia (Jakarta)
-         * *   **us-east-1**: US (Virginia)
-         * *   **us-west-1**: US (Silicon Valley)
-         * *   **eu-central-1**: Germany (Frankfurt)
-         * *   **eu-west-1**: UK (London)
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);
@@ -438,7 +486,7 @@ public class DescribeGroupedMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The types of the assets that you want to scan.
+         * <p>The types of the assets that you want to scan.</p>
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetCheckSummaryResponseBody</p>
@@ -73,7 +74,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         private java.util.List < Summarys> summarys; 
 
         /**
-         * The statistics about the number of check items.
+         * <p>The statistics about the number of check items.</p>
          */
         public Builder overallItemStatistic(OverallItemStatistic overallItemStatistic) {
             this.overallItemStatistic = overallItemStatistic;
@@ -81,7 +82,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The overall risk statistics.
+         * <p>The overall risk statistics.</p>
          */
         public Builder overallStatistic(OverallStatistic overallStatistic) {
             this.overallStatistic = overallStatistic;
@@ -89,7 +90,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>843E4805-****-7EE12FA8DBFD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +101,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The summary information about the configuration checks on cloud services.
+         * <p>The summary information about the configuration checks on cloud services.</p>
          */
         public Builder summarys(java.util.List < Summarys> summarys) {
             this.summarys = summarys;
@@ -110,6 +114,12 @@ public class GetCheckSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckSummaryResponseBody</p>
+     */
     public static class OverallItemStatistic extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReleaseCount")
         private Integer releaseCount;
@@ -149,7 +159,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer resultCount; 
 
             /**
-             * The number of check items supported by the system.
+             * <p>The number of check items supported by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>620</p>
              */
             public Builder releaseCount(Integer releaseCount) {
                 this.releaseCount = releaseCount;
@@ -157,7 +170,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items available to you.
+             * <p>The number of check items available to you.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder resultCount(Integer resultCount) {
                 this.resultCount = resultCount;
@@ -171,6 +187,12 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckSummaryResponseBody</p>
+     */
     public static class OverallStatistic extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotCheckCount")
         private Integer notCheckCount;
@@ -330,7 +352,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer passMediumCount; 
 
             /**
-             * The number of unchecked check items.
+             * <p>The number of unchecked check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder notCheckCount(Integer notCheckCount) {
                 this.notCheckCount = notCheckCount;
@@ -338,7 +363,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unchecked high-risk check items.
+             * <p>The number of unchecked high-risk check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notCheckHighCount(Integer notCheckHighCount) {
                 this.notCheckHighCount = notCheckHighCount;
@@ -346,7 +374,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unchecked low-risk check items.
+             * <p>The number of unchecked low-risk check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notCheckLowCount(Integer notCheckLowCount) {
                 this.notCheckLowCount = notCheckLowCount;
@@ -354,7 +385,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unchecked medium-risk check items.
+             * <p>The number of unchecked medium-risk check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notCheckMediumCount(Integer notCheckMediumCount) {
                 this.notCheckMediumCount = notCheckMediumCount;
@@ -362,7 +396,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that failed to pass the check.
+             * <p>The number of check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder notPassCount(Integer notPassCount) {
                 this.notPassCount = notPassCount;
@@ -370,7 +407,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk check items that failed to pass the check.
+             * <p>The number of high-risk check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notPassHighCount(Integer notPassHighCount) {
                 this.notPassHighCount = notPassHighCount;
@@ -378,7 +418,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk check items that failed to pass the check.
+             * <p>The number of low-risk check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notPassLowCount(Integer notPassLowCount) {
                 this.notPassLowCount = notPassLowCount;
@@ -386,7 +429,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk check items that failed to pass the check.
+             * <p>The number of medium-risk check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notPassMediumCount(Integer notPassMediumCount) {
                 this.notPassMediumCount = notPassMediumCount;
@@ -394,7 +440,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that pass the check.
+             * <p>The number of check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -402,7 +451,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk check items that pass the check.
+             * <p>The number of high-risk check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passHighCount(Integer passHighCount) {
                 this.passHighCount = passHighCount;
@@ -410,7 +462,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk check items that pass the check.
+             * <p>The number of low-risk check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passLowCount(Integer passLowCount) {
                 this.passLowCount = passLowCount;
@@ -418,7 +473,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk check items that pass the check.
+             * <p>The number of medium-risk check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passMediumCount(Integer passMediumCount) {
                 this.passMediumCount = passMediumCount;
@@ -432,6 +490,12 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckSummaryResponseBody</p>
+     */
     public static class StandardStatistic extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotCheckCount")
         private Integer notCheckCount;
@@ -591,7 +655,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer passMediumCount; 
 
             /**
-             * The number of unchecked check items.
+             * <p>The number of unchecked check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder notCheckCount(Integer notCheckCount) {
                 this.notCheckCount = notCheckCount;
@@ -599,7 +666,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unchecked high-risk check items.
+             * <p>The number of unchecked high-risk check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notCheckHighCount(Integer notCheckHighCount) {
                 this.notCheckHighCount = notCheckHighCount;
@@ -607,7 +677,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unchecked low-risk check items.
+             * <p>The number of unchecked low-risk check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notCheckLowCount(Integer notCheckLowCount) {
                 this.notCheckLowCount = notCheckLowCount;
@@ -615,7 +688,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unchecked medium-risk check items.
+             * <p>The number of unchecked medium-risk check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notCheckMediumCount(Integer notCheckMediumCount) {
                 this.notCheckMediumCount = notCheckMediumCount;
@@ -623,7 +699,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that failed to pass the check.
+             * <p>The number of check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder notPassCount(Integer notPassCount) {
                 this.notPassCount = notPassCount;
@@ -631,7 +710,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk check items that failed to pass the check.
+             * <p>The number of high-risk check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notPassHighCount(Integer notPassHighCount) {
                 this.notPassHighCount = notPassHighCount;
@@ -639,7 +721,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk check items that failed to pass the check.
+             * <p>The number of low-risk check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notPassLowCount(Integer notPassLowCount) {
                 this.notPassLowCount = notPassLowCount;
@@ -647,7 +732,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk check items that failed to pass the check.
+             * <p>The number of medium-risk check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notPassMediumCount(Integer notPassMediumCount) {
                 this.notPassMediumCount = notPassMediumCount;
@@ -655,7 +743,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that pass the check.
+             * <p>The number of check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -663,7 +754,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk check items that pass the check.
+             * <p>The number of high-risk check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passHighCount(Integer passHighCount) {
                 this.passHighCount = passHighCount;
@@ -671,7 +765,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk check items that pass the check.
+             * <p>The number of low-risk check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passLowCount(Integer passLowCount) {
                 this.passLowCount = passLowCount;
@@ -679,7 +776,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk check items that pass the check.
+             * <p>The number of medium-risk check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passMediumCount(Integer passMediumCount) {
                 this.passMediumCount = passMediumCount;
@@ -693,6 +793,12 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckSummaryResponseBody</p>
+     */
     public static class Standards extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
@@ -804,7 +910,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private StandardStatistic standardStatistic; 
 
             /**
-             * The number of check items that failed to pass the check.
+             * <p>The number of check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -812,7 +921,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -820,7 +932,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that pass the check.
+             * <p>The number of check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -828,7 +943,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **high-risk** items.
+             * <p>The number of <strong>high-risk</strong> items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevelHighCount(Integer riskLevelHighCount) {
                 this.riskLevelHighCount = riskLevelHighCount;
@@ -836,7 +954,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **low-risk** items.
+             * <p>The number of <strong>low-risk</strong> items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevelLowCount(Integer riskLevelLowCount) {
                 this.riskLevelLowCount = riskLevelLowCount;
@@ -844,7 +965,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **medium-risk** items.
+             * <p>The number of <strong>medium-risk</strong> items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevelMediumCount(Integer riskLevelMediumCount) {
                 this.riskLevelMediumCount = riskLevelMediumCount;
@@ -852,7 +976,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity and permission management</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -860,7 +987,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The standard statistics of the check items.
+             * <p>The standard statistics of the check items.</p>
              */
             public Builder standardStatistic(StandardStatistic standardStatistic) {
                 this.standardStatistic = standardStatistic;
@@ -874,6 +1001,12 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckSummaryResponseBody</p>
+     */
     public static class TypeStatistic extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NotCheckCount")
         private Integer notCheckCount;
@@ -1033,7 +1166,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private Integer passMediumCount; 
 
             /**
-             * The number of unchecked check items.
+             * <p>The number of unchecked check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder notCheckCount(Integer notCheckCount) {
                 this.notCheckCount = notCheckCount;
@@ -1041,7 +1177,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unchecked high-risk check items.
+             * <p>The number of unchecked high-risk check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notCheckHighCount(Integer notCheckHighCount) {
                 this.notCheckHighCount = notCheckHighCount;
@@ -1049,7 +1188,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unchecked low-risk check items.
+             * <p>The number of unchecked low-risk check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notCheckLowCount(Integer notCheckLowCount) {
                 this.notCheckLowCount = notCheckLowCount;
@@ -1057,7 +1199,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unchecked medium-risk check items.
+             * <p>The number of unchecked medium-risk check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notCheckMediumCount(Integer notCheckMediumCount) {
                 this.notCheckMediumCount = notCheckMediumCount;
@@ -1065,7 +1210,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that failed to pass the check.
+             * <p>The number of check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder notPassCount(Integer notPassCount) {
                 this.notPassCount = notPassCount;
@@ -1073,7 +1221,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk check items that failed to pass the check.
+             * <p>The number of high-risk check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notPassHighCount(Integer notPassHighCount) {
                 this.notPassHighCount = notPassHighCount;
@@ -1081,7 +1232,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk check items that failed to pass the check.
+             * <p>The number of low-risk check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notPassLowCount(Integer notPassLowCount) {
                 this.notPassLowCount = notPassLowCount;
@@ -1089,7 +1243,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk check items that failed to pass the check.
+             * <p>The number of medium-risk check items that failed to pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder notPassMediumCount(Integer notPassMediumCount) {
                 this.notPassMediumCount = notPassMediumCount;
@@ -1097,7 +1254,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that pass the check.
+             * <p>The number of check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -1105,7 +1265,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk check items that pass the check.
+             * <p>The number of high-risk check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passHighCount(Integer passHighCount) {
                 this.passHighCount = passHighCount;
@@ -1113,7 +1276,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk check items that pass the check.
+             * <p>The number of low-risk check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passLowCount(Integer passLowCount) {
                 this.passLowCount = passLowCount;
@@ -1121,7 +1287,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk check items that pass the check.
+             * <p>The number of medium-risk check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder passMediumCount(Integer passMediumCount) {
                 this.passMediumCount = passMediumCount;
@@ -1135,6 +1304,12 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckSummaryResponseBody</p>
+     */
     public static class Summarys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;
@@ -1210,7 +1385,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             private TypeStatistic typeStatistic; 
 
             /**
-             * The number of detected risk items.
+             * <p>The number of detected risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -1218,7 +1396,10 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of check items that pass the check.
+             * <p>The number of check items that pass the check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder passCount(Long passCount) {
                 this.passCount = passCount;
@@ -1226,7 +1407,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the check items.
+             * <p>The information about the check items.</p>
              */
             public Builder standards(java.util.List < Standards> standards) {
                 this.standards = standards;
@@ -1234,12 +1415,15 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item. Valid values:
-             * <p>
+             * <p>The type of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>COMPLIANCE</strong></li>
+             * <li><strong>RISK</strong></li>
+             * <li><strong>IDENTITY_PERMISSION</strong></li>
+             * </ul>
              * 
-             * *   **COMPLIANCE**
-             * *   **RISK**
-             * *   **IDENTITY_PERMISSION**
+             * <strong>example:</strong>
+             * <p>IDENTITY_PERMISSION</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1247,7 +1431,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk statistics by type.
+             * <p>The risk statistics by type.</p>
              */
             public Builder typeStatistic(TypeStatistic typeStatistic) {
                 this.typeStatistic = typeStatistic;

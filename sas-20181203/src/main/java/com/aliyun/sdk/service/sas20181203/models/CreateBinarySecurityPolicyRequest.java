@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateBinarySecurityPolicyRequest} extends {@link RequestModel}
  *
  * <p>CreateBinarySecurityPolicyRequest</p>
@@ -139,7 +140,11 @@ public class CreateBinarySecurityPolicyRequest extends Request {
         } 
 
         /**
-         * The information about the cluster.
+         * <p>The information about the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ClusterId&quot;:&quot;cc12429dbb8f644f690b0623fb52b4737&quot;,&quot;Namespaces&quot;:[&quot;default&quot;]},{&quot;ClusterId&quot;:&quot;c9f5b93a8da8f4341b774d79fdbcedb3c&quot;,&quot;Namespaces&quot;:[&quot;default&quot;]}]</p>
          */
         public Builder clusters(String clusters) {
             this.putQueryParameter("Clusters", clusters);
@@ -148,7 +153,10 @@ public class CreateBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mv-test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -157,11 +165,15 @@ public class CreateBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * The content of the policy. Specify a value in the JSON format. You can specify the following keys:
-         * <p>
+         * <p>The content of the policy. Specify a value in the JSON format. You can specify the following keys:</p>
+         * <ul>
+         * <li><strong>policyMode</strong>: the type of the policy. Default value: requireAttestor.</li>
+         * <li><strong>requiredAttestors</strong>: the required witnesses.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **policyMode**: the type of the policy. Default value: requireAttestor.
-         * *   **requiredAttestors**: the required witnesses.
+         * <strong>example:</strong>
+         * <p>{&quot;PolicyMode&quot;:&quot;requireAttestor&quot;,&quot;RequiredAttestors&quot;:[&quot;test-xcs-04-12-heyuan&quot;]}</p>
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -170,7 +182,10 @@ public class CreateBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -188,7 +203,10 @@ public class CreateBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59.82.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -197,11 +215,14 @@ public class CreateBinarySecurityPolicyRequest extends Request {
         }
 
         /**
-         * The status of the policy. Valid values:
-         * <p>
+         * <p>The status of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong></li>
+         * <li><strong>disable</strong></li>
+         * </ul>
          * 
-         * *   **enable**
-         * *   **disable**
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

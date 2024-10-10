@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRefreshProcessInfoResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyRefreshProcessInfoResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyRefreshProcessInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>814FCBBC-3A02-5555-8D05-F8D9FD62A295</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

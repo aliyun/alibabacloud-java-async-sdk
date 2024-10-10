@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyContainerPluginRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyContainerPluginRuleRequest</p>
@@ -138,11 +139,14 @@ public class ModifyContainerPluginRuleRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,11 +155,14 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The action mode of the rule. Valid values:
-         * <p>
+         * <p>The action mode of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: alerts</li>
+         * <li><strong>2</strong>: block</li>
+         * </ul>
          * 
-         * *   **1**: alerts
-         * *   **2**: block
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mode(Integer mode) {
             this.putQueryParameter("Mode", mode);
@@ -164,7 +171,11 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100012</p>
          */
         public Builder ruleId(Integer ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -173,7 +184,10 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -182,11 +196,14 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The type of the rule. Valid values:
-         * <p>
+         * <p>The type of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: user-defined rule</li>
+         * <li><strong>1</strong>: built-in rule</li>
+         * </ul>
          * 
-         * *   **0**: user-defined rule
-         * *   **1**: built-in rule
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -195,7 +212,7 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The rule items.
+         * <p>The rule items.</p>
          */
         public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
             this.putQueryParameter("SelectedPolicy", selectedPolicy);
@@ -204,7 +221,7 @@ public class ModifyContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The images that are added to the whitelist.
+         * <p>The images that are added to the whitelist.</p>
          */
         public Builder whiteImages(java.util.List < String > whiteImages) {
             this.putQueryParameter("WhiteImages", whiteImages);

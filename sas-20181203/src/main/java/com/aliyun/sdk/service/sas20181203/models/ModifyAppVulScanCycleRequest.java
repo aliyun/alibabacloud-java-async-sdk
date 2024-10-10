@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAppVulScanCycleRequest} extends {@link RequestModel}
  *
  * <p>ModifyAppVulScanCycleRequest</p>
@@ -53,12 +54,15 @@ public class ModifyAppVulScanCycleRequest extends Request {
         } 
 
         /**
-         * The scan cycle for application vulnerabilities.
-         * <p>
+         * <p>The scan cycle for application vulnerabilities.</p>
+         * <ul>
+         * <li>1week</li>
+         * <li>2weeks</li>
+         * <li>3days</li>
+         * </ul>
          * 
-         * *   1week
-         * *   2weeks
-         * *   3days
+         * <strong>example:</strong>
+         * <p>1week</p>
          */
         public Builder cycle(String cycle) {
             this.putQueryParameter("Cycle", cycle);

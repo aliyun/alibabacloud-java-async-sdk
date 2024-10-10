@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOnceTaskResultInfoRequest} extends {@link RequestModel}
  *
  * <p>GetOnceTaskResultInfoRequest</p>
@@ -84,7 +85,11 @@ public class GetOnceTaskResultInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the scan task.
+         * <p>The ID of the scan task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9dfa3a7eb9547781632785b49003****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -93,12 +98,16 @@ public class GetOnceTaskResultInfoRequest extends Request {
         }
 
         /**
-         * The name of the task. Valid values:
-         * <p>
+         * <p>The name of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center agent</li>
+         * <li><strong>CLIENT_DEV_OPS</strong>: an O&amp;M task of Cloud Assistant</li>
+         * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
-         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
-         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
+         * <strong>example:</strong>
+         * <p>ASSETS_COLLECTION</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -107,12 +116,16 @@ public class GetOnceTaskResultInfoRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: a task of the Security Center agent</li>
+         * <li><strong>CLIENT_DEV_OPS</strong>: an O&amp;M task of Cloud Assistant</li>
+         * <li><strong>ASSET_SECURITY_CHECK</strong>: a task of asset information collection</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CLIENT\_PROBLEM_CHECK**: a task of the Security Center agent
-         * *   **CLIENT\_DEV_OPS**: an O\&M task of Cloud Assistant
-         * *   **ASSET\_SECURITY_CHECK**: a task of asset information collection
+         * <strong>example:</strong>
+         * <p>ASSETS_COLLECTION</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

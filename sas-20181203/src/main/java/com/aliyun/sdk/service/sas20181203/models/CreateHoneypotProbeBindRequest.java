@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHoneypotProbeBindRequest} extends {@link RequestModel}
  *
  * <p>CreateHoneypotProbeBindRequest</p>
@@ -109,7 +110,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         } 
 
         /**
-         * The ports that are bound to the probe.
+         * <p>The ports that are bound to the probe.</p>
          */
         public Builder bindPortList(java.util.List < BindPortList> bindPortList) {
             this.putQueryParameter("BindPortList", bindPortList);
@@ -118,10 +119,13 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The honeypot ID.
-         * <p>
+         * <p>The honeypot ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
+         * <strong>example:</strong>
+         * <p>dba7d44775be8e0e5888ee3b1a62554a93d2512247cabc38ddeac17a3b3f****</p>
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -130,11 +134,14 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -143,10 +150,13 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The probe ID.
-         * <p>
+         * <p>The probe ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * <strong>example:</strong>
+         * <p>36bad711-d1ac-4419-ac68-c1aa280f****</p>
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);
@@ -155,7 +165,7 @@ public class CreateHoneypotProbeBindRequest extends Request {
         }
 
         /**
-         * The IP addresses that are monitored.
+         * <p>The IP addresses that are monitored.</p>
          */
         public Builder serviceIpList(java.util.List < String > serviceIpList) {
             this.putQueryParameter("ServiceIpList", serviceIpList);
@@ -170,6 +180,12 @@ public class CreateHoneypotProbeBindRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHoneypotProbeBindRequest} extends {@link TeaModel}
+     *
+     * <p>CreateHoneypotProbeBindRequest</p>
+     */
     public static class BindPortList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindPort")
         private Boolean bindPort;
@@ -257,11 +273,14 @@ public class CreateHoneypotProbeBindRequest extends Request {
             private Integer targetPort; 
 
             /**
-             * Specifies whether to bind the port. Valid values:
-             * <p>
+             * <p>Specifies whether to bind the port. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bindPort(Boolean bindPort) {
                 this.bindPort = bindPort;
@@ -269,7 +288,10 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * The end port on which the probe monitors.
+             * <p>The end port on which the probe monitors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder endPort(Integer endPort) {
                 this.endPort = endPort;
@@ -277,11 +299,14 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * Specifies whether the port is a fixed port. Valid values:
-             * <p>
+             * <p>Specifies whether the port is a fixed port. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fixed(Boolean fixed) {
                 this.fixed = fixed;
@@ -289,11 +314,14 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>tcp</strong></li>
+             * <li><strong>udp</strong></li>
+             * </ul>
              * 
-             * *   **tcp**
-             * *   **udp**
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -301,7 +329,10 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * The start port on which the probe monitors.
+             * <p>The start port on which the probe monitors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder startPort(Integer startPort) {
                 this.startPort = startPort;
@@ -309,7 +340,10 @@ public class CreateHoneypotProbeBindRequest extends Request {
             }
 
             /**
-             * The destination port.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder targetPort(Integer targetPort) {
                 this.targetPort = targetPort;

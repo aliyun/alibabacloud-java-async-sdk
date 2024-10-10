@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUniSupportRegionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUniSupportRegionResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeUniSupportRegionResponseBody extends TeaModel {
         private java.util.List < String > uniSupportRegion; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62D0760****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeUniSupportRegionResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the region that is supported by anti-ransomware for databases.
+         * <p>An array consisting of the region that is supported by anti-ransomware for databases.</p>
          */
         public Builder uniSupportRegion(java.util.List < String > uniSupportRegion) {
             this.uniSupportRegion = uniSupportRegion;

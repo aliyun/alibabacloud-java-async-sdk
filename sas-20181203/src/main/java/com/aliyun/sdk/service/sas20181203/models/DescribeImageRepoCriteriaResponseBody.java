@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageRepoCriteriaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageRepoCriteriaResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of the filter conditions that are supported by the image repository.
+         * <p>An array consisting of the filter conditions that are supported by the image repository.</p>
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -57,7 +58,10 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62D0760E840</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageRepoCriteriaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageRepoCriteriaResponseBody</p>
+     */
     public static class CriteriaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -121,21 +131,24 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The name of the search condition. Valid values:
-             * <p>
+             * <p>The name of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>instanceId</strong>: the ID of the image instance.</li>
+             * <li><strong>repoName</strong>: the name of the image repository.</li>
+             * <li><strong>repoId</strong>: the ID of the image repository.</li>
+             * <li><strong>repoNamespace</strong>: the namespace of the image repository.</li>
+             * <li><strong>regionId</strong>: the region in which the image resides.</li>
+             * <li><strong>vulStatus</strong>: indicates whether vulnerabilities exist.</li>
+             * <li><strong>alarmStatus</strong>: indicates whether security alerts exist.</li>
+             * <li><strong>hcStatus</strong>: indicates whether baseline risks exist.</li>
+             * <li><strong>riskStatus</strong>: indicates whether risks exist.</li>
+             * <li><strong>registryType</strong>: the type of the image repository.</li>
+             * <li><strong>ImageId</strong>: the image ID.</li>
+             * <li><strong>tag</strong>: the image tag.</li>
+             * </ul>
              * 
-             * *   **instanceId**: the ID of the image instance.
-             * *   **repoName**: the name of the image repository.
-             * *   **repoId**: the ID of the image repository.
-             * *   **repoNamespace**: the namespace of the image repository.
-             * *   **regionId**: the region in which the image resides.
-             * *   **vulStatus**: indicates whether vulnerabilities exist.
-             * *   **alarmStatus**: indicates whether security alerts exist.
-             * *   **hcStatus**: indicates whether baseline risks exist.
-             * *   **riskStatus**: indicates whether risks exist.
-             * *   **registryType**: the type of the image repository.
-             * *   **ImageId**: the image ID.
-             * *   **tag**: the image tag.
+             * <strong>example:</strong>
+             * <p>vulStatus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -143,11 +156,14 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the search condition. Valid values:
-             * <p>
+             * <p>The type of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>input</strong>: The search condition needs to be specified.</li>
+             * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+             * </ul>
              * 
-             * *   **input**: The search condition needs to be specified.
-             * *   **select**: The search condition is an option that can be selected from the drop-down list.
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -155,10 +171,13 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the search condition. This parameter is returned only if the value of **Type** is set to **select**.
-             * <p>
+             * <p>The values of the search condition. This parameter is returned only if the value of <strong>Type</strong> is set to <strong>select</strong>.</p>
+             * <blockquote>
+             * <p>If the value of <strong>Type</strong> is set to <strong>input</strong>, the return value of this parameter is empty.</p>
+             * </blockquote>
              * 
-             * > If the value of **Type** is set to **input**, the return value of this parameter is empty.
+             * <strong>example:</strong>
+             * <p>NO,YES</p>
              */
             public Builder values(String values) {
                 this.values = values;

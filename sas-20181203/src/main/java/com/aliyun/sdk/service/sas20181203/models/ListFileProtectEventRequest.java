@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileProtectEventRequest} extends {@link RequestModel}
  *
  * <p>ListFileProtectEventRequest</p>
@@ -222,7 +223,7 @@ public class ListFileProtectEventRequest extends Request {
         } 
 
         /**
-         * The severities of alerts.
+         * <p>The severities of alerts.</p>
          */
         public Builder alertLevels(java.util.List < Integer > alertLevels) {
             this.putQueryParameter("AlertLevels", alertLevels);
@@ -231,7 +232,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -240,7 +244,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The end timestamp of the query.
+         * <p>The end timestamp of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683195595204</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -249,7 +256,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The instance ID of the asset.
+         * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1fu4aqltf1huhc****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -258,7 +268,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The name of the server.
+         * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca_cpm_****</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -267,7 +280,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The public IP address of the server.
+         * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.27.XX.XX</p>
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -276,7 +292,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The private IP address of the server.
+         * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.26.XX.XX</p>
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -285,14 +304,17 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * Type of operation on a file. eg:
-         * <p>
+         * <p>Type of operation on a file. eg:</p>
+         * <ul>
+         * <li><strong>DELETE</strong>: delete the file.</li>
+         * <li><strong>WRITE</strong>: write the file.</li>
+         * <li><strong>READ</strong>: read the file.</li>
+         * <li><strong>RENAME</strong>: rename the file.</li>
+         * <li><strong>CHOWN</strong>: set the file owner and file association group operations.</li>
+         * </ul>
          * 
-         * - **DELETE**: delete the file.
-         * - **WRITE**: write the file.
-         * - **READ**: read the file.
-         * - **RENAME**: rename the file.
-         * - **CHOWN**: set the file owner and file association group operations.
+         * <strong>example:</strong>
+         * <p>READ</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -301,7 +323,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -310,7 +335,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-1</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -319,7 +347,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The start timestamp of the query.
+         * <p>The start timestamp of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683080489594</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -328,13 +359,16 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The status of the event. Valid values:
-         * <p>
+         * <p>The status of the event. Valid values:</p>
+         * <ul>
+         * <li>0: unhandled</li>
+         * <li>1: handled</li>
+         * <li>2: added to the whitelist</li>
+         * <li>3: ignored</li>
+         * </ul>
          * 
-         * *   0: unhandled
-         * *   1: handled
-         * *   2: added to the whitelist
-         * *   3: ignored
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -343,10 +377,13 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID of the server.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUID of the server.
+         * <strong>example:</strong>
+         * <p>inet-ecs-4e876cb0-09f7-43b8-82ef-4bc7a937***</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

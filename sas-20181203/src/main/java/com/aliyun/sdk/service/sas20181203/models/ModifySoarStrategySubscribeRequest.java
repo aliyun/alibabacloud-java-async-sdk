@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySoarStrategySubscribeRequest} extends {@link RequestModel}
  *
  * <p>ModifySoarStrategySubscribeRequest</p>
@@ -69,10 +70,14 @@ public class ModifySoarStrategySubscribeRequest extends Request {
         } 
 
         /**
-         * The ID of the policy.
-         * <p>
+         * <p>The ID of the policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSoarStrategies~~">DescribeSoarStrategies</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeSoarStrategies](~~DescribeSoarStrategies~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -81,11 +86,15 @@ public class ModifySoarStrategySubscribeRequest extends Request {
         }
 
         /**
-         * Specifies whether to create the policy template. Valid values:
-         * <p>
+         * <p>Specifies whether to create the policy template. Valid values:</p>
+         * <ul>
+         * <li>true: creates the policy template</li>
+         * <li>false: deletes the policy template</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: creates the policy template
-         * *   false: deletes the policy template
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder subscribeStatus(Boolean subscribeStatus) {
             this.putQueryParameter("SubscribeStatus", subscribeStatus);

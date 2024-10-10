@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAssetSelectionSelectedTargetResponseBody} extends {@link TeaModel}
  *
  * <p>ListAssetSelectionSelectedTargetResponseBody</p>
@@ -49,7 +50,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1EB12F73-6828-59D2-9FBF-F3713FD55128</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAssetSelectionSelectedTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAssetSelectionSelectedTargetResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
@@ -109,7 +119,10 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
             private String targetName; 
 
             /**
-             * The ID of the asset.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -117,7 +130,10 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jen****</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;

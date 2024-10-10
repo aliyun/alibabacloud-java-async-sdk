@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllImageBaselineResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAllImageBaselineResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The baselines that are used in image baseline checks.
+         * <p>The baselines that are used in image baseline checks.</p>
          */
         public Builder imageBaselines(ImageBaselines imageBaselines) {
             this.imageBaselines = imageBaselines;
@@ -57,7 +58,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to query logs and troubleshoot issues.
+         * <p>The ID of the request, which is used to query logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A975D03-5F49-5354-B2CB-3918D5DA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAllImageBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllImageBaselineResponseBody</p>
+     */
     public static class BaselineItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -133,7 +143,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             private String nameKey; 
 
             /**
-             * The alias of the baseline check item.
+             * <p>The alias of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ensure that no accounts use the same Hash password.</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -141,7 +154,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the type for the baseline.
+             * <p>The key of the type for the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification</p>
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -149,7 +165,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the name for the baseline check item.
+             * <p>The key of the name for the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>duplicate_pwd_hash</p>
              */
             public Builder itemKey(String itemKey) {
                 this.itemKey = itemKey;
@@ -157,7 +176,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the name for the baseline.
+             * <p>The key of the name for the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -171,6 +193,12 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllImageBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllImageBaselineResponseBody</p>
+     */
     public static class BaselineNameList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -234,7 +262,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             private String nameKey; 
 
             /**
-             * The alias of the baseline.
+             * <p>The alias of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity authentication</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -242,7 +273,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the baseline check item.
+             * <p>The information about the baseline check item.</p>
              */
             public Builder baselineItemList(java.util.List < BaselineItemList> baselineItemList) {
                 this.baselineItemList = baselineItemList;
@@ -250,7 +281,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the type for the baseline.
+             * <p>The key of the type for the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification</p>
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -258,7 +292,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the name for the baseline.
+             * <p>The key of the name for the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification</p>
              */
             public Builder nameKey(String nameKey) {
                 this.nameKey = nameKey;
@@ -272,6 +309,12 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllImageBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllImageBaselineResponseBody</p>
+     */
     public static class BaselineClassList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -323,7 +366,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             private String classKey; 
 
             /**
-             * The alias of the baseline type.
+             * <p>The alias of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identity authentication</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -331,7 +377,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the baseline.
+             * <p>The information about the baseline.</p>
              */
             public Builder baselineNameList(java.util.List < BaselineNameList> baselineNameList) {
                 this.baselineNameList = baselineNameList;
@@ -339,7 +385,10 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the baseline type.
+             * <p>The key of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>identification</p>
              */
             public Builder classKey(String classKey) {
                 this.classKey = classKey;
@@ -353,6 +402,12 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAllImageBaselineResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllImageBaselineResponseBody</p>
+     */
     public static class ImageBaselines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineClassList")
         private java.util.List < BaselineClassList> baselineClassList;
@@ -380,7 +435,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             private java.util.List < BaselineClassList> baselineClassList; 
 
             /**
-             * An array that consists of baseline types.
+             * <p>An array that consists of baseline types.</p>
              */
             public Builder baselineClassList(java.util.List < BaselineClassList> baselineClassList) {
                 this.baselineClassList = baselineClassList;

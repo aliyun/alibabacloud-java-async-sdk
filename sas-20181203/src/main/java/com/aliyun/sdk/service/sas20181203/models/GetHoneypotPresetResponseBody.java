@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHoneypotPresetResponseBody} extends {@link TeaModel}
  *
  * <p>GetHoneypotPresetResponseBody</p>
@@ -97,7 +98,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the honeypot template.
+         * <p>The information about the honeypot template.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38AFE393-88E8-5642-B3E2-D57C6E76025D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHoneypotPresetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHoneypotPresetResponseBody</p>
+     */
     public static class FileInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
@@ -205,7 +227,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             private String ossUrl; 
 
             /**
-             * The ID of the uploaded file.
+             * <p>The ID of the uploaded file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HONEYPOT_FILE/1765_167040128****</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -213,7 +238,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the uploaded file.
+             * <p>The name of the uploaded file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HONEYPOT_FILE****</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -221,7 +249,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The download URL.
+             * <p>The download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://aegis">http://aegis</a>****</p>
              */
             public Builder ossUrl(String ossUrl) {
                 this.ossUrl = ossUrl;
@@ -235,6 +266,12 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetHoneypotPresetResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHoneypotPresetResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ControlNodeName")
         private String controlNodeName;
@@ -358,7 +395,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             private String presetType; 
 
             /**
-             * The name of the management node.
+             * <p>The name of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>managerNodename</p>
              */
             public Builder controlNodeName(String controlNodeName) {
                 this.controlNodeName = controlNodeName;
@@ -366,7 +406,7 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the configurations of the uploaded file.
+             * <p>An array that consists of the configurations of the uploaded file.</p>
              */
             public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
@@ -374,7 +414,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the honeypot image.
+             * <p>The display name of the honeypot image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RuoYi</p>
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -382,7 +425,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot image.
+             * <p>The name of the honeypot image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ruoyi</p>
              */
             public Builder honeypotImageName(String honeypotImageName) {
                 this.honeypotImageName = honeypotImageName;
@@ -390,7 +436,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot template.
+             * <p>The ID of the honeypot template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>94fd8805-d178-4361-84d3-de47fb4e****</p>
              */
             public Builder honeypotPresetId(String honeypotPresetId) {
                 this.honeypotPresetId = honeypotPresetId;
@@ -398,7 +447,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The custom configuration of the honeypot template.
+             * <p>The custom configuration of the honeypot template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;trojan_git&quot;:&quot;zip&quot;,&quot;burp&quot;:&quot;open&quot;,&quot;portrait_option&quot;:&quot;true&quot;}</p>
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -406,7 +458,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management node.
+             * <p>The ID of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -414,7 +469,10 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The custom name of the honeypot template.
+             * <p>The custom name of the honeypot template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ssh</p>
              */
             public Builder presetName(String presetName) {
                 this.presetName = presetName;
@@ -422,12 +480,15 @@ public class GetHoneypotPresetResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the honeypot template. Valid values:
-             * <p>
+             * <p>The type of the honeypot template. Valid values:</p>
+             * <ul>
+             * <li><strong>TEMP</strong>: automatically generated template</li>
+             * <li><strong>CUSTOM</strong>: custom template</li>
+             * <li><strong>DEFAULT</strong>: default template</li>
+             * </ul>
              * 
-             * *   **TEMP**: automatically generated template
-             * *   **CUSTOM**: custom template
-             * *   **DEFAULT**: default template
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder presetType(String presetType) {
                 this.presetType = presetType;

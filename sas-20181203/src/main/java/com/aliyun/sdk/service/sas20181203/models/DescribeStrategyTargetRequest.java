@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStrategyTargetRequest} extends {@link RequestModel}
  *
  * <p>DescribeStrategyTargetRequest</p>
@@ -83,7 +84,11 @@ public class DescribeStrategyTargetRequest extends Request {
         } 
 
         /**
-         * The ID of the baseline check policy.
+         * <p>The ID of the baseline check policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;strategyId&quot;:8167126}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -92,7 +97,10 @@ public class DescribeStrategyTargetRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.X.X</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -101,7 +109,11 @@ public class DescribeStrategyTargetRequest extends Request {
         }
 
         /**
-         * The type of the policy. Set the value to hc_strategy, which indicates baseline check policies.
+         * <p>The type of the policy. Set the value to hc_strategy, which indicates baseline check policies.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc_strategy</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulCheckTaskStatusDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulCheckTaskStatusDetailResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the status information about the vulnerability scan tasks on the server.
+         * <p>An array that consists of the status information about the vulnerability scan tasks on the server.</p>
          */
         public Builder taskStatuses(java.util.List < TaskStatuses> taskStatuses) {
             this.taskStatuses = taskStatuses;
@@ -77,7 +81,10 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of vulnerability scan tasks on the server.
+         * <p>The total number of vulnerability scan tasks on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVulCheckTaskStatusDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulCheckTaskStatusDetailResponseBody</p>
+     */
     public static class TaskStatusList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -141,7 +154,10 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>push_command_failed</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -149,14 +165,17 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the subtask. Valid values:
-             * <p>
+             * <p>The status of the subtask. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unhandled</li>
+             * <li><strong>1</strong>: collecting</li>
+             * <li><strong>2</strong>: collected</li>
+             * <li><strong>3</strong>: matching</li>
+             * <li><strong>4</strong>: complete</li>
+             * </ul>
              * 
-             * *   **0**: unhandled
-             * *   **1**: collecting
-             * *   **2**: collected
-             * *   **3**: matching
-             * *   **4**: complete
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -164,13 +183,16 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: Linux software vulnerability</li>
+             * <li><strong>sys</strong>: Windows system vulnerability</li>
+             * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+             * <li><strong>sca</strong>: vulnerability that is detected based on software component analysis</li>
+             * </ul>
              * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
-             * *   **cms**: Web-CMS vulnerability
-             * *   **sca**: vulnerability that is detected based on software component analysis
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -184,6 +206,12 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVulCheckTaskStatusDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulCheckTaskStatusDetailResponseBody</p>
+     */
     public static class TaskStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -223,7 +251,10 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             private java.util.List < TaskStatusList> taskStatusList; 
 
             /**
-             * The ID of the main task.
+             * <p>The ID of the main task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16190385</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -231,7 +262,7 @@ public class DescribeVulCheckTaskStatusDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of status information about the vulnerability scan subtask.
+             * <p>An array that consists of status information about the vulnerability scan subtask.</p>
              */
             public Builder taskStatusList(java.util.List < TaskStatusList> taskStatusList) {
                 this.taskStatusList = taskStatusList;

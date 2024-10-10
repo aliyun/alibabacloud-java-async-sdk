@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBackupStorageCountResponseBody} extends {@link TeaModel}
  *
  * <p>GetBackupStorageCountResponseBody</p>
@@ -70,6 +71,12 @@ public class GetBackupStorageCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBackupStorageCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBackupStorageCountResponseBody</p>
+     */
     public static class BackupStorageCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuyStorageByte")
         private Long buyStorageByte;

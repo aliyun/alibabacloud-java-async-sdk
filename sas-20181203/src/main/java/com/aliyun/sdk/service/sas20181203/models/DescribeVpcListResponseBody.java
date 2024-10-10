@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcListResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeVpcListResponseBody extends TeaModel {
         private java.util.List < VpcList> vpcList; 
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -69,7 +73,10 @@ public class DescribeVpcListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of VPCs.
+         * <p>An array that consists of VPCs.</p>
          */
         public Builder vpcList(java.util.List < VpcList> vpcList) {
             this.vpcList = vpcList;
@@ -90,6 +97,12 @@ public class DescribeVpcListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcListResponseBody</p>
+     */
     public static class VpcList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EcsCount")
         private Integer ecsCount;
@@ -165,7 +178,10 @@ public class DescribeVpcListResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The number of Elastic Compute Service (ECS) instances.
+             * <p>The number of Elastic Compute Service (ECS) instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -173,7 +189,10 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the virtual private cloud (VPC).
+             * <p>The information about the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestVpcNote</p>
              */
             public Builder instanceDesc(String instanceDesc) {
                 this.instanceDesc = instanceDesc;
@@ -181,7 +200,10 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * <p>The ID of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ins_1321_asedb_ada</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -189,7 +211,10 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -197,7 +222,10 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the server resides.
+             * <p>The region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChartDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeChartDataRequest</p>
@@ -123,10 +124,13 @@ public class DescribeChartDataRequest extends Request {
         } 
 
         /**
-         * The ID of the chart.
-         * <p>
+         * <p>The ID of the chart.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID. This parameter is required if the report version is 1.0.0.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeChartList](~~DescribeChartList~~) operation to query the ID. This parameter is required if the report version is 1.0.0.
+         * <strong>example:</strong>
+         * <p>CID_ASSET_RISK_TREND</p>
          */
         public Builder charId(String charId) {
             this.putQueryParameter("CharId", charId);
@@ -135,10 +139,13 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * The ID of the chart.
-         * <p>
+         * <p>The ID of the chart.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID. This parameter is required if the report version is 2.0.0.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeChartList](~~DescribeChartList~~) operation to query the ID. This parameter is required if the report version is 2.0.0.
+         * <strong>example:</strong>
+         * <p>CID_VUL_SUMMARY</p>
          */
         public Builder chartId(String chartId) {
             this.putQueryParameter("ChartId", chartId);
@@ -147,11 +154,14 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -160,10 +170,13 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * The ID of the security report.
-         * <p>
+         * <p>The ID of the security report.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCustomizeReportList](~~DescribeCustomizeReportList~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>721734</p>
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -172,7 +185,10 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683862286000</p>
          */
         public Builder timeEnd(Long timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -181,7 +197,10 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683603086000</p>
          */
         public Builder timeStart(Long timeStart) {
             this.putQueryParameter("TimeStart", timeStart);

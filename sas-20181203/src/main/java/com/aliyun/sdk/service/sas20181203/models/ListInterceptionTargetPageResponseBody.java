@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterceptionTargetPageResponseBody} extends {@link TeaModel}
  *
  * <p>ListInterceptionTargetPageResponseBody</p>
@@ -61,7 +62,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         private java.util.List < RuleTargetList> ruleTargetList; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028CF634-5268-5660-9575-48C9ED6B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the network objects.
+         * <p>An array that consists of the network objects.</p>
          */
         public Builder ruleTargetList(java.util.List < RuleTargetList> ruleTargetList) {
             this.ruleTargetList = ruleTargetList;
@@ -90,6 +94,12 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInterceptionTargetPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterceptionTargetPageResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -141,7 +151,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -149,7 +162,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -157,7 +173,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>45</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -171,6 +190,12 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInterceptionTargetPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInterceptionTargetPageResponseBody</p>
+     */
     public static class RuleTargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -306,7 +331,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The name of the application of the network object.
+             * <p>The name of the application of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>frontend</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -314,7 +342,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container cluster.
+             * <p>The ID of the container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c3e2eae03eb064d2ebf940cd5e1b17****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -322,7 +353,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container cluster.
+             * <p>The name of the container cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-test-cnnf</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -330,7 +364,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The images of the network object.
+             * <p>The images of the network object.</p>
              */
             public Builder imageList(java.util.List < String > imageList) {
                 this.imageList = imageList;
@@ -338,7 +372,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the network object belongs.
+             * <p>The namespace to which the network object belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -346,10 +383,13 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid value:
-             * <p>
+             * <p>The type of the rule. Valid value:</p>
+             * <ul>
+             * <li>customize: custom rule</li>
+             * </ul>
              * 
-             * *   customize: custom rule
+             * <strong>example:</strong>
+             * <p>customize</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -357,7 +397,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tags specified for the network object.
+             * <p>The tags specified for the network object.</p>
              */
             public Builder tagList(java.util.List < String > tagList) {
                 this.tagList = tagList;
@@ -365,10 +405,13 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network object.
-             * <p>
+             * <p>The ID of the network object.</p>
+             * <blockquote>
+             * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of network objects.</p>
+             * </blockquote>
              * 
-             * > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.
+             * <strong>example:</strong>
+             * <p>400914</p>
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -376,7 +419,10 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the network object.
+             * <p>The name of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>destination-test-obj-Na3cF</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -384,10 +430,13 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network object. Valid value:
-             * <p>
+             * <p>The type of the network object. Valid value:</p>
+             * <ul>
+             * <li>IMAGE</li>
+             * </ul>
              * 
-             * *   IMAGE
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

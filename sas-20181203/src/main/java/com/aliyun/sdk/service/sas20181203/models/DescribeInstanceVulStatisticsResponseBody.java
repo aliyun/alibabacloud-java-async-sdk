@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceVulStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceVulStatisticsResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeInstanceVulStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceVulStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceVulStatisticsResponseBody</p>
+     */
     public static class VulStat extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsapCount")
         private String asapCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAssetSelectionConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetAssetSelectionConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5936B67-3EDF-53ED-A542-02543972449A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAssetSelectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAssetSelectionConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SelectionKey")
         private String selectionKey;
@@ -109,7 +119,10 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The ID of the current asset selection. It can be used to query and modify the asset that is selected.
+             * <p>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>657c8411-4e89-446c-ab66-d45d1331****</p>
              */
             public Builder selectionKey(String selectionKey) {
                 this.selectionKey = selectionKey;
@@ -117,12 +130,15 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension based on which the asset is selected. Valid values:
-             * <p>
+             * <p>The dimension based on which the asset is selected. Valid values:</p>
+             * <ul>
+             * <li><strong>instance</strong>: The asset is selected by server.</li>
+             * <li><strong>group</strong>: The asset is selected by group.</li>
+             * <li><strong>vpc</strong>: The asset is selected by VPC.</li>
+             * </ul>
              * 
-             * *   **instance**: The asset is selected by server.
-             * *   **group**: The asset is selected by group.
-             * *   **vpc**: The asset is selected by VPC.
+             * <strong>example:</strong>
+             * <p>instance</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

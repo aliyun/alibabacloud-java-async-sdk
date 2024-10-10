@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIdcProbeScanResultListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIdcProbeScanResultListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The instances.
+         * <p>The instances.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -69,7 +70,7 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIdcProbeScanResultListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIdcProbeScanResultListResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientStatus")
         private String clientStatus;
@@ -249,11 +259,14 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             private String validPort; 
 
             /**
-             * The status of the client of the instance on which the probe is installed. Valid values:
-             * <p>
+             * <p>The status of the client of the instance on which the probe is installed. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: The Security Center agent on the asset is <strong>enabled</strong>.</li>
+             * <li><strong>offline</strong>: The Security Center agent on the asset is <strong>disabled</strong>.</li>
+             * </ul>
              * 
-             * *   **online**: The Security Center agent on the asset is **enabled**.
-             * *   **offline**: The Security Center agent on the asset is **disabled**.
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -261,7 +274,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the IDC.
+             * <p>The name of the IDC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder idcName(String idcName) {
                 this.idcName = idcName;
@@ -269,7 +285,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR blocks.
+             * <p>The CIDR blocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.2.0/24</p>
              */
             public Builder ipSegment(String ipSegment) {
                 this.ipSegment = ipSegment;
@@ -277,7 +296,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1720006818000</p>
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -285,11 +307,14 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the asset. Valid values:
-             * <p>
+             * <p>The operating system type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong></li>
+             * <li><strong>linux</strong></li>
+             * </ul>
              * 
-             * *   **windows**
-             * *   **linux**
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -297,7 +322,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the associated instance.
+             * <p>The private IP address of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42.121.<em>.</em></p>
              */
             public Builder probeInternetIp(String probeInternetIp) {
                 this.probeInternetIp = probeInternetIp;
@@ -305,7 +333,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the associated instance.
+             * <p>The private IP address of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.<em>.</em></p>
              */
             public Builder probeIntranetIp(String probeIntranetIp) {
                 this.probeIntranetIp = probeIntranetIp;
@@ -313,7 +344,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the associated instance.
+             * <p>The name of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxx</p>
              */
             public Builder probeMachineName(String probeMachineName) {
                 this.probeMachineName = probeMachineName;
@@ -321,7 +355,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the associated instance.
+             * <p>The UUID of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11C96623-E106-59C9-866D-A6C82911****</p>
              */
             public Builder probeUuid(String probeUuid) {
                 this.probeUuid = probeUuid;
@@ -329,7 +366,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scan result.
+             * <p>The ID of the scan result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231</p>
              */
             public Builder scanResultId(Long scanResultId) {
                 this.scanResultId = scanResultId;
@@ -337,7 +377,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address that is scanned.
+             * <p>The IP address that is scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.<em>.</em></p>
              */
             public Builder scannedIp(String scannedIp) {
                 this.scannedIp = scannedIp;
@@ -345,7 +388,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is scanned.
+             * <p>The port that is scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder validPort(String validPort) {
                 this.validPort = validPort;
@@ -359,6 +405,12 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeIdcProbeScanResultListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIdcProbeScanResultListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -422,7 +474,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -430,7 +485,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -438,7 +496,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -446,7 +507,10 @@ public class DescribeIdcProbeScanResultListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

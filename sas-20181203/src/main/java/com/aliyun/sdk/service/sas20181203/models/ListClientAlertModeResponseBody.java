@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClientAlertModeResponseBody} extends {@link TeaModel}
  *
  * <p>ListClientAlertModeResponseBody</p>
@@ -49,7 +50,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListClientAlertModeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListClientAlertModeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClientAlertModeResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClientAlertModeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -109,7 +119,10 @@ public class ListClientAlertModeResponseBody extends TeaModel {
             private java.util.List < String > uuids; 
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,7 +130,7 @@ public class ListClientAlertModeResponseBody extends TeaModel {
             }
 
             /**
-             * The UUIDs of the assets.
+             * <p>The UUIDs of the assets.</p>
              */
             public Builder uuids(java.util.List < String > uuids) {
                 this.uuids = uuids;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInterceptionTargetDetailRequest} extends {@link RequestModel}
  *
  * <p>GetInterceptionTargetDetailRequest</p>
@@ -54,10 +55,14 @@ public class GetInterceptionTargetDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the network object.
-         * <p>
+         * <p>The ID of the network object.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the IDs of network objects.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of network objects.
+         * <strong>example:</strong>
+         * <p>402008</p>
          */
         public Builder targetId(Long targetId) {
             this.putQueryParameter("TargetId", targetId);

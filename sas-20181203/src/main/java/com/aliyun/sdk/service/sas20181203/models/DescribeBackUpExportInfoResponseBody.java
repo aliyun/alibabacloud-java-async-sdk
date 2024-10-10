@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackUpExportInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackUpExportInfoResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -69,7 +70,7 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackUpExportInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackUpExportInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentCount")
         private Integer currentCount;
@@ -213,7 +223,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of exported entries.
+             * <p>The number of exported entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder currentCount(Integer currentCount) {
                 this.currentCount = currentCount;
@@ -221,7 +234,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * <p>The name of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suspicious_event_20221203</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -229,7 +245,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the export task was created.
+             * <p>The time when the export task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671607025000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -237,7 +256,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the export task.
+             * <p>The ID of the export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>273698***</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -245,7 +267,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The URL at which you can download the archived information.
+             * <p>The URL at which you can download the archived information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.oss-cn-xxx.aliyuncs.com/export/assetInstance_20221221_1671606250570.zip">http://xxx.oss-cn-xxx.aliyuncs.com/export/assetInstance_20221221_1671606250570.zip</a></p>
              */
             public Builder link(String link) {
                 this.link = link;
@@ -253,7 +278,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned when the export task fails.
+             * <p>The error message that is returned when the export task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -261,7 +289,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The progress percentage of the export task.
+             * <p>The progress percentage of the export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -269,12 +300,15 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the export task. Valid values:
-             * <p>
+             * <p>The status of the export task. Valid values:</p>
+             * <ul>
+             * <li><strong>init</strong>: The task is being initialized.</li>
+             * <li><strong>exporting</strong>: The task is in progress.</li>
+             * <li><strong>success</strong>: The task is complete.</li>
+             * </ul>
              * 
-             * *   **init**: The task is being initialized.
-             * *   **exporting**: The task is in progress.
-             * *   **success**: The task is complete.
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -282,7 +316,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries in the file.
+             * <p>The total number of entries in the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -296,6 +333,12 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeBackUpExportInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackUpExportInfoResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -359,7 +402,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -367,7 +413,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -375,7 +424,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -383,7 +435,10 @@ public class DescribeBackUpExportInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

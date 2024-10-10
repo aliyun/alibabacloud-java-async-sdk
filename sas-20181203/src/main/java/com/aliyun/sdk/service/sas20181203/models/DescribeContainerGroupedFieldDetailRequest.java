@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupedFieldDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerGroupedFieldDetailRequest</p>
@@ -69,10 +70,14 @@ public class DescribeContainerGroupedFieldDetailRequest extends Request {
         } 
 
         /**
-         * The search conditions that are used to query assets. The value of this parameter is in the JSON format. Separate multiple search conditions with commas (,). Example: `[{"name":"riskStatus","value":"YES"},{"name":"riskLevel","value":"2"}]`.
-         * <p>
+         * <p>The search conditions that are used to query assets. The value of this parameter is in the JSON format. Separate multiple search conditions with commas (,). Example: <code>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</code>.</p>
+         * <blockquote>
+         * <p> Supported search conditions include the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Supported search conditions include the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;clusterId&quot;,&quot;value&quot;:&quot;cfd26658431084c73a48dd97328ba8acf&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -81,15 +86,19 @@ public class DescribeContainerGroupedFieldDetailRequest extends Request {
         }
 
         /**
-         * The filter condition for a grouping and aggregation query. Valid values:
-         * <p>
+         * <p>The filter condition for a grouping and aggregation query. Valid values:</p>
+         * <ul>
+         * <li><strong>pod</strong></li>
+         * <li><strong>appName</strong></li>
+         * <li><strong>clusterId</strong></li>
+         * <li><strong>namespace</strong></li>
+         * <li><strong>image</strong></li>
+         * <li><strong>containerScan</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **pod**
-         * *   **appName**
-         * *   **clusterId**
-         * *   **namespace**
-         * *   **image**
-         * *   **containerScan**
+         * <strong>example:</strong>
+         * <p>pod</p>
          */
         public Builder groupField(String groupField) {
             this.putQueryParameter("GroupField", groupField);

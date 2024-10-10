@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveCheckResultWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveCheckResultWhiteListResponseBody</p>
@@ -73,7 +74,10 @@ public class RemoveCheckResultWhiteListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +85,10 @@ public class RemoveCheckResultWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +96,10 @@ public class RemoveCheckResultWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98C82076-E0D5-51DA-99F2-513F4XXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,11 +107,14 @@ public class RemoveCheckResultWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListStrategyListRequest} extends {@link RequestModel}
  *
  * <p>DescribeWhiteListStrategyListRequest</p>
@@ -81,11 +82,14 @@ public class DescribeWhiteListStrategyListRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -94,7 +98,10 @@ public class DescribeWhiteListStrategyListRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.88.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -103,7 +110,10 @@ public class DescribeWhiteListStrategyListRequest extends Request {
         }
 
         /**
-         * The ID of the policy. Separate multiple IDs with commas (,).
+         * <p>The ID of the policy. Separate multiple IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder strategyIds(String strategyIds) {
             this.putQueryParameter("StrategyIds", strategyIds);

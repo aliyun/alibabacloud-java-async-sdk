@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHoneypotProbeRequest} extends {@link RequestModel}
  *
  * <p>GetHoneypotProbeRequest</p>
@@ -68,11 +69,14 @@ public class GetHoneypotProbeRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,10 +85,14 @@ public class GetHoneypotProbeRequest extends Request {
         }
 
         /**
-         * The probe ID.
-         * <p>
+         * <p>The probe ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHoneypotProbe](~~ListHoneypotProbe~~) operation to query the IDs of probes.
+         * <strong>example:</strong>
+         * <p>d6c1ebc9-a90d-4c9e-9490-328814d1ca00</p>
          */
         public Builder probeId(String probeId) {
             this.putQueryParameter("ProbeId", probeId);

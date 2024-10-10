@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTraceInfoNodeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTraceInfoNodeResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the node.
+         * <p>The details about the node.</p>
          */
         public Builder node(Node node) {
             this.node = node;
@@ -57,7 +58,10 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62DXXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTraceInfoNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTraceInfoNodeResponseBody</p>
+     */
     public static class PropertyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -109,7 +119,10 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the property.
+             * <p>The name of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Incident</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -117,7 +130,10 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the property.
+             * <p>The value of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +147,12 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeTraceInfoNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTraceInfoNodeResponseBody</p>
+     */
     public static class Node extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -182,7 +204,10 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +215,7 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the properties of the node.
+             * <p>An array that consists of the properties of the node.</p>
              */
             public Builder propertyList(java.util.List < PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -198,7 +223,10 @@ public class DescribeTraceInfoNodeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * <p>The type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert</p>
              */
             public Builder type(String type) {
                 this.type = type;

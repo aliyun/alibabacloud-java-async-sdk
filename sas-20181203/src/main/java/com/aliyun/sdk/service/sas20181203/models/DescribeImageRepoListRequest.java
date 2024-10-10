@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageRepoListRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageRepoListRequest</p>
@@ -167,7 +168,10 @@ public class DescribeImageRepoListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -176,13 +180,17 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The name of the field that is used for the query. Valid values:
-         * <p>
+         * <p>The name of the field that is used for the query. Valid values:</p>
+         * <ul>
+         * <li><strong>repoName</strong>: the name of the image repository</li>
+         * <li><strong>repoNamespace</strong>: the namespace to which the image repository belongs</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter takes effect only when the <strong>OperateType</strong> parameter is set to <strong>other</strong>.</p>
+         * </blockquote>
          * 
-         * *   **repoName**: the name of the image repository
-         * *   **repoNamespace**: the namespace to which the image repository belongs
-         * 
-         * >  This parameter takes effect only when the **OperateType** parameter is set to **other**.
+         * <strong>example:</strong>
+         * <p>repoName</p>
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("FieldName", fieldName);
@@ -191,10 +199,13 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The value of the field that is used for the query.
-         * <p>
+         * <p>The value of the field that is used for the query.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when the <strong>OperateType</strong> parameter is set to <strong>other</strong>.</p>
+         * </blockquote>
          * 
-         * >  This parameter takes effect only when the **OperateType** parameter is set to **other**.
+         * <strong>example:</strong>
+         * <p>zeus</p>
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -203,11 +214,14 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The type of the operation. Valid values:
-         * <p>
+         * <p>The type of the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>count</strong>: counts statistics</li>
+         * <li><strong>other</strong>: others</li>
+         * </ul>
          * 
-         * *   **count**: counts statistics
-         * *   **other**: others
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -216,10 +230,13 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,7 +245,10 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
+         * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>script7</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -237,7 +257,10 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The namespace to which the image repository belongs.
+         * <p>The namespace to which the image repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>libssh2</p>
          */
         public Builder repoNamespace(String repoNamespace) {
             this.putQueryParameter("RepoNamespace", repoNamespace);
@@ -246,10 +269,14 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The condition by which the feature is applied. Valid values:
-         * <p>
+         * <p>The condition by which the feature is applied. Valid values:</p>
+         * <ul>
+         * <li><strong>image_repo</strong>: the ID of the image repository</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **image_repo**: the ID of the image repository
+         * <strong>example:</strong>
+         * <p>image_repo</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -258,10 +285,14 @@ public class DescribeImageRepoListRequest extends Request {
         }
 
         /**
-         * The type of the feature. Valid values:
-         * <p>
+         * <p>The type of the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>image_repo</strong>: image repository protection</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **image_repo**: image repository protection
+         * <strong>example:</strong>
+         * <p>image_repo</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

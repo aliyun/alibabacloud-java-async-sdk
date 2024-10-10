@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteOssScanConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteOssScanConfigRequest</p>
@@ -53,10 +54,13 @@ public class DeleteOssScanConfigRequest extends Request {
         } 
 
         /**
-         * The configuration ID.
-         * <p>
+         * <p>The configuration ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListOssScanConfig~~">ListOssScanConfig</a> operation to query configuration IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListOssScanConfig](~~ListOssScanConfig~~) operation to query configuration IDs.
+         * <strong>example:</strong>
+         * <p>1589</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

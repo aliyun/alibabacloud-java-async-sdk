@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLocalDefaultRegionRequest} extends {@link RequestModel}
  *
  * <p>GetLocalDefaultRegionRequest</p>
@@ -53,13 +54,16 @@ public class GetLocalDefaultRegionRequest extends Request {
         } 
 
         /**
-         * The cloud service provider. Valid values:
-         * <p>
+         * <p>The cloud service provider. Valid values:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Tencent Cloud.</li>
+         * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
+         * <li><strong>Azure</strong>: Microsoft Azure.</li>
+         * <li><strong>AWS</strong>: Amazon Web Services (AWS).</li>
+         * </ul>
          * 
-         * *   **Tencent**: Tencent Cloud.
-         * *   **HUAWEICLOUD**: Huawei Cloud.
-         * *   **Azure**: Microsoft Azure.
-         * *   **AWS**: Amazon Web Services (AWS).
+         * <strong>example:</strong>
+         * <p>Tencent</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

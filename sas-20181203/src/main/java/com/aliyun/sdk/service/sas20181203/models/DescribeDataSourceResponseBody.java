@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataSourceResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeDataSourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSourceResponseBody</p>
+     */
     public static class OperatorList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -131,6 +138,12 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSourceResponseBody</p>
+     */
     public static class MetaDataFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filed")
         private String filed;
@@ -252,6 +265,12 @@ public class DescribeDataSourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSourceResponseBody</p>
+     */
     public static class MetaDatas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataSourceId")
         private Integer dataSourceId;

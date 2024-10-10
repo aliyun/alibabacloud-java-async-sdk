@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainDetailRequest</p>
@@ -68,10 +69,14 @@ public class DescribeDomainDetailRequest extends Request {
         } 
 
         /**
-         * The domain name or the name of website that you want to query.
-         * <p>
+         * <p>The domain name or the name of website that you want to query.</p>
+         * <blockquote>
+         * <p> Fuzzy match is not supported. You must enter a complete domain name or a website.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  Fuzzy match is not supported. You must enter a complete domain name or a website.
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -80,7 +85,10 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

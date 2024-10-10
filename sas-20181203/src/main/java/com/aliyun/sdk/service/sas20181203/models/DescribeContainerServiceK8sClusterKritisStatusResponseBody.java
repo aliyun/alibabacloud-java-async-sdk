@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerServiceK8sClusterKritisStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerServiceK8sClusterKritisStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
         private String requestId; 
 
         /**
-         * The Kritis status of the ACK cluster.
+         * <p>The Kritis status of the ACK cluster.</p>
          */
         public Builder kritisStatus(KritisStatus kritisStatus) {
             this.kritisStatus = kritisStatus;
@@ -57,7 +58,10 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerServiceK8sClusterKritisStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerServiceK8sClusterKritisStatusResponseBody</p>
+     */
     public static class KritisStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Install")
         private Boolean install;
@@ -97,11 +107,14 @@ public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends 
             private Boolean install; 
 
             /**
-             * Indicates whether Kritis is installed. Valid values:
-             * <p>
+             * <p>Indicates whether Kritis is installed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder install(Boolean install) {
                 this.install = install;

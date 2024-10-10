@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddVpcHoneyPotResponseBody} extends {@link TeaModel}
  *
  * <p>AddVpcHoneyPotResponseBody</p>
@@ -37,7 +38,10 @@ public class AddVpcHoneyPotResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGroupedSecurityEventMarkMissListRequest} extends {@link RequestModel}
  *
  * <p>QueryGroupedSecurityEventMarkMissListRequest</p>
@@ -151,7 +152,10 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -160,11 +164,14 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The handling method. Valid values:
-         * <p>
+         * <p>The handling method. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Automatically Added to Whitelist</li>
+         * <li><strong>2</strong>: Defense Without Notification</li>
+         * </ul>
          * 
-         * *   **1**: Automatically Added to Whitelist
-         * *   **2**: Defense Without Notification
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder disposalWay(String disposalWay) {
             this.putQueryParameter("DisposalWay", disposalWay);
@@ -173,7 +180,10 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The name of the alert event. The value indicates a subtype.
+         * <p>The name of the alert event. The value indicates a subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Login with unusual location</p>
          */
         public Builder eventName(String eventName) {
             this.putBodyParameter("EventName", eventName);
@@ -182,7 +192,10 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The ID of the request source. Set the value to sas.
+         * <p>The ID of the request source. Set the value to sas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putBodyParameter("From", from);
@@ -191,11 +204,14 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -204,7 +220,10 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -213,13 +232,16 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The condition that is used to query alert events by asset. You can specify a value of the following types:
-         * <p>
+         * <p>The condition that is used to query alert events by asset. You can specify a value of the following types:</p>
+         * <ul>
+         * <li>The IP address of the asset.</li>
+         * <li>The public IP address of the asset.</li>
+         * <li>The private IP address of the asset.</li>
+         * <li>The name of the asset.</li>
+         * </ul>
          * 
-         * *   The IP address of the asset.
-         * *   The public IP address of the asset.
-         * *   The private IP address of the asset.
-         * *   The name of the asset.
+         * <strong>example:</strong>
+         * <p>222.185.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);
@@ -228,7 +250,10 @@ public class QueryGroupedSecurityEventMarkMissListRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113.66.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

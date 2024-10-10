@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOssBucketResponseBody} extends {@link TeaModel}
  *
  * <p>ListOssBucketResponseBody</p>
@@ -49,7 +50,7 @@ public class ListOssBucketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListOssBucketResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListOssBucketResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOssBucketResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOssBucketResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
@@ -157,7 +167,10 @@ public class ListOssBucketResponseBody extends TeaModel {
             private String supportConfig; 
 
             /**
-             * The name of the bucket.
+             * <p>The name of the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iboxpublic****</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -165,7 +178,10 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the bucket cannot be checked.
+             * <p>The reason why the bucket cannot be checked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unsupported Region.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -173,7 +189,10 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -181,13 +200,16 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * The storage class of the bucket. Valid values:
-             * <p>
+             * <p>The storage class of the bucket. Valid values:</p>
+             * <ul>
+             * <li>Standard (default)</li>
+             * <li>IA</li>
+             * <li>Archive</li>
+             * <li>ColdArchive</li>
+             * </ul>
              * 
-             * *   Standard (default)
-             * *   IA
-             * *   Archive
-             * *   ColdArchive
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -195,11 +217,14 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the bucket can be checked. Valid values:
-             * <p>
+             * <p>Indicates whether the bucket can be checked. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder support(Boolean support) {
                 this.support = support;
@@ -207,11 +232,14 @@ public class ListOssBucketResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to support config. Valid values:
-             * <p>
+             * <p>Whether to support config. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * * true
-             * * false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportConfig(String supportConfig) {
                 this.supportConfig = supportConfig;

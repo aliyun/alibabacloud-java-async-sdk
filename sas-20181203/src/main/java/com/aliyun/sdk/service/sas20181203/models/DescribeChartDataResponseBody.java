@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeChartDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeChartDataResponseBody</p>
@@ -157,7 +158,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         private SingleData singleData; 
 
         /**
-         * The valid values for all subtypes of the chart.
+         * <p>The valid values for all subtypes of the chart.</p>
          */
         public Builder allChartSubTypeList(java.util.List < AllChartSubTypeList> allChartSubTypeList) {
             this.allChartSubTypeList = allChartSubTypeList;
@@ -165,15 +166,18 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The data type of the chart. Valid values:
-         * <p>
+         * <p>The data type of the chart. Valid values:</p>
+         * <ul>
+         * <li><strong>commonCoordinate</strong></li>
+         * <li><strong>timeCoordinate</strong></li>
+         * <li><strong>multipleValue</strong></li>
+         * <li><strong>singleValue</strong></li>
+         * <li><strong>propertyValue</strong></li>
+         * <li><strong>propertyArrayValue</strong></li>
+         * </ul>
          * 
-         * *   **commonCoordinate**
-         * *   **timeCoordinate**
-         * *   **multipleValue**
-         * *   **singleValue**
-         * *   **propertyValue**
-         * *   **propertyArrayValue**
+         * <strong>example:</strong>
+         * <p>propertyArrayValue</p>
          */
         public Builder chartDataType(String chartDataType) {
             this.chartDataType = chartDataType;
@@ -181,7 +185,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The subtype values in which the chart is selected.
+         * <p>The subtype values in which the chart is selected.</p>
          */
         public Builder chartSubTypeList(java.util.List < String > chartSubTypeList) {
             this.chartSubTypeList = chartSubTypeList;
@@ -189,17 +193,20 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the chart. Valid values:
-         * <p>
+         * <p>The type of the chart. Valid values:</p>
+         * <ul>
+         * <li><strong>timeLine</strong></li>
+         * <li><strong>timeBar</strong></li>
+         * <li><strong>bar</strong></li>
+         * <li><strong>line</strong></li>
+         * <li><strong>pie</strong></li>
+         * <li><strong>gauge</strong></li>
+         * <li><strong>table</strong></li>
+         * <li><strong>text</strong></li>
+         * </ul>
          * 
-         * *   **timeLine**
-         * *   **timeBar**
-         * *   **bar**
-         * *   **line**
-         * *   **pie**
-         * *   **gauge**
-         * *   **table**
-         * *   **text**
+         * <strong>example:</strong>
+         * <p>timeBar</p>
          */
         public Builder chartType(String chartType) {
             this.chartType = chartType;
@@ -207,7 +214,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The coordinate data.
+         * <p>The coordinate data.</p>
          */
         public Builder coordinateData(CoordinateData coordinateData) {
             this.coordinateData = coordinateData;
@@ -215,7 +222,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The values in the multi-value charts.
+         * <p>The values in the multi-value charts.</p>
          */
         public Builder multipleData(java.util.List < MultipleData> multipleData) {
             this.multipleData = multipleData;
@@ -223,7 +230,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The attribute value of the array chart.
+         * <p>The attribute value of the array chart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder propertyArrayValue(String propertyArrayValue) {
             this.propertyArrayValue = propertyArrayValue;
@@ -231,7 +241,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the chart.
+         * <p>The data of the chart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;totalCount&quot;: &quot;0&quot;}</p>
          */
         public Builder propertyValue(String propertyValue) {
             this.propertyValue = propertyValue;
@@ -239,7 +252,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The array data of the chart.
+         * <p>The array data of the chart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder properyArrayValue(String properyArrayValue) {
             this.properyArrayValue = properyArrayValue;
@@ -247,7 +263,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50CCE62A-2BC4-5CF8-B976-E4F62A31****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -255,7 +274,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
         }
 
         /**
-         * The data of the single value chart.
+         * <p>The data of the single value chart.</p>
          */
         public Builder singleData(SingleData singleData) {
             this.singleData = singleData;
@@ -268,6 +287,12 @@ public class DescribeChartDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeChartDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChartDataResponseBody</p>
+     */
     public static class AllChartSubTypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
@@ -307,7 +332,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private String subTypeName; 
 
             /**
-             * The subtype of the chart.
+             * <p>The subtype of the chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CID_SUSPICIOUS_TREND-ALL</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -315,7 +343,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the chart subtype.
+             * <p>The name of the chart subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>All Alerts</p>
              */
             public Builder subTypeName(String subTypeName) {
                 this.subTypeName = subTypeName;
@@ -329,6 +360,12 @@ public class DescribeChartDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChartDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChartDataResponseBody</p>
+     */
     public static class YAxisList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -392,7 +429,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private java.util.List < String > value; 
 
             /**
-             * The name of the data type.
+             * <p>The name of the data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Port</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -400,7 +440,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype data of the chart.
+             * <p>The subtype data of the chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CID_SUSPICIOUS_TREND-AL</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -408,7 +451,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data.
+             * <p>The type of the data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -416,7 +462,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the y-axis that corresponds to x-axis points.
+             * <p>The values of the y-axis that corresponds to x-axis points.</p>
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -430,6 +476,12 @@ public class DescribeChartDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChartDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChartDataResponseBody</p>
+     */
     public static class CoordinateData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("XAxis")
         private java.util.List < String > xAxis;
@@ -469,7 +521,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private java.util.List < YAxisList> yAxisList; 
 
             /**
-             * The x-axis values.
+             * <p>The x-axis values.</p>
              */
             public Builder xAxis(java.util.List < String > xAxis) {
                 this.xAxis = xAxis;
@@ -477,7 +529,7 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The y-axis values.
+             * <p>The y-axis values.</p>
              */
             public Builder yAxisList(java.util.List < YAxisList> yAxisList) {
                 this.yAxisList = yAxisList;
@@ -491,6 +543,12 @@ public class DescribeChartDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChartDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChartDataResponseBody</p>
+     */
     public static class MultipleData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Color")
         private String color;
@@ -554,7 +612,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The font color, which is an RGBA value.
+             * <p>The font color, which is an RGBA value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#FFA800</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -562,7 +623,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data type.
+             * <p>The name of the data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Safety</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -570,7 +634,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data.
+             * <p>The type of the data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>safe</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -578,7 +645,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute value.
+             * <p>The attribute value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(Long value) {
                 this.value = value;
@@ -592,6 +662,12 @@ public class DescribeChartDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeChartDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeChartDataResponseBody</p>
+     */
     public static class SingleData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -643,7 +719,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             private Long value; 
 
             /**
-             * The name of the data type.
+             * <p>The name of the data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suspicious</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -651,7 +730,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data.
+             * <p>The type of the data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suspicious</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -659,7 +741,10 @@ public class DescribeChartDataResponseBody extends TeaModel {
             }
 
             /**
-             * The value in the single value chart.
+             * <p>The value in the single value chart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172</p>
              */
             public Builder value(Long value) {
                 this.value = value;

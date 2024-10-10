@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAntiBruteForceRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyAntiBruteForceRuleRequest</p>
@@ -166,11 +167,14 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         } 
 
         /**
-         * Specifies whether to set the defense rule as the default rule. Valid values:
-         * <p>
+         * <p>Specifies whether to set the defense rule as the default rule. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder defaultRule(Boolean defaultRule) {
             this.putQueryParameter("DefaultRule", defaultRule);
@@ -179,17 +183,20 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The threshold of logon failures that you specify. Valid values:
-         * <p>
+         * <p>The threshold of logon failures that you specify. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong></li>
+         * <li><strong>3</strong></li>
+         * <li><strong>4</strong></li>
+         * <li><strong>5</strong></li>
+         * <li><strong>10</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>80</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
          * 
-         * *   **2**
-         * *   **3**
-         * *   **4**
-         * *   **5**
-         * *   **10**
-         * *   **50**
-         * *   **80**
-         * *   **100**
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder failCount(Integer failCount) {
             this.putQueryParameter("FailCount", failCount);
@@ -198,19 +205,22 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:
-         * <p>
+         * <p>The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:</p>
+         * <ul>
+         * <li><strong>5</strong></li>
+         * <li><strong>15</strong></li>
+         * <li><strong>30</strong></li>
+         * <li><strong>60</strong></li>
+         * <li><strong>120</strong></li>
+         * <li><strong>360</strong></li>
+         * <li><strong>720</strong></li>
+         * <li><strong>1440</strong></li>
+         * <li><strong>10080</strong></li>
+         * <li><strong>52560000</strong>: permanent</li>
+         * </ul>
          * 
-         * *   **5**
-         * *   **15**
-         * *   **30**
-         * *   **60**
-         * *   **120**
-         * *   **360**
-         * *   **720**
-         * *   **1440**
-         * *   **10080**
-         * *   **52560000**: permanent
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder forbiddenTime(Integer forbiddenTime) {
             this.putQueryParameter("ForbiddenTime", forbiddenTime);
@@ -219,7 +229,11 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The ID of the defense rule.
+         * <p>The ID of the defense rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65778</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -228,7 +242,10 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The name of the defense rule.
+         * <p>The name of the defense rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestRule</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -246,7 +263,10 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -255,14 +275,17 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The period of time during which logon failures from an account are measured. Unit: minutes. Valid values:
-         * <p>
+         * <p>The period of time during which logon failures from an account are measured. Unit: minutes. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong></li>
+         * <li><strong>2</strong></li>
+         * <li><strong>5</strong></li>
+         * <li><strong>10</strong></li>
+         * <li><strong>15</strong></li>
+         * </ul>
          * 
-         * *   **1**
-         * *   **2**
-         * *   **5**
-         * *   **10**
-         * *   **15**
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder span(Integer span) {
             this.putQueryParameter("Span", span);
@@ -271,7 +294,10 @@ public class ModifyAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * An array consisting of the UUIDs of the servers to which the defense rule is applied.
+         * <p>An array consisting of the UUIDs of the servers to which the defense rule is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uuid-13213-dasda</p>
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMatchedMaliciousNamesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeMatchedMaliciousNamesResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of entries on the current page.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -69,7 +73,7 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -77,7 +81,10 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7CD1BE6-97A2-5524-A529-B55C63E55D59</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMatchedMaliciousNamesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMatchedMaliciousNamesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
@@ -129,7 +142,10 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * The display name of the malicious image sample type.
+             * <p>The display name of the malicious image sample type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>displayname</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -137,7 +153,10 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the malicious image sample type.
+             * <p>The key of the malicious image sample type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;

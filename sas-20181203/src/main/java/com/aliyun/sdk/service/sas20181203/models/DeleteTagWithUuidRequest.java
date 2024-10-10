@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTagWithUuidRequest} extends {@link RequestModel}
  *
  * <p>DeleteTagWithUuidRequest</p>
@@ -68,7 +69,11 @@ public class DeleteTagWithUuidRequest extends Request {
         } 
 
         /**
-         * The name of the tag.
+         * <p>The name of the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -77,10 +82,13 @@ public class DeleteTagWithUuidRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers.
-         * <p>
+         * <p>The UUIDs of servers.</p>
+         * <blockquote>
+         * <p>If the UuidList parameter is specified, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not specified, Security Center removes the tag from all servers.</p>
+         * </blockquote>
          * 
-         * > If the UuidList parameter is specified, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not specified, Security Center removes the tag from all servers.
+         * <strong>example:</strong>
+         * <p>111-xx,aa-bb</p>
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

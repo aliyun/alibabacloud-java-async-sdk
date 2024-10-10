@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllEntityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAllEntityResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of servers.
+         * <p>An array that consists of servers.</p>
          */
         public Builder entityList(java.util.List < EntityList> entityList) {
             this.entityList = entityList;
@@ -57,7 +58,10 @@ public class DescribeAllEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAllEntityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAllEntityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllEntityResponseBody</p>
+     */
     public static class EntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Integer groupId;
@@ -169,7 +179,10 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the asset group.
+             * <p>The ID of the asset group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>281801</p>
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -177,7 +190,10 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -185,7 +201,10 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.19.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -193,7 +212,10 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -201,7 +223,10 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101.132.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -209,11 +234,14 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system of the server. Valid values:
-             * <p>
+             * <p>The operating system of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>linux</strong></li>
+             * <li><strong>windows</strong></li>
+             * </ul>
              * 
-             * *   **linux**
-             * *   **windows**
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -221,7 +249,10 @@ public class DescribeAllEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

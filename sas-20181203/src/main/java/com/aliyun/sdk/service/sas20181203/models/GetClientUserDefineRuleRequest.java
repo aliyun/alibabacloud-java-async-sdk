@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClientUserDefineRuleRequest} extends {@link RequestModel}
  *
  * <p>GetClientUserDefineRuleRequest</p>
@@ -54,7 +55,11 @@ public class GetClientUserDefineRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the custom defense rule.
+         * <p>The ID of the custom defense rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200****</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

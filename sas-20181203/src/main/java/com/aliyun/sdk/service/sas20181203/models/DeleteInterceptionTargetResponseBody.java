@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInterceptionTargetResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteInterceptionTargetResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteInterceptionTargetResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D81DD78E-E006-5C65-A171-C8CB09XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class DeleteInterceptionTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the network objects are removed. Valid values:
-         * <p>
+         * <p>Indicates whether the network objects are removed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The network objects are removed.</li>
+         * <li><strong>false</strong>: The network objects fail to be removed.</li>
+         * </ul>
          * 
-         * *   **true**: The network objects are removed.
-         * *   **false**: The network objects fail to be removed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

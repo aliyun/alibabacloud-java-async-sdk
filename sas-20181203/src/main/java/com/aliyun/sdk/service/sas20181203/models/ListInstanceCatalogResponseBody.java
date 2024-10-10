@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceCatalogResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceCatalogResponseBody</p>
@@ -49,7 +50,10 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         private java.util.List < Vendors> vendors; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D42A83F-CE33-5F54-A5AE-05DA39F59E1B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the asset types by service provider.
+         * <p>An array that consists of the asset types by service provider.</p>
          */
         public Builder vendors(java.util.List < Vendors> vendors) {
             this.vendors = vendors;
@@ -70,6 +74,12 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceCatalogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceCatalogResponseBody</p>
+     */
     public static class InstanceSubTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -97,7 +107,10 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the asset subtype.
+             * <p>The name of the asset subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECURITY_GROUP</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -111,6 +124,12 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceCatalogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceCatalogResponseBody</p>
+     */
     public static class InstanceTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceSubTypes")
         private java.util.List < InstanceSubTypes> instanceSubTypes;
@@ -150,7 +169,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * An array that consists of asset subtypes.
+             * <p>An array that consists of asset subtypes.</p>
              */
             public Builder instanceSubTypes(java.util.List < InstanceSubTypes> instanceSubTypes) {
                 this.instanceSubTypes = instanceSubTypes;
@@ -158,7 +177,10 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset type.
+             * <p>The name of the asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -172,6 +194,12 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceCatalogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceCatalogResponseBody</p>
+     */
     public static class Vendors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceTypes")
         private java.util.List < InstanceTypes> instanceTypes;
@@ -211,7 +239,7 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * An array that consists of asset types.
+             * <p>An array that consists of asset types.</p>
              */
             public Builder instanceTypes(java.util.List < InstanceTypes> instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -219,7 +247,10 @@ public class ListInstanceCatalogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the service provider.
+             * <p>The name of the service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder name(String name) {
                 this.name = name;

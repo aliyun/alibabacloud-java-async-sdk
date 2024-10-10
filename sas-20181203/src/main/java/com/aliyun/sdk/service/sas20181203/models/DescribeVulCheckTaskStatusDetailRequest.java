@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulCheckTaskStatusDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeVulCheckTaskStatusDetailRequest</p>
@@ -81,7 +82,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         } 
 
         /**
-         * The task IDs.
+         * <p>The task IDs.</p>
          */
         public Builder taskIds(java.util.List < String > taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -90,7 +91,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         }
 
         /**
-         * The types of the vulnerabilities that are detected by the tasks.
+         * <p>The types of the vulnerabilities that are detected by the tasks.</p>
          */
         public Builder types(java.util.List < String > types) {
             this.putQueryParameter("Types", types);
@@ -99,7 +100,10 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

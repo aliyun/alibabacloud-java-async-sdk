@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSyncAssetTaskLogDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSyncAssetTaskLogDetailResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
         private java.util.List < TaskRecordDetails> taskRecordDetails; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the tasks.
+         * <p>The details of the tasks.</p>
          */
         public Builder taskRecordDetails(java.util.List < TaskRecordDetails> taskRecordDetails) {
             this.taskRecordDetails = taskRecordDetails;
@@ -90,6 +94,12 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSyncAssetTaskLogDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyncAssetTaskLogDetailResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries on the current page.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
+             * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSyncAssetTaskLogDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyncAssetTaskLogDetailResponseBody</p>
+     */
     public static class TaskRecordDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetCount")
         private Integer assetCount;
@@ -290,7 +318,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             private Integer unprotectedAssetCount; 
 
             /**
-             * The total number of assets.
+             * <p>The total number of assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder assetCount(Integer assetCount) {
                 this.assetCount = assetCount;
@@ -298,7 +329,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the server in the data center.
+             * <p>The region of the server in the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder idcRegion(String idcRegion) {
                 this.idcRegion = idcRegion;
@@ -306,7 +340,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6c4e4c36ffc3e5919120b405c2b3****</p>
              */
             public Builder leafTaskId(String leafTaskId) {
                 this.leafTaskId = leafTaskId;
@@ -314,15 +351,18 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is not started.</li>
+             * <li><strong>START</strong>: The task is started.</li>
+             * <li><strong>MESSAGE_SEND</strong>: The command is sent.</li>
+             * <li><strong>SUCCESS</strong>: The task is complete.</li>
+             * <li><strong>FAIL</strong>: The task failed.</li>
+             * <li><strong>TIMEOUT</strong>: The task timed out.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is not started.
-             * *   **START**: The task is started.
-             * *   **MESSAGE_SEND**: The command is sent.
-             * *   **SUCCESS**: The task is complete.
-             * *   **FAIL**: The task failed.
-             * *   **TIMEOUT**: The task timed out.
+             * <strong>example:</strong>
+             * <p>INIT</p>
              */
             public Builder leafTaskStatus(String leafTaskStatus) {
                 this.leafTaskStatus = leafTaskStatus;
@@ -330,7 +370,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the task.
+             * <p>The description of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unknown reason</p>
              */
             public Builder taskMsg(String taskMsg) {
                 this.taskMsg = taskMsg;
@@ -338,7 +381,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the task results were reported.
+             * <p>The timestamp when the task results were reported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671614217000</p>
              */
             public Builder taskReportTime(Long taskReportTime) {
                 this.taskReportTime = taskReportTime;
@@ -346,7 +392,10 @@ public class DescribeSyncAssetTaskLogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unprotected assets.
+             * <p>The number of unprotected assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder unprotectedAssetCount(Integer unprotectedAssetCount) {
                 this.unprotectedAssetCount = unprotectedAssetCount;

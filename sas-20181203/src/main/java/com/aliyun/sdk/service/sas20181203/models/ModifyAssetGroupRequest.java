@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAssetGroupRequest} extends {@link RequestModel}
  *
  * <p>ModifyAssetGroupRequest</p>
@@ -83,10 +84,14 @@ public class ModifyAssetGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the new server group to which the servers belong.
-         * <p>
+         * <p>The ID of the new server group to which the servers belong.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+         * <strong>example:</strong>
+         * <p>9586199</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -95,7 +100,10 @@ public class ModifyAssetGroupRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.12.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -104,10 +112,14 @@ public class ModifyAssetGroupRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers for which you want to change the server group. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The UUIDs of the servers for which you want to change the server group. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>076a446d-df7d-424c-bdc5-bb5dc7f1****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceRiskNumResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceRiskNumResponseBody</p>
@@ -49,7 +50,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the risks in the instance.
+         * <p>The information about the risks in the instance.</p>
          */
         public Builder instanceRiskNum(java.util.List < InstanceRiskNum> instanceRiskNum) {
             this.instanceRiskNum = instanceRiskNum;
@@ -57,7 +58,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291B49F9-1685-4005-9D34-606B6F78****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceRiskNumResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceRiskNumResponseBody</p>
+     */
     public static class InstanceItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -109,7 +119,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9fdluqx20mp2x7****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -117,7 +130,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the instance.
+             * <p>The UUID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f2d6e901-1004-4ca8-9dae-53ec04a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -131,6 +147,12 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceRiskNumResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceRiskNumResponseBody</p>
+     */
     public static class RiskNumEntity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SuspiciousHighCount")
         private Integer suspiciousHighCount;
@@ -230,7 +252,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             private Integer weakPassWordCount; 
 
             /**
-             * The number of high-risk alerts.
+             * <p>The number of high-risk alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder suspiciousHighCount(Integer suspiciousHighCount) {
                 this.suspiciousHighCount = suspiciousHighCount;
@@ -238,7 +263,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk alerts.
+             * <p>The number of low-risk alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder suspiciousLowCount(Integer suspiciousLowCount) {
                 this.suspiciousLowCount = suspiciousLowCount;
@@ -246,7 +274,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk alerts.
+             * <p>The number of medium-risk alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder suspiciousMediumCount(Integer suspiciousMediumCount) {
                 this.suspiciousMediumCount = suspiciousMediumCount;
@@ -254,7 +285,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk vulnerabilities.
+             * <p>The number of high-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vulHighCount(Integer vulHighCount) {
                 this.vulHighCount = vulHighCount;
@@ -262,7 +296,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk vulnerabilities.
+             * <p>The number of low-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder vulLowCount(Integer vulLowCount) {
                 this.vulLowCount = vulLowCount;
@@ -270,7 +307,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk vulnerabilities.
+             * <p>The number of medium-risk vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder vulMediumCount(Integer vulMediumCount) {
                 this.vulMediumCount = vulMediumCount;
@@ -278,7 +318,10 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * The number of weak passwords exposed on the Internet.
+             * <p>The number of weak passwords exposed on the Internet.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder weakPassWordCount(Integer weakPassWordCount) {
                 this.weakPassWordCount = weakPassWordCount;
@@ -292,6 +335,12 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListInstanceRiskNumResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceRiskNumResponseBody</p>
+     */
     public static class InstanceRiskNum extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceItem")
         private InstanceItem instanceItem;
@@ -331,7 +380,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             private RiskNumEntity riskNumEntity; 
 
             /**
-             * The information about the instance.
+             * <p>The information about the instance.</p>
              */
             public Builder instanceItem(InstanceItem instanceItem) {
                 this.instanceItem = instanceItem;
@@ -339,7 +388,7 @@ public class ListInstanceRiskNumResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics about the risks.
+             * <p>The statistics about the risks.</p>
              */
             public Builder riskNumEntity(RiskNumEntity riskNumEntity) {
                 this.riskNumEntity = riskNumEntity;

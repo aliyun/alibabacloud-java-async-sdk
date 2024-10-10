@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaClusterImageListRequest} extends {@link RequestModel}
  *
  * <p>GetOpaClusterImageListRequest</p>
@@ -95,10 +96,13 @@ public class GetOpaClusterImageListRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster to which the container belongs.
-         * <p>
+         * <p>The ID of the cluster to which the container belongs.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>c4af4fdf38a98496a9b63c2be5dae****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +111,10 @@ public class GetOpaClusterImageListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -116,7 +123,10 @@ public class GetOpaClusterImageListRequest extends Request {
         }
 
         /**
-         * The name of the image.
+         * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImage</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -125,7 +135,10 @@ public class GetOpaClusterImageListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

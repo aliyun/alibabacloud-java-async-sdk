@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDynamicDictResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDynamicDictResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         private Long uploadTime; 
 
         /**
-         * The number of weak password rules that are added.
+         * <p>The number of weak password rules that are added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -117,7 +121,10 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the OSS object that contains custom weak passwords.
+         * <p>The name of the OSS object that contains custom weak passwords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_dict.plain</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -125,7 +132,10 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the OSS object. Unit: bytes.
+         * <p>The size of the OSS object. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder fileSize(Long fileSize) {
             this.fileSize = fileSize;
@@ -133,7 +143,10 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of weak password rules that can be added.
+         * <p>The maximum number of weak password rules that can be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder limit(Integer limit) {
             this.limit = limit;
@@ -141,7 +154,10 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the Object Storage Service (OSS) object.
+         * <p>The IP address of the Object Storage Service (OSS) object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudtest01/661767e1-5ae3-4ec5-865f-03039436893a/sacc2*****</p>
          */
         public Builder ossUrl(String ossUrl) {
             this.ossUrl = ossUrl;
@@ -149,7 +165,10 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +176,10 @@ public class DescribeDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when the OSS object was uploaded. Unit: milliseconds.
+         * <p>The timestamp when the OSS object was uploaded. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719919421</p>
          */
         public Builder uploadTime(Long uploadTime) {
             this.uploadTime = uploadTime;

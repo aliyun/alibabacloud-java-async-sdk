@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaClusterBaseLineListRequest} extends {@link RequestModel}
  *
  * <p>GetOpaClusterBaseLineListRequest</p>

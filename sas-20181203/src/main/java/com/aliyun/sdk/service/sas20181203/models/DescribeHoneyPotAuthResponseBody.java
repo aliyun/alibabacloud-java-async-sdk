@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHoneyPotAuthResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHoneyPotAuthResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The total quota.
+         * <p>The total quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder honeyPotAuthCount(Long honeyPotAuthCount) {
             this.honeyPotAuthCount = honeyPotAuthCount;
@@ -69,7 +73,10 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The quota that is consumed.
+         * <p>The quota that is consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder honeyPotCount(Integer honeyPotCount) {
             this.honeyPotCount = honeyPotCount;
@@ -77,7 +84,10 @@ public class DescribeHoneyPotAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F5023B6-9C1F-459F-ACCC-8B4636804037</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

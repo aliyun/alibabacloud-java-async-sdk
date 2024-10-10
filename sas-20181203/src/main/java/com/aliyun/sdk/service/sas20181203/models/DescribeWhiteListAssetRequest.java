@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListAssetRequest} extends {@link RequestModel}
  *
  * <p>DescribeWhiteListAssetRequest</p>
@@ -125,11 +126,14 @@ public class DescribeWhiteListAssetRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -138,7 +142,10 @@ public class DescribeWhiteListAssetRequest extends Request {
         }
 
         /**
-         * The maximum asset ID of the most recent query.
+         * <p>The maximum asset ID of the most recent query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder lastMaxId(Long lastMaxId) {
             this.putQueryParameter("LastMaxId", lastMaxId);
@@ -147,7 +154,11 @@ public class DescribeWhiteListAssetRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **500**. Default value: **500**. This value indicates that 500 entries are displayed on each page.
+         * <p>The number of entries per page. Maximum value: <strong>500</strong>. Default value: <strong>500</strong>. This value indicates that 500 entries are displayed on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -156,7 +167,10 @@ public class DescribeWhiteListAssetRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180.119.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -165,10 +179,13 @@ public class DescribeWhiteListAssetRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
-         * <p>
+         * <p>The ID of the policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeWhiteListStrategyList](~~DescribeWhiteListStrategyList~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>2730</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -177,11 +194,15 @@ public class DescribeWhiteListAssetRequest extends Request {
         }
 
         /**
-         * The policy type of the asset that you want to query. Valid values:
-         * <p>
+         * <p>The policy type of the asset that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: learning policy</li>
+         * <li><strong>2</strong>: application policy</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: learning policy
-         * *   **2**: application policy
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

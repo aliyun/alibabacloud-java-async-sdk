@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulWhitelistResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulWhitelistResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         private java.util.List < VulWhitelists> vulWhitelists; 
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -105,7 +109,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +120,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +131,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74F97EF7-B543-43FD-A4E9-18456731F9C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +142,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,7 +153,7 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of information about the whitelist of vulnerabilities.
+         * <p>An array that consists of information about the whitelist of vulnerabilities.</p>
          */
         public Builder vulWhitelists(java.util.List < VulWhitelists> vulWhitelists) {
             this.vulWhitelists = vulWhitelists;
@@ -150,6 +166,12 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVulWhitelistResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulWhitelistResponseBody</p>
+     */
     public static class VulWhitelists extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -249,7 +271,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             private String whitelist; 
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RHSA-2017:3263: curl security update</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -257,7 +282,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1275</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -265,7 +293,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oval:com.redhat.rhsa:def:20173263</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -273,7 +304,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the vulnerability is added to the whitelist.
+             * <p>The reason why the vulnerability is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -281,19 +315,25 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The application scope of the rule. The value is a JSON string that contains the following fields:
-             * <p>
+             * <p>The application scope of the rule. The value is a JSON string that contains the following fields:</p>
+             * <ul>
+             * <li><p><strong>type</strong>: the type of the assets to which the rule is applied. Valid values:</p>
+             * <ul>
+             * <li><strong>Uuid</strong>: server</li>
+             * <li><strong>GroupId</strong>: server group</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>groupIds</strong>: the ID of the server group</p>
+             * </li>
+             * <li><p><strong>uuids</strong>: the UUID of the server</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>If this field is empty, the rule is applied to all assets.</p>
+             * </blockquote>
              * 
-             * *   **type**: the type of the assets to which the rule is applied. Valid values:
-             * 
-             *     *   **Uuid**: server
-             *     *   **GroupId**: server group
-             * 
-             * *   **groupIds**: the ID of the server group
-             * 
-             * *   **uuids**: the UUID of the server
-             * 
-             * > If this field is empty, the rule is applied to all assets.
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;GroupId&quot;,&quot;groupIds&quot;:[916****],&quot;uuids&quot;:[]}</p>
              */
             public Builder targetInfo(String targetInfo) {
                 this.targetInfo = targetInfo;
@@ -301,7 +341,10 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability.
+             * <p>The type of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -309,12 +352,19 @@ public class DescribeVulWhitelistResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the vulnerability. The value of this parameter is in the JSON format. Valid values:
-             * <p>
+             * <p>The information about the vulnerability. The value of this parameter is in the JSON format. Valid values:</p>
+             * <ul>
+             * <li><strong>name</strong>: the name of the vulnerability</li>
+             * <li><strong>type</strong>: the type of the vulnerability.</li>
+             * <li><strong>aliasName</strong>: the alias of the vulnerability</li>
+             * </ul>
              * 
-             * *   **name**: the name of the vulnerability
-             * *   **type**: the type of the vulnerability.
-             * *   **aliasName**: the alias of the vulnerability
+             * <strong>example:</strong>
+             * <p>[{
+             * &quot;name&quot;:&quot;oval:com.redhat.rhsa:def:20173263&quot;,
+             * &quot;type&quot;:&quot;cve&quot;,
+             * &quot;aliasName&quot;:&quot;RHSA-2017:3263: curl security update&quot;
+             * }]</p>
              */
             public Builder whitelist(String whitelist) {
                 this.whitelist = whitelist;

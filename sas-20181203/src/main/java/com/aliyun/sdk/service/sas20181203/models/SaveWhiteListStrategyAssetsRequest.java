@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveWhiteListStrategyAssetsRequest} extends {@link RequestModel}
  *
  * <p>SaveWhiteListStrategyAssetsRequest</p>
@@ -121,7 +122,10 @@ public class SaveWhiteListStrategyAssetsRequest extends Request {
         }
 
         /**
-         * Operations.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;status&quot;:0,&quot;target&quot;:&quot;c98dcd24-fa57-4759-b5ec-f8a4ffeed****&quot;}]</p>
          */
         public Builder operations(String operations) {
             this.putQueryParameter("Operations", operations);
@@ -130,7 +134,10 @@ public class SaveWhiteListStrategyAssetsRequest extends Request {
         }
 
         /**
-         * RelationType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder relationType(Integer relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -148,7 +155,10 @@ public class SaveWhiteListStrategyAssetsRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2730</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

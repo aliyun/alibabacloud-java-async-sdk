@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IgnoreIdcProbeScanResultRequest} extends {@link RequestModel}
  *
  * <p>IgnoreIdcProbeScanResultRequest</p>
@@ -69,11 +70,15 @@ public class IgnoreIdcProbeScanResultRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Valid values:
-         * <p>
+         * <p>The operation that you want to perform. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: adds the scan result to the whitelist.</li>
+         * <li><strong>2</strong>: ignores the scan result.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: adds the scan result to the whitelist.
-         * *   **2**: ignores the scan result.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ignoreAction(Integer ignoreAction) {
             this.putQueryParameter("IgnoreAction", ignoreAction);
@@ -82,10 +87,14 @@ public class IgnoreIdcProbeScanResultRequest extends Request {
         }
 
         /**
-         * The ID of the scan result. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the scan result. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeIdcProbeScanResultList~~">DescribeIdcProbeScanResultList</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeIdcProbeScanResultList](~~DescribeIdcProbeScanResultList~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>332098932,332098964,332098963</p>
          */
         public Builder scanResultIds(String scanResultIds) {
             this.putQueryParameter("ScanResultIds", scanResultIds);

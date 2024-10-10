@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerFieldStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerFieldStatisticsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistical information about containers.
+         * <p>The statistical information about containers.</p>
          */
         public Builder containerGroupedFields(ContainerGroupedFields containerGroupedFields) {
             this.containerGroupedFields = containerGroupedFields;
@@ -57,7 +58,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerFieldStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerFieldStatisticsResponseBody</p>
+     */
     public static class ContainerGroupedFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppCount")
         private Integer appCount;
@@ -241,7 +251,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             private Integer riskPodCount; 
 
             /**
-             * The number of applications.
+             * <p>The number of applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder appCount(Integer appCount) {
                 this.appCount = appCount;
@@ -249,7 +262,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of clusters.
+             * <p>The number of clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
@@ -257,7 +273,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of containers.
+             * <p>The number of containers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder containerCount(Integer containerCount) {
                 this.containerCount = containerCount;
@@ -265,7 +284,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images.
+             * <p>The number of images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder imageCount(Integer imageCount) {
                 this.imageCount = imageCount;
@@ -273,7 +295,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -281,7 +306,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of namespaces.
+             * <p>The number of namespaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder namespaceCount(Integer namespaceCount) {
                 this.namespaceCount = namespaceCount;
@@ -289,7 +317,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of pods.
+             * <p>The number of pods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder podCount(Integer podCount) {
                 this.podCount = podCount;
@@ -297,7 +328,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the applications on which risks are detected.
+             * <p>The number of the applications on which risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskAppCount(Integer riskAppCount) {
                 this.riskAppCount = riskAppCount;
@@ -305,7 +339,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the clusters on which risks are detected.
+             * <p>The number of the clusters on which risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskClusterCount(Integer riskClusterCount) {
                 this.riskClusterCount = riskClusterCount;
@@ -313,7 +350,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the containers on which risks are detected.
+             * <p>The number of the containers on which risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskContainerCount(Integer riskContainerCount) {
                 this.riskContainerCount = riskContainerCount;
@@ -321,7 +361,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the images on which risks are detected.
+             * <p>The number of the images on which risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskImageCount(Integer riskImageCount) {
                 this.riskImageCount = riskImageCount;
@@ -329,7 +372,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the instances on which risks are detected.
+             * <p>The number of the instances on which risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder riskInstanceCount(Integer riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -337,7 +383,10 @@ public class DescribeContainerFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the pods on which risks are detected.
+             * <p>The number of the pods on which risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskPodCount(Integer riskPodCount) {
                 this.riskPodCount = riskPodCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDefaultProxyInstallVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDefaultProxyInstallVersionResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeDefaultProxyInstallVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The default installation version.
+         * <p>The default installation version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy_01_03</p>
          */
         public Builder installVersion(String installVersion) {
             this.installVersion = installVersion;
@@ -57,7 +61,10 @@ public class DescribeDefaultProxyInstallVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F9FCB51A-5078-5D31-9C4D-3B25BEF068C7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

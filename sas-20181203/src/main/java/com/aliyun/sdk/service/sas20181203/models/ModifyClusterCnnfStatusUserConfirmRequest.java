@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClusterCnnfStatusUserConfirmRequest} extends {@link RequestModel}
  *
  * <p>ModifyClusterCnnfStatusUserConfirmRequest</p>
@@ -67,7 +68,7 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
         } 
 
         /**
-         * The cluster IDs.
+         * <p>The cluster IDs.</p>
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -76,11 +77,14 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
         }
 
         /**
-         * Specifies whether to fix the blocking status of the cluster. Valid values:
-         * <p>
+         * <p>Specifies whether to fix the blocking status of the cluster. Valid values:</p>
+         * <ul>
+         * <li>true: yes</li>
+         * <li>false: no</li>
+         * </ul>
          * 
-         * *   true: yes
-         * *   false: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder userConfirm(Boolean userConfirm) {
             this.putQueryParameter("UserConfirm", userConfirm);

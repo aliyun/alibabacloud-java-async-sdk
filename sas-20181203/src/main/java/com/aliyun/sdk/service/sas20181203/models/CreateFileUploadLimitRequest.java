@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileUploadLimitRequest} extends {@link RequestModel}
  *
  * <p>CreateFileUploadLimitRequest</p>
@@ -54,7 +55,11 @@ public class CreateFileUploadLimitRequest extends Request {
         } 
 
         /**
-         * The QPS limit on the files uploaded from the client. Valid values: 100 to 10000.
+         * <p>The QPS limit on the files uploaded from the client. Valid values: 100 to 10000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);

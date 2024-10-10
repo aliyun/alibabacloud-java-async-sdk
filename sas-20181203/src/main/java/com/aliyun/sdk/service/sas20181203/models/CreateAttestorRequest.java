@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAttestorRequest} extends {@link RequestModel}
  *
  * <p>CreateAttestorRequest</p>
@@ -137,7 +138,10 @@ public class CreateAttestorRequest extends Request {
         } 
 
         /**
-         * The ID of the KMS key.
+         * <p>The ID of the KMS key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e81355b-f8e7-4090-8082-a8f8124a****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -146,7 +150,10 @@ public class CreateAttestorRequest extends Request {
         }
 
         /**
-         * The region ID of the Key Management Service (KMS) key.
+         * <p>The region ID of the Key Management Service (KMS) key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder keyRegionId(String keyRegionId) {
             this.putQueryParameter("KeyRegionId", keyRegionId);
@@ -155,7 +162,10 @@ public class CreateAttestorRequest extends Request {
         }
 
         /**
-         * The version ID of the KMS key.
+         * <p>The version ID of the KMS key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8d7c9c91-57ce-4cf4-a959-1e700e13****</p>
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);
@@ -164,7 +174,10 @@ public class CreateAttestorRequest extends Request {
         }
 
         /**
-         * The name of the witness.
+         * <p>The name of the witness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attestor-auto-ad5316</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -173,7 +186,10 @@ public class CreateAttestorRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attestor</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -191,7 +207,10 @@ public class CreateAttestorRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

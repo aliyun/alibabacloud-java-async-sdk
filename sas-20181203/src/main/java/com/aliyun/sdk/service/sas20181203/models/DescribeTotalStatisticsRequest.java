@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTotalStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeTotalStatisticsRequest</p>
@@ -81,11 +82,14 @@ public class DescribeTotalStatisticsRequest extends Request {
         } 
 
         /**
-         * The source of data. Default value: **aqs**. Valid values:
-         * <p>
+         * <p>The source of data. Default value: <strong>aqs</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>sas</strong>: Security Center</li>
+         * <li><strong>aqs</strong>: Server Guard</li>
+         * </ul>
          * 
-         * *   **sas**: Security Center
-         * *   **aqs**: Server Guard
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -94,10 +98,13 @@ public class DescribeTotalStatisticsRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
-         * <p>
+         * <p>The ID of the asset group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAllGroups](~~130972~~) operation to query the IDs of asset groups.
+         * <strong>example:</strong>
+         * <p>8076980</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -106,7 +113,10 @@ public class DescribeTotalStatisticsRequest extends Request {
         }
 
         /**
-         * The name or public IP address of the asset.
+         * <p>The name or public IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222.185.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

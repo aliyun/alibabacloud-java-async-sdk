@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckStandardRequest} extends {@link RequestModel}
  *
  * <p>ListCheckStandardRequest</p>
@@ -109,7 +110,7 @@ public class ListCheckStandardRequest extends Request {
         } 
 
         /**
-         * The instance IDs of the cloud services to which the check items belong.
+         * <p>The instance IDs of the cloud services to which the check items belong.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -118,7 +119,7 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * The subtypes of cloud services.
+         * <p>The subtypes of cloud services.</p>
          */
         public Builder instanceSubTypes(java.util.List < String > instanceSubTypes) {
             this.putQueryParameter("InstanceSubTypes", instanceSubTypes);
@@ -127,7 +128,7 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * The asset types of cloud services.
+         * <p>The asset types of cloud services.</p>
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -136,11 +137,14 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -149,10 +153,10 @@ public class ListCheckStandardRequest extends Request {
         }
 
         /**
-         * The cloud service providers. Valid values:
-         * <p>
-         * 
-         * *   **ALIYUN**: Alibaba Cloud
+         * <p>The cloud service providers. Valid values:</p>
+         * <ul>
+         * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+         * </ul>
          */
         public Builder vendors(java.util.List < String > vendors) {
             this.putQueryParameter("Vendors", vendors);

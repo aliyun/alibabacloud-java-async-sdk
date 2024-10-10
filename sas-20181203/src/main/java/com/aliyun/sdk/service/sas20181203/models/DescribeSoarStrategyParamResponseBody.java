@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarStrategyParamResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSoarStrategyParamResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeSoarStrategyParamResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The parameters of the policy.
+         * <p>The parameters of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;summary&quot;:[{&quot;name&quot;:&quot;email&quot;,&quot;type&quot;:&quot;String&quot;,&quot;isRequired&quot;:false,&quot;fromProperty&quot;:&quot;notifyConfig.email&quot;}]}</p>
          */
         public Builder params(String params) {
             this.params = params;
@@ -69,7 +73,10 @@ public class DescribeSoarStrategyParamResponseBody extends TeaModel {
         }
 
         /**
-         * The process information of the policy.
+         * <p>The process information of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;edges&quot;:[{&quot;level&quot;:0,&quot;removeFlag&quot;:0,&quot;source&quot;:1,&quot;target&quot;:8}]}</p>
          */
         public Builder processInfo(String processInfo) {
             this.processInfo = processInfo;
@@ -77,7 +84,10 @@ public class DescribeSoarStrategyParamResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

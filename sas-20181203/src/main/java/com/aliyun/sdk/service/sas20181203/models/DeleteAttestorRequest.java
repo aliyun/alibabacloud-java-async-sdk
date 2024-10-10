@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAttestorRequest} extends {@link RequestModel}
  *
  * <p>DeleteAttestorRequest</p>
@@ -81,7 +82,10 @@ public class DeleteAttestorRequest extends Request {
         } 
 
         /**
-         * The name of the witness.
+         * <p>The name of the witness.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attestor</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -99,7 +103,10 @@ public class DeleteAttestorRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221.214.XXX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

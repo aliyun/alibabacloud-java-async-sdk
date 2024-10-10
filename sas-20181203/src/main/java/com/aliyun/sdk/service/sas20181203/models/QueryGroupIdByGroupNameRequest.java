@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryGroupIdByGroupNameRequest} extends {@link RequestModel}
  *
  * <p>QueryGroupIdByGroupNameRequest</p>
@@ -68,7 +69,11 @@ public class QueryGroupIdByGroupNameRequest extends Request {
         } 
 
         /**
-         * The name of the asset group.
+         * <p>The name of the asset group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroupName</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -77,7 +82,10 @@ public class QueryGroupIdByGroupNameRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.12.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

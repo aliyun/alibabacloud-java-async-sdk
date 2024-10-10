@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskErrorLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTaskErrorLogResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the error logs.
+         * <p>An array that consists of the error logs.</p>
          */
         public Builder logs(java.util.List < Logs> logs) {
             this.logs = logs;
@@ -57,7 +58,10 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F929E952-EBFC-56C3-BD35-BF8B59024C69</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTaskErrorLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTaskErrorLogResponseBody</p>
+     */
     public static class Logs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
@@ -97,7 +107,10 @@ public class DescribeTaskErrorLogResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * The text content of the log.
+             * <p>The text content of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mv: cannot move &quot;CentOS-Base.repo&quot; to &quot;CentOS-Base.repo.backup&quot;: Permission denied</p>
              */
             public Builder text(String text) {
                 this.text = text;

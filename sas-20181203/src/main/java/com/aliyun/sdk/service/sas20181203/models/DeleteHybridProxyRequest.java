@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHybridProxyRequest} extends {@link RequestModel}
  *
  * <p>DeleteHybridProxyRequest</p>
@@ -69,7 +70,7 @@ public class DeleteHybridProxyRequest extends Request {
         } 
 
         /**
-         * ClusterName.
+         * <p>This parameter is required.</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -78,7 +79,10 @@ public class DeleteHybridProxyRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet-proxy-d2d94e8b-bb25-4744-8004-1e08a53c****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

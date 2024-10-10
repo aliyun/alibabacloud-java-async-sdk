@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageScanAuthCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageScanAuthCountResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeImageScanAuthCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageScanAuthCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageScanAuthCountResponseBody</p>
+     */
     public static class ImageScan extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageScanCapacity")
         private Long imageScanCapacity;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCompressFileDetectResultRequest} extends {@link RequestModel}
  *
  * <p>ListCompressFileDetectResultRequest</p>
@@ -97,7 +98,10 @@ public class ListCompressFileDetectResultRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -115,7 +119,10 @@ public class ListCompressFileDetectResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

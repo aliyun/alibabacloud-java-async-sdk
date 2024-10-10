@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableBruteForceRecordRequest} extends {@link RequestModel}
  *
  * <p>EnableBruteForceRecordRequest</p>
@@ -125,7 +126,11 @@ public class EnableBruteForceRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that is specified in the policy.
+         * <p>The IP address that is specified in the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61.155.XX.XX</p>
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -134,11 +139,14 @@ public class EnableBruteForceRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction that is specified in the policy. Valid values:
-         * <p>
+         * <p>The traffic direction that is specified in the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound</li>
+         * <li><strong>out</strong>: outbound</li>
+         * </ul>
          * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -147,10 +155,13 @@ public class EnableBruteForceRecordRequest extends Request {
         }
 
         /**
-         * The ID of the policy that you want to enable.
-         * <p>
+         * <p>The ID of the policy that you want to enable.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeBruteForceRecords~~">DescribeBruteForceRecords</a> operation to query the IDs of policies.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeBruteForceRecords](~~DescribeBruteForceRecords~~) operation to query the IDs of policies.
+         * <strong>example:</strong>
+         * <p>116602XX</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -159,7 +170,10 @@ public class EnableBruteForceRecordRequest extends Request {
         }
 
         /**
-         * The port number.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22/22</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -177,7 +191,11 @@ public class EnableBruteForceRecordRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71046acb-8bff-4c3b-9163-24deb007****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

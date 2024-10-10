@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLogMetaStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyLogMetaStatusRequest</p>
@@ -111,7 +112,10 @@ public class ModifyLogMetaStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -120,10 +124,14 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The name of the dedicated Logstore in which logs are stored.
-         * <p>
+         * <p>The name of the dedicated Logstore in which logs are stored.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of Logstores.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of Logstores.
+         * <strong>example:</strong>
+         * <p>aegis-log-login</p>
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -132,10 +140,13 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The name of the project.
-         * <p>
+         * <p>The name of the project.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of projects.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the names of projects.
+         * <strong>example:</strong>
+         * <p>aegis-log</p>
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -144,10 +155,13 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -156,11 +170,15 @@ public class ModifyLogMetaStatusRequest extends Request {
         }
 
         /**
-         * The status of the log analysis feature. Valid values:
-         * <p>
+         * <p>The status of the log analysis feature. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **enabled**
-         * *   **disabled**
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

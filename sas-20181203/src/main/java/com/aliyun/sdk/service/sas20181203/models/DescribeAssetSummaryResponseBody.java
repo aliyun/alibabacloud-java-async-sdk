@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAssetSummaryResponseBody</p>
@@ -70,6 +71,12 @@ public class DescribeAssetSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAssetSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAssetSummaryResponseBody</p>
+     */
     public static class AssetsSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalAssetAllRegion")
         private Integer totalAssetAllRegion;

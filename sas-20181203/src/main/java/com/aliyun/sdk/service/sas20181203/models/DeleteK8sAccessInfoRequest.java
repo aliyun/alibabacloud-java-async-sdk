@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteK8sAccessInfoRequest} extends {@link RequestModel}
  *
  * <p>DeleteK8sAccessInfoRequest</p>
@@ -96,7 +97,10 @@ public class DeleteK8sAccessInfoRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder aliyunYundunGatewayApiName(String aliyunYundunGatewayApiName) {
             this.putQueryParameter("AliyunYundunGatewayApiName", aliyunYundunGatewayApiName);
@@ -105,7 +109,10 @@ public class DeleteK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder aliyunYundunGatewayPopName(String aliyunYundunGatewayPopName) {
             this.putQueryParameter("AliyunYundunGatewayPopName", aliyunYundunGatewayPopName);
@@ -114,7 +121,10 @@ public class DeleteK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder aliyunYundunGatewayProjectName(String aliyunYundunGatewayProjectName) {
             this.putQueryParameter("AliyunYundunGatewayProjectName", aliyunYundunGatewayProjectName);
@@ -123,7 +133,11 @@ public class DeleteK8sAccessInfoRequest extends Request {
         }
 
         /**
-         * The ID generated when Kubernetes is connected. You can call the GenerateK8sAccessInfo operation to query the ID.
+         * <p>The ID generated when Kubernetes is connected. You can call the GenerateK8sAccessInfo operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

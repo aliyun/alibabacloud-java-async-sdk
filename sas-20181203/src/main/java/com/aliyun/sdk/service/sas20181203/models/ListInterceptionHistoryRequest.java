@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterceptionHistoryRequest} extends {@link RequestModel}
  *
  * <p>ListInterceptionHistoryRequest</p>
@@ -151,7 +152,10 @@ public class ListInterceptionHistoryRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
+         * <p>The ID of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c7c190a82d9a048be9038d352840f****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -160,7 +164,10 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -169,7 +176,10 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp.
+         * <p>The end of the time range to query. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635575219000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -178,7 +188,10 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * The name of the alert.
+         * <p>The name of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Abnormal access</p>
          */
         public Builder historyName(String historyName) {
             this.putQueryParameter("HistoryName", historyName);
@@ -187,7 +200,7 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * The types of exceptions.
+         * <p>The types of exceptions.</p>
          */
         public Builder interceptionTypes(java.util.List < Integer > interceptionTypes) {
             this.putQueryParameter("InterceptionTypes", interceptionTypes);
@@ -196,11 +209,14 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -209,7 +225,10 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -218,7 +237,10 @@ public class ListInterceptionHistoryRequest extends Request {
         }
 
         /**
-         * The start of the time range to query. The value is a UNIX timestamp.
+         * <p>The start of the time range to query. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651290987000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

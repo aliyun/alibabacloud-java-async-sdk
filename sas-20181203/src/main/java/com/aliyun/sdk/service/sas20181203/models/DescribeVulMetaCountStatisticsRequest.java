@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulMetaCountStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeVulMetaCountStatisticsRequest</p>

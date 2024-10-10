@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterCnnfStatusDetailRequest} extends {@link RequestModel}
  *
  * <p>ListClusterCnnfStatusDetailRequest</p>
@@ -53,7 +54,7 @@ public class ListClusterCnnfStatusDetailRequest extends Request {
         } 
 
         /**
-         * An array that consists of the ID of the cluster.
+         * <p>An array that consists of the ID of the cluster.</p>
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);

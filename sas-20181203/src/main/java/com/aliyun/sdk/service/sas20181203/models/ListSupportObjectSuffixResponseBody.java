@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSupportObjectSuffixResponseBody} extends {@link TeaModel}
  *
  * <p>ListSupportObjectSuffixResponseBody</p>
@@ -49,7 +50,7 @@ public class ListSupportObjectSuffixResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List < String > data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListSupportObjectSuffixResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>571B2642-BF51-5BDD-906B-D2340DB9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

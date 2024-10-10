@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperationCustomizeReportChartResponseBody} extends {@link TeaModel}
  *
  * <p>OperationCustomizeReportChartResponseBody</p>
@@ -37,7 +38,10 @@ public class OperationCustomizeReportChartResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432B2D4E-C8D3-52E4-9F68-35E0C05F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

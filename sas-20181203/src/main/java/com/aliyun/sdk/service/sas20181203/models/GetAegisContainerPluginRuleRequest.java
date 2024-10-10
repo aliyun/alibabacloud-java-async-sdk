@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAegisContainerPluginRuleRequest} extends {@link RequestModel}
  *
  * <p>GetAegisContainerPluginRuleRequest</p>
@@ -81,10 +82,13 @@ public class GetAegisContainerPluginRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the defense rule against container escapes.
-         * <p>
+         * <p>The ID of the defense rule against container escapes.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListAegisContainerPluginRule~~">ListAegisContainerPluginRule</a> operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListAegisContainerPluginRule](~~ListAegisContainerPluginRule~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>1141****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -93,11 +97,14 @@ public class GetAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -106,11 +113,14 @@ public class GetAegisContainerPluginRuleRequest extends Request {
         }
 
         /**
-         * The type of the rule. Valid values:
-         * <p>
+         * <p>The type of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: custom rule</li>
+         * <li><strong>1</strong>: system rule</li>
+         * </ul>
          * 
-         * *   **0**: custom rule
-         * *   **1**: system rule
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);

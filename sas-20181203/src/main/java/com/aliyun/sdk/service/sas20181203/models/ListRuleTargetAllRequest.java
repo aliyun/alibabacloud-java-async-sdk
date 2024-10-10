@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRuleTargetAllRequest} extends {@link RequestModel}
  *
  * <p>ListRuleTargetAllRequest</p>
@@ -54,10 +55,14 @@ public class ListRuleTargetAllRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>cfa7e2fb8c221483ba59e098c34c6****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

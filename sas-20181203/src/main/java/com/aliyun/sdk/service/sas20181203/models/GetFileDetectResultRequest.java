@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileDetectResultRequest} extends {@link RequestModel}
  *
  * <p>GetFileDetectResultRequest</p>
@@ -83,7 +84,8 @@ public class GetFileDetectResultRequest extends Request {
         } 
 
         /**
-         * The identifiers of files. Only MD5 hash values are supported.
+         * <p>The identifiers of files. Only MD5 hash values are supported.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder hashKeyList(java.util.List < String > hashKeyList) {
             this.putQueryParameter("HashKeyList", hashKeyList);
@@ -92,7 +94,10 @@ public class GetFileDetectResultRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>183.46.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -101,15 +106,20 @@ public class GetFileDetectResultRequest extends Request {
         }
 
         /**
-         * The type of the file. Valid values:
-         * <p>
+         * <p>The type of the file. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: unknown file</li>
+         * <li><strong>1</strong>: binary file</li>
+         * <li><strong>2</strong>: webshell file</li>
+         * <li><strong>4</strong>: script file</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you do not know the type of the file, set this parameter to 0.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: unknown file
-         * *   **1**: binary file
-         * *   **2**: webshell file
-         * *   **4**: script file
-         * 
-         * > If you do not know the type of the file, set this parameter to 0.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveCustomizeReportConfigRequest} extends {@link RequestModel}
  *
  * <p>SaveCustomizeReportConfigRequest</p>
@@ -309,13 +310,17 @@ public class SaveCustomizeReportConfigRequest extends Request {
         } 
 
         /**
-         * The grouping type. Valid values:
-         * <p>
+         * <p>The grouping type. Valid values:</p>
+         * <ul>
+         * <li><strong>ALIYUN_RG</strong></li>
+         * <li><strong>SAS_GROUP</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is supported only in version 2.0.0.</p>
+         * </blockquote>
          * 
-         * *   **ALIYUN_RG**
-         * *   **SAS_GROUP**
-         * 
-         * >  This parameter is supported only in version 2.0.0.
+         * <strong>example:</strong>
+         * <p>SAS_GROUP</p>
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -324,10 +329,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The time when the report is pinned. Unit: milliseconds.
-         * <p>
+         * <p>The time when the report is pinned. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p> This parameter is supported only in version 2.0.0.</p>
+         * </blockquote>
          * 
-         * >  This parameter is supported only in version 2.0.0.
+         * <strong>example:</strong>
+         * <p>1717430400000</p>
          */
         public Builder pinnedTime(Long pinnedTime) {
             this.putQueryParameter("PinnedTime", pinnedTime);
@@ -336,7 +344,11 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The email address of the recipient. Separate multiple email addresses with commas (,).
+         * <p>The email address of the recipient. Separate multiple email addresses with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:xxx@163.com">xxx@163.com</a></p>
          */
         public Builder recipients(String recipients) {
             this.putQueryParameter("Recipients", recipients);
@@ -345,10 +357,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The most recent days for report statistics.
-         * <p>
+         * <p>The most recent days for report statistics.</p>
+         * <blockquote>
+         * <p> This parameter is supported only in version 2.0.0.</p>
+         * </blockquote>
          * 
-         * >  This parameter is supported only in version 2.0.0.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder reportDays(Integer reportDays) {
             this.putQueryParameter("ReportDays", reportDays);
@@ -357,10 +372,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The end date on which the report is sent. The value is in the yyyy-MM-dd format.
-         * <p>
+         * <p>The end date on which the report is sent. The value is in the yyyy-MM-dd format.</p>
+         * <blockquote>
+         * <p> This parameter is required if the ReportType parameter is set to 3.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if the ReportType parameter is set to 3.
+         * <strong>example:</strong>
+         * <p>2024-01-15</p>
          */
         public Builder reportEndDate(String reportEndDate) {
             this.putQueryParameter("ReportEndDate", reportEndDate);
@@ -369,10 +387,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The ID of the report.
-         * <p>
+         * <p>The ID of the report.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCustomizeReportList](~~DescribeCustomizeReportList~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -381,11 +402,14 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The language of the report. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the report. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder reportLang(String reportLang) {
             this.putQueryParameter("ReportLang", reportLang);
@@ -394,13 +418,16 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The time range in which the report is sent. Valid values:
-         * <p>
+         * <p>The time range in which the report is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: 00:00 to 06:00.</li>
+         * <li><strong>2</strong>: 06:00 to 12:00.</li>
+         * <li><strong>3</strong>: 12:00 to 18:00.</li>
+         * <li><strong>4</strong>: 18:00 to 24:00.</li>
+         * </ul>
          * 
-         * *   **1**: 00:00 to 06:00.
-         * *   **2**: 06:00 to 12:00.
-         * *   **3**: 12:00 to 18:00.
-         * *   **4**: 18:00 to 24:00.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder reportSendType(Integer reportSendType) {
             this.putQueryParameter("ReportSendType", reportSendType);
@@ -409,10 +436,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The start date on which the report is sent. The value is in the yyyy-MM-dd format.
-         * <p>
+         * <p>The start date on which the report is sent. The value is in the yyyy-MM-dd format.</p>
+         * <blockquote>
+         * <p> This parameter is required if the ReportType parameter is set to 3.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if the ReportType parameter is set to 3.
+         * <strong>example:</strong>
+         * <p>2024-01-01</p>
          */
         public Builder reportStartDate(String reportStartDate) {
             this.putQueryParameter("ReportStartDate", reportStartDate);
@@ -421,11 +451,15 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The status of the report. Valid values:
-         * <p>
+         * <p>The status of the report. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: disabled.
-         * *   **1**: enabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reportStatus(Integer reportStatus) {
             this.putQueryParameter("ReportStatus", reportStatus);
@@ -434,14 +468,18 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The type of the report. Valid values:
-         * <p>
+         * <p>The type of the report. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: daily report.</li>
+         * <li><strong>1</strong>: weekly report.</li>
+         * <li><strong>2</strong>: monthly report.</li>
+         * <li><strong>3</strong>: report whose statistics are collected within a custom time range.</li>
+         * <li><strong>4</strong>: report of the most recent time range.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: daily report.
-         * *   **1**: weekly report.
-         * *   **2**: monthly report.
-         * *   **3**: report whose statistics are collected within a custom time range.
-         * *   **4**: report of the most recent time range.
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder reportType(Integer reportType) {
             this.putQueryParameter("ReportType", reportType);
@@ -450,11 +488,14 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The version of the report. Valid values:
-         * <p>
+         * <p>The version of the report. Valid values:</p>
+         * <ul>
+         * <li><strong>1.0.0</strong></li>
+         * <li><strong>2.0.0</strong></li>
+         * </ul>
          * 
-         * *   **1.0.0**
-         * *   **2.0.0**
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder reportVersion(String reportVersion) {
             this.putQueryParameter("ReportVersion", reportVersion);
@@ -463,10 +504,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The end time at which the report is sent. The value is in the HH:mm:ss format.
-         * <p>
+         * <p>The end time at which the report is sent. The value is in the HH:mm:ss format.</p>
+         * <blockquote>
+         * <p> This parameter is required if the ReportType parameter is set to 0, 1, 2, or 4.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if the ReportType parameter is set to 0, 1, 2, or 4.
+         * <strong>example:</strong>
+         * <p>10:00:00</p>
          */
         public Builder sendEndTime(String sendEndTime) {
             this.putQueryParameter("SendEndTime", sendEndTime);
@@ -475,10 +519,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The exact day within the sending period.
-         * <p>
+         * <p>The exact day within the sending period.</p>
+         * <blockquote>
+         * <p> This parameter is supported only in version 2.0.0.</p>
+         * </blockquote>
          * 
-         * >  This parameter is supported only in version 2.0.0.
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder sendPeriodDays(Integer sendPeriodDays) {
             this.putQueryParameter("SendPeriodDays", sendPeriodDays);
@@ -487,14 +534,18 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The interval at which the report is sent. Valid values:
-         * <p>
+         * <p>The interval at which the report is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>DAY</strong></li>
+         * <li><strong>WEEK</strong></li>
+         * <li><strong>MONTH</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is supported only in version 2.0.0.</p>
+         * </blockquote>
          * 
-         * *   **DAY**
-         * *   **WEEK**
-         * *   **MONTH**
-         * 
-         * >  This parameter is supported only in version 2.0.0.
+         * <strong>example:</strong>
+         * <p>MONTH</p>
          */
         public Builder sendPeriodType(String sendPeriodType) {
             this.putQueryParameter("SendPeriodType", sendPeriodType);
@@ -503,10 +554,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The start time at which the report is sent. The value is in the HH:mm:ss format.
-         * <p>
+         * <p>The start time at which the report is sent. The value is in the HH:mm:ss format.</p>
+         * <blockquote>
+         * <p> This parameter is required if the ReportType parameter is set to 0, 1, 2, or 4.</p>
+         * </blockquote>
          * 
-         * >  This parameter is required if the ReportType parameter is set to 0, 1, 2, or 4.
+         * <strong>example:</strong>
+         * <p>09:00:00</p>
          */
         public Builder sendStartTime(String sendStartTime) {
             this.putQueryParameter("SendStartTime", sendStartTime);
@@ -515,10 +569,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The groups.
-         * <p>
+         * <p>The groups.</p>
+         * <blockquote>
+         * <p> This parameter is supported only in version 2.0.0.</p>
+         * </blockquote>
          * 
-         * >  This parameter is supported only in version 2.0.0.
+         * <strong>example:</strong>
+         * <p>12,123</p>
          */
         public Builder targetGroups(String targetGroups) {
             this.putQueryParameter("TargetGroups", targetGroups);
@@ -527,10 +584,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the Alibaba Cloud account. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> This parameter is supported only in version 2.0.0.</p>
+         * </blockquote>
          * 
-         * >  This parameter is supported only in version 2.0.0.
+         * <strong>example:</strong>
+         * <p>12,123</p>
          */
         public Builder targetUids(String targetUids) {
             this.putQueryParameter("TargetUids", targetUids);
@@ -539,7 +599,11 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * The title of the report.
+         * <p>The title of the report.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily Report</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

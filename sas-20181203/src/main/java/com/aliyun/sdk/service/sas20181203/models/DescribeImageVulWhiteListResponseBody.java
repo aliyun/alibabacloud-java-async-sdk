@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageVulWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageVulWhiteListResponseBody</p>
@@ -121,7 +122,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * The status code returned. A value of **200** indicates that the request was successful. Other values indicate that the request failed. You can identify the cause of the failure based on the value of this parameter.
+         * <p>The status code returned. A value of <strong>200</strong> indicates that the request was successful. Other values indicate that the request failed. You can identify the cause of the failure based on the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +133,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -137,7 +144,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the whitelist of image vulnerabilities.
+         * <p>The information about the whitelist of image vulnerabilities.</p>
          */
         public Builder imageVulWhitelist(java.util.List < ImageVulWhitelist> imageVulWhitelist) {
             this.imageVulWhitelist = imageVulWhitelist;
@@ -145,7 +152,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -153,7 +163,7 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -161,7 +171,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>911025D0-3D1E-5213-A18A-37EA0C92****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,11 +182,14 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -181,7 +197,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * The amount of time that was consumed to process the request. Unit: milliseconds.
+         * <p>The amount of time that was consumed to process the request. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;
@@ -194,6 +213,12 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageVulWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageVulWhiteListResponseBody</p>
+     */
     public static class ImageVulWhitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -281,7 +306,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).
+             * <p>The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2019-19906:in_sasl_add_string</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -289,7 +317,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key ID of the vulnerability.
+             * <p>The primary key ID of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34032043</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -297,7 +328,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scan:AVD-2022-953356</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -305,7 +339,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The reason the vulnerability is added to the whitelist.
+             * <p>The reason the vulnerability is added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>already config in another way</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -313,11 +350,14 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The object on which the query is performed. The value of this parameter is in the JSON format and contains the following fields:
-             * <p>
+             * <p>The object on which the query is performed. The value of this parameter is in the JSON format and contains the following fields:</p>
+             * <ul>
+             * <li><strong>type</strong>: the object type. The value is fixed to repo.</li>
+             * <li><strong>target</strong>: the object content. The value is in the Namespace/Image repository format.</li>
+             * </ul>
              * 
-             * *   **type**: the object type. The value is fixed to repo.
-             * *   **target**: the object content. The value is in the Namespace/Image repository format.
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;repo&quot;,&quot;target&quot;:[&quot;sas_test/script_0209&quot;,&quot;sas_test/script&quot;]}</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -325,11 +365,14 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: system vulnerability</li>
+             * <li><strong>sca</strong>: application vulnerability</li>
+             * </ul>
              * 
-             * *   **cve**: system vulnerability
-             * *   **sca**: application vulnerability
+             * <strong>example:</strong>
+             * <p>sca</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -343,6 +386,12 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageVulWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageVulWhiteListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -406,7 +455,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -414,7 +466,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -422,7 +477,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -430,7 +488,10 @@ public class DescribeImageVulWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

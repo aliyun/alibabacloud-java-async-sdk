@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddImageVulWhiteListRequest} extends {@link RequestModel}
  *
  * <p>AddImageVulWhiteListRequest</p>
@@ -123,11 +124,14 @@ public class AddImageVulWhiteListRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: zh. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: zh. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,7 +140,10 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * The reason why you add the vulnerability to the whitelist.
+         * <p>The reason why you add the vulnerability to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>already config in another way</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -145,10 +152,14 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * The source of the whitelist. Valid values:
-         * <p>
-         * - **image**
-         * - **agentless**
+         * <p>The source of the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong></li>
+         * <li><strong>agentless</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -157,11 +168,14 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * The object on which you want to perform the operation. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The object on which you want to perform the operation. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><strong>type</strong>: the object type. The value is fixed to repo.</li>
+         * <li><strong>target</strong>: the object content. The value is in the Namespace/Image repository format.</li>
+         * </ul>
          * 
-         * *   **type**: the object type. The value is fixed to repo.
-         * *   **target**: the object content. The value is in the Namespace/Image repository format.
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;repo&quot;,&quot;target&quot;:[&quot;sas_test/script_0209&quot;,&quot;sas_test/script&quot;]}</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -170,11 +184,14 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: system vulnerability</li>
+         * <li><strong>sca</strong>: application vulnerability</li>
+         * </ul>
          * 
-         * *   **cve**: system vulnerability
-         * *   **sca**: application vulnerability
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -183,12 +200,15 @@ public class AddImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * The whitelist. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The whitelist. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><strong>Type</strong>: the vulnerability type. Valid values: cve and sca.</li>
+         * <li><strong>Name</strong>: the name of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</li>
+         * <li><strong>AliasName</strong>: the alias of the vulnerability that is specified in CVE.</li>
+         * </ul>
          * 
-         * *   **Type**: the vulnerability type. Valid values: cve and sca.
-         * *   **Name**: the name of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).
-         * *   **AliasName**: the alias of the vulnerability that is specified in CVE.
+         * <strong>example:</strong>
+         * <p>[{&quot;Type&quot;:&quot;sca&quot;,&quot;Name&quot;:&quot;imgsca:java:spring-core:AVD-2022-1124599&quot;,&quot;AliasName&quot;:&quot;Spring Framework JDK &gt;= 9 (CVE-2022-22965)&quot;}]</p>
          */
         public Builder whitelist(String whitelist) {
             this.putQueryParameter("Whitelist", whitelist);

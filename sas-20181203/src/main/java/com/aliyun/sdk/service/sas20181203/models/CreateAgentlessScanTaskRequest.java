@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAgentlessScanTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateAgentlessScanTaskRequest</p>
@@ -124,7 +125,10 @@ public class CreateAgentlessScanTaskRequest extends Request {
         } 
 
         /**
-         * Identification of asset selection.
+         * <p>Identification of asset selection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AGENTLESS_SCAN_ONCE_TASK_1720145******</p>
          */
         public Builder assetSelectionType(String assetSelectionType) {
             this.putQueryParameter("AssetSelectionType", assetSelectionType);
@@ -133,7 +137,10 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * The retention period of images. Unit: days.
+         * <p>The retention period of images. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoDeleteDays(Integer autoDeleteDays) {
             this.putQueryParameter("AutoDeleteDays", autoDeleteDays);
@@ -142,11 +149,14 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the cost-saving mode. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the cost-saving mode. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder releaseAfterScan(Boolean releaseAfterScan) {
             this.putQueryParameter("ReleaseAfterScan", releaseAfterScan);
@@ -155,11 +165,14 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * Specifies whether to check data disks. Valid values:
-         * <p>
+         * <p>Specifies whether to check data disks. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder scanDataDisk(Boolean scanDataDisk) {
             this.putQueryParameter("ScanDataDisk", scanDataDisk);
@@ -168,10 +181,14 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * The type of the detection object. Valid values:
-         * <p>
+         * <p>The type of the detection object. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: image</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **2**: image
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder targetType(Integer targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -180,10 +197,10 @@ public class CreateAgentlessScanTaskRequest extends Request {
         }
 
         /**
-         * The UUIDs of the assets on which you want to run the detection task.
-         * <p>
-         * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <p>The UUIDs of the assets on which you want to run the detection task.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

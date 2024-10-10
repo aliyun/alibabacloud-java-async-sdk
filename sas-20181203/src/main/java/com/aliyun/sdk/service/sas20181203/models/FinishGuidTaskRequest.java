@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FinishGuidTaskRequest} extends {@link RequestModel}
  *
  * <p>FinishGuidTaskRequest</p>
@@ -54,7 +55,10 @@ public class FinishGuidTaskRequest extends Request {
         } 
 
         /**
-         * TaskTypeName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guide_sub_task_config_add_collection</p>
          */
         public Builder taskTypeName(String taskTypeName) {
             this.putQueryParameter("TaskTypeName", taskTypeName);

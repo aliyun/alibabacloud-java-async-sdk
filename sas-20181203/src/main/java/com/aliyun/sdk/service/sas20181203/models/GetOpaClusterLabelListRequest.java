@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaClusterLabelListRequest} extends {@link RequestModel}
  *
  * <p>GetOpaClusterLabelListRequest</p>
@@ -95,10 +96,13 @@ public class GetOpaClusterLabelListRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster to which the container belongs.
-         * <p>
+         * <p>The ID of the cluster to which the container belongs.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>c556c8133b5ad4378b7fc533ddbda****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +111,10 @@ public class GetOpaClusterLabelListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -116,10 +123,13 @@ public class GetOpaClusterLabelListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 200. If you leave the PageSize parameter empty, 200 entries are returned by default. Maximum value: 200.
-         * <p>
+         * <p>The number of entries per page. Default value: 200. If you leave the PageSize parameter empty, 200 entries are returned by default. Maximum value: 200.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +138,10 @@ public class GetOpaClusterLabelListRequest extends Request {
         }
 
         /**
-         * The name of the tag.
+         * <p>The name of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

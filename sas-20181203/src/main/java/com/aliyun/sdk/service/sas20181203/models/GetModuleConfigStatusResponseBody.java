@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModuleConfigStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetModuleConfigStatusResponseBody</p>
@@ -70,6 +71,12 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetModuleConfigStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleConfigStatusResponseBody</p>
+     */
     public static class ModuleConfigResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
@@ -131,6 +138,12 @@ public class GetModuleConfigStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetModuleConfigStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetModuleConfigStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModuleConfigResults")
         private java.util.List < ModuleConfigResults> moduleConfigResults;

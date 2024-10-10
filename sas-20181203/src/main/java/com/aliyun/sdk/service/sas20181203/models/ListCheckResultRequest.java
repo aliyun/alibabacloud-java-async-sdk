@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckResultRequest} extends {@link RequestModel}
  *
  * <p>ListCheckResultRequest</p>
@@ -38,6 +39,10 @@ public class ListCheckResultRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationTypes")
+    private java.util.List < String > operationTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
@@ -85,6 +90,7 @@ public class ListCheckResultRequest extends Request {
         this.instanceIds = builder.instanceIds;
         this.instanceTypes = builder.instanceTypes;
         this.lang = builder.lang;
+        this.operationTypes = builder.operationTypes;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.requirementIds = builder.requirementIds;
@@ -159,6 +165,13 @@ public class ListCheckResultRequest extends Request {
     }
 
     /**
+     * @return operationTypes
+     */
+    public java.util.List < String > getOperationTypes() {
+        return this.operationTypes;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -229,6 +242,7 @@ public class ListCheckResultRequest extends Request {
         private java.util.List < String > instanceIds; 
         private java.util.List < String > instanceTypes; 
         private String lang; 
+        private java.util.List < String > operationTypes; 
         private Integer pageSize; 
         private String regionId; 
         private java.util.List < Long > requirementIds; 
@@ -252,6 +266,7 @@ public class ListCheckResultRequest extends Request {
             this.instanceIds = request.instanceIds;
             this.instanceTypes = request.instanceTypes;
             this.lang = request.lang;
+            this.operationTypes = request.operationTypes;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.requirementIds = request.requirementIds;
@@ -273,7 +288,10 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The key that you want to use to search for check items in fuzzy match mode.
+         * <p>The key that you want to use to search for check items in fuzzy match mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder checkKey(String checkKey) {
             this.putQueryParameter("CheckKey", checkKey);
@@ -282,7 +300,10 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -291,11 +312,14 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * Specifies whether the check item supports custom parameters. Valid values:
-         * <p>
+         * <p>Specifies whether the check item supports custom parameters. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder customParam(Boolean customParam) {
             this.putQueryParameter("CustomParam", customParam);
@@ -304,7 +328,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).
+         * <p>The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -313,31 +337,31 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The asset type of the cloud services. Valid values:
-         * <p>
-         * 
-         * *   **ECS**: Elastic Compute Service (ECS)
-         * *   **SLB**: Server Load Balancer (SLB)
-         * *   **RDS**: ApsaraDB RDS
-         * *   **MONGODB**: ApsaraDB for MongoDB (MongoDB)
-         * *   **KVSTORE**: ApsaraDB for Redis (Redis)
-         * *   **ACR**: Container Registry
-         * *   **CSK**: Container Service for Kubernetes (ACK)
-         * *   **VPC**: Virtual Private Cloud (VPC)
-         * *   **ACTIONTRAIL**: ActionTrail
-         * *   **CDN**: Alibaba Cloud CDN (CDN)
-         * *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
-         * *   **RDC**: Apsara Devops
-         * *   **RAM**: Resource Access Management (RAM)
-         * *   **DDOS**: Anti-DDoS
-         * *   **WAF**: Web Application Firewall (WAF)
-         * *   **OSS**: Object Storage Service (OSS)
-         * *   **POLARDB**: PolarDB
-         * *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
-         * *   **MSE**: Microservices Engine (MSE)
-         * *   **NAS**: Apsara File Storage NAS (NAS)
-         * *   **SDDP**: Sensitive Data Discovery and Protection (SDDP)
-         * *   **EIP**: Elastic IP Address (EIP)
+         * <p>The asset type of the cloud services. Valid values:</p>
+         * <ul>
+         * <li><strong>ECS</strong>: Elastic Compute Service (ECS)</li>
+         * <li><strong>SLB</strong>: Server Load Balancer (SLB)</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS</li>
+         * <li><strong>MONGODB</strong>: ApsaraDB for MongoDB (MongoDB)</li>
+         * <li><strong>KVSTORE</strong>: ApsaraDB for Redis (Redis)</li>
+         * <li><strong>ACR</strong>: Container Registry</li>
+         * <li><strong>CSK</strong>: Container Service for Kubernetes (ACK)</li>
+         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
+         * <li><strong>ACTIONTRAIL</strong>: ActionTrail</li>
+         * <li><strong>CDN</strong>: Alibaba Cloud CDN (CDN)</li>
+         * <li><strong>CAS</strong>: Certificate Management Service (formerly SSL Certificates Service)</li>
+         * <li><strong>RDC</strong>: Apsara Devops</li>
+         * <li><strong>RAM</strong>: Resource Access Management (RAM)</li>
+         * <li><strong>DDOS</strong>: Anti-DDoS</li>
+         * <li><strong>WAF</strong>: Web Application Firewall (WAF)</li>
+         * <li><strong>OSS</strong>: Object Storage Service (OSS)</li>
+         * <li><strong>POLARDB</strong>: PolarDB</li>
+         * <li><strong>POSTGRESQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+         * <li><strong>MSE</strong>: Microservices Engine (MSE)</li>
+         * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS)</li>
+         * <li><strong>SDDP</strong>: Sensitive Data Discovery and Protection (SDDP)</li>
+         * <li><strong>EIP</strong>: Elastic IP Address (EIP)</li>
+         * </ul>
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -346,11 +370,14 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -359,7 +386,19 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * OperationTypes.
+         */
+        public Builder operationTypes(java.util.List < String > operationTypes) {
+            this.putQueryParameter("OperationTypes", operationTypes);
+            this.operationTypes = operationTypes;
+            return this;
+        }
+
+        /**
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -368,11 +407,14 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. Valid values:
-         * <p>
+         * <p>The region ID of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: International</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: International
-         * *   **ap-southeast-1**: Singapore
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -381,7 +423,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The IDs of requirement items.
+         * <p>The IDs of requirement items.</p>
          */
         public Builder requirementIds(java.util.List < Long > requirementIds) {
             this.putQueryParameter("RequirementIds", requirementIds);
@@ -390,12 +432,12 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The risk levels of check items. Separate multiple risk levels with commas (,). Valid values:
-         * <p>
-         * 
-         * *   **HIGH**
-         * *   **MEDIUM**
-         * *   **LOW**
+         * <p>The risk levels of check items. Separate multiple risk levels with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>HIGH</strong></li>
+         * <li><strong>MEDIUM</strong></li>
+         * <li><strong>LOW</strong></li>
+         * </ul>
          */
         public Builder riskLevels(java.util.List < String > riskLevels) {
             this.putQueryParameter("RiskLevels", riskLevels);
@@ -404,11 +446,11 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The types of the conditions based on which check items are sorted. Valid values:
-         * <p>
-         * 
-         * *   **RISK_LEVEL**: risk level
-         * *   **STATUS**: status
+         * <p>The types of the conditions based on which check items are sorted. Valid values:</p>
+         * <ul>
+         * <li><strong>RISK_LEVEL</strong>: risk level</li>
+         * <li><strong>STATUS</strong>: status</li>
+         * </ul>
          */
         public Builder sortTypes(java.util.List < String > sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);
@@ -417,7 +459,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The IDs of standards.
+         * <p>The IDs of standards.</p>
          */
         public Builder standardIds(java.util.List < Long > standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
@@ -426,14 +468,14 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The statuses of check items. Separate multiple statuses with commas (,). Valid values:
-         * <p>
-         * 
-         * *   **PASS**
-         * *   **NOT_PASS**
-         * *   **CHECKING**
-         * *   **NOT_CHECK**
-         * *   **WHITELIST**
+         * <p>The statuses of check items. Separate multiple statuses with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>PASS</strong></li>
+         * <li><strong>NOT_PASS</strong></li>
+         * <li><strong>CHECKING</strong></li>
+         * <li><strong>NOT_CHECK</strong></li>
+         * <li><strong>WHITELIST</strong></li>
+         * </ul>
          */
         public Builder statuses(java.util.List < String > statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -442,7 +484,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The types of check standards.
+         * <p>The types of check standards.</p>
          */
         public Builder types(java.util.List < String > types) {
             this.putQueryParameter("Types", types);
@@ -451,10 +493,10 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The cloud service providers. Valid value:
-         * <p>
-         * 
-         * *   **ALIYUN**: Alibaba Cloud
+         * <p>The cloud service providers. Valid value:</p>
+         * <ul>
+         * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+         * </ul>
          */
         public Builder vendors(java.util.List < String > vendors) {
             this.putQueryParameter("Vendors", vendors);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDingTalkRequest} extends {@link RequestModel}
  *
  * <p>DeleteDingTalkRequest</p>
@@ -54,10 +55,14 @@ public class DeleteDingTalkRequest extends Request {
         } 
 
         /**
-         * The ID of the notification from the DingTalk chatbot. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the notification from the DingTalk chatbot. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeDingTalk~~">DescribeDingTalk</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeDingTalk](~~DescribeDingTalk~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>2170,256</p>
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePublishCronRequest} extends {@link RequestModel}
  *
  * <p>UpdatePublishCronRequest</p>
@@ -111,7 +112,10 @@ public class UpdatePublishCronRequest extends Request {
         } 
 
         /**
-         * Cron.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 5 10 * * ?</p>
          */
         public Builder cron(String cron) {
             this.putQueryParameter("Cron", cron);
@@ -147,7 +151,10 @@ public class UpdatePublishCronRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);

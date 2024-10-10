@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageListWithBaselineNameResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageListWithBaselineNameResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the images.
+         * <p>The information about the images.</p>
          */
         public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
@@ -69,7 +70,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5B8C2156-2DB9-5A42-99E7-F2ED5AE9EA1F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageListWithBaselineNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageListWithBaselineNameResponseBody</p>
+     */
     public static class ImageInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -501,7 +511,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c08d5fc1a329a4b88950a253d082f1****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -509,7 +522,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docker-law</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -517,7 +533,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * <p>The ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04d20e98c8e2c93b7b864372084320a15a58c8671e53c972ce3a71d9c163****</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -525,7 +544,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA-256 value of the image digest.
+             * <p>The SHA-256 value of the image digest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2e6daffce524ffeae66cccaa90c8fc47de912346dcec295c27395b6d66db6423</p>
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -533,7 +555,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the first scan was performed. Unit: milliseconds.
+             * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649814050000</p>
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -541,7 +566,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images on which **high** baseline risks are detected.
+             * <p>The number of images on which <strong>high</strong> baseline risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder highRiskImage(Integer highRiskImage) {
                 this.highRiskImage = highRiskImage;
@@ -549,7 +577,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-conta****</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -557,7 +588,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the image was created. Unit: milliseconds.
+             * <p>The timestamp when the image was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636962328000</p>
              */
             public Builder imageCreate(Long imageCreate) {
                 this.imageCreate = imageCreate;
@@ -565,7 +599,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cddb5fd33b34a1fabb358d0a19497cdfe362fe624821cb250947af0ea5cc****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -573,7 +610,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the image.
+             * <p>The size of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>157408623</p>
              */
             public Builder imageSize(Integer imageSize) {
                 this.imageSize = imageSize;
@@ -581,7 +621,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the image was updated. Unit: milliseconds.
+             * <p>The timestamp when the image was updated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1636974116000</p>
              */
             public Builder imageUpdate(Long imageUpdate) {
                 this.imageUpdate = imageUpdate;
@@ -589,7 +632,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image instance.
+             * <p>The ID of the image instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-a595qp31knh9****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -597,7 +643,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the server.
+             * <p>The instance name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre.mongo-196</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -605,7 +654,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.96.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -613,7 +665,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -621,7 +676,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last baseline check was performed. Unit: milliseconds.
+             * <p>The timestamp when the last baseline check was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649814050000</p>
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -629,7 +687,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images on which **low** baseline risks are detected.
+             * <p>The number of images on which <strong>low</strong> baseline risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lowRiskImage(Integer lowRiskImage) {
                 this.lowRiskImage = lowRiskImage;
@@ -637,7 +698,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images on which **medium** baseline risks are detected.
+             * <p>The number of images on which <strong>medium</strong> baseline risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder middleRiskImage(Integer middleRiskImage) {
                 this.middleRiskImage = middleRiskImage;
@@ -645,7 +709,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-002</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -653,7 +720,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images that do not have baseline risks.
+             * <p>The number of images that do not have baseline risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder noRiskImage(Integer noRiskImage) {
                 this.noRiskImage = noRiskImage;
@@ -661,7 +731,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The pod.
+             * <p>The pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22222-7xsqq</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -669,7 +742,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image instance.
+             * <p>The region ID of the image instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -677,7 +753,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-1lt6q7167yh6****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -685,7 +764,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scanner</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -693,7 +775,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * <p>The namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>libssh2</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -701,7 +786,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image repository.
+             * <p>The type of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -709,11 +797,14 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the image is at risk. Valid values:
-             * <p>
+             * <p>Indicates whether the image is at risk. Valid values:</p>
+             * <ul>
+             * <li><strong>YES</strong></li>
+             * <li><strong>NO</strong></li>
+             * </ul>
              * 
-             * *   **YES**
-             * *   **NO**
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -721,7 +812,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image.
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -729,7 +823,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset on which the baseline check is performed.
+             * <p>The ID of the asset on which the baseline check is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-bp17m0pc0xprzbwo****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -737,7 +834,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset on which the baseline check is performed.
+             * <p>The name of the asset on which the baseline check is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spod</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -745,11 +845,14 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset on which the baseline check is performed. Valid values:
-             * <p>
+             * <p>The type of the asset on which the baseline check is performed. Valid values:</p>
+             * <ul>
+             * <li>ECS_IMAGE</li>
+             * <li>ECS_SNAPSHOT</li>
+             * </ul>
              * 
-             * *   ECS_IMAGE
-             * *   ECS_SNAPSHOT
+             * <strong>example:</strong>
+             * <p>ECS_IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -757,7 +860,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of risk items that are detected on the image by using the baseline.
+             * <p>The total number of risk items that are detected on the image by using the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalItemCount(Integer totalItemCount) {
                 this.totalItemCount = totalItemCount;
@@ -765,7 +871,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image.
+             * <p>The UUID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f58681174f944623345379e23b7b****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -779,6 +888,12 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageListWithBaselineNameResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageListWithBaselineNameResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -842,7 +957,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of the images returned on the current page.
+             * <p>The number of the images returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -850,7 +968,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. Default value: **1**.
+             * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -858,7 +979,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -866,7 +990,10 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of images on which baseline risks are detected.
+             * <p>The total number of images on which baseline risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

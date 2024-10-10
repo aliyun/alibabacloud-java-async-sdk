@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIdcAssetCriteriaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeIdcAssetCriteriaResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the asset search conditions.
+         * <p>The information about the asset search conditions.</p>
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -57,7 +58,10 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11C96623-E106-59C9-866D-A6C82911****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeIdcAssetCriteriaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeIdcAssetCriteriaResponseBody</p>
+     */
     public static class CriteriaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -121,7 +131,10 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The name of the search condition.
+             * <p>The name of the search condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scannedIp</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -129,11 +142,14 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the search condition. Valid values:
-             * <p>
+             * <p>The type of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>input</strong>: The search condition needs to be specified.</li>
+             * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+             * </ul>
              * 
-             * *   **input**: The search condition needs to be specified.
-             * *   **select**: The search condition is an option that can be selected from the drop-down list.
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -141,7 +157,10 @@ public class DescribeIdcAssetCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute values of the assets that match the keyword.
+             * <p>The attribute values of the assets that match the keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.*</p>
              */
             public Builder values(String values) {
                 this.values = values;

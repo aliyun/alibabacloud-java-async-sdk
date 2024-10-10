@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockInclusiveFileTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebLockInclusiveFileTypeResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeWebLockInclusiveFileTypeResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the types of files that can be protected by web tamper proofing.
+         * <p>An array that consists of the types of files that can be protected by web tamper proofing.</p>
          */
         public Builder inclusiveFileType(java.util.List < String > inclusiveFileType) {
             this.inclusiveFileType = inclusiveFileType;
@@ -69,7 +70,10 @@ public class DescribeWebLockInclusiveFileTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeWebLockInclusiveFileTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the types of files that can be protected by web tamper proofing.
+         * <p>The total number of the types of files that can be protected by web tamper proofing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

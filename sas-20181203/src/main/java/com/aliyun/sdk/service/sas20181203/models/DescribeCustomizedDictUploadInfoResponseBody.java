@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizedDictUploadInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomizedDictUploadInfoResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         private String signature; 
 
         /**
-         * The AccessKey ID that is required to access the OSS object.
+         * <p>The AccessKey ID that is required to access the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4G1mgPbjvG********</p>
          */
         public Builder accessid(String accessid) {
             this.accessid = accessid;
@@ -117,7 +121,10 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the OSS signature expires. This value is a UNIX timestamp.
+         * <p>The time when the OSS signature expires. This value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719921470</p>
          */
         public Builder expire(String expire) {
             this.expire = expire;
@@ -125,7 +132,10 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The OSS endpoint.
+         * <p>The OSS endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com">https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com</a></p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -133,7 +143,10 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the OSS object.
+         * <p>The key of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HC_CUSTOMIZED_DICT/176618589410****.tmp</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -141,7 +154,10 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The policy of the OSS bucket.
+         * <p>The policy of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyNC0wNy0wMlQxMTo1Nzo1MC44MzJaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsNDA5NjBdLFsiZXEiLCIka2V5IiwiSENfQ1VTVE9NSVpFRF9ESUNUXC8xNzY2MTg1ODk0MTA0Njc1LnRtc****</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -149,7 +165,10 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDEDEEE7-AC25-559E-8C12-5168B139****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +176,10 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The OSS signature.
+         * <p>The OSS signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mWGRgn0CtdbVf8UuJbTXOmo2****</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;

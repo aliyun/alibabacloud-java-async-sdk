@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizeReportConfigDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomizeReportConfigDetailResponseBody</p>
@@ -289,7 +290,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         private String title; 
 
         /**
-         * The ID of the chart that is included in the report. Multiple IDs are separated by commas (,).
+         * <p>The ID of the chart that is included in the report. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIZ_STAT_QUERY_KEY_ATTACK,CUSTOM_VUL_CVE_LIST,CUSTOM_VUL_SYS_LIST,CUSTOM_VUL_WEBCMS_LIST,CUSTOM_AUTO_BREAKING_PIE,CUSTOM_AK_LEAK_LIST,KEY_HP_TAMPERPROOF,KEY_HP_DEFENCE</p>
          */
         public Builder chartIds(String chartIds) {
             this.chartIds = chartIds;
@@ -297,11 +301,14 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The grouping type. Valid values:
-         * <p>
+         * <p>The grouping type. Valid values:</p>
+         * <ul>
+         * <li><strong>ALIYUN_RG</strong></li>
+         * <li><strong>SAS_GROUP</strong></li>
+         * </ul>
          * 
-         * *   **ALIYUN_RG**
-         * *   **SAS_GROUP**
+         * <strong>example:</strong>
+         * <p>SAS_GROUP</p>
          */
         public Builder groupType(String groupType) {
             this.groupType = groupType;
@@ -309,11 +316,14 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the report is the default report. Valid values:
-         * <p>
+         * <p>Indicates whether the report is the default report. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no.</li>
+         * <li><strong>1</strong>: yes.</li>
+         * </ul>
          * 
-         * *   **0**: no.
-         * *   **1**: yes.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isDefault(Integer isDefault) {
             this.isDefault = isDefault;
@@ -321,7 +331,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the report is pinned.
+         * <p>The time when the report is pinned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717430400000</p>
          */
         public Builder pinnedTime(Long pinnedTime) {
             this.pinnedTime = pinnedTime;
@@ -329,7 +342,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The email address of the recipient. Multiple email addresses are separated by commas (,).
+         * <p>The email address of the recipient. Multiple email addresses are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:PengZheng@eaton.com">PengZheng@eaton.com</a>,<a href="mailto:ZhongJi@Eaton.com">ZhongJi@Eaton.com</a></p>
          */
         public Builder recipients(String recipients) {
             this.recipients = recipients;
@@ -337,7 +353,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The most recent days for report statistics.
+         * <p>The most recent days for report statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder reportDays(Integer reportDays) {
             this.reportDays = reportDays;
@@ -345,7 +364,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The end date on which the report is sent.
+         * <p>The end date on which the report is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1720022399999</p>
          */
         public Builder reportEndDate(String reportEndDate) {
             this.reportEndDate = reportEndDate;
@@ -353,7 +375,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the report.
+         * <p>The ID of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>663434</p>
          */
         public Builder reportId(Long reportId) {
             this.reportId = reportId;
@@ -361,11 +386,14 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The language of the report. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the report. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder reportLang(String reportLang) {
             this.reportLang = reportLang;
@@ -373,13 +401,16 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The time range in which the report is sent. Valid values:
-         * <p>
+         * <p>The time range in which the report is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: 00:00 to 06:00.</li>
+         * <li><strong>2</strong>: 06:00 to 12:00.</li>
+         * <li><strong>3</strong>: 12:00 to 18:00.</li>
+         * <li><strong>4</strong>: 18:00 to 24:00.</li>
+         * </ul>
          * 
-         * *   **1**: 00:00 to 06:00.
-         * *   **2**: 06:00 to 12:00.
-         * *   **3**: 12:00 to 18:00.
-         * *   **4**: 18:00 to 24:00.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder reportSendType(String reportSendType) {
             this.reportSendType = reportSendType;
@@ -387,7 +418,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The start date on which the report is sent.
+         * <p>The start date on which the report is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717430400000</p>
          */
         public Builder reportStartDate(String reportStartDate) {
             this.reportStartDate = reportStartDate;
@@ -395,11 +429,14 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the report. Valid values:
-         * <p>
+         * <p>The status of the report. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled.</li>
+         * <li><strong>1</strong>: enabled.</li>
+         * </ul>
          * 
-         * *   **0**: disabled.
-         * *   **1**: enabled.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder reportStatus(String reportStatus) {
             this.reportStatus = reportStatus;
@@ -407,13 +444,16 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the report. Valid values:
-         * <p>
+         * <p>The type of the report. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: daily report.</li>
+         * <li><strong>1</strong>: weekly report.</li>
+         * <li><strong>2</strong>: monthly report.</li>
+         * <li><strong>3</strong>: report whose statistics are collected in a custom time range.</li>
+         * </ul>
          * 
-         * *   **0**: daily report.
-         * *   **1**: weekly report.
-         * *   **2**: monthly report.
-         * *   **3**: report whose statistics are collected in a custom time range.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder reportType(String reportType) {
             this.reportType = reportType;
@@ -421,7 +461,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>379a9b8f-107b-4630-9e95-2299a1ea****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -429,7 +472,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The end time at which the report is sent. The value is in the HH:mm:ss format.
+         * <p>The end time at which the report is sent. The value is in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10:00:00</p>
          */
         public Builder sendEndTime(String sendEndTime) {
             this.sendEndTime = sendEndTime;
@@ -437,7 +483,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The exact day within the sending period.
+         * <p>The exact day within the sending period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder sendPeriodDays(Integer sendPeriodDays) {
             this.sendPeriodDays = sendPeriodDays;
@@ -445,12 +494,15 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The interval at which the report is sent. Valid values:
-         * <p>
+         * <p>The interval at which the report is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>DAY</strong></li>
+         * <li><strong>WEEK</strong></li>
+         * <li><strong>MONTH</strong></li>
+         * </ul>
          * 
-         * *   **DAY**
-         * *   **WEEK**
-         * *   **MONTH**
+         * <strong>example:</strong>
+         * <p>MONTH</p>
          */
         public Builder sendPeriodType(String sendPeriodType) {
             this.sendPeriodType = sendPeriodType;
@@ -458,7 +510,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The start time at which the report is sent. The value is in the HH:mm:ss format.
+         * <p>The start time at which the report is sent. The value is in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:00:00</p>
          */
         public Builder sendStartTime(String sendStartTime) {
             this.sendStartTime = sendStartTime;
@@ -466,7 +521,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The time at which the report is sent. The value is in the HH:mm:ss format.
+         * <p>The time at which the report is sent. The value is in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09:00:00</p>
          */
         public Builder sendTime(String sendTime) {
             this.sendTime = sendTime;
@@ -474,7 +532,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The groups.
+         * <p>The groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12125884,12140191</p>
          */
         public Builder targetGroups(String targetGroups) {
             this.targetGroups = targetGroups;
@@ -482,7 +543,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account. Multiple IDs are separated by commas (,).
+         * <p>The ID of the Alibaba Cloud account. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1457515594445744,1600011353839072,1766185894104675,1674080148055995,1627510829033157</p>
          */
         public Builder targetUids(String targetUids) {
             this.targetUids = targetUids;
@@ -490,7 +554,10 @@ public class DescribeCustomizeReportConfigDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The title of the report.
+         * <p>The title of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>marketing report</p>
          */
         public Builder title(String title) {
             this.title = title;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRebootStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceRebootStatusRequest</p>
@@ -54,7 +55,11 @@ public class DescribeInstanceRebootStatusRequest extends Request {
         } 
 
         /**
-         * The UUIDs of the servers that you restart. Separate multiple UUIDs with commas (,).
+         * <p>The UUIDs of the servers that you restart. Separate multiple UUIDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d77f7802-4f0a-4221-ab02-4d999e****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

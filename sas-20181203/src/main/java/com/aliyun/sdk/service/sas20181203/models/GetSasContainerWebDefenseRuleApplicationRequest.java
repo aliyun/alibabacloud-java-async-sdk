@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSasContainerWebDefenseRuleApplicationRequest} extends {@link RequestModel}
  *
  * <p>GetSasContainerWebDefenseRuleApplicationRequest</p>
@@ -53,10 +54,13 @@ public class GetSasContainerWebDefenseRuleApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <blockquote>
+         * <p> You can call the ListSasContainerWebDefenseRule operation to query the IDs of rules.</p>
+         * </blockquote>
          * 
-         * >  You can call the ListSasContainerWebDefenseRule operation to query the IDs of rules.
+         * <strong>example:</strong>
+         * <p>400599</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

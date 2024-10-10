@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddIdcProbeResponseBody} extends {@link TeaModel}
  *
  * <p>AddIdcProbeResponseBody</p>
@@ -61,7 +62,7 @@ public class AddIdcProbeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The records of failure.
+         * <p>The records of failure.</p>
          */
         public Builder addIdcProbeFailedList(java.util.List < AddIdcProbeFailedList> addIdcProbeFailedList) {
             this.addIdcProbeFailedList = addIdcProbeFailedList;
@@ -69,7 +70,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(String count) {
             this.count = count;
@@ -77,7 +81,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D706F2DD-FF07-576B-9DD1-0B484A9B3065</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class AddIdcProbeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddIdcProbeResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddIdcProbeResponseBody</p>
+     */
     public static class AddIdcProbeFailedList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
@@ -213,7 +226,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The error message that is returned.
+             * <p>The error message that is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The ResourceDirectoryId is invalid.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -221,7 +237,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data center.
+             * <p>The name of the data center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder idcName(String idcName) {
                 this.idcName = idcName;
@@ -229,7 +248,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder idcRegion(String idcRegion) {
                 this.idcRegion = idcRegion;
@@ -237,7 +259,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-yqcl2ck3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -245,7 +270,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gl-sms-01</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -253,7 +281,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95.214.XXX.XXX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -261,7 +292,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.29.XXX.XXX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -269,7 +303,10 @@ public class AddIdcProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The settings of the CIDR block.
+             * <p>The settings of the CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX/24</p>
              */
             public Builder ipSegments(String ipSegments) {
                 this.ipSegments = ipSegments;
@@ -277,10 +314,13 @@ public class AddIdcProbeResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server. Multiple UUIDs are separated by commas (,).
-             * <p>
+             * <p>The UUID of the server. Multiple UUIDs are separated by commas (,).</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUID.
+             * <strong>example:</strong>
+             * <p>076a446d-df7d-424c-bdc5-bb5dc7f1****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

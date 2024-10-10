@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageStatisticsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
         private Integer riskInstanceCount; 
 
         /**
-         * The number of container images in your assets. Only Container Registry Enterprise Edition instances are counted.
+         * <p>The number of container images in your assets. Only Container Registry Enterprise Edition instances are counted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
@@ -69,7 +73,10 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +84,10 @@ public class DescribeImageStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of container images that have security risks. Only Container Registry Enterprise Edition instances are counted.
+         * <p>The number of container images that have security risks. Only Container Registry Enterprise Edition instances are counted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder riskInstanceCount(Integer riskInstanceCount) {
             this.riskInstanceCount = riskInstanceCount;

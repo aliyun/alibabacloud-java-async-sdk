@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableServiceAccessResourceDirectoryResponse} extends {@link TeaModel}
  *
  * <p>EnableServiceAccessResourceDirectoryResponse</p>

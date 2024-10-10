@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSyncAssetTaskListRequest} extends {@link RequestModel}
  *
  * <p>DescribeSyncAssetTaskListRequest</p>
@@ -109,7 +110,10 @@ public class DescribeSyncAssetTaskListRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: 1. Pages start from page 1.
+         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,7 +122,10 @@ public class DescribeSyncAssetTaskListRequest extends Request {
         }
 
         /**
-         * The timestamp when the IDC scan task ends. Unit: milliseconds.
+         * <p>The timestamp when the IDC scan task ends. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1662430077000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -127,10 +134,13 @@ public class DescribeSyncAssetTaskListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -139,7 +149,10 @@ public class DescribeSyncAssetTaskListRequest extends Request {
         }
 
         /**
-         * The timestamp when the IDC scan task starts. Unit: milliseconds.
+         * <p>The timestamp when the IDC scan task starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652063828796</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -148,7 +161,10 @@ public class DescribeSyncAssetTaskListRequest extends Request {
         }
 
         /**
-         * The name of the IDC scan task.
+         * <p>The name of the IDC scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDC_PROBE_SCAN***</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

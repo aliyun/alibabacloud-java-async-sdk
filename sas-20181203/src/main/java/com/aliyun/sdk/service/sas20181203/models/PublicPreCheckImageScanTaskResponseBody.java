@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PublicPreCheckImageScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>PublicPreCheckImageScanTaskResponseBody</p>
@@ -70,6 +71,12 @@ public class PublicPreCheckImageScanTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PublicPreCheckImageScanTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>PublicPreCheckImageScanTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NeedAuthCount")
         private Integer needAuthCount;

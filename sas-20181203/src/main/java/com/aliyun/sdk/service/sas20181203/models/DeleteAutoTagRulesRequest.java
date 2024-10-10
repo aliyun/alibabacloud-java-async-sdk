@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAutoTagRulesRequest} extends {@link RequestModel}
  *
  * <p>DeleteAutoTagRulesRequest</p>
@@ -54,10 +55,14 @@ public class DeleteAutoTagRulesRequest extends Request {
         } 
 
         /**
-         * The ID of the asset auto-tagging rule. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the asset auto-tagging rule. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListAutoTagRules~~">ListAutoTagRules</a> operation to query the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListAutoTagRules](~~ListAutoTagRules~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>2331,56,5644</p>
          */
         public Builder ruleIdList(String ruleIdList) {
             this.putQueryParameter("RuleIdList", ruleIdList);

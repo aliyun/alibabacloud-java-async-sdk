@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSecureAlarmListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainSecureAlarmListResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeDomainSecureAlarmListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainSecureAlarmListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSecureAlarmListResponseBody</p>
+     */
     public static class AlarmList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmEventName")
         private String alarmEventName;

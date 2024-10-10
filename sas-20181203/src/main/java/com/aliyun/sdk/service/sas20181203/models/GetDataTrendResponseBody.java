@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetDataTrendResponseBody</p>
@@ -49,7 +50,7 @@ public class GetDataTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetDataTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1383B0DB-D5D6-4B0C-9E6B-75939C8E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetDataTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetDataTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataTrendResponseBody</p>
+     */
     public static class ItemList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CountList")
         private java.util.List < Long > countList;
@@ -109,7 +119,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             private String keyName; 
 
             /**
-             * The statistical values of the trend data.
+             * <p>The statistical values of the trend data.</p>
              */
             public Builder countList(java.util.List < Long > countList) {
                 this.countList = countList;
@@ -117,15 +127,18 @@ public class GetDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the security data. Valid values:
-             * <p>
+             * <p>The type of the security data. Valid values:</p>
+             * <ul>
+             * <li><strong>HC_NEW</strong>: the number of new baseline risks.</li>
+             * <li><strong>HC_OPERATE</strong>: the number of handled baseline risks.</li>
+             * <li><strong>VUL_NEW</strong>: the number of new vulnerabilities.</li>
+             * <li><strong>VUL_OPERATE</strong>: the number of handled vulnerabilities.</li>
+             * <li><strong>SUSP_NEW</strong>: the number of new alerts.</li>
+             * <li><strong>SUSP_OPERATE</strong>: the number of handled alerts.</li>
+             * </ul>
              * 
-             * *   **HC_NEW**: the number of new baseline risks.
-             * *   **HC_OPERATE**: the number of handled baseline risks.
-             * *   **VUL_NEW**: the number of new vulnerabilities.
-             * *   **VUL_OPERATE**: the number of handled vulnerabilities.
-             * *   **SUSP_NEW**: the number of new alerts.
-             * *   **SUSP_OPERATE**: the number of handled alerts.
+             * <strong>example:</strong>
+             * <p>HC_NEW</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -139,6 +152,12 @@ public class GetDataTrendResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetDataTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetDataTrendResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DateList")
         private java.util.List < Integer > dateList;
@@ -190,7 +209,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             private java.util.List < ItemList> itemList; 
 
             /**
-             * The statistical timestamps of the trend data.
+             * <p>The statistical timestamps of the trend data.</p>
              */
             public Builder dateList(java.util.List < Integer > dateList) {
                 this.dateList = dateList;
@@ -198,7 +217,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical dates and time for the trend data.
+             * <p>The statistical dates and time for the trend data.</p>
              */
             public Builder dateStrList(java.util.List < String > dateStrList) {
                 this.dateStrList = dateStrList;
@@ -206,7 +225,7 @@ public class GetDataTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The returned data.
+             * <p>The returned data.</p>
              */
             public Builder itemList(java.util.List < ItemList> itemList) {
                 this.itemList = itemList;

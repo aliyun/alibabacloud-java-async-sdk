@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HandleSimilarSecurityEventsResponseBody} extends {@link TeaModel}
  *
  * <p>HandleSimilarSecurityEventsResponseBody</p>
@@ -37,7 +38,10 @@ public class HandleSimilarSecurityEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3653911-33A6-5268-8B91-7690471F7AA1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

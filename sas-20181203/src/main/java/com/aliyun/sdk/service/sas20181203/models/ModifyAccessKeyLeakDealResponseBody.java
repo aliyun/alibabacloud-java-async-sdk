@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAccessKeyLeakDealResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyAccessKeyLeakDealResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyAccessKeyLeakDealResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DD4617B4-133A-53C8-ADAE-7B30FF89****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

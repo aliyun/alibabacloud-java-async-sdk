@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenSensitiveFileScanRequest} extends {@link RequestModel}
  *
  * <p>OpenSensitiveFileScanRequest</p>
@@ -53,11 +54,14 @@ public class OpenSensitiveFileScanRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable or disable sensitive file scan. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable sensitive file scan. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enables sensitive file scan</li>
+         * <li><strong>off</strong>: disables sensitive file scan</li>
+         * </ul>
          * 
-         * *   **on**: enables sensitive file scan
-         * *   **off**: disables sensitive file scan
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder switchOn(String switchOn) {
             this.putQueryParameter("SwitchOn", switchOn);

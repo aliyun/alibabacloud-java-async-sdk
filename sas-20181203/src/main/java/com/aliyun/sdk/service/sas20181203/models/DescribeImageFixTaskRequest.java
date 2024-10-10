@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageFixTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageFixTaskRequest</p>
@@ -111,7 +112,11 @@ public class DescribeImageFixTaskRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**
+         * <p>The number of the page to return. Default value: <strong>1</strong></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -120,7 +125,10 @@ public class DescribeImageFixTaskRequest extends Request {
         }
 
         /**
-         * The timestamp when the task ends. Unit: milliseconds.
+         * <p>The timestamp when the task ends. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1635575219000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -129,7 +137,11 @@ public class DescribeImageFixTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong></p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +150,10 @@ public class DescribeImageFixTaskRequest extends Request {
         }
 
         /**
-         * The timestamp when the task starts. Unit: milliseconds.
+         * <p>The timestamp when the task starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634725571000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -147,12 +162,15 @@ public class DescribeImageFixTaskRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The task is running.</li>
+         * <li><strong>2</strong>: The task is successful.</li>
+         * <li><strong>3</strong>: The task failed.</li>
+         * </ul>
          * 
-         * *   **1**: The task is running.
-         * *   **2**: The task is successful.
-         * *   **3**: The task failed.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

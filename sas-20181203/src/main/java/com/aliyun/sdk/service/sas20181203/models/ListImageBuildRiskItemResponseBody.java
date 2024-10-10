@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImageBuildRiskItemResponseBody} extends {@link TeaModel}
  *
  * <p>ListImageBuildRiskItemResponseBody</p>
@@ -49,7 +50,7 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3D7C47D-3F11-57BB-90E8-E5C20C619F37</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImageBuildRiskItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageBuildRiskItemResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ItemKey")
         private String itemKey;
@@ -109,7 +119,10 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
             private String itemName; 
 
             /**
-             * The type key of the risky build command.
+             * <p>The type key of the risky build command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder itemKey(String itemKey) {
                 this.itemKey = itemKey;
@@ -117,7 +130,10 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
             }
 
             /**
-             * The type name of the risky build command.
+             * <p>The type name of the risky build command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>itemName.</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;

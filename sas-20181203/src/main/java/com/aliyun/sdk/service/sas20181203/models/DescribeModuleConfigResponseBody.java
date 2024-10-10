@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeModuleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeModuleConfigResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeModuleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModuleConfigResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Integer groupId;
@@ -271,6 +278,12 @@ public class DescribeModuleConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeModuleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeModuleConfigResponseBody</p>
+     */
     public static class ModuleConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;

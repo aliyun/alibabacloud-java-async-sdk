@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudVendorAccountAKListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudVendorAccountAKListRequest</p>
@@ -123,7 +124,10 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         } 
 
         /**
-         * The unique ID of the AccessKey pair.
+         * <p>The unique ID of the AccessKey pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2624</p>
          */
         public Builder authIds(String authIds) {
             this.putQueryParameter("AuthIds", authIds);
@@ -132,7 +136,10 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         }
 
         /**
-         * The page number. Default value: 1.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -141,11 +148,14 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -154,7 +164,10 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,11 +176,14 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         }
 
         /**
-         * The status of the AccessKey pair. Valid values:
-         * <p>
+         * <p>The status of the AccessKey pair. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: enabled</li>
+         * <li><strong>1</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **0**: enabled
-         * *   **1**: disabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -176,7 +192,10 @@ public class DescribeCloudVendorAccountAKListRequest extends Request {
         }
 
         /**
-         * The username of the sub-account of the cloud service provider to which the AccessKey pair belongs.
+         * <p>The username of the sub-account of the cloud service provider to which the AccessKey pair belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AlibabaCloud_***</p>
          */
         public Builder subAccountName(String subAccountName) {
             this.putQueryParameter("SubAccountName", subAccountName);

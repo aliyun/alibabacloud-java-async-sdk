@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetDataTrendRequest} extends {@link RequestModel}
  *
  * <p>GetDataTrendRequest</p>
@@ -99,15 +100,19 @@ public class GetDataTrendRequest extends Request {
         } 
 
         /**
-         * The type of the security data that you want to query. Valid values:
-         * <p>
+         * <p>The type of the security data that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>HC_NEW</strong>: the number of new baseline risks.</li>
+         * <li><strong>HC_OPERATE</strong>: the number of handled baseline risks.</li>
+         * <li><strong>VUL_NEW</strong>: the number of new vulnerabilities.</li>
+         * <li><strong>VUL_OPERATE</strong>: the number of handled vulnerabilities.</li>
+         * <li><strong>SUSP_NEW</strong>: the number of new alerts.</li>
+         * <li><strong>SUSP_OPERATE</strong>: the number of handled alerts.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **HC_NEW**: the number of new baseline risks.
-         * *   **HC_OPERATE**: the number of handled baseline risks.
-         * *   **VUL_NEW**: the number of new vulnerabilities.
-         * *   **VUL_OPERATE**: the number of handled vulnerabilities.
-         * *   **SUSP_NEW**: the number of new alerts.
-         * *   **SUSP_OPERATE**: the number of handled alerts.
+         * <strong>example:</strong>
+         * <p>HC_NEW,HC_OPERATE</p>
          */
         public Builder bizTypes(String bizTypes) {
             this.putQueryParameter("BizTypes", bizTypes);
@@ -116,7 +121,11 @@ public class GetDataTrendRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721923200000</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -125,10 +134,14 @@ public class GetDataTrendRequest extends Request {
         }
 
         /**
-         * The interval of the data that you want to query. Unit: milliseconds.
-         * <p>
+         * <p>The interval of the data that you want to query. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p> The minimum value is 1000.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The minimum value is 1000.
+         * <strong>example:</strong>
+         * <p>86400000</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -137,7 +150,11 @@ public class GetDataTrendRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687334501000</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotAttackerPortraitResponseBody} extends {@link TeaModel}
  *
  * <p>ListHoneypotAttackerPortraitResponseBody</p>
@@ -109,7 +110,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code that is returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code that is returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -125,7 +132,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the attacker profile.
+         * <p>The details of the attacker profile.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -133,7 +140,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +151,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -149,7 +159,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8A5A2DA6-67EA-5968-960F-6B20FD0C*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +170,14 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +190,12 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHoneypotAttackerPortraitResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotAttackerPortraitResponseBody</p>
+     */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private java.util.List < String > externalIp;
@@ -225,7 +247,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             private java.util.List < String > realIp; 
 
             /**
-             * The public IP addresses.
+             * <p>The public IP addresses.</p>
              */
             public Builder externalIp(java.util.List < String > externalIp) {
                 this.externalIp = externalIp;
@@ -233,7 +255,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP addresses.
+             * <p>The private IP addresses.</p>
              */
             public Builder internalIp(java.util.List < String > internalIp) {
                 this.internalIp = internalIp;
@@ -241,7 +263,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The originating IP addresses.
+             * <p>The originating IP addresses.</p>
              */
             public Builder realIp(java.util.List < String > realIp) {
                 this.realIp = realIp;
@@ -255,6 +277,12 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotAttackerPortraitResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotAttackerPortraitResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttackCount")
         private Integer attackCount;
@@ -354,7 +382,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             private java.util.List < String > social; 
 
             /**
-             * The number of attacks.
+             * <p>The number of attacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder attackCount(Integer attackCount) {
                 this.attackCount = attackCount;
@@ -362,7 +393,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the browsers of the attack source.
+             * <p>The information about the browsers of the attack source.</p>
              */
             public Builder browser(java.util.List < String > browser) {
                 this.browser = browser;
@@ -370,7 +401,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the hosts of the attack source.
+             * <p>The information about the hosts of the attack source.</p>
              */
             public Builder host(java.util.List < String > host) {
                 this.host = host;
@@ -378,7 +409,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the attack was last detected. Unit: milliseconds.
+             * <p>The timestamp at which the attack was last detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1679896965</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -386,7 +420,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The network information about the attack source.
+             * <p>The network information about the attack source.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -394,7 +428,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The attacker profile ID.
+             * <p>The attacker profile ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cd48604a-1694-4f03-ade0-ec6994c3****</p>
              */
             public Builder portraitId(String portraitId) {
                 this.portraitId = portraitId;
@@ -402,7 +439,7 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The social information about the attack source.
+             * <p>The social information about the attack source.</p>
              */
             public Builder social(java.util.List < String > social) {
                 this.social = social;
@@ -416,6 +453,12 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotAttackerPortraitResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotAttackerPortraitResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -479,7 +522,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -487,7 +533,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -495,7 +544,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -503,7 +555,10 @@ public class ListHoneypotAttackerPortraitResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

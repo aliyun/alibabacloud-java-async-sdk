@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAegisContainerPluginRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ListAegisContainerPluginRuleResponseBody</p>
@@ -61,7 +62,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         private java.util.List < RuleList> ruleList; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The rules.
+         * <p>The rules.</p>
          */
         public Builder ruleList(java.util.List < RuleList> ruleList) {
             this.ruleList = ruleList;
@@ -90,6 +94,12 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAegisContainerPluginRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAegisContainerPluginRuleResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -141,7 +151,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -149,7 +162,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -157,7 +173,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -171,6 +190,12 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAegisContainerPluginRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAegisContainerPluginRuleResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyKey")
         private String policyKey;
@@ -210,7 +235,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             private String policyName; 
 
             /**
-             * The policy key.
+             * <p>The policy key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_auto_****</p>
              */
             public Builder policyKey(String policyKey) {
                 this.policyKey = policyKey;
@@ -218,7 +246,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System self-starting task****</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -232,6 +263,12 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAegisContainerPluginRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAegisContainerPluginRuleResponseBody</p>
+     */
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -391,7 +428,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             private java.util.List < String > whiteImages; 
 
             /**
-             * The time when the rule was created. Unit: milliseconds.
+             * <p>The time when the rule was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1676355025000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -399,7 +439,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the rule was modified. Unit: milliseconds.
+             * <p>The time when the rule was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1681985833000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -407,11 +450,14 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The action of the rule. Valid values:
-             * <p>
+             * <p>The action of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Alert</li>
+             * <li><strong>2</strong>: Block</li>
+             * </ul>
              * 
-             * *   **1**: Alert
-             * *   **2**: Block
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -419,7 +465,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of policies.
+             * <p>An array that consists of policies.</p>
              */
             public Builder policies(java.util.List < Policies> policies) {
                 this.policies = policies;
@@ -427,7 +473,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_call</p>
              */
             public Builder ruleDescription(String ruleDescription) {
                 this.ruleDescription = ruleDescription;
@@ -435,7 +484,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30****</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -443,7 +495,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-18****</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -451,7 +506,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule template. The ListSystemClientRules operation returns the ID of a rule template.
+             * <p>The ID of the rule template. The ListSystemClientRules operation returns the ID of a rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>868**</p>
              */
             public Builder ruleTemplateId(String ruleTemplateId) {
                 this.ruleTemplateId = ruleTemplateId;
@@ -459,7 +517,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule template.
+             * <p>The name of the rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system_call</p>
              */
             public Builder ruleTemplateName(String ruleTemplateName) {
                 this.ruleTemplateName = ruleTemplateName;
@@ -467,7 +528,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The fields in the value of the rule subtype.
+             * <p>The fields in the value of the rule subtype.</p>
              */
             public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
                 this.selectedPolicy = selectedPolicy;
@@ -475,7 +536,10 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID of the rule.
+             * <p>The switch ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER-ENABLE-SWITCH-TYPE_****</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -483,7 +547,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The images that are added to the whitelist of the rule.
+             * <p>The images that are added to the whitelist of the rule.</p>
              */
             public Builder whiteImages(java.util.List < String > whiteImages) {
                 this.whiteImages = whiteImages;

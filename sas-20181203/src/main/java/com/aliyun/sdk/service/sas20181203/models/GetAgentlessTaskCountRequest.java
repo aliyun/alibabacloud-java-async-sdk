@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentlessTaskCountRequest} extends {@link RequestModel}
  *
  * <p>GetAgentlessTaskCountRequest</p>
@@ -67,7 +68,10 @@ public class GetAgentlessTaskCountRequest extends Request {
         } 
 
         /**
-         * The instance ID of the asset.
+         * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-m5edddcwq7d57d******</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -76,11 +80,14 @@ public class GetAgentlessTaskCountRequest extends Request {
         }
 
         /**
-         * Specifies the type of the object being inspected. Valid values:
-         * <p>
+         * <p>Specifies the type of the object being inspected. Valid values:</p>
+         * <ul>
+         * <li><strong>3</strong>: User Snapshot.</li>
+         * <li><strong>4</strong>: User Image.</li>
+         * </ul>
          * 
-         * *   **3**: User Snapshot.
-         * *   **4**: User Image.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder targetType(Integer targetType) {
             this.putQueryParameter("TargetType", targetType);

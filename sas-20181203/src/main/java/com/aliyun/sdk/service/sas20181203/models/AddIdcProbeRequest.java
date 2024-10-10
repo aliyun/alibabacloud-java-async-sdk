@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddIdcProbeRequest} extends {@link RequestModel}
  *
  * <p>AddIdcProbeRequest</p>
@@ -159,7 +160,11 @@ public class AddIdcProbeRequest extends Request {
         } 
 
         /**
-         * The name of the data center.
+         * <p>The name of the data center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder idcName(String idcName) {
             this.putQueryParameter("IdcName", idcName);
@@ -168,7 +173,11 @@ public class AddIdcProbeRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The region ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder idcRegion(String idcRegion) {
             this.putQueryParameter("IdcRegion", idcRegion);
@@ -177,7 +186,11 @@ public class AddIdcProbeRequest extends Request {
         }
 
         /**
-         * The scan interval.
+         * <p>The scan interval.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder intervalPeriod(Integer intervalPeriod) {
             this.putQueryParameter("IntervalPeriod", intervalPeriod);
@@ -186,7 +199,11 @@ public class AddIdcProbeRequest extends Request {
         }
 
         /**
-         * The settings of the CIDR block.
+         * <p>The settings of the CIDR block.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX/24</p>
          */
         public Builder ipSegments(String ipSegments) {
             this.putQueryParameter("IpSegments", ipSegments);
@@ -195,7 +212,11 @@ public class AddIdcProbeRequest extends Request {
         }
 
         /**
-         * The Linux port.
+         * <p>The Linux port.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder linuxPort(String linuxPort) {
             this.putQueryParameter("LinuxPort", linuxPort);
@@ -204,11 +225,15 @@ public class AddIdcProbeRequest extends Request {
         }
 
         /**
-         * The unit of the scan interval. Valid values:
-         * <p>
+         * <p>The unit of the scan interval. Valid values:</p>
+         * <ul>
+         * <li><strong>day</strong></li>
+         * <li><strong>hour</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **day**
-         * *   **hour**
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -217,10 +242,14 @@ public class AddIdcProbeRequest extends Request {
         }
 
         /**
-         * The UUID of the server. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The UUID of the server. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUID.
+         * <strong>example:</strong>
+         * <p>076a446d-df7d-424c-bdc5-bb5dc7f1****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);
@@ -229,7 +258,11 @@ public class AddIdcProbeRequest extends Request {
         }
 
         /**
-         * The Windows port.
+         * <p>The Windows port.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder winPort(String winPort) {
             this.putQueryParameter("WinPort", winPort);

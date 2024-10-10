@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallBackupClientRequest} extends {@link RequestModel}
  *
  * <p>InstallBackupClientRequest</p>
@@ -82,7 +83,10 @@ public class InstallBackupClientRequest extends Request {
         } 
 
         /**
-         * PolicyVersion.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder policyVersion(String policyVersion) {
             this.putQueryParameter("PolicyVersion", policyVersion);

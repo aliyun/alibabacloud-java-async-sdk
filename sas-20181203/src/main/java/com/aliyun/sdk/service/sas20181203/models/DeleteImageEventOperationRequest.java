@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteImageEventOperationRequest} extends {@link RequestModel}
  *
  * <p>DeleteImageEventOperationRequest</p>
@@ -53,7 +54,10 @@ public class DeleteImageEventOperationRequest extends Request {
         } 
 
         /**
-         * The primary key of the alert handling rule.
+         * <p>The primary key of the alert handling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1404656</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

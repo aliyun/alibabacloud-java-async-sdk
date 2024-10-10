@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DingTalkOnlineTestRequest} extends {@link RequestModel}
  *
  * <p>DingTalkOnlineTestRequest</p>
@@ -54,7 +55,10 @@ public class DingTalkOnlineTestRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2373</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

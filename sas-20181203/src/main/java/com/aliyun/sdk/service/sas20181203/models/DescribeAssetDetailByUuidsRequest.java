@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetDetailByUuidsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAssetDetailByUuidsRequest</p>
@@ -82,11 +83,14 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -95,9 +99,13 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         }
 
         /**
-         * 资源目录成员账号主账号ID。
-         * <p>
-         * >调用[DescribeMonitorAccounts](~~DescribeMonitorAccounts~~)接口可以获取该参数。
+         * <p>资源目录成员账号主账号ID。</p>
+         * <blockquote>
+         * <p>调用<a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a>接口可以获取该参数。</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -106,7 +114,11 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         }
 
         /**
-         * The UUIDs of the ECS instances. Separate multiple UUIDs with commas (,).
+         * <p>The UUIDs of the ECS instances. Separate multiple UUIDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0687b17f-2a36-4e5****,0687b17f-2a36-4e****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

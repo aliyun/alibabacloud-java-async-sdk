@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWarningExportInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeWarningExportInfoRequest</p>
@@ -54,10 +55,14 @@ public class DescribeWarningExportInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the export task.
-         * <p>
+         * <p>The ID of the export task.</p>
+         * <blockquote>
+         * <p> You can can call the <a href="~~ExportWarning~~">ExportWarning</a> operation to query the IDs of export tasks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
+         * <strong>example:</strong>
+         * <p>14356</p>
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

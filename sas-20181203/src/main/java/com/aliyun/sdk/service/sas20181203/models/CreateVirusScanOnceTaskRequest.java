@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirusScanOnceTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateVirusScanOnceTaskRequest</p>
@@ -81,7 +82,7 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         } 
 
         /**
-         * The information about the scan path that is required for a custom scan.
+         * <p>The information about the scan path that is required for a custom scan.</p>
          */
         public Builder scanPath(java.util.List < String > scanPath) {
             this.putQueryParameter("ScanPath", scanPath);
@@ -90,11 +91,14 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * The type of the virus scan. Valid values:
-         * <p>
+         * <p>The type of the virus scan. Valid values:</p>
+         * <ul>
+         * <li><strong>system</strong>: system scan.</li>
+         * <li><strong>user</strong>: custom scan.</li>
+         * </ul>
          * 
-         * *   **system**: system scan.
-         * *   **user**: custom scan.
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder scanType(String scanType) {
             this.putQueryParameter("ScanType", scanType);
@@ -103,10 +107,13 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * The key that stores the asset information.
-         * <p>
+         * <p>The key that stores the asset information.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~GetAssetSelectionConfig~~">GetAssetSelectionConfig</a> operation to obtain the key value.</p>
+         * </blockquote>
          * 
-         * > You can call the [GetAssetSelectionConfig](~~GetAssetSelectionConfig~~) operation to obtain the key value.
+         * <strong>example:</strong>
+         * <p>845de1ec-4b08-42e1-b564-31321e48xxxx</p>
          */
         public Builder selectionKey(String selectionKey) {
             this.putQueryParameter("SelectionKey", selectionKey);

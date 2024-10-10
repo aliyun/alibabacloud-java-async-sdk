@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeConcernNecessityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeConcernNecessityResponseBody</p>
@@ -49,12 +50,12 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The priorities to fix the vulnerabilities. Valid values:
-         * <p>
-         * 
-         * *   asap: high
-         * *   later: medium
-         * *   nntf: low
+         * <p>The priorities to fix the vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li>asap: high</li>
+         * <li>later: medium</li>
+         * <li>nntf: low</li>
+         * </ul>
          */
         public Builder concernNecessity(java.util.List < String > concernNecessity) {
             this.concernNecessity = concernNecessity;
@@ -62,7 +63,10 @@ public class DescribeConcernNecessityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECC6B3E3-D496-512D-B46D-E6996A6B63EE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

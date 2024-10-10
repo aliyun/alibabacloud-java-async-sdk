@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemRuleAggregationTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListSystemRuleAggregationTypesResponseBody</p>
@@ -49,7 +50,7 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the aggregation types.
+         * <p>An array that consists of the aggregation types.</p>
          */
         public Builder aggregationTypeList(java.util.List < AggregationTypeList> aggregationTypeList) {
             this.aggregationTypeList = aggregationTypeList;
@@ -57,7 +58,10 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1427F3BE-8A7E-57F9-BD4E-590B00D2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSystemRuleAggregationTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSystemRuleAggregationTypesResponseBody</p>
+     */
     public static class AggregationTypeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
@@ -109,7 +119,10 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the aggregation type.
+             * <p>The ID of the aggregation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -117,7 +130,10 @@ public class ListSystemRuleAggregationTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the aggregation type.
+             * <p>The name of the aggregation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remote control****</p>
              */
             public Builder name(String name) {
                 this.name = name;

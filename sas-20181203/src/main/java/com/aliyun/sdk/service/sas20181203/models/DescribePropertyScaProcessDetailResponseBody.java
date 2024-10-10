@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyScaProcessDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyScaProcessDetailResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The processes collected by the asset fingerprints feature.
+         * <p>The processes collected by the asset fingerprints feature.</p>
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -77,7 +78,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyScaProcessDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyScaProcessDetailResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: **10**.
+             * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyScaProcessDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyScaProcessDetailResponseBody</p>
+     */
     public static class Propertys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cmdline")
         private String cmdline;
@@ -314,7 +342,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The command line of the process.
+             * <p>The command line of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java -Xms128m -Xmx512m -DNACOS_URL=<a href="http://10.184.XX.XX:8848">http://10.184.XX.XX:8848</a> -DNACOS_NAMESPACE=iam-sit -jar /opt/service/xxl-job/xxl-job-admin-2.3.0.jar</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -322,7 +353,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.
+             * <p>The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1597987834000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -330,7 +364,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the server.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp35tftuh52wbp1g****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +375,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the server.
+             * <p>The instance name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc-host-****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -346,7 +386,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.26.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -354,7 +397,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -362,7 +408,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the process.
+             * <p>The name of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -370,7 +419,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the process.
+             * <p>The ID of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>522</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -378,7 +430,10 @@ public class DescribePropertyScaProcessDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

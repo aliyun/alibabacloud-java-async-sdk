@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSimilarSecurityEventsQueryTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateSimilarSecurityEventsQueryTaskRequest</p>
@@ -105,10 +106,14 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * The ID of the alert event.
-         * <p>
+         * <p>The ID of the alert event.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.
+         * <strong>example:</strong>
+         * <p>14323</p>
          */
         public Builder securityEventId(Long securityEventId) {
             this.putQueryParameter("SecurityEventId", securityEventId);
@@ -117,10 +122,13 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * The codes of alert events that are triggered by the same rule or of the same alert type.
-         * <p>
+         * <p>The codes of alert events that are triggered by the same rule or of the same alert type.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder similarEventScenarioCode(String similarEventScenarioCode) {
             this.putQueryParameter("SimilarEventScenarioCode", similarEventScenarioCode);
@@ -129,7 +137,10 @@ public class CreateSimilarSecurityEventsQueryTaskRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

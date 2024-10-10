@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizedStrategyTargetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomizedStrategyTargetsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
         private java.util.List < StartegyTargets> startegyTargets; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1EE7B150-D67E-53FD-A52D-3E8E669A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the servers to which custom policies are applied.
+         * <p>The information about the servers to which custom policies are applied.</p>
          */
         public Builder startegyTargets(java.util.List < StartegyTargets> startegyTargets) {
             this.startegyTargets = startegyTargets;
@@ -70,6 +74,12 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomizedStrategyTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomizedStrategyTargetsResponseBody</p>
+     */
     public static class StartegyTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
@@ -133,10 +143,13 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the server group.
-             * <p>
+             * <p>The ID of the server group.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+             * <strong>example:</strong>
+             * <p>14590457</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -144,7 +157,10 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the baseline check policy.
+             * <p>The ID of the baseline check policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1884</p>
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -152,7 +168,10 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline check policy.
+             * <p>The name of the baseline check policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>win</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -160,10 +179,13 @@ public class DescribeCustomizedStrategyTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
-             * <p>
+             * <p>The UUID of the server.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+             * <strong>example:</strong>
+             * <p>2701ad2e-0e8f-428c-8812-ebb2686e****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

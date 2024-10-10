@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperationSuspEventsResponseBody} extends {@link TeaModel}
  *
  * <p>OperationSuspEventsResponseBody</p>
@@ -61,11 +62,14 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether you have access permissions. Valid values:
-         * <p>
+         * <p>Indicates whether you have access permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>pass</strong>: yes</li>
+         * <li><strong>no_permission</strong>: no</li>
+         * </ul>
          * 
-         * *   **pass**: yes
-         * *   **no_permission**: no
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder accessCode(String accessCode) {
             this.accessCode = accessCode;
@@ -73,7 +77,10 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,11 +88,14 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether exceptions are handled. Valid values:
-         * <p>
+         * <p>Indicates whether exceptions are handled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFileUploadLimitResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateFileUploadLimitResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateFileUploadLimitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8BF6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetClusterInterceptionConfigRequest} extends {@link RequestModel}
  *
  * <p>SetClusterInterceptionConfigRequest</p>
@@ -84,10 +85,14 @@ public class SetClusterInterceptionConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster. Separate multiple cluster IDs with commas (,).
-         * <p>
+         * <p>The ID of the cluster. Separate multiple cluster IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListClusterInterceptionConfig~~">ListClusterInterceptionConfig</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListClusterInterceptionConfig](~~ListClusterInterceptionConfig~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>c60b77fe62093480db6164a3c2fa****</p>
          */
         public Builder clusterIds(String clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);
@@ -96,11 +101,15 @@ public class SetClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to turn on the switch. Valid values:
-         * <p>
+         * <p>Specifies whether to turn on the switch. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder switchOn(Integer switchOn) {
             this.putQueryParameter("SwitchOn", switchOn);
@@ -109,12 +118,16 @@ public class SetClusterInterceptionConfigRequest extends Request {
         }
 
         /**
-         * The type of the switch that you want to configure. Valid values:
-         * <p>
+         * <p>The type of the switch that you want to configure. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the interception switch</li>
+         * <li><strong>1</strong>: the interception type switch</li>
+         * <li><strong>2</strong>: the interception history switch</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: the interception switch
-         * *   **1**: the interception type switch
-         * *   **2**: the interception history switch
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder switchType(Integer switchType) {
             this.putQueryParameter("SwitchType", switchType);

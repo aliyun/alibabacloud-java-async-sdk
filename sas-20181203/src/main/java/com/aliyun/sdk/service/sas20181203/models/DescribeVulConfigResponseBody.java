@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulConfigResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeVulConfigResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeVulConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the configurations of vulnerability management.
+         * <p>An array that consists of the configurations of vulnerability management.</p>
          */
         public Builder targetConfigs(java.util.List < TargetConfigs> targetConfigs) {
             this.targetConfigs = targetConfigs;
@@ -77,7 +81,10 @@ public class DescribeVulConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of configurations.
+         * <p>The total number of configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeVulConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVulConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulConfigResponseBody</p>
+     */
     public static class TargetConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -141,22 +154,27 @@ public class DescribeVulConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The configuration of vulnerability scan.
-             * <p>
+             * <p>The configuration of vulnerability scan.</p>
+             * <blockquote>
+             * <p>Valid values when you set the Type parameter to <strong>cve</strong>, <strong>sys</strong>, <strong>cms</strong>, <strong>app</strong>, <strong>emg</strong>, or <strong>yum</strong>:</p>
+             * </blockquote>
+             * <ul>
+             * <li><p><strong>on</strong>: enabled</p>
+             * </li>
+             * <li><p><strong>off</strong>: disabled</p>
+             * </li>
+             * </ul>
+             * <p>Valid values when you set the Type parameter to <strong>scanMode</strong>:</p>
+             * <ul>
+             * <li><p><strong>real</strong>: displays easily exploitable vulnerability.</p>
+             * </li>
+             * <li><p><strong>all</strong>: displays all vulnerabilities.</p>
+             * </li>
+             * </ul>
+             * <p>When you set the Type parameter to <strong>imageVulClean</strong>, the value of this parameter indicates the vulnerability retention period in days.</p>
              * 
-             * > Valid values when you set the Type parameter to **cve**, **sys**, **cms**, **app**, **emg**, or **yum**:
-             * 
-             * *   **on**: enabled
-             * 
-             * *   **off**: disabled
-             * 
-             * Valid values when you set the Type parameter to **scanMode**:
-             * 
-             * *   **real**: displays easily exploitable vulnerability.
-             * 
-             * *   **all**: displays all vulnerabilities.
-             * 
-             * When you set the Type parameter to **imageVulClean**, the value of this parameter indicates the vulnerability retention period in days.
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -164,11 +182,14 @@ public class DescribeVulConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vulnerability management feature is enabled for all servers. Valid values:
-             * <p>
+             * <p>Indicates whether the vulnerability management feature is enabled for all servers. Valid values:</p>
+             * <ul>
+             * <li><strong>off</strong>: disabled</li>
+             * <li><strong>on</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **off**: disabled
-             * *   **on**: enabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder overAllConfig(String overAllConfig) {
                 this.overAllConfig = overAllConfig;
@@ -176,17 +197,20 @@ public class DescribeVulConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of configuration. Valid values:
-             * <p>
+             * <p>The type of configuration. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: Linux software vulnerability.</li>
+             * <li><strong>sys</strong>: Windows system vulnerability.</li>
+             * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
+             * <li><strong>app</strong>: application vulnerability that is detected by using web scanner.</li>
+             * <li><strong>emg</strong>: urgent vulnerability.</li>
+             * <li><strong>scanMode</strong>: displays easily exploitable vulnerability.</li>
+             * <li><strong>imageVulClean</strong>: vulnerability retention duration.</li>
+             * <li><strong>yum</strong>: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.</li>
+             * </ul>
              * 
-             * *   **cve**: Linux software vulnerability.
-             * *   **sys**: Windows system vulnerability.
-             * *   **cms**: Web-CMS vulnerability.
-             * *   **app**: application vulnerability that is detected by using web scanner.
-             * *   **emg**: urgent vulnerability.
-             * *   **scanMode**: displays easily exploitable vulnerability.
-             * *   **imageVulClean**: vulnerability retention duration.
-             * *   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder type(String type) {
                 this.type = type;

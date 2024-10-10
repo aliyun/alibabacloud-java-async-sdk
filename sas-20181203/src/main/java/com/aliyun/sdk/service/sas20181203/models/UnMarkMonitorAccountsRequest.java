@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnMarkMonitorAccountsRequest} extends {@link RequestModel}
  *
  * <p>UnMarkMonitorAccountsRequest</p>
@@ -54,7 +55,11 @@ public class UnMarkMonitorAccountsRequest extends Request {
         } 
 
         /**
-         * The IDs of the members.
+         * <p>The IDs of the members.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125267953644XXXX,125807832682XXXX</p>
          */
         public Builder accountIds(String accountIds) {
             this.putQueryParameter("AccountIds", accountIds);

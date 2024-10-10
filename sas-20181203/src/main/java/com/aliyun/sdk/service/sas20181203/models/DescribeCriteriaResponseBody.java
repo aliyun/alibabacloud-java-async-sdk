@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCriteriaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCriteriaResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the search conditions of assets.
+         * <p>The information about the search conditions of assets.</p>
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -57,7 +58,10 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8E6DDACF-99AF-5939-AFFD-FCCD3B01E724</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCriteriaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCriteriaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCriteriaResponseBody</p>
+     */
     public static class CriteriaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MultiValues")
         private String multiValues;
@@ -133,11 +143,14 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:
-             * <p>
+             * <p>The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:</p>
+             * <ul>
+             * <li><strong>vendor</strong>: providers.</li>
+             * <li><strong>regionIds</strong>: IDs of supported regions</li>
+             * </ul>
              * 
-             * *   **vendor**: providers.
-             * *   **regionIds**: IDs of supported regions
+             * <strong>example:</strong>
+             * <p>[{&quot;vendor&quot;:0,&quot;regionIds&quot;:{&quot;default&quot;:[&quot;ap-southeast-1&quot;,&quot;ap-northeast-2&quot;,&quot;ap-southeast-3&quot;,&quot;ap-southeast-5&quot;,&quot;ap-southeast-7&quot;,&quot;me-central-1&quot;]}},{&quot;vendor&quot;:1,&quot;regionIds&quot;:{&quot;default&quot;:[&quot;outside-of-aliyun&quot;]}}]</p>
              */
             public Builder multiValues(String multiValues) {
                 this.multiValues = multiValues;
@@ -145,32 +158,35 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the search condition. Valid values:
-             * <p>
+             * <p>The name of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>internetIp</strong>: the public IP address.</li>
+             * <li><strong>intranetIp</strong>: the private IP address.</li>
+             * <li><strong>instanceName</strong>: the name of the instance.</li>
+             * <li><strong>instanceId</strong>: the instance ID.</li>
+             * <li><strong>vpcInstanceId</strong>: the ID of the virtual private cloud (VPC) to which the instance belongs.</li>
+             * <li><strong>osName</strong>: the operating system.</li>
+             * <li><strong>osType</strong>: the operating system type.</li>
+             * <li><strong>hcStatus</strong>: indicates whether baseline risks exist.</li>
+             * <li><strong>vulStatus</strong>: indicates whether vulnerabilities exist.</li>
+             * <li><strong>alarmStatus</strong>: indicates whether security alerts exist.</li>
+             * <li><strong>riskStatus</strong>: indicates whether risks exist.</li>
+             * <li><strong>clientStatus</strong>: indicates the status of the client.</li>
+             * <li><strong>runningStatus</strong>: the running status of the asset.</li>
+             * <li><strong>tagName</strong>: the name of the tag.</li>
+             * <li><strong>groupName</strong>: the name of the server group.</li>
+             * <li><strong>regionId</strong>: the region ID.</li>
+             * <li><strong>importance</strong>: the importance of the asset.</li>
+             * <li><strong>exposedStatus</strong>: indicates whether the server is exposed.</li>
+             * <li><strong>authVersion</strong>: the authorization version.</li>
+             * <li><strong>flag</strong>: the cloud service provider.</li>
+             * <li><strong>ipList</strong>: the IP addresses.</li>
+             * <li><strong>uuidList</strong> :the UUID.</li>
+             * <li><strong>tagKeyValue</strong>: the ECS tag.</li>
+             * </ul>
              * 
-             * *   **internetIp**: the public IP address.
-             * *   **intranetIp**: the private IP address.
-             * *   **instanceName**: the name of the instance.
-             * *   **instanceId**: the instance ID.
-             * *   **vpcInstanceId**: the ID of the virtual private cloud (VPC) to which the instance belongs.
-             * *   **osName**: the operating system.
-             * *   **osType**: the operating system type.
-             * *   **hcStatus**: indicates whether baseline risks exist.
-             * *   **vulStatus**: indicates whether vulnerabilities exist.
-             * *   **alarmStatus**: indicates whether security alerts exist.
-             * *   **riskStatus**: indicates whether risks exist.
-             * *   **clientStatus**: indicates the status of the client.
-             * *   **runningStatus**: the running status of the asset.
-             * *   **tagName**: the name of the tag.
-             * *   **groupName**: the name of the server group.
-             * *   **regionId**: the region ID.
-             * *   **importance**: the importance of the asset.
-             * *   **exposedStatus**: indicates whether the server is exposed.
-             * *   **authVersion**: the authorization version.
-             * *   **flag**: the cloud service provider.
-             * *   **ipList**: the IP addresses.
-             * *   **uuidList** :the UUID.
-             * *   **tagKeyValue**: the ECS tag.
+             * <strong>example:</strong>
+             * <p>internetIp</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,11 +194,14 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the search condition. Valid values:
-             * <p>
+             * <p>The type of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>input</strong>: The search condition needs to be specified.</li>
+             * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+             * </ul>
              * 
-             * *   **input**: The search condition needs to be specified.
-             * *   **select**: The search condition is an option that can be selected from the drop-down list.
+             * <strong>example:</strong>
+             * <p>input</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -190,7 +209,10 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The attribute values of the assets that match the keyword.
+             * <p>The attribute values of the assets that match the keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.96.XX.XX</p>
              */
             public Builder values(String values) {
                 this.values = values;

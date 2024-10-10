@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVulTargetConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyVulTargetConfigRequest</p>
@@ -98,11 +99,15 @@ public class ModifyVulTargetConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable vulnerability detection. Valid values:
-         * <p>
+         * <p>Specifies whether to enable vulnerability detection. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: yes</li>
+         * <li><strong>off</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **on**: yes
-         * *   **off**: no
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -111,7 +116,10 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -120,13 +128,17 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
-         * *   **emg**: urgent vulnerability
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -135,7 +147,11 @@ public class ModifyVulTargetConfigRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet-7c676676-06fa-442e-90fb-b802e5d6****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

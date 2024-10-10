@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSearchConditionResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteSearchConditionResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteSearchConditionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2983C540-E51F-582A-B510-732C27CD914C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

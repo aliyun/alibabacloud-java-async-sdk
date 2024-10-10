@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckSecurityEventIdRequest} extends {@link RequestModel}
  *
  * <p>CheckSecurityEventIdRequest</p>
@@ -68,10 +69,13 @@ public class CheckSecurityEventIdRequest extends Request {
         } 
 
         /**
-         * The IDs of alert events. You can specify up to 100 IDs. If you do not specify this parameter, the value of the response parameter **Data** is **false**. The value false indicates that no alert events are generated on the server.
-         * <p>
+         * <p>The IDs of alert events. You can specify up to 100 IDs. If you do not specify this parameter, the value of the response parameter <strong>Data</strong> is <strong>false</strong>. The value false indicates that no alert events are generated on the server.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the IDs of alert events.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.
+         * <strong>example:</strong>
+         * <p>[&quot;1234567&quot;,&quot;98765432&quot;]</p>
          */
         public Builder securityEventIds(java.util.List < String > securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);
@@ -80,10 +84,14 @@ public class CheckSecurityEventIdRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>96ad2473-bc60-45ba-ad1c-932e2866****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAutoDelConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyAutoDelConfigRequest</p>
@@ -53,12 +54,15 @@ public class ModifyAutoDelConfigRequest extends Request {
         } 
 
         /**
-         * The number of days after which a detected vulnerability is automatically deleted. Unit: days. Valid values:
-         * <p>
+         * <p>The number of days after which a detected vulnerability is automatically deleted. Unit: days. Valid values:</p>
+         * <ul>
+         * <li>7</li>
+         * <li>30</li>
+         * <li>90</li>
+         * </ul>
          * 
-         * *   7
-         * *   30
-         * *   90
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder days(Integer days) {
             this.putQueryParameter("Days", days);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FindContainerNetworkConnectResponseBody} extends {@link TeaModel}
  *
  * <p>FindContainerNetworkConnectResponseBody</p>
@@ -61,7 +62,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the network connections.
+         * <p>The information about the network connections.</p>
          */
         public Builder connects(java.util.List < Connects> connects) {
             this.connects = connects;
@@ -69,7 +70,7 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8686CE6E-9BFA-5436-A9D9-77B984AEE7F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link FindContainerNetworkConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindContainerNetworkConnectResponseBody</p>
+     */
     public static class DstContainer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
@@ -117,7 +127,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private String containerId; 
 
             /**
-             * The ID of the destination container.
+             * <p>The ID of the destination container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48a6dxxx9d5a5866</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -131,6 +144,12 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindContainerNetworkConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindContainerNetworkConnectResponseBody</p>
+     */
     public static class SrcContainer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
@@ -158,7 +177,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private String containerId; 
 
             /**
-             * The ID of the source container.
+             * <p>The ID of the source container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48a6xxx5709d5a5866</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -172,6 +194,12 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindContainerNetworkConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindContainerNetworkConnectResponseBody</p>
+     */
     public static class Connects extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DstContainer")
         private DstContainer dstContainer;
@@ -295,10 +323,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private String srcPort; 
 
             /**
-             * The information about the destination container.
-             * <p>
-             * 
-             * > This parameter is not supported.
+             * <p>The information about the destination container.</p>
+             * <blockquote>
+             * <p>This parameter is not supported.</p>
+             * </blockquote>
              */
             public Builder dstContainer(DstContainer dstContainer) {
                 this.dstContainer = dstContainer;
@@ -306,7 +334,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The destination IP address.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.20.62.176</p>
              */
             public Builder dstIp(String dstIp) {
                 this.dstIp = dstIp;
@@ -314,7 +345,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The destination port.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder dstPort(String dstPort) {
                 this.dstPort = dstPort;
@@ -322,7 +356,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the connection was first established.
+             * <p>The timestamp when the connection was first established.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-11 20:54:32</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -330,7 +367,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network connection.
+             * <p>The ID of the network connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1458</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -338,7 +378,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the connection was last established.
+             * <p>The timestamp when the connection was last established.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-24 10:26:00</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -346,10 +389,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the source container.
-             * <p>
-             * 
-             * > This parameter is not supported.
+             * <p>The information about the source container.</p>
+             * <blockquote>
+             * <p>This parameter is not supported.</p>
+             * </blockquote>
              */
             public Builder srcContainer(SrcContainer srcContainer) {
                 this.srcContainer = srcContainer;
@@ -357,7 +400,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address.
+             * <p>The source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35.233.62.116</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -365,7 +411,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The source port.
+             * <p>The source port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder srcPort(String srcPort) {
                 this.srcPort = srcPort;
@@ -379,6 +428,12 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link FindContainerNetworkConnectResponseBody} extends {@link TeaModel}
+     *
+     * <p>FindContainerNetworkConnectResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -442,7 +497,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -450,7 +508,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -458,7 +519,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -466,7 +530,10 @@ public class FindContainerNetworkConnectResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

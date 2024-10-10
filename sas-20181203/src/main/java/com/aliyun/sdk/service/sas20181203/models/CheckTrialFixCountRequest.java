@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckTrialFixCountRequest} extends {@link RequestModel}
  *
  * <p>CheckTrialFixCountRequest</p>
@@ -105,7 +106,10 @@ public class CheckTrialFixCountRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateAutoTagRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateOrUpdateAutoTagRuleRequest</p>
@@ -141,11 +142,14 @@ public class CreateOrUpdateAutoTagRuleRequest extends Request {
         } 
 
         /**
-         * Specifies whether to check the rule on the backend. Valid values:
-         * <p>
+         * <p>Specifies whether to check the rule on the backend. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder checkAll(Boolean checkAll) {
             this.putQueryParameter("CheckAll", checkAll);
@@ -154,7 +158,11 @@ public class CreateOrUpdateAutoTagRuleRequest extends Request {
         }
 
         /**
-         * The expression of the rule.
+         * <p>The expression of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;groups&quot;:&quot;0&quot;,&quot;fieldValueType&quot;:&quot;string&quot;,&quot;field&quot;:&quot;internetIp&quot;,&quot;operator&quot;:&quot;equals&quot;,&quot;value&quot;:&quot;12.0.0.1&quot;}]</p>
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -163,7 +171,10 @@ public class CreateOrUpdateAutoTagRuleRequest extends Request {
         }
 
         /**
-         * The description of the rule.
+         * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>describe</p>
          */
         public Builder ruleDesc(String ruleDesc) {
             this.putQueryParameter("RuleDesc", ruleDesc);
@@ -172,10 +183,13 @@ public class CreateOrUpdateAutoTagRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListAutoTagRules~~">ListAutoTagRules</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListAutoTagRules](~~ListAutoTagRules~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>300566</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -184,7 +198,11 @@ public class CreateOrUpdateAutoTagRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-001</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -193,11 +211,15 @@ public class CreateOrUpdateAutoTagRuleRequest extends Request {
         }
 
         /**
-         * The tag specified by the operation type of the rule.
-         * <p>
+         * <p>The tag specified by the operation type of the rule.</p>
+         * <ul>
+         * <li>If TagType is set to group, set this parameter to {&quot;groupId&quot;:XXX}. XXX specifies the ID of the group. You can call the <a href="~~DescribeGroupStruct~~">DescribeGroupStruct</a> operation to query the ID.</li>
+         * <li>If TagType is set to tag, set this parameter to {&quot;tagId&quot;:XXX}. XXX specifies the ID of the tag. You can call the <a href="~~DescribeGroupedTags~~">DescribeGroupedTags</a> operation to query the ID.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   If TagType is set to group, set this parameter to {"groupId":XXX}. XXX specifies the ID of the group. You can call the [DescribeGroupStruct](~~DescribeGroupStruct~~) operation to query the ID.
-         * *   If TagType is set to tag, set this parameter to {"tagId":XXX}. XXX specifies the ID of the tag. You can call the [DescribeGroupedTags](~~DescribeGroupedTags~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>{&quot;tagId&quot;:7804789}</p>
          */
         public Builder tagContext(String tagContext) {
             this.putQueryParameter("TagContext", tagContext);
@@ -206,11 +228,15 @@ public class CreateOrUpdateAutoTagRuleRequest extends Request {
         }
 
         /**
-         * The operation type of the rule. Valid values:
-         * <p>
+         * <p>The operation type of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>group</strong></li>
+         * <li><strong>tag</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **group**
-         * *   **tag**
+         * <strong>example:</strong>
+         * <p>tag</p>
          */
         public Builder tagType(String tagType) {
             this.putQueryParameter("TagType", tagType);

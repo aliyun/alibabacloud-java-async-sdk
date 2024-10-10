@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDingTalkResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDingTalkResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of details of notifications.
+         * <p>An array that consists of details of notifications.</p>
          */
         public Builder actionList(java.util.List < ActionList> actionList) {
             this.actionList = actionList;
@@ -69,7 +70,7 @@ public class DescribeDingTalkResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B256A525-7E42-4BB9-A27C-9017FDDFF1A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeDingTalkResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDingTalkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDingTalkResponseBody</p>
+     */
     public static class ActionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionName")
         private String actionName;
@@ -237,7 +247,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The name of the notification.
+             * <p>The name of the notification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alert notification</p>
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -245,7 +258,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the user.
+             * <p>The UID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12312412341</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -253,7 +269,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The list of notification settings.
+             * <p>The list of notification settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;type&quot;:&quot;vul&quot;,&quot;configItemList&quot;:[{&quot;key&quot;:&quot;key&quot;, &quot;valueList&quot;:&quot;123&quot;}]}]</p>
              */
             public Builder configList(String configList) {
                 this.configList = configList;
@@ -261,11 +280,14 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the content within notifications. Valid values:
-             * <p>
+             * <p>The language of the content within notifications. Valid values:</p>
+             * <ul>
+             * <li><strong>zh</strong>: Chinese</li>
+             * <li><strong>en</strong>: English</li>
+             * </ul>
              * 
-             * *   **zh**: Chinese
-             * *   **en**: English
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder dingTalkLang(String dingTalkLang) {
                 this.dingTalkLang = dingTalkLang;
@@ -273,7 +295,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time. unit:millisecond.
+             * <p>The creation time. unit:millisecond.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1550828400000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -281,7 +306,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1550828400000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -289,7 +317,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The group IDs.
+             * <p>The group IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;123,456&quot;</p>
              */
             public Builder groupIdList(String groupIdList) {
                 this.groupIdList = groupIdList;
@@ -297,7 +328,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the notification.
+             * <p>The ID of the notification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -305,7 +339,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the notifications are sent.unit:minute.
+             * <p>The interval at which the notifications are sent.unit:minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder intervalTime(Integer intervalTime) {
                 this.intervalTime = intervalTime;
@@ -313,11 +350,14 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the notification. Valid values:
-             * <p>
+             * <p>The status of the notification. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -325,7 +365,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the notification.
+             * <p>The parameters of the notification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send">https://oapi.dingtalk.com/robot/send</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -339,6 +382,12 @@ public class DescribeDingTalkResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDingTalkResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDingTalkResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -390,7 +439,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -398,7 +450,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -406,7 +461,10 @@ public class DescribeDingTalkResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of messages.
+             * <p>The total number of messages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

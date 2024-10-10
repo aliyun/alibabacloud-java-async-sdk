@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteK8sAccessInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteK8sAccessInfoResponseBody</p>
@@ -49,11 +50,14 @@ public class DeleteK8sAccessInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the request was successful. Valid value:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -61,7 +65,10 @@ public class DeleteK8sAccessInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5338DE5-5D80-51A1-B330-98300AFB80E9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

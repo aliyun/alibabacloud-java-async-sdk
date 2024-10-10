@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRulesCountResponseBody} extends {@link TeaModel}
  *
  * <p>GetRulesCountResponseBody</p>
@@ -61,7 +62,10 @@ public class GetRulesCountResponseBody extends TeaModel {
         private Long totalUserDefineRuleCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class GetRulesCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of system defense rules.
+         * <p>The total number of system defense rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalSystemClientRuleCount(Long totalSystemClientRuleCount) {
             this.totalSystemClientRuleCount = totalSystemClientRuleCount;
@@ -77,7 +84,10 @@ public class GetRulesCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of custom defense rules.
+         * <p>The total number of custom defense rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalUserDefineRuleCount(Long totalUserDefineRuleCount) {
             this.totalUserDefineRuleCount = totalUserDefineRuleCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspEventUserSettingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSuspEventUserSettingResponseBody</p>
@@ -49,12 +50,12 @@ public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the risk levels of alert notifications. Valid values:
-         * <p>
-         * 
-         * *   **remind**
-         * *   **suspicious**
-         * *   **serious**
+         * <p>An array that consists of the risk levels of alert notifications. Valid values:</p>
+         * <ul>
+         * <li><strong>remind</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>serious</strong></li>
+         * </ul>
          */
         public Builder levelsOn(java.util.List < String > levelsOn) {
             this.levelsOn = levelsOn;
@@ -62,7 +63,10 @@ public class DescribeSuspEventUserSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028CF634-5268-5660-9575-48C9ED6XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

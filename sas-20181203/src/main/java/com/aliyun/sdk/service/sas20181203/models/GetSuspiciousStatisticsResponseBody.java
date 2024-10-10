@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSuspiciousStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetSuspiciousStatisticsResponseBody</p>
@@ -85,7 +86,10 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of alerts whose Emergency level is Reminder.
+         * <p>The number of alerts whose Emergency level is Reminder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder remindCount(Integer remindCount) {
             this.remindCount = remindCount;
@@ -93,7 +97,10 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84092B42-1A59-4F34-8DF8-1D93520990A5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +108,10 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of alerts whose Emergency level is Urgent.
+         * <p>The number of alerts whose Emergency level is Urgent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder seriousCount(Integer seriousCount) {
             this.seriousCount = seriousCount;
@@ -109,7 +119,10 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of alerts whose Emergency level is Suspicious.
+         * <p>The number of alerts whose Emergency level is Suspicious.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder suspiciousCount(Integer suspiciousCount) {
             this.suspiciousCount = suspiciousCount;
@@ -117,7 +130,10 @@ public class GetSuspiciousStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of alerts.
+         * <p>The total number of alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListQueryRaspAppInfoRequest} extends {@link RequestModel}
  *
  * <p>ListQueryRaspAppInfoRequest</p>
@@ -67,11 +68,14 @@ public class ListQueryRaspAppInfoRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong></li>
+         * <li><strong>en</strong></li>
+         * </ul>
          * 
-         * *   **zh**
-         * *   **en**
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -80,7 +84,10 @@ public class ListQueryRaspAppInfoRequest extends Request {
         }
 
         /**
-         * The UUIDs of the RASP-enabled applications. Separate multiple UUIDs with commas (,).
+         * <p>The UUIDs of the RASP-enabled applications. Separate multiple UUIDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6541631a-7d47-41fd-9fef-9518113f****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

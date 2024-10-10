@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAgentlessScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAgentlessScanTaskResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateAgentlessScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E90DE229-9FC6-58F6-BF4B-03AD6179****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

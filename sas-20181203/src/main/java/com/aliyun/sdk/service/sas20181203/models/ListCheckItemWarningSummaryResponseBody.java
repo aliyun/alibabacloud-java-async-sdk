@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckItemWarningSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>ListCheckItemWarningSummaryResponseBody</p>
@@ -61,7 +62,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The risk statistics of check items.
+         * <p>The risk statistics of check items.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -69,7 +70,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC97C9EC-4B7D-5EFF-8A5E-A5CCC9ED****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCheckItemWarningSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckItemWarningSummaryResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Advice")
         private String advice;
@@ -273,7 +283,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private Integer warningMachineCount; 
 
             /**
-             * The suggestion on the check item.
+             * <p>The suggestion on the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>In the Administrative Tools window, double-click Local Security Policy. In the Local Security Policy window that appears, choose Security Settings\Local Policies\Audit Policy, configure all audit policies as: <code>Success, Failure</code>.</p>
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -281,7 +294,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the baselines to which the check item belongs.
+             * <p>The types of the baselines to which the check item belongs.</p>
              */
             public Builder affiliatedRiskTypes(java.util.List < String > affiliatedRiskTypes) {
                 this.affiliatedRiskTypes = affiliatedRiskTypes;
@@ -289,7 +302,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The baselines to which the check item belongs.
+             * <p>The baselines to which the check item belongs.</p>
              */
             public Builder affiliatedRisks(java.util.List < String > affiliatedRisks) {
                 this.affiliatedRisks = affiliatedRisks;
@@ -297,7 +310,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the baseline type.
+             * <p>The alias of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>week_pa****</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -305,7 +321,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>696</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -313,7 +332,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the check item.
+             * <p>The description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Config the Event Audit policys</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -321,12 +343,15 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the check item. Valid values:
-             * <p>
+             * <p>The risk level of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder checkLevel(String checkLevel) {
                 this.checkLevel = checkLevel;
@@ -334,7 +359,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item.
+             * <p>The type of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security audit</p>
              */
             public Builder checkType(String checkType) {
                 this.checkType = checkType;
@@ -342,11 +370,14 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the check item belongs to the container runtime type. Valid values:
-             * <p>
+             * <p>Indicates whether the check item belongs to the container runtime type. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder containerCheckItem(Boolean containerCheckItem) {
                 this.containerCheckItem = containerCheckItem;
@@ -354,7 +385,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the check item.
+             * <p>The description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Config the Event Audit policys</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -362,7 +396,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The baselines in which the check item is enabled.
+             * <p>The baselines in which the check item is enabled.</p>
              */
             public Builder enableRisks(java.util.List < String > enableRisks) {
                 this.enableRisks = enableRisks;
@@ -370,7 +404,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the baseline.
+             * <p>The type of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weak_password</p>
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
@@ -378,11 +415,15 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The risk status of the check item. Valid values:
-             * <p>
+             * <p>The risk status of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: failed</li>
+             * <li><strong>3</strong>: passed</li>
+             * <li><strong>6</strong>: Added to Whitelist</li>
+             * </ul>
              * 
-             * *   **1**: failed
-             * *   **3**: passed
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -390,7 +431,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers that are affected by the check item.
+             * <p>The number of servers that are affected by the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder warningMachineCount(Integer warningMachineCount) {
                 this.warningMachineCount = warningMachineCount;
@@ -404,6 +448,12 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCheckItemWarningSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCheckItemWarningSummaryResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -467,7 +517,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -475,7 +528,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -483,7 +539,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -491,7 +550,10 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

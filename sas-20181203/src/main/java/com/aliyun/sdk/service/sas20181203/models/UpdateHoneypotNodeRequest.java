@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHoneypotNodeRequest} extends {@link RequestModel}
  *
  * <p>UpdateHoneypotNodeRequest</p>
@@ -98,7 +99,11 @@ public class UpdateHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * The number of available probes.
+         * <p>The number of available probes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder availableProbeNum(Integer availableProbeNum) {
             this.putQueryParameter("AvailableProbeNum", availableProbeNum);
@@ -107,10 +112,14 @@ public class UpdateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The ID of the management node.
-         * <p>
+         * <p>The ID of the management node.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+         * <strong>example:</strong>
+         * <p>67ab3f4c-3db5-4fc3-b51f-00f8bfabfa08</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -119,7 +128,11 @@ public class UpdateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The name of the management node.
+         * <p>The name of the management node.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HoneypotNodeTest</p>
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -128,7 +141,7 @@ public class UpdateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The CIDR blocks that are allowed to access the management node.
+         * <p>The CIDR blocks that are allowed to access the management node.</p>
          */
         public Builder securityGroupProbeIpList(java.util.List < String > securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateAlarmEventRequest} extends {@link RequestModel}
  *
  * <p>UpdateAlarmEventRequest</p>
@@ -81,7 +82,7 @@ public class UpdateAlarmEventRequest extends Request {
         } 
 
         /**
-         * The IDs of the alert events.
+         * <p>The IDs of the alert events.</p>
          */
         public Builder alarmEventIdList(java.util.List < Long > alarmEventIdList) {
             this.putBodyParameter("AlarmEventIdList", alarmEventIdList);
@@ -90,11 +91,14 @@ public class UpdateAlarmEventRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -103,12 +107,15 @@ public class UpdateAlarmEventRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the alert events. Valid values:
-         * <p>
+         * <p>The operation that you want to perform on the alert events. Valid values:</p>
+         * <ul>
+         * <li><strong>manual_handled</strong>: handle the alert events.</li>
+         * <li><strong>ignore</strong>: igore the alert events.</li>
+         * <li><strong>cancel_ignore</strong>: remove the alert events from the whitelist.</li>
+         * </ul>
          * 
-         * *   **manual_handled**: handle the alert events.
-         * *   **ignore**: igore the alert events.
-         * *   **cancel_ignore**: remove the alert events from the whitelist.
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         public Builder operationCode(String operationCode) {
             this.putBodyParameter("OperationCode", operationCode);

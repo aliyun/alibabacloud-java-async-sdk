@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCycleTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteCycleTaskRequest</p>
@@ -54,10 +55,14 @@ public class DeleteCycleTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task configuration.
-         * <p>
+         * <p>The ID of the task configuration.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCycleTaskList](~~DescribeCycleTaskList~~) operation to query the IDs of task configurations.
+         * <strong>example:</strong>
+         * <p>435f626256ebf564cf5ba966a539****</p>
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);

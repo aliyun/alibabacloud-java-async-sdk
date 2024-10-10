@@ -79,6 +79,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of AddAssetSelectionCriteria  AddAssetSelectionCriteriaRequest
+     * @return AddAssetSelectionCriteriaResponse
+     */
     @Override
     public CompletableFuture<AddAssetSelectionCriteriaResponse> addAssetSelectionCriteria(AddAssetSelectionCriteriaRequest request) {
         try {
@@ -93,6 +97,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddBaselineCheckWhiteRecord  AddBaselineCheckWhiteRecordRequest
+     * @return AddBaselineCheckWhiteRecordResponse
+     */
     @Override
     public CompletableFuture<AddBaselineCheckWhiteRecordResponse> addBaselineCheckWhiteRecord(AddBaselineCheckWhiteRecordRequest request) {
         try {
@@ -107,6 +115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddCheckInstanceResultWhiteList  AddCheckInstanceResultWhiteListRequest
+     * @return AddCheckInstanceResultWhiteListResponse
+     */
     @Override
     public CompletableFuture<AddCheckInstanceResultWhiteListResponse> addCheckInstanceResultWhiteList(AddCheckInstanceResultWhiteListRequest request) {
         try {
@@ -121,6 +133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddCheckResultWhiteList  AddCheckResultWhiteListRequest
+     * @return AddCheckResultWhiteListResponse
+     */
     @Override
     public CompletableFuture<AddCheckResultWhiteListResponse> addCheckResultWhiteList(AddCheckResultWhiteListRequest request) {
         try {
@@ -135,6 +151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddClientUserDefineRule  AddClientUserDefineRuleRequest
+     * @return AddClientUserDefineRuleResponse
+     */
     @Override
     public CompletableFuture<AddClientUserDefineRuleResponse> addClientUserDefineRule(AddClientUserDefineRuleRequest request) {
         try {
@@ -149,6 +169,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddCloudVendorAccountAK  AddCloudVendorAccountAKRequest
+     * @return AddCloudVendorAccountAKResponse
+     */
     @Override
     public CompletableFuture<AddCloudVendorAccountAKResponse> addCloudVendorAccountAK(AddCloudVendorAccountAKRequest request) {
         try {
@@ -163,6 +187,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddContainerDefenseRule  AddContainerDefenseRuleRequest
+     * @return AddContainerDefenseRuleResponse
+     */
     @Override
     public CompletableFuture<AddContainerDefenseRuleResponse> addContainerDefenseRule(AddContainerDefenseRuleRequest request) {
         try {
@@ -177,6 +205,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddContainerPluginRule  AddContainerPluginRuleRequest
+     * @return AddContainerPluginRuleResponse
+     */
     @Override
     public CompletableFuture<AddContainerPluginRuleResponse> addContainerPluginRule(AddContainerPluginRuleRequest request) {
         try {
@@ -192,8 +224,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Security Center allows you to create an IDC probe only on servers on which the Security Center agent is installed.
-      *
+     * <b>description</b> :
+     * <p>Security Center allows you to create an IDC probe only on servers on which the Security Center agent is installed.</p>
+     * 
+     * @param request the request parameters of AddIdcProbe  AddIdcProbeRequest
+     * @return AddIdcProbeResponse
      */
     @Override
     public CompletableFuture<AddIdcProbeResponse> addIdcProbe(AddIdcProbeRequest request) {
@@ -209,6 +244,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddImageEventOperation  AddImageEventOperationRequest
+     * @return AddImageEventOperationResponse
+     */
     @Override
     public CompletableFuture<AddImageEventOperationResponse> addImageEventOperation(AddImageEventOperationRequest request) {
         try {
@@ -223,6 +262,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddImageVulWhiteList  AddImageVulWhiteListRequest
+     * @return AddImageVulWhiteListResponse
+     */
     @Override
     public CompletableFuture<AddImageVulWhiteListResponse> addImageVulWhiteList(AddImageVulWhiteListRequest request) {
         try {
@@ -237,6 +280,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddInstallCode  AddInstallCodeRequest
+     * @return AddInstallCodeResponse
+     */
     @Override
     public CompletableFuture<AddInstallCodeResponse> addInstallCode(AddInstallCodeRequest request) {
         try {
@@ -251,6 +298,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddPrivateRegistry  AddPrivateRegistryRequest
+     * @return AddPrivateRegistryResponse
+     */
     @Override
     public CompletableFuture<AddPrivateRegistryResponse> addPrivateRegistry(AddPrivateRegistryRequest request) {
         try {
@@ -265,6 +316,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddPublishBatch  AddPublishBatchRequest
+     * @return AddPublishBatchResponse
+     */
+    @Override
+    public CompletableFuture<AddPublishBatchResponse> addPublishBatch(AddPublishBatchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddPublishBatch").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddPublishBatchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddPublishBatchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AddSasContainerWebDefenseRule  AddSasContainerWebDefenseRuleRequest
+     * @return AddSasContainerWebDefenseRuleResponse
+     */
     @Override
     public CompletableFuture<AddSasContainerWebDefenseRuleResponse> addSasContainerWebDefenseRule(AddSasContainerWebDefenseRuleRequest request) {
         try {
@@ -279,6 +352,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddSasModuleTrial  AddSasModuleTrialRequest
+     * @return AddSasModuleTrialResponse
+     */
     @Override
     public CompletableFuture<AddSasModuleTrialResponse> addSasModuleTrial(AddSasModuleTrialRequest request) {
         try {
@@ -294,8 +371,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.
-      *
+     * <b>description</b> :
+     * <p>Security Center provides asset importance tags and custom tags. You can call the AddTagWithUuid operation to add only a custom tag to assets.</p>
+     * 
+     * @param request the request parameters of AddTagWithUuid  AddTagWithUuidRequest
+     * @return AddTagWithUuidResponse
      */
     @Override
     public CompletableFuture<AddTagWithUuidResponse> addTagWithUuid(AddTagWithUuidRequest request) {
@@ -311,6 +391,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddUninstallClientsByUuids  AddUninstallClientsByUuidsRequest
+     * @return AddUninstallClientsByUuidsResponse
+     */
     @Override
     public CompletableFuture<AddUninstallClientsByUuidsResponse> addUninstallClientsByUuids(AddUninstallClientsByUuidsRequest request) {
         try {
@@ -325,6 +409,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AddVpcHoneyPot  AddVpcHoneyPotRequest
+     * @return AddVpcHoneyPotResponse
+     */
     @Override
     public CompletableFuture<AddVpcHoneyPotResponse> addVpcHoneyPot(AddVpcHoneyPotRequest request) {
         try {
@@ -339,6 +427,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of AdvanceSecurityEventOperations  AdvanceSecurityEventOperationsRequest
+     * @return AdvanceSecurityEventOperationsResponse
+     */
     @Override
     public CompletableFuture<AdvanceSecurityEventOperationsResponse> advanceSecurityEventOperations(AdvanceSecurityEventOperationsRequest request) {
         try {
@@ -353,6 +445,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchCreateMaliciousNote  BatchCreateMaliciousNoteRequest
+     * @return BatchCreateMaliciousNoteResponse
+     */
+    @Override
+    public CompletableFuture<BatchCreateMaliciousNoteResponse> batchCreateMaliciousNote(BatchCreateMaliciousNoteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchCreateMaliciousNote").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchCreateMaliciousNoteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchCreateMaliciousNoteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of BatchDeleteMaliciousFileWhitelistConfig  BatchDeleteMaliciousFileWhitelistConfigRequest
+     * @return BatchDeleteMaliciousFileWhitelistConfigResponse
+     */
     @Override
     public CompletableFuture<BatchDeleteMaliciousFileWhitelistConfigResponse> batchDeleteMaliciousFileWhitelistConfig(BatchDeleteMaliciousFileWhitelistConfigRequest request) {
         try {
@@ -367,6 +481,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchOperateCommonOverallConfig  BatchOperateCommonOverallConfigRequest
+     * @return BatchOperateCommonOverallConfigResponse
+     */
     @Override
     public CompletableFuture<BatchOperateCommonOverallConfigResponse> batchOperateCommonOverallConfig(BatchOperateCommonOverallConfigRequest request) {
         try {
@@ -381,6 +499,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BatchUpdateMaliciousFileWhitelistConfig  BatchUpdateMaliciousFileWhitelistConfigRequest
+     * @return BatchUpdateMaliciousFileWhitelistConfigResponse
+     */
     @Override
     public CompletableFuture<BatchUpdateMaliciousFileWhitelistConfigResponse> batchUpdateMaliciousFileWhitelistConfig(BatchUpdateMaliciousFileWhitelistConfigRequest request) {
         try {
@@ -395,6 +517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindAuthToMachine  BindAuthToMachineRequest
+     * @return BindAuthToMachineResponse
+     */
     @Override
     public CompletableFuture<BindAuthToMachineResponse> bindAuthToMachine(BindAuthToMachineRequest request) {
         try {
@@ -409,6 +535,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of BindHybridProxy  BindHybridProxyRequest
+     * @return BindHybridProxyResponse
+     */
     @Override
     public CompletableFuture<BindHybridProxyResponse> bindHybridProxy(BindHybridProxyRequest request) {
         try {
@@ -423,6 +553,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CancelOnceTask  CancelOnceTaskRequest
+     * @return CancelOnceTaskResponse
+     */
     @Override
     public CompletableFuture<CancelOnceTaskResponse> cancelOnceTask(CancelOnceTaskRequest request) {
         try {
@@ -437,6 +571,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeAssetRefreshTaskConfig  ChangeAssetRefreshTaskConfigRequest
+     * @return ChangeAssetRefreshTaskConfigResponse
+     */
     @Override
     public CompletableFuture<ChangeAssetRefreshTaskConfigResponse> changeAssetRefreshTaskConfig(ChangeAssetRefreshTaskConfigRequest request) {
         try {
@@ -451,6 +589,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeCheckConfig  ChangeCheckConfigRequest
+     * @return ChangeCheckConfigResponse
+     */
     @Override
     public CompletableFuture<ChangeCheckConfigResponse> changeCheckConfig(ChangeCheckConfigRequest request) {
         try {
@@ -465,6 +607,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeCheckCustomConfig  ChangeCheckCustomConfigRequest
+     * @return ChangeCheckCustomConfigResponse
+     */
     @Override
     public CompletableFuture<ChangeCheckCustomConfigResponse> changeCheckCustomConfig(ChangeCheckCustomConfigRequest request) {
         try {
@@ -479,6 +625,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeSecurityScoreRule  ChangeSecurityScoreRuleRequest
+     * @return ChangeSecurityScoreRuleResponse
+     */
     @Override
     public CompletableFuture<ChangeSecurityScoreRuleResponse> changeSecurityScoreRule(ChangeSecurityScoreRuleRequest request) {
         try {
@@ -493,6 +643,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ChangeUserLang  ChangeUserLangRequest
+     * @return ChangeUserLangResponse
+     */
     @Override
     public CompletableFuture<ChangeUserLangResponse> changeUserLang(ChangeUserLangRequest request) {
         try {
@@ -508,9 +662,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI CheckQuaraFileId is deprecated  * @param request  the request parameters of CheckQuaraFileId  CheckQuaraFileIdRequest
+     * @return CheckQuaraFileIdResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CheckQuaraFileIdResponse> checkQuaraFileId(CheckQuaraFileIdRequest request) {
         try {
@@ -525,6 +680,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckSecurityEventId  CheckSecurityEventIdRequest
+     * @return CheckSecurityEventIdResponse
+     */
     @Override
     public CompletableFuture<CheckSecurityEventIdResponse> checkSecurityEventId(CheckSecurityEventIdRequest request) {
         try {
@@ -539,6 +698,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckStsTokenAuth  CheckStsTokenAuthRequest
+     * @return CheckStsTokenAuthResponse
+     */
     @Override
     public CompletableFuture<CheckStsTokenAuthResponse> checkStsTokenAuth(CheckStsTokenAuthRequest request) {
         try {
@@ -553,6 +716,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckTrialFixCount  CheckTrialFixCountRequest
+     * @return CheckTrialFixCountResponse
+     */
     @Override
     public CompletableFuture<CheckTrialFixCountResponse> checkTrialFixCount(CheckTrialFixCountRequest request) {
         try {
@@ -567,6 +734,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CheckUserHasEcs  CheckUserHasEcsRequest
+     * @return CheckUserHasEcsResponse
+     */
     @Override
     public CompletableFuture<CheckUserHasEcsResponse> checkUserHasEcs(CheckUserHasEcsRequest request) {
         try {
@@ -581,6 +752,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ConfirmVirusEvents  ConfirmVirusEventsRequest
+     * @return ConfirmVirusEventsResponse
+     */
     @Override
     public CompletableFuture<ConfirmVirusEventsResponse> confirmVirusEvents(ConfirmVirusEventsRequest request) {
         try {
@@ -595,6 +770,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CopyCustomizeReportConfig  CopyCustomizeReportConfigRequest
+     * @return CopyCustomizeReportConfigResponse
+     */
     @Override
     public CompletableFuture<CopyCustomizeReportConfigResponse> copyCustomizeReportConfig(CopyCustomizeReportConfigRequest request) {
         try {
@@ -609,6 +788,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAgentlessScanTask  CreateAgentlessScanTaskRequest
+     * @return CreateAgentlessScanTaskResponse
+     */
     @Override
     public CompletableFuture<CreateAgentlessScanTaskResponse> createAgentlessScanTask(CreateAgentlessScanTaskRequest request) {
         try {
@@ -623,6 +806,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAntiBruteForceRule  CreateAntiBruteForceRuleRequest
+     * @return CreateAntiBruteForceRuleResponse
+     */
     @Override
     public CompletableFuture<CreateAntiBruteForceRuleResponse> createAntiBruteForceRule(CreateAntiBruteForceRuleRequest request) {
         try {
@@ -637,6 +824,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAssetSelectionConfig  CreateAssetSelectionConfigRequest
+     * @return CreateAssetSelectionConfigResponse
+     */
     @Override
     public CompletableFuture<CreateAssetSelectionConfigResponse> createAssetSelectionConfig(CreateAssetSelectionConfigRequest request) {
         try {
@@ -651,6 +842,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateAttestor  CreateAttestorRequest
+     * @return CreateAttestorResponse
+     */
     @Override
     public CompletableFuture<CreateAttestorResponse> createAttestor(CreateAttestorRequest request) {
         try {
@@ -665,6 +860,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateBackupPolicy  CreateBackupPolicyRequest
+     * @return CreateBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<CreateBackupPolicyResponse> createBackupPolicy(CreateBackupPolicyRequest request) {
         try {
@@ -679,6 +878,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateBinarySecurityPolicy  CreateBinarySecurityPolicyRequest
+     * @return CreateBinarySecurityPolicyResponse
+     */
     @Override
     public CompletableFuture<CreateBinarySecurityPolicyResponse> createBinarySecurityPolicy(CreateBinarySecurityPolicyRequest request) {
         try {
@@ -693,6 +896,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateContainerScanTask  CreateContainerScanTaskRequest
+     * @return CreateContainerScanTaskResponse
+     */
     @Override
     public CompletableFuture<CreateContainerScanTaskResponse> createContainerScanTask(CreateContainerScanTaskRequest request) {
         try {
@@ -707,6 +914,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateContainerScanTaskByAppName  CreateContainerScanTaskByAppNameRequest
+     * @return CreateContainerScanTaskByAppNameResponse
+     */
     @Override
     public CompletableFuture<CreateContainerScanTaskByAppNameResponse> createContainerScanTaskByAppName(CreateContainerScanTaskByAppNameRequest request) {
         try {
@@ -721,6 +932,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCustomBlockRecord  CreateCustomBlockRecordRequest
+     * @return CreateCustomBlockRecordResponse
+     */
     @Override
     public CompletableFuture<CreateCustomBlockRecordResponse> createCustomBlockRecord(CreateCustomBlockRecordRequest request) {
         try {
@@ -735,6 +950,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCustomizedDict  CreateCustomizedDictRequest
+     * @return CreateCustomizedDictResponse
+     */
     @Override
     public CompletableFuture<CreateCustomizedDictResponse> createCustomizedDict(CreateCustomizedDictRequest request) {
         try {
@@ -749,6 +968,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateCycleTask  CreateCycleTaskRequest
+     * @return CreateCycleTaskResponse
+     */
     @Override
     public CompletableFuture<CreateCycleTaskResponse> createCycleTask(CreateCycleTaskRequest request) {
         try {
@@ -763,6 +986,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateDynamicDict  CreateDynamicDictRequest
+     * @return CreateDynamicDictResponse
+     */
     @Override
     public CompletableFuture<CreateDynamicDictResponse> createDynamicDict(CreateDynamicDictRequest request) {
         try {
@@ -778,9 +1005,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
-      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
+     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.</p>
+     * 
+     * @param request the request parameters of CreateFileDetect  CreateFileDetectRequest
+     * @return CreateFileDetectResponse
      */
     @Override
     public CompletableFuture<CreateFileDetectResponse> createFileDetect(CreateFileDetectRequest request) {
@@ -797,10 +1027,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
-      * The form upload method is provided by OSS. For more information, see [Form upload](~~84788~~).
-      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the parameters that are required to upload a file for detection. If the value of the response parameter FileExist is true, the file that you want to upload for detection already exists in the cloud. In this case, you can directly push the file for detection. If the value of the response parameter FileExist is false, you must use the form upload method to upload the file to the specified Object Storage Service (OSS) bucket based on the response parameters of this operation.
+     * The form upload method is provided by OSS. For more information, see <a href="https://help.aliyun.com/document_detail/84788.html">Form upload</a>.
+     * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.</p>
+     * 
+     * @param request the request parameters of CreateFileDetectUploadUrl  CreateFileDetectUploadUrlRequest
+     * @return CreateFileDetectUploadUrlResponse
      */
     @Override
     public CompletableFuture<CreateFileDetectUploadUrlResponse> createFileDetectUploadUrl(CreateFileDetectUploadUrlRequest request) {
@@ -816,6 +1049,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFileProtectRule  CreateFileProtectRuleRequest
+     * @return CreateFileProtectRuleResponse
+     */
     @Override
     public CompletableFuture<CreateFileProtectRuleResponse> createFileProtectRule(CreateFileProtectRuleRequest request) {
         try {
@@ -830,6 +1067,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateFileUploadLimit  CreateFileUploadLimitRequest
+     * @return CreateFileUploadLimitResponse
+     */
     @Override
     public CompletableFuture<CreateFileUploadLimitResponse> createFileUploadLimit(CreateFileUploadLimitRequest request) {
         try {
@@ -844,6 +1085,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHoneypot  CreateHoneypotRequest
+     * @return CreateHoneypotResponse
+     */
     @Override
     public CompletableFuture<CreateHoneypotResponse> createHoneypot(CreateHoneypotRequest request) {
         try {
@@ -858,6 +1103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHoneypotNode  CreateHoneypotNodeRequest
+     * @return CreateHoneypotNodeResponse
+     */
     @Override
     public CompletableFuture<CreateHoneypotNodeResponse> createHoneypotNode(CreateHoneypotNodeRequest request) {
         try {
@@ -872,6 +1121,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHoneypotPreset  CreateHoneypotPresetRequest
+     * @return CreateHoneypotPresetResponse
+     */
     @Override
     public CompletableFuture<CreateHoneypotPresetResponse> createHoneypotPreset(CreateHoneypotPresetRequest request) {
         try {
@@ -886,6 +1139,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHoneypotProbe  CreateHoneypotProbeRequest
+     * @return CreateHoneypotProbeResponse
+     */
     @Override
     public CompletableFuture<CreateHoneypotProbeResponse> createHoneypotProbe(CreateHoneypotProbeRequest request) {
         try {
@@ -900,6 +1157,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHoneypotProbeBind  CreateHoneypotProbeBindRequest
+     * @return CreateHoneypotProbeBindResponse
+     */
     @Override
     public CompletableFuture<CreateHoneypotProbeBindResponse> createHoneypotProbeBind(CreateHoneypotProbeBindRequest request) {
         try {
@@ -914,6 +1175,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateHybridProxyCluster  CreateHybridProxyClusterRequest
+     * @return CreateHybridProxyClusterResponse
+     */
     @Override
     public CompletableFuture<CreateHybridProxyClusterResponse> createHybridProxyCluster(CreateHybridProxyClusterRequest request) {
         try {
@@ -928,6 +1193,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInterceptionRule  CreateInterceptionRuleRequest
+     * @return CreateInterceptionRuleResponse
+     */
     @Override
     public CompletableFuture<CreateInterceptionRuleResponse> createInterceptionRule(CreateInterceptionRuleRequest request) {
         try {
@@ -942,6 +1211,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateInterceptionTarget  CreateInterceptionTargetRequest
+     * @return CreateInterceptionTargetResponse
+     */
     @Override
     public CompletableFuture<CreateInterceptionTargetResponse> createInterceptionTarget(CreateInterceptionTargetRequest request) {
         try {
@@ -956,6 +1229,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateJenkinsImageRegistry  CreateJenkinsImageRegistryRequest
+     * @return CreateJenkinsImageRegistryResponse
+     */
     @Override
     public CompletableFuture<CreateJenkinsImageRegistryResponse> createJenkinsImageRegistry(CreateJenkinsImageRegistryRequest request) {
         try {
@@ -970,6 +1247,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateJenkinsImageScanTask  CreateJenkinsImageScanTaskRequest
+     * @return CreateJenkinsImageScanTaskResponse
+     */
     @Override
     public CompletableFuture<CreateJenkinsImageScanTaskResponse> createJenkinsImageScanTask(CreateJenkinsImageScanTaskRequest request) {
         try {
@@ -984,6 +1265,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMaliciousFileWhitelistConfig  CreateMaliciousFileWhitelistConfigRequest
+     * @return CreateMaliciousFileWhitelistConfigResponse
+     */
     @Override
     public CompletableFuture<CreateMaliciousFileWhitelistConfigResponse> createMaliciousFileWhitelistConfig(CreateMaliciousFileWhitelistConfigRequest request) {
         try {
@@ -998,6 +1283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMaliciousNote  CreateMaliciousNoteRequest
+     * @return CreateMaliciousNoteResponse
+     */
     @Override
     public CompletableFuture<CreateMaliciousNoteResponse> createMaliciousNote(CreateMaliciousNoteRequest request) {
         try {
@@ -1012,6 +1301,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateMonitorAccount  CreateMonitorAccountRequest
+     * @return CreateMonitorAccountResponse
+     */
     @Override
     public CompletableFuture<CreateMonitorAccountResponse> createMonitorAccount(CreateMonitorAccountRequest request) {
         try {
@@ -1026,6 +1319,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOpaClusterPlugin  CreateOpaClusterPluginRequest
+     * @return CreateOpaClusterPluginResponse
+     */
     @Override
     public CompletableFuture<CreateOpaClusterPluginResponse> createOpaClusterPlugin(CreateOpaClusterPluginRequest request) {
         try {
@@ -1040,6 +1337,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOpaStrategyNew  CreateOpaStrategyNewRequest
+     * @return CreateOpaStrategyNewResponse
+     */
     @Override
     public CompletableFuture<CreateOpaStrategyNewResponse> createOpaStrategyNew(CreateOpaStrategyNewRequest request) {
         try {
@@ -1055,8 +1356,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A server can belong only to one server group. If you call the CreateOrUpdateAssetGroup operation and the server specified in request parameters belongs to Server Group A, the server is removed from Server Group A and then added to the newly created or specified server group after the call is complete.
-      *
+     * <b>description</b> :
+     * <p>A server can belong only to one server group. If you call the CreateOrUpdateAssetGroup operation and the server specified in request parameters belongs to Server Group A, the server is removed from Server Group A and then added to the newly created or specified server group after the call is complete.</p>
+     * 
+     * @param request the request parameters of CreateOrUpdateAssetGroup  CreateOrUpdateAssetGroupRequest
+     * @return CreateOrUpdateAssetGroupResponse
      */
     @Override
     public CompletableFuture<CreateOrUpdateAssetGroupResponse> createOrUpdateAssetGroup(CreateOrUpdateAssetGroupRequest request) {
@@ -1072,6 +1376,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateAutoTagRule  CreateOrUpdateAutoTagRuleRequest
+     * @return CreateOrUpdateAutoTagRuleResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateAutoTagRuleResponse> createOrUpdateAutoTagRule(CreateOrUpdateAutoTagRuleRequest request) {
         try {
@@ -1086,6 +1394,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOrUpdateDingTalk  CreateOrUpdateDingTalkRequest
+     * @return CreateOrUpdateDingTalkResponse
+     */
     @Override
     public CompletableFuture<CreateOrUpdateDingTalkResponse> createOrUpdateDingTalk(CreateOrUpdateDingTalkRequest request) {
         try {
@@ -1100,6 +1412,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOssBucketScanTask  CreateOssBucketScanTaskRequest
+     * @return CreateOssBucketScanTaskResponse
+     */
     @Override
     public CompletableFuture<CreateOssBucketScanTaskResponse> createOssBucketScanTask(CreateOssBucketScanTaskRequest request) {
         try {
@@ -1114,6 +1430,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateOssScanConfig  CreateOssScanConfigRequest
+     * @return CreateOssScanConfigResponse
+     */
     @Override
     public CompletableFuture<CreateOssScanConfigResponse> createOssScanConfig(CreateOssScanConfigRequest request) {
         try {
@@ -1128,6 +1448,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRdDefaultSyncList  CreateRdDefaultSyncListRequest
+     * @return CreateRdDefaultSyncListResponse
+     */
     @Override
     public CompletableFuture<CreateRdDefaultSyncListResponse> createRdDefaultSyncList(CreateRdDefaultSyncListRequest request) {
         try {
@@ -1142,6 +1466,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateRestoreJob  CreateRestoreJobRequest
+     * @return CreateRestoreJobResponse
+     */
     @Override
     public CompletableFuture<CreateRestoreJobResponse> createRestoreJob(CreateRestoreJobRequest request) {
         try {
@@ -1156,6 +1484,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSasTrial  CreateSasTrialRequest
+     * @return CreateSasTrialResponse
+     */
     @Override
     public CompletableFuture<CreateSasTrialResponse> createSasTrial(CreateSasTrialRequest request) {
         try {
@@ -1171,8 +1503,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about service-linked roles, see [Service-linked roles](~~160674~~).
-      *
+     * <b>description</b> :
+     * <p>For more information about service-linked roles, see <a href="https://help.aliyun.com/document_detail/160674.html">Service-linked roles</a>.</p>
+     * 
+     * @param request the request parameters of CreateServiceLinkedRole  CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
      */
     @Override
     public CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request) {
@@ -1188,6 +1523,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateServiceTrail  CreateServiceTrailRequest
+     * @return CreateServiceTrailResponse
+     */
     @Override
     public CompletableFuture<CreateServiceTrailResponse> createServiceTrail(CreateServiceTrailRequest request) {
         try {
@@ -1202,6 +1541,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSimilarSecurityEventsQueryTask  CreateSimilarSecurityEventsQueryTaskRequest
+     * @return CreateSimilarSecurityEventsQueryTaskResponse
+     */
     @Override
     public CompletableFuture<CreateSimilarSecurityEventsQueryTaskResponse> createSimilarSecurityEventsQueryTask(CreateSimilarSecurityEventsQueryTaskRequest request) {
         try {
@@ -1217,8 +1560,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
-      *
+     * <b>description</b> :
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * 
+     * @param request the request parameters of CreateSoarStrategyTask  CreateSoarStrategyTaskRequest
+     * @return CreateSoarStrategyTaskResponse
      */
     @Override
     public CompletableFuture<CreateSoarStrategyTaskResponse> createSoarStrategyTask(CreateSoarStrategyTaskRequest request) {
@@ -1234,6 +1580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateSuspEventNote  CreateSuspEventNoteRequest
+     * @return CreateSuspEventNoteResponse
+     */
     @Override
     public CompletableFuture<CreateSuspEventNoteResponse> createSuspEventNote(CreateSuspEventNoteRequest request) {
         try {
@@ -1248,6 +1598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUniBackupPolicy  CreateUniBackupPolicyRequest
+     * @return CreateUniBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<CreateUniBackupPolicyResponse> createUniBackupPolicy(CreateUniBackupPolicyRequest request) {
         try {
@@ -1262,6 +1616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUniRestorePlan  CreateUniRestorePlanRequest
+     * @return CreateUniRestorePlanResponse
+     */
     @Override
     public CompletableFuture<CreateUniRestorePlanResponse> createUniRestorePlan(CreateUniRestorePlanRequest request) {
         try {
@@ -1276,6 +1634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateUserSetting  CreateUserSettingRequest
+     * @return CreateUserSettingResponse
+     */
     @Override
     public CompletableFuture<CreateUserSettingResponse> createUserSetting(CreateUserSettingRequest request) {
         try {
@@ -1290,6 +1652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVirusScanOnceTask  CreateVirusScanOnceTaskRequest
+     * @return CreateVirusScanOnceTaskResponse
+     */
     @Override
     public CompletableFuture<CreateVirusScanOnceTaskResponse> createVirusScanOnceTask(CreateVirusScanOnceTaskRequest request) {
         try {
@@ -1304,6 +1670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateVulAutoRepairConfig  CreateVulAutoRepairConfigRequest
+     * @return CreateVulAutoRepairConfigResponse
+     */
     @Override
     public CompletableFuture<CreateVulAutoRepairConfigResponse> createVulAutoRepairConfig(CreateVulAutoRepairConfigRequest request) {
         try {
@@ -1318,6 +1688,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAntiBruteForceRule  DeleteAntiBruteForceRuleRequest
+     * @return DeleteAntiBruteForceRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteAntiBruteForceRuleResponse> deleteAntiBruteForceRule(DeleteAntiBruteForceRuleRequest request) {
         try {
@@ -1332,6 +1706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAttestor  DeleteAttestorRequest
+     * @return DeleteAttestorResponse
+     */
     @Override
     public CompletableFuture<DeleteAttestorResponse> deleteAttestor(DeleteAttestorRequest request) {
         try {
@@ -1346,6 +1724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteAutoTagRules  DeleteAutoTagRulesRequest
+     * @return DeleteAutoTagRulesResponse
+     */
     @Override
     public CompletableFuture<DeleteAutoTagRulesResponse> deleteAutoTagRules(DeleteAutoTagRulesRequest request) {
         try {
@@ -1360,6 +1742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBackupPolicy  DeleteBackupPolicyRequest
+     * @return DeleteBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteBackupPolicyResponse> deleteBackupPolicy(DeleteBackupPolicyRequest request) {
         try {
@@ -1374,6 +1760,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBackupPolicyMachine  DeleteBackupPolicyMachineRequest
+     * @return DeleteBackupPolicyMachineResponse
+     */
     @Override
     public CompletableFuture<DeleteBackupPolicyMachineResponse> deleteBackupPolicyMachine(DeleteBackupPolicyMachineRequest request) {
         try {
@@ -1388,6 +1778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBackupSnapshot  DeleteBackupSnapshotRequest
+     * @return DeleteBackupSnapshotResponse
+     */
     @Override
     public CompletableFuture<DeleteBackupSnapshotResponse> deleteBackupSnapshot(DeleteBackupSnapshotRequest request) {
         try {
@@ -1402,6 +1796,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBaselineCheckWhiteRecord  DeleteBaselineCheckWhiteRecordRequest
+     * @return DeleteBaselineCheckWhiteRecordResponse
+     */
     @Override
     public CompletableFuture<DeleteBaselineCheckWhiteRecordResponse> deleteBaselineCheckWhiteRecord(DeleteBaselineCheckWhiteRecordRequest request) {
         try {
@@ -1416,6 +1814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteBinarySecurityPolicy  DeleteBinarySecurityPolicyRequest
+     * @return DeleteBinarySecurityPolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteBinarySecurityPolicyResponse> deleteBinarySecurityPolicy(DeleteBinarySecurityPolicyRequest request) {
         try {
@@ -1430,6 +1832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteClientUserDefineRule  DeleteClientUserDefineRuleRequest
+     * @return DeleteClientUserDefineRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteClientUserDefineRuleResponse> deleteClientUserDefineRule(DeleteClientUserDefineRuleRequest request) {
         try {
@@ -1444,6 +1850,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCloudVendorAccountAK  DeleteCloudVendorAccountAKRequest
+     * @return DeleteCloudVendorAccountAKResponse
+     */
     @Override
     public CompletableFuture<DeleteCloudVendorAccountAKResponse> deleteCloudVendorAccountAK(DeleteCloudVendorAccountAKRequest request) {
         try {
@@ -1458,6 +1868,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteContainerDefenseRule  DeleteContainerDefenseRuleRequest
+     * @return DeleteContainerDefenseRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteContainerDefenseRuleResponse> deleteContainerDefenseRule(DeleteContainerDefenseRuleRequest request) {
         try {
@@ -1472,6 +1886,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteContainerPluginRule  DeleteContainerPluginRuleRequest
+     * @return DeleteContainerPluginRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteContainerPluginRuleResponse> deleteContainerPluginRule(DeleteContainerPluginRuleRequest request) {
         try {
@@ -1486,6 +1904,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomBlockRecord  DeleteCustomBlockRecordRequest
+     * @return DeleteCustomBlockRecordResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomBlockRecordResponse> deleteCustomBlockRecord(DeleteCustomBlockRecordRequest request) {
         try {
@@ -1500,6 +1922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomizeReport  DeleteCustomizeReportRequest
+     * @return DeleteCustomizeReportResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomizeReportResponse> deleteCustomizeReport(DeleteCustomizeReportRequest request) {
         try {
@@ -1514,6 +1940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCustomizedDict  DeleteCustomizedDictRequest
+     * @return DeleteCustomizedDictResponse
+     */
     @Override
     public CompletableFuture<DeleteCustomizedDictResponse> deleteCustomizedDict(DeleteCustomizedDictRequest request) {
         try {
@@ -1528,6 +1958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteCycleTask  DeleteCycleTaskRequest
+     * @return DeleteCycleTaskResponse
+     */
     @Override
     public CompletableFuture<DeleteCycleTaskResponse> deleteCycleTask(DeleteCycleTaskRequest request) {
         try {
@@ -1542,6 +1976,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteDingTalk  DeleteDingTalkRequest
+     * @return DeleteDingTalkResponse
+     */
     @Override
     public CompletableFuture<DeleteDingTalkResponse> deleteDingTalk(DeleteDingTalkRequest request) {
         try {
@@ -1556,6 +1994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteFileProtectRule  DeleteFileProtectRuleRequest
+     * @return DeleteFileProtectRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteFileProtectRuleResponse> deleteFileProtectRule(DeleteFileProtectRuleRequest request) {
         try {
@@ -1571,8 +2013,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The **Default** server group that is provided by Security Center cannot be deleted. After you delete a group, the assets in this group are moved to the **Default** group.
-      *
+     * <b>description</b> :
+     * <p>The <strong>Default</strong> server group that is provided by Security Center cannot be deleted. After you delete a group, the assets in this group are moved to the <strong>Default</strong> group.</p>
+     * 
+     * @param request the request parameters of DeleteGroup  DeleteGroupRequest
+     * @return DeleteGroupResponse
      */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
@@ -1588,6 +2033,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHoneypot  DeleteHoneypotRequest
+     * @return DeleteHoneypotResponse
+     */
     @Override
     public CompletableFuture<DeleteHoneypotResponse> deleteHoneypot(DeleteHoneypotRequest request) {
         try {
@@ -1602,6 +2051,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHoneypotNode  DeleteHoneypotNodeRequest
+     * @return DeleteHoneypotNodeResponse
+     */
     @Override
     public CompletableFuture<DeleteHoneypotNodeResponse> deleteHoneypotNode(DeleteHoneypotNodeRequest request) {
         try {
@@ -1616,6 +2069,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHoneypotPreset  DeleteHoneypotPresetRequest
+     * @return DeleteHoneypotPresetResponse
+     */
     @Override
     public CompletableFuture<DeleteHoneypotPresetResponse> deleteHoneypotPreset(DeleteHoneypotPresetRequest request) {
         try {
@@ -1630,6 +2087,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHoneypotProbe  DeleteHoneypotProbeRequest
+     * @return DeleteHoneypotProbeResponse
+     */
     @Override
     public CompletableFuture<DeleteHoneypotProbeResponse> deleteHoneypotProbe(DeleteHoneypotProbeRequest request) {
         try {
@@ -1644,6 +2105,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHoneypotProbeBind  DeleteHoneypotProbeBindRequest
+     * @return DeleteHoneypotProbeBindResponse
+     */
     @Override
     public CompletableFuture<DeleteHoneypotProbeBindResponse> deleteHoneypotProbeBind(DeleteHoneypotProbeBindRequest request) {
         try {
@@ -1658,6 +2123,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHybridProxy  DeleteHybridProxyRequest
+     * @return DeleteHybridProxyResponse
+     */
     @Override
     public CompletableFuture<DeleteHybridProxyResponse> deleteHybridProxy(DeleteHybridProxyRequest request) {
         try {
@@ -1672,6 +2141,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteHybridProxyCluster  DeleteHybridProxyClusterRequest
+     * @return DeleteHybridProxyClusterResponse
+     */
     @Override
     public CompletableFuture<DeleteHybridProxyClusterResponse> deleteHybridProxyCluster(DeleteHybridProxyClusterRequest request) {
         try {
@@ -1686,6 +2159,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteIdcProbe  DeleteIdcProbeRequest
+     * @return DeleteIdcProbeResponse
+     */
     @Override
     public CompletableFuture<DeleteIdcProbeResponse> deleteIdcProbe(DeleteIdcProbeRequest request) {
         try {
@@ -1700,6 +2177,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteImageEventOperation  DeleteImageEventOperationRequest
+     * @return DeleteImageEventOperationResponse
+     */
     @Override
     public CompletableFuture<DeleteImageEventOperationResponse> deleteImageEventOperation(DeleteImageEventOperationRequest request) {
         try {
@@ -1714,6 +2195,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteImageVulWhitelist  DeleteImageVulWhitelistRequest
+     * @return DeleteImageVulWhitelistResponse
+     */
     @Override
     public CompletableFuture<DeleteImageVulWhitelistResponse> deleteImageVulWhitelist(DeleteImageVulWhitelistRequest request) {
         try {
@@ -1728,6 +2213,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInstallCode  DeleteInstallCodeRequest
+     * @return DeleteInstallCodeResponse
+     */
     @Override
     public CompletableFuture<DeleteInstallCodeResponse> deleteInstallCode(DeleteInstallCodeRequest request) {
         try {
@@ -1742,6 +2231,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInterceptionRule  DeleteInterceptionRuleRequest
+     * @return DeleteInterceptionRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteInterceptionRuleResponse> deleteInterceptionRule(DeleteInterceptionRuleRequest request) {
         try {
@@ -1756,6 +2249,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteInterceptionTarget  DeleteInterceptionTargetRequest
+     * @return DeleteInterceptionTargetResponse
+     */
     @Override
     public CompletableFuture<DeleteInterceptionTargetResponse> deleteInterceptionTarget(DeleteInterceptionTargetRequest request) {
         try {
@@ -1770,6 +2267,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteK8sAccessInfo  DeleteK8sAccessInfoRequest
+     * @return DeleteK8sAccessInfoResponse
+     */
     @Override
     public CompletableFuture<DeleteK8sAccessInfoResponse> deleteK8sAccessInfo(DeleteK8sAccessInfoRequest request) {
         try {
@@ -1784,6 +2285,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteLoginBaseConfig  DeleteLoginBaseConfigRequest
+     * @return DeleteLoginBaseConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteLoginBaseConfigResponse> deleteLoginBaseConfig(DeleteLoginBaseConfigRequest request) {
         try {
@@ -1798,6 +2303,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMaliciousFileWhitelistConfig  DeleteMaliciousFileWhitelistConfigRequest
+     * @return DeleteMaliciousFileWhitelistConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteMaliciousFileWhitelistConfigResponse> deleteMaliciousFileWhitelistConfig(DeleteMaliciousFileWhitelistConfigRequest request) {
         try {
@@ -1812,6 +2321,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteMaliciousNote  DeleteMaliciousNoteRequest
+     * @return DeleteMaliciousNoteResponse
+     */
     @Override
     public CompletableFuture<DeleteMaliciousNoteResponse> deleteMaliciousNote(DeleteMaliciousNoteRequest request) {
         try {
@@ -1827,8 +2340,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.
-      *
+     * <b>description</b> :
+     * <p>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</p>
+     * 
+     * @param request the request parameters of DeleteMonitorAccount  DeleteMonitorAccountRequest
+     * @return DeleteMonitorAccountResponse
      */
     @Override
     public CompletableFuture<DeleteMonitorAccountResponse> deleteMonitorAccount(DeleteMonitorAccountRequest request) {
@@ -1844,6 +2360,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteOpaStrategyNew  DeleteOpaStrategyNewRequest
+     * @return DeleteOpaStrategyNewResponse
+     */
     @Override
     public CompletableFuture<DeleteOpaStrategyNewResponse> deleteOpaStrategyNew(DeleteOpaStrategyNewRequest request) {
         try {
@@ -1858,6 +2378,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteOssScanConfig  DeleteOssScanConfigRequest
+     * @return DeleteOssScanConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteOssScanConfigResponse> deleteOssScanConfig(DeleteOssScanConfigRequest request) {
         try {
@@ -1872,6 +2396,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeletePrivateRegistry  DeletePrivateRegistryRequest
+     * @return DeletePrivateRegistryResponse
+     */
     @Override
     public CompletableFuture<DeletePrivateRegistryResponse> deletePrivateRegistry(DeletePrivateRegistryRequest request) {
         try {
@@ -1886,6 +2414,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSasContainerWebDefenseRule  DeleteSasContainerWebDefenseRuleRequest
+     * @return DeleteSasContainerWebDefenseRuleResponse
+     */
     @Override
     public CompletableFuture<DeleteSasContainerWebDefenseRuleResponse> deleteSasContainerWebDefenseRule(DeleteSasContainerWebDefenseRuleRequest request) {
         try {
@@ -1900,6 +2432,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSearchCondition  DeleteSearchConditionRequest
+     * @return DeleteSearchConditionResponse
+     */
     @Override
     public CompletableFuture<DeleteSearchConditionResponse> deleteSearchCondition(DeleteSearchConditionRequest request) {
         try {
@@ -1915,9 +2451,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DeleteSecurityEventMarkMissList is deprecated, please use Sas::2018-12-03::ModifySecurityEventMarkMissIndividually instead.  * @param request  the request parameters of DeleteSecurityEventMarkMissList  DeleteSecurityEventMarkMissListRequest
+     * @return DeleteSecurityEventMarkMissListResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteSecurityEventMarkMissListResponse> deleteSecurityEventMarkMissList(DeleteSecurityEventMarkMissListRequest request) {
         try {
@@ -1932,6 +2469,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteServiceTrail  DeleteServiceTrailRequest
+     * @return DeleteServiceTrailResponse
+     */
     @Override
     public CompletableFuture<DeleteServiceTrailResponse> deleteServiceTrail(DeleteServiceTrailRequest request) {
         try {
@@ -1947,8 +2488,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
-      *
+     * <b>description</b> :
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * 
+     * @param request the request parameters of DeleteSoarStrategyTask  DeleteSoarStrategyTaskRequest
+     * @return DeleteSoarStrategyTaskResponse
      */
     @Override
     public CompletableFuture<DeleteSoarStrategyTaskResponse> deleteSoarStrategyTask(DeleteSoarStrategyTaskRequest request) {
@@ -1964,6 +2508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteStrategy  DeleteStrategyRequest
+     * @return DeleteStrategyResponse
+     */
     @Override
     public CompletableFuture<DeleteStrategyResponse> deleteStrategy(DeleteStrategyRequest request) {
         try {
@@ -1978,6 +2526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteSuspEventNode  DeleteSuspEventNodeRequest
+     * @return DeleteSuspEventNodeResponse
+     */
     @Override
     public CompletableFuture<DeleteSuspEventNodeResponse> deleteSuspEventNode(DeleteSuspEventNodeRequest request) {
         try {
@@ -1993,8 +2545,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Security Center provides asset importance tags and custom tags. You can call this operation to remove only the custom tag that is added to an asset.
-      *
+     * <b>description</b> :
+     * <p>Security Center provides asset importance tags and custom tags. You can call this operation to remove only the custom tag that is added to an asset.</p>
+     * 
+     * @param request the request parameters of DeleteTagWithUuid  DeleteTagWithUuidRequest
+     * @return DeleteTagWithUuidResponse
      */
     @Override
     public CompletableFuture<DeleteTagWithUuidResponse> deleteTagWithUuid(DeleteTagWithUuidRequest request) {
@@ -2010,6 +2565,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteUniBackupPolicy  DeleteUniBackupPolicyRequest
+     * @return DeleteUniBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<DeleteUniBackupPolicyResponse> deleteUniBackupPolicy(DeleteUniBackupPolicyRequest request) {
         try {
@@ -2024,6 +2583,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVpcHoneyPot  DeleteVpcHoneyPotRequest
+     * @return DeleteVpcHoneyPotResponse
+     */
     @Override
     public CompletableFuture<DeleteVpcHoneyPotResponse> deleteVpcHoneyPot(DeleteVpcHoneyPotRequest request) {
         try {
@@ -2038,6 +2601,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVulAutoRepairConfig  DeleteVulAutoRepairConfigRequest
+     * @return DeleteVulAutoRepairConfigResponse
+     */
     @Override
     public CompletableFuture<DeleteVulAutoRepairConfigResponse> deleteVulAutoRepairConfig(DeleteVulAutoRepairConfigRequest request) {
         try {
@@ -2052,6 +2619,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DeleteVulWhitelist  DeleteVulWhitelistRequest
+     * @return DeleteVulWhitelistResponse
+     */
     @Override
     public CompletableFuture<DeleteVulWhitelistResponse> deleteVulWhitelist(DeleteVulWhitelistRequest request) {
         try {
@@ -2066,6 +2637,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccessKeyLeakDetail  DescribeAccessKeyLeakDetailRequest
+     * @return DescribeAccessKeyLeakDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeAccessKeyLeakDetailResponse> describeAccessKeyLeakDetail(DescribeAccessKeyLeakDetailRequest request) {
         try {
@@ -2080,6 +2655,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAccesskeyLeakList  DescribeAccesskeyLeakListRequest
+     * @return DescribeAccesskeyLeakListResponse
+     */
     @Override
     public CompletableFuture<DescribeAccesskeyLeakListResponse> describeAccesskeyLeakList(DescribeAccesskeyLeakListRequest request) {
         try {
@@ -2094,6 +2673,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAffectedAssets  DescribeAffectedAssetsRequest
+     * @return DescribeAffectedAssetsResponse
+     */
     @Override
     public CompletableFuture<DescribeAffectedAssetsResponse> describeAffectedAssets(DescribeAffectedAssetsRequest request) {
         try {
@@ -2108,6 +2691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAffectedMaliciousFileImages  DescribeAffectedMaliciousFileImagesRequest
+     * @return DescribeAffectedMaliciousFileImagesResponse
+     */
     @Override
     public CompletableFuture<DescribeAffectedMaliciousFileImagesResponse> describeAffectedMaliciousFileImages(DescribeAffectedMaliciousFileImagesRequest request) {
         try {
@@ -2122,6 +2709,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAgentInstallStatus  DescribeAgentInstallStatusRequest
+     * @return DescribeAgentInstallStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeAgentInstallStatusResponse> describeAgentInstallStatus(DescribeAgentInstallStatusRequest request) {
         try {
@@ -2137,8 +2728,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only when the agentless detection feature is purchased by using the pay-as-you-go billing method within your Alibaba Cloud account.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only when the agentless detection feature is purchased by using the pay-as-you-go billing method within your Alibaba Cloud account.</p>
+     * 
+     * @param request the request parameters of DescribeAgentlessSensitiveFileByKey  DescribeAgentlessSensitiveFileByKeyRequest
+     * @return DescribeAgentlessSensitiveFileByKeyResponse
      */
     @Override
     public CompletableFuture<DescribeAgentlessSensitiveFileByKeyResponse> describeAgentlessSensitiveFileByKey(DescribeAgentlessSensitiveFileByKeyRequest request) {
@@ -2154,6 +2748,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAlarmEventDetail  DescribeAlarmEventDetailRequest
+     * @return DescribeAlarmEventDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeAlarmEventDetailResponse> describeAlarmEventDetail(DescribeAlarmEventDetailRequest request) {
         try {
@@ -2168,6 +2766,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAlarmEventStackInfo  DescribeAlarmEventStackInfoRequest
+     * @return DescribeAlarmEventStackInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeAlarmEventStackInfoResponse> describeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request) {
         try {
@@ -2182,6 +2784,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllEntity  DescribeAllEntityRequest
+     * @return DescribeAllEntityResponse
+     */
     @Override
     public CompletableFuture<DescribeAllEntityResponse> describeAllEntity(DescribeAllEntityRequest request) {
         try {
@@ -2196,6 +2802,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllGroups  DescribeAllGroupsRequest
+     * @return DescribeAllGroupsResponse
+     */
     @Override
     public CompletableFuture<DescribeAllGroupsResponse> describeAllGroups(DescribeAllGroupsRequest request) {
         try {
@@ -2210,6 +2820,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllImageBaseline  DescribeAllImageBaselineRequest
+     * @return DescribeAllImageBaselineResponse
+     */
     @Override
     public CompletableFuture<DescribeAllImageBaselineResponse> describeAllImageBaseline(DescribeAllImageBaselineRequest request) {
         try {
@@ -2224,6 +2838,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAllRegionsStatistics  DescribeAllRegionsStatisticsRequest
+     * @return DescribeAllRegionsStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeAllRegionsStatisticsResponse> describeAllRegionsStatistics(DescribeAllRegionsStatisticsRequest request) {
         try {
@@ -2238,6 +2856,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAntiBruteForceRules  DescribeAntiBruteForceRulesRequest
+     * @return DescribeAntiBruteForceRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeAntiBruteForceRulesResponse> describeAntiBruteForceRules(DescribeAntiBruteForceRulesRequest request) {
         try {
@@ -2252,6 +2874,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAppVulScanCycle  DescribeAppVulScanCycleRequest
+     * @return DescribeAppVulScanCycleResponse
+     */
     @Override
     public CompletableFuture<DescribeAppVulScanCycleResponse> describeAppVulScanCycle(DescribeAppVulScanCycleRequest request) {
         try {
@@ -2267,9 +2893,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DescribeAssetDetailByUuid is deprecated, please use Sas::2018-12-03::GetAssetDetailByUuid instead.  * @param request  the request parameters of DescribeAssetDetailByUuid  DescribeAssetDetailByUuidRequest
+     * @return DescribeAssetDetailByUuidResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeAssetDetailByUuidResponse> describeAssetDetailByUuid(DescribeAssetDetailByUuidRequest request) {
         try {
@@ -2284,6 +2911,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAssetDetailByUuids  DescribeAssetDetailByUuidsRequest
+     * @return DescribeAssetDetailByUuidsResponse
+     */
     @Override
     public CompletableFuture<DescribeAssetDetailByUuidsResponse> describeAssetDetailByUuids(DescribeAssetDetailByUuidsRequest request) {
         try {
@@ -2298,6 +2929,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAssetSummary  DescribeAssetSummaryRequest
+     * @return DescribeAssetSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeAssetSummaryResponse> describeAssetSummary(DescribeAssetSummaryRequest request) {
         try {
@@ -2312,6 +2947,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAssetsScaProcessNum  DescribeAssetsScaProcessNumRequest
+     * @return DescribeAssetsScaProcessNumResponse
+     */
     @Override
     public CompletableFuture<DescribeAssetsScaProcessNumResponse> describeAssetsScaProcessNum(DescribeAssetsScaProcessNumRequest request) {
         try {
@@ -2326,6 +2965,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAssetsSecurityEventSummary  DescribeAssetsSecurityEventSummaryRequest
+     * @return DescribeAssetsSecurityEventSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeAssetsSecurityEventSummaryResponse> describeAssetsSecurityEventSummary(DescribeAssetsSecurityEventSummaryRequest request) {
         try {
@@ -2340,6 +2983,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAttachRecords  DescribeAttachRecordsRequest
+     * @return DescribeAttachRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeAttachRecordsResponse> describeAttachRecords(DescribeAttachRecordsRequest request) {
         try {
@@ -2354,6 +3001,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAttackAnalysisData  DescribeAttackAnalysisDataRequest
+     * @return DescribeAttackAnalysisDataResponse
+     */
     @Override
     public CompletableFuture<DescribeAttackAnalysisDataResponse> describeAttackAnalysisData(DescribeAttackAnalysisDataRequest request) {
         try {
@@ -2368,6 +3019,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAttestors  DescribeAttestorsRequest
+     * @return DescribeAttestorsResponse
+     */
     @Override
     public CompletableFuture<DescribeAttestorsResponse> describeAttestors(DescribeAttestorsRequest request) {
         try {
@@ -2382,6 +3037,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeAutoDelConfig  DescribeAutoDelConfigRequest
+     * @return DescribeAutoDelConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeAutoDelConfigResponse> describeAutoDelConfig(DescribeAutoDelConfigRequest request) {
         try {
@@ -2396,6 +3055,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackUpExportInfo  DescribeBackUpExportInfoRequest
+     * @return DescribeBackUpExportInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeBackUpExportInfoResponse> describeBackUpExportInfo(DescribeBackUpExportInfoRequest request) {
         try {
@@ -2411,8 +3074,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeBackupClients operation to query the servers on which the anti-ransomware agent is installed in a specified region.
-      *
+     * <b>description</b> :
+     * <p>You can call the DescribeBackupClients operation to query the servers on which the anti-ransomware agent is installed in a specified region.</p>
+     * 
+     * @param request the request parameters of DescribeBackupClients  DescribeBackupClientsRequest
+     * @return DescribeBackupClientsResponse
      */
     @Override
     public CompletableFuture<DescribeBackupClientsResponse> describeBackupClients(DescribeBackupClientsRequest request) {
@@ -2428,6 +3094,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupFiles  DescribeBackupFilesRequest
+     * @return DescribeBackupFilesResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupFilesResponse> describeBackupFiles(DescribeBackupFilesRequest request) {
         try {
@@ -2442,6 +3112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupMachineStatus  DescribeBackupMachineStatusRequest
+     * @return DescribeBackupMachineStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupMachineStatusResponse> describeBackupMachineStatus(DescribeBackupMachineStatusRequest request) {
         try {
@@ -2456,6 +3130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupPolicies  DescribeBackupPoliciesRequest
+     * @return DescribeBackupPoliciesResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPoliciesResponse> describeBackupPolicies(DescribeBackupPoliciesRequest request) {
         try {
@@ -2470,6 +3148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request) {
         try {
@@ -2485,8 +3167,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you have created restoration tasks, you can call this operation to query the number of restoration tasks that are in the **restored** or **being restored** state.
-      *
+     * <b>description</b> :
+     * <p>If you have created restoration tasks, you can call this operation to query the number of restoration tasks that are in the <strong>restored</strong> or <strong>being restored</strong> state.</p>
+     * 
+     * @param request the request parameters of DescribeBackupRestoreCount  DescribeBackupRestoreCountRequest
+     * @return DescribeBackupRestoreCountResponse
      */
     @Override
     public CompletableFuture<DescribeBackupRestoreCountResponse> describeBackupRestoreCount(DescribeBackupRestoreCountRequest request) {
@@ -2502,6 +3187,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBinarySecurityPolicies  DescribeBinarySecurityPoliciesRequest
+     * @return DescribeBinarySecurityPoliciesResponse
+     */
     @Override
     public CompletableFuture<DescribeBinarySecurityPoliciesResponse> describeBinarySecurityPolicies(DescribeBinarySecurityPoliciesRequest request) {
         try {
@@ -2516,6 +3205,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBruteForceRecords  DescribeBruteForceRecordsRequest
+     * @return DescribeBruteForceRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeBruteForceRecordsResponse> describeBruteForceRecords(DescribeBruteForceRecordsRequest request) {
         try {
@@ -2530,6 +3223,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeBruteForceSummary  DescribeBruteForceSummaryRequest
+     * @return DescribeBruteForceSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeBruteForceSummaryResponse> describeBruteForceSummary(DescribeBruteForceSummaryRequest request) {
         try {
@@ -2544,6 +3241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCanFixVulList  DescribeCanFixVulListRequest
+     * @return DescribeCanFixVulListResponse
+     */
     @Override
     public CompletableFuture<DescribeCanFixVulListResponse> describeCanFixVulList(DescribeCanFixVulListRequest request) {
         try {
@@ -2558,6 +3259,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCanTrySas  DescribeCanTrySasRequest
+     * @return DescribeCanTrySasResponse
+     */
     @Override
     public CompletableFuture<DescribeCanTrySasResponse> describeCanTrySas(DescribeCanTrySasRequest request) {
         try {
@@ -2572,6 +3277,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChartData  DescribeChartDataRequest
+     * @return DescribeChartDataResponse
+     */
     @Override
     public CompletableFuture<DescribeChartDataResponse> describeChartData(DescribeChartDataRequest request) {
         try {
@@ -2586,6 +3295,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeChartList  DescribeChartListRequest
+     * @return DescribeChartListResponse
+     */
     @Override
     public CompletableFuture<DescribeChartListResponse> describeChartList(DescribeChartListRequest request) {
         try {
@@ -2600,6 +3313,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCheckEcsWarnings  DescribeCheckEcsWarningsRequest
+     * @return DescribeCheckEcsWarningsResponse
+     */
     @Override
     public CompletableFuture<DescribeCheckEcsWarningsResponse> describeCheckEcsWarnings(DescribeCheckEcsWarningsRequest request) {
         try {
@@ -2614,6 +3331,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCheckFixDetails  DescribeCheckFixDetailsRequest
+     * @return DescribeCheckFixDetailsResponse
+     */
     @Override
     public CompletableFuture<DescribeCheckFixDetailsResponse> describeCheckFixDetails(DescribeCheckFixDetailsRequest request) {
         try {
@@ -2628,6 +3349,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCheckResult  DescribeCheckResultRequest
+     * @return DescribeCheckResultResponse
+     */
     @Override
     public CompletableFuture<DescribeCheckResultResponse> describeCheckResult(DescribeCheckResultRequest request) {
         try {
@@ -2642,6 +3367,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCheckWarningCount  DescribeCheckWarningCountRequest
+     * @return DescribeCheckWarningCountResponse
+     */
     @Override
     public CompletableFuture<DescribeCheckWarningCountResponse> describeCheckWarningCount(DescribeCheckWarningCountRequest request) {
         try {
@@ -2656,6 +3385,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCheckWarningDetail  DescribeCheckWarningDetailRequest
+     * @return DescribeCheckWarningDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeCheckWarningDetailResponse> describeCheckWarningDetail(DescribeCheckWarningDetailRequest request) {
         try {
@@ -2670,6 +3403,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCheckWarningMachines  DescribeCheckWarningMachinesRequest
+     * @return DescribeCheckWarningMachinesResponse
+     */
     @Override
     public CompletableFuture<DescribeCheckWarningMachinesResponse> describeCheckWarningMachines(DescribeCheckWarningMachinesRequest request) {
         try {
@@ -2684,6 +3421,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCheckWarningSummary  DescribeCheckWarningSummaryRequest
+     * @return DescribeCheckWarningSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeCheckWarningSummaryResponse> describeCheckWarningSummary(DescribeCheckWarningSummaryRequest request) {
         try {
@@ -2698,6 +3439,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCheckWarnings  DescribeCheckWarningsRequest
+     * @return DescribeCheckWarningsResponse
+     */
     @Override
     public CompletableFuture<DescribeCheckWarningsResponse> describeCheckWarnings(DescribeCheckWarningsRequest request) {
         try {
@@ -2712,6 +3457,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClientConfSetup  DescribeClientConfSetupRequest
+     * @return DescribeClientConfSetupResponse
+     */
     @Override
     public CompletableFuture<DescribeClientConfSetupResponse> describeClientConfSetup(DescribeClientConfSetupRequest request) {
         try {
@@ -2726,6 +3475,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClientConfStrategy  DescribeClientConfStrategyRequest
+     * @return DescribeClientConfStrategyResponse
+     */
     @Override
     public CompletableFuture<DescribeClientConfStrategyResponse> describeClientConfStrategy(DescribeClientConfStrategyRequest request) {
         try {
@@ -2740,6 +3493,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClientProblemType  DescribeClientProblemTypeRequest
+     * @return DescribeClientProblemTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeClientProblemTypeResponse> describeClientProblemType(DescribeClientProblemTypeRequest request) {
         try {
@@ -2755,8 +3512,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can search for an asset by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
-      *
+     * <b>description</b> :
+     * <p>You can search for an asset by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.</p>
+     * 
+     * @param request the request parameters of DescribeCloudCenterInstances  DescribeCloudCenterInstancesRequest
+     * @return DescribeCloudCenterInstancesResponse
      */
     @Override
     public CompletableFuture<DescribeCloudCenterInstancesResponse> describeCloudCenterInstances(DescribeCloudCenterInstancesRequest request) {
@@ -2773,9 +3533,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DescribeCloudProductFieldStatistics is deprecated, please use Sas::2018-12-03::GetCloudAssetSummary instead.  * @param request  the request parameters of DescribeCloudProductFieldStatistics  DescribeCloudProductFieldStatisticsRequest
+     * @return DescribeCloudProductFieldStatisticsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeCloudProductFieldStatisticsResponse> describeCloudProductFieldStatistics(DescribeCloudProductFieldStatisticsRequest request) {
         try {
@@ -2790,6 +3551,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCloudVendorAccountAKList  DescribeCloudVendorAccountAKListRequest
+     * @return DescribeCloudVendorAccountAKListResponse
+     */
     @Override
     public CompletableFuture<DescribeCloudVendorAccountAKListResponse> describeCloudVendorAccountAKList(DescribeCloudVendorAccountAKListRequest request) {
         try {
@@ -2804,6 +3569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterBasicInfo  DescribeClusterBasicInfoRequest
+     * @return DescribeClusterBasicInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterBasicInfoResponse> describeClusterBasicInfo(DescribeClusterBasicInfoRequest request) {
         try {
@@ -2818,6 +3587,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterHostSecuritySummary  DescribeClusterHostSecuritySummaryRequest
+     * @return DescribeClusterHostSecuritySummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterHostSecuritySummaryResponse> describeClusterHostSecuritySummary(DescribeClusterHostSecuritySummaryRequest request) {
         try {
@@ -2832,6 +3605,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterImageSecuritySummary  DescribeClusterImageSecuritySummaryRequest
+     * @return DescribeClusterImageSecuritySummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterImageSecuritySummaryResponse> describeClusterImageSecuritySummary(DescribeClusterImageSecuritySummaryRequest request) {
         try {
@@ -2846,6 +3623,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterInfoList  DescribeClusterInfoListRequest
+     * @return DescribeClusterInfoListResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterInfoListResponse> describeClusterInfoList(DescribeClusterInfoListRequest request) {
         try {
@@ -2860,6 +3641,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterNetwork  DescribeClusterNetworkRequest
+     * @return DescribeClusterNetworkResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterNetworkResponse> describeClusterNetwork(DescribeClusterNetworkRequest request) {
         try {
@@ -2874,6 +3659,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeClusterVulStatistics  DescribeClusterVulStatisticsRequest
+     * @return DescribeClusterVulStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeClusterVulStatisticsResponse> describeClusterVulStatistics(DescribeClusterVulStatisticsRequest request) {
         try {
@@ -2888,6 +3677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCommonOverallConfig  DescribeCommonOverallConfigRequest
+     * @return DescribeCommonOverallConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeCommonOverallConfigResponse> describeCommonOverallConfig(DescribeCommonOverallConfigRequest request) {
         try {
@@ -2902,6 +3695,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCommonOverallConfigList  DescribeCommonOverallConfigListRequest
+     * @return DescribeCommonOverallConfigListResponse
+     */
     @Override
     public CompletableFuture<DescribeCommonOverallConfigListResponse> describeCommonOverallConfigList(DescribeCommonOverallConfigListRequest request) {
         try {
@@ -2916,6 +3713,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCommonTargetConfig  DescribeCommonTargetConfigRequest
+     * @return DescribeCommonTargetConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeCommonTargetConfigResponse> describeCommonTargetConfig(DescribeCommonTargetConfigRequest request) {
         try {
@@ -2930,6 +3731,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCommonTargetResultList  DescribeCommonTargetResultListRequest
+     * @return DescribeCommonTargetResultListResponse
+     */
     @Override
     public CompletableFuture<DescribeCommonTargetResultListResponse> describeCommonTargetResultList(DescribeCommonTargetResultListRequest request) {
         try {
@@ -2944,6 +3749,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeConcernNecessity  DescribeConcernNecessityRequest
+     * @return DescribeConcernNecessityResponse
+     */
     @Override
     public CompletableFuture<DescribeConcernNecessityResponse> describeConcernNecessity(DescribeConcernNecessityRequest request) {
         try {
@@ -2958,6 +3767,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerApps  DescribeContainerAppsRequest
+     * @return DescribeContainerAppsResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerAppsResponse> describeContainerApps(DescribeContainerAppsRequest request) {
         try {
@@ -2972,6 +3785,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerCriteria  DescribeContainerCriteriaRequest
+     * @return DescribeContainerCriteriaResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerCriteriaResponse> describeContainerCriteria(DescribeContainerCriteriaRequest request) {
         try {
@@ -2986,6 +3803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerFieldStatistics  DescribeContainerFieldStatisticsRequest
+     * @return DescribeContainerFieldStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerFieldStatisticsResponse> describeContainerFieldStatistics(DescribeContainerFieldStatisticsRequest request) {
         try {
@@ -3000,6 +3821,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerGroupedFieldDetail  DescribeContainerGroupedFieldDetailRequest
+     * @return DescribeContainerGroupedFieldDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerGroupedFieldDetailResponse> describeContainerGroupedFieldDetail(DescribeContainerGroupedFieldDetailRequest request) {
         try {
@@ -3014,6 +3839,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerInstances  DescribeContainerInstancesRequest
+     * @return DescribeContainerInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerInstancesResponse> describeContainerInstances(DescribeContainerInstancesRequest request) {
         try {
@@ -3028,6 +3857,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerScanConfig  DescribeContainerScanConfigRequest
+     * @return DescribeContainerScanConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerScanConfigResponse> describeContainerScanConfig(DescribeContainerScanConfigRequest request) {
         try {
@@ -3042,6 +3875,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerServiceK8sClusterKritisStatus  DescribeContainerServiceK8sClusterKritisStatusRequest
+     * @return DescribeContainerServiceK8sClusterKritisStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerServiceK8sClusterKritisStatusResponse> describeContainerServiceK8sClusterKritisStatus(DescribeContainerServiceK8sClusterKritisStatusRequest request) {
         try {
@@ -3056,6 +3893,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerServiceK8sClusterNamespaces  DescribeContainerServiceK8sClusterNamespacesRequest
+     * @return DescribeContainerServiceK8sClusterNamespacesResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerServiceK8sClusterNamespacesResponse> describeContainerServiceK8sClusterNamespaces(DescribeContainerServiceK8sClusterNamespacesRequest request) {
         try {
@@ -3070,6 +3911,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerServiceK8sClusters  DescribeContainerServiceK8sClustersRequest
+     * @return DescribeContainerServiceK8sClustersResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerServiceK8sClustersResponse> describeContainerServiceK8sClusters(DescribeContainerServiceK8sClustersRequest request) {
         try {
@@ -3085,8 +3930,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only users who created a Container Registry Enterprise Edition instance can call this operation.
-      *
+     * <b>description</b> :
+     * <p>Only users who created a Container Registry Enterprise Edition instance can call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeContainerStatistics  DescribeContainerStatisticsRequest
+     * @return DescribeContainerStatisticsResponse
      */
     @Override
     public CompletableFuture<DescribeContainerStatisticsResponse> describeContainerStatistics(DescribeContainerStatisticsRequest request) {
@@ -3102,6 +3950,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeContainerTags  DescribeContainerTagsRequest
+     * @return DescribeContainerTagsResponse
+     */
     @Override
     public CompletableFuture<DescribeContainerTagsResponse> describeContainerTags(DescribeContainerTagsRequest request) {
         try {
@@ -3116,6 +3968,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCountNotScannedImage  DescribeCountNotScannedImageRequest
+     * @return DescribeCountNotScannedImageResponse
+     */
     @Override
     public CompletableFuture<DescribeCountNotScannedImageResponse> describeCountNotScannedImage(DescribeCountNotScannedImageRequest request) {
         try {
@@ -3130,6 +3986,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCountScannedImage  DescribeCountScannedImageRequest
+     * @return DescribeCountScannedImageResponse
+     */
     @Override
     public CompletableFuture<DescribeCountScannedImageResponse> describeCountScannedImage(DescribeCountScannedImageRequest request) {
         try {
@@ -3144,6 +4004,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCriteria  DescribeCriteriaRequest
+     * @return DescribeCriteriaResponse
+     */
     @Override
     public CompletableFuture<DescribeCriteriaResponse> describeCriteria(DescribeCriteriaRequest request) {
         try {
@@ -3158,6 +4022,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomBlockInstances  DescribeCustomBlockInstancesRequest
+     * @return DescribeCustomBlockInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomBlockInstancesResponse> describeCustomBlockInstances(DescribeCustomBlockInstancesRequest request) {
         try {
@@ -3172,6 +4040,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomBlockRecords  DescribeCustomBlockRecordsRequest
+     * @return DescribeCustomBlockRecordsResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomBlockRecordsResponse> describeCustomBlockRecords(DescribeCustomBlockRecordsRequest request) {
         try {
@@ -3186,6 +4058,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomizeReportConfigDetail  DescribeCustomizeReportConfigDetailRequest
+     * @return DescribeCustomizeReportConfigDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomizeReportConfigDetailResponse> describeCustomizeReportConfigDetail(DescribeCustomizeReportConfigDetailRequest request) {
         try {
@@ -3200,6 +4076,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomizeReportList  DescribeCustomizeReportListRequest
+     * @return DescribeCustomizeReportListResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomizeReportListResponse> describeCustomizeReportList(DescribeCustomizeReportListRequest request) {
         try {
@@ -3214,6 +4094,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomizedDictUploadInfo  DescribeCustomizedDictUploadInfoRequest
+     * @return DescribeCustomizedDictUploadInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomizedDictUploadInfoResponse> describeCustomizedDictUploadInfo(DescribeCustomizedDictUploadInfoRequest request) {
         try {
@@ -3228,6 +4112,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCustomizedStrategyTargets  DescribeCustomizedStrategyTargetsRequest
+     * @return DescribeCustomizedStrategyTargetsResponse
+     */
     @Override
     public CompletableFuture<DescribeCustomizedStrategyTargetsResponse> describeCustomizedStrategyTargets(DescribeCustomizedStrategyTargetsRequest request) {
         try {
@@ -3242,6 +4130,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCycleTaskList  DescribeCycleTaskListRequest
+     * @return DescribeCycleTaskListResponse
+     */
     @Override
     public CompletableFuture<DescribeCycleTaskListResponse> describeCycleTaskList(DescribeCycleTaskListRequest request) {
         try {
@@ -3256,6 +4148,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDataSource  DescribeDataSourceRequest
+     * @return DescribeDataSourceResponse
+     */
     @Override
     public CompletableFuture<DescribeDataSourceResponse> describeDataSource(DescribeDataSourceRequest request) {
         try {
@@ -3270,6 +4166,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDefaultKeyInfo  DescribeDefaultKeyInfoRequest
+     * @return DescribeDefaultKeyInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeDefaultKeyInfoResponse> describeDefaultKeyInfo(DescribeDefaultKeyInfoRequest request) {
         try {
@@ -3284,6 +4184,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDefaultProxyInstallVersion  DescribeDefaultProxyInstallVersionRequest
+     * @return DescribeDefaultProxyInstallVersionResponse
+     */
     @Override
     public CompletableFuture<DescribeDefaultProxyInstallVersionResponse> describeDefaultProxyInstallVersion(DescribeDefaultProxyInstallVersionRequest request) {
         try {
@@ -3298,6 +4202,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDingTalk  DescribeDingTalkRequest
+     * @return DescribeDingTalkResponse
+     */
     @Override
     public CompletableFuture<DescribeDingTalkResponse> describeDingTalk(DescribeDingTalkRequest request) {
         try {
@@ -3312,6 +4220,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainCount  DescribeDomainCountRequest
+     * @return DescribeDomainCountResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainCountResponse> describeDomainCount(DescribeDomainCountRequest request) {
         try {
@@ -3326,6 +4238,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainDetail  DescribeDomainDetailRequest
+     * @return DescribeDomainDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainDetailResponse> describeDomainDetail(DescribeDomainDetailRequest request) {
         try {
@@ -3340,6 +4256,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainList  DescribeDomainListRequest
+     * @return DescribeDomainListResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainListResponse> describeDomainList(DescribeDomainListRequest request) {
         try {
@@ -3354,6 +4274,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainSecureAlarmList  DescribeDomainSecureAlarmListRequest
+     * @return DescribeDomainSecureAlarmListResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainSecureAlarmListResponse> describeDomainSecureAlarmList(DescribeDomainSecureAlarmListRequest request) {
         try {
@@ -3368,6 +4292,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainSecureRiskList  DescribeDomainSecureRiskListRequest
+     * @return DescribeDomainSecureRiskListResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainSecureRiskListResponse> describeDomainSecureRiskList(DescribeDomainSecureRiskListRequest request) {
         try {
@@ -3382,6 +4310,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainSecureScore  DescribeDomainSecureScoreRequest
+     * @return DescribeDomainSecureScoreResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainSecureScoreResponse> describeDomainSecureScore(DescribeDomainSecureScoreRequest request) {
         try {
@@ -3396,6 +4328,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainSecureStatistics  DescribeDomainSecureStatisticsRequest
+     * @return DescribeDomainSecureStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainSecureStatisticsResponse> describeDomainSecureStatistics(DescribeDomainSecureStatisticsRequest request) {
         try {
@@ -3410,6 +4346,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDomainSecureVulList  DescribeDomainSecureVulListRequest
+     * @return DescribeDomainSecureVulListResponse
+     */
     @Override
     public CompletableFuture<DescribeDomainSecureVulListResponse> describeDomainSecureVulList(DescribeDomainSecureVulListRequest request) {
         try {
@@ -3424,6 +4364,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDynamicDict  DescribeDynamicDictRequest
+     * @return DescribeDynamicDictResponse
+     */
     @Override
     public CompletableFuture<DescribeDynamicDictResponse> describeDynamicDict(DescribeDynamicDictRequest request) {
         try {
@@ -3438,6 +4382,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeDynamicDictUploadInfo  DescribeDynamicDictUploadInfoRequest
+     * @return DescribeDynamicDictUploadInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeDynamicDictUploadInfoResponse> describeDynamicDictUploadInfo(DescribeDynamicDictUploadInfoRequest request) {
         try {
@@ -3452,6 +4400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEmgUserAgreement  DescribeEmgUserAgreementRequest
+     * @return DescribeEmgUserAgreementResponse
+     */
     @Override
     public CompletableFuture<DescribeEmgUserAgreementResponse> describeEmgUserAgreement(DescribeEmgUserAgreementRequest request) {
         try {
@@ -3466,6 +4418,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEmgVulItem  DescribeEmgVulItemRequest
+     * @return DescribeEmgVulItemResponse
+     */
     @Override
     public CompletableFuture<DescribeEmgVulItemResponse> describeEmgVulItem(DescribeEmgVulItemRequest request) {
         try {
@@ -3480,6 +4436,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEventLevelCount  DescribeEventLevelCountRequest
+     * @return DescribeEventLevelCountResponse
+     */
     @Override
     public CompletableFuture<DescribeEventLevelCountResponse> describeEventLevelCount(DescribeEventLevelCountRequest request) {
         try {
@@ -3494,6 +4454,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeEventOnStage  DescribeEventOnStageRequest
+     * @return DescribeEventOnStageResponse
+     */
     @Override
     public CompletableFuture<DescribeEventOnStageResponse> describeEventOnStage(DescribeEventOnStageRequest request) {
         try {
@@ -3508,6 +4472,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExcludeSystemPath  DescribeExcludeSystemPathRequest
+     * @return DescribeExcludeSystemPathResponse
+     */
     @Override
     public CompletableFuture<DescribeExcludeSystemPathResponse> describeExcludeSystemPath(DescribeExcludeSystemPathRequest request) {
         try {
@@ -3522,6 +4490,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExportInfo  DescribeExportInfoRequest
+     * @return DescribeExportInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeExportInfoResponse> describeExportInfo(DescribeExportInfoRequest request) {
         try {
@@ -3536,6 +4508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExposedCheckWarning  DescribeExposedCheckWarningRequest
+     * @return DescribeExposedCheckWarningResponse
+     */
     @Override
     public CompletableFuture<DescribeExposedCheckWarningResponse> describeExposedCheckWarning(DescribeExposedCheckWarningRequest request) {
         try {
@@ -3550,6 +4526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExposedInstanceCriteria  DescribeExposedInstanceCriteriaRequest
+     * @return DescribeExposedInstanceCriteriaResponse
+     */
     @Override
     public CompletableFuture<DescribeExposedInstanceCriteriaResponse> describeExposedInstanceCriteria(DescribeExposedInstanceCriteriaRequest request) {
         try {
@@ -3564,6 +4544,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExposedInstanceDetail  DescribeExposedInstanceDetailRequest
+     * @return DescribeExposedInstanceDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeExposedInstanceDetailResponse> describeExposedInstanceDetail(DescribeExposedInstanceDetailRequest request) {
         try {
@@ -3578,6 +4562,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExposedInstanceList  DescribeExposedInstanceListRequest
+     * @return DescribeExposedInstanceListResponse
+     */
     @Override
     public CompletableFuture<DescribeExposedInstanceListResponse> describeExposedInstanceList(DescribeExposedInstanceListRequest request) {
         try {
@@ -3592,6 +4580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExposedStatistics  DescribeExposedStatisticsRequest
+     * @return DescribeExposedStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeExposedStatisticsResponse> describeExposedStatistics(DescribeExposedStatisticsRequest request) {
         try {
@@ -3606,6 +4598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeExposedStatisticsDetail  DescribeExposedStatisticsDetailRequest
+     * @return DescribeExposedStatisticsDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeExposedStatisticsDetailResponse> describeExposedStatisticsDetail(DescribeExposedStatisticsDetailRequest request) {
         try {
@@ -3620,6 +4616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFieldStatistics  DescribeFieldStatisticsRequest
+     * @return DescribeFieldStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeFieldStatisticsResponse> describeFieldStatistics(DescribeFieldStatisticsRequest request) {
         try {
@@ -3634,6 +4634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFixUsedCount  DescribeFixUsedCountRequest
+     * @return DescribeFixUsedCountResponse
+     */
     @Override
     public CompletableFuture<DescribeFixUsedCountResponse> describeFixUsedCount(DescribeFixUsedCountRequest request) {
         try {
@@ -3648,6 +4652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeFrontVulPatchList  DescribeFrontVulPatchListRequest
+     * @return DescribeFrontVulPatchListResponse
+     */
     @Override
     public CompletableFuture<DescribeFrontVulPatchListResponse> describeFrontVulPatchList(DescribeFrontVulPatchListRequest request) {
         try {
@@ -3662,6 +4670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroupStruct  DescribeGroupStructRequest
+     * @return DescribeGroupStructResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupStructResponse> describeGroupStruct(DescribeGroupStructRequest request) {
         try {
@@ -3676,6 +4688,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroupedContainerInstances  DescribeGroupedContainerInstancesRequest
+     * @return DescribeGroupedContainerInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupedContainerInstancesResponse> describeGroupedContainerInstances(DescribeGroupedContainerInstancesRequest request) {
         try {
@@ -3690,6 +4706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroupedInstances  DescribeGroupedInstancesRequest
+     * @return DescribeGroupedInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupedInstancesResponse> describeGroupedInstances(DescribeGroupedInstancesRequest request) {
         try {
@@ -3704,6 +4724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroupedMaliciousFiles  DescribeGroupedMaliciousFilesRequest
+     * @return DescribeGroupedMaliciousFilesResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupedMaliciousFilesResponse> describeGroupedMaliciousFiles(DescribeGroupedMaliciousFilesRequest request) {
         try {
@@ -3718,6 +4742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroupedTags  DescribeGroupedTagsRequest
+     * @return DescribeGroupedTagsResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupedTagsResponse> describeGroupedTags(DescribeGroupedTagsRequest request) {
         try {
@@ -3732,6 +4760,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeGroupedVul  DescribeGroupedVulRequest
+     * @return DescribeGroupedVulResponse
+     */
     @Override
     public CompletableFuture<DescribeGroupedVulResponse> describeGroupedVul(DescribeGroupedVulRequest request) {
         try {
@@ -3746,6 +4778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHcExportInfo  DescribeHcExportInfoRequest
+     * @return DescribeHcExportInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeHcExportInfoResponse> describeHcExportInfo(DescribeHcExportInfoRequest request) {
         try {
@@ -3760,6 +4796,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHoneyPotAuth  DescribeHoneyPotAuthRequest
+     * @return DescribeHoneyPotAuthResponse
+     */
     @Override
     public CompletableFuture<DescribeHoneyPotAuthResponse> describeHoneyPotAuth(DescribeHoneyPotAuthRequest request) {
         try {
@@ -3774,6 +4814,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHoneyPotSuspStatistics  DescribeHoneyPotSuspStatisticsRequest
+     * @return DescribeHoneyPotSuspStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeHoneyPotSuspStatisticsResponse> describeHoneyPotSuspStatistics(DescribeHoneyPotSuspStatisticsRequest request) {
         try {
@@ -3788,6 +4832,82 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeHybridProxyClusterList  DescribeHybridProxyClusterListRequest
+     * @return DescribeHybridProxyClusterListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridProxyClusterListResponse> describeHybridProxyClusterList(DescribeHybridProxyClusterListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridProxyClusterList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridProxyClusterListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridProxyClusterListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeHybridProxyLinkedClientList  DescribeHybridProxyLinkedClientListRequest
+     * @return DescribeHybridProxyLinkedClientListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridProxyLinkedClientListResponse> describeHybridProxyLinkedClientList(DescribeHybridProxyLinkedClientListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridProxyLinkedClientList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridProxyLinkedClientListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridProxyLinkedClientListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeHybridProxyList  DescribeHybridProxyListRequest
+     * @return DescribeHybridProxyListResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridProxyListResponse> describeHybridProxyList(DescribeHybridProxyListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridProxyList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridProxyListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridProxyListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeHybridProxyPolicy  DescribeHybridProxyPolicyRequest
+     * @return DescribeHybridProxyPolicyResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHybridProxyPolicyResponse> describeHybridProxyPolicy(DescribeHybridProxyPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHybridProxyPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHybridProxyPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHybridProxyPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeIdcAssetCriteria  DescribeIdcAssetCriteriaRequest
+     * @return DescribeIdcAssetCriteriaResponse
+     */
     @Override
     public CompletableFuture<DescribeIdcAssetCriteriaResponse> describeIdcAssetCriteria(DescribeIdcAssetCriteriaRequest request) {
         try {
@@ -3802,6 +4922,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeIdcProbeScanResultList  DescribeIdcProbeScanResultListRequest
+     * @return DescribeIdcProbeScanResultListResponse
+     */
     @Override
     public CompletableFuture<DescribeIdcProbeScanResultListResponse> describeIdcProbeScanResultList(DescribeIdcProbeScanResultListRequest request) {
         try {
@@ -3816,6 +4940,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImage  DescribeImageRequest
+     * @return DescribeImageResponse
+     */
     @Override
     public CompletableFuture<DescribeImageResponse> describeImage(DescribeImageRequest request) {
         try {
@@ -3830,6 +4958,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageBaselineCheckResult  DescribeImageBaselineCheckResultRequest
+     * @return DescribeImageBaselineCheckResultResponse
+     */
     @Override
     public CompletableFuture<DescribeImageBaselineCheckResultResponse> describeImageBaselineCheckResult(DescribeImageBaselineCheckResultRequest request) {
         try {
@@ -3844,6 +4976,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageBaselineCheckSummary  DescribeImageBaselineCheckSummaryRequest
+     * @return DescribeImageBaselineCheckSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeImageBaselineCheckSummaryResponse> describeImageBaselineCheckSummary(DescribeImageBaselineCheckSummaryRequest request) {
         try {
@@ -3858,6 +4994,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageBaselineDetail  DescribeImageBaselineDetailRequest
+     * @return DescribeImageBaselineDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeImageBaselineDetailResponse> describeImageBaselineDetail(DescribeImageBaselineDetailRequest request) {
         try {
@@ -3872,6 +5012,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageBaselineItemList  DescribeImageBaselineItemListRequest
+     * @return DescribeImageBaselineItemListResponse
+     */
     @Override
     public CompletableFuture<DescribeImageBaselineItemListResponse> describeImageBaselineItemList(DescribeImageBaselineItemListRequest request) {
         try {
@@ -3886,6 +5030,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageBaselineStrategy  DescribeImageBaselineStrategyRequest
+     * @return DescribeImageBaselineStrategyResponse
+     */
     @Override
     public CompletableFuture<DescribeImageBaselineStrategyResponse> describeImageBaselineStrategy(DescribeImageBaselineStrategyRequest request) {
         try {
@@ -3900,6 +5048,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageBuildRiskByKey  DescribeImageBuildRiskByKeyRequest
+     * @return DescribeImageBuildRiskByKeyResponse
+     */
     @Override
     public CompletableFuture<DescribeImageBuildRiskByKeyResponse> describeImageBuildRiskByKey(DescribeImageBuildRiskByKeyRequest request) {
         try {
@@ -3914,6 +5066,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageBuildRiskList  DescribeImageBuildRiskListRequest
+     * @return DescribeImageBuildRiskListResponse
+     */
     @Override
     public CompletableFuture<DescribeImageBuildRiskListResponse> describeImageBuildRiskList(DescribeImageBuildRiskListRequest request) {
         try {
@@ -3928,6 +5084,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageCriteria  DescribeImageCriteriaRequest
+     * @return DescribeImageCriteriaResponse
+     */
     @Override
     public CompletableFuture<DescribeImageCriteriaResponse> describeImageCriteria(DescribeImageCriteriaRequest request) {
         try {
@@ -3942,6 +5102,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageEventOperationCondition  DescribeImageEventOperationConditionRequest
+     * @return DescribeImageEventOperationConditionResponse
+     */
     @Override
     public CompletableFuture<DescribeImageEventOperationConditionResponse> describeImageEventOperationCondition(DescribeImageEventOperationConditionRequest request) {
         try {
@@ -3956,6 +5120,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageEventOperationPage  DescribeImageEventOperationPageRequest
+     * @return DescribeImageEventOperationPageResponse
+     */
     @Override
     public CompletableFuture<DescribeImageEventOperationPageResponse> describeImageEventOperationPage(DescribeImageEventOperationPageRequest request) {
         try {
@@ -3970,6 +5138,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageFixCycleConfig  DescribeImageFixCycleConfigRequest
+     * @return DescribeImageFixCycleConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeImageFixCycleConfigResponse> describeImageFixCycleConfig(DescribeImageFixCycleConfigRequest request) {
         try {
@@ -3984,6 +5156,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageFixTask  DescribeImageFixTaskRequest
+     * @return DescribeImageFixTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeImageFixTaskResponse> describeImageFixTask(DescribeImageFixTaskRequest request) {
         try {
@@ -3998,6 +5174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageGroupedVulList  DescribeImageGroupedVulListRequest
+     * @return DescribeImageGroupedVulListResponse
+     */
     @Override
     public CompletableFuture<DescribeImageGroupedVulListResponse> describeImageGroupedVulList(DescribeImageGroupedVulListRequest request) {
         try {
@@ -4012,6 +5192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageInfoList  DescribeImageInfoListRequest
+     * @return DescribeImageInfoListResponse
+     */
     @Override
     public CompletableFuture<DescribeImageInfoListResponse> describeImageInfoList(DescribeImageInfoListRequest request) {
         try {
@@ -4026,6 +5210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageInstances  DescribeImageInstancesRequest
+     * @return DescribeImageInstancesResponse
+     */
     @Override
     public CompletableFuture<DescribeImageInstancesResponse> describeImageInstances(DescribeImageInstancesRequest request) {
         try {
@@ -4040,6 +5228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageLatestScanTask  DescribeImageLatestScanTaskRequest
+     * @return DescribeImageLatestScanTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeImageLatestScanTaskResponse> describeImageLatestScanTask(DescribeImageLatestScanTaskRequest request) {
         try {
@@ -4054,6 +5246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageListByBuildRisk  DescribeImageListByBuildRiskRequest
+     * @return DescribeImageListByBuildRiskResponse
+     */
     @Override
     public CompletableFuture<DescribeImageListByBuildRiskResponse> describeImageListByBuildRisk(DescribeImageListByBuildRiskRequest request) {
         try {
@@ -4068,6 +5264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageListBySensitiveFile  DescribeImageListBySensitiveFileRequest
+     * @return DescribeImageListBySensitiveFileResponse
+     */
     @Override
     public CompletableFuture<DescribeImageListBySensitiveFileResponse> describeImageListBySensitiveFile(DescribeImageListBySensitiveFileRequest request) {
         try {
@@ -4082,6 +5282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageListWithBaselineName  DescribeImageListWithBaselineNameRequest
+     * @return DescribeImageListWithBaselineNameResponse
+     */
     @Override
     public CompletableFuture<DescribeImageListWithBaselineNameResponse> describeImageListWithBaselineName(DescribeImageListWithBaselineNameRequest request) {
         try {
@@ -4096,6 +5300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageRepoCriteria  DescribeImageRepoCriteriaRequest
+     * @return DescribeImageRepoCriteriaResponse
+     */
     @Override
     public CompletableFuture<DescribeImageRepoCriteriaResponse> describeImageRepoCriteria(DescribeImageRepoCriteriaRequest request) {
         try {
@@ -4110,6 +5318,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageRepoDetailList  DescribeImageRepoDetailListRequest
+     * @return DescribeImageRepoDetailListResponse
+     */
     @Override
     public CompletableFuture<DescribeImageRepoDetailListResponse> describeImageRepoDetailList(DescribeImageRepoDetailListRequest request) {
         try {
@@ -4124,6 +5336,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageRepoList  DescribeImageRepoListRequest
+     * @return DescribeImageRepoListResponse
+     */
     @Override
     public CompletableFuture<DescribeImageRepoListResponse> describeImageRepoList(DescribeImageRepoListRequest request) {
         try {
@@ -4138,6 +5354,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageScanAuthCount  DescribeImageScanAuthCountRequest
+     * @return DescribeImageScanAuthCountResponse
+     */
     @Override
     public CompletableFuture<DescribeImageScanAuthCountResponse> describeImageScanAuthCount(DescribeImageScanAuthCountRequest request) {
         try {
@@ -4152,6 +5372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageScanAuthorization  DescribeImageScanAuthorizationRequest
+     * @return DescribeImageScanAuthorizationResponse
+     */
     @Override
     public CompletableFuture<DescribeImageScanAuthorizationResponse> describeImageScanAuthorization(DescribeImageScanAuthorizationRequest request) {
         try {
@@ -4166,6 +5390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageSensitiveFileByKey  DescribeImageSensitiveFileByKeyRequest
+     * @return DescribeImageSensitiveFileByKeyResponse
+     */
     @Override
     public CompletableFuture<DescribeImageSensitiveFileByKeyResponse> describeImageSensitiveFileByKey(DescribeImageSensitiveFileByKeyRequest request) {
         try {
@@ -4180,6 +5408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageSensitiveFileList  DescribeImageSensitiveFileListRequest
+     * @return DescribeImageSensitiveFileListResponse
+     */
     @Override
     public CompletableFuture<DescribeImageSensitiveFileListResponse> describeImageSensitiveFileList(DescribeImageSensitiveFileListRequest request) {
         try {
@@ -4195,9 +5427,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Security Center can scan for security risks and collect statistics only for **Container Registry Enterprise Edition instances**.
-      * >  Security Center cannot scan for security risks or collect statistics for **default** Container Registry instances.
-      *
+     * <b>description</b> :
+     * <p>Security Center can scan for security risks and collect statistics only for <strong>Container Registry Enterprise Edition instances</strong>.</p>
+     * <blockquote>
+     * <p> Security Center cannot scan for security risks or collect statistics for <strong>default</strong> Container Registry instances.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeImageStatistics  DescribeImageStatisticsRequest
+     * @return DescribeImageStatisticsResponse
      */
     @Override
     public CompletableFuture<DescribeImageStatisticsResponse> describeImageStatistics(DescribeImageStatisticsRequest request) {
@@ -4214,8 +5451,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * To query the information about the recently detected image vulnerabilities, call the [PublicCreateImageScanTask](~~PublicCreateImageScanTask~~) operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.
-      *
+     * <b>description</b> :
+     * <p>To query the information about the recently detected image vulnerabilities, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation. Wait 1 to 5 minutes until the call is successful and call the DescribeImageVulList operation.</p>
+     * 
+     * @param request the request parameters of DescribeImageVulList  DescribeImageVulListRequest
+     * @return DescribeImageVulListResponse
      */
     @Override
     public CompletableFuture<DescribeImageVulListResponse> describeImageVulList(DescribeImageVulListRequest request) {
@@ -4231,6 +5471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeImageVulWhiteList  DescribeImageVulWhiteListRequest
+     * @return DescribeImageVulWhiteListResponse
+     */
     @Override
     public CompletableFuture<DescribeImageVulWhiteListResponse> describeImageVulWhiteList(DescribeImageVulWhiteListRequest request) {
         try {
@@ -4245,6 +5489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstallCaptcha  DescribeInstallCaptchaRequest
+     * @return DescribeInstallCaptchaResponse
+     */
     @Override
     public CompletableFuture<DescribeInstallCaptchaResponse> describeInstallCaptcha(DescribeInstallCaptchaRequest request) {
         try {
@@ -4259,6 +5507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstallCode  DescribeInstallCodeRequest
+     * @return DescribeInstallCodeResponse
+     */
     @Override
     public CompletableFuture<DescribeInstallCodeResponse> describeInstallCode(DescribeInstallCodeRequest request) {
         try {
@@ -4274,10 +5526,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the commands that are used to manually install the Security Center agent on the server. The return result contains the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.
-      * ### QPS limit
-      * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation to query the commands that are used to manually install the Security Center agent on the server. The return result contains the installation verification code and the server information. If you want to manually install the Security Center agent on your server, you can call this operation to query installation commands.</p>
+     * <h3>QPS limit</h3>
+     * <p>You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeInstallCodes  DescribeInstallCodesRequest
+     * @return DescribeInstallCodesResponse
      */
     @Override
     public CompletableFuture<DescribeInstallCodesResponse> describeInstallCodes(DescribeInstallCodesRequest request) {
@@ -4293,6 +5548,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceAntiBruteForceRules  DescribeInstanceAntiBruteForceRulesRequest
+     * @return DescribeInstanceAntiBruteForceRulesResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceAntiBruteForceRulesResponse> describeInstanceAntiBruteForceRules(DescribeInstanceAntiBruteForceRulesRequest request) {
         try {
@@ -4307,6 +5566,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceRebootStatus  DescribeInstanceRebootStatusRequest
+     * @return DescribeInstanceRebootStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceRebootStatusResponse> describeInstanceRebootStatus(DescribeInstanceRebootStatusRequest request) {
         try {
@@ -4321,6 +5584,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceStatistics  DescribeInstanceStatisticsRequest
+     * @return DescribeInstanceStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceStatisticsResponse> describeInstanceStatistics(DescribeInstanceStatisticsRequest request) {
         try {
@@ -4335,6 +5602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeInstanceVulStatistics  DescribeInstanceVulStatisticsRequest
+     * @return DescribeInstanceVulStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeInstanceVulStatisticsResponse> describeInstanceVulStatistics(DescribeInstanceVulStatisticsRequest request) {
         try {
@@ -4349,6 +5620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLatestScanTask  DescribeLatestScanTaskRequest
+     * @return DescribeLatestScanTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeLatestScanTaskResponse> describeLatestScanTask(DescribeLatestScanTaskRequest request) {
         try {
@@ -4363,6 +5638,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLogMeta  DescribeLogMetaRequest
+     * @return DescribeLogMetaResponse
+     */
     @Override
     public CompletableFuture<DescribeLogMetaResponse> describeLogMeta(DescribeLogMetaRequest request) {
         try {
@@ -4377,6 +5656,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLogShipperStatus  DescribeLogShipperStatusRequest
+     * @return DescribeLogShipperStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeLogShipperStatusResponse> describeLogShipperStatus(DescribeLogShipperStatusRequest request) {
         try {
@@ -4391,6 +5674,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLoginBaseConfigs  DescribeLoginBaseConfigsRequest
+     * @return DescribeLoginBaseConfigsResponse
+     */
     @Override
     public CompletableFuture<DescribeLoginBaseConfigsResponse> describeLoginBaseConfigs(DescribeLoginBaseConfigsRequest request) {
         try {
@@ -4405,6 +5692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLoginSwitchConfigs  DescribeLoginSwitchConfigsRequest
+     * @return DescribeLoginSwitchConfigsResponse
+     */
     @Override
     public CompletableFuture<DescribeLoginSwitchConfigsResponse> describeLoginSwitchConfigs(DescribeLoginSwitchConfigsRequest request) {
         try {
@@ -4419,6 +5710,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLogstoreStorage  DescribeLogstoreStorageRequest
+     * @return DescribeLogstoreStorageResponse
+     */
     @Override
     public CompletableFuture<DescribeLogstoreStorageResponse> describeLogstoreStorage(DescribeLogstoreStorageRequest request) {
         try {
@@ -4433,6 +5728,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMachineCanReboot  DescribeMachineCanRebootRequest
+     * @return DescribeMachineCanRebootResponse
+     */
     @Override
     public CompletableFuture<DescribeMachineCanRebootResponse> describeMachineCanReboot(DescribeMachineCanRebootRequest request) {
         try {
@@ -4447,6 +5746,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMatchedMaliciousNames  DescribeMatchedMaliciousNamesRequest
+     * @return DescribeMatchedMaliciousNamesResponse
+     */
     @Override
     public CompletableFuture<DescribeMatchedMaliciousNamesResponse> describeMatchedMaliciousNames(DescribeMatchedMaliciousNamesRequest request) {
         try {
@@ -4461,6 +5764,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeModuleConfig  DescribeModuleConfigRequest
+     * @return DescribeModuleConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeModuleConfigResponse> describeModuleConfig(DescribeModuleConfigRequest request) {
         try {
@@ -4475,6 +5782,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeMonitorAccounts  DescribeMonitorAccountsRequest
+     * @return DescribeMonitorAccountsResponse
+     */
     @Override
     public CompletableFuture<DescribeMonitorAccountsResponse> describeMonitorAccounts(DescribeMonitorAccountsRequest request) {
         try {
@@ -4489,6 +5800,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNeedAsyncQuery  DescribeNeedAsyncQueryRequest
+     * @return DescribeNeedAsyncQueryResponse
+     */
     @Override
     public CompletableFuture<DescribeNeedAsyncQueryResponse> describeNeedAsyncQuery(DescribeNeedAsyncQueryRequest request) {
         try {
@@ -4503,6 +5818,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNoticeConfig  DescribeNoticeConfigRequest
+     * @return DescribeNoticeConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeNoticeConfigResponse> describeNoticeConfig(DescribeNoticeConfigRequest request) {
         try {
@@ -4517,6 +5836,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeNsasSuspEventType  DescribeNsasSuspEventTypeRequest
+     * @return DescribeNsasSuspEventTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeNsasSuspEventTypeResponse> describeNsasSuspEventType(DescribeNsasSuspEventTypeRequest request) {
         try {
@@ -4531,6 +5854,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeOfflineMachines  DescribeOfflineMachinesRequest
+     * @return DescribeOfflineMachinesResponse
+     */
     @Override
     public CompletableFuture<DescribeOfflineMachinesResponse> describeOfflineMachines(DescribeOfflineMachinesRequest request) {
         try {
@@ -4545,6 +5872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeOnceTask  DescribeOnceTaskRequest
+     * @return DescribeOnceTaskResponse
+     */
     @Override
     public CompletableFuture<DescribeOnceTaskResponse> describeOnceTask(DescribeOnceTaskRequest request) {
         try {
@@ -4559,6 +5890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeOnceTaskLeafRecordPage  DescribeOnceTaskLeafRecordPageRequest
+     * @return DescribeOnceTaskLeafRecordPageResponse
+     */
     @Override
     public CompletableFuture<DescribeOnceTaskLeafRecordPageResponse> describeOnceTaskLeafRecordPage(DescribeOnceTaskLeafRecordPageRequest request) {
         try {
@@ -4573,6 +5908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyCount  DescribePropertyCountRequest
+     * @return DescribePropertyCountResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyCountResponse> describePropertyCount(DescribePropertyCountRequest request) {
         try {
@@ -4587,6 +5926,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyCronDetail  DescribePropertyCronDetailRequest
+     * @return DescribePropertyCronDetailResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyCronDetailResponse> describePropertyCronDetail(DescribePropertyCronDetailRequest request) {
         try {
@@ -4601,6 +5944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyCronItem  DescribePropertyCronItemRequest
+     * @return DescribePropertyCronItemResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyCronItemResponse> describePropertyCronItem(DescribePropertyCronItemRequest request) {
         try {
@@ -4615,6 +5962,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyPortDetail  DescribePropertyPortDetailRequest
+     * @return DescribePropertyPortDetailResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyPortDetailResponse> describePropertyPortDetail(DescribePropertyPortDetailRequest request) {
         try {
@@ -4629,6 +5980,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyPortItem  DescribePropertyPortItemRequest
+     * @return DescribePropertyPortItemResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyPortItemResponse> describePropertyPortItem(DescribePropertyPortItemRequest request) {
         try {
@@ -4643,6 +5998,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyProcDetail  DescribePropertyProcDetailRequest
+     * @return DescribePropertyProcDetailResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyProcDetailResponse> describePropertyProcDetail(DescribePropertyProcDetailRequest request) {
         try {
@@ -4657,6 +6016,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyProcItem  DescribePropertyProcItemRequest
+     * @return DescribePropertyProcItemResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyProcItemResponse> describePropertyProcItem(DescribePropertyProcItemRequest request) {
         try {
@@ -4671,6 +6034,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyScaDetail  DescribePropertyScaDetailRequest
+     * @return DescribePropertyScaDetailResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyScaDetailResponse> describePropertyScaDetail(DescribePropertyScaDetailRequest request) {
         try {
@@ -4685,6 +6052,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyScaItem  DescribePropertyScaItemRequest
+     * @return DescribePropertyScaItemResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyScaItemResponse> describePropertyScaItem(DescribePropertyScaItemRequest request) {
         try {
@@ -4699,6 +6070,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyScaProcessDetail  DescribePropertyScaProcessDetailRequest
+     * @return DescribePropertyScaProcessDetailResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyScaProcessDetailResponse> describePropertyScaProcessDetail(DescribePropertyScaProcessDetailRequest request) {
         try {
@@ -4713,6 +6088,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyScheduleConfig  DescribePropertyScheduleConfigRequest
+     * @return DescribePropertyScheduleConfigResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyScheduleConfigResponse> describePropertyScheduleConfig(DescribePropertyScheduleConfigRequest request) {
         try {
@@ -4727,6 +6106,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertySoftwareDetail  DescribePropertySoftwareDetailRequest
+     * @return DescribePropertySoftwareDetailResponse
+     */
     @Override
     public CompletableFuture<DescribePropertySoftwareDetailResponse> describePropertySoftwareDetail(DescribePropertySoftwareDetailRequest request) {
         try {
@@ -4741,6 +6124,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertySoftwareItem  DescribePropertySoftwareItemRequest
+     * @return DescribePropertySoftwareItemResponse
+     */
     @Override
     public CompletableFuture<DescribePropertySoftwareItemResponse> describePropertySoftwareItem(DescribePropertySoftwareItemRequest request) {
         try {
@@ -4755,6 +6142,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyTypeScaItem  DescribePropertyTypeScaItemRequest
+     * @return DescribePropertyTypeScaItemResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyTypeScaItemResponse> describePropertyTypeScaItem(DescribePropertyTypeScaItemRequest request) {
         try {
@@ -4770,9 +6161,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI DescribePropertyUsageNewest is deprecated, please use Sas::2018-12-03::DescribeOnceTask instead.  * @param request  the request parameters of DescribePropertyUsageNewest  DescribePropertyUsageNewestRequest
+     * @return DescribePropertyUsageNewestResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribePropertyUsageNewestResponse> describePropertyUsageNewest(DescribePropertyUsageNewestRequest request) {
         try {
@@ -4788,8 +6180,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only users who purchase the Enterprise or Ultimate edition of Security Center can call this operation.
-      *
+     * <b>description</b> :
+     * <p>Only users who purchase the Enterprise or Ultimate edition of Security Center can call this operation.</p>
+     * 
+     * @param request the request parameters of DescribePropertyUsageTop  DescribePropertyUsageTopRequest
+     * @return DescribePropertyUsageTopResponse
      */
     @Override
     public CompletableFuture<DescribePropertyUsageTopResponse> describePropertyUsageTop(DescribePropertyUsageTopRequest request) {
@@ -4805,6 +6200,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyUserDetail  DescribePropertyUserDetailRequest
+     * @return DescribePropertyUserDetailResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyUserDetailResponse> describePropertyUserDetail(DescribePropertyUserDetailRequest request) {
         try {
@@ -4819,6 +6218,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribePropertyUserItem  DescribePropertyUserItemRequest
+     * @return DescribePropertyUserItemResponse
+     */
     @Override
     public CompletableFuture<DescribePropertyUserItemResponse> describePropertyUserItem(DescribePropertyUserItemRequest request) {
         try {
@@ -4833,6 +6236,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeQuaraFileDownloadInfo  DescribeQuaraFileDownloadInfoRequest
+     * @return DescribeQuaraFileDownloadInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeQuaraFileDownloadInfoResponse> describeQuaraFileDownloadInfo(DescribeQuaraFileDownloadInfoRequest request) {
         try {
@@ -4847,6 +6254,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeReportExport  DescribeReportExportRequest
+     * @return DescribeReportExportResponse
+     */
     @Override
     public CompletableFuture<DescribeReportExportResponse> describeReportExport(DescribeReportExportRequest request) {
         try {
@@ -4861,6 +6272,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeReportRecipientStatus  DescribeReportRecipientStatusRequest
+     * @return DescribeReportRecipientStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeReportRecipientStatusResponse> describeReportRecipientStatus(DescribeReportRecipientStatusRequest request) {
         try {
@@ -4876,9 +6291,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the data on your servers is encrypted by ransomware, you can create a restoration task to restore the data on your servers by using backup data in Security Center.
-      * >  After you enable an anti-ransomware policy, the data on your servers is backed up based on the policy. For more information about anti-ransomware policies, see [Manage protection policies](~~164781~~).
-      *
+     * <b>description</b> :
+     * <p>If the data on your servers is encrypted by ransomware, you can create a restoration task to restore the data on your servers by using backup data in Security Center.</p>
+     * <blockquote>
+     * <p> After you enable an anti-ransomware policy, the data on your servers is backed up based on the policy. For more information about anti-ransomware policies, see <a href="https://help.aliyun.com/document_detail/164781.html">Manage protection policies</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of DescribeRestoreJobs  DescribeRestoreJobsRequest
+     * @return DescribeRestoreJobsResponse
      */
     @Override
     public CompletableFuture<DescribeRestoreJobsResponse> describeRestoreJobs(DescribeRestoreJobsRequest request) {
@@ -4894,6 +6314,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRestorePlans  DescribeRestorePlansRequest
+     * @return DescribeRestorePlansResponse
+     */
     @Override
     public CompletableFuture<DescribeRestorePlansResponse> describeRestorePlans(DescribeRestorePlansRequest request) {
         try {
@@ -4909,10 +6333,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * This operation is phased out. You can use the ListCheckInstanceResult operation.
-      *
+     * @deprecated OpenAPI DescribeRiskCheckItemResult is deprecated  * @description This operation is phased out. You can use the ListCheckInstanceResult operation.
+     * 
+     * @param request the request parameters of DescribeRiskCheckItemResult  DescribeRiskCheckItemResultRequest
+     * @return DescribeRiskCheckItemResultResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeRiskCheckItemResultResponse> describeRiskCheckItemResult(DescribeRiskCheckItemResultRequest request) {
         try {
@@ -4928,10 +6354,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * This operation is phased out. You can use the [ListCheckResult](~~ListCheckResult~~) operation.
-      *
+     * @deprecated OpenAPI DescribeRiskCheckResult is deprecated  * @description This operation is phased out. You can use the [ListCheckResult](~~ListCheckResult~~) operation.
+     * 
+     * @param request the request parameters of DescribeRiskCheckResult  DescribeRiskCheckResultRequest
+     * @return DescribeRiskCheckResultResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeRiskCheckResultResponse> describeRiskCheckResult(DescribeRiskCheckResultRequest request) {
         try {
@@ -4947,10 +6375,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * This operation is phased out. You can use the GetCheckSummary operation.
-      *
+     * @deprecated OpenAPI DescribeRiskCheckSummary is deprecated  * @description This operation is phased out. You can use the GetCheckSummary operation.
+     * 
+     * @param request the request parameters of DescribeRiskCheckSummary  DescribeRiskCheckSummaryRequest
+     * @return DescribeRiskCheckSummaryResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeRiskCheckSummaryResponse> describeRiskCheckSummary(DescribeRiskCheckSummaryRequest request) {
         try {
@@ -4966,10 +6396,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * This operation is phased out. You can use the ListCheckStandard operation instead.
-      *
+     * @deprecated OpenAPI DescribeRiskItemType is deprecated  * @description This operation is phased out. You can use the ListCheckStandard operation instead.
+     * 
+     * @param request the request parameters of DescribeRiskItemType  DescribeRiskItemTypeRequest
+     * @return DescribeRiskItemTypeResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeRiskItemTypeResponse> describeRiskItemType(DescribeRiskItemTypeRequest request) {
         try {
@@ -4985,10 +6417,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * This operation is phased out. You can use the ListCheckResult operation. When you call the ListCheckResult operation, set the Statuses parameter to NOT_PASS.
-      *
+     * @deprecated OpenAPI DescribeRiskListCheckResult is deprecated  * @description This operation is phased out. You can use the ListCheckResult operation. When you call the ListCheckResult operation, set the Statuses parameter to NOT_PASS.
+     * 
+     * @param request the request parameters of DescribeRiskListCheckResult  DescribeRiskListCheckResultRequest
+     * @return DescribeRiskListCheckResultResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeRiskListCheckResultResponse> describeRiskListCheckResult(DescribeRiskListCheckResultRequest request) {
         try {
@@ -5003,6 +6437,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRiskType  DescribeRiskTypeRequest
+     * @return DescribeRiskTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeRiskTypeResponse> describeRiskType(DescribeRiskTypeRequest request) {
         try {
@@ -5017,6 +6455,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeRisks  DescribeRisksRequest
+     * @return DescribeRisksResponse
+     */
     @Override
     public CompletableFuture<DescribeRisksResponse> describeRisks(DescribeRisksRequest request) {
         try {
@@ -5031,6 +6473,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSasPmAgentList  DescribeSasPmAgentListRequest
+     * @return DescribeSasPmAgentListResponse
+     */
     @Override
     public CompletableFuture<DescribeSasPmAgentListResponse> describeSasPmAgentList(DescribeSasPmAgentListRequest request) {
         try {
@@ -5045,6 +6491,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeScanTaskProgress  DescribeScanTaskProgressRequest
+     * @return DescribeScanTaskProgressResponse
+     */
     @Override
     public CompletableFuture<DescribeScanTaskProgressResponse> describeScanTaskProgress(DescribeScanTaskProgressRequest request) {
         try {
@@ -5059,6 +6509,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeScanTaskStatistics  DescribeScanTaskStatisticsRequest
+     * @return DescribeScanTaskStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeScanTaskStatisticsResponse> describeScanTaskStatistics(DescribeScanTaskStatisticsRequest request) {
         try {
@@ -5073,6 +6527,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeScreenScoreThread  DescribeScreenScoreThreadRequest
+     * @return DescribeScreenScoreThreadResponse
+     */
     @Override
     public CompletableFuture<DescribeScreenScoreThreadResponse> describeScreenScoreThread(DescribeScreenScoreThreadRequest request) {
         try {
@@ -5087,6 +6545,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSearchCondition  DescribeSearchConditionRequest
+     * @return DescribeSearchConditionResponse
+     */
     @Override
     public CompletableFuture<DescribeSearchConditionResponse> describeSearchCondition(DescribeSearchConditionRequest request) {
         try {
@@ -5101,6 +6563,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecureSuggestion  DescribeSecureSuggestionRequest
+     * @return DescribeSecureSuggestionResponse
+     */
     @Override
     public CompletableFuture<DescribeSecureSuggestionResponse> describeSecureSuggestion(DescribeSecureSuggestionRequest request) {
         try {
@@ -5116,10 +6582,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * This operation is phased out. You can use the GetCheckConfig operation.
-      *
+     * @deprecated OpenAPI DescribeSecurityCheckScheduleConfig is deprecated  * @description This operation is phased out. You can use the GetCheckConfig operation.
+     * 
+     * @param request the request parameters of DescribeSecurityCheckScheduleConfig  DescribeSecurityCheckScheduleConfigRequest
+     * @return DescribeSecurityCheckScheduleConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DescribeSecurityCheckScheduleConfigResponse> describeSecurityCheckScheduleConfig(DescribeSecurityCheckScheduleConfigRequest request) {
         try {
@@ -5134,6 +6602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecurityEventMarkMissList  DescribeSecurityEventMarkMissListRequest
+     * @return DescribeSecurityEventMarkMissListResponse
+     */
     @Override
     public CompletableFuture<DescribeSecurityEventMarkMissListResponse> describeSecurityEventMarkMissList(DescribeSecurityEventMarkMissListRequest request) {
         try {
@@ -5148,6 +6620,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecurityEventOperationStatus  DescribeSecurityEventOperationStatusRequest
+     * @return DescribeSecurityEventOperationStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeSecurityEventOperationStatusResponse> describeSecurityEventOperationStatus(DescribeSecurityEventOperationStatusRequest request) {
         try {
@@ -5162,6 +6638,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecurityEventOperations  DescribeSecurityEventOperationsRequest
+     * @return DescribeSecurityEventOperationsResponse
+     */
     @Override
     public CompletableFuture<DescribeSecurityEventOperationsResponse> describeSecurityEventOperations(DescribeSecurityEventOperationsRequest request) {
         try {
@@ -5176,6 +6656,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSecurityStatInfo  DescribeSecurityStatInfoRequest
+     * @return DescribeSecurityStatInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeSecurityStatInfoResponse> describeSecurityStatInfo(DescribeSecurityStatInfoRequest request) {
         try {
@@ -5190,6 +6674,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeServiceLinkedRoleStatus  DescribeServiceLinkedRoleStatusRequest
+     * @return DescribeServiceLinkedRoleStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeServiceLinkedRoleStatusResponse> describeServiceLinkedRoleStatus(DescribeServiceLinkedRoleStatusRequest request) {
         try {
@@ -5204,6 +6692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSimilarEventScenarios  DescribeSimilarEventScenariosRequest
+     * @return DescribeSimilarEventScenariosResponse
+     */
     @Override
     public CompletableFuture<DescribeSimilarEventScenariosResponse> describeSimilarEventScenarios(DescribeSimilarEventScenariosRequest request) {
         try {
@@ -5218,6 +6710,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSimilarSecurityEvents  DescribeSimilarSecurityEventsRequest
+     * @return DescribeSimilarSecurityEventsResponse
+     */
     @Override
     public CompletableFuture<DescribeSimilarSecurityEventsResponse> describeSimilarSecurityEvents(DescribeSimilarSecurityEventsRequest request) {
         try {
@@ -5232,6 +6728,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSnapshots  DescribeSnapshotsRequest
+     * @return DescribeSnapshotsResponse
+     */
     @Override
     public CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request) {
         try {
@@ -5247,8 +6747,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
-      *
+     * <b>description</b> :
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * 
+     * @param request the request parameters of DescribeSoarStrategies  DescribeSoarStrategiesRequest
+     * @return DescribeSoarStrategiesResponse
      */
     @Override
     public CompletableFuture<DescribeSoarStrategiesResponse> describeSoarStrategies(DescribeSoarStrategiesRequest request) {
@@ -5265,8 +6768,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
-      *
+     * <b>description</b> :
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * 
+     * @param request the request parameters of DescribeSoarStrategyParam  DescribeSoarStrategyParamRequest
+     * @return DescribeSoarStrategyParamResponse
      */
     @Override
     public CompletableFuture<DescribeSoarStrategyParamResponse> describeSoarStrategyParam(DescribeSoarStrategyParamRequest request) {
@@ -5283,8 +6789,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
-      *
+     * <b>description</b> :
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * 
+     * @param request the request parameters of DescribeSoarStrategyTaskDetail  DescribeSoarStrategyTaskDetailRequest
+     * @return DescribeSoarStrategyTaskDetailResponse
      */
     @Override
     public CompletableFuture<DescribeSoarStrategyTaskDetailResponse> describeSoarStrategyTaskDetail(DescribeSoarStrategyTaskDetailRequest request) {
@@ -5301,8 +6810,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
-      *
+     * <b>description</b> :
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * 
+     * @param request the request parameters of DescribeSoarStrategyTasks  DescribeSoarStrategyTasksRequest
+     * @return DescribeSoarStrategyTasksResponse
      */
     @Override
     public CompletableFuture<DescribeSoarStrategyTasksResponse> describeSoarStrategyTasks(DescribeSoarStrategyTasksRequest request) {
@@ -5319,8 +6831,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
-      *
+     * <b>description</b> :
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * 
+     * @param request the request parameters of DescribeSoarSubscribedStrategy  DescribeSoarSubscribedStrategyRequest
+     * @return DescribeSoarSubscribedStrategyResponse
      */
     @Override
     public CompletableFuture<DescribeSoarSubscribedStrategyResponse> describeSoarSubscribedStrategy(DescribeSoarSubscribedStrategyRequest request) {
@@ -5336,6 +6851,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStrategy  DescribeStrategyRequest
+     * @return DescribeStrategyResponse
+     */
     @Override
     public CompletableFuture<DescribeStrategyResponse> describeStrategy(DescribeStrategyRequest request) {
         try {
@@ -5350,6 +6869,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStrategyDetail  DescribeStrategyDetailRequest
+     * @return DescribeStrategyDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeStrategyDetailResponse> describeStrategyDetail(DescribeStrategyDetailRequest request) {
         try {
@@ -5364,6 +6887,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStrategyExecDetail  DescribeStrategyExecDetailRequest
+     * @return DescribeStrategyExecDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeStrategyExecDetailResponse> describeStrategyExecDetail(DescribeStrategyExecDetailRequest request) {
         try {
@@ -5378,6 +6905,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeStrategyTarget  DescribeStrategyTargetRequest
+     * @return DescribeStrategyTargetResponse
+     */
     @Override
     public CompletableFuture<DescribeStrategyTargetResponse> describeStrategyTarget(DescribeStrategyTargetRequest request) {
         try {
@@ -5392,6 +6923,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSummaryInfo  DescribeSummaryInfoRequest
+     * @return DescribeSummaryInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeSummaryInfoResponse> describeSummaryInfo(DescribeSummaryInfoRequest request) {
         try {
@@ -5406,6 +6941,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSupervisonInfo  DescribeSupervisonInfoRequest
+     * @return DescribeSupervisonInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeSupervisonInfoResponse> describeSupervisonInfo(DescribeSupervisonInfoRequest request) {
         try {
@@ -5420,6 +6959,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSupportRegion  DescribeSupportRegionRequest
+     * @return DescribeSupportRegionResponse
+     */
     @Override
     public CompletableFuture<DescribeSupportRegionResponse> describeSupportRegion(DescribeSupportRegionRequest request) {
         try {
@@ -5434,6 +6977,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSuspEventDetail  DescribeSuspEventDetailRequest
+     * @return DescribeSuspEventDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeSuspEventDetailResponse> describeSuspEventDetail(DescribeSuspEventDetailRequest request) {
         try {
@@ -5448,6 +6995,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSuspEventExportInfo  DescribeSuspEventExportInfoRequest
+     * @return DescribeSuspEventExportInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeSuspEventExportInfoResponse> describeSuspEventExportInfo(DescribeSuspEventExportInfoRequest request) {
         try {
@@ -5462,6 +7013,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSuspEventQuaraFiles  DescribeSuspEventQuaraFilesRequest
+     * @return DescribeSuspEventQuaraFilesResponse
+     */
     @Override
     public CompletableFuture<DescribeSuspEventQuaraFilesResponse> describeSuspEventQuaraFiles(DescribeSuspEventQuaraFilesRequest request) {
         try {
@@ -5476,6 +7031,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSuspEventUserSetting  DescribeSuspEventUserSettingRequest
+     * @return DescribeSuspEventUserSettingResponse
+     */
     @Override
     public CompletableFuture<DescribeSuspEventUserSettingResponse> describeSuspEventUserSetting(DescribeSuspEventUserSettingRequest request) {
         try {
@@ -5490,6 +7049,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSuspEvents  DescribeSuspEventsRequest
+     * @return DescribeSuspEventsResponse
+     */
     @Override
     public CompletableFuture<DescribeSuspEventsResponse> describeSuspEvents(DescribeSuspEventsRequest request) {
         try {
@@ -5504,6 +7067,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSuspiciousOverallConfig  DescribeSuspiciousOverallConfigRequest
+     * @return DescribeSuspiciousOverallConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeSuspiciousOverallConfigResponse> describeSuspiciousOverallConfig(DescribeSuspiciousOverallConfigRequest request) {
         try {
@@ -5518,6 +7085,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSuspiciousUUIDConfig  DescribeSuspiciousUUIDConfigRequest
+     * @return DescribeSuspiciousUUIDConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeSuspiciousUUIDConfigResponse> describeSuspiciousUUIDConfig(DescribeSuspiciousUUIDConfigRequest request) {
         try {
@@ -5532,6 +7103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSyncAssetTaskList  DescribeSyncAssetTaskListRequest
+     * @return DescribeSyncAssetTaskListResponse
+     */
     @Override
     public CompletableFuture<DescribeSyncAssetTaskListResponse> describeSyncAssetTaskList(DescribeSyncAssetTaskListRequest request) {
         try {
@@ -5546,6 +7121,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeSyncAssetTaskLogDetail  DescribeSyncAssetTaskLogDetailRequest
+     * @return DescribeSyncAssetTaskLogDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeSyncAssetTaskLogDetailResponse> describeSyncAssetTaskLogDetail(DescribeSyncAssetTaskLogDetailRequest request) {
         try {
@@ -5560,6 +7139,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTarget  DescribeTargetRequest
+     * @return DescribeTargetResponse
+     */
     @Override
     public CompletableFuture<DescribeTargetResponse> describeTarget(DescribeTargetRequest request) {
         try {
@@ -5574,6 +7157,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTaskErrorLog  DescribeTaskErrorLogRequest
+     * @return DescribeTaskErrorLogResponse
+     */
     @Override
     public CompletableFuture<DescribeTaskErrorLogResponse> describeTaskErrorLog(DescribeTaskErrorLogRequest request) {
         try {
@@ -5588,6 +7175,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTotalStatistics  DescribeTotalStatisticsRequest
+     * @return DescribeTotalStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeTotalStatisticsResponse> describeTotalStatistics(DescribeTotalStatisticsRequest request) {
         try {
@@ -5602,6 +7193,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTraceInfoDetail  DescribeTraceInfoDetailRequest
+     * @return DescribeTraceInfoDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeTraceInfoDetailResponse> describeTraceInfoDetail(DescribeTraceInfoDetailRequest request) {
         try {
@@ -5616,6 +7211,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeTraceInfoNode  DescribeTraceInfoNodeRequest
+     * @return DescribeTraceInfoNodeResponse
+     */
     @Override
     public CompletableFuture<DescribeTraceInfoNodeResponse> describeTraceInfoNode(DescribeTraceInfoNodeRequest request) {
         try {
@@ -5630,6 +7229,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUniBackupDatabase  DescribeUniBackupDatabaseRequest
+     * @return DescribeUniBackupDatabaseResponse
+     */
     @Override
     public CompletableFuture<DescribeUniBackupDatabaseResponse> describeUniBackupDatabase(DescribeUniBackupDatabaseRequest request) {
         try {
@@ -5644,6 +7247,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUniBackupPolicies  DescribeUniBackupPoliciesRequest
+     * @return DescribeUniBackupPoliciesResponse
+     */
     @Override
     public CompletableFuture<DescribeUniBackupPoliciesResponse> describeUniBackupPolicies(DescribeUniBackupPoliciesRequest request) {
         try {
@@ -5658,6 +7265,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUniBackupPolicyDetail  DescribeUniBackupPolicyDetailRequest
+     * @return DescribeUniBackupPolicyDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeUniBackupPolicyDetailResponse> describeUniBackupPolicyDetail(DescribeUniBackupPolicyDetailRequest request) {
         try {
@@ -5672,6 +7283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUniBackupStatistics  DescribeUniBackupStatisticsRequest
+     * @return DescribeUniBackupStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeUniBackupStatisticsResponse> describeUniBackupStatistics(DescribeUniBackupStatisticsRequest request) {
         try {
@@ -5686,6 +7301,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUniRecoverableList  DescribeUniRecoverableListRequest
+     * @return DescribeUniRecoverableListResponse
+     */
     @Override
     public CompletableFuture<DescribeUniRecoverableListResponse> describeUniRecoverableList(DescribeUniRecoverableListRequest request) {
         try {
@@ -5700,6 +7319,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUniSupportRegion  DescribeUniSupportRegionRequest
+     * @return DescribeUniSupportRegionResponse
+     */
     @Override
     public CompletableFuture<DescribeUniSupportRegionResponse> describeUniSupportRegion(DescribeUniSupportRegionRequest request) {
         try {
@@ -5714,6 +7337,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserBackupMachines  DescribeUserBackupMachinesRequest
+     * @return DescribeUserBackupMachinesResponse
+     */
     @Override
     public CompletableFuture<DescribeUserBackupMachinesResponse> describeUserBackupMachines(DescribeUserBackupMachinesRequest request) {
         try {
@@ -5728,6 +7355,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserBaselineAuthorization  DescribeUserBaselineAuthorizationRequest
+     * @return DescribeUserBaselineAuthorizationResponse
+     */
     @Override
     public CompletableFuture<DescribeUserBaselineAuthorizationResponse> describeUserBaselineAuthorization(DescribeUserBaselineAuthorizationRequest request) {
         try {
@@ -5742,6 +7373,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserLayoutAuthorization  DescribeUserLayoutAuthorizationRequest
+     * @return DescribeUserLayoutAuthorizationResponse
+     */
     @Override
     public CompletableFuture<DescribeUserLayoutAuthorizationResponse> describeUserLayoutAuthorization(DescribeUserLayoutAuthorizationRequest request) {
         try {
@@ -5756,6 +7391,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUserSetting  DescribeUserSettingRequest
+     * @return DescribeUserSettingResponse
+     */
     @Override
     public CompletableFuture<DescribeUserSettingResponse> describeUserSetting(DescribeUserSettingRequest request) {
         try {
@@ -5770,6 +7409,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeUuidsByVulNames  DescribeUuidsByVulNamesRequest
+     * @return DescribeUuidsByVulNamesResponse
+     */
     @Override
     public CompletableFuture<DescribeUuidsByVulNamesResponse> describeUuidsByVulNames(DescribeUuidsByVulNamesRequest request) {
         try {
@@ -5784,6 +7427,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVendorList  DescribeVendorListRequest
+     * @return DescribeVendorListResponse
+     */
     @Override
     public CompletableFuture<DescribeVendorListResponse> describeVendorList(DescribeVendorListRequest request) {
         try {
@@ -5798,6 +7445,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVersionConfig  DescribeVersionConfigRequest
+     * @return DescribeVersionConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeVersionConfigResponse> describeVersionConfig(DescribeVersionConfigRequest request) {
         try {
@@ -5812,6 +7463,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVolDingdingMessage  DescribeVolDingdingMessageRequest
+     * @return DescribeVolDingdingMessageResponse
+     */
     @Override
     public CompletableFuture<DescribeVolDingdingMessageResponse> describeVolDingdingMessage(DescribeVolDingdingMessageRequest request) {
         try {
@@ -5826,6 +7481,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpcHoneyPotCriteria  DescribeVpcHoneyPotCriteriaRequest
+     * @return DescribeVpcHoneyPotCriteriaResponse
+     */
     @Override
     public CompletableFuture<DescribeVpcHoneyPotCriteriaResponse> describeVpcHoneyPotCriteria(DescribeVpcHoneyPotCriteriaRequest request) {
         try {
@@ -5841,8 +7500,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.
-      *
+     * <b>description</b> :
+     * <p>If you specify only the Action request parameter in your request, Security Center returns the list of all VPCs regardless of whether a honeypot is deployed on a VPC.</p>
+     * 
+     * @param request the request parameters of DescribeVpcHoneyPotList  DescribeVpcHoneyPotListRequest
+     * @return DescribeVpcHoneyPotListResponse
      */
     @Override
     public CompletableFuture<DescribeVpcHoneyPotListResponse> describeVpcHoneyPotList(DescribeVpcHoneyPotListRequest request) {
@@ -5858,6 +7520,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVpcList  DescribeVpcListRequest
+     * @return DescribeVpcListResponse
+     */
     @Override
     public CompletableFuture<DescribeVpcListResponse> describeVpcList(DescribeVpcListRequest request) {
         try {
@@ -5872,6 +7538,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulCheckTaskStatusDetail  DescribeVulCheckTaskStatusDetailRequest
+     * @return DescribeVulCheckTaskStatusDetailResponse
+     */
     @Override
     public CompletableFuture<DescribeVulCheckTaskStatusDetailResponse> describeVulCheckTaskStatusDetail(DescribeVulCheckTaskStatusDetailRequest request) {
         try {
@@ -5886,6 +7556,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulConfig  DescribeVulConfigRequest
+     * @return DescribeVulConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeVulConfigResponse> describeVulConfig(DescribeVulConfigRequest request) {
         try {
@@ -5900,6 +7574,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulDefendCountStatistics  DescribeVulDefendCountStatisticsRequest
+     * @return DescribeVulDefendCountStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeVulDefendCountStatisticsResponse> describeVulDefendCountStatistics(DescribeVulDefendCountStatisticsRequest request) {
         try {
@@ -5914,6 +7592,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulDetails  DescribeVulDetailsRequest
+     * @return DescribeVulDetailsResponse
+     */
     @Override
     public CompletableFuture<DescribeVulDetailsResponse> describeVulDetails(DescribeVulDetailsRequest request) {
         try {
@@ -5929,8 +7611,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.
-      *
+     * <b>description</b> :
+     * <p>If the value of ExportStatus is success, the URL at which you can download the exported Excel file is returned.</p>
+     * 
+     * @param request the request parameters of DescribeVulExportInfo  DescribeVulExportInfoRequest
+     * @return DescribeVulExportInfoResponse
      */
     @Override
     public CompletableFuture<DescribeVulExportInfoResponse> describeVulExportInfo(DescribeVulExportInfoRequest request) {
@@ -5946,6 +7631,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulFixStatistics  DescribeVulFixStatisticsRequest
+     * @return DescribeVulFixStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeVulFixStatisticsResponse> describeVulFixStatistics(DescribeVulFixStatisticsRequest request) {
         try {
@@ -5960,6 +7649,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulList  DescribeVulListRequest
+     * @return DescribeVulListResponse
+     */
     @Override
     public CompletableFuture<DescribeVulListResponse> describeVulList(DescribeVulListRequest request) {
         try {
@@ -5974,6 +7667,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulListPage  DescribeVulListPageRequest
+     * @return DescribeVulListPageResponse
+     */
     @Override
     public CompletableFuture<DescribeVulListPageResponse> describeVulListPage(DescribeVulListPageRequest request) {
         try {
@@ -5988,6 +7685,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulMetaCountStatistics  DescribeVulMetaCountStatisticsRequest
+     * @return DescribeVulMetaCountStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeVulMetaCountStatisticsResponse> describeVulMetaCountStatistics(DescribeVulMetaCountStatisticsRequest request) {
         try {
@@ -6002,6 +7703,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulNumStatistics  DescribeVulNumStatisticsRequest
+     * @return DescribeVulNumStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeVulNumStatisticsResponse> describeVulNumStatistics(DescribeVulNumStatisticsRequest request) {
         try {
@@ -6016,6 +7721,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulTargetConfig  DescribeVulTargetConfigRequest
+     * @return DescribeVulTargetConfigResponse
+     */
     @Override
     public CompletableFuture<DescribeVulTargetConfigResponse> describeVulTargetConfig(DescribeVulTargetConfigRequest request) {
         try {
@@ -6030,6 +7739,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulTargetStatistics  DescribeVulTargetStatisticsRequest
+     * @return DescribeVulTargetStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeVulTargetStatisticsResponse> describeVulTargetStatistics(DescribeVulTargetStatisticsRequest request) {
         try {
@@ -6044,6 +7757,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeVulWhitelist  DescribeVulWhitelistRequest
+     * @return DescribeVulWhitelistResponse
+     */
     @Override
     public CompletableFuture<DescribeVulWhitelistResponse> describeVulWhitelist(DescribeVulWhitelistRequest request) {
         try {
@@ -6058,6 +7775,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWarningExportInfo  DescribeWarningExportInfoRequest
+     * @return DescribeWarningExportInfoResponse
+     */
     @Override
     public CompletableFuture<DescribeWarningExportInfoResponse> describeWarningExportInfo(DescribeWarningExportInfoRequest request) {
         try {
@@ -6072,6 +7793,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWarningMachines  DescribeWarningMachinesRequest
+     * @return DescribeWarningMachinesResponse
+     */
     @Override
     public CompletableFuture<DescribeWarningMachinesResponse> describeWarningMachines(DescribeWarningMachinesRequest request) {
         try {
@@ -6086,6 +7811,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockBindList  DescribeWebLockBindListRequest
+     * @return DescribeWebLockBindListResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockBindListResponse> describeWebLockBindList(DescribeWebLockBindListRequest request) {
         try {
@@ -6100,6 +7829,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockConfigList  DescribeWebLockConfigListRequest
+     * @return DescribeWebLockConfigListResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockConfigListResponse> describeWebLockConfigList(DescribeWebLockConfigListRequest request) {
         try {
@@ -6114,6 +7847,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockExclusiveFileType  DescribeWebLockExclusiveFileTypeRequest
+     * @return DescribeWebLockExclusiveFileTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockExclusiveFileTypeResponse> describeWebLockExclusiveFileType(DescribeWebLockExclusiveFileTypeRequest request) {
         try {
@@ -6128,6 +7865,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockFileChangeStatistics  DescribeWebLockFileChangeStatisticsRequest
+     * @return DescribeWebLockFileChangeStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockFileChangeStatisticsResponse> describeWebLockFileChangeStatistics(DescribeWebLockFileChangeStatisticsRequest request) {
         try {
@@ -6142,6 +7883,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockFileEvents  DescribeWebLockFileEventsRequest
+     * @return DescribeWebLockFileEventsResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockFileEventsResponse> describeWebLockFileEvents(DescribeWebLockFileEventsRequest request) {
         try {
@@ -6156,6 +7901,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockFileTypeSummary  DescribeWebLockFileTypeSummaryRequest
+     * @return DescribeWebLockFileTypeSummaryResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockFileTypeSummaryResponse> describeWebLockFileTypeSummary(DescribeWebLockFileTypeSummaryRequest request) {
         try {
@@ -6170,6 +7919,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockInclusiveFileType  DescribeWebLockInclusiveFileTypeRequest
+     * @return DescribeWebLockInclusiveFileTypeResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockInclusiveFileTypeResponse> describeWebLockInclusiveFileType(DescribeWebLockInclusiveFileTypeRequest request) {
         try {
@@ -6184,6 +7937,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockProcessBlockStatistics  DescribeWebLockProcessBlockStatisticsRequest
+     * @return DescribeWebLockProcessBlockStatisticsResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockProcessBlockStatisticsResponse> describeWebLockProcessBlockStatistics(DescribeWebLockProcessBlockStatisticsRequest request) {
         try {
@@ -6198,6 +7955,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockProcessList  DescribeWebLockProcessListRequest
+     * @return DescribeWebLockProcessListResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockProcessListResponse> describeWebLockProcessList(DescribeWebLockProcessListRequest request) {
         try {
@@ -6212,6 +7973,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockStatus  DescribeWebLockStatusRequest
+     * @return DescribeWebLockStatusResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockStatusResponse> describeWebLockStatus(DescribeWebLockStatusRequest request) {
         try {
@@ -6226,6 +7991,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebLockTotalFileChangeCount  DescribeWebLockTotalFileChangeCountRequest
+     * @return DescribeWebLockTotalFileChangeCountResponse
+     */
     @Override
     public CompletableFuture<DescribeWebLockTotalFileChangeCountResponse> describeWebLockTotalFileChangeCount(DescribeWebLockTotalFileChangeCountRequest request) {
         try {
@@ -6240,6 +8009,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeWebPath  DescribeWebPathRequest
+     * @return DescribeWebPathResponse
+     */
     @Override
     public CompletableFuture<DescribeWebPathResponse> describeWebPath(DescribeWebPathRequest request) {
         try {
@@ -6255,8 +8028,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeWhiteListAsset  DescribeWhiteListAssetRequest
+     * @return DescribeWhiteListAssetResponse
      */
     @Override
     public CompletableFuture<DescribeWhiteListAssetResponse> describeWhiteListAsset(DescribeWhiteListAssetRequest request) {
@@ -6273,8 +8049,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeWhiteListAuthorize  DescribeWhiteListAuthorizeRequest
+     * @return DescribeWhiteListAuthorizeResponse
      */
     @Override
     public CompletableFuture<DescribeWhiteListAuthorizeResponse> describeWhiteListAuthorize(DescribeWhiteListAuthorizeRequest request) {
@@ -6291,8 +8070,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in-use, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in-use, you can call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeWhiteListEffectiveAssets  DescribeWhiteListEffectiveAssetsRequest
+     * @return DescribeWhiteListEffectiveAssetsResponse
      */
     @Override
     public CompletableFuture<DescribeWhiteListEffectiveAssetsResponse> describeWhiteListEffectiveAssets(DescribeWhiteListEffectiveAssetsRequest request) {
@@ -6309,8 +8091,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeWhiteListProcess  DescribeWhiteListProcessRequest
+     * @return DescribeWhiteListProcessResponse
      */
     @Override
     public CompletableFuture<DescribeWhiteListProcessResponse> describeWhiteListProcess(DescribeWhiteListProcessRequest request) {
@@ -6327,8 +8112,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeWhiteListStrategyList  DescribeWhiteListStrategyListRequest
+     * @return DescribeWhiteListStrategyListResponse
      */
     @Override
     public CompletableFuture<DescribeWhiteListStrategyListResponse> describeWhiteListStrategyList(DescribeWhiteListStrategyListRequest request) {
@@ -6345,8 +8133,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeWhiteListStrategyStatistics  DescribeWhiteListStrategyStatisticsRequest
+     * @return DescribeWhiteListStrategyStatisticsResponse
      */
     @Override
     public CompletableFuture<DescribeWhiteListStrategyStatisticsResponse> describeWhiteListStrategyStatistics(DescribeWhiteListStrategyStatisticsRequest request) {
@@ -6363,8 +8154,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in-use, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in-use, you can call this operation.</p>
+     * 
+     * @param request the request parameters of DescribeWhiteListStrategyUuidCount  DescribeWhiteListStrategyUuidCountRequest
+     * @return DescribeWhiteListStrategyUuidCountResponse
      */
     @Override
     public CompletableFuture<DescribeWhiteListStrategyUuidCountResponse> describeWhiteListStrategyUuidCount(DescribeWhiteListStrategyUuidCountRequest request) {
@@ -6380,6 +8174,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DingTalkOnlineTest  DingTalkOnlineTestRequest
+     * @return DingTalkOnlineTestResponse
+     */
     @Override
     public CompletableFuture<DingTalkOnlineTestResponse> dingTalkOnlineTest(DingTalkOnlineTestRequest request) {
         try {
@@ -6394,6 +8192,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableBruteForceRecord  DisableBruteForceRecordRequest
+     * @return DisableBruteForceRecordResponse
+     */
     @Override
     public CompletableFuture<DisableBruteForceRecordResponse> disableBruteForceRecord(DisableBruteForceRecordRequest request) {
         try {
@@ -6408,6 +8210,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DisableCustomBlockRecord  DisableCustomBlockRecordRequest
+     * @return DisableCustomBlockRecordResponse
+     */
     @Override
     public CompletableFuture<DisableCustomBlockRecordResponse> disableCustomBlockRecord(DisableCustomBlockRecordRequest request) {
         try {
@@ -6422,6 +8228,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableBruteForceRecord  EnableBruteForceRecordRequest
+     * @return EnableBruteForceRecordResponse
+     */
     @Override
     public CompletableFuture<EnableBruteForceRecordResponse> enableBruteForceRecord(EnableBruteForceRecordRequest request) {
         try {
@@ -6436,6 +8246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableCustomBlockRecord  EnableCustomBlockRecordRequest
+     * @return EnableCustomBlockRecordResponse
+     */
     @Override
     public CompletableFuture<EnableCustomBlockRecordResponse> enableCustomBlockRecord(EnableCustomBlockRecordRequest request) {
         try {
@@ -6450,6 +8264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of EnableCustomInstanceBlockRecord  EnableCustomInstanceBlockRecordRequest
+     * @return EnableCustomInstanceBlockRecordResponse
+     */
     @Override
     public CompletableFuture<EnableCustomInstanceBlockRecordResponse> enableCustomInstanceBlockRecord(EnableCustomInstanceBlockRecordRequest request) {
         try {
@@ -6465,8 +8283,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.
-      *
+     * <b>description</b> :
+     * <p>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</p>
+     * 
+     * @param request the request parameters of EnableServiceAccessResourceDirectory  EnableServiceAccessResourceDirectoryRequest
+     * @return EnableServiceAccessResourceDirectoryResponse
      */
     @Override
     public CompletableFuture<EnableServiceAccessResourceDirectoryResponse> enableServiceAccessResourceDirectory(EnableServiceAccessResourceDirectoryRequest request) {
@@ -6482,6 +8303,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExecStrategy  ExecStrategyRequest
+     * @return ExecStrategyResponse
+     */
     @Override
     public CompletableFuture<ExecStrategyResponse> execStrategy(ExecStrategyRequest request) {
         try {
@@ -6496,6 +8321,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportCustomizeReport  ExportCustomizeReportRequest
+     * @return ExportCustomizeReportResponse
+     */
     @Override
     public CompletableFuture<ExportCustomizeReportResponse> exportCustomizeReport(ExportCustomizeReportRequest request) {
         try {
@@ -6511,12 +8340,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the operation to export the following check result lists:
-      * *   The list of servers on the Host page.
-      * *   The lists of image system vulnerabilities, image application vulnerabilities, image baseline check results, and malicious image samples on the Image Security page.
-      * *   The list of attack analysis data on the Attack Awareness page.
-      * *   The list of check results for AccessKey pair leaks on the AK leak detection page.
-      *
+     * <b>description</b> :
+     * <p>You can call the operation to export the following check result lists:</p>
+     * <ul>
+     * <li>The list of servers on the Host page.</li>
+     * <li>The lists of image system vulnerabilities, image application vulnerabilities, image baseline check results, and malicious image samples on the Image Security page.</li>
+     * <li>The list of attack analysis data on the Attack Awareness page.</li>
+     * <li>The list of check results for AccessKey pair leaks on the AK leak detection page.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ExportRecord  ExportRecordRequest
+     * @return ExportRecordResponse
      */
     @Override
     public CompletableFuture<ExportRecordResponse> exportRecord(ExportRecordRequest request) {
@@ -6532,6 +8366,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportSuspEvents  ExportSuspEventsRequest
+     * @return ExportSuspEventsResponse
+     */
     @Override
     public CompletableFuture<ExportSuspEventsResponse> exportSuspEvents(ExportSuspEventsRequest request) {
         try {
@@ -6547,11 +8385,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the ExportVul operation to export the following types of vulnerabilities: Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and urgent vulnerabilities.
-      * You can use this operation together with the DescribeVulExportInfo operation. After you call the ExportVul operation to create a vulnerability export task, you can call the DescribeVulExportInfo operation to query the progress of the task by specifying the ID of the task.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the ExportVul operation to export the following types of vulnerabilities: Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and urgent vulnerabilities.
+     * You can use this operation together with the DescribeVulExportInfo operation. After you call the ExportVul operation to create a vulnerability export task, you can call the DescribeVulExportInfo operation to query the progress of the task by specifying the ID of the task.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ExportVul  ExportVulRequest
+     * @return ExportVulResponse
      */
     @Override
     public CompletableFuture<ExportVulResponse> exportVul(ExportVulRequest request) {
@@ -6567,6 +8408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ExportWarning  ExportWarningRequest
+     * @return ExportWarningResponse
+     */
     @Override
     public CompletableFuture<ExportWarningResponse> exportWarning(ExportWarningRequest request) {
         try {
@@ -6581,6 +8426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FindContainerNetworkConnect  FindContainerNetworkConnectRequest
+     * @return FindContainerNetworkConnectResponse
+     */
     @Override
     public CompletableFuture<FindContainerNetworkConnectResponse> findContainerNetworkConnect(FindContainerNetworkConnectRequest request) {
         try {
@@ -6595,6 +8444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FinishGuidTask  FinishGuidTaskRequest
+     * @return FinishGuidTaskResponse
+     */
     @Override
     public CompletableFuture<FinishGuidTaskResponse> finishGuidTask(FinishGuidTaskRequest request) {
         try {
@@ -6609,6 +8462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of FixCheckWarnings  FixCheckWarningsRequest
+     * @return FixCheckWarningsResponse
+     */
     @Override
     public CompletableFuture<FixCheckWarningsResponse> fixCheckWarnings(FixCheckWarningsRequest request) {
         try {
@@ -6623,6 +8480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateDynamicDict  GenerateDynamicDictRequest
+     * @return GenerateDynamicDictResponse
+     */
     @Override
     public CompletableFuture<GenerateDynamicDictResponse> generateDynamicDict(GenerateDynamicDictRequest request) {
         try {
@@ -6637,6 +8498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateK8sAccessInfo  GenerateK8sAccessInfoRequest
+     * @return GenerateK8sAccessInfoResponse
+     */
     @Override
     public CompletableFuture<GenerateK8sAccessInfoResponse> generateK8sAccessInfo(GenerateK8sAccessInfoRequest request) {
         try {
@@ -6651,6 +8516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GenerateOnceTask  GenerateOnceTaskRequest
+     * @return GenerateOnceTaskResponse
+     */
     @Override
     public CompletableFuture<GenerateOnceTaskResponse> generateOnceTask(GenerateOnceTaskRequest request) {
         try {
@@ -6665,6 +8534,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAccountLabel  GetAccountLabelRequest
+     * @return GetAccountLabelResponse
+     */
     @Override
     public CompletableFuture<GetAccountLabelResponse> getAccountLabel(GetAccountLabelRequest request) {
         try {
@@ -6680,8 +8553,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only the Ultimate edition of Security Center supports this operation.
-      *
+     * <b>description</b> :
+     * <p>Only the Ultimate edition of Security Center supports this operation.</p>
+     * 
+     * @param request the request parameters of GetAegisContainerPluginRule  GetAegisContainerPluginRuleRequest
+     * @return GetAegisContainerPluginRuleResponse
      */
     @Override
     public CompletableFuture<GetAegisContainerPluginRuleResponse> getAegisContainerPluginRule(GetAegisContainerPluginRuleRequest request) {
@@ -6697,6 +8573,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAegisContainerPluginRuleCriteria  GetAegisContainerPluginRuleCriteriaRequest
+     * @return GetAegisContainerPluginRuleCriteriaResponse
+     */
     @Override
     public CompletableFuture<GetAegisContainerPluginRuleCriteriaResponse> getAegisContainerPluginRuleCriteria(GetAegisContainerPluginRuleCriteriaRequest request) {
         try {
@@ -6711,6 +8591,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAgentlessTaskCount  GetAgentlessTaskCountRequest
+     * @return GetAgentlessTaskCountResponse
+     */
     @Override
     public CompletableFuture<GetAgentlessTaskCountResponse> getAgentlessTaskCount(GetAgentlessTaskCountRequest request) {
         try {
@@ -6725,6 +8609,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAlarmMachineCount  GetAlarmMachineCountRequest
+     * @return GetAlarmMachineCountResponse
+     */
     @Override
     public CompletableFuture<GetAlarmMachineCountResponse> getAlarmMachineCount(GetAlarmMachineCountRequest request) {
         try {
@@ -6739,6 +8627,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAppNetwork  GetAppNetworkRequest
+     * @return GetAppNetworkResponse
+     */
     @Override
     public CompletableFuture<GetAppNetworkResponse> getAppNetwork(GetAppNetworkRequest request) {
         try {
@@ -6753,6 +8645,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAssetDetailByUuid  GetAssetDetailByUuidRequest
+     * @return GetAssetDetailByUuidResponse
+     */
     @Override
     public CompletableFuture<GetAssetDetailByUuidResponse> getAssetDetailByUuid(GetAssetDetailByUuidRequest request) {
         try {
@@ -6767,6 +8663,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAssetSelectionConfig  GetAssetSelectionConfigRequest
+     * @return GetAssetSelectionConfigResponse
+     */
     @Override
     public CompletableFuture<GetAssetSelectionConfigResponse> getAssetSelectionConfig(GetAssetSelectionConfigRequest request) {
         try {
@@ -6781,6 +8681,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAssetsPropertyDetail  GetAssetsPropertyDetailRequest
+     * @return GetAssetsPropertyDetailResponse
+     */
     @Override
     public CompletableFuture<GetAssetsPropertyDetailResponse> getAssetsPropertyDetail(GetAssetsPropertyDetailRequest request) {
         try {
@@ -6795,6 +8699,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAssetsPropertyItem  GetAssetsPropertyItemRequest
+     * @return GetAssetsPropertyItemResponse
+     */
     @Override
     public CompletableFuture<GetAssetsPropertyItemResponse> getAssetsPropertyItem(GetAssetsPropertyItemRequest request) {
         try {
@@ -6809,6 +8717,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAttackTypeList  GetAttackTypeListRequest
+     * @return GetAttackTypeListResponse
+     */
     @Override
     public CompletableFuture<GetAttackTypeListResponse> getAttackTypeList(GetAttackTypeListRequest request) {
         try {
@@ -6823,6 +8735,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAuthSummary  GetAuthSummaryRequest
+     * @return GetAuthSummaryResponse
+     */
     @Override
     public CompletableFuture<GetAuthSummaryResponse> getAuthSummary(GetAuthSummaryRequest request) {
         try {
@@ -6837,6 +8753,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetAuthVersionStatistic  GetAuthVersionStatisticRequest
+     * @return GetAuthVersionStatisticResponse
+     */
     @Override
     public CompletableFuture<GetAuthVersionStatisticResponse> getAuthVersionStatistic(GetAuthVersionStatisticRequest request) {
         try {
@@ -6851,6 +8771,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBackupAutoConfigStatus  GetBackupAutoConfigStatusRequest
+     * @return GetBackupAutoConfigStatusResponse
+     */
     @Override
     public CompletableFuture<GetBackupAutoConfigStatusResponse> getBackupAutoConfigStatus(GetBackupAutoConfigStatusRequest request) {
         try {
@@ -6865,6 +8789,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBackupStorageCount  GetBackupStorageCountRequest
+     * @return GetBackupStorageCountResponse
+     */
     @Override
     public CompletableFuture<GetBackupStorageCountResponse> getBackupStorageCount(GetBackupStorageCountRequest request) {
         try {
@@ -6879,6 +8807,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetBuildRiskDefineRuleConfig  GetBuildRiskDefineRuleConfigRequest
+     * @return GetBuildRiskDefineRuleConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetBuildRiskDefineRuleConfigResponse> getBuildRiskDefineRuleConfig(GetBuildRiskDefineRuleConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetBuildRiskDefineRuleConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetBuildRiskDefineRuleConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetBuildRiskDefineRuleConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCanTrySas  GetCanTrySasRequest
+     * @return GetCanTrySasResponse
+     */
     @Override
     public CompletableFuture<GetCanTrySasResponse> getCanTrySas(GetCanTrySasRequest request) {
         try {
@@ -6893,6 +8843,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCheckConfig  GetCheckConfigRequest
+     * @return GetCheckConfigResponse
+     */
     @Override
     public CompletableFuture<GetCheckConfigResponse> getCheckConfig(GetCheckConfigRequest request) {
         try {
@@ -6907,6 +8861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCheckDetail  GetCheckDetailRequest
+     * @return GetCheckDetailResponse
+     */
     @Override
     public CompletableFuture<GetCheckDetailResponse> getCheckDetail(GetCheckDetailRequest request) {
         try {
@@ -6921,6 +8879,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCheckProcess  GetCheckProcessRequest
+     * @return GetCheckProcessResponse
+     */
     @Override
     public CompletableFuture<GetCheckProcessResponse> getCheckProcess(GetCheckProcessRequest request) {
         try {
@@ -6935,6 +8897,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCheckRiskStatistics  GetCheckRiskStatisticsRequest
+     * @return GetCheckRiskStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetCheckRiskStatisticsResponse> getCheckRiskStatistics(GetCheckRiskStatisticsRequest request) {
         try {
@@ -6949,6 +8915,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCheckSale  GetCheckSaleRequest
+     * @return GetCheckSaleResponse
+     */
     @Override
     public CompletableFuture<GetCheckSaleResponse> getCheckSale(GetCheckSaleRequest request) {
         try {
@@ -6964,8 +8934,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must purchase the configuration assessment feature before you can use the feature.
-      *
+     * <b>description</b> :
+     * <p>You must purchase the configuration assessment feature before you can use the feature.</p>
+     * 
+     * @param request the request parameters of GetCheckStructure  GetCheckStructureRequest
+     * @return GetCheckStructureResponse
      */
     @Override
     public CompletableFuture<GetCheckStructureResponse> getCheckStructure(GetCheckStructureRequest request) {
@@ -6981,6 +8954,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCheckSummary  GetCheckSummaryRequest
+     * @return GetCheckSummaryResponse
+     */
     @Override
     public CompletableFuture<GetCheckSummaryResponse> getCheckSummary(GetCheckSummaryRequest request) {
         try {
@@ -6996,9 +8973,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI GetClientInstallationStatistic is deprecated, please use Sas::2018-12-03::GetClientRatioStatistic instead.  * @param request  the request parameters of GetClientInstallationStatistic  GetClientInstallationStatisticRequest
+     * @return GetClientInstallationStatisticResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetClientInstallationStatisticResponse> getClientInstallationStatistic(GetClientInstallationStatisticRequest request) {
         try {
@@ -7013,6 +8991,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClientRatioStatistic  GetClientRatioStatisticRequest
+     * @return GetClientRatioStatisticResponse
+     */
     @Override
     public CompletableFuture<GetClientRatioStatisticResponse> getClientRatioStatistic(GetClientRatioStatisticRequest request) {
         try {
@@ -7027,6 +9009,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClientUserDefineRule  GetClientUserDefineRuleRequest
+     * @return GetClientUserDefineRuleResponse
+     */
     @Override
     public CompletableFuture<GetClientUserDefineRuleResponse> getClientUserDefineRule(GetClientUserDefineRuleRequest request) {
         try {
@@ -7041,6 +9027,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCloudAssetCriteria  GetCloudAssetCriteriaRequest
+     * @return GetCloudAssetCriteriaResponse
+     */
     @Override
     public CompletableFuture<GetCloudAssetCriteriaResponse> getCloudAssetCriteria(GetCloudAssetCriteriaRequest request) {
         try {
@@ -7055,6 +9045,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCloudAssetDetail  GetCloudAssetDetailRequest
+     * @return GetCloudAssetDetailResponse
+     */
     @Override
     public CompletableFuture<GetCloudAssetDetailResponse> getCloudAssetDetail(GetCloudAssetDetailRequest request) {
         try {
@@ -7069,6 +9063,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCloudAssetSummary  GetCloudAssetSummaryRequest
+     * @return GetCloudAssetSummaryResponse
+     */
     @Override
     public CompletableFuture<GetCloudAssetSummaryResponse> getCloudAssetSummary(GetCloudAssetSummaryRequest request) {
         try {
@@ -7083,6 +9081,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClusterCheckItemWarningStatistics  GetClusterCheckItemWarningStatisticsRequest
+     * @return GetClusterCheckItemWarningStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetClusterCheckItemWarningStatisticsResponse> getClusterCheckItemWarningStatistics(GetClusterCheckItemWarningStatisticsRequest request) {
         try {
@@ -7097,6 +9099,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClusterRuleSummary  GetClusterRuleSummaryRequest
+     * @return GetClusterRuleSummaryResponse
+     */
     @Override
     public CompletableFuture<GetClusterRuleSummaryResponse> getClusterRuleSummary(GetClusterRuleSummaryRequest request) {
         try {
@@ -7111,6 +9117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClusterStrategyCount  GetClusterStrategyCountRequest
+     * @return GetClusterStrategyCountResponse
+     */
     @Override
     public CompletableFuture<GetClusterStrategyCountResponse> getClusterStrategyCount(GetClusterStrategyCountRequest request) {
         try {
@@ -7125,6 +9135,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetClusterSuspEventStatistics  GetClusterSuspEventStatisticsRequest
+     * @return GetClusterSuspEventStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetClusterSuspEventStatisticsResponse> getClusterSuspEventStatistics(GetClusterSuspEventStatisticsRequest request) {
         try {
@@ -7139,6 +9153,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCommonSwitchConfig  GetCommonSwitchConfigRequest
+     * @return GetCommonSwitchConfigResponse
+     */
     @Override
     public CompletableFuture<GetCommonSwitchConfigResponse> getCommonSwitchConfig(GetCommonSwitchConfigRequest request) {
         try {
@@ -7153,6 +9171,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetContainerDefenseRuleDetail  GetContainerDefenseRuleDetailRequest
+     * @return GetContainerDefenseRuleDetailResponse
+     */
     @Override
     public CompletableFuture<GetContainerDefenseRuleDetailResponse> getContainerDefenseRuleDetail(GetContainerDefenseRuleDetailRequest request) {
         try {
@@ -7167,6 +9189,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetCurrentVersionPublish  GetCurrentVersionPublishRequest
+     * @return GetCurrentVersionPublishResponse
+     */
+    @Override
+    public CompletableFuture<GetCurrentVersionPublishResponse> getCurrentVersionPublish(GetCurrentVersionPublishRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCurrentVersionPublish").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCurrentVersionPublishResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCurrentVersionPublishResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDataTrend  GetDataTrendRequest
+     * @return GetDataTrendResponse
+     */
     @Override
     public CompletableFuture<GetDataTrendResponse> getDataTrend(GetDataTrendRequest request) {
         try {
@@ -7181,6 +9225,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetDefenceCount  GetDefenceCountRequest
+     * @return GetDefenceCountResponse
+     */
     @Override
     public CompletableFuture<GetDefenceCountResponse> getDefenceCount(GetDefenceCountRequest request) {
         try {
@@ -7195,6 +9243,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFileDetectApiInvokeInfo  GetFileDetectApiInvokeInfoRequest
+     * @return GetFileDetectApiInvokeInfoResponse
+     */
     @Override
     public CompletableFuture<GetFileDetectApiInvokeInfoResponse> getFileDetectApiInvokeInfo(GetFileDetectApiInvokeInfoRequest request) {
         try {
@@ -7209,6 +9261,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFileDetectReport  GetFileDetectReportRequest
+     * @return GetFileDetectReportResponse
+     */
     @Override
     public CompletableFuture<GetFileDetectReportResponse> getFileDetectReport(GetFileDetectReportRequest request) {
         try {
@@ -7224,8 +9280,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.
-      *
+     * <b>description</b> :
+     * <p>The HashKey parameter is included in all API operations that are related to the file detection feature. The parameter specifies the unique identifier of a file. Only MD5 hash values are supported. Before you call this operation, calculate the MD5 hash value of the file.</p>
+     * 
+     * @param request the request parameters of GetFileDetectResult  GetFileDetectResultRequest
+     * @return GetFileDetectResultResponse
      */
     @Override
     public CompletableFuture<GetFileDetectResultResponse> getFileDetectResult(GetFileDetectResultRequest request) {
@@ -7241,6 +9300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFileProtectDashboard  GetFileProtectDashboardRequest
+     * @return GetFileProtectDashboardResponse
+     */
     @Override
     public CompletableFuture<GetFileProtectDashboardResponse> getFileProtectDashboard(GetFileProtectDashboardRequest request) {
         try {
@@ -7255,6 +9318,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFileProtectEvent  GetFileProtectEventRequest
+     * @return GetFileProtectEventResponse
+     */
     @Override
     public CompletableFuture<GetFileProtectEventResponse> getFileProtectEvent(GetFileProtectEventRequest request) {
         try {
@@ -7269,6 +9336,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFileProtectEventCount  GetFileProtectEventCountRequest
+     * @return GetFileProtectEventCountResponse
+     */
     @Override
     public CompletableFuture<GetFileProtectEventCountResponse> getFileProtectEventCount(GetFileProtectEventCountRequest request) {
         try {
@@ -7283,6 +9354,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFileProtectRule  GetFileProtectRuleRequest
+     * @return GetFileProtectRuleResponse
+     */
     @Override
     public CompletableFuture<GetFileProtectRuleResponse> getFileProtectRule(GetFileProtectRuleRequest request) {
         try {
@@ -7297,6 +9372,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetFileUploadLimit  GetFileUploadLimitRequest
+     * @return GetFileUploadLimitResponse
+     */
     @Override
     public CompletableFuture<GetFileUploadLimitResponse> getFileUploadLimit(GetFileUploadLimitRequest request) {
         try {
@@ -7311,6 +9390,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHoneyPotUploadPolicyInfo  GetHoneyPotUploadPolicyInfoRequest
+     * @return GetHoneyPotUploadPolicyInfoResponse
+     */
     @Override
     public CompletableFuture<GetHoneyPotUploadPolicyInfoResponse> getHoneyPotUploadPolicyInfo(GetHoneyPotUploadPolicyInfoRequest request) {
         try {
@@ -7325,6 +9408,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHoneypotAttackStatistics  GetHoneypotAttackStatisticsRequest
+     * @return GetHoneypotAttackStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetHoneypotAttackStatisticsResponse> getHoneypotAttackStatistics(GetHoneypotAttackStatisticsRequest request) {
         try {
@@ -7339,6 +9426,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHoneypotEventTrend  GetHoneypotEventTrendRequest
+     * @return GetHoneypotEventTrendResponse
+     */
     @Override
     public CompletableFuture<GetHoneypotEventTrendResponse> getHoneypotEventTrend(GetHoneypotEventTrendRequest request) {
         try {
@@ -7353,6 +9444,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHoneypotNode  GetHoneypotNodeRequest
+     * @return GetHoneypotNodeResponse
+     */
     @Override
     public CompletableFuture<GetHoneypotNodeResponse> getHoneypotNode(GetHoneypotNodeRequest request) {
         try {
@@ -7367,6 +9462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHoneypotNodeMetricList  GetHoneypotNodeMetricListRequest
+     * @return GetHoneypotNodeMetricListResponse
+     */
     @Override
     public CompletableFuture<GetHoneypotNodeMetricListResponse> getHoneypotNodeMetricList(GetHoneypotNodeMetricListRequest request) {
         try {
@@ -7381,6 +9480,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHoneypotPreset  GetHoneypotPresetRequest
+     * @return GetHoneypotPresetResponse
+     */
     @Override
     public CompletableFuture<GetHoneypotPresetResponse> getHoneypotPreset(GetHoneypotPresetRequest request) {
         try {
@@ -7395,6 +9498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHoneypotProbe  GetHoneypotProbeRequest
+     * @return GetHoneypotProbeResponse
+     */
     @Override
     public CompletableFuture<GetHoneypotProbeResponse> getHoneypotProbe(GetHoneypotProbeRequest request) {
         try {
@@ -7409,6 +9516,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetHoneypotStatistics  GetHoneypotStatisticsRequest
+     * @return GetHoneypotStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetHoneypotStatisticsResponse> getHoneypotStatistics(GetHoneypotStatisticsRequest request) {
         try {
@@ -7423,6 +9534,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetImageEventOperation  GetImageEventOperationRequest
+     * @return GetImageEventOperationResponse
+     */
     @Override
     public CompletableFuture<GetImageEventOperationResponse> getImageEventOperation(GetImageEventOperationRequest request) {
         try {
@@ -7437,6 +9552,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetImageScanNumInPeriod  GetImageScanNumInPeriodRequest
+     * @return GetImageScanNumInPeriodResponse
+     */
     @Override
     public CompletableFuture<GetImageScanNumInPeriodResponse> getImageScanNumInPeriod(GetImageScanNumInPeriodRequest request) {
         try {
@@ -7451,6 +9570,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInterceptionRuleDetail  GetInterceptionRuleDetailRequest
+     * @return GetInterceptionRuleDetailResponse
+     */
     @Override
     public CompletableFuture<GetInterceptionRuleDetailResponse> getInterceptionRuleDetail(GetInterceptionRuleDetailRequest request) {
         try {
@@ -7465,6 +9588,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInterceptionSummary  GetInterceptionSummaryRequest
+     * @return GetInterceptionSummaryResponse
+     */
     @Override
     public CompletableFuture<GetInterceptionSummaryResponse> getInterceptionSummary(GetInterceptionSummaryRequest request) {
         try {
@@ -7479,6 +9606,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetInterceptionTargetDetail  GetInterceptionTargetDetailRequest
+     * @return GetInterceptionTargetDetailResponse
+     */
     @Override
     public CompletableFuture<GetInterceptionTargetDetailResponse> getInterceptionTargetDetail(GetInterceptionTargetDetailRequest request) {
         try {
@@ -7493,6 +9624,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLastOnceTaskInfo  GetLastOnceTaskInfoRequest
+     * @return GetLastOnceTaskInfoResponse
+     */
     @Override
     public CompletableFuture<GetLastOnceTaskInfoResponse> getLastOnceTaskInfo(GetLastOnceTaskInfoRequest request) {
         try {
@@ -7507,6 +9642,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLocalDefaultRegion  GetLocalDefaultRegionRequest
+     * @return GetLocalDefaultRegionResponse
+     */
     @Override
     public CompletableFuture<GetLocalDefaultRegionResponse> getLocalDefaultRegion(GetLocalDefaultRegionRequest request) {
         try {
@@ -7521,6 +9660,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetLogMeta  GetLogMetaRequest
+     * @return GetLogMetaResponse
+     */
     @Override
     public CompletableFuture<GetLogMetaResponse> getLogMeta(GetLogMetaRequest request) {
         try {
@@ -7535,6 +9678,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetMaliciousFileWhitelistConfig  GetMaliciousFileWhitelistConfigRequest
+     * @return GetMaliciousFileWhitelistConfigResponse
+     */
     @Override
     public CompletableFuture<GetMaliciousFileWhitelistConfigResponse> getMaliciousFileWhitelistConfig(GetMaliciousFileWhitelistConfigRequest request) {
         try {
@@ -7549,6 +9696,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetModuleConfig  GetModuleConfigRequest
+     * @return GetModuleConfigResponse
+     */
     @Override
     public CompletableFuture<GetModuleConfigResponse> getModuleConfig(GetModuleConfigRequest request) {
         try {
@@ -7563,6 +9714,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetModuleConfigStatus  GetModuleConfigStatusRequest
+     * @return GetModuleConfigStatusResponse
+     */
     @Override
     public CompletableFuture<GetModuleConfigStatusResponse> getModuleConfigStatus(GetModuleConfigStatusRequest request) {
         try {
@@ -7577,6 +9732,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetModuleTrialAuthInfo  GetModuleTrialAuthInfoRequest
+     * @return GetModuleTrialAuthInfoResponse
+     */
     @Override
     public CompletableFuture<GetModuleTrialAuthInfoResponse> getModuleTrialAuthInfo(GetModuleTrialAuthInfoRequest request) {
         try {
@@ -7591,6 +9750,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetObjectScanEvent  GetObjectScanEventRequest
+     * @return GetObjectScanEventResponse
+     */
     @Override
     public CompletableFuture<GetObjectScanEventResponse> getObjectScanEvent(GetObjectScanEventRequest request) {
         try {
@@ -7605,6 +9768,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOnceTaskResultInfo  GetOnceTaskResultInfoRequest
+     * @return GetOnceTaskResultInfoResponse
+     */
     @Override
     public CompletableFuture<GetOnceTaskResultInfoResponse> getOnceTaskResultInfo(GetOnceTaskResultInfoRequest request) {
         try {
@@ -7619,6 +9786,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOpaClusterBaseLineList  GetOpaClusterBaseLineListRequest
+     * @return GetOpaClusterBaseLineListResponse
+     */
     @Override
     public CompletableFuture<GetOpaClusterBaseLineListResponse> getOpaClusterBaseLineList(GetOpaClusterBaseLineListRequest request) {
         try {
@@ -7633,6 +9804,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOpaClusterImageList  GetOpaClusterImageListRequest
+     * @return GetOpaClusterImageListResponse
+     */
     @Override
     public CompletableFuture<GetOpaClusterImageListResponse> getOpaClusterImageList(GetOpaClusterImageListRequest request) {
         try {
@@ -7647,6 +9822,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOpaClusterLabelList  GetOpaClusterLabelListRequest
+     * @return GetOpaClusterLabelListResponse
+     */
     @Override
     public CompletableFuture<GetOpaClusterLabelListResponse> getOpaClusterLabelList(GetOpaClusterLabelListRequest request) {
         try {
@@ -7661,6 +9840,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOpaClusterNamespaceList  GetOpaClusterNamespaceListRequest
+     * @return GetOpaClusterNamespaceListResponse
+     */
     @Override
     public CompletableFuture<GetOpaClusterNamespaceListResponse> getOpaClusterNamespaceList(GetOpaClusterNamespaceListRequest request) {
         try {
@@ -7675,6 +9858,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOpaPluginStatus  GetOpaPluginStatusRequest
+     * @return GetOpaPluginStatusResponse
+     */
     @Override
     public CompletableFuture<GetOpaPluginStatusResponse> getOpaPluginStatus(GetOpaPluginStatusRequest request) {
         try {
@@ -7689,6 +9876,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOpaStrategyDetailNew  GetOpaStrategyDetailNewRequest
+     * @return GetOpaStrategyDetailNewResponse
+     */
     @Override
     public CompletableFuture<GetOpaStrategyDetailNewResponse> getOpaStrategyDetailNew(GetOpaStrategyDetailNewRequest request) {
         try {
@@ -7703,6 +9894,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOpaStrategyTemplateSummary  GetOpaStrategyTemplateSummaryRequest
+     * @return GetOpaStrategyTemplateSummaryResponse
+     */
     @Override
     public CompletableFuture<GetOpaStrategyTemplateSummaryResponse> getOpaStrategyTemplateSummary(GetOpaStrategyTemplateSummaryRequest request) {
         try {
@@ -7717,6 +9912,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOssBucketScanStatistic  GetOssBucketScanStatisticRequest
+     * @return GetOssBucketScanStatisticResponse
+     */
     @Override
     public CompletableFuture<GetOssBucketScanStatisticResponse> getOssBucketScanStatistic(GetOssBucketScanStatisticRequest request) {
         try {
@@ -7731,6 +9930,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetOssScanConfig  GetOssScanConfigRequest
+     * @return GetOssScanConfigResponse
+     */
     @Override
     public CompletableFuture<GetOssScanConfigResponse> getOssScanConfig(GetOssScanConfigRequest request) {
         try {
@@ -7745,6 +9948,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetPropertyScheduleConfig  GetPropertyScheduleConfigRequest
+     * @return GetPropertyScheduleConfigResponse
+     */
     @Override
     public CompletableFuture<GetPropertyScheduleConfigResponse> getPropertyScheduleConfig(GetPropertyScheduleConfigRequest request) {
         try {
@@ -7759,6 +9966,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRdTree  GetRdTreeRequest
+     * @return GetRdTreeResponse
+     */
     @Override
     public CompletableFuture<GetRdTreeResponse> getRdTree(GetRdTreeRequest request) {
         try {
@@ -7773,6 +9984,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetRulesCount  GetRulesCountRequest
+     * @return GetRulesCountResponse
+     */
     @Override
     public CompletableFuture<GetRulesCountResponse> getRulesCount(GetRulesCountRequest request) {
         try {
@@ -7787,6 +10002,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSasContainerWebDefenseRuleApplication  GetSasContainerWebDefenseRuleApplicationRequest
+     * @return GetSasContainerWebDefenseRuleApplicationResponse
+     */
     @Override
     public CompletableFuture<GetSasContainerWebDefenseRuleApplicationResponse> getSasContainerWebDefenseRuleApplication(GetSasContainerWebDefenseRuleApplicationRequest request) {
         try {
@@ -7801,6 +10020,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSasContainerWebDefenseRuleCriteria  GetSasContainerWebDefenseRuleCriteriaRequest
+     * @return GetSasContainerWebDefenseRuleCriteriaResponse
+     */
     @Override
     public CompletableFuture<GetSasContainerWebDefenseRuleCriteriaResponse> getSasContainerWebDefenseRuleCriteria(GetSasContainerWebDefenseRuleCriteriaRequest request) {
         try {
@@ -7815,6 +10038,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSecurityScoreRule  GetSecurityScoreRuleRequest
+     * @return GetSecurityScoreRuleResponse
+     */
     @Override
     public CompletableFuture<GetSecurityScoreRuleResponse> getSecurityScoreRule(GetSecurityScoreRuleRequest request) {
         try {
@@ -7829,6 +10056,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSensitiveDefineRuleConfig  GetSensitiveDefineRuleConfigRequest
+     * @return GetSensitiveDefineRuleConfigResponse
+     */
     @Override
     public CompletableFuture<GetSensitiveDefineRuleConfigResponse> getSensitiveDefineRuleConfig(GetSensitiveDefineRuleConfigRequest request) {
         try {
@@ -7843,6 +10074,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetServiceTrail  GetServiceTrailRequest
+     * @return GetServiceTrailResponse
+     */
     @Override
     public CompletableFuture<GetServiceTrailResponse> getServiceTrail(GetServiceTrailRequest request) {
         try {
@@ -7857,6 +10092,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetStrategyTemplateDetail  GetStrategyTemplateDetailRequest
+     * @return GetStrategyTemplateDetailResponse
+     */
     @Override
     public CompletableFuture<GetStrategyTemplateDetailResponse> getStrategyTemplateDetail(GetStrategyTemplateDetailRequest request) {
         try {
@@ -7871,6 +10110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSupportedModules  GetSupportedModulesRequest
+     * @return GetSupportedModulesResponse
+     */
     @Override
     public CompletableFuture<GetSupportedModulesResponse> getSupportedModules(GetSupportedModulesRequest request) {
         try {
@@ -7885,6 +10128,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSuspiciousStatistics  GetSuspiciousStatisticsRequest
+     * @return GetSuspiciousStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetSuspiciousStatisticsResponse> getSuspiciousStatistics(GetSuspiciousStatisticsRequest request) {
         try {
@@ -7899,6 +10146,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetSwitchRegionDetail  GetSwitchRegionDetailRequest
+     * @return GetSwitchRegionDetailResponse
+     */
     @Override
     public CompletableFuture<GetSwitchRegionDetailResponse> getSwitchRegionDetail(GetSwitchRegionDetailRequest request) {
         try {
@@ -7913,6 +10164,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetUserLang  GetUserLangRequest
+     * @return GetUserLangResponse
+     */
     @Override
     public CompletableFuture<GetUserLangResponse> getUserLang(GetUserLangRequest request) {
         try {
@@ -7927,6 +10182,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVirusScanConfig  GetVirusScanConfigRequest
+     * @return GetVirusScanConfigResponse
+     */
     @Override
     public CompletableFuture<GetVirusScanConfigResponse> getVirusScanConfig(GetVirusScanConfigRequest request) {
         try {
@@ -7941,6 +10200,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVirusScanLatestTaskStatistic  GetVirusScanLatestTaskStatisticRequest
+     * @return GetVirusScanLatestTaskStatisticResponse
+     */
     @Override
     public CompletableFuture<GetVirusScanLatestTaskStatisticResponse> getVirusScanLatestTaskStatistic(GetVirusScanLatestTaskStatisticRequest request) {
         try {
@@ -7955,6 +10218,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVulStatistics  GetVulStatisticsRequest
+     * @return GetVulStatisticsResponse
+     */
     @Override
     public CompletableFuture<GetVulStatisticsResponse> getVulStatistics(GetVulStatisticsRequest request) {
         try {
@@ -7969,6 +10236,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of GetVulWhitelist  GetVulWhitelistRequest
+     * @return GetVulWhitelistResponse
+     */
     @Override
     public CompletableFuture<GetVulWhitelistResponse> getVulWhitelist(GetVulWhitelistRequest request) {
         try {
@@ -7983,6 +10254,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HandleSecurityEvents  HandleSecurityEventsRequest
+     * @return HandleSecurityEventsResponse
+     */
     @Override
     public CompletableFuture<HandleSecurityEventsResponse> handleSecurityEvents(HandleSecurityEventsRequest request) {
         try {
@@ -7997,6 +10272,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of HandleSimilarSecurityEvents  HandleSimilarSecurityEventsRequest
+     * @return HandleSimilarSecurityEventsResponse
+     */
     @Override
     public CompletableFuture<HandleSimilarSecurityEventsResponse> handleSimilarSecurityEvents(HandleSimilarSecurityEventsRequest request) {
         try {
@@ -8011,6 +10290,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IgnoreCheckItems  IgnoreCheckItemsRequest
+     * @return IgnoreCheckItemsResponse
+     */
     @Override
     public CompletableFuture<IgnoreCheckItemsResponse> ignoreCheckItems(IgnoreCheckItemsRequest request) {
         try {
@@ -8025,6 +10308,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IgnoreHcCheckWarnings  IgnoreHcCheckWarningsRequest
+     * @return IgnoreHcCheckWarningsResponse
+     */
     @Override
     public CompletableFuture<IgnoreHcCheckWarningsResponse> ignoreHcCheckWarnings(IgnoreHcCheckWarningsRequest request) {
         try {
@@ -8039,6 +10326,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of IgnoreIdcProbeScanResult  IgnoreIdcProbeScanResultRequest
+     * @return IgnoreIdcProbeScanResultResponse
+     */
     @Override
     public CompletableFuture<IgnoreIdcProbeScanResultResponse> ignoreIdcProbeScanResult(IgnoreIdcProbeScanResultRequest request) {
         try {
@@ -8053,6 +10344,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallBackupClient  InstallBackupClientRequest
+     * @return InstallBackupClientResponse
+     */
     @Override
     public CompletableFuture<InstallBackupClientResponse> installBackupClient(InstallBackupClientRequest request) {
         try {
@@ -8068,8 +10363,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.
-      *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that the Security Center agent on your servers is online and the servers can access Alibaba Cloud services.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of InstallCloudMonitor  InstallCloudMonitorRequest
+     * @return InstallCloudMonitorResponse
      */
     @Override
     public CompletableFuture<InstallCloudMonitorResponse> installCloudMonitor(InstallCloudMonitorRequest request) {
@@ -8085,6 +10385,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallHybridProxy  InstallHybridProxyRequest
+     * @return InstallHybridProxyResponse
+     */
     @Override
     public CompletableFuture<InstallHybridProxyResponse> installHybridProxy(InstallHybridProxyRequest request) {
         try {
@@ -8099,6 +10403,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallPmAgent  InstallPmAgentRequest
+     * @return InstallPmAgentResponse
+     */
     @Override
     public CompletableFuture<InstallPmAgentResponse> installPmAgent(InstallPmAgentRequest request) {
         try {
@@ -8113,6 +10421,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallRaspAttach  InstallRaspAttachRequest
+     * @return InstallRaspAttachResponse
+     */
     @Override
     public CompletableFuture<InstallRaspAttachResponse> installRaspAttach(InstallRaspAttachRequest request) {
         try {
@@ -8127,6 +10439,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of InstallUniBackupAgent  InstallUniBackupAgentRequest
+     * @return InstallUniBackupAgentResponse
+     */
     @Override
     public CompletableFuture<InstallUniBackupAgentResponse> installUniBackupAgent(InstallUniBackupAgentRequest request) {
         try {
@@ -8141,6 +10457,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of JoinWebLockProcessWhiteList  JoinWebLockProcessWhiteListRequest
+     * @return JoinWebLockProcessWhiteListResponse
+     */
     @Override
     public CompletableFuture<JoinWebLockProcessWhiteListResponse> joinWebLockProcessWhiteList(JoinWebLockProcessWhiteListRequest request) {
         try {
@@ -8156,8 +10476,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.
-      *
+     * <b>description</b> :
+     * <p>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</p>
+     * 
+     * @param request the request parameters of ListAccountsInResourceDirectory  ListAccountsInResourceDirectoryRequest
+     * @return ListAccountsInResourceDirectoryResponse
      */
     @Override
     public CompletableFuture<ListAccountsInResourceDirectoryResponse> listAccountsInResourceDirectory(ListAccountsInResourceDirectoryRequest request) {
@@ -8173,6 +10496,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAegisContainerPluginRule  ListAegisContainerPluginRuleRequest
+     * @return ListAegisContainerPluginRuleResponse
+     */
     @Override
     public CompletableFuture<ListAegisContainerPluginRuleResponse> listAegisContainerPluginRule(ListAegisContainerPluginRuleRequest request) {
         try {
@@ -8187,6 +10514,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentlessMaliciousFiles  ListAgentlessMaliciousFilesRequest
+     * @return ListAgentlessMaliciousFilesResponse
+     */
     @Override
     public CompletableFuture<ListAgentlessMaliciousFilesResponse> listAgentlessMaliciousFiles(ListAgentlessMaliciousFilesRequest request) {
         try {
@@ -8201,6 +10532,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentlessRegion  ListAgentlessRegionRequest
+     * @return ListAgentlessRegionResponse
+     */
     @Override
     public CompletableFuture<ListAgentlessRegionResponse> listAgentlessRegion(ListAgentlessRegionRequest request) {
         try {
@@ -8215,6 +10550,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentlessRelateMalicious  ListAgentlessRelateMaliciousRequest
+     * @return ListAgentlessRelateMaliciousResponse
+     */
     @Override
     public CompletableFuture<ListAgentlessRelateMaliciousResponse> listAgentlessRelateMalicious(ListAgentlessRelateMaliciousRequest request) {
         try {
@@ -8229,6 +10568,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentlessRiskUuid  ListAgentlessRiskUuidRequest
+     * @return ListAgentlessRiskUuidResponse
+     */
     @Override
     public CompletableFuture<ListAgentlessRiskUuidResponse> listAgentlessRiskUuid(ListAgentlessRiskUuidRequest request) {
         try {
@@ -8243,6 +10586,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAgentlessTask  ListAgentlessTaskRequest
+     * @return ListAgentlessTaskResponse
+     */
     @Override
     public CompletableFuture<ListAgentlessTaskResponse> listAgentlessTask(ListAgentlessTaskRequest request) {
         try {
@@ -8257,6 +10604,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAssetCleanConfig  ListAssetCleanConfigRequest
+     * @return ListAssetCleanConfigResponse
+     */
     @Override
     public CompletableFuture<ListAssetCleanConfigResponse> listAssetCleanConfig(ListAssetCleanConfigRequest request) {
         try {
@@ -8271,6 +10622,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAssetInfoPublish  ListAssetInfoPublishRequest
+     * @return ListAssetInfoPublishResponse
+     */
+    @Override
+    public CompletableFuture<ListAssetInfoPublishResponse> listAssetInfoPublish(ListAssetInfoPublishRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAssetInfoPublish").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAssetInfoPublishResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAssetInfoPublishResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListAssetRefreshTaskConfig  ListAssetRefreshTaskConfigRequest
+     * @return ListAssetRefreshTaskConfigResponse
+     */
     @Override
     public CompletableFuture<ListAssetRefreshTaskConfigResponse> listAssetRefreshTaskConfig(ListAssetRefreshTaskConfigRequest request) {
         try {
@@ -8285,6 +10658,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAssetSelectionSelectedTarget  ListAssetSelectionSelectedTargetRequest
+     * @return ListAssetSelectionSelectedTargetResponse
+     */
     @Override
     public CompletableFuture<ListAssetSelectionSelectedTargetResponse> listAssetSelectionSelectedTarget(ListAssetSelectionSelectedTargetRequest request) {
         try {
@@ -8299,6 +10676,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAssetSelectionTarget  ListAssetSelectionTargetRequest
+     * @return ListAssetSelectionTargetResponse
+     */
     @Override
     public CompletableFuture<ListAssetSelectionTargetResponse> listAssetSelectionTarget(ListAssetSelectionTargetRequest request) {
         try {
@@ -8313,6 +10694,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAutoTagRules  ListAutoTagRulesRequest
+     * @return ListAutoTagRulesResponse
+     */
     @Override
     public CompletableFuture<ListAutoTagRulesResponse> listAutoTagRules(ListAutoTagRulesRequest request) {
         try {
@@ -8327,6 +10712,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListAvailableHoneypot  ListAvailableHoneypotRequest
+     * @return ListAvailableHoneypotResponse
+     */
     @Override
     public CompletableFuture<ListAvailableHoneypotResponse> listAvailableHoneypot(ListAvailableHoneypotRequest request) {
         try {
@@ -8341,6 +10730,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListBackupRecord  ListBackupRecordRequest
+     * @return ListBackupRecordResponse
+     */
     @Override
     public CompletableFuture<ListBackupRecordResponse> listBackupRecord(ListBackupRecordRequest request) {
         try {
@@ -8355,6 +10748,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListBaselineCheckWhiteRecord  ListBaselineCheckWhiteRecordRequest
+     * @return ListBaselineCheckWhiteRecordResponse
+     */
     @Override
     public CompletableFuture<ListBaselineCheckWhiteRecordResponse> listBaselineCheckWhiteRecord(ListBaselineCheckWhiteRecordRequest request) {
         try {
@@ -8369,6 +10766,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCheckInstanceResult  ListCheckInstanceResultRequest
+     * @return ListCheckInstanceResultResponse
+     */
     @Override
     public CompletableFuture<ListCheckInstanceResultResponse> listCheckInstanceResult(ListCheckInstanceResultRequest request) {
         try {
@@ -8383,6 +10784,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCheckItem  ListCheckItemRequest
+     * @return ListCheckItemResponse
+     */
     @Override
     public CompletableFuture<ListCheckItemResponse> listCheckItem(ListCheckItemRequest request) {
         try {
@@ -8397,6 +10802,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCheckItemWarningMachine  ListCheckItemWarningMachineRequest
+     * @return ListCheckItemWarningMachineResponse
+     */
     @Override
     public CompletableFuture<ListCheckItemWarningMachineResponse> listCheckItemWarningMachine(ListCheckItemWarningMachineRequest request) {
         try {
@@ -8411,6 +10820,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCheckItemWarningSummary  ListCheckItemWarningSummaryRequest
+     * @return ListCheckItemWarningSummaryResponse
+     */
     @Override
     public CompletableFuture<ListCheckItemWarningSummaryResponse> listCheckItemWarningSummary(ListCheckItemWarningSummaryRequest request) {
         try {
@@ -8425,6 +10838,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCheckResult  ListCheckResultRequest
+     * @return ListCheckResultResponse
+     */
     @Override
     public CompletableFuture<ListCheckResultResponse> listCheckResult(ListCheckResultRequest request) {
         try {
@@ -8439,6 +10856,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCheckStandard  ListCheckStandardRequest
+     * @return ListCheckStandardResponse
+     */
     @Override
     public CompletableFuture<ListCheckStandardResponse> listCheckStandard(ListCheckStandardRequest request) {
         try {
@@ -8453,6 +10874,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCheckTypes  ListCheckTypesRequest
+     * @return ListCheckTypesResponse
+     */
     @Override
     public CompletableFuture<ListCheckTypesResponse> listCheckTypes(ListCheckTypesRequest request) {
         try {
@@ -8467,6 +10892,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClientAlertMode  ListClientAlertModeRequest
+     * @return ListClientAlertModeResponse
+     */
     @Override
     public CompletableFuture<ListClientAlertModeResponse> listClientAlertMode(ListClientAlertModeRequest request) {
         try {
@@ -8481,6 +10910,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClientUserDefineRuleTypes  ListClientUserDefineRuleTypesRequest
+     * @return ListClientUserDefineRuleTypesResponse
+     */
     @Override
     public CompletableFuture<ListClientUserDefineRuleTypesResponse> listClientUserDefineRuleTypes(ListClientUserDefineRuleTypesRequest request) {
         try {
@@ -8495,6 +10928,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClientUserDefineRules  ListClientUserDefineRulesRequest
+     * @return ListClientUserDefineRulesResponse
+     */
     @Override
     public CompletableFuture<ListClientUserDefineRulesResponse> listClientUserDefineRules(ListClientUserDefineRulesRequest request) {
         try {
@@ -8509,6 +10946,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCloudAssetInstances  ListCloudAssetInstancesRequest
+     * @return ListCloudAssetInstancesResponse
+     */
     @Override
     public CompletableFuture<ListCloudAssetInstancesResponse> listCloudAssetInstances(ListCloudAssetInstancesRequest request) {
         try {
@@ -8523,6 +10964,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCloudVendorRegions  ListCloudVendorRegionsRequest
+     * @return ListCloudVendorRegionsResponse
+     */
     @Override
     public CompletableFuture<ListCloudVendorRegionsResponse> listCloudVendorRegions(ListCloudVendorRegionsRequest request) {
         try {
@@ -8537,6 +10982,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusterCnnfStatusDetail  ListClusterCnnfStatusDetailRequest
+     * @return ListClusterCnnfStatusDetailResponse
+     */
     @Override
     public CompletableFuture<ListClusterCnnfStatusDetailResponse> listClusterCnnfStatusDetail(ListClusterCnnfStatusDetailRequest request) {
         try {
@@ -8551,6 +11000,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusterInterceptionConfig  ListClusterInterceptionConfigRequest
+     * @return ListClusterInterceptionConfigResponse
+     */
     @Override
     public CompletableFuture<ListClusterInterceptionConfigResponse> listClusterInterceptionConfig(ListClusterInterceptionConfigRequest request) {
         try {
@@ -8565,6 +11018,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListClusterPluginInfo  ListClusterPluginInfoRequest
+     * @return ListClusterPluginInfoResponse
+     */
     @Override
     public CompletableFuture<ListClusterPluginInfoResponse> listClusterPluginInfo(ListClusterPluginInfoRequest request) {
         try {
@@ -8579,6 +11036,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCompressFileDetectResult  ListCompressFileDetectResultRequest
+     * @return ListCompressFileDetectResultResponse
+     */
     @Override
     public CompletableFuture<ListCompressFileDetectResultResponse> listCompressFileDetectResult(ListCompressFileDetectResultRequest request) {
         try {
@@ -8593,6 +11054,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListContainerDefenseRule  ListContainerDefenseRuleRequest
+     * @return ListContainerDefenseRuleResponse
+     */
     @Override
     public CompletableFuture<ListContainerDefenseRuleResponse> listContainerDefenseRule(ListContainerDefenseRuleRequest request) {
         try {
@@ -8607,6 +11072,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListContainerDefenseRuleClusters  ListContainerDefenseRuleClustersRequest
+     * @return ListContainerDefenseRuleClustersResponse
+     */
     @Override
     public CompletableFuture<ListContainerDefenseRuleClustersResponse> listContainerDefenseRuleClusters(ListContainerDefenseRuleClustersRequest request) {
         try {
@@ -8621,6 +11090,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCriteriaStrategy  ListCriteriaStrategyRequest
+     * @return ListCriteriaStrategyResponse
+     */
     @Override
     public CompletableFuture<ListCriteriaStrategyResponse> listCriteriaStrategy(ListCriteriaStrategyRequest request) {
         try {
@@ -8635,6 +11108,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFileProtectEvent  ListFileProtectEventRequest
+     * @return ListFileProtectEventResponse
+     */
     @Override
     public CompletableFuture<ListFileProtectEventResponse> listFileProtectEvent(ListFileProtectEventRequest request) {
         try {
@@ -8649,6 +11126,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFileProtectPluginStatus  ListFileProtectPluginStatusRequest
+     * @return ListFileProtectPluginStatusResponse
+     */
     @Override
     public CompletableFuture<ListFileProtectPluginStatusResponse> listFileProtectPluginStatus(ListFileProtectPluginStatusRequest request) {
         try {
@@ -8663,6 +11144,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListFileProtectRule  ListFileProtectRuleRequest
+     * @return ListFileProtectRuleResponse
+     */
     @Override
     public CompletableFuture<ListFileProtectRuleResponse> listFileProtectRule(ListFileProtectRuleRequest request) {
         try {
@@ -8677,6 +11162,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListGroups  ListGroupsRequest
+     * @return ListGroupsResponse
+     */
     @Override
     public CompletableFuture<ListGroupsResponse> listGroups(ListGroupsRequest request) {
         try {
@@ -8691,6 +11180,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypot  ListHoneypotRequest
+     * @return ListHoneypotResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotResponse> listHoneypot(ListHoneypotRequest request) {
         try {
@@ -8705,6 +11198,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypotAlarmEvents  ListHoneypotAlarmEventsRequest
+     * @return ListHoneypotAlarmEventsResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotAlarmEventsResponse> listHoneypotAlarmEvents(ListHoneypotAlarmEventsRequest request) {
         try {
@@ -8719,6 +11216,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypotAttackerPortrait  ListHoneypotAttackerPortraitRequest
+     * @return ListHoneypotAttackerPortraitResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotAttackerPortraitResponse> listHoneypotAttackerPortrait(ListHoneypotAttackerPortraitRequest request) {
         try {
@@ -8733,6 +11234,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypotAttackerSource  ListHoneypotAttackerSourceRequest
+     * @return ListHoneypotAttackerSourceResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotAttackerSourceResponse> listHoneypotAttackerSource(ListHoneypotAttackerSourceRequest request) {
         try {
@@ -8747,6 +11252,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypotEventFlows  ListHoneypotEventFlowsRequest
+     * @return ListHoneypotEventFlowsResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotEventFlowsResponse> listHoneypotEventFlows(ListHoneypotEventFlowsRequest request) {
         try {
@@ -8761,6 +11270,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypotEvents  ListHoneypotEventsRequest
+     * @return ListHoneypotEventsResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotEventsResponse> listHoneypotEvents(ListHoneypotEventsRequest request) {
         try {
@@ -8775,6 +11288,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypotNode  ListHoneypotNodeRequest
+     * @return ListHoneypotNodeResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotNodeResponse> listHoneypotNode(ListHoneypotNodeRequest request) {
         try {
@@ -8789,6 +11306,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypotPreset  ListHoneypotPresetRequest
+     * @return ListHoneypotPresetResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotPresetResponse> listHoneypotPreset(ListHoneypotPresetRequest request) {
         try {
@@ -8803,6 +11324,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypotProbe  ListHoneypotProbeRequest
+     * @return ListHoneypotProbeResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotProbeResponse> listHoneypotProbe(ListHoneypotProbeRequest request) {
         try {
@@ -8817,6 +11342,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListHoneypotProbeUuid  ListHoneypotProbeUuidRequest
+     * @return ListHoneypotProbeUuidResponse
+     */
     @Override
     public CompletableFuture<ListHoneypotProbeUuidResponse> listHoneypotProbeUuid(ListHoneypotProbeUuidRequest request) {
         try {
@@ -8831,6 +11360,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListImageBuildRiskItem  ListImageBuildRiskItemRequest
+     * @return ListImageBuildRiskItemResponse
+     */
     @Override
     public CompletableFuture<ListImageBuildRiskItemResponse> listImageBuildRiskItem(ListImageBuildRiskItemRequest request) {
         try {
@@ -8845,6 +11378,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListImageRegistryRegion  ListImageRegistryRegionRequest
+     * @return ListImageRegistryRegionResponse
+     */
     @Override
     public CompletableFuture<ListImageRegistryRegionResponse> listImageRegistryRegion(ListImageRegistryRegionRequest request) {
         try {
@@ -8859,6 +11396,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListImageRisk  ListImageRiskRequest
+     * @return ListImageRiskResponse
+     */
     @Override
     public CompletableFuture<ListImageRiskResponse> listImageRisk(ListImageRiskRequest request) {
         try {
@@ -8873,6 +11414,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceCatalog  ListInstanceCatalogRequest
+     * @return ListInstanceCatalogResponse
+     */
     @Override
     public CompletableFuture<ListInstanceCatalogResponse> listInstanceCatalog(ListInstanceCatalogRequest request) {
         try {
@@ -8887,6 +11432,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceRiskLevels  ListInstanceRiskLevelsRequest
+     * @return ListInstanceRiskLevelsResponse
+     */
     @Override
     public CompletableFuture<ListInstanceRiskLevelsResponse> listInstanceRiskLevels(ListInstanceRiskLevelsRequest request) {
         try {
@@ -8901,6 +11450,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInstanceRiskNum  ListInstanceRiskNumRequest
+     * @return ListInstanceRiskNumResponse
+     */
     @Override
     public CompletableFuture<ListInstanceRiskNumResponse> listInstanceRiskNum(ListInstanceRiskNumRequest request) {
         try {
@@ -8915,6 +11468,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInterceptionHistory  ListInterceptionHistoryRequest
+     * @return ListInterceptionHistoryResponse
+     */
     @Override
     public CompletableFuture<ListInterceptionHistoryResponse> listInterceptionHistory(ListInterceptionHistoryRequest request) {
         try {
@@ -8929,6 +11486,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInterceptionRulePage  ListInterceptionRulePageRequest
+     * @return ListInterceptionRulePageResponse
+     */
     @Override
     public CompletableFuture<ListInterceptionRulePageResponse> listInterceptionRulePage(ListInterceptionRulePageRequest request) {
         try {
@@ -8943,6 +11504,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListInterceptionTargetPage  ListInterceptionTargetPageRequest
+     * @return ListInterceptionTargetPageResponse
+     */
     @Override
     public CompletableFuture<ListInterceptionTargetPageResponse> listInterceptionTargetPage(ListInterceptionTargetPageRequest request) {
         try {
@@ -8958,8 +11523,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can use this operation to query the access information about Kubernetes clusters.
-      *
+     * <b>description</b> :
+     * <p>You can use this operation to query the access information about Kubernetes clusters.</p>
+     * 
+     * @param request the request parameters of ListK8sAccessInfo  ListK8sAccessInfoRequest
+     * @return ListK8sAccessInfoResponse
      */
     @Override
     public CompletableFuture<ListK8sAccessInfoResponse> listK8sAccessInfo(ListK8sAccessInfoRequest request) {
@@ -8975,6 +11543,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListLogShipperRegions  ListLogShipperRegionsRequest
+     * @return ListLogShipperRegionsResponse
+     */
     @Override
     public CompletableFuture<ListLogShipperRegionsResponse> listLogShipperRegions(ListLogShipperRegionsRequest request) {
         try {
@@ -8989,6 +11561,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListMaliciousFileWhitelistConfigs  ListMaliciousFileWhitelistConfigsRequest
+     * @return ListMaliciousFileWhitelistConfigsResponse
+     */
     @Override
     public CompletableFuture<ListMaliciousFileWhitelistConfigsResponse> listMaliciousFileWhitelistConfigs(ListMaliciousFileWhitelistConfigsRequest request) {
         try {
@@ -9003,6 +11579,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListObjectScanEvent  ListObjectScanEventRequest
+     * @return ListObjectScanEventResponse
+     */
     @Override
     public CompletableFuture<ListObjectScanEventResponse> listObjectScanEvent(ListObjectScanEventRequest request) {
         try {
@@ -9017,6 +11597,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOpaClusterStrategyNew  ListOpaClusterStrategyNewRequest
+     * @return ListOpaClusterStrategyNewResponse
+     */
     @Override
     public CompletableFuture<ListOpaClusterStrategyNewResponse> listOpaClusterStrategyNew(ListOpaClusterStrategyNewRequest request) {
         try {
@@ -9031,6 +11615,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOssBucket  ListOssBucketRequest
+     * @return ListOssBucketResponse
+     */
     @Override
     public CompletableFuture<ListOssBucketResponse> listOssBucket(ListOssBucketRequest request) {
         try {
@@ -9045,6 +11633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOssBucketScanInfo  ListOssBucketScanInfoRequest
+     * @return ListOssBucketScanInfoResponse
+     */
     @Override
     public CompletableFuture<ListOssBucketScanInfoResponse> listOssBucketScanInfo(ListOssBucketScanInfoRequest request) {
         try {
@@ -9059,6 +11651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListOssScanConfig  ListOssScanConfigRequest
+     * @return ListOssScanConfigResponse
+     */
     @Override
     public CompletableFuture<ListOssScanConfigResponse> listOssScanConfig(ListOssScanConfigRequest request) {
         try {
@@ -9073,6 +11669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPluginForUuid  ListPluginForUuidRequest
+     * @return ListPluginForUuidResponse
+     */
     @Override
     public CompletableFuture<ListPluginForUuidResponse> listPluginForUuid(ListPluginForUuidRequest request) {
         try {
@@ -9087,6 +11687,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPodRisk  ListPodRiskRequest
+     * @return ListPodRiskResponse
+     */
     @Override
     public CompletableFuture<ListPodRiskResponse> listPodRisk(ListPodRiskRequest request) {
         try {
@@ -9101,6 +11705,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrivateK8s  ListPrivateK8sRequest
+     * @return ListPrivateK8sResponse
+     */
+    @Override
+    public CompletableFuture<ListPrivateK8sResponse> listPrivateK8s(ListPrivateK8sRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListPrivateK8s").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPrivateK8sResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPrivateK8sResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPrivateRegistryList  ListPrivateRegistryListRequest
+     * @return ListPrivateRegistryListResponse
+     */
     @Override
     public CompletableFuture<ListPrivateRegistryListResponse> listPrivateRegistryList(ListPrivateRegistryListRequest request) {
         try {
@@ -9115,6 +11741,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPrivateRegistryType  ListPrivateRegistryTypeRequest
+     * @return ListPrivateRegistryTypeResponse
+     */
     @Override
     public CompletableFuture<ListPrivateRegistryTypeResponse> listPrivateRegistryType(ListPrivateRegistryTypeRequest request) {
         try {
@@ -9129,6 +11759,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListPublishBatch  ListPublishBatchRequest
+     * @return ListPublishBatchResponse
+     */
+    @Override
+    public CompletableFuture<ListPublishBatchResponse> listPublishBatch(ListPublishBatchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListPublishBatch").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPublishBatchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPublishBatchResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListQueryRaspAppInfo  ListQueryRaspAppInfoRequest
+     * @return ListQueryRaspAppInfoResponse
+     */
     @Override
     public CompletableFuture<ListQueryRaspAppInfoResponse> listQueryRaspAppInfo(ListQueryRaspAppInfoRequest request) {
         try {
@@ -9144,8 +11796,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.
-      *
+     * <b>description</b> :
+     * <p>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</p>
+     * 
+     * @param request the request parameters of ListRdDefaultSyncList  ListRdDefaultSyncListRequest
+     * @return ListRdDefaultSyncListResponse
      */
     @Override
     public CompletableFuture<ListRdDefaultSyncListResponse> listRdDefaultSyncList(ListRdDefaultSyncListRequest request) {
@@ -9161,6 +11816,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListRuleTargetAll  ListRuleTargetAllRequest
+     * @return ListRuleTargetAllResponse
+     */
     @Override
     public CompletableFuture<ListRuleTargetAllResponse> listRuleTargetAll(ListRuleTargetAllRequest request) {
         try {
@@ -9175,6 +11834,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSasContainerWebDefenseRule  ListSasContainerWebDefenseRuleRequest
+     * @return ListSasContainerWebDefenseRuleResponse
+     */
     @Override
     public CompletableFuture<ListSasContainerWebDefenseRuleResponse> listSasContainerWebDefenseRule(ListSasContainerWebDefenseRuleRequest request) {
         try {
@@ -9189,6 +11852,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSupportObjectSuffix  ListSupportObjectSuffixRequest
+     * @return ListSupportObjectSuffixResponse
+     */
     @Override
     public CompletableFuture<ListSupportObjectSuffixResponse> listSupportObjectSuffix(ListSupportObjectSuffixRequest request) {
         try {
@@ -9203,6 +11870,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSystemAggregationRules  ListSystemAggregationRulesRequest
+     * @return ListSystemAggregationRulesResponse
+     */
     @Override
     public CompletableFuture<ListSystemAggregationRulesResponse> listSystemAggregationRules(ListSystemAggregationRulesRequest request) {
         try {
@@ -9217,6 +11888,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSystemClientRuleTypes  ListSystemClientRuleTypesRequest
+     * @return ListSystemClientRuleTypesResponse
+     */
     @Override
     public CompletableFuture<ListSystemClientRuleTypesResponse> listSystemClientRuleTypes(ListSystemClientRuleTypesRequest request) {
         try {
@@ -9231,6 +11906,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSystemClientRules  ListSystemClientRulesRequest
+     * @return ListSystemClientRulesResponse
+     */
     @Override
     public CompletableFuture<ListSystemClientRulesResponse> listSystemClientRules(ListSystemClientRulesRequest request) {
         try {
@@ -9245,6 +11924,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListSystemRuleAggregationTypes  ListSystemRuleAggregationTypesRequest
+     * @return ListSystemRuleAggregationTypesResponse
+     */
     @Override
     public CompletableFuture<ListSystemRuleAggregationTypesResponse> listSystemRuleAggregationTypes(ListSystemRuleAggregationTypesRequest request) {
         try {
@@ -9259,6 +11942,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUnfinishedOnceTask  ListUnfinishedOnceTaskRequest
+     * @return ListUnfinishedOnceTaskResponse
+     */
     @Override
     public CompletableFuture<ListUnfinishedOnceTaskResponse> listUnfinishedOnceTask(ListUnfinishedOnceTaskRequest request) {
         try {
@@ -9273,6 +11960,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUninstallAegisMachines  ListUninstallAegisMachinesRequest
+     * @return ListUninstallAegisMachinesResponse
+     */
     @Override
     public CompletableFuture<ListUninstallAegisMachinesResponse> listUninstallAegisMachines(ListUninstallAegisMachinesRequest request) {
         try {
@@ -9287,6 +11978,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListUuidsByWebPath  ListUuidsByWebPathRequest
+     * @return ListUuidsByWebPathResponse
+     */
     @Override
     public CompletableFuture<ListUuidsByWebPathResponse> listUuidsByWebPath(ListUuidsByWebPathRequest request) {
         try {
@@ -9301,6 +11996,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVirusScanMachine  ListVirusScanMachineRequest
+     * @return ListVirusScanMachineResponse
+     */
     @Override
     public CompletableFuture<ListVirusScanMachineResponse> listVirusScanMachine(ListVirusScanMachineRequest request) {
         try {
@@ -9315,6 +12014,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVirusScanMachineEvent  ListVirusScanMachineEventRequest
+     * @return ListVirusScanMachineEventResponse
+     */
     @Override
     public CompletableFuture<ListVirusScanMachineEventResponse> listVirusScanMachineEvent(ListVirusScanMachineEventRequest request) {
         try {
@@ -9329,6 +12032,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVirusScanTask  ListVirusScanTaskRequest
+     * @return ListVirusScanTaskResponse
+     */
     @Override
     public CompletableFuture<ListVirusScanTaskResponse> listVirusScanTask(ListVirusScanTaskRequest request) {
         try {
@@ -9343,6 +12050,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVulAutoRepairConfig  ListVulAutoRepairConfigRequest
+     * @return ListVulAutoRepairConfigResponse
+     */
     @Override
     public CompletableFuture<ListVulAutoRepairConfigResponse> listVulAutoRepairConfig(ListVulAutoRepairConfigRequest request) {
         try {
@@ -9357,6 +12068,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListVulGlobalConfig  ListVulGlobalConfigRequest
+     * @return ListVulGlobalConfigResponse
+     */
     @Override
     public CompletableFuture<ListVulGlobalConfigResponse> listVulGlobalConfig(ListVulGlobalConfigRequest request) {
         try {
@@ -9371,6 +12086,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of MarkMonitorAccounts  MarkMonitorAccountsRequest
+     * @return MarkMonitorAccountsResponse
+     */
     @Override
     public CompletableFuture<MarkMonitorAccountsResponse> markMonitorAccounts(MarkMonitorAccountsRequest request) {
         try {
@@ -9385,6 +12104,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAccessKeyLeakDeal  ModifyAccessKeyLeakDealRequest
+     * @return ModifyAccessKeyLeakDealResponse
+     */
     @Override
     public CompletableFuture<ModifyAccessKeyLeakDealResponse> modifyAccessKeyLeakDeal(ModifyAccessKeyLeakDealRequest request) {
         try {
@@ -9399,6 +12122,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAntiBruteForceRule  ModifyAntiBruteForceRuleRequest
+     * @return ModifyAntiBruteForceRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyAntiBruteForceRuleResponse> modifyAntiBruteForceRule(ModifyAntiBruteForceRuleRequest request) {
         try {
@@ -9413,6 +12140,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAppVulScanCycle  ModifyAppVulScanCycleRequest
+     * @return ModifyAppVulScanCycleResponse
+     */
     @Override
     public CompletableFuture<ModifyAppVulScanCycleResponse> modifyAppVulScanCycle(ModifyAppVulScanCycleRequest request) {
         try {
@@ -9427,6 +12158,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAssetCleanConfig  ModifyAssetCleanConfigRequest
+     * @return ModifyAssetCleanConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyAssetCleanConfigResponse> modifyAssetCleanConfig(ModifyAssetCleanConfigRequest request) {
         try {
@@ -9442,10 +12177,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the ModifyAssetGroup operation to change the server group to which one or more servers belong. After you create a server group by calling the [CreateOrUpdateAssetGroup](~~CreateOrUpdateAssetGroup~~) operation, you can call the ModifyAssetGroup operation to change the server group to which your servers belong.
-      * ### Limits
-      * You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the ModifyAssetGroup operation to change the server group to which one or more servers belong. After you create a server group by calling the <a href="~~CreateOrUpdateAssetGroup~~">CreateOrUpdateAssetGroup</a> operation, you can call the ModifyAssetGroup operation to change the server group to which your servers belong.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this API operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of ModifyAssetGroup  ModifyAssetGroupRequest
+     * @return ModifyAssetGroupResponse
      */
     @Override
     public CompletableFuture<ModifyAssetGroupResponse> modifyAssetGroup(ModifyAssetGroupRequest request) {
@@ -9461,6 +12199,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAssetImportant  ModifyAssetImportantRequest
+     * @return ModifyAssetImportantResponse
+     */
     @Override
     public CompletableFuture<ModifyAssetImportantResponse> modifyAssetImportant(ModifyAssetImportantRequest request) {
         try {
@@ -9475,6 +12217,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyAttestor  ModifyAttestorRequest
+     * @return ModifyAttestorResponse
+     */
+    @Override
+    public CompletableFuture<ModifyAttestorResponse> modifyAttestor(ModifyAttestorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAttestor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAttestorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAttestorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyAutoDelConfig  ModifyAutoDelConfigRequest
+     * @return ModifyAutoDelConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyAutoDelConfigResponse> modifyAutoDelConfig(ModifyAutoDelConfigRequest request) {
         try {
@@ -9489,6 +12253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
+     * @return ModifyBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request) {
         try {
@@ -9503,6 +12271,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyBackupPolicyStatus  ModifyBackupPolicyStatusRequest
+     * @return ModifyBackupPolicyStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyBackupPolicyStatusResponse> modifyBackupPolicyStatus(ModifyBackupPolicyStatusRequest request) {
         try {
@@ -9517,6 +12289,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClearLogstoreStorage  ModifyClearLogstoreStorageRequest
+     * @return ModifyClearLogstoreStorageResponse
+     */
     @Override
     public CompletableFuture<ModifyClearLogstoreStorageResponse> modifyClearLogstoreStorage(ModifyClearLogstoreStorageRequest request) {
         try {
@@ -9531,6 +12307,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClientConfSetup  ModifyClientConfSetupRequest
+     * @return ModifyClientConfSetupResponse
+     */
     @Override
     public CompletableFuture<ModifyClientConfSetupResponse> modifyClientConfSetup(ModifyClientConfSetupRequest request) {
         try {
@@ -9545,6 +12325,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClientConfStrategy  ModifyClientConfStrategyRequest
+     * @return ModifyClientConfStrategyResponse
+     */
     @Override
     public CompletableFuture<ModifyClientConfStrategyResponse> modifyClientConfStrategy(ModifyClientConfStrategyRequest request) {
         try {
@@ -9559,6 +12343,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClientUserDefineRule  ModifyClientUserDefineRuleRequest
+     * @return ModifyClientUserDefineRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyClientUserDefineRuleResponse> modifyClientUserDefineRule(ModifyClientUserDefineRuleRequest request) {
         try {
@@ -9573,6 +12361,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCloudVendorAccountAK  ModifyCloudVendorAccountAKRequest
+     * @return ModifyCloudVendorAccountAKResponse
+     */
     @Override
     public CompletableFuture<ModifyCloudVendorAccountAKResponse> modifyCloudVendorAccountAK(ModifyCloudVendorAccountAKRequest request) {
         try {
@@ -9587,6 +12379,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyClusterCnnfStatusUserConfirm  ModifyClusterCnnfStatusUserConfirmRequest
+     * @return ModifyClusterCnnfStatusUserConfirmResponse
+     */
     @Override
     public CompletableFuture<ModifyClusterCnnfStatusUserConfirmResponse> modifyClusterCnnfStatusUserConfirm(ModifyClusterCnnfStatusUserConfirmRequest request) {
         try {
@@ -9601,6 +12397,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyConcernNecessity  ModifyConcernNecessityRequest
+     * @return ModifyConcernNecessityResponse
+     */
     @Override
     public CompletableFuture<ModifyConcernNecessityResponse> modifyConcernNecessity(ModifyConcernNecessityRequest request) {
         try {
@@ -9615,6 +12415,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyContainerDefenseRule  ModifyContainerDefenseRuleRequest
+     * @return ModifyContainerDefenseRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyContainerDefenseRuleResponse> modifyContainerDefenseRule(ModifyContainerDefenseRuleRequest request) {
         try {
@@ -9629,6 +12433,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyContainerDefenseRuleSwitch  ModifyContainerDefenseRuleSwitchRequest
+     * @return ModifyContainerDefenseRuleSwitchResponse
+     */
     @Override
     public CompletableFuture<ModifyContainerDefenseRuleSwitchResponse> modifyContainerDefenseRuleSwitch(ModifyContainerDefenseRuleSwitchRequest request) {
         try {
@@ -9643,6 +12451,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyContainerPluginRule  ModifyContainerPluginRuleRequest
+     * @return ModifyContainerPluginRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyContainerPluginRuleResponse> modifyContainerPluginRule(ModifyContainerPluginRuleRequest request) {
         try {
@@ -9657,6 +12469,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyContainerScanConfig  ModifyContainerScanConfigRequest
+     * @return ModifyContainerScanConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyContainerScanConfigResponse> modifyContainerScanConfig(ModifyContainerScanConfigRequest request) {
         try {
@@ -9671,6 +12487,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCreateVulWhitelist  ModifyCreateVulWhitelistRequest
+     * @return ModifyCreateVulWhitelistResponse
+     */
     @Override
     public CompletableFuture<ModifyCreateVulWhitelistResponse> modifyCreateVulWhitelist(ModifyCreateVulWhitelistRequest request) {
         try {
@@ -9685,6 +12505,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCustomBlockRecord  ModifyCustomBlockRecordRequest
+     * @return ModifyCustomBlockRecordResponse
+     */
     @Override
     public CompletableFuture<ModifyCustomBlockRecordResponse> modifyCustomBlockRecord(ModifyCustomBlockRecordRequest request) {
         try {
@@ -9699,6 +12523,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyCycleTask  ModifyCycleTaskRequest
+     * @return ModifyCycleTaskResponse
+     */
     @Override
     public CompletableFuture<ModifyCycleTaskResponse> modifyCycleTask(ModifyCycleTaskRequest request) {
         try {
@@ -9714,8 +12542,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation only if you use Security Center Enterprise.
-      *
+     * <b>description</b> :
+     * <p>You can call this operation only if you use Security Center Enterprise.</p>
+     * 
+     * @param request the request parameters of ModifyDingTalkStatus  ModifyDingTalkStatusRequest
+     * @return ModifyDingTalkStatusResponse
      */
     @Override
     public CompletableFuture<ModifyDingTalkStatusResponse> modifyDingTalkStatus(ModifyDingTalkStatusRequest request) {
@@ -9731,6 +12562,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyEmgVulSubmit  ModifyEmgVulSubmitRequest
+     * @return ModifyEmgVulSubmitResponse
+     */
     @Override
     public CompletableFuture<ModifyEmgVulSubmitResponse> modifyEmgVulSubmit(ModifyEmgVulSubmitRequest request) {
         try {
@@ -9745,6 +12580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyGroupProperty  ModifyGroupPropertyRequest
+     * @return ModifyGroupPropertyResponse
+     */
     @Override
     public CompletableFuture<ModifyGroupPropertyResponse> modifyGroupProperty(ModifyGroupPropertyRequest request) {
         try {
@@ -9759,6 +12598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyIdcProbe  ModifyIdcProbeRequest
+     * @return ModifyIdcProbeResponse
+     */
     @Override
     public CompletableFuture<ModifyIdcProbeResponse> modifyIdcProbe(ModifyIdcProbeRequest request) {
         try {
@@ -9773,6 +12616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyImageFixCycleConfig  ModifyImageFixCycleConfigRequest
+     * @return ModifyImageFixCycleConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyImageFixCycleConfigResponse> modifyImageFixCycleConfig(ModifyImageFixCycleConfigRequest request) {
         try {
@@ -9787,6 +12634,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyImageRegistry  ModifyImageRegistryRequest
+     * @return ModifyImageRegistryResponse
+     */
     @Override
     public CompletableFuture<ModifyImageRegistryResponse> modifyImageRegistry(ModifyImageRegistryRequest request) {
         try {
@@ -9801,6 +12652,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInstanceAntiBruteForceRule  ModifyInstanceAntiBruteForceRuleRequest
+     * @return ModifyInstanceAntiBruteForceRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyInstanceAntiBruteForceRuleResponse> modifyInstanceAntiBruteForceRule(ModifyInstanceAntiBruteForceRuleRequest request) {
         try {
@@ -9815,6 +12670,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInterceptionRule  ModifyInterceptionRuleRequest
+     * @return ModifyInterceptionRuleResponse
+     */
     @Override
     public CompletableFuture<ModifyInterceptionRuleResponse> modifyInterceptionRule(ModifyInterceptionRuleRequest request) {
         try {
@@ -9829,6 +12688,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInterceptionRuleSwitch  ModifyInterceptionRuleSwitchRequest
+     * @return ModifyInterceptionRuleSwitchResponse
+     */
     @Override
     public CompletableFuture<ModifyInterceptionRuleSwitchResponse> modifyInterceptionRuleSwitch(ModifyInterceptionRuleSwitchRequest request) {
         try {
@@ -9843,6 +12706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyInterceptionTarget  ModifyInterceptionTargetRequest
+     * @return ModifyInterceptionTargetResponse
+     */
     @Override
     public CompletableFuture<ModifyInterceptionTargetResponse> modifyInterceptionTarget(ModifyInterceptionTargetRequest request) {
         try {
@@ -9857,6 +12724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyLogMetaStatus  ModifyLogMetaStatusRequest
+     * @return ModifyLogMetaStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyLogMetaStatusResponse> modifyLogMetaStatus(ModifyLogMetaStatusRequest request) {
         try {
@@ -9871,6 +12742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyLoginBaseConfig  ModifyLoginBaseConfigRequest
+     * @return ModifyLoginBaseConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyLoginBaseConfigResponse> modifyLoginBaseConfig(ModifyLoginBaseConfigRequest request) {
         try {
@@ -9885,6 +12760,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyLoginSwitchConfig  ModifyLoginSwitchConfigRequest
+     * @return ModifyLoginSwitchConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyLoginSwitchConfigResponse> modifyLoginSwitchConfig(ModifyLoginSwitchConfigRequest request) {
         try {
@@ -9899,6 +12778,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyNoticeConfig  ModifyNoticeConfigRequest
+     * @return ModifyNoticeConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyNoticeConfigResponse> modifyNoticeConfig(ModifyNoticeConfigRequest request) {
         try {
@@ -9914,8 +12797,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **Prerequisites** [Simple Log Service](https://www.alibabacloud.com/help/en/log-service/latest/billable-items) is activated. A service-linked role for Security Center is created, and Security Center is authorized to access cloud resources. You can call the [CreateServiceLinkedRole](~~CreateServiceLinkedRole~~) operation to create a service-linked role for Security Center and authorize Security Center to access cloud resources. **Scenarios** Before you use the log analysis feature of Security Center, you must call the [ModifyOpenLogShipper](~~ModifyOpenLogShipper~~) operation to activate Simple Log Service.
-      *
+     * <b>description</b> :
+     * <p><em>Prerequisites</em>* <a href="https://www.alibabacloud.com/help/en/log-service/latest/billable-items">Simple Log Service</a> is activated. A service-linked role for Security Center is created, and Security Center is authorized to access cloud resources. You can call the <a href="~~CreateServiceLinkedRole~~">CreateServiceLinkedRole</a> operation to create a service-linked role for Security Center and authorize Security Center to access cloud resources. <strong>Scenarios</strong> Before you use the log analysis feature of Security Center, you must call the <a href="~~ModifyOpenLogShipper~~">ModifyOpenLogShipper</a> operation to activate Simple Log Service.</p>
+     * 
+     * @param request the request parameters of ModifyOpenLogShipper  ModifyOpenLogShipperRequest
+     * @return ModifyOpenLogShipperResponse
      */
     @Override
     public CompletableFuture<ModifyOpenLogShipperResponse> modifyOpenLogShipper(ModifyOpenLogShipperRequest request) {
@@ -9931,6 +12817,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyOperateVul  ModifyOperateVulRequest
+     * @return ModifyOperateVulResponse
+     */
     @Override
     public CompletableFuture<ModifyOperateVulResponse> modifyOperateVul(ModifyOperateVulRequest request) {
         try {
@@ -9945,6 +12835,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPostPayModuleSwitch  ModifyPostPayModuleSwitchRequest
+     * @return ModifyPostPayModuleSwitchResponse
+     */
     @Override
     public CompletableFuture<ModifyPostPayModuleSwitchResponse> modifyPostPayModuleSwitch(ModifyPostPayModuleSwitchRequest request) {
         try {
@@ -9960,8 +12854,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * 
+     * @param request the request parameters of ModifyProcessWhiteList  ModifyProcessWhiteListRequest
+     * @return ModifyProcessWhiteListResponse
      */
     @Override
     public CompletableFuture<ModifyProcessWhiteListResponse> modifyProcessWhiteList(ModifyProcessWhiteListRequest request) {
@@ -9977,6 +12874,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPropertyScheduleConfig  ModifyPropertyScheduleConfigRequest
+     * @return ModifyPropertyScheduleConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyPropertyScheduleConfigResponse> modifyPropertyScheduleConfig(ModifyPropertyScheduleConfigRequest request) {
         try {
@@ -9991,6 +12892,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyPushAllTask  ModifyPushAllTaskRequest
+     * @return ModifyPushAllTaskResponse
+     */
     @Override
     public CompletableFuture<ModifyPushAllTaskResponse> modifyPushAllTask(ModifyPushAllTaskRequest request) {
         try {
@@ -10005,6 +12910,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyRefreshProcessInfo  ModifyRefreshProcessInfoRequest
+     * @return ModifyRefreshProcessInfoResponse
+     */
     @Override
     public CompletableFuture<ModifyRefreshProcessInfoResponse> modifyRefreshProcessInfo(ModifyRefreshProcessInfoRequest request) {
         try {
@@ -10019,6 +12928,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySasContainerWebDefenseRule  ModifySasContainerWebDefenseRuleRequest
+     * @return ModifySasContainerWebDefenseRuleResponse
+     */
     @Override
     public CompletableFuture<ModifySasContainerWebDefenseRuleResponse> modifySasContainerWebDefenseRule(ModifySasContainerWebDefenseRuleRequest request) {
         try {
@@ -10033,6 +12946,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySearchCondition  ModifySearchConditionRequest
+     * @return ModifySearchConditionResponse
+     */
     @Override
     public CompletableFuture<ModifySearchConditionResponse> modifySearchCondition(ModifySearchConditionRequest request) {
         try {
@@ -10048,10 +12965,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      * This operation is phased out. You can use the ChangeCheckConfig operation.
-      *
+     * @deprecated OpenAPI ModifySecurityCheckScheduleConfig is deprecated  * @description This operation is phased out. You can use the ChangeCheckConfig operation.
+     * 
+     * @param request the request parameters of ModifySecurityCheckScheduleConfig  ModifySecurityCheckScheduleConfigRequest
+     * @return ModifySecurityCheckScheduleConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifySecurityCheckScheduleConfigResponse> modifySecurityCheckScheduleConfig(ModifySecurityCheckScheduleConfigRequest request) {
         try {
@@ -10066,6 +12985,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifySecurityEventMarkMissIndividually  ModifySecurityEventMarkMissIndividuallyRequest
+     * @return ModifySecurityEventMarkMissIndividuallyResponse
+     */
     @Override
     public CompletableFuture<ModifySecurityEventMarkMissIndividuallyResponse> modifySecurityEventMarkMissIndividually(ModifySecurityEventMarkMissIndividuallyRequest request) {
         try {
@@ -10081,8 +13004,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
-      *
+     * <b>description</b> :
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
+     * 
+     * @param request the request parameters of ModifySoarStrategySubscribe  ModifySoarStrategySubscribeRequest
+     * @return ModifySoarStrategySubscribeResponse
      */
     @Override
     public CompletableFuture<ModifySoarStrategySubscribeResponse> modifySoarStrategySubscribe(ModifySoarStrategySubscribeRequest request) {
@@ -10098,6 +13024,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyStartVulScan  ModifyStartVulScanRequest
+     * @return ModifyStartVulScanResponse
+     */
     @Override
     public CompletableFuture<ModifyStartVulScanResponse> modifyStartVulScan(ModifyStartVulScanRequest request) {
         try {
@@ -10112,6 +13042,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyStrategy  ModifyStrategyRequest
+     * @return ModifyStrategyResponse
+     */
     @Override
     public CompletableFuture<ModifyStrategyResponse> modifyStrategy(ModifyStrategyRequest request) {
         try {
@@ -10126,6 +13060,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyStrategyTarget  ModifyStrategyTargetRequest
+     * @return ModifyStrategyTargetResponse
+     */
     @Override
     public CompletableFuture<ModifyStrategyTargetResponse> modifyStrategyTarget(ModifyStrategyTargetRequest request) {
         try {
@@ -10140,6 +13078,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyTagWithUuid  ModifyTagWithUuidRequest
+     * @return ModifyTagWithUuidResponse
+     */
     @Override
     public CompletableFuture<ModifyTagWithUuidResponse> modifyTagWithUuid(ModifyTagWithUuidRequest request) {
         try {
@@ -10154,6 +13096,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyUniBackupPolicy  ModifyUniBackupPolicyRequest
+     * @return ModifyUniBackupPolicyResponse
+     */
     @Override
     public CompletableFuture<ModifyUniBackupPolicyResponse> modifyUniBackupPolicy(ModifyUniBackupPolicyRequest request) {
         try {
@@ -10169,9 +13115,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI ModifyVpcHoneyPot is deprecated  * @param request  the request parameters of ModifyVpcHoneyPot  ModifyVpcHoneyPotRequest
+     * @return ModifyVpcHoneyPotResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ModifyVpcHoneyPotResponse> modifyVpcHoneyPot(ModifyVpcHoneyPotRequest request) {
         try {
@@ -10186,6 +13133,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyVulConfig  ModifyVulConfigRequest
+     * @return ModifyVulConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyVulConfigResponse> modifyVulConfig(ModifyVulConfigRequest request) {
         try {
@@ -10200,6 +13151,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyVulTarget  ModifyVulTargetRequest
+     * @return ModifyVulTargetResponse
+     */
     @Override
     public CompletableFuture<ModifyVulTargetResponse> modifyVulTarget(ModifyVulTargetRequest request) {
         try {
@@ -10214,6 +13169,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyVulTargetConfig  ModifyVulTargetConfigRequest
+     * @return ModifyVulTargetConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyVulTargetConfigResponse> modifyVulTargetConfig(ModifyVulTargetConfigRequest request) {
         try {
@@ -10228,6 +13187,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyVulWhitelistTarget  ModifyVulWhitelistTargetRequest
+     * @return ModifyVulWhitelistTargetResponse
+     */
     @Override
     public CompletableFuture<ModifyVulWhitelistTargetResponse> modifyVulWhitelistTarget(ModifyVulWhitelistTargetRequest request) {
         try {
@@ -10242,6 +13205,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebLockCreateConfig  ModifyWebLockCreateConfigRequest
+     * @return ModifyWebLockCreateConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyWebLockCreateConfigResponse> modifyWebLockCreateConfig(ModifyWebLockCreateConfigRequest request) {
         try {
@@ -10257,8 +13224,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.
-      *
+     * <b>description</b> :
+     * <p>After you delete a directory that has web tamper proofing enabled on a server, files in the directory are no longer protected by web tamper proofing. The information about the websites that are hosted on the server may be maliciously modified by attackers. Proceed with caution.</p>
+     * 
+     * @param request the request parameters of ModifyWebLockDeleteConfig  ModifyWebLockDeleteConfigRequest
+     * @return ModifyWebLockDeleteConfigResponse
      */
     @Override
     public CompletableFuture<ModifyWebLockDeleteConfigResponse> modifyWebLockDeleteConfig(ModifyWebLockDeleteConfigRequest request) {
@@ -10274,6 +13244,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebLockProcessStatus  ModifyWebLockProcessStatusRequest
+     * @return ModifyWebLockProcessStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyWebLockProcessStatusResponse> modifyWebLockProcessStatus(ModifyWebLockProcessStatusRequest request) {
         try {
@@ -10289,8 +13263,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If an exception occurs when you enable or disable the web tamper proofing feature for a server, you can call this operation to refresh the status of the web tamper proofing feature.
-      *
+     * <b>description</b> :
+     * <p>If an exception occurs when you enable or disable the web tamper proofing feature for a server, you can call this operation to refresh the status of the web tamper proofing feature.</p>
+     * 
+     * @param request the request parameters of ModifyWebLockRefresh  ModifyWebLockRefreshRequest
+     * @return ModifyWebLockRefreshResponse
      */
     @Override
     public CompletableFuture<ModifyWebLockRefreshResponse> modifyWebLockRefresh(ModifyWebLockRefreshRequest request) {
@@ -10306,6 +13283,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebLockStart  ModifyWebLockStartRequest
+     * @return ModifyWebLockStartResponse
+     */
     @Override
     public CompletableFuture<ModifyWebLockStartResponse> modifyWebLockStart(ModifyWebLockStartRequest request) {
         try {
@@ -10320,6 +13301,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebLockStatus  ModifyWebLockStatusRequest
+     * @return ModifyWebLockStatusResponse
+     */
     @Override
     public CompletableFuture<ModifyWebLockStatusResponse> modifyWebLockStatus(ModifyWebLockStatusRequest request) {
         try {
@@ -10334,6 +13319,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebLockUnbind  ModifyWebLockUnbindRequest
+     * @return ModifyWebLockUnbindResponse
+     */
     @Override
     public CompletableFuture<ModifyWebLockUnbindResponse> modifyWebLockUnbind(ModifyWebLockUnbindRequest request) {
         try {
@@ -10348,6 +13337,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebLockUpdateConfig  ModifyWebLockUpdateConfigRequest
+     * @return ModifyWebLockUpdateConfigResponse
+     */
     @Override
     public CompletableFuture<ModifyWebLockUpdateConfigResponse> modifyWebLockUpdateConfig(ModifyWebLockUpdateConfigRequest request) {
         try {
@@ -10362,6 +13355,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ModifyWebPath  ModifyWebPathRequest
+     * @return ModifyWebPathResponse
+     */
     @Override
     public CompletableFuture<ModifyWebPathResponse> modifyWebPath(ModifyWebPathRequest request) {
         try {
@@ -10376,6 +13373,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenBackupAutoConfig  OpenBackupAutoConfigRequest
+     * @return OpenBackupAutoConfigResponse
+     */
     @Override
     public CompletableFuture<OpenBackupAutoConfigResponse> openBackupAutoConfig(OpenBackupAutoConfigRequest request) {
         try {
@@ -10390,6 +13391,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenPartialBuy  OpenPartialBuyRequest
+     * @return OpenPartialBuyResponse
+     */
     @Override
     public CompletableFuture<OpenPartialBuyResponse> openPartialBuy(OpenPartialBuyRequest request) {
         try {
@@ -10404,6 +13409,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OpenSensitiveFileScan  OpenSensitiveFileScanRequest
+     * @return OpenSensitiveFileScanResponse
+     */
     @Override
     public CompletableFuture<OpenSensitiveFileScanResponse> openSensitiveFileScan(OpenSensitiveFileScanRequest request) {
         try {
@@ -10418,6 +13427,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateAgentClientInstall  OperateAgentClientInstallRequest
+     * @return OperateAgentClientInstallResponse
+     */
     @Override
     public CompletableFuture<OperateAgentClientInstallResponse> operateAgentClientInstall(OperateAgentClientInstallRequest request) {
         try {
@@ -10432,6 +13445,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateApplication  OperateApplicationRequest
+     * @return OperateApplicationResponse
+     */
     @Override
     public CompletableFuture<OperateApplicationResponse> operateApplication(OperateApplicationRequest request) {
         try {
@@ -10446,6 +13463,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateBucketScanTask  OperateBucketScanTaskRequest
+     * @return OperateBucketScanTaskResponse
+     */
     @Override
     public CompletableFuture<OperateBucketScanTaskResponse> operateBucketScanTask(OperateBucketScanTaskRequest request) {
         try {
@@ -10460,6 +13481,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateCommonOverallConfig  OperateCommonOverallConfigRequest
+     * @return OperateCommonOverallConfigResponse
+     */
     @Override
     public CompletableFuture<OperateCommonOverallConfigResponse> operateCommonOverallConfig(OperateCommonOverallConfigRequest request) {
         try {
@@ -10474,6 +13499,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateCommonTargetConfig  OperateCommonTargetConfigRequest
+     * @return OperateCommonTargetConfigResponse
+     */
     @Override
     public CompletableFuture<OperateCommonTargetConfigResponse> operateCommonTargetConfig(OperateCommonTargetConfigRequest request) {
         try {
@@ -10488,6 +13517,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateImageBaselineWhitelist  OperateImageBaselineWhitelistRequest
+     * @return OperateImageBaselineWhitelistResponse
+     */
     @Override
     public CompletableFuture<OperateImageBaselineWhitelistResponse> operateImageBaselineWhitelist(OperateImageBaselineWhitelistRequest request) {
         try {
@@ -10502,6 +13535,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateImageVul  OperateImageVulRequest
+     * @return OperateImageVulResponse
+     */
     @Override
     public CompletableFuture<OperateImageVulResponse> operateImageVul(OperateImageVulRequest request) {
         try {
@@ -10516,6 +13553,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateSuspiciousOverallConfig  OperateSuspiciousOverallConfigRequest
+     * @return OperateSuspiciousOverallConfigResponse
+     */
     @Override
     public CompletableFuture<OperateSuspiciousOverallConfigResponse> operateSuspiciousOverallConfig(OperateSuspiciousOverallConfigRequest request) {
         try {
@@ -10530,6 +13571,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateSuspiciousTargetConfig  OperateSuspiciousTargetConfigRequest
+     * @return OperateSuspiciousTargetConfigResponse
+     */
     @Override
     public CompletableFuture<OperateSuspiciousTargetConfigResponse> operateSuspiciousTargetConfig(OperateSuspiciousTargetConfigRequest request) {
         try {
@@ -10544,6 +13589,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateSwitchStatus  OperateSwitchStatusRequest
+     * @return OperateSwitchStatusResponse
+     */
     @Override
     public CompletableFuture<OperateSwitchStatusResponse> operateSwitchStatus(OperateSwitchStatusRequest request) {
         try {
@@ -10558,6 +13607,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateVirusEvents  OperateVirusEventsRequest
+     * @return OperateVirusEventsResponse
+     */
     @Override
     public CompletableFuture<OperateVirusEventsResponse> operateVirusEvents(OperateVirusEventsRequest request) {
         try {
@@ -10572,6 +13625,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateVuls  OperateVulsRequest
+     * @return OperateVulsResponse
+     */
     @Override
     public CompletableFuture<OperateVulsResponse> operateVuls(OperateVulsRequest request) {
         try {
@@ -10586,6 +13643,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperateWebLockFileEvents  OperateWebLockFileEventsRequest
+     * @return OperateWebLockFileEventsResponse
+     */
     @Override
     public CompletableFuture<OperateWebLockFileEventsResponse> operateWebLockFileEvents(OperateWebLockFileEventsRequest request) {
         try {
@@ -10600,6 +13661,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperationCancelIgnoreSuspEvent  OperationCancelIgnoreSuspEventRequest
+     * @return OperationCancelIgnoreSuspEventResponse
+     */
     @Override
     public CompletableFuture<OperationCancelIgnoreSuspEventResponse> operationCancelIgnoreSuspEvent(OperationCancelIgnoreSuspEventRequest request) {
         try {
@@ -10614,6 +13679,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperationCustomizeReportChart  OperationCustomizeReportChartRequest
+     * @return OperationCustomizeReportChartResponse
+     */
     @Override
     public CompletableFuture<OperationCustomizeReportChartResponse> operationCustomizeReportChart(OperationCustomizeReportChartRequest request) {
         try {
@@ -10628,6 +13697,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of OperationSuspEvents  OperationSuspEventsRequest
+     * @return OperationSuspEventsResponse
+     */
     @Override
     public CompletableFuture<OperationSuspEventsResponse> operationSuspEvents(OperationSuspEventsRequest request) {
         try {
@@ -10642,6 +13715,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PageImageRegistry  PageImageRegistryRequest
+     * @return PageImageRegistryResponse
+     */
     @Override
     public CompletableFuture<PageImageRegistryResponse> pageImageRegistry(PageImageRegistryRequest request) {
         try {
@@ -10656,6 +13733,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PauseClient  PauseClientRequest
+     * @return PauseClientResponse
+     */
     @Override
     public CompletableFuture<PauseClientResponse> pauseClient(PauseClientRequest request) {
         try {
@@ -10671,8 +13752,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call the PublicCreateImageScanTask operation, we recommend that you call the [PublicPreCheckImageScanTask](~~PublicPreCheckImageScanTask~~) operation to query the number of images to scan and the quota for container image scan to be consumed by the image scan task. Make sure that the remaining quota for container image scan is sufficient. This prevents the task from being stopped due to an insufficient quota.
-      *
+     * <b>description</b> :
+     * <p>Before you call the PublicCreateImageScanTask operation, we recommend that you call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of images to scan and the quota for container image scan to be consumed by the image scan task. Make sure that the remaining quota for container image scan is sufficient. This prevents the task from being stopped due to an insufficient quota.</p>
+     * 
+     * @param request the request parameters of PublicCreateImageScanTask  PublicCreateImageScanTaskRequest
+     * @return PublicCreateImageScanTaskResponse
      */
     @Override
     public CompletableFuture<PublicCreateImageScanTaskResponse> publicCreateImageScanTask(PublicCreateImageScanTaskRequest request) {
@@ -10688,6 +13772,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublicPreCheckImageScanTask  PublicPreCheckImageScanTaskRequest
+     * @return PublicPreCheckImageScanTaskResponse
+     */
     @Override
     public CompletableFuture<PublicPreCheckImageScanTaskResponse> publicPreCheckImageScanTask(PublicPreCheckImageScanTaskRequest request) {
         try {
@@ -10702,6 +13790,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PublicSyncAndCreateImageScanTask  PublicSyncAndCreateImageScanTaskRequest
+     * @return PublicSyncAndCreateImageScanTaskResponse
+     */
     @Override
     public CompletableFuture<PublicSyncAndCreateImageScanTaskResponse> publicSyncAndCreateImageScanTask(PublicSyncAndCreateImageScanTaskRequest request) {
         try {
@@ -10716,6 +13808,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAssetDetailByUUID  QueryAssetDetailByUUIDRequest
+     * @return QueryAssetDetailByUUIDResponse
+     */
     @Override
     public CompletableFuture<QueryAssetDetailByUUIDResponse> queryAssetDetailByUUID(QueryAssetDetailByUUIDRequest request) {
         try {
@@ -10730,6 +13826,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryAttackCount  QueryAttackCountRequest
+     * @return QueryAttackCountResponse
+     */
     @Override
     public CompletableFuture<QueryAttackCountResponse> queryAttackCount(QueryAttackCountRequest request) {
         try {
@@ -10744,6 +13844,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryDiscoverDatabase  QueryDiscoverDatabaseRequest
+     * @return QueryDiscoverDatabaseResponse
+     */
     @Override
     public CompletableFuture<QueryDiscoverDatabaseResponse> queryDiscoverDatabase(QueryDiscoverDatabaseRequest request) {
         try {
@@ -10759,10 +13863,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the QueryGroupIdByGroupName operation to query the ID of an asset group to which your assets belong by using the name of the asset group. When you call operations such as [GetSuspiciousStatistics](~~GetSuspiciousStatistics~~) and [DeleteGroup](~~DeleteGroup~~), you must specify the ID of the asset group. To query the ID of an asset group, call the QueryGroupIdByGroupName operation.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
+     * <b>description</b> :
+     * <p>You can call the QueryGroupIdByGroupName operation to query the ID of an asset group to which your assets belong by using the name of the asset group. When you call operations such as <a href="~~GetSuspiciousStatistics~~">GetSuspiciousStatistics</a> and <a href="~~DeleteGroup~~">DeleteGroup</a>, you must specify the ID of the asset group. To query the ID of an asset group, call the QueryGroupIdByGroupName operation.</p>
+     * <h3>Limits</h3>
+     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * 
+     * @param request the request parameters of QueryGroupIdByGroupName  QueryGroupIdByGroupNameRequest
+     * @return QueryGroupIdByGroupNameResponse
      */
     @Override
     public CompletableFuture<QueryGroupIdByGroupNameResponse> queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request) {
@@ -10778,6 +13885,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryGroupedSecurityEventMarkMissList  QueryGroupedSecurityEventMarkMissListRequest
+     * @return QueryGroupedSecurityEventMarkMissListResponse
+     */
     @Override
     public CompletableFuture<QueryGroupedSecurityEventMarkMissListResponse> queryGroupedSecurityEventMarkMissList(QueryGroupedSecurityEventMarkMissListRequest request) {
         try {
@@ -10792,6 +13903,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryGuidTaskList  QueryGuidTaskListRequest
+     * @return QueryGuidTaskListResponse
+     */
     @Override
     public CompletableFuture<QueryGuidTaskListResponse> queryGuidTaskList(QueryGuidTaskListRequest request) {
         try {
@@ -10806,6 +13921,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryIncidentIconList  QueryIncidentIconListRequest
+     * @return QueryIncidentIconListResponse
+     */
     @Override
     public CompletableFuture<QueryIncidentIconListResponse> queryIncidentIconList(QueryIncidentIconListRequest request) {
         try {
@@ -10820,6 +13939,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryIncidentSubNodesCount  QueryIncidentSubNodesCountRequest
+     * @return QueryIncidentSubNodesCountResponse
+     */
     @Override
     public CompletableFuture<QueryIncidentSubNodesCountResponse> queryIncidentSubNodesCount(QueryIncidentSubNodesCountRequest request) {
         try {
@@ -10834,6 +13957,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryIncidentTracingDetail  QueryIncidentTracingDetailRequest
+     * @return QueryIncidentTracingDetailResponse
+     */
     @Override
     public CompletableFuture<QueryIncidentTracingDetailResponse> queryIncidentTracingDetail(QueryIncidentTracingDetailRequest request) {
         try {
@@ -10848,6 +13975,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryIncidentTracingJudge  QueryIncidentTracingJudgeRequest
+     * @return QueryIncidentTracingJudgeResponse
+     */
     @Override
     public CompletableFuture<QueryIncidentTracingJudgeResponse> queryIncidentTracingJudge(QueryIncidentTracingJudgeRequest request) {
         try {
@@ -10862,6 +13993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryIncidentVertexExtendInfo  QueryIncidentVertexExtendInfoRequest
+     * @return QueryIncidentVertexExtendInfoResponse
+     */
     @Override
     public CompletableFuture<QueryIncidentVertexExtendInfoResponse> queryIncidentVertexExtendInfo(QueryIncidentVertexExtendInfoRequest request) {
         try {
@@ -10876,6 +14011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryIncidentVertexNodes  QueryIncidentVertexNodesRequest
+     * @return QueryIncidentVertexNodesResponse
+     */
     @Override
     public CompletableFuture<QueryIncidentVertexNodesResponse> queryIncidentVertexNodes(QueryIncidentVertexNodesRequest request) {
         try {
@@ -10890,6 +14029,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryJenkinsImageRegistryPersistenceDay  QueryJenkinsImageRegistryPersistenceDayRequest
+     * @return QueryJenkinsImageRegistryPersistenceDayResponse
+     */
     @Override
     public CompletableFuture<QueryJenkinsImageRegistryPersistenceDayResponse> queryJenkinsImageRegistryPersistenceDay(QueryJenkinsImageRegistryPersistenceDayRequest request) {
         try {
@@ -10904,6 +14047,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of QueryPreCheckDatabase  QueryPreCheckDatabaseRequest
+     * @return QueryPreCheckDatabaseResponse
+     */
     @Override
     public CompletableFuture<QueryPreCheckDatabaseResponse> queryPreCheckDatabase(QueryPreCheckDatabaseRequest request) {
         try {
@@ -10918,6 +14065,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RebootMachine  RebootMachineRequest
+     * @return RebootMachineResponse
+     */
     @Override
     public CompletableFuture<RebootMachineResponse> rebootMachine(RebootMachineRequest request) {
         try {
@@ -10932,6 +14083,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReceiveFunctionTrialRewardByAliUid  ReceiveFunctionTrialRewardByAliUidRequest
+     * @return ReceiveFunctionTrialRewardByAliUidResponse
+     */
     @Override
     public CompletableFuture<ReceiveFunctionTrialRewardByAliUidResponse> receiveFunctionTrialRewardByAliUid(ReceiveFunctionTrialRewardByAliUidRequest request) {
         try {
@@ -10946,6 +14101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshAssets  RefreshAssetsRequest
+     * @return RefreshAssetsResponse
+     */
     @Override
     public CompletableFuture<RefreshAssetsResponse> refreshAssets(RefreshAssetsRequest request) {
         try {
@@ -10960,6 +14119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshContainerAssets  RefreshContainerAssetsRequest
+     * @return RefreshContainerAssetsResponse
+     */
     @Override
     public CompletableFuture<RefreshContainerAssetsResponse> refreshContainerAssets(RefreshContainerAssetsRequest request) {
         try {
@@ -10974,6 +14137,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshOssBucketScanInfo  RefreshOssBucketScanInfoRequest
+     * @return RefreshOssBucketScanInfoResponse
+     */
     @Override
     public CompletableFuture<RefreshOssBucketScanInfoResponse> refreshOssBucketScanInfo(RefreshOssBucketScanInfoRequest request) {
         try {
@@ -10988,6 +14155,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RefreshRegistryToken  RefreshRegistryTokenRequest
+     * @return RefreshRegistryTokenResponse
+     */
     @Override
     public CompletableFuture<RefreshRegistryTokenResponse> refreshRegistryToken(RefreshRegistryTokenRequest request) {
         try {
@@ -11002,6 +14173,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ReleaseSasInstance  ReleaseSasInstanceRequest
+     * @return ReleaseSasInstanceResponse
+     */
     @Override
     public CompletableFuture<ReleaseSasInstanceResponse> releaseSasInstance(ReleaseSasInstanceRequest request) {
         try {
@@ -11016,6 +14191,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveCheckInstanceResultWhiteList  RemoveCheckInstanceResultWhiteListRequest
+     * @return RemoveCheckInstanceResultWhiteListResponse
+     */
     @Override
     public CompletableFuture<RemoveCheckInstanceResultWhiteListResponse> removeCheckInstanceResultWhiteList(RemoveCheckInstanceResultWhiteListRequest request) {
         try {
@@ -11030,6 +14209,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveCheckResultWhiteList  RemoveCheckResultWhiteListRequest
+     * @return RemoveCheckResultWhiteListResponse
+     */
     @Override
     public CompletableFuture<RemoveCheckResultWhiteListResponse> removeCheckResultWhiteList(RemoveCheckResultWhiteListRequest request) {
         try {
@@ -11044,6 +14227,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetHoneypot  ResetHoneypotRequest
+     * @return ResetHoneypotResponse
+     */
     @Override
     public CompletableFuture<ResetHoneypotResponse> resetHoneypot(ResetHoneypotRequest request) {
         try {
@@ -11058,6 +14245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ResetLogShipper  ResetLogShipperRequest
+     * @return ResetLogShipperResponse
+     */
     @Override
     public CompletableFuture<ResetLogShipperResponse> resetLogShipper(ResetLogShipperRequest request) {
         try {
@@ -11072,6 +14263,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RetryAgentlessTask  RetryAgentlessTaskRequest
+     * @return RetryAgentlessTaskResponse
+     */
     @Override
     public CompletableFuture<RetryAgentlessTaskResponse> retryAgentlessTask(RetryAgentlessTaskRequest request) {
         try {
@@ -11086,6 +14281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RetryInstallProbe  RetryInstallProbeRequest
+     * @return RetryInstallProbeResponse
+     */
     @Override
     public CompletableFuture<RetryInstallProbeResponse> retryInstallProbe(RetryInstallProbeRequest request) {
         try {
@@ -11100,6 +14299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RollbackSuspEventQuaraFile  RollbackSuspEventQuaraFileRequest
+     * @return RollbackSuspEventQuaraFileResponse
+     */
     @Override
     public CompletableFuture<RollbackSuspEventQuaraFileResponse> rollbackSuspEventQuaraFile(RollbackSuspEventQuaraFileRequest request) {
         try {
@@ -11114,6 +14317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SasInstallCode  SasInstallCodeRequest
+     * @return SasInstallCodeResponse
+     */
     @Override
     public CompletableFuture<SasInstallCodeResponse> sasInstallCode(SasInstallCodeRequest request) {
         try {
@@ -11128,6 +14335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveCustomizeReportConfig  SaveCustomizeReportConfigRequest
+     * @return SaveCustomizeReportConfigResponse
+     */
     @Override
     public CompletableFuture<SaveCustomizeReportConfigResponse> saveCustomizeReportConfig(SaveCustomizeReportConfigRequest request) {
         try {
@@ -11142,6 +14353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveImageBaselineStrategy  SaveImageBaselineStrategyRequest
+     * @return SaveImageBaselineStrategyResponse
+     */
     @Override
     public CompletableFuture<SaveImageBaselineStrategyResponse> saveImageBaselineStrategy(SaveImageBaselineStrategyRequest request) {
         try {
@@ -11156,6 +14371,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveSuspEventUserSetting  SaveSuspEventUserSettingRequest
+     * @return SaveSuspEventUserSettingResponse
+     */
     @Override
     public CompletableFuture<SaveSuspEventUserSettingResponse> saveSuspEventUserSetting(SaveSuspEventUserSettingRequest request) {
         try {
@@ -11171,8 +14390,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or enabled the feature, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or enabled the feature, you can call this operation.</p>
+     * 
+     * @param request the request parameters of SaveWhiteListStrategy  SaveWhiteListStrategyRequest
+     * @return SaveWhiteListStrategyResponse
      */
     @Override
     public CompletableFuture<SaveWhiteListStrategyResponse> saveWhiteListStrategy(SaveWhiteListStrategyRequest request) {
@@ -11188,6 +14410,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SaveWhiteListStrategyAssets  SaveWhiteListStrategyAssetsRequest
+     * @return SaveWhiteListStrategyAssetsResponse
+     */
     @Override
     public CompletableFuture<SaveWhiteListStrategyAssetsResponse> saveWhiteListStrategyAssets(SaveWhiteListStrategyAssetsRequest request) {
         try {
@@ -11202,6 +14428,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SendCustomizeReport  SendCustomizeReportRequest
+     * @return SendCustomizeReportResponse
+     */
     @Override
     public CompletableFuture<SendCustomizeReportResponse> sendCustomizeReport(SendCustomizeReportRequest request) {
         try {
@@ -11216,6 +14446,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetBuildRiskDefineRuleConfig  SetBuildRiskDefineRuleConfigRequest
+     * @return SetBuildRiskDefineRuleConfigResponse
+     */
+    @Override
+    public CompletableFuture<SetBuildRiskDefineRuleConfigResponse> setBuildRiskDefineRuleConfig(SetBuildRiskDefineRuleConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetBuildRiskDefineRuleConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetBuildRiskDefineRuleConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetBuildRiskDefineRuleConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetClusterInterceptionConfig  SetClusterInterceptionConfigRequest
+     * @return SetClusterInterceptionConfigResponse
+     */
     @Override
     public CompletableFuture<SetClusterInterceptionConfigResponse> setClusterInterceptionConfig(SetClusterInterceptionConfigRequest request) {
         try {
@@ -11230,6 +14482,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetImageBuildRiskStatus  SetImageBuildRiskStatusRequest
+     * @return SetImageBuildRiskStatusResponse
+     */
+    @Override
+    public CompletableFuture<SetImageBuildRiskStatusResponse> setImageBuildRiskStatus(SetImageBuildRiskStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetImageBuildRiskStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetImageBuildRiskStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetImageBuildRiskStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SetImageSensitiveFileStatus  SetImageSensitiveFileStatusRequest
+     * @return SetImageSensitiveFileStatusResponse
+     */
     @Override
     public CompletableFuture<SetImageSensitiveFileStatusResponse> setImageSensitiveFileStatus(SetImageSensitiveFileStatusRequest request) {
         try {
@@ -11244,6 +14518,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetRegistryScanDayNum  SetRegistryScanDayNumRequest
+     * @return SetRegistryScanDayNumResponse
+     */
     @Override
     public CompletableFuture<SetRegistryScanDayNumResponse> setRegistryScanDayNum(SetRegistryScanDayNumRequest request) {
         try {
@@ -11258,6 +14536,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetSensitiveDefineRuleConfig  SetSensitiveDefineRuleConfigRequest
+     * @return SetSensitiveDefineRuleConfigResponse
+     */
     @Override
     public CompletableFuture<SetSensitiveDefineRuleConfigResponse> setSensitiveDefineRuleConfig(SetSensitiveDefineRuleConfigRequest request) {
         try {
@@ -11272,6 +14554,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SetSyncRefreshRegion  SetSyncRefreshRegionRequest
+     * @return SetSyncRefreshRegionResponse
+     */
     @Override
     public CompletableFuture<SetSyncRefreshRegionResponse> setSyncRefreshRegion(SetSyncRefreshRegionRequest request) {
         try {
@@ -11287,9 +14573,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
+     * @deprecated OpenAPI StartBaselineSecurityCheck is deprecated  * @param request  the request parameters of StartBaselineSecurityCheck  StartBaselineSecurityCheckRequest
+     * @return StartBaselineSecurityCheckResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<StartBaselineSecurityCheckResponse> startBaselineSecurityCheck(StartBaselineSecurityCheckRequest request) {
         try {
@@ -11304,6 +14591,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartDiscoverDatabaseTask  StartDiscoverDatabaseTaskRequest
+     * @return StartDiscoverDatabaseTaskResponse
+     */
     @Override
     public CompletableFuture<StartDiscoverDatabaseTaskResponse> startDiscoverDatabaseTask(StartDiscoverDatabaseTaskRequest request) {
         try {
@@ -11318,6 +14609,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartHoneypot  StartHoneypotRequest
+     * @return StartHoneypotResponse
+     */
     @Override
     public CompletableFuture<StartHoneypotResponse> startHoneypot(StartHoneypotRequest request) {
         try {
@@ -11332,6 +14627,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartIdcProbeScan  StartIdcProbeScanRequest
+     * @return StartIdcProbeScanResponse
+     */
     @Override
     public CompletableFuture<StartIdcProbeScanResponse> startIdcProbeScan(StartIdcProbeScanRequest request) {
         try {
@@ -11346,6 +14645,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartPreCheckDatabase  StartPreCheckDatabaseRequest
+     * @return StartPreCheckDatabaseResponse
+     */
     @Override
     public CompletableFuture<StartPreCheckDatabaseResponse> startPreCheckDatabase(StartPreCheckDatabaseRequest request) {
         try {
@@ -11360,6 +14663,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StartVirusScanTask  StartVirusScanTaskRequest
+     * @return StartVirusScanTaskResponse
+     */
     @Override
     public CompletableFuture<StartVirusScanTaskResponse> startVirusScanTask(StartVirusScanTaskRequest request) {
         try {
@@ -11374,6 +14681,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of StopHoneypot  StopHoneypotRequest
+     * @return StopHoneypotResponse
+     */
     @Override
     public CompletableFuture<StopHoneypotResponse> stopHoneypot(StopHoneypotRequest request) {
         try {
@@ -11388,6 +14699,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitCheck  SubmitCheckRequest
+     * @return SubmitCheckResponse
+     */
     @Override
     public CompletableFuture<SubmitCheckResponse> submitCheck(SubmitCheckRequest request) {
         try {
@@ -11402,6 +14717,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of SubmitOperationTask  SubmitOperationTaskRequest
+     * @return SubmitOperationTaskResponse
+     */
     @Override
     public CompletableFuture<SubmitOperationTaskResponse> submitOperationTask(SubmitOperationTaskRequest request) {
         try {
@@ -11416,6 +14735,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of TriggerCheck  TriggerCheckRequest
+     * @return TriggerCheckResponse
+     */
     @Override
     public CompletableFuture<TriggerCheckResponse> triggerCheck(TriggerCheckRequest request) {
         try {
@@ -11430,6 +14753,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UnBindHybridProxy  UnBindHybridProxyRequest
+     * @return UnBindHybridProxyResponse
+     */
+    @Override
+    public CompletableFuture<UnBindHybridProxyResponse> unBindHybridProxy(UnBindHybridProxyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnBindHybridProxy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnBindHybridProxyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnBindHybridProxyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnMarkMonitorAccounts  UnMarkMonitorAccountsRequest
+     * @return UnMarkMonitorAccountsResponse
+     */
     @Override
     public CompletableFuture<UnMarkMonitorAccountsResponse> unMarkMonitorAccounts(UnMarkMonitorAccountsRequest request) {
         try {
@@ -11445,12 +14790,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you no longer require protection for servers that are not deployed on Alibaba Cloud, you can call this operation to unbind the servers from Security Center. After you unbind a server that is not deployed on Alibaba Cloud from Security Center, the server no longer consumes the quota of protected servers or protected server vCPUs. This way, you can install the Security Center agent on other servers to meet your business requirements.
-      * > You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
-      * **Prerequisites**
-      * *   The server that you want to unbind from Security Center is not deployed on Alibaba Cloud and the Security Center agent is disabled for the server. In this case, the agent is in the Close state and Security Center does not protect the server. You can call the [PauseClient](~~PauseClient~~) operation to disable the agent.
-      * *   The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see [Use the client protection feature](https://www.alibabacloud.com/help/en/security-center/latest/local-file-detection-engine).
-      *
+     * <b>description</b> :
+     * <p>If you no longer require protection for servers that are not deployed on Alibaba Cloud, you can call this operation to unbind the servers from Security Center. After you unbind a server that is not deployed on Alibaba Cloud from Security Center, the server no longer consumes the quota of protected servers or protected server vCPUs. This way, you can install the Security Center agent on other servers to meet your business requirements.</p>
+     * <blockquote>
+     * <p>You can unbind only the servers that are not deployed on Alibaba Cloud from Security Center. If you use an Alibaba Cloud Elastic Compute Service (ECS) instance, you do not need to unbind the ECS instance. If you uninstall the Security Center agent from an ECS instance, the ECS instance still exists as a disconnected server in the asset list of the Security Center console. The ECS instance is not removed from the asset list.
+     * <strong>Prerequisites</strong></p>
+     * </blockquote>
+     * <ul>
+     * <li>The server that you want to unbind from Security Center is not deployed on Alibaba Cloud and the Security Center agent is disabled for the server. In this case, the agent is in the Close state and Security Center does not protect the server. You can call the <a href="~~PauseClient~~">PauseClient</a> operation to disable the agent.</li>
+     * <li>The client protection feature is disabled for the server that you want to unbind from Security Center. For more information about how to disable the client protection feature, see <a href="https://www.alibabacloud.com/help/en/security-center/latest/local-file-detection-engine">Use the client protection feature</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of UnbindAegis  UnbindAegisRequest
+     * @return UnbindAegisResponse
      */
     @Override
     public CompletableFuture<UnbindAegisResponse> unbindAegis(UnbindAegisRequest request) {
@@ -11466,6 +14818,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallBackupClient  UninstallBackupClientRequest
+     * @return UninstallBackupClientResponse
+     */
     @Override
     public CompletableFuture<UninstallBackupClientResponse> uninstallBackupClient(UninstallBackupClientRequest request) {
         try {
@@ -11480,6 +14836,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallRaspAttach  UninstallRaspAttachRequest
+     * @return UninstallRaspAttachResponse
+     */
     @Override
     public CompletableFuture<UninstallRaspAttachResponse> uninstallRaspAttach(UninstallRaspAttachRequest request) {
         try {
@@ -11494,6 +14854,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UninstallUniBackupAgent  UninstallUniBackupAgentRequest
+     * @return UninstallUniBackupAgentResponse
+     */
     @Override
     public CompletableFuture<UninstallUniBackupAgentResponse> uninstallUniBackupAgent(UninstallUniBackupAgentRequest request) {
         try {
@@ -11508,6 +14872,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateAlarmEvent  UpdateAlarmEventRequest
+     * @return UpdateAlarmEventResponse
+     */
     @Override
     public CompletableFuture<UpdateAlarmEventResponse> updateAlarmEvent(UpdateAlarmEventRequest request) {
         try {
@@ -11522,6 +14890,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateBaselineCheckWhiteRecord  UpdateBaselineCheckWhiteRecordRequest
+     * @return UpdateBaselineCheckWhiteRecordResponse
+     */
     @Override
     public CompletableFuture<UpdateBaselineCheckWhiteRecordResponse> updateBaselineCheckWhiteRecord(UpdateBaselineCheckWhiteRecordRequest request) {
         try {
@@ -11536,6 +14908,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateClientAlertMode  UpdateClientAlertModeRequest
+     * @return UpdateClientAlertModeResponse
+     */
     @Override
     public CompletableFuture<UpdateClientAlertModeResponse> updateClientAlertMode(UpdateClientAlertModeRequest request) {
         try {
@@ -11550,6 +14926,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCommonSwitchConfig  UpdateCommonSwitchConfigRequest
+     * @return UpdateCommonSwitchConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateCommonSwitchConfigResponse> updateCommonSwitchConfig(UpdateCommonSwitchConfigRequest request) {
         try {
@@ -11564,6 +14944,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateCustomizeReportStatus  UpdateCustomizeReportStatusRequest
+     * @return UpdateCustomizeReportStatusResponse
+     */
     @Override
     public CompletableFuture<UpdateCustomizeReportStatusResponse> updateCustomizeReportStatus(UpdateCustomizeReportStatusRequest request) {
         try {
@@ -11578,6 +14962,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFileProtectEventStatus  UpdateFileProtectEventStatusRequest
+     * @return UpdateFileProtectEventStatusResponse
+     */
     @Override
     public CompletableFuture<UpdateFileProtectEventStatusResponse> updateFileProtectEventStatus(UpdateFileProtectEventStatusRequest request) {
         try {
@@ -11592,6 +14980,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFileProtectRemark  UpdateFileProtectRemarkRequest
+     * @return UpdateFileProtectRemarkResponse
+     */
     @Override
     public CompletableFuture<UpdateFileProtectRemarkResponse> updateFileProtectRemark(UpdateFileProtectRemarkRequest request) {
         try {
@@ -11606,6 +14998,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFileProtectRule  UpdateFileProtectRuleRequest
+     * @return UpdateFileProtectRuleResponse
+     */
     @Override
     public CompletableFuture<UpdateFileProtectRuleResponse> updateFileProtectRule(UpdateFileProtectRuleRequest request) {
         try {
@@ -11620,6 +15016,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateFileUploadLimit  UpdateFileUploadLimitRequest
+     * @return UpdateFileUploadLimitResponse
+     */
     @Override
     public CompletableFuture<UpdateFileUploadLimitResponse> updateFileUploadLimit(UpdateFileUploadLimitRequest request) {
         try {
@@ -11634,6 +15034,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHoneypot  UpdateHoneypotRequest
+     * @return UpdateHoneypotResponse
+     */
     @Override
     public CompletableFuture<UpdateHoneypotResponse> updateHoneypot(UpdateHoneypotRequest request) {
         try {
@@ -11648,6 +15052,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHoneypotNode  UpdateHoneypotNodeRequest
+     * @return UpdateHoneypotNodeResponse
+     */
     @Override
     public CompletableFuture<UpdateHoneypotNodeResponse> updateHoneypotNode(UpdateHoneypotNodeRequest request) {
         try {
@@ -11662,6 +15070,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHoneypotPreset  UpdateHoneypotPresetRequest
+     * @return UpdateHoneypotPresetResponse
+     */
     @Override
     public CompletableFuture<UpdateHoneypotPresetResponse> updateHoneypotPreset(UpdateHoneypotPresetRequest request) {
         try {
@@ -11676,6 +15088,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHoneypotProbe  UpdateHoneypotProbeRequest
+     * @return UpdateHoneypotProbeResponse
+     */
     @Override
     public CompletableFuture<UpdateHoneypotProbeResponse> updateHoneypotProbe(UpdateHoneypotProbeRequest request) {
         try {
@@ -11690,6 +15106,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateHoneypotProbeBind  UpdateHoneypotProbeBindRequest
+     * @return UpdateHoneypotProbeBindResponse
+     */
     @Override
     public CompletableFuture<UpdateHoneypotProbeBindResponse> updateHoneypotProbeBind(UpdateHoneypotProbeBindRequest request) {
         try {
@@ -11704,6 +15124,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateImageEventOperation  UpdateImageEventOperationRequest
+     * @return UpdateImageEventOperationResponse
+     */
     @Override
     public CompletableFuture<UpdateImageEventOperationResponse> updateImageEventOperation(UpdateImageEventOperationRequest request) {
         try {
@@ -11718,6 +15142,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateImageVulWhitelistTarget  UpdateImageVulWhitelistTargetRequest
+     * @return UpdateImageVulWhitelistTargetResponse
+     */
     @Override
     public CompletableFuture<UpdateImageVulWhitelistTargetResponse> updateImageVulWhitelistTarget(UpdateImageVulWhitelistTargetRequest request) {
         try {
@@ -11732,6 +15160,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateJenkinsImageRegistryName  UpdateJenkinsImageRegistryNameRequest
+     * @return UpdateJenkinsImageRegistryNameResponse
+     */
     @Override
     public CompletableFuture<UpdateJenkinsImageRegistryNameResponse> updateJenkinsImageRegistryName(UpdateJenkinsImageRegistryNameRequest request) {
         try {
@@ -11746,6 +15178,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateJenkinsImageRegistryPersistenceDay  UpdateJenkinsImageRegistryPersistenceDayRequest
+     * @return UpdateJenkinsImageRegistryPersistenceDayResponse
+     */
     @Override
     public CompletableFuture<UpdateJenkinsImageRegistryPersistenceDayResponse> updateJenkinsImageRegistryPersistenceDay(UpdateJenkinsImageRegistryPersistenceDayRequest request) {
         try {
@@ -11760,6 +15196,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateMaliciousFileWhitelistConfig  UpdateMaliciousFileWhitelistConfigRequest
+     * @return UpdateMaliciousFileWhitelistConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateMaliciousFileWhitelistConfigResponse> updateMaliciousFileWhitelistConfig(UpdateMaliciousFileWhitelistConfigRequest request) {
         try {
@@ -11774,6 +15214,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateOpaStrategyNew  UpdateOpaStrategyNewRequest
+     * @return UpdateOpaStrategyNewResponse
+     */
     @Override
     public CompletableFuture<UpdateOpaStrategyNewResponse> updateOpaStrategyNew(UpdateOpaStrategyNewRequest request) {
         try {
@@ -11788,6 +15232,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateOssScanConfig  UpdateOssScanConfigRequest
+     * @return UpdateOssScanConfigResponse
+     */
     @Override
     public CompletableFuture<UpdateOssScanConfigResponse> updateOssScanConfig(UpdateOssScanConfigRequest request) {
         try {
@@ -11802,6 +15250,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePublishAutoUpgrade  UpdatePublishAutoUpgradeRequest
+     * @return UpdatePublishAutoUpgradeResponse
+     */
     @Override
     public CompletableFuture<UpdatePublishAutoUpgradeResponse> updatePublishAutoUpgrade(UpdatePublishAutoUpgradeRequest request) {
         try {
@@ -11816,6 +15268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePublishBatch  UpdatePublishBatchRequest
+     * @return UpdatePublishBatchResponse
+     */
     @Override
     public CompletableFuture<UpdatePublishBatchResponse> updatePublishBatch(UpdatePublishBatchRequest request) {
         try {
@@ -11830,6 +15286,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePublishCron  UpdatePublishCronRequest
+     * @return UpdatePublishCronResponse
+     */
     @Override
     public CompletableFuture<UpdatePublishCronResponse> updatePublishCron(UpdatePublishCronRequest request) {
         try {
@@ -11844,6 +15304,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdatePublishGraySwitch  UpdatePublishGraySwitchRequest
+     * @return UpdatePublishGraySwitchResponse
+     */
     @Override
     public CompletableFuture<UpdatePublishGraySwitchResponse> updatePublishGraySwitch(UpdatePublishGraySwitchRequest request) {
         try {
@@ -11858,6 +15322,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateSelectionKeyByType  UpdateSelectionKeyByTypeRequest
+     * @return UpdateSelectionKeyByTypeResponse
+     */
     @Override
     public CompletableFuture<UpdateSelectionKeyByTypeResponse> updateSelectionKeyByType(UpdateSelectionKeyByTypeRequest request) {
         try {
@@ -11872,6 +15340,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpdateTargetListByBatch  UpdateTargetListByBatchRequest
+     * @return UpdateTargetListByBatchResponse
+     */
     @Override
     public CompletableFuture<UpdateTargetListByBatchResponse> updateTargetListByBatch(UpdateTargetListByBatchRequest request) {
         try {
@@ -11887,8 +15359,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
-      *
+     * <b>description</b> :
+     * <p>The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.</p>
+     * 
+     * @param request the request parameters of UpdateWhiteListStrategyStatus  UpdateWhiteListStrategyStatusRequest
+     * @return UpdateWhiteListStrategyStatusResponse
      */
     @Override
     public CompletableFuture<UpdateWhiteListStrategyStatusResponse> updateWhiteListStrategyStatus(UpdateWhiteListStrategyStatusRequest request) {
@@ -11904,6 +15379,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeBackupPolicyVersion  UpgradeBackupPolicyVersionRequest
+     * @return UpgradeBackupPolicyVersionResponse
+     */
     @Override
     public CompletableFuture<UpgradeBackupPolicyVersionResponse> upgradeBackupPolicyVersion(UpgradeBackupPolicyVersionRequest request) {
         try {
@@ -11918,6 +15397,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeHoneypotNode  UpgradeHoneypotNodeRequest
+     * @return UpgradeHoneypotNodeResponse
+     */
     @Override
     public CompletableFuture<UpgradeHoneypotNodeResponse> upgradeHoneypotNode(UpgradeHoneypotNodeRequest request) {
         try {
@@ -11932,6 +15415,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UpgradeVersionByUuids  UpgradeVersionByUuidsRequest
+     * @return UpgradeVersionByUuidsResponse
+     */
     @Override
     public CompletableFuture<UpgradeVersionByUuidsResponse> upgradeVersionByUuids(UpgradeVersionByUuidsRequest request) {
         try {
@@ -11946,6 +15433,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of UploadedHoneyPotFile  UploadedHoneyPotFileRequest
+     * @return UploadedHoneyPotFileResponse
+     */
     @Override
     public CompletableFuture<UploadedHoneyPotFileResponse> uploadedHoneyPotFile(UploadedHoneyPotFileRequest request) {
         try {
@@ -11960,6 +15451,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ValidateHcWarnings  ValidateHcWarningsRequest
+     * @return ValidateHcWarningsResponse
+     */
     @Override
     public CompletableFuture<ValidateHcWarningsResponse> validateHcWarnings(ValidateHcWarningsRequest request) {
         try {
@@ -11974,6 +15469,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyCheckInstanceResult  VerifyCheckInstanceResultRequest
+     * @return VerifyCheckInstanceResultResponse
+     */
     @Override
     public CompletableFuture<VerifyCheckInstanceResultResponse> verifyCheckInstanceResult(VerifyCheckInstanceResultRequest request) {
         try {
@@ -11988,6 +15487,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of VerifyCheckResult  VerifyCheckResultRequest
+     * @return VerifyCheckResultResponse
+     */
     @Override
     public CompletableFuture<VerifyCheckResultResponse> verifyCheckResult(VerifyCheckResultRequest request) {
         try {

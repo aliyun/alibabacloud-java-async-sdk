@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSimilarEventScenariosRequest} extends {@link RequestModel}
  *
  * <p>DescribeSimilarEventScenariosRequest</p>
@@ -91,7 +92,10 @@ public class DescribeSimilarEventScenariosRequest extends Request {
         }
 
         /**
-         * SecurityEventId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12321</p>
          */
         public Builder securityEventId(Long securityEventId) {
             this.putQueryParameter("SecurityEventId", securityEventId);

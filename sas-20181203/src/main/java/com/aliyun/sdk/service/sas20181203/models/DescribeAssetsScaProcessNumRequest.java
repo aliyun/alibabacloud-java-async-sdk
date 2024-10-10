@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetsScaProcessNumRequest} extends {@link RequestModel}
  *
  * <p>DescribeAssetsScaProcessNumRequest</p>
@@ -54,7 +55,8 @@ public class DescribeAssetsScaProcessNumRequest extends Request {
         } 
 
         /**
-         * The UUIDs of the servers.
+         * <p>The UUIDs of the servers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

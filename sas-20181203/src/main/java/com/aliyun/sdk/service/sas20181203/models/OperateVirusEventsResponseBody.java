@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateVirusEventsResponseBody} extends {@link TeaModel}
  *
  * <p>OperateVirusEventsResponseBody</p>
@@ -49,7 +50,10 @@ public class OperateVirusEventsResponseBody extends TeaModel {
         private Long taskId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B72BEC03-001C-5C77-A4BB-1E6XXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class OperateVirusEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task to handle multiple alert events at a time.
+         * <p>The ID of the task to handle multiple alert events at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

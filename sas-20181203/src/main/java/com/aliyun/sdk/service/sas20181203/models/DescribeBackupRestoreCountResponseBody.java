@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackupRestoreCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeBackupRestoreCountResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics of restoration tasks.
+         * <p>The statistics of restoration tasks.</p>
          */
         public Builder backupRestoreCount(BackupRestoreCount backupRestoreCount) {
             this.backupRestoreCount = backupRestoreCount;
@@ -57,7 +58,10 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECC6B3E3-D496-512D-B46D-E6996A6B63EE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeBackupRestoreCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeBackupRestoreCountResponseBody</p>
+     */
     public static class BackupRestoreCount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Recovering")
         private Integer recovering;
@@ -109,7 +119,10 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * The number of the restoration tasks that are in the **being restored** state.
+             * <p>The number of the restoration tasks that are in the <strong>being restored</strong> state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder recovering(Integer recovering) {
                 this.recovering = recovering;
@@ -117,7 +130,10 @@ public class DescribeBackupRestoreCountResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of the restoration tasks that you create.
+             * <p>The total number of the restoration tasks that you create.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

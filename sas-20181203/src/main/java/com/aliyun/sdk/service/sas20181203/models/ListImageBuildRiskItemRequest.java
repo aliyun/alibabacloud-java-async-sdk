@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImageBuildRiskItemRequest} extends {@link RequestModel}
  *
  * <p>ListImageBuildRiskItemRequest</p>
@@ -53,11 +54,14 @@ public class ListImageBuildRiskItemRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: zh. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: zh. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyClientConfSetupRequest} extends {@link RequestModel}
  *
  * <p>ModifyClientConfSetupRequest</p>
@@ -83,11 +84,16 @@ public class ModifyClientConfSetupRequest extends Request {
         } 
 
         /**
-         * The configurations of the Security Center agent.
-         * <p>
+         * <p>The configurations of the Security Center agent.</p>
+         * <ul>
+         * <li>cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server</li>
+         * <li>mem: the maximum memory usage that can be occupied by the Security Center agent on the server</li>
+         * </ul>
          * 
-         * *   cpu: the maximum CPU utilization that can be occupied by the Security Center agent on the server
-         * *   mem: the maximum memory usage that can be occupied by the Security Center agent on the server
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;cpu&quot;: &quot;20&quot;
+         * }</p>
          */
         public Builder strategyConfig(String strategyConfig) {
             this.putQueryParameter("StrategyConfig", strategyConfig);
@@ -96,7 +102,11 @@ public class ModifyClientConfSetupRequest extends Request {
         }
 
         /**
-         * The type of the tag.
+         * <p>The type of the tag.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>machineResource</p>
          */
         public Builder strategyTag(String strategyTag) {
             this.putQueryParameter("StrategyTag", strategyTag);
@@ -105,12 +115,16 @@ public class ModifyClientConfSetupRequest extends Request {
         }
 
         /**
-         * The value of the tag. Valid values:
-         * <p>
+         * <p>The value of the tag. Valid values:</p>
+         * <ul>
+         * <li>major</li>
+         * <li>advanced</li>
+         * <li>basic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   major
-         * *   advanced
-         * *   basic
+         * <strong>example:</strong>
+         * <p>major</p>
          */
         public Builder strategyTagValue(String strategyTagValue) {
             this.putQueryParameter("StrategyTagValue", strategyTagValue);

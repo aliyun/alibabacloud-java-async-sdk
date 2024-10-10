@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddSasContainerWebDefenseRuleResponseBody} extends {@link TeaModel}
  *
  * <p>AddSasContainerWebDefenseRuleResponseBody</p>
@@ -49,7 +50,10 @@ public class AddSasContainerWebDefenseRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The unique value of the created rule.
+         * <p>The unique value of the created rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200634</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class AddSasContainerWebDefenseRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8B4B6E6D-B0B0-5F05-A14E-82917D9648EE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

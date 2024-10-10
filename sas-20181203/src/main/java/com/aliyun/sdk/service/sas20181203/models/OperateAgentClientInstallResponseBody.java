@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateAgentClientInstallResponseBody} extends {@link TeaModel}
  *
  * <p>OperateAgentClientInstallResponseBody</p>
@@ -49,7 +50,7 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the returned results.
+         * <p>An array that consists of the returned results.</p>
          */
         public Builder aegisCelintInstallResposeList(java.util.List < AegisCelintInstallResposeList> aegisCelintInstallResposeList) {
             this.aegisCelintInstallResposeList = aegisCelintInstallResposeList;
@@ -57,7 +58,10 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE79B457-877C-51C6-AD72-0D34A025D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OperateAgentClientInstallResponseBody} extends {@link TeaModel}
+     *
+     * <p>OperateAgentClientInstallResponseBody</p>
+     */
     public static class AegisCelintInstallResposeList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -121,7 +131,10 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6j8vq9l4r5ntht****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -129,7 +142,10 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the installation task.
+             * <p>The ID of the installation task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2856</p>
              */
             public Builder recordId(Long recordId) {
                 this.recordId = recordId;
@@ -137,7 +153,10 @@ public class OperateAgentClientInstallResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1587bedb-fdb4-48c4-9330-****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

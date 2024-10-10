@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommonTargetConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCommonTargetConfigResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
         private java.util.List < TargetList> targetList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8BF6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details of the configuration items.
+         * <p>An array that consists of the details of the configuration items.</p>
          */
         public Builder targetList(java.util.List < TargetList> targetList) {
             this.targetList = targetList;
@@ -70,6 +74,12 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommonTargetConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommonTargetConfigResponseBody</p>
+     */
     public static class TargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
@@ -121,11 +131,14 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The mode in which the configuration takes effect. Valid values:
-             * <p>
+             * <p>The mode in which the configuration takes effect. Valid values:</p>
+             * <ul>
+             * <li><strong>add</strong>: In this mode, the configuration takes effect on the assets.</li>
+             * <li><strong>del</strong>: In this mode, the configuration does not take effect on the assets.</li>
+             * </ul>
              * 
-             * *   **add**: In this mode, the configuration takes effect on the assets.
-             * *   **del**: In this mode, the configuration does not take effect on the assets.
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -133,16 +146,20 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset on which the configuration takes effect.
-             * <p>
+             * <p>The ID of the asset on which the configuration takes effect.</p>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>When you set the <strong>TargetType</strong> parameter to <strong>uuid</strong>, the value of this parameter indicates the UUID of an asset.</p>
+             * </li>
+             * <li><p>When you set the <strong>TargetType</strong> parameter to <strong>Cluster</strong>, the value of this parameter indicates the ID of a cluster.</p>
+             * </li>
+             * <li><p>When you set the <strong>TargetType</strong> parameter to <strong>image_repo</strong>, the value of this parameter indicates the ID of an image repository.</p>
+             * </li>
+             * </ul>
              * 
-             * > 
-             * 
-             * *   When you set the **TargetType** parameter to **uuid**, the value of this parameter indicates the UUID of an asset.
-             * 
-             * *   When you set the **TargetType** parameter to **Cluster**, the value of this parameter indicates the ID of a cluster.
-             * 
-             * *   When you set the **TargetType** parameter to **image_repo**, the value of this parameter indicates the ID of an image repository.
+             * <strong>example:</strong>
+             * <p>c23551de6149343e8a54e69fbefe6****</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -150,12 +167,15 @@ public class DescribeCommonTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The dimension from on which the feature was configured. Valid values:
-             * <p>
+             * <p>The dimension from on which the feature was configured. Valid values:</p>
+             * <ul>
+             * <li><strong>uuid</strong>: the UUID of the asset</li>
+             * <li><strong>Cluster</strong>: the ID of the cluster</li>
+             * <li><strong>image_repo</strong>: the ID of the image repository</li>
+             * </ul>
              * 
-             * *   **uuid**: the UUID of the asset
-             * *   **Cluster**: the ID of the cluster
-             * *   **image_repo**: the ID of the image repository
+             * <strong>example:</strong>
+             * <p>image_repo</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

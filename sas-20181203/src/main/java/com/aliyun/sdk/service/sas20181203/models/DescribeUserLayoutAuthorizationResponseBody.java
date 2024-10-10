@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserLayoutAuthorizationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserLayoutAuthorizationResponseBody</p>
@@ -49,10 +50,14 @@ public class DescribeUserLayoutAuthorizationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result of the query. Valid values:
-         * <p>
-         * - **true**: The brute-force attacks protection feature has been authorized.
-         * - **false**: The brute-force attacks protection feature is not authorized.
+         * <p>The result of the query. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The brute-force attacks protection feature has been authorized.</li>
+         * <li><strong>false</strong>: The brute-force attacks protection feature is not authorized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder authorized(Boolean authorized) {
             this.authorized = authorized;
@@ -60,7 +65,10 @@ public class DescribeUserLayoutAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4A80EE8F-2175-49DA-B8BF-FAE1B3D52E4C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

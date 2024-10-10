@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateDynamicDictRequest} extends {@link RequestModel}
  *
  * <p>CreateDynamicDictRequest</p>
@@ -67,11 +68,14 @@ public class CreateDynamicDictRequest extends Request {
         } 
 
         /**
-         * Specifies whether to overwrite existing data. Valid values:
-         * <p>
+         * <p>Specifies whether to overwrite existing data. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder override(Boolean override) {
             this.putQueryParameter("Override", override);
@@ -80,7 +84,10 @@ public class CreateDynamicDictRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123.103.9.***</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

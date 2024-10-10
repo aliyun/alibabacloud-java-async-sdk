@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebPathResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebPathResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the paths to the web directories.
+         * <p>An array that consists of the paths to the web directories.</p>
          */
         public Builder configList(java.util.List < ConfigList> configList) {
             this.configList = configList;
@@ -105,7 +106,10 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -113,7 +117,10 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -121,7 +128,10 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B37C9052-A73E-4707-A024-92477028****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeWebPathResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeWebPathResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebPathResponseBody</p>
+     */
     public static class TargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
@@ -189,7 +211,10 @@ public class DescribeWebPathResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The object.
+             * <p>The object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>82048187-bb9b-4e19-8320-7b4ddb97****</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -197,10 +222,13 @@ public class DescribeWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The object type. Valid values:
-             * <p>
+             * <p>The object type. Valid values:</p>
+             * <ul>
+             * <li><strong>uuid</strong></li>
+             * </ul>
              * 
-             * *   **uuid**
+             * <strong>example:</strong>
+             * <p>uuid</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -214,6 +242,12 @@ public class DescribeWebPathResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeWebPathResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebPathResponseBody</p>
+     */
     public static class ConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetList")
         private java.util.List < TargetList> targetList;
@@ -265,7 +299,7 @@ public class DescribeWebPathResponseBody extends TeaModel {
             private String webPathType; 
 
             /**
-             * An array consisting of the servers on which the web directories are scanned.
+             * <p>An array consisting of the servers on which the web directories are scanned.</p>
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;
@@ -273,7 +307,10 @@ public class DescribeWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the web directory.
+             * <p>The path to the web directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/www****</p>
              */
             public Builder webPath(String webPath) {
                 this.webPath = webPath;
@@ -281,11 +318,14 @@ public class DescribeWebPathResponseBody extends TeaModel {
             }
 
             /**
-             * The path type of the web directory. Valid values:
-             * <p>
+             * <p>The path type of the web directory. Valid values:</p>
+             * <ul>
+             * <li><strong>def</strong>: automatically identified</li>
+             * <li><strong>customize</strong>: manually added</li>
+             * </ul>
              * 
-             * *   **def**: automatically identified
-             * *   **customize**: manually added
+             * <strong>example:</strong>
+             * <p>def</p>
              */
             public Builder webPathType(String webPathType) {
                 this.webPathType = webPathType;

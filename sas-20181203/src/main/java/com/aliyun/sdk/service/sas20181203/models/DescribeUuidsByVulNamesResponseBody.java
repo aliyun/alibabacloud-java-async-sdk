@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUuidsByVulNamesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUuidsByVulNamesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         private Integer vulCount; 
 
         /**
-         * The statistics about the servers.
+         * <p>The statistics about the servers.</p>
          */
         public Builder machineInfoStatistics(java.util.List < MachineInfoStatistics> machineInfoStatistics) {
             this.machineInfoStatistics = machineInfoStatistics;
@@ -69,7 +70,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97286A-4A6B-4A4-95FA-EC7E3E2451</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of vulnerabilities on the server.
+         * <p>The total number of vulnerabilities on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder vulCount(Integer vulCount) {
             this.vulCount = vulCount;
@@ -90,6 +97,12 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUuidsByVulNamesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUuidsByVulNamesResponseBody</p>
+     */
     public static class MachineInfoStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
@@ -201,7 +214,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The public IP address of the server on which the exception was detected.
+             * <p>The public IP address of the server on which the exception was detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.98.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -209,7 +225,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server on which the exception was detected.
+             * <p>The private IP address of the server on which the exception was detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.18.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -217,7 +236,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the server.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9gd1os5talju****</p>
              */
             public Builder machineInstanceId(String machineInstanceId) {
                 this.machineInstanceId = machineInstanceId;
@@ -225,7 +247,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder machineIp(String machineIp) {
                 this.machineIp = machineIp;
@@ -233,7 +258,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestMachine</p>
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -241,7 +269,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system that the server runs.
+             * <p>The operating system that the server runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -249,7 +280,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the server.
+             * <p>The region ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -257,7 +291,10 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18375c64-eaa2-4702-92b0-4ee7******</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCustomizedDictRequest} extends {@link RequestModel}
  *
  * <p>DeleteCustomizedDictRequest</p>
@@ -53,7 +54,10 @@ public class DeleteCustomizedDictRequest extends Request {
         } 
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123.103.9.***</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

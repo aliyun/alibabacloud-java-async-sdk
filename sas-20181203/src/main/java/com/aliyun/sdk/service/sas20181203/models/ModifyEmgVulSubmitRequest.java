@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyEmgVulSubmitRequest} extends {@link RequestModel}
  *
  * <p>ModifyEmgVulSubmitRequest</p>
@@ -83,11 +84,14 @@ public class ModifyEmgVulSubmitRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -96,7 +100,11 @@ public class ModifyEmgVulSubmitRequest extends Request {
         }
 
         /**
-         * The name of the vulnerability.
+         * <p>The name of the vulnerability.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scan:ASCV-2019-032401</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -105,11 +113,15 @@ public class ModifyEmgVulSubmitRequest extends Request {
         }
 
         /**
-         * Specifies whether to scan for urgent vulnerabilities. Valid values:
-         * <p>
+         * <p>Specifies whether to scan for urgent vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li><strong>yes</strong></li>
+         * <li><strong>no</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **yes**
-         * *   **no**
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         public Builder userAgreement(String userAgreement) {
             this.putQueryParameter("UserAgreement", userAgreement);

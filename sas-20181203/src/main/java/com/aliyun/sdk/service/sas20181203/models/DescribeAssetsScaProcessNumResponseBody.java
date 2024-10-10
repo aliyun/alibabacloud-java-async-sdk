@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetsScaProcessNumResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAssetsScaProcessNumResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAssetsScaProcessNumResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistical results.
+         * <p>The statistical results.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeAssetsScaProcessNumResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACF97412-FD09-4D1F-994F-34DF12BREF20</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAssetsScaProcessNumResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAssetsScaProcessNumResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAssetsScaProcessNumResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -109,10 +119,13 @@ public class DescribeAssetsScaProcessNumResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The number of Java processes.
-             * <p>
+             * <p>The number of Java processes.</p>
+             * <blockquote>
+             * <p> If no processes exist on the asset, no statistical result is returned.</p>
+             * </blockquote>
              * 
-             * >  If no processes exist on the asset, no statistical result is returned.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -120,10 +133,13 @@ public class DescribeAssetsScaProcessNumResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the asset.
-             * <p>
+             * <p>The UUID of the asset.</p>
+             * <blockquote>
+             * <p> If no processes exist on the asset, no statistical result is returned.</p>
+             * </blockquote>
              * 
-             * >  If no processes exist on the asset, no statistical result is returned.
+             * <strong>example:</strong>
+             * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

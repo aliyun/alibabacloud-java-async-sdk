@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentlessRiskUuidResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentlessRiskUuidResponseBody</p>
@@ -61,7 +62,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the hosts.
+         * <p>The information about the hosts.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -69,7 +70,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05AE6B16-741A-5A75-9BF0-BC747DD9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentlessRiskUuidResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentlessRiskUuidResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineCount")
         private Integer baselineCount;
@@ -237,7 +247,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             private Integer vulCount; 
 
             /**
-             * The number of baseline risks.
+             * <p>The number of baseline risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder baselineCount(Integer baselineCount) {
                 this.baselineCount = baselineCount;
@@ -245,7 +258,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the asset.
+             * <p>The instance ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bp1g6wxdwps7s9dz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -253,7 +269,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the asset.
+             * <p>The instance name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-0****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -261,7 +280,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.210.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -269,7 +291,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.25.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -277,7 +302,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The number of malicious samples.
+             * <p>The number of malicious samples.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maliciousCount(Integer maliciousCount) {
                 this.maliciousCount = maliciousCount;
@@ -285,7 +313,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the detection. Unit: milliseconds.
+             * <p>The timestamp of the detection. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168257753****</p>
              */
             public Builder scanTime(Long scanTime) {
                 this.scanTime = scanTime;
@@ -293,7 +324,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset that is detected.
+             * <p>The ID of the asset that is detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -301,7 +335,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset that is detected.
+             * <p>The name of the asset that is detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -309,7 +346,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -317,7 +357,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The number of detected vulnerabilities.
+             * <p>The number of detected vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -331,6 +374,12 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAgentlessRiskUuidResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentlessRiskUuidResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -382,7 +431,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -390,7 +442,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -398,7 +453,10 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

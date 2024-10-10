@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockFileTypeSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebLockFileTypeSummaryResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of events on web tamper proofing returned.
+         * <p>An array that consists of events on web tamper proofing returned.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -69,7 +70,10 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4BB99533-4FDC-5B9C-A5E4-5AE3E9BE5C78</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of events on web tamper proofing.
+         * <p>The total number of events on web tamper proofing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>639</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebLockFileTypeSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebLockFileTypeSummaryResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -129,7 +142,10 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of attempts.
+             * <p>The number of attempts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -137,23 +153,26 @@ public class DescribeWebLockFileTypeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protected file. Valid values:
-             * <p>
+             * <p>The type of the protected file. Valid values:</p>
+             * <ul>
+             * <li><strong>php</strong>: PHP file</li>
+             * <li><strong>jsp</strong>: JSP file</li>
+             * <li><strong>asp</strong>: ASP file</li>
+             * <li><strong>aspx</strong>: ASPX file</li>
+             * <li><strong>js</strong>: JS file</li>
+             * <li><strong>cgi</strong>: CGI file</li>
+             * <li><strong>html</strong>: HTML file</li>
+             * <li><strong>htm</strong>: HTM file</li>
+             * <li><strong>xml</strong>: XML file</li>
+             * <li><strong>shtml</strong>: SHTML file</li>
+             * <li><strong>shtm</strong>: SHTM file</li>
+             * <li><strong>jpg</strong>: JPG file</li>
+             * <li><strong>gif</strong>: GIF file</li>
+             * <li><strong>png</strong>: PNG file</li>
+             * </ul>
              * 
-             * *   **php**: PHP file
-             * *   **jsp**: JSP file
-             * *   **asp**: ASP file
-             * *   **aspx**: ASPX file
-             * *   **js**: JS file
-             * *   **cgi**: CGI file
-             * *   **html**: HTML file
-             * *   **htm**: HTM file
-             * *   **xml**: XML file
-             * *   **shtml**: SHTML file
-             * *   **shtm**: SHTM file
-             * *   **jpg**: JPG file
-             * *   **gif**: GIF file
-             * *   **png**: PNG file
+             * <strong>example:</strong>
+             * <p>jsp</p>
              */
             public Builder type(String type) {
                 this.type = type;

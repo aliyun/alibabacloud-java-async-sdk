@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOssScanConfigRequest} extends {@link RequestModel}
  *
  * <p>ListOssScanConfigRequest</p>
@@ -81,7 +82,10 @@ public class ListOssScanConfigRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -90,7 +94,10 @@ public class ListOssScanConfigRequest extends Request {
         }
 
         /**
-         * The policy name.
+         * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -99,7 +106,10 @@ public class ListOssScanConfigRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

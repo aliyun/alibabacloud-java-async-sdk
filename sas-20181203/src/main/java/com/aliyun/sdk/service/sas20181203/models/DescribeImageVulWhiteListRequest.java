@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageVulWhiteListRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageVulWhiteListRequest</p>
@@ -109,7 +110,10 @@ public class DescribeImageVulWhiteListRequest extends Request {
         } 
 
         /**
-         * The alias of the vulnerability that you want to query.
+         * <p>The alias of the vulnerability that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2007-5686:rpath_linux</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -118,7 +122,10 @@ public class DescribeImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -127,11 +134,14 @@ public class DescribeImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -140,7 +150,10 @@ public class DescribeImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,10 +162,14 @@ public class DescribeImageVulWhiteListRequest extends Request {
         }
 
         /**
-         * The source of the whitelist. Valid values:
-         * <p>
-         * - **image**
-         * - **agentless**
+         * <p>The source of the whitelist. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong></li>
+         * <li><strong>agentless</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVulAutoRepairConfigResponse} extends {@link TeaModel}
  *
  * <p>ListVulAutoRepairConfigResponse</p>

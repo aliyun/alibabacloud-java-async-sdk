@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTargetListByBatchRequest} extends {@link RequestModel}
  *
  * <p>UpdateTargetListByBatchRequest</p>
@@ -69,7 +70,10 @@ public class UpdateTargetListByBatchRequest extends Request {
         } 
 
         /**
-         * BatchId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52370</p>
          */
         public Builder batchId(Long batchId) {
             this.putQueryParameter("BatchId", batchId);
@@ -78,7 +82,7 @@ public class UpdateTargetListByBatchRequest extends Request {
         }
 
         /**
-         * OperationList.
+         * <p>This parameter is required.</p>
          */
         public Builder operationList(java.util.List < OperationList> operationList) {
             this.putQueryParameter("OperationList", operationList);
@@ -93,6 +97,12 @@ public class UpdateTargetListByBatchRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateTargetListByBatchRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateTargetListByBatchRequest</p>
+     */
     public static class OperationList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;

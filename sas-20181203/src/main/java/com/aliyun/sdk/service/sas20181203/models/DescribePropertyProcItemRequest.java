@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyProcItemRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertyProcItemRequest</p>
@@ -95,7 +96,10 @@ public class DescribePropertyProcItemRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -104,7 +108,10 @@ public class DescribePropertyProcItemRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully refresh the data that you want to query.
+         * <p>Specifies whether to forcefully refresh the data that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceFlush(Boolean forceFlush) {
             this.putQueryParameter("ForceFlush", forceFlush);
@@ -113,7 +120,10 @@ public class DescribePropertyProcItemRequest extends Request {
         }
 
         /**
-         * The name of the process.
+         * <p>The name of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -122,7 +132,10 @@ public class DescribePropertyProcItemRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

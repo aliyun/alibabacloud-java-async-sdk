@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSuspiciousStatisticsRequest} extends {@link RequestModel}
  *
  * <p>GetSuspiciousStatisticsRequest</p>
@@ -68,10 +69,14 @@ public class GetSuspiciousStatisticsRequest extends Request {
         } 
 
         /**
-         * The ID of the asset group. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the asset group. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+         * <strong>example:</strong>
+         * <p>9997897</p>
          */
         public Builder groupIdList(String groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
@@ -80,7 +85,10 @@ public class GetSuspiciousStatisticsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.12.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

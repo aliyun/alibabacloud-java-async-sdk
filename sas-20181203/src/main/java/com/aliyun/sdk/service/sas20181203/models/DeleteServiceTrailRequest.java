@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteServiceTrailRequest} extends {@link RequestModel}
  *
  * <p>DeleteServiceTrailRequest</p>
@@ -53,11 +54,14 @@ public class DeleteServiceTrailRequest extends Request {
         } 
 
         /**
-         * The region in which your Security Center service is deployed. Valid values:
-         * <p>
+         * <p>The region in which your Security Center service is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: center.</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: center.
-         * *   **ap-southeast-1**: Singapore.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

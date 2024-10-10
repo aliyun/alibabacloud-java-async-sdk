@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckRiskStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetCheckRiskStatisticsResponseBody</p>
@@ -61,7 +62,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of risk scenarios.
+         * <p>The number of risk scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -69,7 +73,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the statistics on check items that are used in risk scenarios.
+         * <p>An array consisting of the statistics on check items that are used in risk scenarios.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -77,7 +81,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C455672-2490-5211-84EC-420C7818****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCheckRiskStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckRiskStatisticsResponseBody</p>
+     */
     public static class SubStatistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -189,7 +202,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * The name of the baseline type.
+             * <p>The name of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weak_password</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -197,7 +213,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk items.
+             * <p>The number of high-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -205,7 +224,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * <p>The number of low-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -213,7 +235,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk items.
+             * <p>The number of medium-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -221,7 +246,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of passed check items.
+             * <p>The number of passed check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -229,7 +257,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of check items.
+             * <p>The total number of check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -237,7 +268,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The baseline type.
+             * <p>The baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weak_password</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -251,6 +285,12 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckRiskStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckRiskStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HighWarningCount")
         private Integer highWarningCount;
@@ -350,7 +390,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of high-risk items.
+             * <p>The number of high-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43</p>
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -358,7 +401,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * <p>The number of low-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -366,7 +412,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk items.
+             * <p>The number of medium-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;
@@ -374,7 +423,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of passed check items.
+             * <p>The number of passed check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>143</p>
              */
             public Builder passCount(Integer passCount) {
                 this.passCount = passCount;
@@ -382,7 +434,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the risk scenario.
+             * <p>The name of the risk scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECURITY</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -390,7 +445,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The statistics on check items that are used in the risk scenario by baseline type.
+             * <p>The statistics on check items that are used in the risk scenario by baseline type.</p>
              */
             public Builder subStatistics(java.util.List < SubStatistics> subStatistics) {
                 this.subStatistics = subStatistics;
@@ -398,7 +453,10 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of check items.
+             * <p>The total number of check items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>219</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCloudVendorAccountAKRequest} extends {@link RequestModel}
  *
  * <p>DeleteCloudVendorAccountAKRequest</p>
@@ -68,7 +69,11 @@ public class DeleteCloudVendorAccountAKRequest extends Request {
         } 
 
         /**
-         * The unique ID of the AccessKey pair.
+         * <p>The unique ID of the AccessKey pair.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2363</p>
          */
         public Builder authId(Long authId) {
             this.putQueryParameter("AuthId", authId);
@@ -77,7 +82,7 @@ public class DeleteCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * The modules that are associated with the AccessKey pair.
+         * <p>The modules that are associated with the AccessKey pair.</p>
          */
         public Builder authModules(java.util.List < String > authModules) {
             this.putQueryParameter("AuthModules", authModules);

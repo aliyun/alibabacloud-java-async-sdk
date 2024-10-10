@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListEffectiveAssetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWhiteListEffectiveAssetsResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The servers on which the policy takes effect.
+         * <p>The servers on which the policy takes effect.</p>
          */
         public Builder assets(java.util.List < Assets> assets) {
             this.assets = assets;
@@ -105,7 +106,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -113,7 +117,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -121,7 +128,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB39****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the servers on which the policy takes effect.
+         * <p>The total number of the servers on which the policy takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWhiteListEffectiveAssetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWhiteListEffectiveAssetsResponseBody</p>
+     */
     public static class Assets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
@@ -261,7 +283,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60.205.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -269,7 +294,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -277,7 +305,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder machineName(String machineName) {
                 this.machineName = machineName;
@@ -285,12 +316,15 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The exception handling mode. Valid values:
-             * <p>
+             * <p>The exception handling mode. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unhandled</li>
+             * <li><strong>1</strong>: alerted</li>
+             * <li><strong>2</strong>: blocked</li>
+             * </ul>
              * 
-             * *   **0**: unhandled
-             * *   **1**: alerted
-             * *   **2**: blocked
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder processMethod(Integer processMethod) {
                 this.processMethod = processMethod;
@@ -298,7 +332,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35815387</p>
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -306,7 +343,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -314,7 +354,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **untrusted programs** on the server.
+             * <p>The number of <strong>untrusted programs</strong> on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder suspiciousEventCount(Integer suspiciousEventCount) {
                 this.suspiciousEventCount = suspiciousEventCount;
@@ -322,7 +365,10 @@ public class DescribeWhiteListEffectiveAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>544900ff-1be7-4655-9719-6311cecb3****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

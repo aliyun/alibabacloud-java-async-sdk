@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListGroupsRequest} extends {@link RequestModel}
  *
  * <p>ListGroupsRequest</p>
@@ -109,7 +110,10 @@ public class ListGroupsRequest extends Request {
         } 
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,11 +122,14 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -131,7 +138,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. If the return value of NextToken is empty, no next query is to be sent. If a value of NextToken is returned, the value indicates the token that is used for the next query.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return value of NextToken is empty, no next query is to be sent. If a value of NextToken is returned, the value indicates the token that is used for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1426C575705AE8545E8360A6EFA3B***</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -140,7 +150,10 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. Maximum value: 2000.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 2000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,11 +162,14 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to use NextToken to query vulnerabilities. If you set this parameter to true, TotalCount is not returned. Valid values:
-         * <p>
+         * <p>Specifies whether to use NextToken to query vulnerabilities. If you set this parameter to true, TotalCount is not returned. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useNextToken(Boolean useNextToken) {
             this.putQueryParameter("UseNextToken", useNextToken);

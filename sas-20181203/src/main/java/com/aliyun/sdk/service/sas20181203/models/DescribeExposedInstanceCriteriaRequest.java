@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExposedInstanceCriteriaRequest} extends {@link RequestModel}
  *
  * <p>DescribeExposedInstanceCriteriaRequest</p>
@@ -67,10 +68,13 @@ public class DescribeExposedInstanceCriteriaRequest extends Request {
         } 
 
         /**
-         * The ID of the member in the resource directory.
-         * <p>
+         * <p>The ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
          */
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -79,10 +83,13 @@ public class DescribeExposedInstanceCriteriaRequest extends Request {
         }
 
         /**
-         * The value of the search condition. Fuzzy match is supported.
-         * <p>
+         * <p>The value of the search condition. Fuzzy match is supported.</p>
+         * <blockquote>
+         * <p> You can specify the name, ID, public IP address, private IP address, component, port, or IP address of an exposed asset.</p>
+         * </blockquote>
          * 
-         * >  You can specify the name, ID, public IP address, private IP address, component, port, or IP address of an exposed asset.
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileDetectResultResponseBody} extends {@link TeaModel}
  *
  * <p>GetFileDetectResultResponseBody</p>
@@ -49,7 +50,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         private java.util.List < ResultList> resultList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetFileDetectResultResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of file detection results.
+         * <p>An array that consists of file detection results.</p>
          */
         public Builder resultList(java.util.List < ResultList> resultList) {
             this.resultList = resultList;
@@ -70,6 +74,12 @@ public class GetFileDetectResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetFileDetectResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetFileDetectResultResponseBody</p>
+     */
     public static class ResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -181,7 +191,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             private String virusType; 
 
             /**
-             * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+             * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -189,10 +202,14 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to identify as a compressed package. Valid values:
-             * <p>
-             * - **true**: Yes.
-             * - **false**: No.
+             * <p>Whether to identify as a compressed package. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder compress(Boolean compress) {
                 this.compress = compress;
@@ -200,7 +217,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information about the file detection result.
+             * <p>The extended information about the file detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;HighLight&quot;:[[23245,23212]]}</p>
              */
             public Builder ext(String ext) {
                 this.ext = ext;
@@ -208,7 +228,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the file. Only MD5 hash values are supported.
+             * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0a212417e65c26ff133cfff28f6c****</p>
              */
             public Builder hashKey(String hashKey) {
                 this.hashKey = hashKey;
@@ -216,7 +239,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * <p>The error message returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -224,12 +250,15 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The file detection result. Valid values:
-             * <p>
+             * <p>The file detection result. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The file is normal.</li>
+             * <li><strong>1</strong>: The file is suspicious.</li>
+             * <li><strong>3</strong>: The detection is in progress.</li>
+             * </ul>
              * 
-             * *   **0**: The file is normal.
-             * *   **1**: The file is suspicious.
-             * *   **3**: The detection is in progress.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder result(Integer result) {
                 this.result = result;
@@ -237,10 +266,13 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The score of file detection result.
-             * <p>
+             * <p>The score of file detection result.</p>
+             * <blockquote>
+             * <p>A higher score indicates a more suspicious file.</p>
+             * </blockquote>
              * 
-             * > A higher score indicates a more suspicious file.
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -248,30 +280,33 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the virus. Valid values:
-             * <p>
+             * <p>The type of the virus. Valid values:</p>
+             * <ul>
+             * <li><strong>Trojan</strong>: trojan horse</li>
+             * <li><strong>WebShell</strong>: webshell</li>
+             * <li><strong>Backdoor</strong>: backdoor program</li>
+             * <li><strong>RansomWare</strong>: ransomware</li>
+             * <li><strong>Scanner</strong>: scanner</li>
+             * <li><strong>Stealer</strong>: tool that is used to steal information</li>
+             * <li><strong>Malbaseware</strong>: tainted basic software</li>
+             * <li><strong>Hacktool</strong>: attacker tool</li>
+             * <li><strong>Engtest</strong>: engine test program</li>
+             * <li><strong>Downloader</strong>: trojan downloader</li>
+             * <li><strong>Virus</strong>: infectious virus</li>
+             * <li><strong>Miner</strong>: mining program</li>
+             * <li><strong>Worm</strong>: worm</li>
+             * <li><strong>DDoS</strong>: DDoS trojan</li>
+             * <li><strong>Malware</strong>: malicious program</li>
+             * <li><strong>RiskWare</strong>: software that has risks</li>
+             * <li><strong>Proxytool</strong>: proxy</li>
+             * <li><strong>Suspicious</strong>: suspicious program</li>
+             * <li><strong>MalScript</strong>: malicious script</li>
+             * <li><strong>Rootkit</strong>: rootkit</li>
+             * <li><strong>Exploit</strong>: exploit</li>
+             * </ul>
              * 
-             * *   **Trojan**: trojan horse
-             * *   **WebShell**: webshell
-             * *   **Backdoor**: backdoor program
-             * *   **RansomWare**: ransomware
-             * *   **Scanner**: scanner
-             * *   **Stealer**: tool that is used to steal information
-             * *   **Malbaseware**: tainted basic software
-             * *   **Hacktool**: attacker tool
-             * *   **Engtest**: engine test program
-             * *   **Downloader**: trojan downloader
-             * *   **Virus**: infectious virus
-             * *   **Miner**: mining program
-             * *   **Worm**: worm
-             * *   **DDoS**: DDoS trojan
-             * *   **Malware**: malicious program
-             * *   **RiskWare**: software that has risks
-             * *   **Proxytool**: proxy
-             * *   **Suspicious**: suspicious program
-             * *   **MalScript**: malicious script
-             * *   **Rootkit**: rootkit
-             * *   **Exploit**: exploit
+             * <strong>example:</strong>
+             * <p>WEBSHELL</p>
              */
             public Builder virusType(String virusType) {
                 this.virusType = virusType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommonTargetResultListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCommonTargetResultListRequest</p>
@@ -68,7 +69,10 @@ public class DescribeCommonTargetResultListRequest extends Request {
         } 
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113.57.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -77,15 +81,20 @@ public class DescribeCommonTargetResultListRequest extends Request {
         }
 
         /**
-         * The type of the configuration item. Valid values:
-         * <p>
+         * <p>The type of the configuration item. Valid values:</p>
+         * <ul>
+         * <li><strong>webshell_timescan</strong>: webshell detection and removal</li>
+         * <li><strong>aliscriptengine</strong>: in-depth detection engine</li>
+         * <li><strong>alidetect</strong>: installation scope of local file detection</li>
+         * <li><strong>alidetect-scan-enable</strong>: detection scope of local file detection</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations to obtain more types of custom and system configuration items.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **webshell_timescan**: webshell detection and removal
-         * *   **aliscriptengine**: in-depth detection engine
-         * *   **alidetect**: installation scope of local file detection
-         * *   **alidetect-scan-enable**: detection scope of local file detection
-         * 
-         * >  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) and [ListSystemClientRules](~~ListSystemClientRules~~) operations to obtain more types of custom and system configuration items.
+         * <strong>example:</strong>
+         * <p>webshell_timescan</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

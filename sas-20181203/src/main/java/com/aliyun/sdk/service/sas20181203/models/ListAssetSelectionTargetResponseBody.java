@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAssetSelectionTargetResponseBody} extends {@link TeaModel}
  *
  * <p>ListAssetSelectionTargetResponseBody</p>
@@ -61,7 +62,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -69,7 +70,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50A75355-F58F-5D65-8377-98C88DED9C51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAssetSelectionTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAssetSelectionTargetResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
@@ -129,7 +139,10 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             private String targetName; 
 
             /**
-             * The ID of the asset.
+             * <p>The ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -137,7 +150,10 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -151,6 +167,12 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAssetSelectionTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAssetSelectionTargetResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -202,7 +224,10 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -210,7 +235,10 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -218,7 +246,10 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>639</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

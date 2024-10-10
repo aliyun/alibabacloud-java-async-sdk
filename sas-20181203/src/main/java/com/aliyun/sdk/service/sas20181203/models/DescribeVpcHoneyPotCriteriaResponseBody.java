@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcHoneyPotCriteriaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcHoneyPotCriteriaResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the search conditions.
+         * <p>An array that consists of the search conditions.</p>
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -57,7 +58,10 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCE38ADB-7361-4212-AD87-A4514E4DF925</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcHoneyPotCriteriaResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcHoneyPotCriteriaResponseBody</p>
+     */
     public static class CriteriaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -121,7 +131,10 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The name of the search condition.
+             * <p>The name of the search condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpcRegionId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -129,11 +142,14 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the search condition. Valid values:
-             * <p>
+             * <p>The type of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>input</strong>: You must manually enter the search condition.</li>
+             * <li><strong>select</strong>: You must select a search condition from the <strong>Values</strong> drop-down list.</li>
+             * </ul>
              * 
-             * *   **input**: You must manually enter the search condition.
-             * *   **select**: You must select a search condition from the **Values** drop-down list.
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -141,10 +157,13 @@ public class DescribeVpcHoneyPotCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the search condition. This parameter is returned only if the value of **Type** is **select**.
-             * <p>
+             * <p>The values of the search condition. This parameter is returned only if the value of <strong>Type</strong> is <strong>select</strong>.</p>
+             * <blockquote>
+             * <p>If the value of <strong>Type</strong> is <strong>input</strong>, the value of this parameter is an empty string.</p>
+             * </blockquote>
              * 
-             * > If the value of **Type** is **input**, the value of this parameter is an empty string.
+             * <strong>example:</strong>
+             * <p>ap-southeast-2,eu-west-1</p>
              */
             public Builder values(String values) {
                 this.values = values;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupedInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeGroupedInstancesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the assets.
+         * <p>The information about the assets.</p>
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -69,7 +70,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52A3AEE6-114A-499D-8990-4BA9B27FE0AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeGroupedInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupedInstancesResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsapVulInstanceCount")
         private Long asapVulInstanceCount;
@@ -213,7 +223,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private String unProtectedInstanceCount; 
 
             /**
-             * The number of assets on which high-risk vulnerabilities are detected.
+             * <p>The number of assets on which high-risk vulnerabilities are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder asapVulInstanceCount(Long asapVulInstanceCount) {
                 this.asapVulInstanceCount = asapVulInstanceCount;
@@ -221,7 +234,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are protected by the specified edition.
+             * <p>The number of assets that are protected by the specified edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>205</p>
              */
             public Builder authVersionCheckCount(Integer authVersionCheckCount) {
                 this.authVersionCheckCount = authVersionCheckCount;
@@ -229,7 +245,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group.
+             * <p>The name of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testA</p>
              */
             public Builder fieldAliasName(String fieldAliasName) {
                 this.fieldAliasName = fieldAliasName;
@@ -237,11 +256,14 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the server group. Valid values:
-             * <p>
+             * <p>The type of the server group. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: the default group</li>
+             * <li><strong>1</strong>: other group</li>
+             * </ul>
              * 
-             * *   **0**: the default group
-             * *   **1**: other group
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
@@ -249,10 +271,13 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores of assets in the specified asset type.
-             * <p>
+             * <p>The number of cores of assets in the specified asset type.</p>
+             * <blockquote>
+             * <p> If the <strong>MachineTypes</strong> request parameter is not specified, the value of the InstanceCoreCount parameter indicates the total number of cores of assets within your account.</p>
+             * </blockquote>
              * 
-             * >  If the **MachineTypes** request parameter is not specified, the value of the InstanceCoreCount parameter indicates the total number of cores of assets within your account.
+             * <strong>example:</strong>
+             * <p>610</p>
              */
             public Builder instanceCoreCount(Long instanceCoreCount) {
                 this.instanceCoreCount = instanceCoreCount;
@@ -260,10 +285,13 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of assets that belong to the specified type.
-             * <p>
+             * <p>The total number of assets that belong to the specified type.</p>
+             * <blockquote>
+             * <p> If the <strong>MachineTypes</strong> request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.</p>
+             * </blockquote>
              * 
-             * >  If the **MachineTypes** request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.
+             * <strong>example:</strong>
+             * <p>205</p>
              */
             public Builder instanceCount(String instanceCount) {
                 this.instanceCount = instanceCount;
@@ -271,13 +299,17 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the asset. Valid values:
-             * <p>
+             * <p>The operating system type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong></li>
+             * <li><strong>linux</strong></li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only when Lang is set to zh.</p>
+             * </blockquote>
              * 
-             * * **windows**
-             * * **linux**
-             * 
-             * > This parameter is returned only when Lang is set to zh.
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -285,7 +317,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are at risk.
+             * <p>The number of assets that are at risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172</p>
              */
             public Builder riskInstanceCount(String riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -293,7 +328,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are not protected by Security Center.
+             * <p>The number of assets that are not protected by Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder unProtectedInstanceCount(String unProtectedInstanceCount) {
                 this.unProtectedInstanceCount = unProtectedInstanceCount;
@@ -307,6 +345,12 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeGroupedInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeGroupedInstancesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -370,7 +414,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -378,7 +425,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -386,7 +436,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -394,7 +447,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

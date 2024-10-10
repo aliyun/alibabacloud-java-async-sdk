@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyRefreshProcessInfoRequest} extends {@link RequestModel}
  *
  * <p>ModifyRefreshProcessInfoRequest</p>
@@ -53,10 +54,13 @@ public class ModifyRefreshProcessInfoRequest extends Request {
         } 
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>0f3b8f76-90e5-4455-a5aa-23ce30b5****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

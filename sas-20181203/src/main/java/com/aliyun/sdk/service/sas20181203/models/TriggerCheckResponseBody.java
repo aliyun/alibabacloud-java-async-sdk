@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TriggerCheckResponseBody} extends {@link TeaModel}
  *
  * <p>TriggerCheckResponseBody</p>
@@ -37,7 +38,10 @@ public class TriggerCheckResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43313389-DED8-5BB7-8CB9-F22CDEB744DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

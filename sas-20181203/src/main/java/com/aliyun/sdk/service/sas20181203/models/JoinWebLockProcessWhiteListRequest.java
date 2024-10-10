@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link JoinWebLockProcessWhiteListRequest} extends {@link RequestModel}
  *
  * <p>JoinWebLockProcessWhiteListRequest</p>
@@ -67,7 +68,7 @@ public class JoinWebLockProcessWhiteListRequest extends Request {
         } 
 
         /**
-         * The paths of the processes.
+         * <p>The paths of the processes.</p>
          */
         public Builder processPaths(java.util.List < String > processPaths) {
             this.putQueryParameter("ProcessPaths", processPaths);
@@ -76,7 +77,10 @@ public class JoinWebLockProcessWhiteListRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers on which the processes run. Separate multiple UUIDs with commas (,).
+         * <p>The UUIDs of the servers on which the processes run. Separate multiple UUIDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0c1714dc-f7a3-4265-8364-7aa3fce8****,1cc45e7d-7698-4b2c-89d8-e8cba407****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

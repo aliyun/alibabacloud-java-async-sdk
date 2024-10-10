@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBaselineCheckSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageBaselineCheckSummaryResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the check results of image baselines.
+         * <p>An array that consists of the check results of image baselines.</p>
          */
         public Builder baselineResultSummary(java.util.List < BaselineResultSummary> baselineResultSummary) {
             this.baselineResultSummary = baselineResultSummary;
@@ -69,7 +70,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BD95679-D63A-4151-97D0-188432F4A57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageBaselineCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBaselineCheckSummaryResponseBody</p>
+     */
     public static class BaselineResultSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineClassAlias")
         private String baselineClassAlias;
@@ -237,7 +247,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The category of the baseline.
+             * <p>The category of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unauthorized access</p>
              */
             public Builder baselineClassAlias(String baselineClassAlias) {
                 this.baselineClassAlias = baselineClassAlias;
@@ -245,7 +258,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword of the baseline category.
+             * <p>The keyword of the baseline category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc_image_exploit</p>
              */
             public Builder baselineClassKey(String baselineClassKey) {
                 this.baselineClassKey = baselineClassKey;
@@ -253,7 +269,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline.
+             * <p>The name of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unauthorized access</p>
              */
             public Builder baselineNameAlias(String baselineNameAlias) {
                 this.baselineNameAlias = baselineNameAlias;
@@ -261,7 +280,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword of the baseline name.
+             * <p>The keyword of the baseline name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc_image_exploit</p>
              */
             public Builder baselineNameKey(String baselineNameKey) {
                 this.baselineNameKey = baselineNameKey;
@@ -269,12 +291,15 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the image baseline. Valid values:
-             * <p>
+             * <p>The severity of the image baseline. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder baselineNameLevel(String baselineNameLevel) {
                 this.baselineNameLevel = baselineNameLevel;
@@ -282,7 +307,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the first scan was performed. Unit: milliseconds.
+             * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1626628760000</p>
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -290,7 +318,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images on which **high** baseline risks are detected.
+             * <p>The number of images on which <strong>high</strong> baseline risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder highRiskImage(Integer highRiskImage) {
                 this.highRiskImage = highRiskImage;
@@ -298,7 +329,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the last scan was performed. Unit: milliseconds.
+             * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1626628760000</p>
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -306,7 +340,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images on which **low** baseline risks are detected.
+             * <p>The number of images on which <strong>low</strong> baseline risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lowRiskImage(Integer lowRiskImage) {
                 this.lowRiskImage = lowRiskImage;
@@ -314,7 +351,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images on which **medium** baseline risks are detected.
+             * <p>The number of images on which <strong>medium</strong> baseline risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder middleRiskImage(Integer middleRiskImage) {
                 this.middleRiskImage = middleRiskImage;
@@ -322,13 +362,16 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline risks. Valid values:
-             * <p>
+             * <p>The status of the baseline risks. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unfixed</li>
+             * <li><strong>1</strong>: fixed</li>
+             * <li><strong>2</strong>: pending verification</li>
+             * <li><strong>3</strong>: fixing failed</li>
+             * </ul>
              * 
-             * *   **0**: unfixed
-             * *   **1**: fixed
-             * *   **2**: pending verification
-             * *   **3**: fixing failed
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -342,6 +385,12 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageBaselineCheckSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBaselineCheckSummaryResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -405,7 +454,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -413,7 +465,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -421,7 +476,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**.
+             * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -429,7 +487,10 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

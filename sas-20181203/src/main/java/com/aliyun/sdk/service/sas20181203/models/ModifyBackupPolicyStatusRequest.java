@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyBackupPolicyStatusRequest} extends {@link RequestModel}
  *
  * <p>ModifyBackupPolicyStatusRequest</p>
@@ -84,7 +85,11 @@ public class ModifyBackupPolicyStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the anti-ransomware policy.
+         * <p>The ID of the anti-ransomware policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30490</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -93,7 +98,11 @@ public class ModifyBackupPolicyStatusRequest extends Request {
         }
 
         /**
-         * The version of the anti-ransomware policy. Set the value to **2.0.0**.
+         * <p>The version of the anti-ransomware policy. Set the value to <strong>2.0.0</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0</p>
          */
         public Builder policyVersion(String policyVersion) {
             this.putQueryParameter("PolicyVersion", policyVersion);
@@ -102,13 +111,18 @@ public class ModifyBackupPolicyStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable the anti-ransomware policy. Valid values:
-         * <p>
+         * <p>Specifies whether to enable or disable the anti-ransomware policy. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong>: enables the anti-ransomware policy. After you enable the anti-ransomware policy, the anti-ransomware feature protects data on your servers. Data on your servers is backed up based on the policy.</li>
+         * <li><strong>disabled</strong>: disables the anti-ransomware policy. After you disable the anti-ransomware policy, the data backup task that is running based on the policy stops.</li>
+         * </ul>
+         * <blockquote>
+         * <p> When the system runs data backup tasks, your network bandwidth is consumed. We recommend that you enable the anti-ransomware policy during peak-off hours to back up data.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **enabled**: enables the anti-ransomware policy. After you enable the anti-ransomware policy, the anti-ransomware feature protects data on your servers. Data on your servers is backed up based on the policy.
-         * *   **disabled**: disables the anti-ransomware policy. After you disable the anti-ransomware policy, the data backup task that is running based on the policy stops.
-         * 
-         * >  When the system runs data backup tasks, your network bandwidth is consumed. We recommend that you enable the anti-ransomware policy during peak-off hours to back up data.
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

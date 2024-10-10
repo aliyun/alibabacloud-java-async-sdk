@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetsSecurityEventSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeAssetsSecurityEventSummaryRequest</p>
@@ -109,10 +110,13 @@ public class DescribeAssetsSecurityEventSummaryRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster to which the container belongs.
-         * <p>
+         * <p>The ID of the cluster to which the container belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>cc58f827d893f4d7fb3e34b5d4395****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -121,28 +125,31 @@ public class DescribeAssetsSecurityEventSummaryRequest extends Request {
         }
 
         /**
-         * The key of the condition that is used to query on containers. Valid values:
-         * <p>
+         * <p>The key of the condition that is used to query on containers. Valid values:</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the ID of the container instance</li>
+         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * <li><strong>regionId</strong>: the region ID of the container</li>
+         * <li><strong>clusterName</strong>: the name of the cluster</li>
+         * <li><strong>image</strong>: the name of the image</li>
+         * <li><strong>imageRepoName</strong>: the name of the image repository</li>
+         * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
+         * <li><strong>imageRepoTag</strong>: the tag that is added to the image repository</li>
+         * <li><strong>imageDigest</strong>: the digest of the image</li>
+         * <li><strong>ClusterType</strong>: the type of the cluster</li>
+         * <li><strong>hostIp</strong>: the public IP address</li>
+         * <li><strong>pod</strong>: the pod</li>
+         * <li><strong>podIp</strong>: the IP address of the pod</li>
+         * <li><strong>containerId</strong>: the ID of the container</li>
+         * <li><strong>vulStatus</strong>: whether vulnerabilities are detected on the container</li>
+         * <li><strong>alarmStatus</strong>: whether alerts are generated for the container</li>
+         * <li><strong>riskStatus</strong>: whether risks are detected on the container</li>
+         * <li><strong>riskLevel</strong>: the risk level of the container</li>
+         * <li><strong>containerScope</strong>: the type of the container</li>
+         * </ul>
          * 
-         * *   **instanceId**: the ID of the container instance
-         * *   **clusterId**: the ID of the cluster
-         * *   **regionId**: the region ID of the container
-         * *   **clusterName**: the name of the cluster
-         * *   **image**: the name of the image
-         * *   **imageRepoName**: the name of the image repository
-         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
-         * *   **imageRepoTag**: the tag that is added to the image repository
-         * *   **imageDigest**: the digest of the image
-         * *   **ClusterType**: the type of the cluster
-         * *   **hostIp**: the public IP address
-         * *   **pod**: the pod
-         * *   **podIp**: the IP address of the pod
-         * *   **containerId**: the ID of the container
-         * *   **vulStatus**: whether vulnerabilities are detected on the container
-         * *   **alarmStatus**: whether alerts are generated for the container
-         * *   **riskStatus**: whether risks are detected on the container
-         * *   **riskLevel**: the risk level of the container
-         * *   **containerScope**: the type of the container
+         * <strong>example:</strong>
+         * <p>clusterName</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -151,7 +158,10 @@ public class DescribeAssetsSecurityEventSummaryRequest extends Request {
         }
 
         /**
-         * The value of the condition that is used to query on containers.
+         * <p>The value of the condition that is used to query on containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom-operator</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -169,7 +179,10 @@ public class DescribeAssetsSecurityEventSummaryRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113.108.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWhiteListStrategyStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateWhiteListStrategyStatusRequest</p>
@@ -97,11 +98,14 @@ public class UpdateWhiteListStrategyStatusRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -110,7 +114,10 @@ public class UpdateWhiteListStrategyStatusRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219.143.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -119,22 +126,28 @@ public class UpdateWhiteListStrategyStatusRequest extends Request {
         }
 
         /**
-         * The status of the policy. Valid values:
-         * <p>
+         * <p>The status of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: deleted</li>
+         * <li><strong>1</strong>: learning</li>
+         * <li><strong>2</strong>: paused</li>
+         * <li><strong>3</strong>: learning completed</li>
+         * <li><strong>4</strong>: enabled</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can change the status to <strong>paused</strong> only if the policy status is <strong>learning</strong>.</p>
+         * </li>
+         * <li><p>You can change the status to <strong>learning</strong> only if the policy status is <strong>paused</strong>.</p>
+         * </li>
+         * <li><p>You can change the status to <strong>enabled</strong> only if the policy status is <strong>learning completed</strong>.</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: deleted
-         * *   **1**: learning
-         * *   **2**: paused
-         * *   **3**: learning completed
-         * *   **4**: enabled
-         * 
-         * > 
-         * 
-         * *   You can change the status to **paused** only if the policy status is **learning**.
-         * 
-         * *   You can change the status to **learning** only if the policy status is **paused**.
-         * 
-         * *   You can change the status to **enabled** only if the policy status is **learning completed**.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -143,10 +156,14 @@ public class UpdateWhiteListStrategyStatusRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
-         * <p>
+         * <p>The ID of the policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeWhiteListStrategyList](~~DescribeWhiteListStrategyList~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>8516</p>
          */
         public Builder strategyIds(String strategyIds) {
             this.putQueryParameter("StrategyIds", strategyIds);

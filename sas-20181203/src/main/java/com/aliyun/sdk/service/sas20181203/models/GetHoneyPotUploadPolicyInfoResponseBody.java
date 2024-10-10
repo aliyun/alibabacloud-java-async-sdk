@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHoneyPotUploadPolicyInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetHoneyPotUploadPolicyInfoResponseBody</p>
@@ -97,7 +98,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C177095-A734-59B2-9409-7D4F26FF****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHoneyPotUploadPolicyInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHoneyPotUploadPolicyInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Accessid")
         private String accessid;
@@ -241,7 +263,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             private String signature; 
 
             /**
-             * The key ID that is required for the file upload.
+             * <p>The key ID that is required for the file upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI4G1mgPbjvGQuiV1X****</p>
              */
             public Builder accessid(String accessid) {
                 this.accessid = accessid;
@@ -249,7 +274,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the URL. The value is a timestamp. You can use the value to determine whether the URL expires. If the expiration time arrives, you can no longer use the URL to upload files.
+             * <p>The expiration time of the URL. The value is a timestamp. You can use the value to determine whether the URL expires. If the expiration time arrives, you can no longer use the URL to upload files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1661443200000</p>
              */
             public Builder expire(String expire) {
                 this.expire = expire;
@@ -257,7 +285,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The request URL during the upload.
+             * <p>The request URL during the upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com">https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -265,7 +296,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The full path of the file in OSS. The file is uploaded by calling the OSS PostObject operation.
+             * <p>The full path of the file in OSS. The file is uploaded by calling the OSS PostObject operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HONEYPOT_FILE/1766185894104675_169********</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -273,7 +307,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The limits that are imposed on the file upload. The limits include the file size.
+             * <p>The limits that are imposed on the file upload. The limits include the file size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJleHBpcmF0aW9uIjoiMjAyMy0wOS0wMVQwMzoyNTozNS44MzZaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwXSxbInN0YXJ0cy13aXRoIiwiJGtleSIsIkhPTkVZUE9UX0ZJTEUvMTc2NjE4NTg5NDEwNDY3NV8xNjkzNTM4NDM1N*****************</p>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -281,7 +318,10 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The signature that is calculated based on **AccessKeySecret** and **Policy**. When you call an Object Storage Service (OSS) API operation, OSS uses the signature information to verify the POST request.
+             * <p>The signature that is calculated based on <strong>AccessKeySecret</strong> and <strong>Policy</strong>. When you call an Object Storage Service (OSS) API operation, OSS uses the signature information to verify the POST request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wKPqlFneNTZPn52k2Rz9GTY*****</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckInstanceResultRequest} extends {@link RequestModel}
  *
  * <p>ListCheckInstanceResultRequest</p>
@@ -181,7 +182,11 @@ public class ListCheckInstanceResultRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
+         * <p>The ID of the check item.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -190,7 +195,10 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -199,7 +207,10 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf64w4q6p9jti5gl****</p>
          */
         public Builder instanceIdKey(String instanceIdKey) {
             this.putQueryParameter("InstanceIdKey", instanceIdKey);
@@ -208,7 +219,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The instance IDs of cloud services.
+         * <p>The instance IDs of cloud services.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -217,7 +228,10 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The name of the instance.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf64w4q6p9jti5gl****</p>
          */
         public Builder instanceNameKey(String instanceNameKey) {
             this.putQueryParameter("InstanceNameKey", instanceNameKey);
@@ -226,11 +240,14 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -239,7 +256,10 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +268,10 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         public Builder regionIdKey(String regionIdKey) {
             this.putQueryParameter("RegionIdKey", regionIdKey);
@@ -257,7 +280,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The types of the conditions based on which the check items are sorted.
+         * <p>The types of the conditions based on which the check items are sorted.</p>
          */
         public Builder sortTypes(java.util.List < String > sortTypes) {
             this.putQueryParameter("SortTypes", sortTypes);
@@ -266,7 +289,7 @@ public class ListCheckInstanceResultRequest extends Request {
         }
 
         /**
-         * The statuses of check items.
+         * <p>The statuses of check items.</p>
          */
         public Builder statuses(java.util.List < String > statuses) {
             this.putQueryParameter("Statuses", statuses);

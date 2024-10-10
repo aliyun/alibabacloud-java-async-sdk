@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityStatInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityStatInfoResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         private Vulnerability vulnerability; 
 
         /**
-         * The detailed statistics of attacks.
+         * <p>The detailed statistics of attacks.</p>
          */
         public Builder attackEvent(AttackEvent attackEvent) {
             this.attackEvent = attackEvent;
@@ -105,7 +106,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed statistics of baseline risk items.
+         * <p>The detailed statistics of baseline risk items.</p>
          */
         public Builder healthCheck(HealthCheck healthCheck) {
             this.healthCheck = healthCheck;
@@ -113,7 +114,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3E61730-85E2-4789-8017-B9B1B70F0568</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +125,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed statistics of unhandled alerts.
+         * <p>The detailed statistics of unhandled alerts.</p>
          */
         public Builder securityEvent(SecurityEvent securityEvent) {
             this.securityEvent = securityEvent;
@@ -129,11 +133,14 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +148,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed statistics of unfixed vulnerabilities.
+         * <p>The detailed statistics of unfixed vulnerabilities.</p>
          */
         public Builder vulnerability(Vulnerability vulnerability) {
             this.vulnerability = vulnerability;
@@ -154,6 +161,12 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityStatInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityStatInfoResponseBody</p>
+     */
     public static class AttackEvent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DateArray")
         private java.util.List < String > dateArray;
@@ -205,7 +218,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List < String > valueArray; 
 
             /**
-             * The points in time when the number of attacks is collected in the trend chart.
+             * <p>The points in time when the number of attacks is collected in the trend chart.</p>
              */
             public Builder dateArray(java.util.List < String > dateArray) {
                 this.dateArray = dateArray;
@@ -213,7 +226,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of attacks on the current day.
+             * <p>The total number of attacks on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1096</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -221,7 +237,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of attacks at all points in time.
+             * <p>The numbers of attacks at all points in time.</p>
              */
             public Builder valueArray(java.util.List < String > valueArray) {
                 this.valueArray = valueArray;
@@ -235,6 +251,12 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityStatInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityStatInfoResponseBody</p>
+     */
     public static class HealthCheck extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DateArray")
         private java.util.List < String > dateArray;
@@ -382,7 +404,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List < String > valueArray; 
 
             /**
-             * The points in time when data of baseline risk items is collected in the trend chart.
+             * <p>The points in time when data of baseline risk items is collected in the trend chart.</p>
              */
             public Builder dateArray(java.util.List < String > dateArray) {
                 this.dateArray = dateArray;
@@ -390,7 +412,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risk items that have the high-risk level on the current day.
+             * <p>The number of baseline risk items that have the high-risk level on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder highCount(Integer highCount) {
                 this.highCount = highCount;
@@ -398,7 +423,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of baseline risk items that have the high-risk level at all points in time.
+             * <p>The numbers of baseline risk items that have the high-risk level at all points in time.</p>
              */
             public Builder highList(java.util.List < String > highList) {
                 this.highList = highList;
@@ -406,7 +431,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels of baseline risk items.
+             * <p>The risk levels of baseline risk items.</p>
              */
             public Builder levelsOn(java.util.List < String > levelsOn) {
                 this.levelsOn = levelsOn;
@@ -414,7 +439,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risk items that have the low-risk level on the current day.
+             * <p>The number of baseline risk items that have the low-risk level on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lowCount(Integer lowCount) {
                 this.lowCount = lowCount;
@@ -422,7 +450,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of baseline risk items that have the low-risk level at all points in time.
+             * <p>The numbers of baseline risk items that have the low-risk level at all points in time.</p>
              */
             public Builder lowList(java.util.List < String > lowList) {
                 this.lowList = lowList;
@@ -430,7 +458,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of baseline risk items that have the medium-risk level on the current day.
+             * <p>The number of baseline risk items that have the medium-risk level on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder mediumCount(Integer mediumCount) {
                 this.mediumCount = mediumCount;
@@ -438,7 +469,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of baseline risk items that have the medium-risk level at all points in time.
+             * <p>The numbers of baseline risk items that have the medium-risk level at all points in time.</p>
              */
             public Builder mediumList(java.util.List < String > mediumList) {
                 this.mediumList = mediumList;
@@ -446,7 +477,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time periods during which data of baseline risk items is collected.
+             * <p>The time periods during which data of baseline risk items is collected.</p>
              */
             public Builder timeArray(java.util.List < String > timeArray) {
                 this.timeArray = timeArray;
@@ -454,7 +485,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of baseline risk items on the current day.
+             * <p>The total number of baseline risk items on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -462,7 +496,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of baseline risk items at all points in time.
+             * <p>The total number of baseline risk items at all points in time.</p>
              */
             public Builder valueArray(java.util.List < String > valueArray) {
                 this.valueArray = valueArray;
@@ -476,6 +510,12 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityStatInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityStatInfoResponseBody</p>
+     */
     public static class SecurityEvent extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DateArray")
         private java.util.List < String > dateArray;
@@ -623,7 +663,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List < String > valueArray; 
 
             /**
-             * The points in time when data of unhandled alerts is collected in the trend chart.
+             * <p>The points in time when data of unhandled alerts is collected in the trend chart.</p>
              */
             public Builder dateArray(java.util.List < String > dateArray) {
                 this.dateArray = dateArray;
@@ -631,7 +671,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels of unhandled alerts.
+             * <p>The risk levels of unhandled alerts.</p>
              */
             public Builder levelsOn(java.util.List < String > levelsOn) {
                 this.levelsOn = levelsOn;
@@ -639,7 +679,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **remind** alerts on the current day.
+             * <p>The number of <strong>remind</strong> alerts on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder remindCount(Integer remindCount) {
                 this.remindCount = remindCount;
@@ -647,7 +690,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of remind alerts at all points in time.
+             * <p>The numbers of remind alerts at all points in time.</p>
              */
             public Builder remindList(java.util.List < String > remindList) {
                 this.remindList = remindList;
@@ -655,7 +698,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **serious** alerts on the current day.
+             * <p>The number of <strong>serious</strong> alerts on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder seriousCount(Integer seriousCount) {
                 this.seriousCount = seriousCount;
@@ -663,7 +709,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of serious alerts at all points in time.
+             * <p>The numbers of serious alerts at all points in time.</p>
              */
             public Builder seriousList(java.util.List < String > seriousList) {
                 this.seriousList = seriousList;
@@ -671,7 +717,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **suspicious** alerts on the current day.
+             * <p>The number of <strong>suspicious</strong> alerts on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>148</p>
              */
             public Builder suspiciousCount(Integer suspiciousCount) {
                 this.suspiciousCount = suspiciousCount;
@@ -679,7 +728,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of suspicious alerts at all points in time.
+             * <p>The numbers of suspicious alerts at all points in time.</p>
              */
             public Builder suspiciousList(java.util.List < String > suspiciousList) {
                 this.suspiciousList = suspiciousList;
@@ -687,7 +736,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time periods during which data of the same alert is collected.
+             * <p>The time periods during which data of the same alert is collected.</p>
              */
             public Builder timeArray(java.util.List < String > timeArray) {
                 this.timeArray = timeArray;
@@ -695,7 +744,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unhandled alerts on the current day.
+             * <p>The total number of unhandled alerts on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>552</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -703,7 +755,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of unhandled alerts at all points in time.
+             * <p>The numbers of unhandled alerts at all points in time.</p>
              */
             public Builder valueArray(java.util.List < String > valueArray) {
                 this.valueArray = valueArray;
@@ -717,6 +769,12 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityStatInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityStatInfoResponseBody</p>
+     */
     public static class Vulnerability extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AsapCount")
         private Integer asapCount;
@@ -864,7 +922,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             private java.util.List < String > valueArray; 
 
             /**
-             * The number of **high-risk** unfixed vulnerabilities on the current day.
+             * <p>The number of <strong>high-risk</strong> unfixed vulnerabilities on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109</p>
              */
             public Builder asapCount(Integer asapCount) {
                 this.asapCount = asapCount;
@@ -872,7 +933,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of high-risk unfixed vulnerabilities at all points in time.
+             * <p>The numbers of high-risk unfixed vulnerabilities at all points in time.</p>
              */
             public Builder asapList(java.util.List < String > asapList) {
                 this.asapList = asapList;
@@ -880,7 +941,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The points in time when data of unfixed vulnerabilities is collected in the trend chart.
+             * <p>The points in time when data of unfixed vulnerabilities is collected in the trend chart.</p>
              */
             public Builder dateArray(java.util.List < String > dateArray) {
                 this.dateArray = dateArray;
@@ -888,7 +949,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **medium-risk** unfixed vulnerabilities on the current day.
+             * <p>The number of <strong>medium-risk</strong> unfixed vulnerabilities on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>275</p>
              */
             public Builder laterCount(Integer laterCount) {
                 this.laterCount = laterCount;
@@ -896,7 +960,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of medium-risk unfixed vulnerabilities at all points in time.
+             * <p>The numbers of medium-risk unfixed vulnerabilities at all points in time.</p>
              */
             public Builder laterList(java.util.List < String > laterList) {
                 this.laterList = laterList;
@@ -904,7 +968,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels of unfixed vulnerabilities.
+             * <p>The risk levels of unfixed vulnerabilities.</p>
              */
             public Builder levelsOn(java.util.List < String > levelsOn) {
                 this.levelsOn = levelsOn;
@@ -912,7 +976,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The number of **low-risk** unfixed vulnerabilities on the current day.
+             * <p>The number of <strong>low-risk</strong> unfixed vulnerabilities on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder nntfCount(Integer nntfCount) {
                 this.nntfCount = nntfCount;
@@ -920,7 +987,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of low-risk unfixed vulnerabilities at all points in time.
+             * <p>The numbers of low-risk unfixed vulnerabilities at all points in time.</p>
              */
             public Builder nntfList(java.util.List < String > nntfList) {
                 this.nntfList = nntfList;
@@ -928,7 +995,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time periods during which data of unfixed vulnerabilities is collected.
+             * <p>The time periods during which data of unfixed vulnerabilities is collected.</p>
              */
             public Builder timeArray(java.util.List < String > timeArray) {
                 this.timeArray = timeArray;
@@ -936,7 +1003,10 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of unfixed vulnerabilities on the current day.
+             * <p>The total number of unfixed vulnerabilities on the current day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>384</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -944,7 +1014,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The numbers of unfixed vulnerabilities at all points in time.
+             * <p>The numbers of unfixed vulnerabilities at all points in time.</p>
              */
             public Builder valueArray(java.util.List < String > valueArray) {
                 this.valueArray = valueArray;

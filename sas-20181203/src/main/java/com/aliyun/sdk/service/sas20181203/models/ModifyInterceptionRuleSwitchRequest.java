@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInterceptionRuleSwitchRequest} extends {@link RequestModel}
  *
  * <p>ModifyInterceptionRuleSwitchRequest</p>
@@ -81,10 +82,13 @@ public class ModifyInterceptionRuleSwitchRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
-         * <p>
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>ce5c29aba99694ade9ba85dc620b4****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,10 +97,13 @@ public class ModifyInterceptionRuleSwitchRequest extends Request {
         }
 
         /**
-         * The IDs of the rules whose status you want to change. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The IDs of the rules whose status you want to change. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">ListInterceptionRulePage</a> operation to query the IDs of rules.</p>
+         * </blockquote>
          * 
-         * > You can call the [ListInterceptionRulePage](~~182997~~) operation to query the IDs of rules.
+         * <strong>example:</strong>
+         * <p>403287</p>
          */
         public Builder ruleIds(String ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -105,11 +112,14 @@ public class ModifyInterceptionRuleSwitchRequest extends Request {
         }
 
         /**
-         * Specifies whether the rule is enabled. Valid values:
-         * <p>
+         * <p>Specifies whether the rule is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **1**: enabled
-         * *   **0**: disabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleSwitch(Integer ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);

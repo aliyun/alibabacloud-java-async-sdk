@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateImageBaselineWhitelistRequest} extends {@link RequestModel}
  *
  * <p>OperateImageBaselineWhitelistRequest</p>
@@ -111,7 +112,11 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         } 
 
         /**
-         * The keys of baseline check items.
+         * <p>The keys of baseline check items.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hc.image.checklist.identify.hc_exploit_es_linux.item</p>
          */
         public Builder baselineItemKeyList(String baselineItemKeyList) {
             this.putQueryParameter("BaselineItemKeyList", baselineItemKeyList);
@@ -120,7 +125,10 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         }
 
         /**
-         * The UUID of the image.
+         * <p>The UUID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5250ebca765dc9eb1a84b790b0e****</p>
          */
         public Builder imageUuid(String imageUuid) {
             this.putQueryParameter("ImageUuid", imageUuid);
@@ -129,11 +137,14 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -142,11 +153,15 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the check items. Valid values:
-         * <p>
+         * <p>The operation that you want to perform on the check items. Valid values:</p>
+         * <ul>
+         * <li><strong>add</strong>: adds the check items to the whitelist</li>
+         * <li><strong>del</strong>: removes the check items from the whitelist</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **add**: adds the check items to the whitelist
-         * *   **del**: removes the check items from the whitelist
+         * <strong>example:</strong>
+         * <p>add</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);
@@ -155,7 +170,7 @@ public class OperateImageBaselineWhitelistRequest extends Request {
         }
 
         /**
-         * The types of the assets that you want to scan.
+         * <p>The types of the assets that you want to scan.</p>
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

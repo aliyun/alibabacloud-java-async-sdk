@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthVersionStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuthVersionStatisticResponseBody</p>
@@ -49,7 +50,10 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
         private java.util.List < Statistics> statistics; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2CA2BDF6-F3BD-51A4-BAAC-30B02F7A3FBB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics about the numbers of assets protected by each edition of Security Center.
+         * <p>The statistics about the numbers of assets protected by each edition of Security Center.</p>
          */
         public Builder statistics(java.util.List < Statistics> statistics) {
             this.statistics = statistics;
@@ -70,6 +74,12 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAuthVersionStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthVersionStatisticResponseBody</p>
+     */
     public static class Statistics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthVersion")
         private Integer authVersion;
@@ -109,15 +119,18 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The edition of Security Center. Valid values:
-             * <p>
+             * <p>The edition of Security Center. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Basic edition (Unauthorized)</li>
+             * <li><strong>6</strong>: Anti-virus edition</li>
+             * <li><strong>5</strong>: Advanced edition</li>
+             * <li><strong>3</strong>: Enterprise edition</li>
+             * <li><strong>7</strong>: Ultimate edition</li>
+             * <li><strong>10</strong>: Value-added Plan edition</li>
+             * </ul>
              * 
-             * *   **1**: Basic edition (Unauthorized)
-             * *   **6**: Anti-virus edition
-             * *   **5**: Advanced edition
-             * *   **3**: Enterprise edition
-             * *   **7**: Ultimate edition
-             * *   **10**: Value-added Plan edition
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -125,7 +138,10 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of authorized servers.
+             * <p>The number of authorized servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileProtectRuleRequest} extends {@link RequestModel}
  *
  * <p>ListFileProtectRuleRequest</p>
@@ -124,13 +125,16 @@ public class ListFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * The severity of alerts. Valid values:
-         * <p>
+         * <p>The severity of alerts. Valid values:</p>
+         * <ul>
+         * <li>0: does not generate alerts</li>
+         * <li>1: sends notifications</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
+         * </ul>
          * 
-         * *   0: does not generate alerts
-         * *   1: sends notifications
-         * *   2: suspicious
-         * *   3: high-risk
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -139,7 +143,10 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -148,7 +155,10 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,11 +176,14 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The handling method of the rule. Valid values:
-         * <p>
+         * <p>The handling method of the rule. Valid values:</p>
+         * <ul>
+         * <li>pass: allow</li>
+         * <li>alert</li>
+         * </ul>
          * 
-         * *   pass: allow
-         * *   alert
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -179,7 +192,10 @@ public class ListFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-1</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

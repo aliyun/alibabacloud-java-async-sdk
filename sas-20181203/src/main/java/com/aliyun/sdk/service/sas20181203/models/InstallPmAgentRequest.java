@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallPmAgentRequest} extends {@link RequestModel}
  *
  * <p>InstallPmAgentRequest</p>
@@ -97,11 +98,14 @@ public class InstallPmAgentRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -110,7 +114,10 @@ public class InstallPmAgentRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58.35.xx.xx</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -119,11 +126,15 @@ public class InstallPmAgentRequest extends Request {
         }
 
         /**
-         * The type of the client.
-         * <p>
+         * <p>The type of the client.</p>
+         * <ul>
+         * <li><strong>aliyun_assist</strong>: Cloud Assistant client</li>
+         * <li><strong>aliyun_monitor</strong>: CloudMonitor client</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **aliyun_assist**: Cloud Assistant client
-         * *   **aliyun_monitor**: CloudMonitor client
+         * <strong>example:</strong>
+         * <p>aliyun_monitor</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -132,7 +143,11 @@ public class InstallPmAgentRequest extends Request {
         }
 
         /**
-         * The UUID of the server. If you specify multiple UUIDs, separate the UUIDs with commas (,).
+         * <p>The UUID of the server. If you specify multiple UUIDs, separate the UUIDs with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inet-a6444920-d303-4ccf-ab87-a1d3cd49****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

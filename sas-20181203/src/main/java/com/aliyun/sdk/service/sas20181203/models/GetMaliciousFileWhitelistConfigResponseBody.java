@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMaliciousFileWhitelistConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetMaliciousFileWhitelistConfigResponseBody</p>
@@ -97,7 +98,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. The value 200 indicates that the request was successful.
+         * <p>The HTTP status code. The value 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8B6F758-BCD4-597A-8A2C-DA5A552C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMaliciousFileWhitelistConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMaliciousFileWhitelistConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
@@ -301,10 +323,13 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             private String targetValue; 
 
             /**
-             * The number of assets on which the whitelist rule takes effect.
-             * <p>
+             * <p>The number of assets on which the whitelist rule takes effect.</p>
+             * <blockquote>
+             * <p> The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.</p>
+             * </blockquote>
              * 
-             * >  The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -312,10 +337,13 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert.
-             * <p>
+             * <p>The name of the alert.</p>
+             * <ul>
+             * <li>The value is fixed as ALL, which indicates all alert types.</li>
+             * </ul>
              * 
-             * *   The value is fixed as ALL, which indicates all alert types.
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -323,7 +351,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used in the whitelist rule.
+             * <p>The field that is used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileMd5</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -331,7 +362,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the field that is used in the whitelist rule.
+             * <p>The value of the field that is used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b2cf9747ee49d8d9b105cf16e078cc16</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -339,7 +373,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671607025000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -347,7 +384,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1674095396000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -355,7 +395,10 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the whitelist rule.
+             * <p>The ID of the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -363,10 +406,13 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator that is used in the whitelist rule.
-             * <p>
+             * <p>The logical operator that is used in the whitelist rule.</p>
+             * <ul>
+             * <li>The value is fixed as strEqual, which indicates the equality operator (=).</li>
+             * </ul>
              * 
-             * *   The value is fixed as strEqual, which indicates the equality operator (=).
+             * <strong>example:</strong>
+             * <p>strEqual</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -374,10 +420,13 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The feature to which this operation belongs.
-             * <p>
+             * <p>The feature to which this operation belongs.</p>
+             * <ul>
+             * <li>The value is fixed as agentless, which indicates the agentless detection feature.</li>
+             * </ul>
              * 
-             * *   The value is fixed as agentless, which indicates the agentless detection feature.
+             * <strong>example:</strong>
+             * <p>agentless</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -385,11 +434,14 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the assets on which the whitelist rule takes effect. Valid values:
-             * <p>
+             * <p>The type of the assets on which the whitelist rule takes effect. Valid values:</p>
+             * <ul>
+             * <li>ALL: all assets</li>
+             * <li>SELECTION_KEY: selected assets</li>
+             * </ul>
              * 
-             * *   ALL: all assets
-             * *   SELECTION_KEY: selected assets
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -397,11 +449,14 @@ public class GetMaliciousFileWhitelistConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The assets on which the whitelist rule takes effect. Valid values:
-             * <p>
+             * <p>The assets on which the whitelist rule takes effect. Valid values:</p>
+             * <ul>
+             * <li>ALL: all assets</li>
+             * <li>Others: selected assets</li>
+             * </ul>
              * 
-             * *   ALL: all assets
-             * *   Others: selected assets
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;

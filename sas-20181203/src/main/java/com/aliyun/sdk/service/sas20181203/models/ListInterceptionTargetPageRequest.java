@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInterceptionTargetPageRequest} extends {@link RequestModel}
  *
  * <p>ListInterceptionTargetPageRequest</p>
@@ -151,7 +152,10 @@ public class ListInterceptionTargetPageRequest extends Request {
         } 
 
         /**
-         * The name of the application to which the network object belongs.
+         * <p>The name of the application to which the network object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>frontend</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -160,7 +164,10 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -169,7 +176,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The images of the network object.
+         * <p>The images of the network object.</p>
          */
         public Builder imageList(java.util.List < String > imageList) {
             this.putQueryParameter("ImageList", imageList);
@@ -178,7 +185,10 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The namespace to which the network object belongs.
+         * <p>The namespace to which the network object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -187,10 +197,13 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +212,7 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The labels specified for the network object.
+         * <p>The labels specified for the network object.</p>
          */
         public Builder tagList(java.util.List < String > tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -208,7 +221,10 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The name of the network object.
+         * <p>The name of the network object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source-test-obj-0****</p>
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -217,10 +233,13 @@ public class ListInterceptionTargetPageRequest extends Request {
         }
 
         /**
-         * The type of the network object. Valid values:
-         * <p>
+         * <p>The type of the network object. Valid values:</p>
+         * <ul>
+         * <li>IMAGE</li>
+         * </ul>
          * 
-         * *   IMAGE
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSoarStrategyTaskRequest} extends {@link RequestModel}
  *
  * <p>DeleteSoarStrategyTaskRequest</p>
@@ -54,10 +55,14 @@ public class DeleteSoarStrategyTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the policy task that is in the waiting state.
-         * <p>
+         * <p>The ID of the policy task that is in the waiting state.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeSoarStrategyTasks](~~DescribeSoarStrategyTasks~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>11082</p>
          */
         public Builder strategyTaskId(Long strategyTaskId) {
             this.putQueryParameter("StrategyTaskId", strategyTaskId);

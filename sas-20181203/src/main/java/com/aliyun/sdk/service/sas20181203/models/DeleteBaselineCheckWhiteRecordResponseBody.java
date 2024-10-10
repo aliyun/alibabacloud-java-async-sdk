@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBaselineCheckWhiteRecordResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteBaselineCheckWhiteRecordResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteBaselineCheckWhiteRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E10BAF1C-A6C5-51E2-866C-76D5922E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

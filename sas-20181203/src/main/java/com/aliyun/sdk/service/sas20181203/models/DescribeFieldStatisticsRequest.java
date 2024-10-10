@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFieldStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeFieldStatisticsRequest</p>
@@ -81,11 +82,14 @@ public class DescribeFieldStatisticsRequest extends Request {
         } 
 
         /**
-         * The type of the asset to query. If no asset types are specified, all types of assets are returned. Valid values:
-         * <p>
+         * <p>The type of the asset to query. If no asset types are specified, all types of assets are returned. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: server</li>
+         * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+         * </ul>
          * 
-         * *   **ecs**: server
-         * *   **cloud_product**: Alibaba Cloud service
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -94,7 +98,10 @@ public class DescribeFieldStatisticsRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the asset resides.
+         * <p>The ID of the region in which the asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -103,9 +110,13 @@ public class DescribeFieldStatisticsRequest extends Request {
         }
 
         /**
-         * The ID of the primary account of the Resource Directory member account.
-         * <p>
-         * > call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) interface to obtain this parameter.
+         * <p>The ID of the primary account of the Resource Directory member account.</p>
+         * <blockquote>
+         * <p>call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> interface to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

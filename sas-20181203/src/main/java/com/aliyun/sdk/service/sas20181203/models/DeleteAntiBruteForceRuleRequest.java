@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteAntiBruteForceRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteAntiBruteForceRuleRequest</p>
@@ -54,7 +55,8 @@ public class DeleteAntiBruteForceRuleRequest extends Request {
         } 
 
         /**
-         * The IDs of the defense rules against brute-force attacks to delete.
+         * <p>The IDs of the defense rules against brute-force attacks to delete.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder ids(java.util.List < Long > ids) {
             this.putQueryParameter("Ids", ids);

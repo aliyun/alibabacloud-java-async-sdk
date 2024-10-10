@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateContainerScanTaskByAppNameRequest} extends {@link RequestModel}
  *
  * <p>CreateContainerScanTaskByAppNameRequest</p>
@@ -81,7 +82,10 @@ public class CreateContainerScanTaskByAppNameRequest extends Request {
         } 
 
         /**
-         * The name of the container application.
+         * <p>The name of the container application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-centos-01</p>
          */
         public Builder appNames(String appNames) {
             this.putQueryParameter("AppNames", appNames);
@@ -90,7 +94,10 @@ public class CreateContainerScanTaskByAppNameRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfb7a55a81f7246b5ac18845ea79a****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -99,11 +106,14 @@ public class CreateContainerScanTaskByAppNameRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response.
-         * <p>
+         * <p>The language of the content within the request and response.</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

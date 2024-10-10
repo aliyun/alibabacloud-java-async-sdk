@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarStrategyTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeSoarStrategyTasksRequest</p>
@@ -69,7 +70,11 @@ public class DescribeSoarStrategyTasksRequest extends Request {
         } 
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -78,7 +83,11 @@ public class DescribeSoarStrategyTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

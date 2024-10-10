@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAvailableHoneypotRequest} extends {@link RequestModel}
  *
  * <p>ListAvailableHoneypotRequest</p>
@@ -53,7 +54,10 @@ public class ListAvailableHoneypotRequest extends Request {
         } 
 
         /**
-         * The ID of the management node to which the honeypot is deployed.
+         * <p>The ID of the management node to which the honeypot is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4341018b-8e01-43f6-b1d2-af29a2a4****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

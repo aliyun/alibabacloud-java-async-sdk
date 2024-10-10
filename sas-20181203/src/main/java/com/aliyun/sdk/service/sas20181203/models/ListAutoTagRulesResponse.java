@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAutoTagRulesResponse} extends {@link TeaModel}
  *
  * <p>ListAutoTagRulesResponse</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveWhiteListStrategyRequest} extends {@link RequestModel}
  *
  * <p>SaveWhiteListStrategyRequest</p>
@@ -111,11 +112,14 @@ public class SaveWhiteListStrategyRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +128,10 @@ public class SaveWhiteListStrategyRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124.89.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -133,10 +140,13 @@ public class SaveWhiteListStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the application whitelist policy.
-         * <p>
+         * <p>The ID of the application whitelist policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeWhiteListStrategyList](~~DescribeWhiteListStrategyList~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>8494</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -145,7 +155,11 @@ public class SaveWhiteListStrategyRequest extends Request {
         }
 
         /**
-         * The name of the application whitelist policy.
+         * <p>The name of the application whitelist policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -154,7 +168,11 @@ public class SaveWhiteListStrategyRequest extends Request {
         }
 
         /**
-         * The duration of intelligent learning. Unit: hours.
+         * <p>The duration of intelligent learning. Unit: hours.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder studyTime(Integer studyTime) {
             this.putQueryParameter("StudyTime", studyTime);

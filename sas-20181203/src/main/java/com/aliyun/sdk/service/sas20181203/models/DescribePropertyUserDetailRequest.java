@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyUserDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertyUserDetailRequest</p>
@@ -165,7 +166,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -174,7 +178,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether the fuzzy search by account name is supported. If you want to use fuzzy search, set the parameter to **1**. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
+         * <p>Specifies whether the fuzzy search by account name is supported. If you want to use fuzzy search, set the parameter to <strong>1</strong>. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -183,11 +190,14 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether the account has root permissions. Valid values:
-         * <p>
+         * <p>Specifies whether the account has root permissions. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isRoot(String isRoot) {
             this.putQueryParameter("IsRoot", isRoot);
@@ -196,7 +206,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * The timestamp of the last logoff from the account. Unit: milliseconds.
+         * <p>The timestamp of the last logoff from the account. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>164922523600</p>
          */
         public Builder lastLoginTimeEnd(Long lastLoginTimeEnd) {
             this.putQueryParameter("LastLoginTimeEnd", lastLoginTimeEnd);
@@ -205,7 +218,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * The timestamp of the last logon to the account. Unit: milliseconds.
+         * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>164922523600</p>
          */
         public Builder lastLoginTimeStart(Long lastLoginTimeStart) {
             this.putQueryParameter("LastLoginTimeStart", lastLoginTimeStart);
@@ -214,7 +230,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,7 +242,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * The name or IP address of the server.
+         * <p>The name or IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -232,7 +254,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * The name of the account to which the server belongs.
+         * <p>The name of the account to which the server belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bin</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);
@@ -241,7 +266,10 @@ public class DescribePropertyUserDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

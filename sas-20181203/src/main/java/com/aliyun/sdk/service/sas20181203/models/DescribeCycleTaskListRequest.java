@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCycleTaskListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCycleTaskListRequest</p>
@@ -96,7 +97,10 @@ public class DescribeCycleTaskListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +109,10 @@ public class DescribeCycleTaskListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -114,12 +121,15 @@ public class DescribeCycleTaskListRequest extends Request {
         }
 
         /**
-         * The name of the task. Valid values:
-         * <p>
+         * <p>The name of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+         * </ul>
          * 
-         * *   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task
-         * *   **IMAGE_SCAN**: image scan task
-         * *   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * <strong>example:</strong>
+         * <p>IMAGE_SCAN</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -128,12 +138,16 @@ public class DescribeCycleTaskListRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: virus scan task</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
+         * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **VIRUS\_VUL\_SCHEDULE_SCAN**: virus scan task
-         * *   **IMAGE_SCAN**: image scan task
-         * *   **EMG\_VUL\_SCHEDULE_SCAN**: urgent vulnerability scan task
+         * <strong>example:</strong>
+         * <p>IMAGE_SCAN</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckQuaraFileIdResponseBody} extends {@link TeaModel}
  *
  * <p>CheckQuaraFileIdResponseBody</p>
@@ -49,11 +50,14 @@ public class CheckQuaraFileIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the ID of the quarantined file is valid. Valid values:
-         * <p>
+         * <p>Indicates whether the ID of the quarantined file is valid. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The ID of the quarantined file is valid.</li>
+         * <li><strong>false</strong>: The ID of the quarantined file is invalid.</li>
+         * </ul>
          * 
-         * *   **true**: The ID of the quarantined file is valid.
-         * *   **false**: The ID of the quarantined file is invalid.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -61,7 +65,10 @@ public class CheckQuaraFileIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

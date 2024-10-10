@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStrategyExecDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeStrategyExecDetailRequest</p>
@@ -123,7 +124,10 @@ public class DescribeStrategyExecDetailRequest extends Request {
         }
 
         /**
-         * StrategyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8437592</p>
          */
         public Builder strategyId(Integer strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

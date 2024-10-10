@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCustomBlockRecordRequest} extends {@link RequestModel}
  *
  * <p>ModifyCustomBlockRecordRequest</p>
@@ -113,7 +114,11 @@ public class ModifyCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that you want to specify in the policy.
+         * <p>The IP address that you want to specify in the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.12.XX.XX</p>
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -122,11 +127,15 @@ public class ModifyCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction that you want to specify in the policy. Valid values:
-         * <p>
+         * <p>The traffic direction that you want to specify in the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound</li>
+         * <li><strong>out</strong>: outbound</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * <strong>example:</strong>
+         * <p>out</p>
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -135,7 +144,11 @@ public class ModifyCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The expiration time of the policy.
+         * <p>The expiration time of the policy.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1940899881000</p>
          */
         public Builder expireTime(Long expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -153,7 +166,11 @@ public class ModifyCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers.
+         * <p>The UUIDs of servers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2516fe4f-adb6-45d1-87a7-90ce1213****,30746836-68d0-47f6-8b2d-c93150da****,7c3ac531-077b-46b8-8706-5c8d4e73****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

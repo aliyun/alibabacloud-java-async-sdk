@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerServiceK8sClustersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerServiceK8sClustersResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the clusters.
+         * <p>The information about the clusters.</p>
          */
         public Builder k8sClusters(java.util.List < K8sClusters> k8sClusters) {
             this.k8sClusters = k8sClusters;
@@ -57,7 +58,10 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20456DD5-5CBF-5015-9173-12CA4246B***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerServiceK8sClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerServiceK8sClustersResponseBody</p>
+     */
     public static class K8sClusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -109,7 +119,10 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdbbe7aa56cbf4b8f830f83718d26****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -117,7 +130,10 @@ public class DescribeContainerServiceK8sClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster-test</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeCheckCustomConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ChangeCheckCustomConfigResponseBody</p>
@@ -61,7 +62,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the invalid custom configuration items of the check item.
+         * <p>An array that consists of the invalid custom configuration items of the check item.</p>
          */
         public Builder illegalCustomConfigs(java.util.List < IllegalCustomConfigs> illegalCustomConfigs) {
             this.illegalCustomConfigs = illegalCustomConfigs;
@@ -69,7 +70,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the invalid parameters required for fixing risk items.
+         * <p>An array that consists of the invalid parameters required for fixing risk items.</p>
          */
         public Builder illegalRepairConfigs(java.util.List < IllegalRepairConfigs> illegalRepairConfigs) {
             this.illegalRepairConfigs = illegalRepairConfigs;
@@ -77,7 +78,10 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DA8133CC-CCA0-5CF2-BF64-FE7D52C44***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeCheckCustomConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeCheckCustomConfigResponseBody</p>
+     */
     public static class IllegalCustomConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -117,7 +127,10 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the custom configuration item, which is unique in a check item.
+             * <p>The name of the custom configuration item, which is unique in a check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SessionTimeMax</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -131,6 +144,12 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeCheckCustomConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChangeCheckCustomConfigResponseBody</p>
+     */
     public static class IllegalRepairConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -158,7 +177,10 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the invalid parameter required for fixing a risk item.
+             * <p>The name of the invalid parameter required for fixing a risk item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SessionTimeMax</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMaliciousNoteRequest} extends {@link RequestModel}
  *
  * <p>DeleteMaliciousNoteRequest</p>
@@ -53,10 +54,13 @@ public class DeleteMaliciousNoteRequest extends Request {
         } 
 
         /**
-         * The ID of the remarks.
-         * <p>
+         * <p>The ID of the remarks.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> operation to obtain the ID from the NoteId parameter.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListAgentlessMaliciousFiles](~~ListAgentlessMaliciousFiles~~) operation to obtain the ID from the NoteId parameter.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder noteId(Long noteId) {
             this.putQueryParameter("NoteId", noteId);

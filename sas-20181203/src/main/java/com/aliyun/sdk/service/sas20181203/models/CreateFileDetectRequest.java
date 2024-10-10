@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileDetectRequest} extends {@link RequestModel}
  *
  * <p>CreateFileDetectRequest</p>
@@ -153,11 +154,14 @@ public class CreateFileDetectRequest extends Request {
         } 
 
         /**
-         * Whether to decompress or not. Valid values:
-         * <p>
+         * <p>Whether to decompress or not. Valid values:</p>
+         * <ul>
+         * <li>true: To decompress.</li>
+         * <li>false: Not to decompress.</li>
+         * </ul>
          * 
-         * - true: To decompress.
-         * - false: Not to decompress.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder decompress(Boolean decompress) {
             this.putQueryParameter("Decompress", decompress);
@@ -166,7 +170,10 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+         * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
             this.putQueryParameter("DecompressMaxFileCount", decompressMaxFileCount);
@@ -175,7 +182,10 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+         * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder decompressMaxLayer(Integer decompressMaxLayer) {
             this.putQueryParameter("DecompressMaxLayer", decompressMaxLayer);
@@ -184,7 +194,10 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * The URL that is used to download the file. You can specify this parameter to trigger file detection without the need to upload the file in advance.
+         * <p>The URL that is used to download the file. You can specify this parameter to trigger file detection without the need to upload the file in advance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.putQueryParameter("DownloadUrl", downloadUrl);
@@ -193,7 +206,11 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * The identifier of the file. Only MD5 hash values are supported.
+         * <p>The identifier of the file. Only MD5 hash values are supported.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a212417e65c26ff133cfff28f6c****</p>
          */
         public Builder hashKey(String hashKey) {
             this.putQueryParameter("HashKey", hashKey);
@@ -202,7 +219,10 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
+         * <p>The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation to query the keys of files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</p>
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);
@@ -211,7 +231,10 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115.213.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -220,15 +243,20 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * The type of the file. Valid values:
-         * <p>
+         * <p>The type of the file. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: unknown files</li>
+         * <li><strong>1</strong>: binary files</li>
+         * <li><strong>2</strong>: webshell files</li>
+         * <li><strong>4</strong>: script files</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not know the type of the file, set this parameter to 0.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: unknown files
-         * *   **1**: binary files
-         * *   **2**: webshell files
-         * *   **4**: script files
-         * 
-         * >  If you do not know the type of the file, set this parameter to 0.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

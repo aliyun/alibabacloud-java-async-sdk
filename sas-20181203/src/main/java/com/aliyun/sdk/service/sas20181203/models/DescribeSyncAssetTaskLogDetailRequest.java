@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSyncAssetTaskLogDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeSyncAssetTaskLogDetailRequest</p>
@@ -123,7 +124,10 @@ public class DescribeSyncAssetTaskLogDetailRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: 1. Pages start from page 1.
+         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -132,7 +136,10 @@ public class DescribeSyncAssetTaskLogDetailRequest extends Request {
         }
 
         /**
-         * The end timestamp of the task.
+         * <p>The end timestamp of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1668064495000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -141,10 +148,13 @@ public class DescribeSyncAssetTaskLogDetailRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -153,7 +163,10 @@ public class DescribeSyncAssetTaskLogDetailRequest extends Request {
         }
 
         /**
-         * The ID of the IDC scan task. You can call the [DescribeSyncAssetTaskList](~~141932~~) operation to obtain the ID.
+         * <p>The ID of the IDC scan task. You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeSyncAssetTaskList</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7e9565f537146fdf6bfb4e01f6f08818</p>
          */
         public Builder rootTaskId(String rootTaskId) {
             this.putQueryParameter("RootTaskId", rootTaskId);
@@ -162,7 +175,10 @@ public class DescribeSyncAssetTaskLogDetailRequest extends Request {
         }
 
         /**
-         * The start timestamp of the task.
+         * <p>The start timestamp of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644027670</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -171,7 +187,10 @@ public class DescribeSyncAssetTaskLogDetailRequest extends Request {
         }
 
         /**
-         * The name of the IDC scan task.
+         * <p>The name of the IDC scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IDC_PROBE_SCAN-TEST_001</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

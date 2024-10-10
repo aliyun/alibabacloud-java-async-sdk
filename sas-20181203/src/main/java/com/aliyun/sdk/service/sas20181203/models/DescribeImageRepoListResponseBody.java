@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageRepoListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageRepoListResponseBody</p>
@@ -97,7 +98,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of image repositories that are added to Security Center.
+         * <p>The number of image repositories that are added to Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder addTargetCount(Integer addTargetCount) {
             this.addTargetCount = addTargetCount;
@@ -105,7 +109,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of image repositories.
+         * <p>The total number of image repositories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder allTargetCount(Integer allTargetCount) {
             this.allTargetCount = allTargetCount;
@@ -113,7 +120,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of excluded image repositories.
+         * <p>The number of excluded image repositories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder delTargetCount(Integer delTargetCount) {
             this.delTargetCount = delTargetCount;
@@ -121,7 +131,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about image repositories.
+         * <p>An array that consists of the information about image repositories.</p>
          */
         public Builder imageRepoList(java.util.List < ImageRepoList> imageRepoList) {
             this.imageRepoList = imageRepoList;
@@ -129,7 +139,7 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -137,7 +147,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,6 +163,12 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageRepoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageRepoListResponseBody</p>
+     */
     public static class ImageRepoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
@@ -201,11 +220,14 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             private String repoNamespace; 
 
             /**
-             * Indicates whether the feature takes effect on the image repository. Valid values:
-             * <p>
+             * <p>Indicates whether the feature takes effect on the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>add</strong>: yes</li>
+             * <li><strong>del</strong>: no</li>
+             * </ul>
              * 
-             * *   **add**: yes
-             * *   **del**: no
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -213,7 +235,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zeus</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -221,7 +246,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * <p>The namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-script</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -235,6 +263,12 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageRepoListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageRepoListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -298,7 +332,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -306,7 +343,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -314,7 +354,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -322,7 +365,10 @@ public class DescribeImageRepoListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of image repositories.
+             * <p>The total number of image repositories.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

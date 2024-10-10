@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAntiBruteForceRuleResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInstanceAntiBruteForceRuleResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyInstanceAntiBruteForceRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4BE468CE-47A0-54F0-98A1-E253546E6A2C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

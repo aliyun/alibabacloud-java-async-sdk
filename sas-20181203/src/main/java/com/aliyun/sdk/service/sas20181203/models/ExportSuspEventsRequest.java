@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportSuspEventsRequest} extends {@link RequestModel}
  *
  * <p>ExportSuspEventsRequest</p>
@@ -361,7 +362,7 @@ public class ExportSuspEventsRequest extends Request {
         } 
 
         /**
-         * The types of assets.
+         * <p>The types of assets.</p>
          */
         public Builder assetsTypeList(java.util.List < String > assetsTypeList) {
             this.putQueryParameter("AssetsTypeList", assetsTypeList);
@@ -370,10 +371,13 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster that you want to query.
-         * <p>
+         * <p>The ID of the cluster that you want to query.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>c4af4fdf38a98496a9b63c2be5dae****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -382,21 +386,24 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The key of the condition that is used to query alert events on containers. Valid values:
-         * <p>
+         * <p>The key of the condition that is used to query alert events on containers. Valid values:</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the ID of the asset</li>
+         * <li><strong>appName</strong>: the name of the application</li>
+         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * <li><strong>regionId</strong>: the ID of the region</li>
+         * <li><strong>nodeName</strong>: the name of the node</li>
+         * <li><strong>namespace</strong>: the namespace</li>
+         * <li><strong>clusterName</strong>: the name of the cluster</li>
+         * <li><strong>image</strong>: the name of the image</li>
+         * <li><strong>imageRepoName</strong>: the name of the image repository</li>
+         * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
+         * <li><strong>imageRepoTag</strong>: the tag that is added to the image</li>
+         * <li><strong>imageDigest</strong>: the digest of the image</li>
+         * </ul>
          * 
-         * *   **instanceId**: the ID of the asset
-         * *   **appName**: the name of the application
-         * *   **clusterId**: the ID of the cluster
-         * *   **regionId**: the ID of the region
-         * *   **nodeName**: the name of the node
-         * *   **namespace**: the namespace
-         * *   **clusterName**: the name of the cluster
-         * *   **image**: the name of the image
-         * *   **imageRepoName**: the name of the image repository
-         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
-         * *   **imageRepoTag**: the tag that is added to the image
-         * *   **imageDigest**: the digest of the image
+         * <strong>example:</strong>
+         * <p>clusterId</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -405,7 +412,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The value of the condition that is used to query alert events on containers.
+         * <p>The value of the condition that is used to query alert events on containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c819391d2d520485fa3e81e2dc2ea****</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -414,7 +424,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -423,11 +436,14 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The status of the alert event. Valid values:
-         * <p>
+         * <p>The status of the alert event. Valid values:</p>
+         * <ul>
+         * <li><strong>N</strong>: unhandled</li>
+         * <li><strong>Y</strong>: handled</li>
+         * </ul>
          * 
-         * *   **N**: unhandled
-         * *   **Y**: handled
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -436,7 +452,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The data source of the exception. Set the value to sas.
+         * <p>The data source of the exception. Set the value to sas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -445,7 +464,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
+         * <p>The ID of the asset group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8076980</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -454,7 +476,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The unique ID of the alert event.
+         * <p>The unique ID of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17821</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -463,11 +488,14 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -476,12 +504,15 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The severity of the alert event. Separate multiple severities with commas (,). Valid values:
-         * <p>
+         * <p>The severity of the alert event. Separate multiple severities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>serious</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>remind</strong></li>
+         * </ul>
          * 
-         * *   **serious**
-         * *   **suspicious**
-         * *   **remind**
+         * <strong>example:</strong>
+         * <p>serious,suspicious,remind</p>
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -490,7 +521,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The complete name of the exception.
+         * <p>The complete name of the exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSHELL</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -499,7 +533,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The status codes of alert events.
+         * <p>The status codes of alert events.</p>
          */
         public Builder operateErrorCodeList(java.util.List < String > operateErrorCodeList) {
             this.putQueryParameter("OperateErrorCodeList", operateErrorCodeList);
@@ -508,7 +542,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -517,32 +554,35 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The alert type of the alert event. Valid values:
-         * <p>
+         * <p>The alert type of the alert event. Valid values:</p>
+         * <ul>
+         * <li><strong>Suspicious process</strong></li>
+         * <li><strong>Webshell</strong></li>
+         * <li><strong>Unusual logon</strong></li>
+         * <li><strong>Exception</strong></li>
+         * <li><strong>Sensitive file tampering</strong></li>
+         * <li><strong>Malicious process (cloud threat detection)</strong></li>
+         * <li><strong>Suspicious network connection</strong></li>
+         * <li><strong>Suspicious account</strong></li>
+         * <li><strong>Application intrusion event</strong></li>
+         * <li><strong>Cloud threat detection</strong></li>
+         * <li><strong>Precise defense</strong></li>
+         * <li><strong>Application whitelist</strong></li>
+         * <li><strong>Persistent webshell</strong></li>
+         * <li><strong>Web application threat detection</strong></li>
+         * <li><strong>Malicious script</strong></li>
+         * <li><strong>Threat intelligence</strong></li>
+         * <li><strong>Malicious network activity</strong></li>
+         * <li><strong>Cluster exception</strong></li>
+         * <li><strong>Webshell (on-premises threat detection)</strong></li>
+         * <li><strong>Vulnerability exploitation</strong></li>
+         * <li><strong>Malicious process (on-premises threat detection)</strong></li>
+         * <li><strong>Trusted exception</strong></li>
+         * <li><strong>Others</strong></li>
+         * </ul>
          * 
-         * *   **Suspicious process**
-         * *   **Webshell**
-         * *   **Unusual logon**
-         * *   **Exception**
-         * *   **Sensitive file tampering**
-         * *   **Malicious process (cloud threat detection)**
-         * *   **Suspicious network connection**
-         * *   **Suspicious account**
-         * *   **Application intrusion event**
-         * *   **Cloud threat detection**
-         * *   **Precise defense**
-         * *   **Application whitelist**
-         * *   **Persistent webshell**
-         * *   **Web application threat detection**
-         * *   **Malicious script**
-         * *   **Threat intelligence**
-         * *   **Malicious network activity**
-         * *   **Cluster exception**
-         * *   **Webshell (on-premises threat detection)**
-         * *   **Vulnerability exploitation**
-         * *   **Malicious process (on-premises threat detection)**
-         * *   **Trusted exception**
-         * *   **Others**
+         * <strong>example:</strong>
+         * <p>WEBSHELL</p>
          */
         public Builder parentEventTypes(String parentEventTypes) {
             this.putQueryParameter("ParentEventTypes", parentEventTypes);
@@ -551,7 +591,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The remarks.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -560,7 +603,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. The value of this parameter is specified by the system.
+         * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -569,18 +615,21 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The handling status of the exception. Valid values:
-         * <p>
+         * <p>The handling status of the exception. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: all status</li>
+         * <li><strong>1</strong>: pending handling</li>
+         * <li><strong>2</strong>: ignored</li>
+         * <li><strong>4</strong>: confirmed</li>
+         * <li><strong>8</strong>: marked as false positive</li>
+         * <li><strong>16</strong>: handling</li>
+         * <li><strong>32</strong>: handled</li>
+         * <li><strong>64</strong>: expired</li>
+         * <li><strong>128</strong>: deleted</li>
+         * </ul>
          * 
-         * *   **0**: all status
-         * *   **1**: pending handling
-         * *   **2**: ignored
-         * *   **4**: confirmed
-         * *   **8**: marked as false positive
-         * *   **16**: handling
-         * *   **32**: handled
-         * *   **64**: expired
-         * *   **128**: deleted
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -589,12 +638,15 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The dimension from which you want to configure the feature. Valid values:
-         * <p>
+         * <p>The dimension from which you want to configure the feature. Valid values:</p>
+         * <ul>
+         * <li><strong>uuid</strong>: the UUID of the asset</li>
+         * <li><strong>image_repo</strong>: the ID of the image repository</li>
+         * <li><strong>Cluster</strong>: the ID of the cluster</li>
+         * </ul>
          * 
-         * *   **uuid**: the UUID of the asset
-         * *   **image_repo**: the ID of the image repository
-         * *   **Cluster**: the ID of the cluster
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -603,7 +655,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The end of the time range during which the exception is detected.
+         * <p>The end of the time range during which the exception is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-05 00:00:00</p>
          */
         public Builder timeEnd(String timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -612,7 +667,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range during which the exception is detected.
+         * <p>The beginning of the time range during which the exception is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-01 00:00:00</p>
          */
         public Builder timeStart(String timeStart) {
             this.putQueryParameter("TimeStart", timeStart);
@@ -621,7 +679,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The unique key of the alert event.
+         * <p>The unique key of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1fbe8d16727f61d1478a674d6fa0****</p>
          */
         public Builder uniqueInfo(String uniqueInfo) {
             this.putQueryParameter("UniqueInfo", uniqueInfo);
@@ -630,7 +691,10 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The unique ID of the associated instance.
+         * <p>The unique ID of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18b7336e-d469-473b-af83-8e5420f9****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

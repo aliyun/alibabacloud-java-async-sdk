@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDingTalkStatusResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyDingTalkStatusResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyDingTalkStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81DCBD76-196C-57A5-9C7D-F14DE8E1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,11 +6,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExposedInstanceListRequest} extends {@link RequestModel}
  *
  * <p>DescribeExposedInstanceListRequest</p>
  */
 public class DescribeExposedInstanceListRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetType")
+    private String assetType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CspmStatus")
+    private Boolean cspmStatus;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
@@ -57,6 +66,8 @@ public class DescribeExposedInstanceListRequest extends Request {
 
     private DescribeExposedInstanceListRequest(Builder builder) {
         super(builder);
+        this.assetType = builder.assetType;
+        this.cspmStatus = builder.cspmStatus;
         this.currentPage = builder.currentPage;
         this.exposureComponent = builder.exposureComponent;
         this.exposureIp = builder.exposureIp;
@@ -81,6 +92,20 @@ public class DescribeExposedInstanceListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return assetType
+     */
+    public String getAssetType() {
+        return this.assetType;
+    }
+
+    /**
+     * @return cspmStatus
+     */
+    public Boolean getCspmStatus() {
+        return this.cspmStatus;
     }
 
     /**
@@ -161,6 +186,8 @@ public class DescribeExposedInstanceListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeExposedInstanceListRequest, Builder> {
+        private String assetType; 
+        private Boolean cspmStatus; 
         private Integer currentPage; 
         private String exposureComponent; 
         private String exposureIp; 
@@ -179,6 +206,8 @@ public class DescribeExposedInstanceListRequest extends Request {
 
         private Builder(DescribeExposedInstanceListRequest request) {
             super(request);
+            this.assetType = request.assetType;
+            this.cspmStatus = request.cspmStatus;
             this.currentPage = request.currentPage;
             this.exposureComponent = request.exposureComponent;
             this.exposureIp = request.exposureIp;
@@ -193,7 +222,28 @@ public class DescribeExposedInstanceListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * AssetType.
+         */
+        public Builder assetType(String assetType) {
+            this.putQueryParameter("AssetType", assetType);
+            this.assetType = assetType;
+            return this;
+        }
+
+        /**
+         * CspmStatus.
+         */
+        public Builder cspmStatus(Boolean cspmStatus) {
+            this.putQueryParameter("CspmStatus", cspmStatus);
+            this.cspmStatus = cspmStatus;
+            return this;
+        }
+
+        /**
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -202,7 +252,10 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The server component that is exposed on the Internet.
+         * <p>The server component that is exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openssl</p>
          */
         public Builder exposureComponent(String exposureComponent) {
             this.putQueryParameter("ExposureComponent", exposureComponent);
@@ -211,7 +264,10 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The public IP address of the server.
+         * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.12.XX.XX</p>
          */
         public Builder exposureIp(String exposureIp) {
             this.putQueryParameter("ExposureIp", exposureIp);
@@ -220,7 +276,10 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The port that is exposed on the Internet.
+         * <p>The port that is exposed on the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder exposurePort(String exposurePort) {
             this.putQueryParameter("ExposurePort", exposurePort);
@@ -229,10 +288,13 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the server group.
-         * <p>
+         * <p>The ID of the server group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+         * <strong>example:</strong>
+         * <p>9535356</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -241,17 +303,19 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The health status of the Elastic Compute Service (ECS) instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values:
-         * <p>
+         * <p>The health status of the Elastic Compute Service (ECS) instance in the scaling group. ECS instances that are not in the Running state are considered unhealthy. Valid values:</p>
+         * <ul>
+         * <li>Healthy</li>
+         * <li>Unhealthy</li>
+         * </ul>
+         * <p>Auto Scaling automatically removes unhealthy ECS instances from the scaling group and then releases the automatically created instances among the unhealthy instances.</p>
+         * <p>Unhealthy ECS instances that are manually added to the scaling group are released based on the management mode of the instance lifecycle. If the lifecycle of the ECS instances is not managed by the scaling group, Auto Scaling removes the instances from the scaling group but does not release them. If the lifecycle of the ECS instances is managed by the scaling group, Auto Scaling removes the instances from the scaling group and releases them.</p>
+         * <blockquote>
+         * <p> Make sure that you have sufficient balance within your account. If you have overdue payments in your account, pay-as-you-go and preemptible instances are stopped or released. For information about how the status of ECS instances changes when you have overdue payments in your account, see <a href="https://help.aliyun.com/document_detail/170589.html">Overdue payments</a>.</p>
+         * </blockquote>
          * 
-         * *   Healthy
-         * *   Unhealthy
-         * 
-         * Auto Scaling automatically removes unhealthy ECS instances from the scaling group and then releases the automatically created instances among the unhealthy instances.
-         * 
-         * Unhealthy ECS instances that are manually added to the scaling group are released based on the management mode of the instance lifecycle. If the lifecycle of the ECS instances is not managed by the scaling group, Auto Scaling removes the instances from the scaling group but does not release them. If the lifecycle of the ECS instances is managed by the scaling group, Auto Scaling removes the instances from the scaling group and releases them.
-         * 
-         * >  Make sure that you have sufficient balance within your account. If you have overdue payments in your account, pay-as-you-go and preemptible instances are stopped or released. For information about how the status of ECS instances changes when you have overdue payments in your account, see [Overdue payments](~~170589~~).
+         * <strong>example:</strong>
+         * <p>Unhealthy</p>
          */
         public Builder healthStatus(Boolean healthStatus) {
             this.putQueryParameter("HealthStatus", healthStatus);
@@ -260,7 +324,10 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The ID of the server.
+         * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1g6wxdwps7s9dz****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -269,7 +336,10 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The name of the server.
+         * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc_centos7.2_005</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -278,10 +348,13 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -290,10 +363,13 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>16670360956*****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -302,11 +378,14 @@ public class DescribeExposedInstanceListRequest extends Request {
         }
 
         /**
-         * Specifies whether the server has vulnerabilities. Valid values:
-         * <p>
+         * <p>Specifies whether the server has vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The server has vulnerabilities.</li>
+         * <li><strong>false</strong>: The server does not have vulnerabilities.</li>
+         * </ul>
          * 
-         * *   **true**: The server has vulnerabilities.
-         * *   **false**: The server does not have vulnerabilities.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder vulStatus(Boolean vulStatus) {
             this.putQueryParameter("VulStatus", vulStatus);

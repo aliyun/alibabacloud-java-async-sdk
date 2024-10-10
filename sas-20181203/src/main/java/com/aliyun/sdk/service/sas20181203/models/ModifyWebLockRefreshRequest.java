@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyWebLockRefreshRequest} extends {@link RequestModel}
  *
  * <p>ModifyWebLockRefreshRequest</p>
@@ -53,10 +54,13 @@ public class ModifyWebLockRefreshRequest extends Request {
         } 
 
         /**
-         * The UUID of the server for which you want to refresh the status of the web tamper proofing feature.
-         * <p>
+         * <p>The UUID of the server for which you want to refresh the status of the web tamper proofing feature.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeWebLockBindList~~">DescribeWebLockBindList</a> operation to query the servers for which the web tamper proofing feature is enabled.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeWebLockBindList](~~DescribeWebLockBindList~~) operation to query the servers for which the web tamper proofing feature is enabled.
+         * <strong>example:</strong>
+         * <p>55c0f41b-3093-47a7-8eae-02d3a584****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

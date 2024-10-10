@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupedTagsRequest} extends {@link RequestModel}
  *
  * <p>DescribeGroupedTagsRequest</p>
@@ -53,11 +54,14 @@ public class DescribeGroupedTagsRequest extends Request {
         } 
 
         /**
-         * The type of the asset to query. If you do not specify this parameter, the tags of all asset types are queried. Valid values:
-         * <p>
+         * <p>The type of the asset to query. If you do not specify this parameter, the tags of all asset types are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: server</li>
+         * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+         * </ul>
          * 
-         * *   **ecs**: server
-         * *   **cloud_product**: Alibaba Cloud service
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);

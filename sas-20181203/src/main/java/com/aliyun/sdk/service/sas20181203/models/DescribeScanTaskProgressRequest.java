@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScanTaskProgressRequest} extends {@link RequestModel}
  *
  * <p>DescribeScanTaskProgressRequest</p>
@@ -54,7 +55,10 @@ public class DescribeScanTaskProgressRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>282832</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

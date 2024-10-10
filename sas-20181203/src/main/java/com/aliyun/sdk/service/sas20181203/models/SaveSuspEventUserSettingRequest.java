@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveSuspEventUserSettingRequest} extends {@link RequestModel}
  *
  * <p>SaveSuspEventUserSettingRequest</p>
@@ -67,7 +68,10 @@ public class SaveSuspEventUserSettingRequest extends Request {
         } 
 
         /**
-         * The data source of the exception. Set the value to sas.
+         * <p>The data source of the exception. Set the value to sas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -76,12 +80,15 @@ public class SaveSuspEventUserSettingRequest extends Request {
         }
 
         /**
-         * The severities of alert notifications. Valid values:
-         * <p>
+         * <p>The severities of alert notifications. Valid values:</p>
+         * <ul>
+         * <li><strong>remind</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>serious</strong></li>
+         * </ul>
          * 
-         * *   **remind**
-         * *   **suspicious**
-         * *   **serious**
+         * <strong>example:</strong>
+         * <p>suspicious,serious,remind</p>
          */
         public Builder levelsOn(String levelsOn) {
             this.putQueryParameter("LevelsOn", levelsOn);

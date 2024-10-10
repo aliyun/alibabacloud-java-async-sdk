@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMaliciousFileWhitelistConfigRequest} extends {@link RequestModel}
  *
  * <p>CreateMaliciousFileWhitelistConfigRequest</p>
@@ -137,10 +138,13 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * The name of the alert.
-         * <p>
+         * <p>The name of the alert.</p>
+         * <ul>
+         * <li>Set the value to ALL, which indicates all alert types.</li>
+         * </ul>
          * 
-         * *   Set the value to ALL, which indicates all alert types.
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -149,7 +153,10 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * The field that you want to use in the whitelist rule.
+         * <p>The field that you want to use in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fileMd5</p>
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -158,7 +165,10 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * The value of the field that you want to use in the whitelist rule.
+         * <p>The value of the field that you want to use in the whitelist rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b2cf9747ee49d8d9b105cf16e078cc16</p>
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -167,10 +177,13 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * The logical operator that you want to use in the whitelist rule.
-         * <p>
+         * <p>The logical operator that you want to use in the whitelist rule.</p>
+         * <ul>
+         * <li>Set the value to strEqual, which indicates the equality operator (=).</li>
+         * </ul>
          * 
-         * *   Set the value to strEqual, which indicates the equality operator (=).
+         * <strong>example:</strong>
+         * <p>strEqual</p>
          */
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);
@@ -179,10 +192,13 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * The feature to which this operation belongs.
-         * <p>
+         * <p>The feature to which this operation belongs.</p>
+         * <ul>
+         * <li>Set the value to agentless, which indicates the agentless detection feature.</li>
+         * </ul>
          * 
-         * *   Set the value to agentless, which indicates the agentless detection feature.
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -191,11 +207,14 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * The type of the assets on which you want the whitelist rule to take effect. Valid values:
-         * <p>
+         * <p>The type of the assets on which you want the whitelist rule to take effect. Valid values:</p>
+         * <ul>
+         * <li>ALL: all assets</li>
+         * <li>SELECTION_KEY: selected assets</li>
+         * </ul>
          * 
-         * *   ALL: all assets
-         * *   SELECTION_KEY: selected assets
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -204,11 +223,14 @@ public class CreateMaliciousFileWhitelistConfigRequest extends Request {
         }
 
         /**
-         * The assets on which you want the whitelist rule to take effect. Valid values:
-         * <p>
+         * <p>The assets on which you want the whitelist rule to take effect. Valid values:</p>
+         * <ul>
+         * <li>ALL: all assets</li>
+         * <li>Others: selected assets</li>
+         * </ul>
          * 
-         * *   ALL: all assets
-         * *   Others: selected assets
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder targetValue(String targetValue) {
             this.putQueryParameter("TargetValue", targetValue);

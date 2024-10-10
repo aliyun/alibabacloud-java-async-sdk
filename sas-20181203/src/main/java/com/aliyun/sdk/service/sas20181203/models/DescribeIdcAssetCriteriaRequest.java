@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeIdcAssetCriteriaRequest} extends {@link RequestModel}
  *
  * <p>DescribeIdcAssetCriteriaRequest</p>
@@ -67,14 +68,17 @@ public class DescribeIdcAssetCriteriaRequest extends Request {
         } 
 
         /**
-         * The status of the IP address. Valid values:
-         * <p>
+         * <p>The status of the IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The IP address is valid.</li>
+         * <li><strong>1</strong>: The IP address is ignored.</li>
+         * <li><em>2</em>: The IP address is invalid.</li>
+         * <li><em>3</em>: The IP address is expired.</li>
+         * <li><em>4</em>: The probe that is used to scan the IP address does not exist.</li>
+         * </ul>
          * 
-         * *   **0**: The IP address is valid.
-         * *   **1**: The IP address is ignored.
-         * *   *2*: The IP address is invalid.
-         * *   *3*: The IP address is expired.
-         * *   *4*: The probe that is used to scan the IP address does not exist.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -83,7 +87,10 @@ public class DescribeIdcAssetCriteriaRequest extends Request {
         }
 
         /**
-         * The keyword that is used to match assets in fuzzy mode.
+         * <p>The keyword that is used to match assets in fuzzy mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testwww</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

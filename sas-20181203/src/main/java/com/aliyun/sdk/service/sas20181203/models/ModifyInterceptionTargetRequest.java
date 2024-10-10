@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInterceptionTargetRequest} extends {@link RequestModel}
  *
  * <p>ModifyInterceptionTargetRequest</p>
@@ -141,10 +142,13 @@ public class ModifyInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * The name of the application.
-         * <p>
+         * <p>The name of the application.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>yasintt-daemonst</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -153,10 +157,10 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * An array that consists of images.
-         * <p>
-         * 
-         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
+         * <p>An array that consists of images.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
          */
         public Builder imageList(java.util.List < String > imageList) {
             this.putQueryParameter("ImageList", imageList);
@@ -165,10 +169,14 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The namespace.
-         * <p>
+         * <p>The namespace.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>demo4</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -177,10 +185,10 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * An array that consists of tags.
-         * <p>
-         * 
-         * > You can call the [DescribeContainerTags](~~DescribeContainerTags~~) operation to obtain the value of this parameter.
+         * <p>An array that consists of tags.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
          */
         public Builder tagList(java.util.List < String > tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -189,10 +197,14 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The ID of the network object.
-         * <p>
+         * <p>The ID of the network object.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain the value of this parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to obtain the value of this parameter.
+         * <strong>example:</strong>
+         * <p>400913</p>
          */
         public Builder targetId(Long targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -201,7 +213,11 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The name.
+         * <p>The name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test001</p>
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -210,10 +226,14 @@ public class ModifyInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The object type. Valid values:
-         * <p>
+         * <p>The object type. Valid values:</p>
+         * <ul>
+         * <li><strong>IMAGE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **IMAGE**
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

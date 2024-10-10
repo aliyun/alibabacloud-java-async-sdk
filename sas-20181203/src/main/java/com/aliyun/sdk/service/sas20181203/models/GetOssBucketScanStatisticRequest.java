@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOssBucketScanStatisticRequest} extends {@link RequestModel}
  *
  * <p>GetOssBucketScanStatisticRequest</p>
@@ -53,7 +54,7 @@ public class GetOssBucketScanStatisticRequest extends Request {
         } 
 
         /**
-         * The names of the buckets.
+         * <p>The names of the buckets.</p>
          */
         public Builder bucketNameList(java.util.List < String > bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);

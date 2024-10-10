@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallPmAgentResponseBody} extends {@link TeaModel}
  *
  * <p>InstallPmAgentResponseBody</p>
@@ -37,7 +38,10 @@ public class InstallPmAgentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D49B5134-9511-5736-B447-BEE0AC66****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

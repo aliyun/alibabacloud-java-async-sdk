@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HandleSimilarSecurityEventsRequest} extends {@link RequestModel}
  *
  * <p>HandleSimilarSecurityEventsRequest</p>
@@ -139,7 +140,10 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         } 
 
         /**
-         * The whitelist rule. For example, if you want to add a file that contains the string a to the whitelist based on the MD5 hash value, set this parameter to {"field":"md5","operate":"contains","fieldValue":"aa"}.
+         * <p>The whitelist rule. For example, if you want to add a file that contains the string a to the whitelist based on the MD5 hash value, set this parameter to {&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}</p>
          */
         public Builder markMissParam(String markMissParam) {
             this.putQueryParameter("MarkMissParam", markMissParam);
@@ -148,10 +152,14 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform to handle the alert events.
-         * <p>
+         * <p>The operation that you want to perform to handle the alert events.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> operation to query the operations.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeSecurityEventOperations](~~DescribeSecurityEventOperations~~) operation to query the operations.
+         * <strong>example:</strong>
+         * <p>offline_handled</p>
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -160,25 +168,43 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * The configuration of the operation that you want to perform to handle the alert events. The value of this parameter is in the JSON format.
-         * <p>
+         * <p>The configuration of the operation that you want to perform to handle the alert events. The value of this parameter is in the JSON format.</p>
+         * <blockquote>
+         * <p> If you set <strong>OperationCode</strong> to <strong>kill_and_quara</strong>, <strong>block_ip</strong>, or <strong>virus_quara</strong>, you must specify OperationParams. If you set <strong>OperationCode</strong> to other values, you can leave OperationParams empty. If you set <strong>OperationCode</strong> to <strong>block_ip</strong>, the value of OperationParams must consist of the following fields:</p>
+         * </blockquote>
+         * <blockquote>
+         * <ul>
+         * <li><strong>expireTime</strong>: the end time of locking. Unit: milliseconds.</li>
+         * </ul>
+         * </blockquote>
+         * <blockquote>
+         * <p> If you set <strong>OperationCode</strong> to <strong>kill_and_quara</strong>, the value of OperationParams must consist of the following fields:</p>
+         * </blockquote>
+         * <blockquote>
+         * <ul>
+         * <li><strong>subOperation</strong>: the method of detection and removal. Valid values:</li>
+         * </ul>
+         * </blockquote>
+         * <blockquote>
+         * <pre><code>*   **killAndQuaraFileByMd5andPath**: terminates the process and quarantines the source file of the process.
+         * *   **killByMd5andPath**: terminates the running process.
+         * </code></pre>
+         * </blockquote>
+         * <blockquote>
+         * <p> If you set <strong>OperationCode</strong> to <strong>virus_quara</strong>, the value of OperationParams consists of the following fields:</p>
+         * </blockquote>
+         * <blockquote>
+         * <ul>
+         * <li><strong>subOperation</strong>: the method of detection and removal. Valid values:</li>
+         * </ul>
+         * </blockquote>
+         * <blockquote>
+         * <pre><code>*   **quaraFileByMd5andPath**: quarantines the source file of the process.
+         * </code></pre>
+         * </blockquote>
          * 
-         * >  If you set **OperationCode** to **kill\_and\_quara**, **block\_ip**, or **virus\_quara**, you must specify OperationParams. If you set **OperationCode** to other values, you can leave OperationParams empty. If you set **OperationCode** to **block_ip**, the value of OperationParams must consist of the following fields:
-         * 
-         * > *   **expireTime**: the end time of locking. Unit: milliseconds.
-         * 
-         * >  If you set **OperationCode** to **kill\_and_quara**, the value of OperationParams must consist of the following fields:
-         * 
-         * > *   **subOperation**: the method of detection and removal. Valid values:
-         * 
-         * >     *   **killAndQuaraFileByMd5andPath**: terminates the process and quarantines the source file of the process.
-         * >     *   **killByMd5andPath**: terminates the running process.
-         * 
-         * >  If you set **OperationCode** to **virus_quara**, the value of OperationParams consists of the following fields:
-         * 
-         * > *   **subOperation**: the method of detection and removal. Valid values:
-         * 
-         * >     *   **quaraFileByMd5andPath**: quarantines the source file of the process.
+         * <strong>example:</strong>
+         * <p>{&quot;expireTime&quot;:1646208726195}</p>
          */
         public Builder operationParams(String operationParams) {
             this.putQueryParameter("OperationParams", operationParams);
@@ -187,7 +213,10 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * The remark of the operation.
+         * <p>The remark of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark test.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -205,7 +234,10 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -214,10 +246,14 @@ public class HandleSimilarSecurityEventsRequest extends Request {
         }
 
         /**
-         * The ID of the task that handles the alert events at a time.
-         * <p>
+         * <p>The ID of the task that handles the alert events at a time.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~CreateSimilarSecurityEventsQueryTask~~">CreateSimilarSecurityEventsQueryTask</a> operation to query the IDs of tasks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [CreateSimilarSecurityEventsQueryTask](~~CreateSimilarSecurityEventsQueryTask~~) operation to query the IDs of tasks.
+         * <strong>example:</strong>
+         * <p>666038</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

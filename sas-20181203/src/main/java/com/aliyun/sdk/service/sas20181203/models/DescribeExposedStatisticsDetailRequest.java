@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExposedStatisticsDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeExposedStatisticsDetailRequest</p>
@@ -124,7 +125,10 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -133,10 +137,13 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,10 +152,13 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -157,13 +167,17 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * The type of the exposed asset. Valid values:
-         * <p>
+         * <p>The type of the exposed asset. Valid values:</p>
+         * <ul>
+         * <li><strong>exposureType</strong>: gateway assets</li>
+         * <li><strong>exposurePort</strong>: ports</li>
+         * <li><strong>exposureComponent</strong>: system components</li>
+         * <li><strong>exposureIp</strong>: IP addresses</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **exposureType**: gateway assets
-         * *   **exposurePort**: ports
-         * *   **exposureComponent**: system components
-         * *   **exposureIp**: IP addresses
+         * <strong>example:</strong>
+         * <p>exposureType</p>
          */
         public Builder statisticsType(String statisticsType) {
             this.putQueryParameter("StatisticsType", statisticsType);
@@ -172,11 +186,14 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * The type of the gateway asset. This parameter is required when the **StatisticsType** parameter is set to **exposureType**. Valid values:
-         * <p>
+         * <p>The type of the gateway asset. This parameter is required when the <strong>StatisticsType</strong> parameter is set to <strong>exposureType</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>SLB</strong>: the public IP address of a Server Load Balancer (SLB) instance</li>
+         * <li><strong>DNAT</strong>: the NAT gateway that connects to the Internet by using the DNAT feature</li>
+         * </ul>
          * 
-         * *   **SLB**: the public IP address of a Server Load Balancer (SLB) instance
-         * *   **DNAT**: the NAT gateway that connects to the Internet by using the DNAT feature
+         * <strong>example:</strong>
+         * <p>SLB</p>
          */
         public Builder statisticsTypeGatewayType(String statisticsTypeGatewayType) {
             this.putQueryParameter("StatisticsTypeGatewayType", statisticsTypeGatewayType);
@@ -185,7 +202,10 @@ public class DescribeExposedStatisticsDetailRequest extends Request {
         }
 
         /**
-         * The ID of the gateway asset. This parameter is required when the **StatisticsType** parameter is set to **exposureType**.
+         * <p>The ID of the gateway asset. This parameter is required when the <strong>StatisticsType</strong> parameter is set to <strong>exposureType</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2ze4rso39h4nczcqs****</p>
          */
         public Builder statisticsTypeInstanceValue(String statisticsTypeInstanceValue) {
             this.putQueryParameter("StatisticsTypeInstanceValue", statisticsTypeInstanceValue);

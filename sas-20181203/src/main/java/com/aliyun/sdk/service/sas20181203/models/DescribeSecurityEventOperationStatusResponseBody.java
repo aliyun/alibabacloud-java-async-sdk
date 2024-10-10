@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSecurityEventOperationStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSecurityEventOperationStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         private SecurityEventOperationStatusResponse securityEventOperationStatusResponse; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683940A-E4AE-4473-8C40-F4075434B76B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the task that handles the alert events.
+         * <p>The information about the task that handles the alert events.</p>
          */
         public Builder securityEventOperationStatusResponse(SecurityEventOperationStatusResponse securityEventOperationStatusResponse) {
             this.securityEventOperationStatusResponse = securityEventOperationStatusResponse;
@@ -70,6 +74,12 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSecurityEventOperationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityEventOperationStatusResponseBody</p>
+     */
     public static class SecurityEventOperationStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
@@ -121,7 +131,10 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The code that indicates the handling result of the alert event.
+             * <p>The code that indicates the handling result of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore.Success</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -129,7 +142,10 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert event.
+             * <p>The ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12321</p>
              */
             public Builder securityEventId(String securityEventId) {
                 this.securityEventId = securityEventId;
@@ -137,12 +153,15 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The handling status of the alert event. Valid values:
-             * <p>
+             * <p>The handling status of the alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>Processing</strong>: The alert event is being handled.</li>
+             * <li><strong>Success</strong>: The alert event is handled.</li>
+             * <li><strong>Failed</strong>: The alert event failed to be handled.</li>
+             * </ul>
              * 
-             * *   **Processing**: The alert event is being handled.
-             * *   **Success**: The alert event is handled.
-             * *   **Failed**: The alert event failed to be handled.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -156,6 +175,12 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSecurityEventOperationStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSecurityEventOperationStatusResponseBody</p>
+     */
     public static class SecurityEventOperationStatusResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityEventOperationStatuses")
         private java.util.List < SecurityEventOperationStatuses> securityEventOperationStatuses;
@@ -195,7 +220,7 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * An array consisting of the status of the alert events handled by the task.
+             * <p>An array consisting of the status of the alert events handled by the task.</p>
              */
             public Builder securityEventOperationStatuses(java.util.List < SecurityEventOperationStatuses> securityEventOperationStatuses) {
                 this.securityEventOperationStatuses = securityEventOperationStatuses;
@@ -203,13 +228,16 @@ public class DescribeSecurityEventOperationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task that handles the alert events. Valid values:
-             * <p>
+             * <p>The status of the task that handles the alert events. Valid values:</p>
+             * <ul>
+             * <li><strong>Processing</strong>: The task is running.</li>
+             * <li><strong>Success</strong>: The task is successful.</li>
+             * <li><strong>Failure</strong>: The task failed.</li>
+             * <li><strong>Pending</strong>: The task is pending.</li>
+             * </ul>
              * 
-             * *   **Processing**: The task is running.
-             * *   **Success**: The task is successful.
-             * *   **Failure**: The task failed.
-             * *   **Pending**: The task is pending.
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

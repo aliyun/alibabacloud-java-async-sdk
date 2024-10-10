@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageEventOperationConditionRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageEventOperationConditionRequest</p>
@@ -67,10 +68,13 @@ public class DescribeImageEventOperationConditionRequest extends Request {
         } 
 
         /**
-         * The alert type.
-         * <p>
+         * <p>The alert type.</p>
+         * <ul>
+         * <li>Set the value to <strong>sensitiveFile</strong>.</li>
+         * </ul>
          * 
-         * *   Set the value to **sensitiveFile**.
+         * <strong>example:</strong>
+         * <p>sensitiveFile</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -79,11 +83,14 @@ public class DescribeImageEventOperationConditionRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

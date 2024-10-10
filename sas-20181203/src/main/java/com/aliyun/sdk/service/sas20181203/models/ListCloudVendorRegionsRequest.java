@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudVendorRegionsRequest} extends {@link RequestModel}
  *
  * <p>ListCloudVendorRegionsRequest</p>
@@ -67,11 +68,14 @@ public class ListCloudVendorRegionsRequest extends Request {
         } 
 
         /**
-         * The language of the content in the request and response messages. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content in the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -80,10 +84,13 @@ public class ListCloudVendorRegionsRequest extends Request {
         }
 
         /**
-         * The service provider of cloud assets. Valid values:
-         * <p>
+         * <p>The service provider of cloud assets. Valid values:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>, <strong>HUAWEICLOUD</strong>, <strong>Azure</strong>, and <strong>AWS</strong>: other service providers of cloud assets.</li>
+         * </ul>
          * 
-         * *   **Tencent**, **HUAWEICLOUD**, **Azure**, and **AWS**: other service providers of cloud assets.
+         * <strong>example:</strong>
+         * <p>Tencent</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

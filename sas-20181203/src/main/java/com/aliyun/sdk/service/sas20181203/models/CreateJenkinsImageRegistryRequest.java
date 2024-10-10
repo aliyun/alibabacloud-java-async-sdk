@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJenkinsImageRegistryRequest} extends {@link RequestModel}
  *
  * <p>CreateJenkinsImageRegistryRequest</p>
@@ -263,7 +264,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         } 
 
         /**
-         * The domain name of the image repository.
+         * <p>The domain name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -272,11 +276,14 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The additional parameters of the image repository. The value of this parameter contains the following fields:
-         * <p>
+         * <p>The additional parameters of the image repository. The value of this parameter contains the following fields:</p>
+         * <ul>
+         * <li><strong>namespace</strong>: the namespace</li>
+         * <li><strong>authToken</strong>: the authorization token</li>
+         * </ul>
          * 
-         * *   **namespace**: the namespace
-         * *   **authToken**: the authorization token
+         * <strong>example:</strong>
+         * <p>[{&quot;namespace&quot;:&quot;aa&quot;,&quot;authToken&quot;:&quot;aa&quot;}]</p>
          */
         public Builder extraParam(String extraParam) {
             this.putBodyParameter("ExtraParam", extraParam);
@@ -285,11 +292,14 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The network type. Valid values:
-         * <p>
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Internet</li>
+         * <li><strong>2</strong>: Virtual Private Cloud (VPC)</li>
+         * </ul>
          * 
-         * *   **1**: Internet
-         * *   **2**: Virtual Private Cloud (VPC)
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder netType(Integer netType) {
             this.putBodyParameter("NetType", netType);
@@ -298,7 +308,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The password.
+         * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Harbor********</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -307,7 +320,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The number of days during which assets can be retained.
+         * <p>The number of days during which assets can be retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder persistenceDay(Integer persistenceDay) {
             this.putBodyParameter("PersistenceDay", persistenceDay);
@@ -316,11 +332,14 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The type of the protocol. Valid values:
-         * <p>
+         * <p>The type of the protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: HTTP</li>
+         * <li><strong>2</strong>: HTTPS</li>
+         * </ul>
          * 
-         * *   **1**: HTTP
-         * *   **2**: HTTPS
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder protocolType(Integer protocolType) {
             this.putBodyParameter("ProtocolType", protocolType);
@@ -329,7 +348,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The region ID of the image repository.
+         * <p>The region ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -338,7 +360,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The IP address of the image repository.
+         * <p>The IP address of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114.55.XXX.XXX</p>
          */
         public Builder registryHostIp(String registryHostIp) {
             this.putBodyParameter("RegistryHostIp", registryHostIp);
@@ -347,7 +372,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The alias of the image repository.
+         * <p>The alias of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRepo</p>
          */
         public Builder registryName(String registryName) {
             this.putBodyParameter("RegistryName", registryName);
@@ -356,10 +384,13 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The type of the image repository. Valid values:
-         * <p>
+         * <p>The type of the image repository. Valid values:</p>
+         * <ul>
+         * <li><strong>CI/CD</strong>: Jenkins</li>
+         * </ul>
          * 
-         * *   **CI/CD**: Jenkins
+         * <strong>example:</strong>
+         * <p>CI/CD</p>
          */
         public Builder registryType(String registryType) {
             this.putBodyParameter("RegistryType", registryType);
@@ -368,12 +399,15 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The version of the image repository. Default value: -. Valid values:
-         * <p>
+         * <p>The version of the image repository. Default value: -. Valid values:</p>
+         * <ul>
+         * <li><strong>-</strong>: the default version</li>
+         * <li><strong>V1</strong>: V1.0</li>
+         * <li><strong>V2</strong>: V2.0</li>
+         * </ul>
          * 
-         * *   **-**: the default version
-         * *   **V1**: V1.0
-         * *   **V2**: V2.0
+         * <strong>example:</strong>
+         * <p>V1</p>
          */
         public Builder registryVersion(String registryVersion) {
             this.putBodyParameter("RegistryVersion", registryVersion);
@@ -382,7 +416,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41.121.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -391,7 +428,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The number of images that can be scanned per hour.
+         * <p>The number of images that can be scanned per hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder transPerHour(Integer transPerHour) {
             this.putBodyParameter("TransPerHour", transPerHour);
@@ -400,7 +440,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RegistryUser</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -409,7 +452,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze4aoqgeu51ydfb8****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -418,7 +464,10 @@ public class CreateJenkinsImageRegistryRequest extends Request {
         }
 
         /**
-         * The whitelist of IP addresses.
+         * <p>The whitelist of IP addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XXX.XXX</p>
          */
         public Builder whiteList(String whiteList) {
             this.putBodyParameter("WhiteList", whiteList);

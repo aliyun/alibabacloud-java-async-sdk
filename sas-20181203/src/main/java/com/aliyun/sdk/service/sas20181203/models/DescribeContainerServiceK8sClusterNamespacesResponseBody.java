@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerServiceK8sClusterNamespacesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerServiceK8sClusterNamespacesResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
         private String requestId; 
 
         /**
-         * The namespaces.
+         * <p>The namespaces.</p>
          */
         public Builder k8sClusterNamespaces(java.util.List < K8sClusterNamespaces> k8sClusterNamespaces) {
             this.k8sClusterNamespaces = k8sClusterNamespaces;
@@ -57,7 +58,10 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0C8487EF-50C2-54BB-8634-10F8C35D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerServiceK8sClusterNamespacesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerServiceK8sClusterNamespacesResponseBody</p>
+     */
     public static class K8sClusterNamespaces extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
@@ -97,7 +107,10 @@ public class DescribeContainerServiceK8sClusterNamespacesResponseBody extends Te
             private String namespace; 
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

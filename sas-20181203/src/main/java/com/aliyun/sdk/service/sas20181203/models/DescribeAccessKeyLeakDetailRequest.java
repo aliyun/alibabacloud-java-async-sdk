@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccessKeyLeakDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeAccessKeyLeakDetailRequest</p>
@@ -68,10 +69,14 @@ public class DescribeAccessKeyLeakDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the AccessKey pair leak event.
-         * <p>
+         * <p>The ID of the AccessKey pair leak event.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to obtain the event ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeAccesskeyLeakList](~~DescribeAccesskeyLeakList~~) operation to obtain the event ID.
+         * <strong>example:</strong>
+         * <p>389357</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -80,10 +85,13 @@ public class DescribeAccessKeyLeakDetailRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageImageRegistryRequest} extends {@link RequestModel}
  *
  * <p>PageImageRegistryRequest</p>
@@ -123,7 +124,10 @@ public class PageImageRegistryRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -132,7 +136,10 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -141,7 +148,10 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The name of the image repository. Fuzzy match is supported.
+         * <p>The name of the image repository. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa</p>
          */
         public Builder registryNameLike(String registryNameLike) {
             this.putBodyParameter("RegistryNameLike", registryNameLike);
@@ -150,7 +160,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The types of image repositories.
+         * <p>The types of image repositories.</p>
          */
         public Builder registryTypeInList(java.util.List < String > registryTypeInList) {
             this.putBodyParameter("RegistryTypeInList", registryTypeInList);
@@ -159,7 +169,7 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The types of excluded image repositories.
+         * <p>The types of excluded image repositories.</p>
          */
         public Builder registryTypeNotInList(java.util.List < String > registryTypeNotInList) {
             this.putBodyParameter("RegistryTypeNotInList", registryTypeNotInList);
@@ -168,7 +178,10 @@ public class PageImageRegistryRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140.207.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

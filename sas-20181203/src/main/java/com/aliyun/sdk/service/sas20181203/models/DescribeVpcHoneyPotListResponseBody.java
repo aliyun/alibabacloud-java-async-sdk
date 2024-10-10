@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVpcHoneyPotListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVpcHoneyPotListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         private java.util.List < VpcHoneyPotDTOList> vpcHoneyPotDTOList; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4FEC7F58-FCDA-415F-AE25-CD8BC0931DF2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the honeypots.
+         * <p>An array that consists of the honeypots.</p>
          */
         public Builder vpcHoneyPotDTOList(java.util.List < VpcHoneyPotDTOList> vpcHoneyPotDTOList) {
             this.vpcHoneyPotDTOList = vpcHoneyPotDTOList;
@@ -90,6 +94,12 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVpcHoneyPotListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcHoneyPotListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcHoneyPotListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcHoneyPotListResponseBody</p>
+     */
     public static class VpcSwitchIdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcSwitchId")
         private String vpcSwitchId;
@@ -242,7 +270,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the vSwitch.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-p0wdnyv4wzp6jkuu4****</p>
              */
             public Builder vpcSwitchId(String vpcSwitchId) {
                 this.vpcSwitchId = vpcSwitchId;
@@ -250,7 +281,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vSwitch.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc01</p>
              */
             public Builder vpcSwitchName(String vpcSwitchName) {
                 this.vpcSwitchName = vpcSwitchName;
@@ -258,7 +292,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the vSwitch.
+             * <p>The zone ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-2b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -272,6 +309,12 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVpcHoneyPotListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVpcHoneyPotListResponseBody</p>
+     */
     public static class VpcHoneyPotDTOList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
@@ -431,7 +474,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             private java.util.List < VpcSwitchIdList> vpcSwitchIdList; 
 
             /**
-             * The CIDR block of the VPC.
+             * <p>The CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX/16</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -439,7 +485,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the VPC was created. Unit: milliseconds.
+             * <p>The time at which the VPC was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1607365213000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -447,14 +496,17 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the server on which the honeypot is deployed. Valid values:
-             * <p>
+             * <p>The status of the server on which the honeypot is deployed. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong>: The server is being created.</li>
+             * <li><strong>Running</strong>: The server is running.</li>
+             * <li><strong>Starting</strong>: The server is being started.</li>
+             * <li><strong>Stopping</strong>: The server is being stopped.</li>
+             * <li><strong>Stopped</strong>: The server is stopped.</li>
+             * </ul>
              * 
-             * *   **Pending**: The server is being created.
-             * *   **Running**: The server is running.
-             * *   **Starting**: The server is being started.
-             * *   **Stopping**: The server is being stopped.
-             * *   **Stopped**: The server is stopped.
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder honeyPotEcsInstanceStatus(String honeyPotEcsInstanceStatus) {
                 this.honeyPotEcsInstanceStatus = honeyPotEcsInstanceStatus;
@@ -462,7 +514,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the elastic network interface (ENI) used by the honeypot in the VPC.
+             * <p>The ID of the elastic network interface (ENI) used by the honeypot in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-p0whwgg7bing8b80****</p>
              */
             public Builder honeyPotEniInstanceId(String honeyPotEniInstanceId) {
                 this.honeyPotEniInstanceId = honeyPotEniInstanceId;
@@ -470,11 +525,14 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud honeypot feature is enabled for the VPC. Valid values:
-             * <p>
+             * <p>Indicates whether the cloud honeypot feature is enabled for the VPC. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder honeyPotExistence(Boolean honeyPotExistence) {
                 this.honeyPotExistence = honeyPotExistence;
@@ -482,14 +540,17 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the honeypot. Valid values:
-             * <p>
+             * <p>The status of the honeypot. Valid values:</p>
+             * <ul>
+             * <li><strong>pending</strong>: The honeypot is being created.</li>
+             * <li><strong>deleting</strong>: The honeypot is being deleted.</li>
+             * <li><strong>off</strong>: The honeypot is disabled.</li>
+             * <li><strong>suspending</strong>: The honeypot is suspended.</li>
+             * <li><strong>on</strong>: The honeypot is enabled.</li>
+             * </ul>
              * 
-             * *   **pending**: The honeypot is being created.
-             * *   **deleting**: The honeypot is being deleted.
-             * *   **off**: The honeypot is disabled.
-             * *   **suspending**: The honeypot is suspended.
-             * *   **on**: The honeypot is enabled.
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder honeyPotInstanceStatus(String honeyPotInstanceStatus) {
                 this.honeyPotInstanceStatus = honeyPotInstanceStatus;
@@ -497,7 +558,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which the ENI used by the honeypot is connected.
+             * <p>The ID of the vSwitch to which the ENI used by the honeypot is connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-p0w7gdcfvn20tvdul****</p>
              */
             public Builder honeyPotVpcSwitchId(String honeyPotVpcSwitchId) {
                 this.honeyPotVpcSwitchId = honeyPotVpcSwitchId;
@@ -505,7 +569,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-p0w223apdl49sr5zv****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -513,7 +580,10 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the VPC.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-vpcname</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -521,10 +591,13 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the VPC.
-             * <p>
+             * <p>The region ID of the VPC.</p>
+             * <blockquote>
+             * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+             * </blockquote>
              * 
-             * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+             * <strong>example:</strong>
+             * <p>ap-southeast-2</p>
              */
             public Builder vpcRegionId(String vpcRegionId) {
                 this.vpcRegionId = vpcRegionId;
@@ -532,11 +605,14 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VPC. Valid values:
-             * <p>
+             * <p>The status of the VPC. Valid values:</p>
+             * <ul>
+             * <li><strong>Available</strong>: The VPC is normal and available.</li>
+             * <li><strong>Pending</strong>: The VPC is being configured.</li>
+             * </ul>
              * 
-             * *   **Available**: The VPC is normal and available.
-             * *   **Pending**: The VPC is being configured.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder vpcStatus(String vpcStatus) {
                 this.vpcStatus = vpcStatus;
@@ -544,7 +620,7 @@ public class DescribeVpcHoneyPotListResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the vSwitches in the VPC.
+             * <p>An array that consists of the vSwitches in the VPC.</p>
              */
             public Builder vpcSwitchIdList(java.util.List < VpcSwitchIdList> vpcSwitchIdList) {
                 this.vpcSwitchIdList = vpcSwitchIdList;

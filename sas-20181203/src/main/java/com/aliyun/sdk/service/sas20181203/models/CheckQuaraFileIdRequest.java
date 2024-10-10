@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckQuaraFileIdRequest} extends {@link RequestModel}
  *
  * <p>CheckQuaraFileIdRequest</p>
@@ -69,10 +70,11 @@ public class CheckQuaraFileIdRequest extends Request {
         } 
 
         /**
-         * The IDs of quarantined files that you want to check.
-         * <p>
-         * 
-         * >  You can call the [DescribeSuspEventQuaraFiles](~~DescribeSuspEventQuaraFiles~~) operation to query the IDs of quarantined files.
+         * <p>The IDs of quarantined files that you want to check.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> operation to query the IDs of quarantined files.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder quaraFileIds(java.util.List < String > quaraFileIds) {
             this.putQueryParameter("QuaraFileIds", quaraFileIds);
@@ -81,10 +83,14 @@ public class CheckQuaraFileIdRequest extends Request {
         }
 
         /**
-         * The UUID of the server on which you want to check quarantined files.
-         * <p>
+         * <p>The UUID of the server on which you want to check quarantined files.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

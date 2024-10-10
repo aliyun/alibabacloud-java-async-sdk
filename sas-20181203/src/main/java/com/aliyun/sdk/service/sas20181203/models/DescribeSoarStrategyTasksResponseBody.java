@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarStrategyTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSoarStrategyTasksResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The policy tasks.
+         * <p>The policy tasks.</p>
          */
         public Builder soarStrategyTasks(java.util.List < SoarStrategyTasks> soarStrategyTasks) {
             this.soarStrategyTasks = soarStrategyTasks;
@@ -117,7 +127,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSoarStrategyTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSoarStrategyTasksResponseBody</p>
+     */
     public static class SoarStrategyTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailedNum")
         private Integer failedNum;
@@ -277,7 +296,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             private Integer totalNum; 
 
             /**
-             * The number of execution failures.
+             * <p>The number of execution failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder failedNum(Integer failedNum) {
                 this.failedNum = failedNum;
@@ -285,7 +307,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the policy task was created. Unit: milliseconds.
+             * <p>The timestamp when the policy task was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708481235000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -293,7 +318,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the policy task was complete. Unit: milliseconds.
+             * <p>The timestamp when the policy task was complete. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1586739841000</p>
              */
             public Builder gmtFinish(Long gmtFinish) {
                 this.gmtFinish = gmtFinish;
@@ -301,7 +329,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the policy task was modified. Unit: milliseconds.
+             * <p>The timestamp when the policy task was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669869436000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -309,7 +340,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy task.
+             * <p>The ID of the policy task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5374</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -317,7 +351,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy task.
+             * <p>The name of the policy task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>strategy_name01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -325,10 +362,13 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode. Valid values:
-             * <p>
+             * <p>The execution mode. Valid values:</p>
+             * <ul>
+             * <li>runmode_TRIGGER_BY_USER: manually executed</li>
+             * </ul>
              * 
-             * *   runmode_TRIGGER_BY_USER: manually executed
+             * <strong>example:</strong>
+             * <p>runmode_TRIGGER_BY_USER</p>
              */
             public Builder runMode(String runMode) {
                 this.runMode = runMode;
@@ -336,15 +376,18 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the policy task. Valid values:
-             * <p>
+             * <p>The status of the policy task. Valid values:</p>
+             * <ul>
+             * <li>-1: waiting</li>
+             * <li>0: starting</li>
+             * <li>1: running</li>
+             * <li>2: finished</li>
+             * <li>3: schedule</li>
+             * <li>4: pause</li>
+             * </ul>
              * 
-             * *   \-1: waiting
-             * *   0: starting
-             * *   1: running
-             * *   2: finished
-             * *   3: schedule
-             * *   4: pause
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -352,7 +395,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -360,7 +406,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of successful executions.
+             * <p>The number of successful executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder successNum(Integer successNum) {
                 this.successNum = successNum;
@@ -368,7 +417,10 @@ public class DescribeSoarStrategyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of executions.
+             * <p>The total number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;

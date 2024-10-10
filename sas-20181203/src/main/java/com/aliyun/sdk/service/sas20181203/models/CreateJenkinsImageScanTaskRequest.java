@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJenkinsImageScanTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateJenkinsImageScanTaskRequest</p>
@@ -207,7 +208,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         } 
 
         /**
-         * The digest of the image.
+         * <p>The digest of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a8c9f3765684cd8d9053db9523eab58878e99a199217500efd9ae2a860a7e01e</p>
          */
         public Builder digest(String digest) {
             this.putBodyParameter("Digest", digest);
@@ -216,7 +220,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The time when the image was created.
+         * <p>The time when the image was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717430400000</p>
          */
         public Builder imageCreate(Long imageCreate) {
             this.putBodyParameter("ImageCreate", imageCreate);
@@ -225,7 +232,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b10ef7b245c34a0822055c74fc4a0e8b5baf0279306316b2c517a501ed250b1e</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -234,7 +244,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The size of the image. Unit: bytes.
+         * <p>The size of the image. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6120340</p>
          */
         public Builder imageSize(Long imageSize) {
             this.putBodyParameter("ImageSize", imageSize);
@@ -243,7 +256,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The time when the image was updated.
+         * <p>The time when the image was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717430498600</p>
          */
         public Builder imageUpdate(Long imageUpdate) {
             this.putBodyParameter("ImageUpdate", imageUpdate);
@@ -252,7 +268,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The information about the Jenkins environment.
+         * <p>The information about the Jenkins environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release</p>
          */
         public Builder jenkinsEnv(String jenkinsEnv) {
             this.putQueryParameter("JenkinsEnv", jenkinsEnv);
@@ -261,7 +280,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lkl-zf-ss-ccss</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -270,7 +292,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
+         * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdk</p>
          */
         public Builder repoName(String repoName) {
             this.putBodyParameter("RepoName", repoName);
@@ -279,7 +304,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>119.136.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -288,7 +316,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The tag of the image.
+         * <p>The tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00f597223f-20210831-1</p>
          */
         public Builder tag(String tag) {
             this.putBodyParameter("Tag", tag);
@@ -297,7 +328,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The token that is used to access the Jenkins image repository.
+         * <p>The token that is used to access the Jenkins image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c3de8326-273e-11fc-a0e3-d012435c****</p>
          */
         public Builder token(String token) {
             this.putBodyParameter("Token", token);
@@ -306,7 +340,10 @@ public class CreateJenkinsImageScanTaskRequest extends Request {
         }
 
         /**
-         * The UUID of the image asset.
+         * <p>The UUID of the image asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b268326-273e-44fc-a0e3-9482435c****</p>
          */
         public Builder uuid(String uuid) {
             this.putBodyParameter("Uuid", uuid);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScreenScoreThreadResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScreenScoreThreadResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScreenScoreThreadResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScreenScoreThreadResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SocreThread")
         private java.util.List < String > socreThread;
@@ -109,7 +119,7 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
             private java.util.List < String > socreThreadDate; 
 
             /**
-             * The trends of the scores on the security dashboard.
+             * <p>The trends of the scores on the security dashboard.</p>
              */
             public Builder socreThread(java.util.List < String > socreThread) {
                 this.socreThread = socreThread;
@@ -117,7 +127,7 @@ public class DescribeScreenScoreThreadResponseBody extends TeaModel {
             }
 
             /**
-             * The dates of the scores on the security dashboard.
+             * <p>The dates of the scores on the security dashboard.</p>
              */
             public Builder socreThreadDate(java.util.List < String > socreThreadDate) {
                 this.socreThreadDate = socreThreadDate;

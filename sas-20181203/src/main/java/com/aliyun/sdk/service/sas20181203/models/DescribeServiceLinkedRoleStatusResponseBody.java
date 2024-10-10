@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeServiceLinkedRoleStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeServiceLinkedRoleStatusResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
         private RoleStatus roleStatus; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39CE98F4-88C0-4539-B906-6B542E5C07B9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status information about the service-linked role.
+         * <p>The status information about the service-linked role.</p>
          */
         public Builder roleStatus(RoleStatus roleStatus) {
             this.roleStatus = roleStatus;
@@ -70,6 +74,12 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeServiceLinkedRoleStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeServiceLinkedRoleStatusResponseBody</p>
+     */
     public static class RoleStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
@@ -97,11 +107,14 @@ public class DescribeServiceLinkedRoleStatusResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * Indicates whether the service-linked role is created. Valid values:
-             * <p>
+             * <p>Indicates whether the service-linked role is created. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

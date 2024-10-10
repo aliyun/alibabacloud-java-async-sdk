@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStrategyDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStrategyDetailResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         private Strategy strategy; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C5B28F65-9245-5DC1-B3CF-5F2756A756A8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the baseline check policy.
+         * <p>The information about the baseline check policy.</p>
          */
         public Builder strategy(Strategy strategy) {
             this.strategy = strategy;
@@ -70,6 +74,12 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStrategyDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStrategyDetailResponseBody</p>
+     */
     public static class ParamList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnumValue")
         private String enumValue;
@@ -181,7 +191,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The options that can be selected for the rule parameter if the value of ParamType is set to 2.
+             * <p>The options that can be selected for the rule parameter if the value of ParamType is set to 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0,1,2,3</p>
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -189,7 +202,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value of the rule parameter.
+             * <p>The maximum value of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>999</p>
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -197,7 +213,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value of the rule parameter.
+             * <p>The minimum value of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -205,7 +224,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the rule parameter.
+             * <p>The default value of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder paramDefaultValue(String paramDefaultValue) {
                 this.paramDefaultValue = paramDefaultValue;
@@ -213,7 +235,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule parameter.
+             * <p>The description of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The setting value is 0 means no definition, 1 means success, 2 means failure, 3 means success and failure</p>
              */
             public Builder paramDesc(String paramDesc) {
                 this.paramDesc = paramDesc;
@@ -221,7 +246,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule parameter.
+             * <p>The name of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>range_val</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -229,11 +257,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule parameter. Valid values:
-             * <p>
+             * <p>The type of the rule parameter. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: input</li>
+             * <li><strong>2</strong>: selection</li>
+             * </ul>
              * 
-             * *   **1**: input
-             * *   **2**: selection
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder paramType(Integer paramType) {
                 this.paramType = paramType;
@@ -241,7 +272,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configured value of the rule parameter.
+             * <p>The configured value of the rule parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -255,6 +289,12 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStrategyDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStrategyDetailResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private Integer defaultValue;
@@ -330,7 +370,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String ruleId; 
 
             /**
-             * The default value of the rule.
+             * <p>The default value of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder defaultValue(Integer defaultValue) {
                 this.defaultValue = defaultValue;
@@ -338,11 +381,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule can be selected. Valid values:
-             * <p>
+             * <p>Indicates whether the rule can be selected. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder optional(Integer optional) {
                 this.optional = optional;
@@ -350,7 +396,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The rule parameters.
+             * <p>The rule parameters.</p>
              */
             public Builder paramList(java.util.List < ParamList> paramList) {
                 this.paramList = paramList;
@@ -358,7 +404,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Please customize the password expiration time detection standard as</p>
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -366,7 +415,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_unlock_deny_pam_faillock.must.cus</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -380,6 +432,12 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStrategyDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStrategyDetailResponseBody</p>
+     */
     public static class CheckDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckDesc")
         private String checkDesc;
@@ -443,7 +501,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * The description of the check item.
+             * <p>The description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Set password expiration time, force regular modification of password, reduce password leakage and guess risk.Use non-password login (e.g. key pair) please ignore this item.</p>
              */
             public Builder checkDesc(String checkDesc) {
                 this.checkDesc = checkDesc;
@@ -451,7 +512,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>206</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -459,7 +523,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The check item.
+             * <p>The check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ensure password expiration period is set.</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -467,7 +534,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of rules.
+             * <p>The details of rules.</p>
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -481,6 +548,12 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStrategyDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStrategyDetailResponseBody</p>
+     */
     public static class SubTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -556,7 +629,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * The alias of the check item.
+             * <p>The alias of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Redis unauthorized access high exploit vulnerability risk</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -564,7 +640,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of custom check items.
+             * <p>The details of custom check items.</p>
              */
             public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
@@ -572,11 +648,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the sub-check item is selected. Valid values:
-             * <p>
+             * <p>Indicates whether the sub-check item is selected. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder on(Boolean on) {
                 this.on = on;
@@ -584,10 +663,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the server. Valid values:
-             * <p>
-             * *   **windows**
-             * *   **linux**
+             * <p>The operating system type of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong></li>
+             * <li><strong>linux</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder supportedOs(String supportedOs) {
                 this.supportedOs = supportedOs;
@@ -595,7 +678,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the sub-check item.
+             * <p>The type of the sub-check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc_exploit_redis</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -609,6 +695,12 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStrategyDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStrategyDetailResponseBody</p>
+     */
     public static class RiskTypeWhiteListQueryResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -672,7 +764,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String typeName; 
 
             /**
-             * The alias of the check item.
+             * <p>The alias of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unauthorized Access</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -680,11 +775,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the check item is selected. Valid values:
-             * <p>
+             * <p>Indicates whether the check item is selected. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder on(Boolean on) {
                 this.on = on;
@@ -692,7 +790,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about sub-check items.
+             * <p>The information about sub-check items.</p>
              */
             public Builder subTypes(java.util.List < SubTypes> subTypes) {
                 this.subTypes = subTypes;
@@ -700,7 +798,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc_exploit</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -714,6 +815,12 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStrategyDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStrategyDetailResponseBody</p>
+     */
     public static class Strategy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomType")
         private String customType;
@@ -861,11 +968,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private Integer type; 
 
             /**
-             * The type of the baseline check policy that you want to query. Valid values:
-             * <p>
+             * <p>The type of the baseline check policy that you want to query. Valid values:</p>
+             * <ul>
+             * <li><strong>common</strong>: standard baseline check policy</li>
+             * <li><strong>custom</strong>: custom baseline check policy</li>
+             * </ul>
              * 
-             * *   **common**: standard baseline check policy
-             * *   **custom**: custom baseline check policy
+             * <strong>example:</strong>
+             * <p>common</p>
              */
             public Builder customType(String customType) {
                 this.customType = customType;
@@ -873,7 +983,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The check interval of the policy.
+             * <p>The check interval of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder cycleDays(Integer cycleDays) {
                 this.cycleDays = cycleDays;
@@ -881,13 +994,16 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time period during which the check starts. Valid values:
-             * <p>
+             * <p>The time period during which the check starts. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: 00:00 to 06:00</li>
+             * <li><strong>6</strong>: 06:00 to 12:00</li>
+             * <li><strong>12</strong>: 12:00 to 18:00</li>
+             * <li><strong>18</strong>: 18:00 to 24:00</li>
+             * </ul>
              * 
-             * *   **0**: 00:00 to 06:00
-             * *   **6**: 06:00 to 12:00
-             * *   **12**: 12:00 to 18:00
-             * *   **18**: 18:00 to 24:00
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cycleStartTime(Integer cycleStartTime) {
                 this.cycleStartTime = cycleStartTime;
@@ -895,7 +1011,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the check. Specify the time in the HH:mm:ss format.
+             * <p>The end time of the check. Specify the time in the HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -903,7 +1022,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the baseline check policy.
+             * <p>The ID of the baseline check policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -911,7 +1033,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline check policy.
+             * <p>The name of the baseline check policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestStrategy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -919,10 +1044,13 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the baselines. 
-             * <p>
+             * <p>The subtype of the baselines. </p>
+             * <blockquote>
+             * <p>You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the subtypes of baselines.</p>
+             * </blockquote>
              * 
-             * > You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the subtypes of baselines.
+             * <strong>example:</strong>
+             * <p>hc_nginx_linux,tomcat7,hc_mysql_ali,hc_docker</p>
              */
             public Builder riskSubTypeName(String riskSubTypeName) {
                 this.riskSubTypeName = riskSubTypeName;
@@ -930,7 +1058,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the whitelist of risk items.
+             * <p>The information about the whitelist of risk items.</p>
              */
             public Builder riskTypeWhiteListQueryResultList(java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList) {
                 this.riskTypeWhiteListQueryResultList = riskTypeWhiteListQueryResultList;
@@ -938,7 +1066,10 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the check. Specify the time in the HH:mm:ss format.
+             * <p>The start time of the check. Specify the time in the HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -946,11 +1077,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to apply the baseline check policy. Valid values:
-             * <p>
+             * <p>The method that is used to apply the baseline check policy. Valid values:</p>
+             * <ul>
+             * <li><strong>groupId</strong>: asset groups</li>
+             * <li><strong>uuid</strong>: assets</li>
+             * </ul>
              * 
-             * *   **groupId**: asset groups
-             * *   **uuid**: assets
+             * <strong>example:</strong>
+             * <p>groupId</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -958,11 +1092,14 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the baseline check policy. Valid values:
-             * <p>
+             * <p>The type of the baseline check policy. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: standard policies</li>
+             * <li><strong>2</strong>: custom policies</li>
+             * </ul>
              * 
-             * *   **1**: standard policies
-             * *   **2**: custom policies
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder type(Integer type) {
                 this.type = type;

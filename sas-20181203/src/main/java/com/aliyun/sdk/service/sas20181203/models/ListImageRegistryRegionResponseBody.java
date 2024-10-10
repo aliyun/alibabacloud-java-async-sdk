@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImageRegistryRegionResponseBody} extends {@link TeaModel}
  *
  * <p>ListImageRegistryRegionResponseBody</p>
@@ -49,7 +50,7 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of regions.
+         * <p>An array that consists of regions.</p>
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291B49F9-1685-4005-9D34-606B6F78****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImageRegistryRegionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImageRegistryRegionResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -109,7 +119,10 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
             private String regionName; 
 
             /**
-             * The region ID of the image.
+             * <p>The region ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -117,7 +130,10 @@ public class ListImageRegistryRegionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

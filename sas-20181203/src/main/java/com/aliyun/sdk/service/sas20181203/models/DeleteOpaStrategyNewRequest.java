@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteOpaStrategyNewRequest} extends {@link RequestModel}
  *
  * <p>DeleteOpaStrategyNewRequest</p>
@@ -53,7 +54,7 @@ public class DeleteOpaStrategyNewRequest extends Request {
         } 
 
         /**
-         * The IDs of rules.
+         * <p>The IDs of rules.</p>
          */
         public Builder strategyIds(java.util.List < Long > strategyIds) {
             this.putQueryParameter("StrategyIds", strategyIds);

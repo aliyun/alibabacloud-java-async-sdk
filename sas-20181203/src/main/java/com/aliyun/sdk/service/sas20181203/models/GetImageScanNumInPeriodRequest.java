@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetImageScanNumInPeriodRequest} extends {@link RequestModel}
  *
  * <p>GetImageScanNumInPeriodRequest</p>
@@ -54,7 +55,11 @@ public class GetImageScanNumInPeriodRequest extends Request {
         } 
 
         /**
-         * The number of days.
+         * <p>The number of days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder pastDay(String pastDay) {
             this.putQueryParameter("PastDay", pastDay);

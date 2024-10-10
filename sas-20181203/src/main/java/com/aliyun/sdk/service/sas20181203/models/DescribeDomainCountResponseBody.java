@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainCountResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         private Integer totalDomainsCount; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +85,10 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of root domains.
+         * <p>The number of root domains.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder rootDomainsCount(Integer rootDomainsCount) {
             this.rootDomainsCount = rootDomainsCount;
@@ -89,7 +96,10 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         }
 
         /**
-         * The number of subdomains.
+         * <p>The number of subdomains.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder subDomainsCount(Integer subDomainsCount) {
             this.subDomainsCount = subDomainsCount;
@@ -97,7 +107,10 @@ public class DescribeDomainCountResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalDomainsCount(Integer totalDomainsCount) {
             this.totalDomainsCount = totalDomainsCount;

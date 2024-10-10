@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceCatalogRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceCatalogRequest</p>
@@ -109,11 +110,14 @@ public class ListInstanceCatalogRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -122,11 +126,14 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * The ID of the region in which the asset resides. Valid values:
-         * <p>
+         * <p>The ID of the region in which the asset resides. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: International</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: International
-         * *   **ap-southeast-1**: Singapore
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -135,7 +142,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * The IDs of requirement items.
+         * <p>The IDs of requirement items.</p>
          */
         public Builder requirementIds(java.util.List < Long > requirementIds) {
             this.putQueryParameter("RequirementIds", requirementIds);
@@ -144,7 +151,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * The IDs of standards.
+         * <p>The IDs of standards.</p>
          */
         public Builder standardIds(java.util.List < Long > standardIds) {
             this.putQueryParameter("StandardIds", standardIds);
@@ -153,7 +160,7 @@ public class ListInstanceCatalogRequest extends Request {
         }
 
         /**
-         * The types of check standards.
+         * <p>The types of check standards.</p>
          */
         public Builder types(java.util.List < String > types) {
             this.putQueryParameter("Types", types);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateImageEventOperationRequest} extends {@link RequestModel}
  *
  * <p>UpdateImageEventOperationRequest</p>
@@ -67,7 +68,10 @@ public class UpdateImageEventOperationRequest extends Request {
         } 
 
         /**
-         * The ID of the alert handling rule.
+         * <p>The ID of the alert handling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>814163</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -76,11 +80,14 @@ public class UpdateImageEventOperationRequest extends Request {
         }
 
         /**
-         * The application scope of the rule. The value is in the JSON format. Valid values:
-         * <p>
+         * <p>The application scope of the rule. The value is in the JSON format. Valid values:</p>
+         * <ul>
+         * <li><strong>type</strong></li>
+         * <li><strong>value</strong></li>
+         * </ul>
          * 
-         * *   **type**
-         * *   **value**
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;: &quot;repo&quot;, &quot;value&quot;: &quot;test-aaa/shenzhen-repo-01&quot;}</p>
          */
         public Builder scenarios(String scenarios) {
             this.putQueryParameter("Scenarios", scenarios);

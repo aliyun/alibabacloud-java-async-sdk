@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUniBackupPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUniBackupPoliciesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
         private java.util.List < UniBackupPolicies> uniBackupPolicies; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACF97412-FD09-4D1F-994F-34DF12BR****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the anti-ransomware policies.
+         * <p>An array that consists of the anti-ransomware policies.</p>
          */
         public Builder uniBackupPolicies(java.util.List < UniBackupPolicies> uniBackupPolicies) {
             this.uniBackupPolicies = uniBackupPolicies;
@@ -90,6 +94,12 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUniBackupPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUniBackupPoliciesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUniBackupPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUniBackupPoliciesResponseBody</p>
+     */
     public static class UniBackupPolicies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentErrorMessage")
         private String agentErrorMessage;
@@ -410,7 +438,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             private String uniRegionId; 
 
             /**
-             * The error message for the anti-ransomware agent.
+             * <p>The error message for the anti-ransomware agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALL_TIMEOUT</p>
              */
             public Builder agentErrorMessage(String agentErrorMessage) {
                 this.agentErrorMessage = agentErrorMessage;
@@ -418,13 +449,16 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the agent. Valid values:
-             * <p>
+             * <p>The status of the agent. Valid values:</p>
+             * <ul>
+             * <li><strong>UNKNOWN</strong></li>
+             * <li><strong>INSTALLED</strong></li>
+             * <li><strong>INSTALL_FAILED</strong></li>
+             * <li><strong>UNINSTALL_FAILED</strong></li>
+             * </ul>
              * 
-             * *   **UNKNOWN**
-             * *   **INSTALLED**
-             * *   **INSTALL_FAILED**
-             * *   **UNINSTALL_FAILED**
+             * <strong>example:</strong>
+             * <p>INSTALLED</p>
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -432,7 +466,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc123</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -440,12 +477,15 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. Valid values:
-             * <p>
+             * <p>The type of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>MYSQL</strong></li>
+             * <li><strong>MSSQL</strong></li>
+             * <li><strong>Oracle</strong></li>
+             * </ul>
              * 
-             * *   **MYSQL**
-             * *   **MSSQL**
-             * *   **Oracle**
+             * <strong>example:</strong>
+             * <p>MYSQL</p>
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
@@ -453,7 +493,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned when the backup task fails.
+             * <p>The error code returned when the backup task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXPIRED</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -461,7 +504,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message for the anti-ransomware policy.
+             * <p>The error message for the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AttachRamRoleError</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -469,7 +515,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-9dp7mubt5wit6g0h****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -477,7 +526,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-001</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -485,11 +537,14 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Elastic Compute Service (ECS) instance. Valid values:
-             * <p>
+             * <p>The status of the Elastic Compute Service (ECS) instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Stopped</strong></li>
+             * <li><strong>Running</strong></li>
+             * </ul>
              * 
-             * *   **Stopped**
-             * *   **Running**
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -497,7 +552,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the agent that is used to back up the data of the database.
+             * <p>The UUID of the agent that is used to back up the data of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cf1bcad4063f11ed800000163e0e****</p>
              */
             public Builder instanceUuid(String instanceUuid) {
                 this.instanceUuid = instanceUuid;
@@ -505,7 +563,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the last backup task.
+             * <p>The execution result of the last backup task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>completed</p>
              */
             public Builder latestBackResult(String latestBackResult) {
                 this.latestBackResult = latestBackResult;
@@ -513,7 +574,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last backup task was executed.
+             * <p>The time when the last backup task was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-01 00:00:11</p>
              */
             public Builder latestBackupTime(String latestBackupTime) {
                 this.latestBackupTime = latestBackupTime;
@@ -521,15 +585,18 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the backup task. Valid values:
-             * <p>
+             * <p>The status of the backup task. Valid values:</p>
+             * <ul>
+             * <li><strong>init</strong></li>
+             * <li><strong>running</strong></li>
+             * <li><strong>completed</strong></li>
+             * <li><strong>restoring</strong></li>
+             * <li><strong>creating</strong></li>
+             * <li><strong>created</strong></li>
+             * </ul>
              * 
-             * *   **init**
-             * *   **running**
-             * *   **completed**
-             * *   **restoring**
-             * *   **creating**
-             * *   **created**
+             * <strong>example:</strong>
+             * <p>creating</p>
              */
             public Builder planStatus(String planStatus) {
                 this.planStatus = planStatus;
@@ -537,7 +604,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware policy.
+             * <p>The ID of the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -545,7 +615,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the anti-ransomware policy.
+             * <p>The name of the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto_oracle_37f</p>
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -553,15 +626,18 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the anti-ransomware policy. Valid values:
-             * <p>
+             * <p>The status of the anti-ransomware policy. Valid values:</p>
+             * <ul>
+             * <li><strong>initiating</strong></li>
+             * <li><strong>opening</strong></li>
+             * <li><strong>closing</strong></li>
+             * <li><strong>deleting</strong></li>
+             * <li><strong>enabled</strong></li>
+             * <li><strong>disabled</strong></li>
+             * </ul>
              * 
-             * *   **initiating**
-             * *   **opening**
-             * *   **closing**
-             * *   **deleting**
-             * *   **enabled**
-             * *   **disabled**
+             * <strong>example:</strong>
+             * <p>opening</p>
              */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;
@@ -569,7 +645,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the server that hosts the database.
+             * <p>The region ID of the server that hosts the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder uniRegionId(String uniRegionId) {
                 this.uniRegionId = uniRegionId;

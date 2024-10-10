@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlarmEventStackInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeAlarmEventStackInfoRequest</p>
@@ -126,10 +127,14 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         } 
 
         /**
-         * The name of the event.
-         * <p>
+         * <p>The name of the event.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the names of events.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the names of events.
+         * <strong>example:</strong>
+         * <p>Mining program</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -138,11 +143,14 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,10 +159,13 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -163,7 +174,10 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -172,7 +186,11 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * The ID of the alert event.
+         * <p>The ID of the alert event.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1fbe8d16727f61d1478a674d6fa0****</p>
          */
         public Builder uniqueInfo(String uniqueInfo) {
             this.putQueryParameter("UniqueInfo", uniqueInfo);
@@ -181,10 +199,14 @@ public class DescribeAlarmEventStackInfoRequest extends Request {
         }
 
         /**
-         * The UUID of the server to query.
-         * <p>
+         * <p>The UUID of the server to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>18b7336e-d469-473b-af83-8e5420f9****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

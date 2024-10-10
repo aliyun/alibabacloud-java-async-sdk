@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSupervisonInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSupervisonInfoResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeSupervisonInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The time of the last system vulnerability scan. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The time of the last system vulnerability scan. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721134553000</p>
          */
         public Builder latestScanTime(Long latestScanTime) {
             this.latestScanTime = latestScanTime;
@@ -57,7 +61,10 @@ public class DescribeSupervisonInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E10BAF1C-A6C5-51E2-866C-76D5922E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

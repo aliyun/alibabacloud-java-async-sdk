@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventOnStageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventOnStageResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
         private SecurityEventStageResponse securityEventStageResponse; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E332241XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
         }
 
         /**
-         * The platforms that are supported by the feature of container threat detection.
+         * <p>The platforms that are supported by the feature of container threat detection.</p>
          */
         public Builder securityEventStageResponse(SecurityEventStageResponse securityEventStageResponse) {
             this.securityEventStageResponse = securityEventStageResponse;
@@ -70,6 +74,12 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventOnStageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventOnStageResponseBody</p>
+     */
     public static class SecurityEventStageResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityEventOnStag")
         private java.util.Map < String, ? > securityEventOnStag;
@@ -97,12 +107,12 @@ public class DescribeEventOnStageResponseBody extends TeaModel {
             private java.util.Map < String, ? > securityEventOnStag; 
 
             /**
-             * The platform that is supported by the feature of container threat detection. Valid values:
-             * <p>
-             * 
-             * *   **container**
-             * *   **linux**
-             * *   **windows**
+             * <p>The platform that is supported by the feature of container threat detection. Valid values:</p>
+             * <ul>
+             * <li><strong>container</strong></li>
+             * <li><strong>linux</strong></li>
+             * <li><strong>windows</strong></li>
+             * </ul>
              */
             public Builder securityEventOnStag(java.util.Map < String, ? > securityEventOnStag) {
                 this.securityEventOnStag = securityEventOnStag;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAccountLabelResponseBody} extends {@link TeaModel}
  *
  * <p>GetAccountLabelResponseBody</p>
@@ -70,6 +71,12 @@ public class GetAccountLabelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAccountLabelResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAccountLabelResponseBody</p>
+     */
     public static class AccountLabelList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LabelSeries")
         private String labelSeries;

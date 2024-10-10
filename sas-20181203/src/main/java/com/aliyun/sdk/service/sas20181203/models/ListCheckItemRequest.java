@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCheckItemRequest} extends {@link RequestModel}
  *
  * <p>ListCheckItemRequest</p>
@@ -81,7 +82,10 @@ public class ListCheckItemRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -90,11 +94,14 @@ public class ListCheckItemRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid value:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid value:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -103,7 +110,10 @@ public class ListCheckItemRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

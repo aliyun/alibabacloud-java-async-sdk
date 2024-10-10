@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RebootMachineRequest} extends {@link RequestModel}
  *
  * <p>RebootMachineRequest</p>
@@ -54,10 +55,14 @@ public class RebootMachineRequest extends Request {
         } 
 
         /**
-         * The UUID of the server that you want to restart.
-         * <p>
+         * <p>The UUID of the server that you want to restart.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>7151f27e-1d51-4e98-a540-8936a****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

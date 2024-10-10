@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAgentInstallStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAgentInstallStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of servers.
+         * <p>The status of servers.</p>
          */
         public Builder aegisClientInvokeStatusResponseList(java.util.List < AegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList) {
             this.aegisClientInvokeStatusResponseList = aegisClientInvokeStatusResponseList;
@@ -57,7 +58,10 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAgentInstallStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAgentInstallStatusResponseBody</p>
+     */
     public static class AegisClientInvokeStatusResponseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -133,7 +143,10 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The returned message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Installed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -141,30 +154,33 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The installation status. Valid value:
-             * <p>
+             * <p>The installation status. Valid value:</p>
+             * <ul>
+             * <li><strong>-1</strong>: The agent is not installed.</li>
+             * <li><strong>0</strong>: The agent is installed.</li>
+             * <li><strong>1</strong>: Failed to create a directory in the client.</li>
+             * <li><strong>2</strong>: Failed to download the installation package.</li>
+             * <li><strong>3</strong>: The installation file does not exist.</li>
+             * <li><strong>4</strong>: The verification information of the installation file does not exist.</li>
+             * <li><strong>5</strong>: Failed to verify the installation file.</li>
+             * <li><strong>6</strong>: Failed to execute the installation file.</li>
+             * <li><strong>7</strong>: You do not have the required permissions. The installation failed.</li>
+             * <li><strong>8</strong>: No client process is detected.</li>
+             * <li><strong>100</strong>: The installation failed due to an unknown error.</li>
+             * <li><strong>1001</strong>: The installation failed. One-click installation is not supported in this region.</li>
+             * <li><strong>1002</strong>: The installation failed. Servers that are not provided by Alibaba Cloud are not supported. Install the agent by executing a script on the server.</li>
+             * <li><strong>1003</strong>: The installation failed. The operating system is not supported.</li>
+             * <li><strong>1004</strong>: An internal error occurred. Try again later.</li>
+             * <li><strong>1005</strong>: The Elastic Compute Service (ECS) instance is not started. Start the ECS instance and try again.</li>
+             * <li><strong>1006</strong>: One-click installation is not supported for ECS instances of the classic network type.</li>
+             * <li><strong>1007</strong>: The running command is manually stopped.</li>
+             * <li><strong>1008</strong>: Cloud Assistant is not installed. You cannot install the client.</li>
+             * <li><strong>1009</strong>: The command execution timed out. Try again later.</li>
+             * <li><strong>1010</strong>: The machine is already online. You do not need to install a client.</li>
+             * </ul>
              * 
-             * *   **-1**: The agent is not installed.
-             * *   **0**: The agent is installed.
-             * *   **1**: Failed to create a directory in the client.
-             * *   **2**: Failed to download the installation package.
-             * *   **3**: The installation file does not exist.
-             * *   **4**: The verification information of the installation file does not exist.
-             * *   **5**: Failed to verify the installation file.
-             * *   **6**: Failed to execute the installation file.
-             * *   **7**: You do not have the required permissions. The installation failed.
-             * *   **8**: No client process is detected.
-             * *   **100**: The installation failed due to an unknown error.
-             * *   **1001**: The installation failed. One-click installation is not supported in this region.
-             * *   **1002**: The installation failed. Servers that are not provided by Alibaba Cloud are not supported. Install the agent by executing a script on the server.
-             * *   **1003**: The installation failed. The operating system is not supported.
-             * *   **1004**: An internal error occurred. Try again later.
-             * *   **1005**: The Elastic Compute Service (ECS) instance is not started. Start the ECS instance and try again.
-             * *   **1006**: One-click installation is not supported for ECS instances of the classic network type.
-             * *   **1007**: The running command is manually stopped.
-             * *   **1008**: Cloud Assistant is not installed. You cannot install the client.
-             * *   **1009**: The command execution timed out. Try again later.
-             * *   **1010**: The machine is already online. You do not need to install a client.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resuleCode(String resuleCode) {
                 this.resuleCode = resuleCode;
@@ -172,13 +188,16 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The installation result. Valid value:
-             * <p>
+             * <p>The installation result. Valid value:</p>
+             * <ul>
+             * <li><strong>-1</strong>: The agent is not installed.</li>
+             * <li><strong>0</strong>: The agent is being installed.</li>
+             * <li><strong>1</strong>: The agent is installed.</li>
+             * <li><strong>2</strong>: The installation failed.</li>
+             * </ul>
              * 
-             * *   **-1**: The agent is not installed.
-             * *   **0**: The agent is being installed.
-             * *   **1**: The agent is installed.
-             * *   **2**: The installation failed.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder result(Integer result) {
                 this.result = result;
@@ -186,7 +205,10 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d123f6ae-9749-4338-8c7f-3c2c1ead****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

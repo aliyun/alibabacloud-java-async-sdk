@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListVulAutoRepairConfigRequest} extends {@link RequestModel}
  *
  * <p>ListVulAutoRepairConfigRequest</p>
@@ -96,7 +97,10 @@ public class ListVulAutoRepairConfigRequest extends Request {
         } 
 
         /**
-         * The alias of the vulnerability.
+         * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2022:0274-Important: polkit pkexec Local Privilege Escalation Vulnerability(CVE-2021-4034)</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -105,7 +109,10 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -114,7 +121,10 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,11 +133,14 @@ public class ListVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * </ul>
          * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

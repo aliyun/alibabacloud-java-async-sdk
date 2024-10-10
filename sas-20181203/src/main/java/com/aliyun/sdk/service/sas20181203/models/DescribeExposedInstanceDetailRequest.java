@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExposedInstanceDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeExposedInstanceDetailRequest</p>
@@ -68,10 +69,13 @@ public class DescribeExposedInstanceDetailRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -80,10 +84,14 @@ public class DescribeExposedInstanceDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server that is exposed on the Internet.
-         * <p>
+         * <p>The UUID of the server that is exposed on the Internet.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/198153.html">DescribeExposedInstanceList</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeExposedInstanceList](~~198153~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>fc82b966-4d70-4e01-bf4f-aa4076a5****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

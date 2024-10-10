@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUninstallClientsByUuidsResponseBody} extends {@link TeaModel}
  *
  * <p>AddUninstallClientsByUuidsResponseBody</p>
@@ -37,7 +38,10 @@ public class AddUninstallClientsByUuidsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3956048F-9D73-5EDB-834B-4827BB483977</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

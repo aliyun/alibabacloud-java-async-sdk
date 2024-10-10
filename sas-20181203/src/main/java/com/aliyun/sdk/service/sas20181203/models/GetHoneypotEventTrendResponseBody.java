@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetHoneypotEventTrendResponseBody} extends {@link TeaModel}
  *
  * <p>GetHoneypotEventTrendResponseBody</p>
@@ -109,7 +110,10 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -125,7 +132,7 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The list of data returned. ￼
+         * <p>The list of data returned. ￼</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -133,7 +140,10 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -141,7 +151,10 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +162,10 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21637690-9B21-5EEC-94DB-2A732480****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +173,14 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +193,12 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetHoneypotEventTrendResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetHoneypotEventTrendResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -225,7 +250,10 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
             private Long timeStamp; 
 
             /**
-             * The number of attacks that occurred.
+             * <p>The number of attacks that occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -233,7 +261,10 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the attack.
+             * <p>The name of the attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ATTACK_EVENT</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -241,7 +272,10 @@ public class GetHoneypotEventTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the attack event occurred.
+             * <p>The timestamp when the attack event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1686968163644</p>
              */
             public Builder timeStamp(Long timeStamp) {
                 this.timeStamp = timeStamp;

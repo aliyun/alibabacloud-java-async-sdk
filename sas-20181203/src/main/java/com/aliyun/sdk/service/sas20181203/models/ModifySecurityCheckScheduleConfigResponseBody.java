@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySecurityCheckScheduleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifySecurityCheckScheduleConfigResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifySecurityCheckScheduleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02287C0D-8DA9-5766-B51A-A63192BD3E80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

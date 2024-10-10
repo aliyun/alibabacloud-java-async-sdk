@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMaliciousFileWhitelistConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListMaliciousFileWhitelistConfigsResponseBody</p>
@@ -109,7 +110,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +121,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -125,7 +132,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The alert whitelist rules of sensitive files that are detected by using the agentless detection feature.
+         * <p>The alert whitelist rules of sensitive files that are detected by using the agentless detection feature.</p>
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -133,7 +140,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +151,7 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -149,7 +159,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +170,14 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +190,12 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMaliciousFileWhitelistConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMaliciousFileWhitelistConfigsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
@@ -321,10 +343,13 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             private String targetValue; 
 
             /**
-             * The number of the assets on which the rule takes effect.
-             * <p>
+             * <p>The number of the assets on which the rule takes effect.</p>
+             * <blockquote>
+             * <p> The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.</p>
+             * </blockquote>
              * 
-             * >  The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -332,10 +357,13 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert.
-             * <p>
+             * <p>The name of the alert.</p>
+             * <ul>
+             * <li>The value is fixed as ALL, which indicates all alert types.</li>
+             * </ul>
              * 
-             * *   The value is fixed as ALL, which indicates all alert types.
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -343,7 +371,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used in the whitelist rule.
+             * <p>The field that is used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileMd5</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -351,7 +382,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the field that is used in the whitelist rule.
+             * <p>The value of the field that is used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b2cf9747ee49d8d9b105cf16e078cc16</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -359,7 +393,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the rule was created.
+             * <p>The time when the rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1691719662000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -367,7 +404,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the rule was modified.
+             * <p>The time when the rule was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1691719662000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -375,7 +415,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -383,10 +426,13 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The logical operator of the whitelist rule.
-             * <p>
+             * <p>The logical operator of the whitelist rule.</p>
+             * <ul>
+             * <li>The value is fixed as strEqual, which indicates the equality operator (=).</li>
+             * </ul>
              * 
-             * *   The value is fixed as strEqual, which indicates the equality operator (=).
+             * <strong>example:</strong>
+             * <p>strEqual</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -394,10 +440,13 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The feature to which this operation belongs.
-             * <p>
+             * <p>The feature to which this operation belongs.</p>
+             * <ul>
+             * <li>The value is fixed as agentless, which indicates the agentless detection feature.</li>
+             * </ul>
              * 
-             * *   The value is fixed as agentless, which indicates the agentless detection feature.
+             * <strong>example:</strong>
+             * <p>agentless</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -405,11 +454,14 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the assets on which the rule takes effect. Valid values:
-             * <p>
+             * <p>The type of the assets on which the rule takes effect. Valid values:</p>
+             * <ul>
+             * <li>ALL: all assets</li>
+             * <li>SELECTION_KEY: selected assets</li>
+             * </ul>
              * 
-             * *   ALL: all assets
-             * *   SELECTION_KEY: selected assets
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -417,11 +469,14 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The assets on which the rule takes effect. Valid values:
-             * <p>
+             * <p>The assets on which the rule takes effect. Valid values:</p>
+             * <ul>
+             * <li>ALL: all assets</li>
+             * <li>Others: selected assets</li>
+             * </ul>
              * 
-             * *   ALL: all assets
-             * *   Others: selected assets
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;
@@ -435,6 +490,12 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMaliciousFileWhitelistConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMaliciousFileWhitelistConfigsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -498,7 +559,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -506,7 +570,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -514,7 +581,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -522,7 +592,10 @@ public class ListMaliciousFileWhitelistConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

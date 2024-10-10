@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileProtectEventCountRequest} extends {@link RequestModel}
  *
  * <p>GetFileProtectEventCountRequest</p>
@@ -53,11 +54,14 @@ public class GetFileProtectEventCountRequest extends Request {
         } 
 
         /**
-         * The status of the event. Valid values:
-         * <p>
+         * <p>The status of the event. Valid values:</p>
+         * <ul>
+         * <li>0: unhandled</li>
+         * <li>1: handled</li>
+         * </ul>
          * 
-         * *   0: unhandled
-         * *   1: handled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

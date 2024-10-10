@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetServiceTrailResponseBody} extends {@link TeaModel}
  *
  * <p>GetServiceTrailResponseBody</p>
@@ -49,7 +50,10 @@ public class GetServiceTrailResponseBody extends TeaModel {
         private ServiceTrail serviceTrail; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C699E4E4-F2F4-58FC-A949-457FFE59****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetServiceTrailResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the service trail.
+         * <p>The configurations of the service trail.</p>
          */
         public Builder serviceTrail(ServiceTrail serviceTrail) {
             this.serviceTrail = serviceTrail;
@@ -70,6 +74,12 @@ public class GetServiceTrailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetServiceTrailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceTrailResponseBody</p>
+     */
     public static class ServiceTrail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -121,11 +131,14 @@ public class GetServiceTrailResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The status of the service trail. Valid values:
-             * <p>
+             * <p>The status of the service trail. Valid values:</p>
+             * <ul>
+             * <li><strong>on:</strong></li>
+             * <li><strong>off:</strong></li>
+             * </ul>
              * 
-             * *   **on:**
-             * *   **off:**
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -133,7 +146,10 @@ public class GetServiceTrailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the service trail was created. Unit: milliseconds.
+             * <p>The timestamp generated when the service trail was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687250241000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -141,7 +157,10 @@ public class GetServiceTrailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the service trail was last updated. Unit: milliseconds.
+             * <p>The timestamp generated when the service trail was last updated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687250241000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

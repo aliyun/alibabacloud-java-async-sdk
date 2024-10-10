@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateSwitchStatusRequest} extends {@link RequestModel}
  *
  * <p>OperateSwitchStatusRequest</p>
@@ -69,10 +70,14 @@ public class OperateSwitchStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <blockquote>
+         * <p> You can call the ListContainerWebDefenseRule operation to query the IDs of rules.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the ListContainerWebDefenseRule operation to query the IDs of rules.
+         * <strong>example:</strong>
+         * <p>900001</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -81,7 +86,11 @@ public class OperateSwitchStatusRequest extends Request {
         }
 
         /**
-         * The status of the rule. Valid values: on and off.
+         * <p>The status of the rule. Valid values: on and off.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

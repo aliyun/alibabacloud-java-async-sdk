@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVulAutoRepairConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteVulAutoRepairConfigResponseBody</p>
@@ -37,7 +38,10 @@ public class DeleteVulAutoRepairConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3956048F-9D73-5EDB-834B-4827BB48****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

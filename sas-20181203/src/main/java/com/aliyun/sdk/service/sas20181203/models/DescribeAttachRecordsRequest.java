@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAttachRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAttachRecordsRequest</p>
@@ -68,7 +69,11 @@ public class DescribeAttachRecordsRequest extends Request {
         } 
 
         /**
-         * The application group ID.
+         * <p>The application group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64b8b994563c306b4fed****</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -77,7 +82,7 @@ public class DescribeAttachRecordsRequest extends Request {
         }
 
         /**
-         * The UUIDs of ECS instances to be queried.
+         * <p>The UUIDs of ECS instances to be queried.</p>
          */
         public Builder ecsUUIDList(java.util.List < String > ecsUUIDList) {
             this.putQueryParameter("EcsUUIDList", ecsUUIDList);

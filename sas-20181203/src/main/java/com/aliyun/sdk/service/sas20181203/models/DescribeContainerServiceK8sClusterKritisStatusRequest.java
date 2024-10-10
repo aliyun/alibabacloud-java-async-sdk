@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerServiceK8sClusterKritisStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerServiceK8sClusterKritisStatusRequest</p>
@@ -81,7 +82,10 @@ public class DescribeContainerServiceK8sClusterKritisStatusRequest extends Reque
         } 
 
         /**
-         * The ID of the cluster.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c0e9efc6dea5f41db93b7e977123c****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -99,7 +103,10 @@ public class DescribeContainerServiceK8sClusterKritisStatusRequest extends Reque
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>119.145.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

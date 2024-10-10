@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotAttackerSourceRequest} extends {@link RequestModel}
  *
  * <p>ListHoneypotAttackerSourceRequest</p>
@@ -137,7 +138,10 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -146,7 +150,10 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. This value is a timestamp.
+         * <p>The end of the time range to query. This value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1676945366221</p>
          */
         public Builder endTimeStamp(Long endTimeStamp) {
             this.putQueryParameter("EndTimeStamp", endTimeStamp);
@@ -155,11 +162,14 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -168,7 +178,10 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -177,7 +190,7 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * An array that consists of risk levels.
+         * <p>An array that consists of risk levels.</p>
          */
         public Builder riskLevelList(java.util.List < String > riskLevelList) {
             this.putQueryParameter("RiskLevelList", riskLevelList);
@@ -186,7 +199,10 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * The source IP address of the attack.
+         * <p>The source IP address of the attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>175.136.230.***</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);
@@ -195,7 +211,10 @@ public class ListHoneypotAttackerSourceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a timestamp.
+         * <p>The beginning of the time range to query. This value is a timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1674007632124</p>
          */
         public Builder startTimeStamp(Long startTimeStamp) {
             this.putQueryParameter("StartTimeStamp", startTimeStamp);

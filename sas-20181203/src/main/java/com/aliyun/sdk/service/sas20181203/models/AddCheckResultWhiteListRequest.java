@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCheckResultWhiteListRequest} extends {@link RequestModel}
  *
  * <p>AddCheckResultWhiteListRequest</p>
@@ -81,7 +82,7 @@ public class AddCheckResultWhiteListRequest extends Request {
         } 
 
         /**
-         * The IDs of the check items.
+         * <p>The IDs of the check items.</p>
          */
         public Builder checkIds(java.util.List < Long > checkIds) {
             this.putQueryParameter("CheckIds", checkIds);

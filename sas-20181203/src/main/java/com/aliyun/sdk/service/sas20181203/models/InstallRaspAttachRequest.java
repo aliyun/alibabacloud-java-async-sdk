@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallRaspAttachRequest} extends {@link RequestModel}
  *
  * <p>InstallRaspAttachRequest</p>
@@ -68,7 +69,11 @@ public class InstallRaspAttachRequest extends Request {
         } 
 
         /**
-         * The application group ID.
+         * <p>The application group ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64b8b994563c306b4fedxxxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -77,7 +82,7 @@ public class InstallRaspAttachRequest extends Request {
         }
 
         /**
-         * The UUIDs of ECS instances on which the RASP agent is to be installed.
+         * <p>The UUIDs of ECS instances on which the RASP agent is to be installed.</p>
          */
         public Builder ecsUUIDList(java.util.List < String > ecsUUIDList) {
             this.putQueryParameter("EcsUUIDList", ecsUUIDList);

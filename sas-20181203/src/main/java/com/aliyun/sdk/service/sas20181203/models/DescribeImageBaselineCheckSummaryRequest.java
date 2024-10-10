@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBaselineCheckSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageBaselineCheckSummaryRequest</p>
@@ -151,10 +152,13 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         } 
 
         /**
-         * The ID of the specified container cluster.
-         * <p>
+         * <p>The ID of the specified container cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the ID of the container cluster.
+         * <strong>example:</strong>
+         * <p>c60b77fe62093480db6164a3c2fa5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -163,7 +167,10 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * The search condition for the image baseline.
+         * <p>The search condition for the image baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unauthorized access</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -172,11 +179,14 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * The type of the search condition. Valid values:
-         * <p>
+         * <p>The type of the search condition. Valid values:</p>
+         * <ul>
+         * <li><strong>BaselineNameAlias</strong>: baseline name</li>
+         * <li><strong>BaselineClassAlias</strong>: baseline category</li>
+         * </ul>
          * 
-         * *   **BaselineNameAlias**: baseline name
-         * *   **BaselineClassAlias**: baseline category
+         * <strong>example:</strong>
+         * <p>BaselineNameAlias</p>
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -185,7 +195,10 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -194,11 +207,14 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -207,7 +223,10 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,12 +235,15 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * The severity of the image baseline that you want to query. Separate multiple severities with commas (,). Valid values:
-         * <p>
+         * <p>The severity of the image baseline that you want to query. Separate multiple severities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>low</strong></li>
+         * </ul>
          * 
-         * *   **high**
-         * *   **medium**
-         * *   **low**
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -230,7 +252,7 @@ public class DescribeImageBaselineCheckSummaryRequest extends Request {
         }
 
         /**
-         * The types of the assets that you want to scan.
+         * <p>The types of the assets that you want to scan.</p>
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

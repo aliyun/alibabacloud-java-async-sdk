@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddClientUserDefineRuleResponseBody} extends {@link TeaModel}
  *
  * <p>AddClientUserDefineRuleResponseBody</p>
@@ -49,7 +50,10 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
         private UserDefineRuleAddResult userDefineRuleAddResult; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>379a9b8f-107b-4630-9e95-2299a1ea****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The identifier of the custom defense rule.
+         * <p>The identifier of the custom defense rule.</p>
          */
         public Builder userDefineRuleAddResult(UserDefineRuleAddResult userDefineRuleAddResult) {
             this.userDefineRuleAddResult = userDefineRuleAddResult;
@@ -70,6 +74,12 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddClientUserDefineRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddClientUserDefineRuleResponseBody</p>
+     */
     public static class UserDefineRuleAddResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -121,7 +131,10 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
             private String switchId; 
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -129,12 +142,15 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
-             * <p>
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux</li>
+             * <li><strong>all</strong>: all types</li>
+             * </ul>
              * 
-             * *   **windows**: Windows
-             * *   **linux**: Linux
-             * *   **all**: all types
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -142,7 +158,10 @@ public class AddClientUserDefineRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The switch ID of the custom defense rule.
+             * <p>The switch ID of the custom defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER-DEFINE-RULE-SWITCH-TYPE_200****</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;

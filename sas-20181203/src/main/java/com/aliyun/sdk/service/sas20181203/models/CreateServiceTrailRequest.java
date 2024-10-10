@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceTrailRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceTrailRequest</p>
@@ -53,11 +54,14 @@ public class CreateServiceTrailRequest extends Request {
         } 
 
         /**
-         * The region ID of the instance. Valid values:
-         * <p>
+         * <p>The region ID of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: International</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: International
-         * *   **ap-southeast-1**: Singapore
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

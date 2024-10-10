@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAffectedAssetsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAffectedAssetsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the affected servers.
+         * <p>An array that consists of the affected servers.</p>
          */
         public Builder assetList(java.util.List < AssetList> assetList) {
             this.assetList = assetList;
@@ -69,7 +70,7 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42XXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAffectedAssetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAffectedAssetsResponseBody</p>
+     */
     public static class AssetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -177,7 +187,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -185,7 +198,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -193,7 +209,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -201,7 +220,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.0.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -209,7 +231,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of viruses detected on the server.
+             * <p>The number of viruses detected on the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskNum(Integer riskNum) {
                 this.riskNum = riskNum;
@@ -217,7 +242,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>947d7514-258a-4b47-9dde-9dxxxxxxxxxx</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -231,6 +259,12 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAffectedAssetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAffectedAssetsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -294,7 +328,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -302,7 +339,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -310,7 +350,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -318,7 +361,10 @@ public class DescribeAffectedAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

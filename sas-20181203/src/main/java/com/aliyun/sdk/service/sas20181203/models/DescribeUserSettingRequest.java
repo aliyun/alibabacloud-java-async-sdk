@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserSettingRequest} extends {@link RequestModel}
  *
  * <p>DescribeUserSettingRequest</p>
@@ -53,7 +54,10 @@ public class DescribeUserSettingRequest extends Request {
         } 
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58.248.87.10</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

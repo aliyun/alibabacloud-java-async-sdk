@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVersionConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeVersionConfigRequest</p>
@@ -67,10 +68,13 @@ public class DescribeVersionConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the Alibaba Cloud account that uses Security Center.
-         * <p>
+         * <p>The ID of the Alibaba Cloud account that uses Security Center.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> operation to query the IDs of Alibaba Cloud accounts.</p>
+         * </blockquote>
          * 
-         * >  You can call the [GetUser](~~28681~~) operation to query the IDs of Alibaba Cloud accounts.
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -79,7 +83,10 @@ public class DescribeVersionConfigRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

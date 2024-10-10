@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSearchConditionRequest} extends {@link RequestModel}
  *
  * <p>DeleteSearchConditionRequest</p>
@@ -82,10 +83,14 @@ public class DeleteSearchConditionRequest extends Request {
         } 
 
         /**
-         * The name of the frequently used search condition.
-         * <p>
+         * <p>The name of the frequently used search condition.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSearchCondition~~">DescribeSearchCondition</a> operation to query frequently used search conditions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeSearchCondition](~~DescribeSearchCondition~~) operation to query frequently used search conditions.
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -94,7 +99,10 @@ public class DeleteSearchConditionRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19.12.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -103,11 +111,14 @@ public class DeleteSearchConditionRequest extends Request {
         }
 
         /**
-         * The type of the asset. Default value: ecs. Valid values:
-         * <p>
+         * <p>The type of the asset. Default value: ecs. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</li>
+         * <li><strong>cloud_product</strong>: an Alibaba Cloud service.</li>
+         * </ul>
          * 
-         * *   **ecs**: an Elastic Compute Service (ECS) instance.
-         * *   **cloud_product**: an Alibaba Cloud service.
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRestoreJobsRequest} extends {@link RequestModel}
  *
  * <p>DescribeRestoreJobsRequest</p>
@@ -97,7 +98,11 @@ public class DescribeRestoreJobsRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -106,7 +111,10 @@ public class DescribeRestoreJobsRequest extends Request {
         }
 
         /**
-         * The unique identifier of the server on which the restoration task is run. For example, you can use the IP address or the name of the server.
+         * <p>The unique identifier of the server on which the restoration task is run. For example, you can use the IP address or the name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder machineRemark(String machineRemark) {
             this.putQueryParameter("MachineRemark", machineRemark);
@@ -115,7 +123,11 @@ public class DescribeRestoreJobsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,19 +136,22 @@ public class DescribeRestoreJobsRequest extends Request {
         }
 
         /**
-         * The status of the restoration task. Valid values:
-         * <p>
+         * <p>The status of the restoration task. Valid values:</p>
+         * <ul>
+         * <li><strong>RUNNING</strong>: The task is running.</li>
+         * <li><strong>COMPLETE</strong>: The task is complete.</li>
+         * <li><strong>FAILED</strong>: The task fails.</li>
+         * <li><strong>CANCELING</strong>: The task is being canceled.</li>
+         * <li><strong>CANCELED</strong>: The task is canceled.</li>
+         * <li><strong>PARTIAL_COMPLETE</strong>: The task is partially successful.</li>
+         * <li><strong>CREATED</strong>: The task is created but is not run.</li>
+         * <li><strong>EXPIRED</strong>: The task is not updated.</li>
+         * <li><strong>QUEUED</strong>: The task is waiting to be run.</li>
+         * <li><strong>CLIENT_DELETED</strong>: The task fails because the anti-ransomware agent is uninstalled.</li>
+         * </ul>
          * 
-         * *   **RUNNING**: The task is running.
-         * *   **COMPLETE**: The task is complete.
-         * *   **FAILED**: The task fails.
-         * *   **CANCELING**: The task is being canceled.
-         * *   **CANCELED**: The task is canceled.
-         * *   **PARTIAL_COMPLETE**: The task is partially successful.
-         * *   **CREATED**: The task is created but is not run.
-         * *   **EXPIRED**: The task is not updated.
-         * *   **QUEUED**: The task is waiting to be run.
-         * *   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

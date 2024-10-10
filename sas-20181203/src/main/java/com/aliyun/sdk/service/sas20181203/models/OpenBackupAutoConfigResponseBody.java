@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OpenBackupAutoConfigResponseBody} extends {@link TeaModel}
  *
  * <p>OpenBackupAutoConfigResponseBody</p>
@@ -37,7 +38,10 @@ public class OpenBackupAutoConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADE57832-9666-511C-9A80-B87DE2E8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

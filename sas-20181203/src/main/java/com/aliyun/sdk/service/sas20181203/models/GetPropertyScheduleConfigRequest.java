@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetPropertyScheduleConfigRequest} extends {@link RequestModel}
  *
  * <p>GetPropertyScheduleConfigRequest</p>
@@ -67,18 +68,21 @@ public class GetPropertyScheduleConfigRequest extends Request {
         } 
 
         /**
-         * The type of the asset fingerprints. Valid values:
-         * <p>
+         * <p>The type of the asset fingerprints. Valid values:</p>
+         * <ul>
+         * <li><strong>scheduler_port_period</strong>: listening port</li>
+         * <li><strong>scheduler_process_period</strong>: running process</li>
+         * <li><strong>scheduler_account_period</strong>: account</li>
+         * <li><strong>scheduler_software_period</strong>: software</li>
+         * <li><strong>scheduler_cron_period</strong>: scheduled task</li>
+         * <li><strong>scheduler_sca_period</strong>: middleware</li>
+         * <li><strong>scheduler_autorun_period</strong>: startup item</li>
+         * <li><strong>scheduler_lkm_period</strong>: kernel module</li>
+         * <li><strong>scheduler_sca_proxy_period</strong>: website</li>
+         * </ul>
          * 
-         * *   **scheduler_port_period**: listening port
-         * *   **scheduler_process_period**: running process
-         * *   **scheduler_account_period**: account
-         * *   **scheduler_software_period**: software
-         * *   **scheduler_cron_period**: scheduled task
-         * *   **scheduler_sca_period**: middleware
-         * *   **scheduler_autorun_period**: startup item
-         * *   **scheduler_lkm_period**: kernel module
-         * *   **scheduler_sca_proxy_period**: website
+         * <strong>example:</strong>
+         * <p>scheduler_sca_period</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -87,10 +91,13 @@ public class GetPropertyScheduleConfigRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>50d213b4-3a35-427a-b8a5-04b0c7e1****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

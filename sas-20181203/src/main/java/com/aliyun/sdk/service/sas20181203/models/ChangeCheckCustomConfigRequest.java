@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeCheckCustomConfigRequest} extends {@link RequestModel}
  *
  * <p>ChangeCheckCustomConfigRequest</p>
@@ -95,10 +96,13 @@ public class ChangeCheckCustomConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
-         * <p>
+         * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</p>
+         * </blockquote>
          * 
-         * > You can call the [ListCheckResult](~~ListCheckResult~~) operation to query the IDs of check items.
+         * <strong>example:</strong>
+         * <p>76</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -107,7 +111,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * The custom configuration items of the check item.
+         * <p>The custom configuration items of the check item.</p>
          */
         public Builder customConfigs(java.util.List < CustomConfigs> customConfigs) {
             this.putQueryParameter("CustomConfigs", customConfigs);
@@ -116,11 +120,14 @@ public class ChangeCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * The region where the Security Center instance is deployed. Valid values:
-         * <p>
+         * <p>The region where the Security Center instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: International</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: International
-         * *   **ap-southeast-1**: Singapore
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,7 +136,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * The parameters required for fixing risk items.
+         * <p>The parameters required for fixing risk items.</p>
          */
         public Builder repairConfigs(java.util.List < RepairConfigs> repairConfigs) {
             this.putQueryParameter("RepairConfigs", repairConfigs);
@@ -144,6 +151,12 @@ public class ChangeCheckCustomConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ChangeCheckCustomConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeCheckCustomConfigRequest</p>
+     */
     public static class CustomConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -195,7 +208,10 @@ public class ChangeCheckCustomConfigRequest extends Request {
             private String value; 
 
             /**
-             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+             * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SessionTimeMax</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -203,7 +219,10 @@ public class ChangeCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.
+             * <p>The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DELETE</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -211,7 +230,10 @@ public class ChangeCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * The value of the custom configuration item. The value is a string.
+             * <p>The value of the custom configuration item. The value is a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -225,6 +247,12 @@ public class ChangeCheckCustomConfigRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link ChangeCheckCustomConfigRequest} extends {@link TeaModel}
+     *
+     * <p>ChangeCheckCustomConfigRequest</p>
+     */
     public static class RepairConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
@@ -288,7 +316,10 @@ public class ChangeCheckCustomConfigRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the fixing process.
+             * <p>The ID of the fixing process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ascgrmscyjgs*********</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -296,7 +327,10 @@ public class ChangeCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * The name of the parameter required for fixing a risk item, which is unique in a check item.
+             * <p>The name of the parameter required for fixing a risk item, which is unique in a check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Port</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -304,7 +338,10 @@ public class ChangeCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.
+             * <p>The operation that you want to perform on the custom configuration item. This parameter is required only if you want to delete the custom configuration item. To delete the custom configuration item, set the value to DELETE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DELETE</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -312,7 +349,10 @@ public class ChangeCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * The value of the parameter required for fixing a risk item. The value is a string.
+             * <p>The value of the parameter required for fixing a risk item. The value is a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder value(String value) {
                 this.value = value;

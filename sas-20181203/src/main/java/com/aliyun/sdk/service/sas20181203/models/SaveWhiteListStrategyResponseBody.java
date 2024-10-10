@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveWhiteListStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>SaveWhiteListStrategyResponseBody</p>
@@ -49,7 +50,10 @@ public class SaveWhiteListStrategyResponseBody extends TeaModel {
         private Long strategyId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5DFD6277-CC36-57F7-ACE6-F5952XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class SaveWhiteListStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application whitelist policy.
+         * <p>The ID of the application whitelist policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8634</p>
          */
         public Builder strategyId(Long strategyId) {
             this.strategyId = strategyId;

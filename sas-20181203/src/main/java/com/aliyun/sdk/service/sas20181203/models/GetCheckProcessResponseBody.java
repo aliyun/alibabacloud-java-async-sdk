@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckProcessResponseBody} extends {@link TeaModel}
  *
  * <p>GetCheckProcessResponseBody</p>
@@ -85,7 +86,10 @@ public class GetCheckProcessResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The total number of assets on which the task is complete.
+         * <p>The total number of assets on which the task is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder finishCount(Integer finishCount) {
             this.finishCount = finishCount;
@@ -93,7 +97,10 @@ public class GetCheckProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D18B5DAD-BA97-5552-AE48-83F59D5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +124,10 @@ public class GetCheckProcessResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of assets on which the task is performed.
+         * <p>The total number of assets on which the task is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

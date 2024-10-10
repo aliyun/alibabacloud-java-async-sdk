@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulWhitelistRequest} extends {@link RequestModel}
  *
  * <p>DescribeVulWhitelistRequest</p>
@@ -67,7 +68,10 @@ public class DescribeVulWhitelistRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -76,7 +80,10 @@ public class DescribeVulWhitelistRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

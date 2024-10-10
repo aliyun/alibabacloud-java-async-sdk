@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUuidsByWebPathRequest} extends {@link RequestModel}
  *
  * <p>ListUuidsByWebPathRequest</p>
@@ -97,7 +98,11 @@ public class ListUuidsByWebPathRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -106,7 +111,11 @@ public class ListUuidsByWebPathRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -115,11 +124,14 @@ public class ListUuidsByWebPathRequest extends Request {
         }
 
         /**
-         * The path type of the web directory. Valid values:
-         * <p>
+         * <p>The path type of the web directory. Valid values:</p>
+         * <ul>
+         * <li><strong>def</strong>: automatically identified</li>
+         * <li><strong>customize</strong>: manually added</li>
+         * </ul>
          * 
-         * *   **def**: automatically identified
-         * *   **customize**: manually added
+         * <strong>example:</strong>
+         * <p>def</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -128,7 +140,10 @@ public class ListUuidsByWebPathRequest extends Request {
         }
 
         /**
-         * The path to the web directory.
+         * <p>The path to the web directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/www****</p>
          */
         public Builder webPath(String webPath) {
             this.putQueryParameter("WebPath", webPath);

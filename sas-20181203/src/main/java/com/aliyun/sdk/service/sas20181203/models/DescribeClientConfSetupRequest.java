@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClientConfSetupRequest} extends {@link RequestModel}
  *
  * <p>DescribeClientConfSetupRequest</p>
@@ -69,7 +70,11 @@ public class DescribeClientConfSetupRequest extends Request {
         } 
 
         /**
-         * The tag that is added to the server.
+         * <p>The tag that is added to the server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>machineResource</p>
          */
         public Builder strategyTag(String strategyTag) {
             this.putQueryParameter("StrategyTag", strategyTag);
@@ -78,12 +83,16 @@ public class DescribeClientConfSetupRequest extends Request {
         }
 
         /**
-         * The value of the tag. Valid values:
-         * <p>
+         * <p>The value of the tag. Valid values:</p>
+         * <ul>
+         * <li>major</li>
+         * <li>advanced</li>
+         * <li>basic</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   major
-         * *   advanced
-         * *   basic
+         * <strong>example:</strong>
+         * <p>major</p>
          */
         public Builder strategyTagValue(String strategyTagValue) {
             this.putQueryParameter("StrategyTagValue", strategyTagValue);

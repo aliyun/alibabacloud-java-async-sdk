@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizeReportListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomizeReportListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The reports.
+         * <p>The reports.</p>
          */
         public Builder reportList(java.util.List < ReportList> reportList) {
             this.reportList = reportList;
@@ -57,7 +58,10 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FBC6E47-7508-58C9-9E76-528E118CB1CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomizeReportListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomizeReportListResponseBody</p>
+     */
     public static class ReportList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsDefault")
         private String isDefault;
@@ -205,11 +215,14 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Indicates whether the report is the default report. Valid values:
-             * <p>
+             * <p>Indicates whether the report is the default report. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -217,7 +230,10 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the report is pinned. Unit: milliseconds.
+             * <p>The timestamp when the report is pinned. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721836800000</p>
              */
             public Builder pinnedTime(Long pinnedTime) {
                 this.pinnedTime = pinnedTime;
@@ -225,7 +241,10 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent days for report statistics.
+             * <p>The most recent days for report statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder reportDays(Integer reportDays) {
                 this.reportDays = reportDays;
@@ -233,7 +252,10 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The end date on which the report is sent. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The end date on which the report is sent. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721923199999</p>
              */
             public Builder reportEndDate(Long reportEndDate) {
                 this.reportEndDate = reportEndDate;
@@ -241,7 +263,10 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the report.
+             * <p>The ID of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder reportId(Long reportId) {
                 this.reportId = reportId;
@@ -249,7 +274,10 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The start date on which the report is sent. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The start date on which the report is sent. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721836800000</p>
              */
             public Builder reportStartDate(Long reportStartDate) {
                 this.reportStartDate = reportStartDate;
@@ -257,11 +285,14 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the report. Valid values:
-             * <p>
+             * <p>The state of the report. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reportStatus(String reportStatus) {
                 this.reportStatus = reportStatus;
@@ -269,13 +300,16 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the report. Valid values:
-             * <p>
+             * <p>The type of the report. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: daily report</li>
+             * <li><strong>1</strong>: weekly report</li>
+             * <li><strong>2</strong>: monthly report</li>
+             * <li><strong>3</strong>: report whose statistics are collected in a custom time range</li>
+             * </ul>
              * 
-             * *   **0**: daily report
-             * *   **1**: weekly report
-             * *   **2**: monthly report
-             * *   **3**: report whose statistics are collected in a custom time range
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder reportType(Integer reportType) {
                 this.reportType = reportType;
@@ -283,7 +317,10 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The report version.
+             * <p>The report version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.0</p>
              */
             public Builder reportVersion(String reportVersion) {
                 this.reportVersion = reportVersion;
@@ -291,7 +328,10 @@ public class DescribeCustomizeReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the report.
+             * <p>The name of the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;

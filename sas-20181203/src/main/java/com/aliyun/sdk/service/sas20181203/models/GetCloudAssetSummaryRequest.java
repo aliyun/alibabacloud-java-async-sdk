@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCloudAssetSummaryRequest} extends {@link RequestModel}
  *
  * <p>GetCloudAssetSummaryRequest</p>
@@ -53,7 +54,7 @@ public class GetCloudAssetSummaryRequest extends Request {
         } 
 
         /**
-         * The asset type by service provider.
+         * <p>The asset type by service provider.</p>
          */
         public Builder vendors(java.util.List < Integer > vendors) {
             this.putQueryParameter("Vendors", vendors);

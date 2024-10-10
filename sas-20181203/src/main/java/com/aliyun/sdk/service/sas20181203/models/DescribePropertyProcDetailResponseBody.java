@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyProcDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyProcDetailResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the fingerprints of the processes.
+         * <p>An array that consists of the fingerprints of the processes.</p>
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -77,7 +78,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AA47D46F-10DE-138C-BBB4-8A0003F75CD7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyProcDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyProcDetailResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyProcDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyProcDetailResponseBody</p>
+     */
     public static class Propertys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cmdline")
         private String cmdline;
@@ -422,7 +450,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The startup parameter of the process.
+             * <p>The startup parameter of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>./8888</p>
              */
             public Builder cmdline(String cmdline) {
                 this.cmdline = cmdline;
@@ -430,7 +461,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of last data collection. Unit: milliseconds.
+             * <p>The timestamp of last data collection. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1565686951000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -438,7 +472,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The permission that is required to run the process.
+             * <p>The permission that is required to run the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder euidName(String euidName) {
                 this.euidName = euidName;
@@ -446,7 +483,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server that is associated with the process.
+             * <p>The ID of the server that is associated with the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp35tftuh52wbp1g****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -454,7 +494,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server that is associated with the process.
+             * <p>The name of the server that is associated with the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc-host-****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -462,7 +505,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -470,7 +516,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -478,11 +527,14 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the process is a package installation process. Valid values:
-             * <p>
+             * <p>Indicates whether the process is a package installation process. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isPackage(Integer isPackage) {
                 this.isPackage = isPackage;
@@ -490,7 +542,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the process file.
+             * <p>The MD5 hash value of the process file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>842644ea3d88bd7f7e14c1c089ef****</p>
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -498,7 +553,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the process.
+             * <p>The name of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agetty</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -506,7 +564,7 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the process.
+             * <p>The path of the process.</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -514,7 +572,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the process.
+             * <p>The ID of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12826</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -522,7 +583,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parent process to which the process belongs.
+             * <p>The name of the parent process to which the process belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start***.s</p>
              */
             public Builder pname(String pname) {
                 this.pname = pname;
@@ -530,7 +594,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the process starts.
+             * <p>The time when the process starts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-07 10:09:05</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -538,7 +605,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the process starts. Unit: milliseconds.
+             * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1648783107000</p>
              */
             public Builder startTimeDt(Long startTimeDt) {
                 this.startTimeDt = startTimeDt;
@@ -546,7 +616,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the process.
+             * <p>The status of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sleeping</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -554,7 +627,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The user who runs the process.
+             * <p>The user who runs the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -562,7 +638,10 @@ public class DescribePropertyProcDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server that is associated with the process.
+             * <p>The UUID of the server that is associated with the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

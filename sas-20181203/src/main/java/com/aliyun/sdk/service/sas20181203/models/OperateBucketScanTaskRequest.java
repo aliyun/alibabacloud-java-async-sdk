@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateBucketScanTaskRequest} extends {@link RequestModel}
  *
  * <p>OperateBucketScanTaskRequest</p>
@@ -67,7 +68,10 @@ public class OperateBucketScanTaskRequest extends Request {
         } 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iboxpublic****</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -76,10 +80,13 @@ public class OperateBucketScanTaskRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the bucket. Valid value:
-         * <p>
+         * <p>The operation that you want to perform on the bucket. Valid value:</p>
+         * <ul>
+         * <li><strong>1</strong>: cancels the bucket check.</li>
+         * </ul>
          * 
-         * *   **1**: cancels the bucket check.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder operateCode(Integer operateCode) {
             this.putQueryParameter("OperateCode", operateCode);

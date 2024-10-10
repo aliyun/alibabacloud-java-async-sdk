@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteInstallCodeRequest} extends {@link RequestModel}
  *
  * <p>DeleteInstallCodeRequest</p>
@@ -54,10 +55,14 @@ public class DeleteInstallCodeRequest extends Request {
         } 
 
         /**
-         * The installation command.
-         * <p>
+         * <p>The installation command.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeInstallCodes~~">DescribeInstallCodes</a> operation to query installation commands.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeInstallCodes](~~DescribeInstallCodes~~) operation to query installation commands.
+         * <strong>example:</strong>
+         * <p>1q****</p>
          */
         public Builder captchaCode(String captchaCode) {
             this.putQueryParameter("CaptchaCode", captchaCode);

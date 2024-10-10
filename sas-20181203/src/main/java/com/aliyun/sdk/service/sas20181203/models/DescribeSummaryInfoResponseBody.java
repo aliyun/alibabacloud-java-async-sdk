@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSummaryInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSummaryInfoResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of unprotected assets.
+         * <p>The number of unprotected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder aegisClientOfflineCount(Integer aegisClientOfflineCount) {
             this.aegisClientOfflineCount = aegisClientOfflineCount;
@@ -93,7 +97,10 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The number of protected assets.
+         * <p>The number of protected assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127</p>
          */
         public Builder aegisClientOnlineCount(Integer aegisClientOnlineCount) {
             this.aegisClientOnlineCount = aegisClientOnlineCount;
@@ -101,7 +108,10 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D40198E1-6EA8-482E-B3C7-D9573D75C0CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,13 +119,16 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The security score of the assets. Valid values:
-         * <p>
+         * <p>The security score of the assets. Valid values:</p>
+         * <ul>
+         * <li>95 to 100: The assets are secure.</li>
+         * <li>85 to 94: The assets are exposed to a few security risks. We recommend that you reinforce your security system in a timely manner.</li>
+         * <li>70 to 84: The assets are exposed to multiple security risks. We recommend that you reinforce your security system in a timely manner.</li>
+         * <li>69 or lower: The current security system is unable to protect the assets against intrusions. We recommend that you reinforce your security system at the earliest opportunity.</li>
+         * </ul>
          * 
-         * *   95 to 100: The assets are secure.
-         * *   85 to 94: The assets are exposed to a few security risks. We recommend that you reinforce your security system in a timely manner.
-         * *   70 to 84: The assets are exposed to multiple security risks. We recommend that you reinforce your security system in a timely manner.
-         * *   69 or lower: The current security system is unable to protect the assets against intrusions. We recommend that you reinforce your security system at the earliest opportunity.
+         * <strong>example:</strong>
+         * <p>44</p>
          */
         public Builder securityScore(Integer securityScore) {
             this.securityScore = securityScore;
@@ -123,11 +136,14 @@ public class DescribeSummaryInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

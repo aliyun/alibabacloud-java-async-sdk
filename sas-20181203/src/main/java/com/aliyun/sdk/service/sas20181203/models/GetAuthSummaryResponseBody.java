@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuthSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuthSummaryResponseBody</p>
@@ -157,11 +158,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         private java.util.List < VersionSummary> versionSummary; 
 
         /**
-         * Indicates whether you can purchase protection quota on demand when you purchase Security Center. Valid values:
-         * <p>
+         * <p>Indicates whether you can purchase protection quota on demand when you purchase Security Center. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder allowPartialBuy(Integer allowPartialBuy) {
             this.allowPartialBuy = allowPartialBuy;
@@ -169,11 +173,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether you can purchase protection quota on demand after an upgrade. Valid values:
-         * <p>
+         * <p>Indicates whether you can purchase protection quota on demand after an upgrade. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder allowUpgradePartialBuy(Integer allowUpgradePartialBuy) {
             this.allowUpgradePartialBuy = allowUpgradePartialBuy;
@@ -181,11 +188,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether all bound assets can be immediately unbound. Valid values:
-         * <p>
+         * <p>Indicates whether all bound assets can be immediately unbound. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder allowUserUnbind(Integer allowUserUnbind) {
             this.allowUserUnbind = allowUserUnbind;
@@ -193,11 +203,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether automatic binding is enabled. Valid values:
-         * <p>
+         * <p>Indicates whether automatic binding is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
          * 
-         * *   **0**: disabled
-         * *   **1**: enabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder autoBind(Integer autoBind) {
             this.autoBind = autoBind;
@@ -205,11 +218,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the protection quota is supported for all assets. Valid values:
-         * <p>
+         * <p>Indicates whether the protection quota is supported for all assets. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder defaultAuthToAll(Integer defaultAuthToAll) {
             this.defaultAuthToAll = defaultAuthToAll;
@@ -217,11 +233,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether pre-bound assets exist. If you select assets to bind when you purchase Security Center, pre-bound assets exist. Valid values:
-         * <p>
+         * <p>Indicates whether pre-bound assets exist. If you select assets to bind when you purchase Security Center, pre-bound assets exist. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hasPreBindSetting(Boolean hasPreBindSetting) {
             this.hasPreBindSetting = hasPreBindSetting;
@@ -229,17 +248,21 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The most advanced edition that is used. Valid values:
-         * <p>
+         * <p>The most advanced edition that is used. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Basic edition</li>
+         * <li><strong>3</strong>: Enterprise edition</li>
+         * <li><strong>5</strong>: Advanced edition</li>
+         * <li><strong>6</strong>: Anti-virus edition</li>
+         * <li><strong>7</strong>: Ultimate edition</li>
+         * <li><strong>10</strong>: Value-added Plan edition</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you purchase Security Center Multi-edition, the value indicates the most advanced edition that is used. Otherwise, the value indicates the specific edition that is purchased.</p>
+         * </blockquote>
          * 
-         * *   **1**: Basic edition
-         * *   **3**: Enterprise edition
-         * *   **5**: Advanced edition
-         * *   **6**: Anti-virus edition
-         * *   **7**: Ultimate edition
-         * *   **10**: Value-added Plan edition
-         * 
-         * >  If you purchase Security Center Multi-edition, the value indicates the most advanced edition that is used. Otherwise, the value indicates the specific edition that is purchased.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder highestVersion(Integer highestVersion) {
             this.highestVersion = highestVersion;
@@ -247,11 +270,14 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Security Center Multi-edition is purchased. Valid values:
-         * <p>
+         * <p>Indicates whether Security Center Multi-edition is purchased. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isMultiVersion(Integer isMultiVersion) {
             this.isMultiVersion = isMultiVersion;
@@ -259,7 +285,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics of the protection quota for assets.
+         * <p>The statistics of the protection quota for assets.</p>
          */
         public Builder machine(Machine machine) {
             this.machine = machine;
@@ -267,7 +293,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-***-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -275,7 +304,7 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The quota consumption statistics.
+         * <p>The quota consumption statistics.</p>
          */
         public Builder versionSummary(java.util.List < VersionSummary> versionSummary) {
             this.versionSummary = versionSummary;
@@ -288,6 +317,12 @@ public class GetAuthSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAuthSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthSummaryResponseBody</p>
+     */
     public static class Machine extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindCoreCount")
         private Integer bindCoreCount;
@@ -399,7 +434,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             private Integer unBindEcsCount; 
 
             /**
-             * The number of cores of the assets that are bound to Security Center.
+             * <p>The number of cores of the assets that are bound to Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder bindCoreCount(Integer bindCoreCount) {
                 this.bindCoreCount = bindCoreCount;
@@ -407,7 +445,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the assets that are bound to Security Center.
+             * <p>The number of the assets that are bound to Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder bindEcsCount(Integer bindEcsCount) {
                 this.bindEcsCount = bindEcsCount;
@@ -415,7 +456,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores of the assets that are at risk.
+             * <p>The number of cores of the assets that are at risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder riskCoreCount(Integer riskCoreCount) {
                 this.riskCoreCount = riskCoreCount;
@@ -423,7 +467,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the assets that are at risk.
+             * <p>The number of the assets that are at risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder riskEcsCount(Integer riskEcsCount) {
                 this.riskEcsCount = riskEcsCount;
@@ -431,7 +478,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of asset cores.
+             * <p>The total number of asset cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCoreCount(Integer totalCoreCount) {
                 this.totalCoreCount = totalCoreCount;
@@ -439,7 +489,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of assets.
+             * <p>The total number of assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalEcsCount(Integer totalEcsCount) {
                 this.totalEcsCount = totalEcsCount;
@@ -447,7 +500,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores of unbound assets.
+             * <p>The number of cores of unbound assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unBindCoreCount(Integer unBindCoreCount) {
                 this.unBindCoreCount = unBindCoreCount;
@@ -455,7 +511,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unbound assets.
+             * <p>The number of unbound assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unBindEcsCount(Integer unBindEcsCount) {
                 this.unBindEcsCount = unBindEcsCount;
@@ -469,6 +528,12 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAuthSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAuthSummaryResponseBody</p>
+     */
     public static class VersionSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthBindType")
         private String authBindType;
@@ -616,12 +681,15 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             private Integer version; 
 
             /**
-             * The type of the quota that is consumed. Valid values:
-             * <p>
+             * <p>The type of the quota that is consumed. Valid values:</p>
+             * <ul>
+             * <li>ASSET: quota of servers.</li>
+             * <li>CORE: quota of server cores.</li>
+             * <li>ASSET_AND_CORE: both.</li>
+             * </ul>
              * 
-             * *   ASSET: quota of servers.
-             * *   CORE: quota of server cores.
-             * *   ASSET_AND_CORE: both.
+             * <strong>example:</strong>
+             * <p>ASSET</p>
              */
             public Builder authBindType(String authBindType) {
                 this.authBindType = authBindType;
@@ -629,7 +697,10 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The index of the current edition. The smaller the value, the higher the edition. The index is used for sorting.
+             * <p>The index of the current edition. The smaller the value, the higher the edition. The index is used for sorting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -637,10 +708,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total quota of server cores.
-             * <p>
+             * <p>The total quota of server cores.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if AuthBindType is set to CORE or ASSET_AND_CORE.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCoreAuthCount(Integer totalCoreAuthCount) {
                 this.totalCoreAuthCount = totalCoreAuthCount;
@@ -648,10 +722,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total quota of servers in the current edition.
-             * <p>
+             * <p>The total quota of servers in the current edition.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -659,10 +736,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total quota of servers.
-             * <p>
+             * <p>The total quota of servers.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalEcsAuthCount(Integer totalEcsAuthCount) {
                 this.totalEcsAuthCount = totalEcsAuthCount;
@@ -670,10 +750,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining quota of servers.
-             * <p>
+             * <p>The remaining quota of servers.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unUsedCount(Integer unUsedCount) {
                 this.unUsedCount = unUsedCount;
@@ -681,10 +764,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining quota of server cores.
-             * <p>
+             * <p>The remaining quota of server cores.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if AuthBindType is set to CORE or ASSET_AND_CORE.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unusedCoreAuthCount(Integer unusedCoreAuthCount) {
                 this.unusedCoreAuthCount = unusedCoreAuthCount;
@@ -692,10 +778,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining quota of servers.
-             * <p>
+             * <p>The remaining quota of servers.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unusedEcsAuthCount(Integer unusedEcsAuthCount) {
                 this.unusedEcsAuthCount = unusedEcsAuthCount;
@@ -703,10 +792,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The consumed quota of server cores.
-             * <p>
+             * <p>The consumed quota of server cores.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if AuthBindType is set to CORE or ASSET_AND_CORE.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedCoreCount(Integer usedCoreCount) {
                 this.usedCoreCount = usedCoreCount;
@@ -714,10 +806,13 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The used quota of servers.
-             * <p>
+             * <p>The used quota of servers.</p>
+             * <blockquote>
+             * <p> This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.</p>
+             * </blockquote>
              * 
-             * >  This parameter takes effect only if AuthBindType is set to ASSET or ASSET_AND_CORE.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedEcsCount(Integer usedEcsCount) {
                 this.usedEcsCount = usedEcsCount;
@@ -725,16 +820,19 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of purchased Security Center. Valid values:
-             * <p>
+             * <p>The edition of purchased Security Center. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Basic edition</li>
+             * <li><strong>3</strong>: Enterprise edition</li>
+             * <li><strong>5</strong>: Advanced edition</li>
+             * <li><strong>6</strong>: Anti-virus edition</li>
+             * <li><strong>7</strong>: Ultimate edition</li>
+             * <li><strong>8</strong>: Multi-edition</li>
+             * <li><strong>10</strong>: Value-added Plan edition</li>
+             * </ul>
              * 
-             * *   **1**: Basic edition
-             * *   **3**: Enterprise edition
-             * *   **5**: Advanced edition
-             * *   **6**: Anti-virus edition
-             * *   **7**: Ultimate edition
-             * *   **8**: Multi-edition
-             * *   **10**: Value-added Plan edition
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

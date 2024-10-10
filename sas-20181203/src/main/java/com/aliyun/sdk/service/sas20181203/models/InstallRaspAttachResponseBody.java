@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link InstallRaspAttachResponseBody} extends {@link TeaModel}
  *
  * <p>InstallRaspAttachResponseBody</p>
@@ -37,7 +38,10 @@ public class InstallRaspAttachResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86CFF42E-E00A-57A3-8656-22291EFB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

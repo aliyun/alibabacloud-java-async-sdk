@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHcExportInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeHcExportInfoRequest</p>
@@ -53,10 +54,13 @@ public class DescribeHcExportInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the export task.
-         * <p>
+         * <p>The ID of the export task.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ExportWarning~~">ExportWarning</a> operation to query the IDs of export tasks.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ExportWarning](~~ExportWarning~~) operation to query the IDs of export tasks.
+         * <strong>example:</strong>
+         * <p>443285</p>
          */
         public Builder exportId(Long exportId) {
             this.putQueryParameter("ExportId", exportId);

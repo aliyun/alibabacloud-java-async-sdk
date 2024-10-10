@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetStrategyTemplateDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetStrategyTemplateDetailResponseBody</p>
@@ -85,7 +86,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the template.
+         * <p>The details of the template.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E36BEEA-0B27-58CC-8319-50279203B048</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetStrategyTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStrategyTemplateDetailResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -173,7 +192,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The unique identifier of the baseline check item.
+             * <p>The unique identifier of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_leak</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -181,7 +203,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline check item.
+             * <p>The name of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Access Key plaintext storage</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -195,6 +220,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStrategyTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStrategyTemplateDetailResponseBody</p>
+     */
     public static class Baseline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
@@ -234,7 +265,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The baseline items.
+             * <p>The baseline items.</p>
              */
             public Builder item(java.util.List < Item> item) {
                 this.item = item;
@@ -242,12 +273,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The severities of the baselines. Valid values:
-             * <p>
-             * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <p>The severities of the baselines. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -261,6 +292,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStrategyTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStrategyTemplateDetailResponseBody</p>
+     */
     public static class MaliciousFileItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -300,7 +337,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The unique identifier of the malicious sample.
+             * <p>The unique identifier of the malicious sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -308,7 +348,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the malicious sample.
+             * <p>The name of the malicious sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -322,6 +365,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStrategyTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStrategyTemplateDetailResponseBody</p>
+     */
     public static class MaliciousFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < MaliciousFileItem> item;
@@ -361,7 +410,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The items on which malicious samples are detected.
+             * <p>The items on which malicious samples are detected.</p>
              */
             public Builder item(java.util.List < MaliciousFileItem> item) {
                 this.item = item;
@@ -369,7 +418,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The severities of the malicious samples.
+             * <p>The severities of the malicious samples.</p>
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -383,6 +432,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStrategyTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStrategyTemplateDetailResponseBody</p>
+     */
     public static class VulItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -422,7 +477,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the vulnerability.
+             * <p>The ID of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVD-2023-1680169</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -430,7 +488,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ezOffice evoInterfaceServlet Info Leak</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -444,6 +505,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStrategyTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStrategyTemplateDetailResponseBody</p>
+     */
     public static class Vul extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < VulItem> item;
@@ -483,7 +550,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The items on which vulnerabilities are detected.
+             * <p>The items on which vulnerabilities are detected.</p>
              */
             public Builder item(java.util.List < VulItem> item) {
                 this.item = item;
@@ -491,7 +558,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The severities of the vulnerabilities.
+             * <p>The severities of the vulnerabilities.</p>
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -505,6 +572,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStrategyTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStrategyTemplateDetailResponseBody</p>
+     */
     public static class AlarmDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Baseline")
         private Baseline baseline;
@@ -556,7 +629,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private Vul vul; 
 
             /**
-             * The configuration of the baseline.
+             * <p>The configuration of the baseline.</p>
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -564,7 +637,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the alert rule for the malicious sample.
+             * <p>The configuration of the alert rule for the malicious sample.</p>
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -572,7 +645,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the vulnerability detection rule.
+             * <p>The configuration of the vulnerability detection rule.</p>
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;
@@ -586,6 +659,12 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetStrategyTemplateDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetStrategyTemplateDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmDetail")
         private AlarmDetail alarmDetail;
@@ -769,7 +848,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             private java.util.List < String > whiteList; 
 
             /**
-             * The configuration of the rule.
+             * <p>The configuration of the rule.</p>
              */
             public Builder alarmDetail(AlarmDetail alarmDetail) {
                 this.alarmDetail = alarmDetail;
@@ -777,7 +856,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -785,7 +867,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hhht-cluster-02</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -793,7 +878,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom defense configuration</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -801,7 +889,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The names of images.
+             * <p>The names of images.</p>
              */
             public Builder imageName(java.util.List < String > imageName) {
                 this.imageName = imageName;
@@ -809,7 +897,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are added to the containers.
+             * <p>The tags that are added to the containers.</p>
              */
             public Builder label(java.util.List < String > label) {
                 this.label = label;
@@ -817,11 +905,14 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule supports malicious Internet images. Valid values:
-             * <p>
+             * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder maliciousImage(Boolean maliciousImage) {
                 this.maliciousImage = maliciousImage;
@@ -829,7 +920,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The namespaces.
+             * <p>The namespaces.</p>
              */
             public Builder namespace(java.util.List < String > namespace) {
                 this.namespace = namespace;
@@ -837,12 +928,15 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The action on requests. Valid values:
-             * <p>
+             * <p>The action on requests. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: trigger alerts</li>
+             * <li><strong>2</strong>: block</li>
+             * <li><strong>3</strong>: allow</li>
+             * </ul>
              * 
-             * *   **1**: trigger alerts
-             * *   **2**: block
-             * *   **3**: allow
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleAction(Integer ruleAction) {
                 this.ruleAction = ruleAction;
@@ -850,7 +944,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1005</p>
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -858,7 +955,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Blank template</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -866,7 +966,10 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the template.
+             * <p>The ID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1204</p>
              */
             public Builder strategyTemplateId(Long strategyTemplateId) {
                 this.strategyTemplateId = strategyTemplateId;
@@ -874,11 +977,14 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule supports unscanned images. Valid values:
-             * <p>
+             * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder unScanedImage(Boolean unScanedImage) {
                 this.unScanedImage = unScanedImage;
@@ -886,7 +992,7 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelists of tags that are added to images.
+             * <p>The whitelists of tags that are added to images.</p>
              */
             public Builder whiteList(java.util.List < String > whiteList) {
                 this.whiteList = whiteList;

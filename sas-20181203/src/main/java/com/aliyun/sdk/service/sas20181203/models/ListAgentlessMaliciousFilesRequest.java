@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentlessMaliciousFilesRequest} extends {@link RequestModel}
  *
  * <p>ListAgentlessMaliciousFilesRequest</p>
@@ -209,7 +210,11 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -218,11 +223,14 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * Specifies whether the vulnerability is handled. Valid values:
-         * <p>
+         * <p>Specifies whether the vulnerability is handled. Valid values:</p>
+         * <ul>
+         * <li>Y: The vulnerability is handled.</li>
+         * <li>N: The vulnerability is not handled.</li>
+         * </ul>
          * 
-         * *   Y: The vulnerability is handled.
-         * *   N: The vulnerability is not handled.
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);
@@ -231,7 +239,10 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The event ID.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81****</p>
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -240,10 +251,13 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The name of the malicious file that you want to query.
-         * <p>
+         * <p>The name of the malicious file that you want to query.</p>
+         * <blockquote>
+         * <p>Fuzzy match is supported.</p>
+         * </blockquote>
          * 
-         * > Fuzzy match is supported.
+         * <strong>example:</strong>
+         * <p>WebShell</p>
          */
         public Builder fuzzyMaliciousName(String fuzzyMaliciousName) {
             this.putQueryParameter("FuzzyMaliciousName", fuzzyMaliciousName);
@@ -252,11 +266,14 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -265,12 +282,15 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The severities of the malicious files. Separate multiple values with commas (,). Valid values:
-         * <p>
+         * <p>The severities of the malicious files. Separate multiple values with commas (,). Valid values:</p>
+         * <ul>
+         * <li>serious</li>
+         * <li>suspicious</li>
+         * <li>remind</li>
+         * </ul>
          * 
-         * *   serious
-         * *   suspicious
-         * *   remind
+         * <strong>example:</strong>
+         * <p>remind,suspicious</p>
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);
@@ -279,7 +299,10 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The MD5 hash value of the malicious file.
+         * <p>The MD5 hash value of the malicious file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d836968041f7683b5459****</p>
          */
         public Builder maliciousMd5(String maliciousMd5) {
             this.putQueryParameter("MaliciousMd5", maliciousMd5);
@@ -288,20 +311,22 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The alert type.
-         * <p>
+         * <p>The alert type.</p>
+         * <p>Valid values when Lang is set to zh:</p>
+         * <ul>
+         * <li>WebShell</li>
+         * <li>Malicious Software</li>
+         * <li>Malicious Script</li>
+         * </ul>
+         * <p>Valid values when Lang is set to en:</p>
+         * <ul>
+         * <li>WebShell</li>
+         * <li>Malicious Software</li>
+         * <li>Malicious Script</li>
+         * </ul>
          * 
-         * Valid values when Lang is set to zh:
-         * 
-         * *   WebShell
-         * *   Malicious Software
-         * *   Malicious Script
-         * 
-         * Valid values when Lang is set to en:
-         * 
-         * *   WebShell
-         * *   Malicious Software
-         * *   Malicious Script
+         * <strong>example:</strong>
+         * <p>WebShell</p>
          */
         public Builder maliciousType(String maliciousType) {
             this.putQueryParameter("MaliciousType", maliciousType);
@@ -310,7 +335,11 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -319,7 +348,10 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.
+         * <p>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -328,7 +360,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The source of the malicious file.
+         * <p>The source of the malicious file.</p>
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             this.putQueryParameter("ScanRange", scanRange);
@@ -337,7 +369,10 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         }
 
         /**
-         * The UUID of the asset.
+         * <p>The UUID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d2d94e8b-bb25-4744-8004-1e08a53c****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

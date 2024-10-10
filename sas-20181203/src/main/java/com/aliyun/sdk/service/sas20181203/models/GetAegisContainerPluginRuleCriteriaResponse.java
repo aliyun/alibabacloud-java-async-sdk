@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAegisContainerPluginRuleCriteriaResponse} extends {@link TeaModel}
  *
  * <p>GetAegisContainerPluginRuleCriteriaResponse</p>

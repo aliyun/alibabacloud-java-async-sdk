@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBaselineItemListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageBaselineItemListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of baseline check items.
+         * <p>An array that consists of baseline check items.</p>
          */
         public Builder baselineItemInfos(java.util.List < BaselineItemInfos> baselineItemInfos) {
             this.baselineItemInfos = baselineItemInfos;
@@ -69,7 +70,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageBaselineItemListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBaselineItemListResponseBody</p>
+     */
     public static class BaselineItemInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineClassAlias")
         private String baselineClassAlias;
@@ -201,7 +211,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             private Integer whiteList; 
 
             /**
-             * The alias of the baseline type.
+             * <p>The alias of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccessKey pair leak</p>
              */
             public Builder baselineClassAlias(String baselineClassAlias) {
                 this.baselineClassAlias = baselineClassAlias;
@@ -209,7 +222,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the baseline type.
+             * <p>The key of the baseline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_leak</p>
              */
             public Builder baselineClassKey(String baselineClassKey) {
                 this.baselineClassKey = baselineClassKey;
@@ -217,7 +233,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the baseline check item.
+             * <p>The alias of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccessKey pair leak</p>
              */
             public Builder baselineItemAlias(String baselineItemAlias) {
                 this.baselineItemAlias = baselineItemAlias;
@@ -225,7 +244,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the baseline check item.
+             * <p>The key of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_leak</p>
              */
             public Builder baselineItemKey(String baselineItemKey) {
                 this.baselineItemKey = baselineItemKey;
@@ -233,7 +255,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the baseline.
+             * <p>The alias of the baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccessKey pair leak</p>
              */
             public Builder baselineNameAlias(String baselineNameAlias) {
                 this.baselineNameAlias = baselineNameAlias;
@@ -241,7 +266,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the baseline name.
+             * <p>The key of the baseline name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_leak</p>
              */
             public Builder baselineNameKey(String baselineNameKey) {
                 this.baselineNameKey = baselineNameKey;
@@ -249,13 +277,16 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline risks. Valid values:
-             * <p>
+             * <p>The status of the baseline risks. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unfixed</li>
+             * <li><strong>1</strong>: fixed</li>
+             * <li><strong>2</strong>: pending verification</li>
+             * <li><strong>3</strong>: fixing failed</li>
+             * </ul>
              * 
-             * *   **0**: unfixed
-             * *   **1**: fixed
-             * *   **2**: pending verification
-             * *   **3**: fixing failed
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -263,11 +294,14 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the baseline check item is added to the whitelist. Valid values:
-             * <p>
+             * <p>Indicates whether the baseline check item is added to the whitelist. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The baseline check item is not added to the whitelist.</li>
+             * <li><strong>1</strong>: The baseline check item is added to the whitelist.</li>
+             * </ul>
              * 
-             * *   **0**: The baseline check item is not added to the whitelist.
-             * *   **1**: The baseline check item is added to the whitelist.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder whiteList(Integer whiteList) {
                 this.whiteList = whiteList;
@@ -281,6 +315,12 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageBaselineItemListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBaselineItemListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -344,7 +384,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -352,7 +395,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -360,7 +406,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -368,7 +417,10 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>253</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

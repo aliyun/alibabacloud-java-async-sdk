@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBackupStorageCountResponse} extends {@link TeaModel}
  *
  * <p>GetBackupStorageCountResponse</p>

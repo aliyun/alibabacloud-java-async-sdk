@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomBlockInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomBlockInstancesResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The server ID.
+         * <p>The server ID.</p>
          */
         public Builder instanceList(java.util.List < InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -69,7 +70,7 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D81DD78E-E006-5C65-A171-C8CB09XXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomBlockInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomBlockInstancesResponseBody</p>
+     */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliNetOnline")
         private Boolean aliNetOnline;
@@ -213,11 +223,14 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The status of the host network extension. Valid values:
-             * <p>
+             * <p>The status of the host network extension. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: online</li>
+             * <li><strong>false</strong>: offline</li>
+             * </ul>
              * 
-             * *   **true**: online
-             * *   **false**: offline
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder aliNetOnline(Boolean aliNetOnline) {
                 this.aliNetOnline = aliNetOnline;
@@ -225,11 +238,14 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The blocking type. Valid values:
-             * <p>
+             * <p>The blocking type. Valid values:</p>
+             * <ul>
+             * <li><strong>group</strong>: security group</li>
+             * <li><strong>alinet</strong>: host network extension</li>
+             * </ul>
              * 
-             * *   **group**: security group
-             * *   **alinet**: host network extension
+             * <strong>example:</strong>
+             * <p>group</p>
              */
             public Builder blockType(String blockType) {
                 this.blockType = blockType;
@@ -237,7 +253,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned.
+             * <p>The error code returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliNetNotOnline</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -245,7 +264,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myInstance</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -253,7 +275,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.62.121.1xx</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -261,7 +286,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.xx</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -269,12 +297,15 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is enabled for the server.
-             * <p>
+             * <p>Indicates whether the rule is enabled for the server.</p>
+             * <ul>
+             * <li><strong>2</strong>: enabling failed</li>
+             * <li><strong>1</strong>: enabled</li>
+             * <li><strong>0</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **2**: enabling failed
-             * *   **1**: enabled
-             * *   **0**: disabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -282,7 +313,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information that is returned after brute-force attacks are blocked.
+             * <p>The information that is returned after brute-force attacks are blocked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;aliUid&quot;:*******,&quot;groupId&quot;:&quot;sg-xxxx&quot;,&quot;groupName&quot;:&quot;Sas_Malicious_Ip_Security_Group&quot;,&quot;groupType&quot;:&quot;normal&quot;,&quot;instanceId&quot;:&quot;i-xxxx&quot;,&quot;regionId&quot;:&quot;cn-shenzhen&quot;,&quot;vpcId&quot;:&quot;vpc-xxxxxxxx&quot;}</p>
              */
             public Builder successInfo(String successInfo) {
                 this.successInfo = successInfo;
@@ -290,7 +324,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f2d6e901-1004-4ca8-9dae-53ec04a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -304,6 +341,12 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCustomBlockInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomBlockInstancesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -367,7 +410,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -375,7 +421,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -383,7 +432,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Default value: **20**.
+             * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -391,7 +443,10 @@ public class DescribeCustomBlockInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers to which the defense rule is applied.
+             * <p>The total number of servers to which the defense rule is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

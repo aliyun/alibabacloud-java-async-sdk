@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCheckInstanceResultWhiteListRequest} extends {@link RequestModel}
  *
  * <p>AddCheckInstanceResultWhiteListRequest</p>
@@ -123,7 +124,10 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         } 
 
         /**
-         * The ID of the group to which the check item belongs.
+         * <p>The ID of the group to which the check item belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cQFq20UzZ49K6gRSJD1301****</p>
          */
         public Builder checkGroupId(String checkGroupId) {
             this.putQueryParameter("CheckGroupId", checkGroupId);
@@ -132,7 +136,10 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * The ID of the check item.
+         * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -141,7 +148,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * The instance IDs of assets.
+         * <p>The instance IDs of assets.</p>
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -183,6 +190,12 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddCheckInstanceResultWhiteListRequest} extends {@link TeaModel}
+     *
+     * <p>AddCheckInstanceResultWhiteListRequest</p>
+     */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;

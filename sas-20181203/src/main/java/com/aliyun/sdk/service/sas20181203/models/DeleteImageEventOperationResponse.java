@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteImageEventOperationResponse} extends {@link TeaModel}
  *
  * <p>DeleteImageEventOperationResponse</p>

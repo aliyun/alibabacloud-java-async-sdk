@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadedHoneyPotFileRequest} extends {@link RequestModel}
  *
  * <p>UploadedHoneyPotFileRequest</p>
@@ -142,10 +143,14 @@ public class UploadedHoneyPotFileRequest extends Request {
         } 
 
         /**
-         * The file key that you use to upload the file.
-         * <p>
+         * <p>The file key that you use to upload the file.</p>
+         * <blockquote>
+         * <p> The key is in the format of HONEYPOT_FILE/{Timestamp}_{Custom file name}.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The key is in the format of HONEYPOT_FILE/{Timestamp}\_{Custom file name}.
+         * <strong>example:</strong>
+         * <p>HONEYPOT_FILE/1601097845544644_********</p>
          */
         public Builder fileKey(String fileKey) {
             this.putQueryParameter("FileKey", fileKey);
@@ -154,7 +159,11 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * The name of the file that you want to upload.
+         * <p>The name of the file that you want to upload.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trojan.zip</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -163,7 +172,11 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * The file type.
+         * <p>The file type.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/zip</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);
@@ -172,7 +185,11 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * The name of the honeypot image.
+         * <p>The name of the honeypot image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ruoyi</p>
          */
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
@@ -181,11 +198,14 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -194,10 +214,13 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * The ID of the management node to which the honeypot belongs.
-         * <p>
+         * <p>The ID of the management node to which the honeypot belongs.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain the IDs of management nodes. operation to query the management node ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to obtain the IDs of management nodes. operation to query the management node ID.
+         * <strong>example:</strong>
+         * <p>cc427e14-f257-4670-9d2b-d83bbbe*****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -206,7 +229,11 @@ public class UploadedHoneyPotFileRequest extends Request {
         }
 
         /**
-         * The prompt template that corresponds to the file.
+         * <p>The prompt template that corresponds to the file.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;help&quot;:&quot;.zip&quot;,&quot;label&quot;:&quot;file&quot;,&quot;type&quot;:&quot;file&quot;,&quot;key&quot;:&quot;ftpfiles.zip&quot;}</p>
          */
         public Builder templateExtra(String templateExtra) {
             this.putQueryParameter("TemplateExtra", templateExtra);

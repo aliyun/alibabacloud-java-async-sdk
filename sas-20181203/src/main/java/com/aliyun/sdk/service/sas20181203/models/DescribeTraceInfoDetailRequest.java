@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTraceInfoDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeTraceInfoDetailRequest</p>
@@ -141,7 +142,11 @@ public class DescribeTraceInfoDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -150,7 +155,10 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * The timestamp of the detection. Unit: milliseconds.
+         * <p>The timestamp of the detection. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1670555392000</p>
          */
         public Builder incidentTime(Long incidentTime) {
             this.putQueryParameter("IncidentTime", incidentTime);
@@ -159,11 +167,14 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -172,7 +183,10 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. The value of this parameter is specified by the system.
+         * <p>The source IP address of the request. The value of this parameter is specified by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -181,7 +195,11 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * The type of the vertex. Set the value to **SAS_INCIDENT**.
+         * <p>The type of the vertex. Set the value to <strong>SAS_INCIDENT</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAS_INCIDENT</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -190,7 +208,11 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1627f2d7-aaa2-4ed1-b07a-xxxxxxxxxxxxxx</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -199,7 +221,11 @@ public class DescribeTraceInfoDetailRequest extends Request {
         }
 
         /**
-         * The ID of the vertex. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the ID.
+         * <p>The ID of the vertex. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cce1d28dxxxxxxxxxxxxxxxx</p>
          */
         public Builder vertexId(String vertexId) {
             this.putQueryParameter("VertexId", vertexId);

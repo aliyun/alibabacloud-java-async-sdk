@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAegisContainerPluginRuleCriteriaResponseBody} extends {@link TeaModel}
  *
  * <p>GetAegisContainerPluginRuleCriteriaResponseBody</p>
@@ -49,7 +50,7 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the search condition.
+         * <p>The information about the search condition.</p>
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -57,7 +58,10 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DA8133CC-CCA0-5CF2-BF64-FE7D52C44***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAegisContainerPluginRuleCriteriaResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAegisContainerPluginRuleCriteriaResponseBody</p>
+     */
     public static class CriteriaList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -121,19 +131,22 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The name of the search condition. Valid values:
-             * <p>
+             * <p>The name of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>instanceId</strong>: the ID of the container instance.</li>
+             * <li><strong>clusterId</strong>: the cluster ID.</li>
+             * <li><strong>regionId</strong>: the ID of the region in which the container resides.</li>
+             * <li><strong>clusterName</strong>: the name of the cluster.</li>
+             * <li><strong>clusterType</strong>: the type of the cluster.</li>
+             * <li><strong>hostIp</strong>: the public IP address.</li>
+             * <li><strong>pod</strong>: the pod.</li>
+             * <li><strong>podIp</strong>: the IP address of the pod.</li>
+             * <li><strong>containerId</strong>: the container ID.</li>
+             * <li><strong>containerScope</strong>: the type of the container.</li>
+             * </ul>
              * 
-             * *   **instanceId**: the ID of the container instance.
-             * *   **clusterId**: the cluster ID.
-             * *   **regionId**: the ID of the region in which the container resides.
-             * *   **clusterName**: the name of the cluster.
-             * *   **clusterType**: the type of the cluster.
-             * *   **hostIp**: the public IP address.
-             * *   **pod**: the pod.
-             * *   **podIp**: the IP address of the pod.
-             * *   **containerId**: the container ID.
-             * *   **containerScope**: the type of the container.
+             * <strong>example:</strong>
+             * <p>containerScope</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -141,11 +154,14 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the search condition. Valid values:
-             * <p>
+             * <p>The type of the search condition. Valid values:</p>
+             * <ul>
+             * <li><strong>input</strong>: The search condition needs to be specified.</li>
+             * <li><strong>select</strong>: The search condition is an option that can be selected from the drop-down list.</li>
+             * </ul>
              * 
-             * *   **input**: The search condition needs to be specified.
-             * *   **select**: The search condition is an option that can be selected from the drop-down list.
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -153,7 +169,10 @@ public class GetAegisContainerPluginRuleCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The values.
+             * <p>The values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NO,YES</p>
              */
             public Builder values(String values) {
                 this.values = values;

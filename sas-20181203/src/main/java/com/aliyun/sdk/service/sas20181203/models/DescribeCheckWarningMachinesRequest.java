@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckWarningMachinesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCheckWarningMachinesRequest</p>
@@ -179,10 +180,13 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
-         * <p>
+         * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of check items.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of check items.
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -191,7 +195,10 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -200,7 +207,10 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The instance ID of the asset that you don\"t want to query.
+         * <p>The instance ID of the asset that you don&quot;t want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2f64e1a0f9316c48*******</p>
          */
         public Builder filterUuid(String filterUuid) {
             this.putQueryParameter("FilterUuid", filterUuid);
@@ -209,7 +219,10 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The instance ID of the asset.
+         * <p>The instance ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-rv4nvbv8iju4****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -218,11 +231,14 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -231,7 +247,10 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -240,7 +259,10 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The information about the server that you want to query. The value can be the name or the public IP address of the server.
+         * <p>The information about the server that you want to query. The value can be the name or the public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -249,10 +271,13 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * <strong>example:</strong>
+         * <p>1232428423234****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -261,10 +286,13 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The ID of the baseline.
-         * <p>
+         * <p>The ID of the baseline.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of baselines.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of baselines.
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder riskId(Long riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -273,11 +301,14 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
-         * The risk status of the check item. Valid values:
-         * <p>
+         * <p>The risk status of the check item. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: failed</li>
+         * <li><strong>3</strong>: passed</li>
+         * </ul>
          * 
-         * *   **1**: failed
-         * *   **3**: passed
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

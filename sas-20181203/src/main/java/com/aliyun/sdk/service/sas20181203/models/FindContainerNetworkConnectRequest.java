@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link FindContainerNetworkConnectRequest} extends {@link RequestModel}
  *
  * <p>FindContainerNetworkConnectRequest</p>
@@ -137,10 +138,13 @@ public class FindContainerNetworkConnectRequest extends Request {
         } 
 
         /**
-         * The type of the information that you want to query. Valid values:
-         * <p>
+         * <p>The type of the information that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>EDGE</strong>: connection information</li>
+         * </ul>
          * 
-         * *   **EDGE**: connection information
+         * <strong>example:</strong>
+         * <p>EDGE</p>
          */
         public Builder criteriaType(String criteriaType) {
             this.putQueryParameter("CriteriaType", criteriaType);
@@ -149,7 +153,10 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -158,7 +165,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * The information about the destination node.
+         * <p>The information about the destination node.</p>
          */
         public Builder dstNode(DstNode dstNode) {
             String dstNodeShrink = shrink(dstNode, "DstNode", "json");
@@ -168,7 +175,10 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * The end time of the network connection.
+         * <p>The end time of the network connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649260799999</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -177,10 +187,13 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,7 +202,7 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * The information about the source node.
+         * <p>The information about the source node.</p>
          */
         public Builder srcNode(SrcNode srcNode) {
             String srcNodeShrink = shrink(srcNode, "SrcNode", "json");
@@ -199,7 +212,10 @@ public class FindContainerNetworkConnectRequest extends Request {
         }
 
         /**
-         * The start time of the network connection.
+         * <p>The start time of the network connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1666886400000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -214,6 +230,12 @@ public class FindContainerNetworkConnectRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link FindContainerNetworkConnectRequest} extends {@link TeaModel}
+     *
+     * <p>FindContainerNetworkConnectRequest</p>
+     */
     public static class DstNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -301,7 +323,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             private String podName; 
 
             /**
-             * The name of the container application.
+             * <p>The name of the container application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx-ingress-controller</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -309,10 +334,13 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The ID of the container cluster.
-             * <p>
+             * <p>The ID of the container cluster.</p>
+             * <blockquote>
+             * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+             * </blockquote>
              * 
-             * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+             * <strong>example:</strong>
+             * <p>f5x833820xx</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -320,7 +348,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The namespace of the cluster.
+             * <p>The namespace of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -328,7 +359,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The node IDs.
+             * <p>The node IDs.</p>
              */
             public Builder nodeIds(java.util.List < String > nodeIds) {
                 this.nodeIds = nodeIds;
@@ -336,10 +367,13 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The type of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>app</strong>: application, which indicates that the node type is application.</li>
+             * </ul>
              * 
-             * *   **app**: application, which indicates that the node type is application.
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -347,7 +381,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The name of the pod.
+             * <p>The name of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-deployment-yacs-31144-39265-1384966-7f8c8cd578-h6mhb</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -361,6 +398,12 @@ public class FindContainerNetworkConnectRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link FindContainerNetworkConnectRequest} extends {@link TeaModel}
+     *
+     * <p>FindContainerNetworkConnectRequest</p>
+     */
     public static class SrcNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -448,7 +491,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             private String podName; 
 
             /**
-             * The name of the container application.
+             * <p>The name of the container application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prometheus-ack-arms-prometheus</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -456,10 +502,13 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The ID of the container cluster.
-             * <p>
+             * <p>The ID of the container cluster.</p>
+             * <blockquote>
+             * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+             * </blockquote>
              * 
-             * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+             * <strong>example:</strong>
+             * <p>c56xxx1775dea0</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -467,7 +516,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The namespace of the cluster.
+             * <p>The namespace of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -475,7 +527,7 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The node IDs.
+             * <p>The node IDs.</p>
              */
             public Builder nodeIds(java.util.List < String > nodeIds) {
                 this.nodeIds = nodeIds;
@@ -483,10 +535,13 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The type of the node. Valid values:
-             * <p>
+             * <p>The type of the node. Valid values:</p>
+             * <ul>
+             * <li><strong>app</strong>: application, which indicates that the node type is application.</li>
+             * </ul>
              * 
-             * *   **app**: application, which indicates that the node type is application.
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -494,7 +549,10 @@ public class FindContainerNetworkConnectRequest extends Request {
             }
 
             /**
-             * The name of the pod.
+             * <p>The name of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-deployment-yacs-31144-39265-1384966-7f8c8cd578-h6mhb</p>
              */
             public Builder podName(String podName) {
                 this.podName = podName;

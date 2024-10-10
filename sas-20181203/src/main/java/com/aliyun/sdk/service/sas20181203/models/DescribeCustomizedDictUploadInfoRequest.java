@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizedDictUploadInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomizedDictUploadInfoRequest</p>
@@ -53,7 +54,10 @@ public class DescribeCustomizedDictUploadInfoRequest extends Request {
         } 
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106.11.43.***</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

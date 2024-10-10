@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteMaliciousFileWhitelistConfigRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteMaliciousFileWhitelistConfigRequest</p>
@@ -53,7 +54,7 @@ public class BatchDeleteMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * The IDs of the whitelist rules. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of whitelist rules.
+         * <p>The IDs of the whitelist rules. You can call the <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> operation to query the IDs of whitelist rules.</p>
          */
         public Builder configIdList(java.util.List < Long > configIdList) {
             this.putQueryParameter("ConfigIdList", configIdList);

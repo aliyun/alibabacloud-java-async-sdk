@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBackupSnapshotRequest} extends {@link RequestModel}
  *
  * <p>DeleteBackupSnapshotRequest</p>
@@ -81,7 +82,7 @@ public class DeleteBackupSnapshotRequest extends Request {
         } 
 
         /**
-         * The regions for backup.
+         * <p>The regions for backup.</p>
          */
         public Builder backupRegionIdList(java.util.List < String > backupRegionIdList) {
             this.putQueryParameter("BackupRegionIdList", backupRegionIdList);
@@ -90,7 +91,7 @@ public class DeleteBackupSnapshotRequest extends Request {
         }
 
         /**
-         * The backup snapshots.
+         * <p>The backup snapshots.</p>
          */
         public Builder backupSnapshotList(java.util.List < BackupSnapshotList> backupSnapshotList) {
             this.putQueryParameter("BackupSnapshotList", backupSnapshotList);
@@ -99,11 +100,14 @@ public class DeleteBackupSnapshotRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the latest snapshot. Valid values:
-         * <p>
+         * <p>Specifies whether to retain the latest snapshot. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder retainLatestSnapshot(Boolean retainLatestSnapshot) {
             this.putQueryParameter("RetainLatestSnapshot", retainLatestSnapshot);
@@ -118,6 +122,12 @@ public class DeleteBackupSnapshotRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DeleteBackupSnapshotRequest} extends {@link TeaModel}
+     *
+     * <p>DeleteBackupSnapshotRequest</p>
+     */
     public static class BackupSnapshotList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -211,10 +221,14 @@ public class DeleteBackupSnapshotRequest extends Request {
             private String vaultId; 
 
             /**
-             * The ID of the Cloud Backup client.
-             * <p>
+             * <p>The ID of the Cloud Backup client.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to query the ID.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to query the ID.
+             * <strong>example:</strong>
+             * <p>c-000a4h33w14ka8xagb2s</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -222,7 +236,11 @@ public class DeleteBackupSnapshotRequest extends Request {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-j6cj8vyajp1fo4atxkae</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -230,12 +248,16 @@ public class DeleteBackupSnapshotRequest extends Request {
             }
 
             /**
-             * The region in which Security Center is deployed. Valid values:
-             * <p>
+             * <p>The region in which Security Center is deployed. Valid values:</p>
+             * <ul>
+             * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
+             * <li><strong>ap-southeast-1</strong>: Singapore.</li>
+             * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **cn-hangzhou**: China (Hangzhou).
-             * *   **ap-southeast-1**: Singapore.
-             * *   **cn-beijing**: China (Beijing).
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -243,10 +265,14 @@ public class DeleteBackupSnapshotRequest extends Request {
             }
 
             /**
-             * The ID of the snapshot that you want to delete.
-             * <p>
+             * <p>The ID of the snapshot that you want to delete.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to query the ID.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to query the ID.
+             * <strong>example:</strong>
+             * <p>s-000f9p6r5trm6u4dc1iq</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -254,13 +280,17 @@ public class DeleteBackupSnapshotRequest extends Request {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files.</li>
+             * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets.</li>
+             * <li><strong>NAS</strong>: Apsara File Storage NAS (NAS) file systems.</li>
+             * <li><strong>OTS_TABLE</strong>: Tablestore instances.</li>
+             * </ul>
+             * <p>This parameter is required.</p>
              * 
-             * *   **ECS_FILE**: Elastic Compute Service (ECS) files.
-             * *   **OSS**: Object Storage Service (OSS) buckets.
-             * *   **NAS**: Apsara File Storage NAS (NAS) file systems.
-             * *   **OTS_TABLE**: Tablestore instances.
+             * <strong>example:</strong>
+             * <p>ECS_FILE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -268,10 +298,14 @@ public class DeleteBackupSnapshotRequest extends Request {
             }
 
             /**
-             * The ID of the backup vault that is used in the restoration task.
-             * <p>
+             * <p>The ID of the backup vault that is used in the restoration task.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to query the ID.</p>
+             * </blockquote>
+             * <p>This parameter is required.</p>
              * 
-             * >  You can call the [DescribeSnapshots](~~DescribeSnapshots~~) operation to query the ID.
+             * <strong>example:</strong>
+             * <p>v-0004vhwcs2pmacfzrzt5</p>
              */
             public Builder vaultId(String vaultId) {
                 this.vaultId = vaultId;

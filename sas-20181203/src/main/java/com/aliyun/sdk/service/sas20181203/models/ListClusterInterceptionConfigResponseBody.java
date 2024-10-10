@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClusterInterceptionConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ListClusterInterceptionConfigResponseBody</p>
@@ -61,7 +62,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the configurations of the cluster.
+         * <p>An array that consists of the configurations of the cluster.</p>
          */
         public Builder clusterConfigList(java.util.List < ClusterConfigList> clusterConfigList) {
             this.clusterConfigList = clusterConfigList;
@@ -69,7 +70,7 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49FDE92F-A0B8-56CC-B7A8-23B17646****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClusterInterceptionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterInterceptionConfigResponseBody</p>
+     */
     public static class ClusterConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterCNNFStatus")
         private Integer clusterCNNFStatus;
@@ -201,13 +211,16 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             private Long totalRuleCount; 
 
             /**
-             * The status of the container firewall feature. Valid values:
-             * <p>
+             * <p>The status of the container firewall feature. Valid values:</p>
+             * <ul>
+             * <li><strong>-1</strong>: unknown</li>
+             * <li><strong>0</strong>: abnormal</li>
+             * <li><strong>1</strong>: normal</li>
+             * <li><strong>2</strong>: normal to be confirmed</li>
+             * </ul>
              * 
-             * *   **-1**: unknown
-             * *   **0**: abnormal
-             * *   **1**: normal
-             * *   **2**: normal to be confirmed
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder clusterCNNFStatus(Integer clusterCNNFStatus) {
                 this.clusterCNNFStatus = clusterCNNFStatus;
@@ -215,7 +228,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c9051d30d8a044b4d99e1cb5d25ac****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -223,7 +239,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>container-opa-kill-02</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -231,14 +250,17 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values:
-             * <p>
+             * <p>The type of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>ManagedKubernetes</strong>: managed Kubernetes cluster</li>
+             * <li><strong>NotManagedKubernetes</strong>: non-managed Kubernetes cluster</li>
+             * <li><strong>PrivateKubernetes</strong>: private cluster</li>
+             * <li><strong>kubernetes</strong>: dedicated Kubernetes cluster</li>
+             * <li><strong>ask</strong>: dedicated serverless Kubernetes (ASK) cluster</li>
+             * </ul>
              * 
-             * *   **ManagedKubernetes**: managed Kubernetes cluster
-             * *   **NotManagedKubernetes**: non-managed Kubernetes cluster
-             * *   **PrivateKubernetes**: private cluster
-             * *   **kubernetes**: dedicated Kubernetes cluster
-             * *   **ask**: dedicated serverless Kubernetes (ASK) cluster
+             * <strong>example:</strong>
+             * <p>ManagedKubernetes</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -246,11 +268,14 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the defense rule. Valid values:
-             * <p>
+             * <p>The status of the defense rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder interceptionSwitch(Integer interceptionSwitch) {
                 this.interceptionSwitch = interceptionSwitch;
@@ -258,7 +283,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of defense rules that are in effect.
+             * <p>The number of defense rules that are in effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder openRuleCount(Long openRuleCount) {
                 this.openRuleCount = openRuleCount;
@@ -266,7 +294,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container firewall feature is supported.
+             * <p>Indicates whether the container firewall feature is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder supportCNNF(Boolean supportCNNF) {
                 this.supportCNNF = supportCNNF;
@@ -274,7 +305,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of defense rules.
+             * <p>The total number of defense rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder totalRuleCount(Long totalRuleCount) {
                 this.totalRuleCount = totalRuleCount;
@@ -288,6 +322,12 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListClusterInterceptionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClusterInterceptionConfigResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -351,7 +391,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -359,7 +402,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currrentPage(Integer currrentPage) {
                 this.currrentPage = currrentPage;
@@ -367,7 +413,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -375,7 +424,10 @@ public class ListClusterInterceptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifySearchConditionRequest} extends {@link RequestModel}
  *
  * <p>ModifySearchConditionRequest</p>
@@ -96,28 +97,47 @@ public class ModifySearchConditionRequest extends Request {
         } 
 
         /**
-         * The filter condition. The value of this parameter is in the JSON format and is case-sensitive. The value contains the following fields:
-         * <p>
+         * <p>The filter condition. The value of this parameter is in the JSON format and is case-sensitive. The value contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>filterParams</strong>: the filter-related parameters. The value is in the JSON format. Valid values:</p>
+         * <ul>
+         * <li><p><strong>label</strong>: the display name of the filter condition in the console.</p>
+         * </li>
+         * <li><p><strong>value</strong>: the settings of the filter condition. The value is in the JSON format. The value contains the following fields:</p>
+         * <ul>
+         * <li><strong>name</strong>: the name of the field for filtering. For more information, see the value description of name.</li>
+         * <li><strong>value</strong>: the value of the field for filtering.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p><strong>LogicalExp</strong>: the logical relationship among multiple filter conditions. Valid values:</p>
+         * <ul>
+         * <li><strong>OR</strong></li>
+         * <li><strong>AND</strong></li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> Value description of <strong>name</strong>:</p>
+         * </blockquote>
+         * <ul>
+         * <li><p>If <strong>Type</strong> is set to <strong>ecs</strong>, you can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported filter conditions.</p>
+         * </li>
+         * <li><p>If <strong>Type</strong> is set to <strong>cloud_product</strong>, you can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported filter conditions.</p>
+         * </li>
+         * </ul>
          * 
-         * *   **filterParams**: the filter-related parameters. The value is in the JSON format. Valid values:
-         * 
-         *     *   **label**: the display name of the filter condition in the console.
-         * 
-         *     *   **value**: the settings of the filter condition. The value is in the JSON format. The value contains the following fields:
-         * 
-         *         *   **name**: the name of the field for filtering. For more information, see the value description of name.
-         *         *   **value**: the value of the field for filtering.
-         * 
-         * *   **LogicalExp**: the logical relationship among multiple filter conditions. Valid values:
-         * 
-         *     *   **OR**
-         *     *   **AND**
-         * 
-         * >  Value description of **name**:
-         * 
-         * *   If **Type** is set to **ecs**, you can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported filter conditions.
-         * 
-         * *   If **Type** is set to **cloud_product**, you can call the [GetCloudAssetCriteria](~~GetCloudAssetCriteria~~) operation to query the supported filter conditions.
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;filterParams&quot;: [
+         *         {
+         *             &quot;label&quot;: &quot;UUID：xxx&quot;,
+         *             &quot;value&quot;: &quot;{&quot;name&quot;:&quot;uuidList&quot;,&quot;value&quot;:&quot;xxx&quot;}&quot;
+         *         }
+         *     ],
+         *     &quot;LogicalExp&quot;: &quot;OR&quot;
+         * }</p>
          */
         public Builder filterConditions(String filterConditions) {
             this.putQueryParameter("FilterConditions", filterConditions);
@@ -126,7 +146,11 @@ public class ModifySearchConditionRequest extends Request {
         }
 
         /**
-         * The name of the common filter condition.
+         * <p>The name of the common filter condition.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -135,7 +159,10 @@ public class ModifySearchConditionRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27.223.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -144,11 +171,14 @@ public class ModifySearchConditionRequest extends Request {
         }
 
         /**
-         * The type of the asset. Default value: **ecs**. Valid values:
-         * <p>
+         * <p>The type of the asset. Default value: <strong>ecs</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: host</li>
+         * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+         * </ul>
          * 
-         * *   **ecs**: host
-         * *   **cloud_product**: Alibaba Cloud service
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

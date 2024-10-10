@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateDynamicDictRequest} extends {@link RequestModel}
  *
  * <p>GenerateDynamicDictRequest</p>
@@ -95,7 +96,10 @@ public class GenerateDynamicDictRequest extends Request {
         } 
 
         /**
-         * The keyword of the dictionary.
+         * <p>The keyword of the dictionary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keyword</p>
          */
         public Builder argKeywords(String argKeywords) {
             this.putQueryParameter("ArgKeywords", argKeywords);
@@ -104,7 +108,10 @@ public class GenerateDynamicDictRequest extends Request {
         }
 
         /**
-         * The domain name for custom weak passwords.
+         * <p>The domain name for custom weak passwords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
          */
         public Builder domains(String domains) {
             this.putQueryParameter("Domains", domains);
@@ -113,7 +120,10 @@ public class GenerateDynamicDictRequest extends Request {
         }
 
         /**
-         * The company name for custom weak passwords.
+         * <p>The company name for custom weak passwords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba</p>
          */
         public Builder names(String names) {
             this.putQueryParameter("Names", names);
@@ -122,7 +132,10 @@ public class GenerateDynamicDictRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58.248.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

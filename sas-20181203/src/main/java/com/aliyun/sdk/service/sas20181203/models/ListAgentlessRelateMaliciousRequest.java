@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentlessRelateMaliciousRequest} extends {@link RequestModel}
  *
  * <p>ListAgentlessRelateMaliciousRequest</p>
@@ -83,7 +84,11 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -92,7 +97,10 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * The ID of the event.
+         * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80****</p>
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -101,7 +109,11 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

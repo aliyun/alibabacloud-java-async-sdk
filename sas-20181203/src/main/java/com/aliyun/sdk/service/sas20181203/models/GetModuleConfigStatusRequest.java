@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetModuleConfigStatusRequest} extends {@link RequestModel}
  *
  * <p>GetModuleConfigStatusRequest</p>
@@ -54,7 +55,7 @@ public class GetModuleConfigStatusRequest extends Request {
         } 
 
         /**
-         * ModuleNames.
+         * <p>This parameter is required.</p>
          */
         public Builder moduleNames(java.util.List < String > moduleNames) {
             String moduleNamesShrink = shrink(moduleNames, "ModuleNames", "json");

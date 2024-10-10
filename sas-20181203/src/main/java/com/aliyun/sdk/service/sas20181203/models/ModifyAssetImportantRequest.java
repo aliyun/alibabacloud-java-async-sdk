@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyAssetImportantRequest} extends {@link RequestModel}
  *
  * <p>ModifyAssetImportantRequest</p>
@@ -67,12 +68,15 @@ public class ModifyAssetImportantRequest extends Request {
         } 
 
         /**
-         * The importance of the asset. Valid values:
-         * <p>
+         * <p>The importance of the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: test</li>
+         * <li><strong>1</strong>: normal</li>
+         * <li><strong>2</strong>: important</li>
+         * </ul>
          * 
-         * *   **0**: test
-         * *   **1**: normal
-         * *   **2**: important
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder importantCode(Integer importantCode) {
             this.putQueryParameter("ImportantCode", importantCode);
@@ -81,10 +85,13 @@ public class ModifyAssetImportantRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>076a446d-df7d-424c-bdc5-bb5dc7f1****</p>
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

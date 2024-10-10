@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVulStatisticsRequest} extends {@link RequestModel}
  *
  * <p>GetVulStatisticsRequest</p>
@@ -83,10 +84,14 @@ public class GetVulStatisticsRequest extends Request {
         } 
 
         /**
-         * The ID of the asset group. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the asset group. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+         * <strong>example:</strong>
+         * <p>9997897</p>
          */
         public Builder groupIdList(String groupIdList) {
             this.putQueryParameter("GroupIdList", groupIdList);
@@ -95,7 +100,10 @@ public class GetVulStatisticsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.12.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -104,15 +112,19 @@ public class GetVulStatisticsRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability whose statistics you want to query. Separate multiple types with commas (,). Valid values:
-         * <p>
+         * <p>The type of the vulnerability whose statistics you want to query. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability</li>
+         * <li><strong>sys</strong>: Windows system vulnerability</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+         * <li><strong>emg</strong>: urgent vulnerability</li>
+         * <li><strong>app</strong>: vulnerability detected by using a web scanner</li>
+         * <li><strong>sca</strong>: vulnerability detected based on software component analysis</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **cve**: Linux software vulnerability
-         * *   **sys**: Windows system vulnerability
-         * *   **cms**: Web-CMS vulnerability
-         * *   **emg**: urgent vulnerability
-         * *   **app**: vulnerability detected by using a web scanner
-         * *   **sca**: vulnerability detected based on software component analysis
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder typeList(String typeList) {
             this.putQueryParameter("TypeList", typeList);

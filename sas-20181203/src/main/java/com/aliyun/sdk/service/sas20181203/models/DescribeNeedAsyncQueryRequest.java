@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNeedAsyncQueryRequest} extends {@link RequestModel}
  *
  * <p>DescribeNeedAsyncQueryRequest</p>
@@ -54,7 +55,10 @@ public class DescribeNeedAsyncQueryRequest extends Request {
         } 
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>suspicious</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

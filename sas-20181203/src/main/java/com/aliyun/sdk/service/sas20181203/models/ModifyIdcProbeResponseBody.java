@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyIdcProbeResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyIdcProbeResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyIdcProbeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20456DD5-5CBF-5015-9173-12CA4246B***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

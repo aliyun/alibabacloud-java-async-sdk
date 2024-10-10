@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHoneypotPresetResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHoneypotPresetResponseBody</p>
@@ -97,7 +98,10 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The creation result.
+         * <p>The creation result.</p>
          */
         public Builder honeypotPreset(HoneypotPreset honeypotPreset) {
             this.honeypotPreset = honeypotPreset;
@@ -113,7 +117,10 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C1C6E65-C8B9-54C9-9F92-2F5E51C4E16D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHoneypotPresetResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHoneypotPresetResponseBody</p>
+     */
     public static class HoneypotPreset extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HoneypotPresetId")
         private String honeypotPresetId;
@@ -181,7 +203,10 @@ public class CreateHoneypotPresetResponseBody extends TeaModel {
             private String honeypotPresetId; 
 
             /**
-             * The ID of the honeypot template.
+             * <p>The ID of the honeypot template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d6ece172-34d9-4942-99a4-b309cb55xxxx</p>
              */
             public Builder honeypotPresetId(String honeypotPresetId) {
                 this.honeypotPresetId = honeypotPresetId;

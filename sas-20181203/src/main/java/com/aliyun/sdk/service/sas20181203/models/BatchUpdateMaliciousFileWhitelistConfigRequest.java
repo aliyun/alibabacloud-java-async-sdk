@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchUpdateMaliciousFileWhitelistConfigRequest} extends {@link RequestModel}
  *
  * <p>BatchUpdateMaliciousFileWhitelistConfigRequest</p>
@@ -53,7 +54,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * The whitelist rules.
+         * <p>The whitelist rules.</p>
          */
         public Builder configList(java.util.List < ConfigList> configList) {
             this.putQueryParameter("ConfigList", configList);
@@ -68,6 +69,12 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link BatchUpdateMaliciousFileWhitelistConfigRequest} extends {@link TeaModel}
+     *
+     * <p>BatchUpdateMaliciousFileWhitelistConfigRequest</p>
+     */
     public static class ConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Long configId;
@@ -179,7 +186,10 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             private String targetValue; 
 
             /**
-             * The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.
+             * <p>The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -187,10 +197,13 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * The name of the alert.
-             * <p>
+             * <p>The name of the alert.</p>
+             * <ul>
+             * <li>Set the value to <strong>ALL</strong>, which indicates all alert types.</li>
+             * </ul>
              * 
-             * *   Set the value to **ALL**, which indicates all alert types.
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -198,7 +211,10 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * The field that you want to use in the whitelist rule.
+             * <p>The field that you want to use in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fileMd5</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -206,7 +222,10 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * The value of the field that you want to use in the whitelist rule.
+             * <p>The value of the field that you want to use in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b2cf9747ee49d8d9b105cf16e078cc16</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -214,10 +233,13 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * The logical operator that you want to use in the whitelist rule.
-             * <p>
+             * <p>The logical operator that you want to use in the whitelist rule.</p>
+             * <ul>
+             * <li>Set the value to strEqual, which indicates the equality operator (=).</li>
+             * </ul>
              * 
-             * *   Set the value to strEqual, which indicates the equality operator (=).
+             * <strong>example:</strong>
+             * <p>strEqual</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -225,10 +247,13 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * The feature to which this operation belongs.
-             * <p>
+             * <p>The feature to which this operation belongs.</p>
+             * <ul>
+             * <li>Set the value to agentless, which indicates the agentless detection feature.</li>
+             * </ul>
              * 
-             * *   Set the value to agentless, which indicates the agentless detection feature.
+             * <strong>example:</strong>
+             * <p>agentless</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -236,11 +261,14 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * The type of the assets on which you want the whitelist rule to take effect. Valid values:
-             * <p>
+             * <p>The type of the assets on which you want the whitelist rule to take effect. Valid values:</p>
+             * <ul>
+             * <li>ALL: all assets</li>
+             * <li>SELECTION_KEY: selected assets</li>
+             * </ul>
              * 
-             * *   ALL: all assets
-             * *   SELECTION_KEY: selected assets
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -248,11 +276,14 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends Request {
             }
 
             /**
-             * The assets on which you want the whitelist rule to take effect. Valid values:
-             * <p>
+             * <p>The assets on which you want the whitelist rule to take effect. Valid values:</p>
+             * <ul>
+             * <li>ALL: all assets</li>
+             * <li>Others: selected assets</li>
+             * </ul>
              * 
-             * *   ALL: all assets
-             * *   Others: selected assets
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder targetValue(String targetValue) {
                 this.targetValue = targetValue;

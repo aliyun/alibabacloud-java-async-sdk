@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAssetRefreshTaskConfigRequest} extends {@link RequestModel}
  *
  * <p>ListAssetRefreshTaskConfigRequest</p>
@@ -81,12 +82,15 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
         } 
 
         /**
-         * The type of the configuration. Valid values:
-         * <p>
+         * <p>The type of the configuration. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: server synchronization task</li>
+         * <li><strong>1</strong>: cloud service synchronization task</li>
+         * <li><strong>2</strong>: scheduled AccessKey pair verification task</li>
+         * </ul>
          * 
-         * *   **0**: server synchronization task
-         * *   **1**: cloud service synchronization task
-         * *   **2**: scheduled AccessKey pair verification task
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder refreshConfigType(Integer refreshConfigType) {
             this.putQueryParameter("RefreshConfigType", refreshConfigType);
@@ -95,7 +99,10 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
         }
 
         /**
-         * The region where the Security Center instance is deployed.
+         * <p>The region where the Security Center instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -104,7 +111,10 @@ public class ListAssetRefreshTaskConfigRequest extends Request {
         }
 
         /**
-         * The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.
+         * <p>The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2295</p>
          */
         public Builder targetId(Long targetId) {
             this.putQueryParameter("TargetId", targetId);

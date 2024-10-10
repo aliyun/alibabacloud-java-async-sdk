@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RetryAgentlessTaskRequest} extends {@link RequestModel}
  *
  * <p>RetryAgentlessTaskRequest</p>
@@ -53,7 +54,10 @@ public class RetryAgentlessTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the task. You can call the [ListAgentlessTask](~~ListAgentlessTask~~) operation to obtain the IDs of tasks.
+         * <p>The ID of the task. You can call the <a href="~~ListAgentlessTask~~">ListAgentlessTask</a> operation to obtain the IDs of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5347c7b6-c85c-4070-846a-3029e08e****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

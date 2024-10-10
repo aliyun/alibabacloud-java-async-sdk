@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageRegistryRequest} extends {@link RequestModel}
  *
  * <p>ModifyImageRegistryRequest</p>
@@ -95,7 +96,10 @@ public class ModifyImageRegistryRequest extends Request {
         } 
 
         /**
-         * The ID of the image repository. You can call the listImageRegistry operation to query the ID of the image repository.
+         * <p>The ID of the image repository. You can call the listImageRegistry operation to query the ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>390103286</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -104,7 +108,10 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * The password.
+         * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -113,7 +120,10 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * The number of images that are scanned per hour.
+         * <p>The number of images that are scanned per hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder transPerHour(Integer transPerHour) {
             this.putBodyParameter("TransPerHour", transPerHour);
@@ -122,7 +132,10 @@ public class ModifyImageRegistryRequest extends Request {
         }
 
         /**
-         * The username.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

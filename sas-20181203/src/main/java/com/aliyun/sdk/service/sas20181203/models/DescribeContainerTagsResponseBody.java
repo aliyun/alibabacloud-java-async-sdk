@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerTagsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerTagsResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeContainerTagsResponseBody extends TeaModel {
         private java.util.List < String > tagValues; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028CF634-5268-5660-9575-48C9ED6BF880</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeContainerTagsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the attributes of container assets.
+         * <p>An array that consists of the attributes of container assets.</p>
          */
         public Builder tagValues(java.util.List < String > tagValues) {
             this.tagValues = tagValues;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageRepoDetailListRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageRepoDetailListRequest</p>
@@ -95,19 +96,25 @@ public class DescribeImageRepoDetailListRequest extends Request {
         } 
 
         /**
-         * The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>name</strong>: the search condition.</p>
+         * </li>
+         * <li><p><strong>name</strong>: the value of the search condition.</p>
+         * </li>
+         * <li><p><strong>logicalExp</strong>: the logical relation for multiple search conditions. Valid values:</p>
+         * <ul>
+         * <li><strong>OR</strong>: The search conditions use a logical <strong>OR</strong>.</li>
+         * <li><strong>AND</strong>: The search conditions use a logical <strong>AND</strong>.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeImageRepoCriteria~~">DescribeImageRepoCriteria</a> operation to query the supported search conditions.</p>
+         * </blockquote>
          * 
-         * *   **name**: the search condition.
-         * 
-         * *   **name**: the value of the search condition.
-         * 
-         * *   **logicalExp**: the logical relation for multiple search conditions. Valid values:
-         * 
-         *     *   **OR**: The search conditions use a logical **OR**.
-         *     *   **AND**: The search conditions use a logical **AND**.
-         * 
-         * > You can call the [DescribeImageRepoCriteria](~~DescribeImageRepoCriteria~~) operation to query the supported search conditions.
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;vulStatus&quot;,&quot;value&quot;:&quot;YES&quot;,&quot;logicalExp&quot;:&quot;AND&quot;}]</p>
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -116,7 +123,10 @@ public class DescribeImageRepoDetailListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -125,11 +135,14 @@ public class DescribeImageRepoDetailListRequest extends Request {
         }
 
         /**
-         * The logical relationship that you want to use to evaluate multiple search conditions. Valid values:
-         * <p>
+         * <p>The logical relationship that you want to use to evaluate multiple search conditions. Valid values:</p>
+         * <ul>
+         * <li><strong>OR</strong>: Search conditions are evaluated by using a logical <strong>OR</strong>.</li>
+         * <li><strong>AND</strong>: Search conditions are evaluated by using a logical <strong>AND</strong>.</li>
+         * </ul>
          * 
-         * *   **OR**: Search conditions are evaluated by using a logical **OR**.
-         * *   **AND**: Search conditions are evaluated by using a logical **AND**.
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         public Builder logicalExp(String logicalExp) {
             this.putQueryParameter("LogicalExp", logicalExp);
@@ -138,10 +151,13 @@ public class DescribeImageRepoDetailListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p>We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * > We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

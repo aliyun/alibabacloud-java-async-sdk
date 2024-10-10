@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpaStrategyDetailNewResponseBody</p>
@@ -97,7 +98,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +117,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E819FD71-D240-5E54-AA7F-20FED2ECBEB6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class Item extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -193,7 +215,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the baseline check item.
+             * <p>The ID of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_leak</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -201,7 +226,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline check item.
+             * <p>The name of the baseline check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Access Key plaintext storage</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -215,6 +243,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class Baseline extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
@@ -254,7 +288,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The information about the baseline check item.
+             * <p>The information about the baseline check item.</p>
              */
             public Builder item(java.util.List < Item> item) {
                 this.item = item;
@@ -262,7 +296,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels.
+             * <p>The risk levels.</p>
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -276,6 +310,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class BuildRiskItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -315,10 +355,13 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the image build risk.
-             * <p>
+             * <p>The ID of the image build risk.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * </blockquote>
              * 
-             * >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -326,10 +369,13 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image build risk.
-             * <p>
+             * <p>The name of the image build risk.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</p>
+             * </blockquote>
              * 
-             * >  You can call the [ListImageBuildRiskItem](~~ListImageBuildRiskItem~~) operation to query the ID of the malicious sample.
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,6 +389,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class BuildRisk extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < BuildRiskItem> item;
@@ -382,7 +434,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The configuration of image build risk.
+             * <p>The configuration of image build risk.</p>
              */
             public Builder item(java.util.List < BuildRiskItem> item) {
                 this.item = item;
@@ -390,7 +442,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels.
+             * <p>The risk levels.</p>
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -404,6 +456,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class MaliciousFileItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -443,7 +501,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the malicious sample.
+             * <p>The ID of the malicious sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1811</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -451,7 +512,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the malicious sample.
+             * <p>The name of the malicious sample.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abnormal binary file</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -465,6 +529,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class MaliciousFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < MaliciousFileItem> item;
@@ -504,7 +574,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The information about the malicious sample.
+             * <p>The information about the malicious sample.</p>
              */
             public Builder item(java.util.List < MaliciousFileItem> item) {
                 this.item = item;
@@ -512,7 +582,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels.
+             * <p>The risk levels.</p>
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -526,6 +596,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class SensitiveFileItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -565,10 +641,13 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the sensitive files.
-             * <p>
+             * <p>The ID of the sensitive files.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * </blockquote>
              * 
-             * >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -576,10 +655,13 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sensitive files.
-             * <p>
+             * <p>The name of the sensitive files.</p>
+             * <blockquote>
+             * <p> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</p>
+             * </blockquote>
              * 
-             * >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -593,6 +675,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class SensitiveFile extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < SensitiveFileItem> item;
@@ -632,7 +720,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The configuration of sensitive file.
+             * <p>The configuration of sensitive file.</p>
              */
             public Builder item(java.util.List < SensitiveFileItem> item) {
                 this.item = item;
@@ -640,7 +728,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels.
+             * <p>The risk levels.</p>
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -654,6 +742,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class VulItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -693,7 +787,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the vulnerability.
+             * <p>The ID of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVD-2023-1680169</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -701,7 +798,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ezOffice evoInterfaceServlet Info Leak</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -715,6 +815,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class RiskClass extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -754,11 +860,14 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the vulnerability types. Valid values:
-             * <p>
+             * <p>The ID of the vulnerability types. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: system vulnerability</li>
+             * <li><strong>app</strong>: application vulnerability</li>
+             * </ul>
              * 
-             * *   **cve**: system vulnerability
-             * *   **app**: application vulnerability
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -766,11 +875,14 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability. Valid values:
-             * <p>
+             * <p>The name of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>system vulnerability</strong></li>
+             * <li><strong>application vulnerability</strong></li>
+             * </ul>
              * 
-             * *   **system vulnerability**
-             * *   **application vulnerability**
+             * <strong>example:</strong>
+             * <p>system vulnerability</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -784,6 +896,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class Vul extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < VulItem> item;
@@ -835,7 +953,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The information about the vulnerability.
+             * <p>The information about the vulnerability.</p>
              */
             public Builder item(java.util.List < VulItem> item) {
                 this.item = item;
@@ -843,7 +961,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Risk type of vulnerability.
+             * <p>Risk type of vulnerability.</p>
              */
             public Builder riskClass(java.util.List < RiskClass> riskClass) {
                 this.riskClass = riskClass;
@@ -851,7 +969,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The risk levels.
+             * <p>The risk levels.</p>
              */
             public Builder riskLevel(java.util.List < String > riskLevel) {
                 this.riskLevel = riskLevel;
@@ -865,6 +983,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class AlarmDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Baseline")
         private Baseline baseline;
@@ -940,7 +1064,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private Vul vul; 
 
             /**
-             * The baseline check configuration.
+             * <p>The baseline check configuration.</p>
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -948,7 +1072,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of image build risk.
+             * <p>The configuration of image build risk.</p>
              */
             public Builder buildRisk(BuildRisk buildRisk) {
                 this.buildRisk = buildRisk;
@@ -956,7 +1080,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of malicious samples.
+             * <p>The configuration of malicious samples.</p>
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -964,7 +1088,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of sensitive file.
+             * <p>The configuration of sensitive file.</p>
              */
             public Builder sensitiveFile(SensitiveFile sensitiveFile) {
                 this.sensitiveFile = sensitiveFile;
@@ -972,7 +1096,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The vulnerability configuration.
+             * <p>The vulnerability configuration.</p>
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;
@@ -986,6 +1110,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class Scopes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AckPolicyInstanceId")
         private String ackPolicyInstanceId;
@@ -1049,7 +1179,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > namespaceList; 
 
             /**
-             * The rule instance ID of the cluster.
+             * <p>The rule instance ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-0</p>
              */
             public Builder ackPolicyInstanceId(String ackPolicyInstanceId) {
                 this.ackPolicyInstanceId = ackPolicyInstanceId;
@@ -1057,11 +1190,14 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether all namespaces are included. Valid values:
-             * <p>
+             * <p>Indicates whether all namespaces are included. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: yes</li>
+             * <li><strong>0</strong>: no</li>
+             * </ul>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;
@@ -1069,7 +1205,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c1fdb5fd8d**7163</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1077,7 +1216,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The namespaces.
+             * <p>The namespaces.</p>
              */
             public Builder namespaceList(java.util.List < String > namespaceList) {
                 this.namespaceList = namespaceList;
@@ -1091,6 +1230,12 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetOpaStrategyDetailNewResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaStrategyDetailNewResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmDetail")
         private AlarmDetail alarmDetail;
@@ -1310,7 +1455,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > whiteList; 
 
             /**
-             * The rule configuration.
+             * <p>The rule configuration.</p>
              */
             public Builder alarmDetail(AlarmDetail alarmDetail) {
                 this.alarmDetail = alarmDetail;
@@ -1318,7 +1463,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1326,7 +1474,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -1334,7 +1485,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The page number. Default value: **1**. Pages start from page 1.
+             * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1342,7 +1496,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom defense configuration</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1350,7 +1507,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The image names.
+             * <p>The image names.</p>
              */
             public Builder imageName(java.util.List < String > imageName) {
                 this.imageName = imageName;
@@ -1358,7 +1515,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The image tags.
+             * <p>The image tags.</p>
              */
             public Builder label(java.util.List < String > label) {
                 this.label = label;
@@ -1366,11 +1523,14 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the content within the request and response. Default value: **zh**. Valid values:
-             * <p>
+             * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>zh</strong>: Chinese</li>
+             * <li><strong>en</strong>: English</li>
+             * </ul>
              * 
-             * *   **zh**: Chinese
-             * *   **en**: English
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1378,11 +1538,14 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule supports malicious Internet images. Valid values:
-             * <p>
+             * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder maliciousImage(Boolean maliciousImage) {
                 this.maliciousImage = maliciousImage;
@@ -1390,7 +1553,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1398,12 +1564,15 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The action that is performed when the rule is hit. Valid values:
-             * <p>
+             * <p>The action that is performed when the rule is hit. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: trigger alerts</li>
+             * <li><strong>2</strong>: block</li>
+             * <li><strong>3</strong>: allow</li>
+             * </ul>
              * 
-             * *   **1**: trigger alerts
-             * *   **2**: block
-             * *   **3**: allow
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleAction(Integer ruleAction) {
                 this.ruleAction = ruleAction;
@@ -1411,7 +1580,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The application scope.
+             * <p>The application scope.</p>
              */
             public Builder scopes(java.util.List < Scopes> scopes) {
                 this.scopes = scopes;
@@ -1419,7 +1588,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The rule ID.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1005</p>
              */
             public Builder strategyId(Long strategyId) {
                 this.strategyId = strategyId;
@@ -1427,7 +1599,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test001</p>
              */
             public Builder strategyName(String strategyName) {
                 this.strategyName = strategyName;
@@ -1435,7 +1610,10 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule template.
+             * <p>The ID of the rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1204</p>
              */
             public Builder strategyTemplateId(Long strategyTemplateId) {
                 this.strategyTemplateId = strategyTemplateId;
@@ -1443,11 +1621,14 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule supports unscanned images. Valid values:
-             * <p>
+             * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder unScanedImage(Boolean unScanedImage) {
                 this.unScanedImage = unScanedImage;
@@ -1455,7 +1636,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The image tags that are added to the whitelist.
+             * <p>The image tags that are added to the whitelist.</p>
              */
             public Builder whiteList(java.util.List < String > whiteList) {
                 this.whiteList = whiteList;

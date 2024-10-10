@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVulAutoRepairConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteVulAutoRepairConfigRequest</p>
@@ -81,7 +82,10 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
         } 
 
         /**
-         * The alias of the vulnerability.
+         * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2017:0184-Important: mysql security update</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -90,10 +94,10 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The IDs of the configurations.
-         * <p>
-         * 
-         * >  You can call the [ListVulAutoRepairConfig](~~ListVulAutoRepairConfig~~) operation to query the IDs.
+         * <p>The IDs of the configurations.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListVulAutoRepairConfig~~">ListVulAutoRepairConfig</a> operation to query the IDs.</p>
+         * </blockquote>
          */
         public Builder configIdList(java.util.List < Long > configIdList) {
             this.putQueryParameter("ConfigIdList", configIdList);
@@ -102,11 +106,14 @@ public class DeleteVulAutoRepairConfigRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Valid values:
-         * <p>
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <ul>
+         * <li>cve: Linux software vulnerability</li>
+         * <li>sys: Windows system vulnerability</li>
+         * </ul>
          * 
-         * *   cve: Linux software vulnerability
-         * *   sys: Windows system vulnerability
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

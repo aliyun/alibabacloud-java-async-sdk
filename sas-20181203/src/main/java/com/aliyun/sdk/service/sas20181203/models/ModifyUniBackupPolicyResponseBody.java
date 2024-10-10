@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyUniBackupPolicyResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyUniBackupPolicyResponseBody</p>
@@ -37,7 +38,10 @@ public class ModifyUniBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F6FAB39-5AF7-5B2C-A17D-16D52AE0****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

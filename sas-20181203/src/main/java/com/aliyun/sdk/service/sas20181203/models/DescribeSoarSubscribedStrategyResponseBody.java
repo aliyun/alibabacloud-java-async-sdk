@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSoarSubscribedStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSoarSubscribedStrategyResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +97,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +108,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,7 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The policies.
+         * <p>The policies.</p>
          */
         public Builder soarStrategies(java.util.List < SoarStrategies> soarStrategies) {
             this.soarStrategies = soarStrategies;
@@ -117,7 +127,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSoarSubscribedStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSoarSubscribedStrategyResponseBody</p>
+     */
     public static class SoarStrategies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
@@ -253,7 +272,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The Alibaba Cloud account ID of the creator.
+             * <p>The Alibaba Cloud account ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1276085*****4392</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -261,7 +283,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the policy.
+             * <p>The description of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>strategy_description_01</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -269,7 +294,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of times that the policy is executed.
+             * <p>The total number of times that the policy is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder executeNum(String executeNum) {
                 this.executeNum = executeNum;
@@ -277,7 +305,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the policy was created. Unit: milliseconds.
+             * <p>The timestamp when the policy was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1716344106000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -285,7 +316,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the policy was modified. Unit: milliseconds.
+             * <p>The timestamp when the policy was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1652672104000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -293,7 +327,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300063</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -301,7 +338,10 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>strategy_name01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,10 +349,13 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The execution mode. Valid values:
-             * <p>
+             * <p>The execution mode. Valid values:</p>
+             * <ul>
+             * <li>runmode_TRIGGER_BY_USER: manually executed</li>
+             * </ul>
              * 
-             * *   runmode_TRIGGER_BY_USER: manually executed
+             * <strong>example:</strong>
+             * <p>runmode_TRIGGER_BY_USER</p>
              */
             public Builder runMode(String runMode) {
                 this.runMode = runMode;
@@ -320,10 +363,13 @@ public class DescribeSoarSubscribedStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the policy. Valid values:
-             * <p>
+             * <p>The type of the policy. Valid values:</p>
+             * <ul>
+             * <li>type_vulfix: vulnerability operations</li>
+             * </ul>
              * 
-             * *   type_vulfix: vulnerability operations
+             * <strong>example:</strong>
+             * <p>type_vulfix</p>
              */
             public Builder type(String type) {
                 this.type = type;

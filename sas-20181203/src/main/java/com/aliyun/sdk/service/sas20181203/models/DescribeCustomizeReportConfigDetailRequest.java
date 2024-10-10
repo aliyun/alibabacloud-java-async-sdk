@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizeReportConfigDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomizeReportConfigDetailRequest</p>
@@ -82,11 +83,14 @@ public class DescribeCustomizeReportConfigDetailRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -95,9 +99,11 @@ public class DescribeCustomizeReportConfigDetailRequest extends Request {
         }
 
         /**
-         * The ID of the report.\
-         * <p>
-         * You can call the [DescribeCustomizeReportList](~~271655~~) operation to query the ID.
+         * <p>The ID of the report.<br>You can call the <a href="https://help.aliyun.com/document_detail/271655.html">DescribeCustomizeReportList</a> operation to query the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>619031</p>
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -106,7 +112,10 @@ public class DescribeCustomizeReportConfigDetailRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202.104.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

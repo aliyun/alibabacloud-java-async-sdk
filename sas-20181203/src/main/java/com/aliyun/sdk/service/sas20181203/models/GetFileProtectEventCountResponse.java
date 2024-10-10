@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetFileProtectEventCountResponse} extends {@link TeaModel}
  *
  * <p>GetFileProtectEventCountResponse</p>

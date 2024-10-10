@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyTagWithUuidRequest} extends {@link RequestModel}
  *
  * <p>ModifyTagWithUuidRequest</p>
@@ -110,11 +111,14 @@ public class ModifyTagWithUuidRequest extends Request {
         } 
 
         /**
-         * The type of the asset to query. If you do not specify this parameter, the tags of all asset types are queried. Valid values:
-         * <p>
+         * <p>The type of the asset to query. If you do not specify this parameter, the tags of all asset types are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>ecs</strong>: server</li>
+         * <li><strong>cloud_product</strong>: Alibaba Cloud service</li>
+         * </ul>
          * 
-         * *   **ecs**: server
-         * *   **cloud_product**: Alibaba Cloud service
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -123,10 +127,13 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * The ID of the tag that you want to manage.
-         * <p>
+         * <p>The ID of the tag that you want to manage.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedTags~~">DescribeGroupedTags</a> operation to query the IDs of tags.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedTags](~~DescribeGroupedTags~~) operation to query the IDs of tags.
+         * <strong>example:</strong>
+         * <p>3897941</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);
@@ -135,10 +142,14 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * The names of the tags that you want to manage. Separate multiple tag names with commas (,).
-         * <p>
+         * <p>The names of the tags that you want to manage. Separate multiple tag names with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedTags~~">DescribeGroupedTags</a> operation to query the names of tags.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeGroupedTags](~~DescribeGroupedTags~~) operation to query the names of tags.
+         * <strong>example:</strong>
+         * <p>ac,ad</p>
          */
         public Builder tagList(String tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -147,20 +158,26 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * The details of the server for which you want to manage the tag. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The details of the server for which you want to manage the tag. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>Target</strong>: the UUID of the server that you want to add or remove.</p>
+         * </li>
+         * <li><p><strong>targetType</strong>: the method by which the server is added. Valid values:</p>
+         * <ul>
+         * <li><strong>uuid</strong>: by server</li>
+         * <li><strong>groupId</strong>: by server group</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>flag</strong>: the operation that you want to perform on the server. Valid values:</p>
+         * <ul>
+         * <li><strong>del</strong>: removes the tag from the server.</li>
+         * <li><strong>add</strong>: adds the tag to the server.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   **Target**: the UUID of the server that you want to add or remove.
-         * 
-         * *   **targetType**: the method by which the server is added. Valid values:
-         * 
-         *     *   **uuid**: by server
-         *     *   **groupId**: by server group
-         * 
-         * *   **flag**: the operation that you want to perform on the server. Valid values:
-         * 
-         *     *   **del**: removes the tag from the server.
-         *     *   **add**: adds the tag to the server.
+         * <strong>example:</strong>
+         * <p>[{&quot;target&quot;:&quot;inet-7c676676-06fa-442e-90fb-b802e5d6****&quot;,&quot;targetType&quot;:&quot;uuid&quot;,&quot;flag&quot;:&quot;add&quot;}]</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -169,10 +186,13 @@ public class ModifyTagWithUuidRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers.
-         * <p>
+         * <p>The UUIDs of the servers.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>e2737dc3-78f4-4653-a986-dc5fad4b****,c189f0e3-df22-42d5-a73d-02c05667****</p>
          */
         public Builder uuidList(String uuidList) {
             this.putQueryParameter("UuidList", uuidList);

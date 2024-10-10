@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAttestorsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAttestorsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The witnesses.
+         * <p>The witnesses.</p>
          */
         public Builder attestors(java.util.List < Attestors> attestors) {
             this.attestors = attestors;
@@ -69,7 +70,7 @@ public class DescribeAttestorsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BC55C8F-226E-5AF5-9A2C-2EC43864****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeAttestorsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAttestorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAttestorsResponseBody</p>
+     */
     public static class Attestors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
@@ -165,7 +175,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             private String remark; 
 
             /**
-             * The ID of the KMS key.
+             * <p>The ID of the KMS key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2e81355b-f8e7-4090-8082-a8f8124a****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -173,7 +186,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the KMS key.
+             * <p>The region ID of the KMS key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder keyRegionId(String keyRegionId) {
                 this.keyRegionId = keyRegionId;
@@ -181,7 +197,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * The version ID of the Key Management Service (KMS) key.
+             * <p>The version ID of the Key Management Service (KMS) key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8d7c9c91-57ce-4cf4-a959-1e700e13****</p>
              */
             public Builder keyVersionId(String keyVersionId) {
                 this.keyVersionId = keyVersionId;
@@ -189,7 +208,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the witness.
+             * <p>The name of the witness.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attestor-123</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -197,7 +219,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attestor</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -211,6 +236,12 @@ public class DescribeAttestorsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAttestorsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAttestorsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -274,7 +305,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -282,7 +316,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -290,7 +327,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -298,7 +338,10 @@ public class DescribeAttestorsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>122</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

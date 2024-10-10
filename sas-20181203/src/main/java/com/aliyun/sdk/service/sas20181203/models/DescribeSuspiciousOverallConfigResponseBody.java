@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspiciousOverallConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSuspiciousOverallConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration.
+         * <p>The configuration.</p>
          */
         public Builder overallConfig(OverallConfig overallConfig) {
             this.overallConfig = overallConfig;
@@ -57,7 +58,10 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSuspiciousOverallConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSuspiciousOverallConfigResponseBody</p>
+     */
     public static class OverallConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -109,11 +119,14 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The status of the feature. Valid values:
-             * <p>
+             * <p>The status of the feature. Valid values:</p>
+             * <ul>
+             * <li><strong>off</strong>: disabled</li>
+             * <li><strong>on</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **off**: disabled
-             * *   **on**: enabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -121,15 +134,18 @@ public class DescribeSuspiciousOverallConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the feature. Valid values:
-             * <p>
+             * <p>The type of the feature. Valid values:</p>
+             * <ul>
+             * <li><strong>auto_breaking</strong>: Anti-Virus</li>
+             * <li><strong>ransomware_breaking</strong>: Anti-ransomware (Bait Capture)</li>
+             * <li><strong>webshell_cloud_breaking</strong>: Webshell Protection</li>
+             * <li><strong>alinet</strong>: Behavior prevention</li>
+             * <li><strong>k8s_log_analysis</strong>: K8s Threat Detection</li>
+             * <li><strong>alisecguard</strong>: Defense mode for Client Protection</li>
+             * </ul>
              * 
-             * *   **auto_breaking**: Anti-Virus
-             * *   **ransomware_breaking**: Anti-ransomware (Bait Capture)
-             * *   **webshell\_cloud_breaking**: Webshell Protection
-             * *   **alinet**: Behavior prevention
-             * *   **k8s\_log_analysis**: K8s Threat Detection
-             * *   **alisecguard**: Defense mode for Client Protection
+             * <strong>example:</strong>
+             * <p>auto_breaking</p>
              */
             public Builder type(String type) {
                 this.type = type;

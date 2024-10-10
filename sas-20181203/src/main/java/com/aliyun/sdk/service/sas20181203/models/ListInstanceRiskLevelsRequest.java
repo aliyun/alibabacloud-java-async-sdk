@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceRiskLevelsRequest} extends {@link RequestModel}
  *
  * <p>ListInstanceRiskLevelsRequest</p>
@@ -53,7 +54,7 @@ public class ListInstanceRiskLevelsRequest extends Request {
         } 
 
         /**
-         * The instances.
+         * <p>The instances.</p>
          */
         public Builder instanceList(java.util.List < InstanceList> instanceList) {
             this.putQueryParameter("InstanceList", instanceList);
@@ -68,6 +69,12 @@ public class ListInstanceRiskLevelsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceRiskLevelsRequest} extends {@link TeaModel}
+     *
+     * <p>ListInstanceRiskLevelsRequest</p>
+     */
     public static class InstanceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -107,7 +114,10 @@ public class ListInstanceRiskLevelsRequest extends Request {
             private String uuid; 
 
             /**
-             * The ID of the instance.
+             * <p>The ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-m5efigezp50l2cmb****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -115,7 +125,10 @@ public class ListInstanceRiskLevelsRequest extends Request {
             }
 
             /**
-             * The serial number of the instance.
+             * <p>The serial number of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f2d6e901-1004-4ca8-9dae-53ec04a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

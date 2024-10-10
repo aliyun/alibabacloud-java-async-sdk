@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLoginBaseConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyLoginBaseConfigRequest</p>
@@ -84,31 +85,44 @@ public class ModifyLoginBaseConfigRequest extends Request {
         } 
 
         /**
-         * The details of the configuration that is used to detect unusual logons to your servers. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The details of the configuration that is used to detect unusual logons to your servers. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><strong>totalCount</strong>: the total number of servers.</li>
+         * <li><strong>uuidCount</strong>: the number of servers to which the configuration is applied.</li>
+         * <li><strong>id</strong>: the ID of the configuration.</li>
+         * <li><strong>location</strong>: the common logon location.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify this field if the Type parameter is set to login_common_location.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>ip</strong>: the common logon IP address.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify this field if the Type parameter is set to login_common_ip.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>endTime</strong>: the end time of the common logon time range.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify this field if the Type parameter is set to login_common_time.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>startTime</strong>: the start time of the common logon time range.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify this field if the Type parameter is set to login_common_time.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>account</strong>: the common logon account.</li>
+         * </ul>
+         * <blockquote>
+         * <p>You must specify this field if the Type parameter is set to login_common_account.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   **totalCount**: the total number of servers.
-         * *   **uuidCount**: the number of servers to which the configuration is applied.
-         * *   **id**: the ID of the configuration.
-         * *   **location**: the common logon location.
-         * 
-         * > You must specify this field if the Type parameter is set to login_common_location.
-         * 
-         * *   **ip**: the common logon IP address.
-         * 
-         * > You must specify this field if the Type parameter is set to login_common_ip.
-         * 
-         * *   **endTime**: the end time of the common logon time range.
-         * 
-         * > You must specify this field if the Type parameter is set to login_common_time.
-         * 
-         * *   **startTime**: the start time of the common logon time range.
-         * 
-         * > You must specify this field if the Type parameter is set to login_common_time.
-         * 
-         * *   **account**: the common logon account.
-         * 
-         * > You must specify this field if the Type parameter is set to login_common_account.
+         * <strong>example:</strong>
+         * <p>{&quot;totalCount&quot;:174,&quot;uuidCount&quot;:4,&quot;location&quot;:&quot;Montenegro&quot;,&quot;id&quot;:0}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -117,20 +131,27 @@ public class ModifyLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * The details of the server to which the configuration is applied. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The details of the server to which the configuration is applied. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>Target</strong>: the UUID of the server.</p>
+         * </li>
+         * <li><p><strong>targetType</strong>: the type of the server to which the configuration is applied. Valid values:</p>
+         * <ul>
+         * <li><strong>uuid</strong>: a server</li>
+         * <li><strong>groupId</strong>: a server group</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>flag</strong>: the operation that you want to perform on the server. Valid values:</p>
+         * <ul>
+         * <li><strong>del</strong>: removes the server from the configuration.</li>
+         * <li><strong>add</strong>: adds the server to the configuration.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Target**: the UUID of the server.
-         * 
-         * *   **targetType**: the type of the server to which the configuration is applied. Valid values:
-         * 
-         *     *   **uuid**: a server
-         *     *   **groupId**: a server group
-         * 
-         * *   **flag**: the operation that you want to perform on the server. Valid values:
-         * 
-         *     *   **del**: removes the server from the configuration.
-         *     *   **add**: adds the server to the configuration.
+         * <strong>example:</strong>
+         * <p>[{&quot;target&quot;:&quot;inet-7c676676-06fa-442e-90fb-b802e5d6****&quot;,&quot;targetType&quot;:&quot;uuid&quot;,&quot;flag&quot;:&quot;add&quot;}]</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -139,13 +160,17 @@ public class ModifyLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * The logon type of the configuration to modify. Valid values:
-         * <p>
+         * <p>The logon type of the configuration to modify. Valid values:</p>
+         * <ul>
+         * <li><strong>login_common_location</strong>: common logon location</li>
+         * <li><strong>login_common_ip</strong>: common logon IP address</li>
+         * <li><strong>login_common_time</strong>: common logon time range</li>
+         * <li><strong>login_common_account</strong>: common logon account</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **login\_common_location**: common logon location
-         * *   **login\_common_ip**: common logon IP address
-         * *   **login\_common_time**: common logon time range
-         * *   **login\_common_account**: common logon account
+         * <strong>example:</strong>
+         * <p>login_common_location</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

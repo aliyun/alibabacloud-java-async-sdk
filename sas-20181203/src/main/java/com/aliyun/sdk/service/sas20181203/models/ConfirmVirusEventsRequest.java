@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfirmVirusEventsRequest} extends {@link RequestModel}
  *
  * <p>ConfirmVirusEventsRequest</p>
@@ -83,11 +84,15 @@ public class ConfirmVirusEventsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to handle all alert events. Valid values:
-         * <p>
+         * <p>Specifies whether to handle all alert events. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder operationAll(Integer operationAll) {
             this.putQueryParameter("OperationAll", operationAll);
@@ -96,13 +101,17 @@ public class ConfirmVirusEventsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the alert events. Valid values:
-         * <p>
+         * <p>The operation that you want to perform on the alert events. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: performs in-depth detection and removal</li>
+         * <li><strong>ignore</strong>: ignores the alert event</li>
+         * <li><strong>advance_mark_mis_info</strong>: adds the alert events to the whitelist</li>
+         * <li><strong>manual_handled</strong>: marks the alert events as manually handled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **default**: performs in-depth detection and removal
-         * *   **ignore**: ignores the alert event
-         * *   **advance\_mark\_mis_info**: adds the alert events to the whitelist
-         * *   **manual_handled**: marks the alert events as manually handled
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder operationCode(String operationCode) {
             this.putQueryParameter("OperationCode", operationCode);
@@ -111,7 +120,10 @@ public class ConfirmVirusEventsRequest extends Request {
         }
 
         /**
-         * The server on which you want to perform the alert events.
+         * <p>The server on which you want to perform the alert events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;type&quot;:&quot;machine&quot;,&quot;list&quot;:[&quot;3aedba3d-bd4d-4dfb-bb0d-xxxxxxxxxxxx&quot;]}]</p>
          */
         public Builder operationRange(String operationRange) {
             this.putQueryParameter("OperationRange", operationRange);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLoginBaseConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLoginBaseConfigsResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The description of the configuration.
+         * <p>The description of the configuration.</p>
          */
         public Builder baseConfigs(java.util.List < BaseConfigs> baseConfigs) {
             this.baseConfigs = baseConfigs;
@@ -93,7 +94,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +105,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: **20**.
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2C2D4B3C-0524-17B1-93D2-DA50119F4E1E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLoginBaseConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoginBaseConfigsResponseBody</p>
+     */
     public static class TargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
@@ -169,7 +188,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The UUID or group ID of the server.
+             * <p>The UUID or group ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0011ea53-738c-4bff-93be-ce6a1cc9****</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -177,12 +199,15 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the server to which the configuration is applied. Valid values:
-             * <p>
+             * <p>The type of the server to which the configuration is applied. Valid values:</p>
+             * <ul>
+             * <li><strong>uuid</strong>: a server</li>
+             * <li><strong>groupId</strong>: a server group</li>
+             * <li><strong>global</strong>: all servers</li>
+             * </ul>
              * 
-             * *   **uuid**: a server
-             * *   **groupId**: a server group
-             * *   **global**: all servers
+             * <strong>example:</strong>
+             * <p>uuid</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -196,6 +221,12 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLoginBaseConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLoginBaseConfigsResponseBody</p>
+     */
     public static class BaseConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
@@ -319,7 +350,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             private Integer uuidCount; 
 
             /**
-             * The common logon account.
+             * <p>The common logon account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1582318****</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -327,7 +361,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the common logon time range.
+             * <p>The end time of the common logon time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>07:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -335,7 +372,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The common logon IP address.
+             * <p>The common logon IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -343,7 +383,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The common logon location.
+             * <p>The common logon location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Montenegro</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -351,7 +394,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Corresponding configuration remark information.
+             * <p>Corresponding configuration remark information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -359,7 +405,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the common logon time range.
+             * <p>The start time of the common logon time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -367,7 +416,7 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the servers to which the configuration is applied.
+             * <p>The details of the servers to which the configuration is applied.</p>
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;
@@ -375,7 +424,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of servers.
+             * <p>The total number of servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -383,7 +435,10 @@ public class DescribeLoginBaseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers to which the configuration is applied.
+             * <p>The number of servers to which the configuration is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder uuidCount(Integer uuidCount) {
                 this.uuidCount = uuidCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStrategyExecDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStrategyExecDetailResponseBody</p>
@@ -210,6 +211,12 @@ public class DescribeStrategyExecDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStrategyExecDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStrategyExecDetailResponseBody</p>
+     */
     public static class FailedEcsList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;

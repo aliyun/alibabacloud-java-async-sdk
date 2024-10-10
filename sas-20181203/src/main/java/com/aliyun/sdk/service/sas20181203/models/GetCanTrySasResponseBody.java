@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCanTrySasResponseBody} extends {@link TeaModel}
  *
  * <p>GetCanTrySasResponseBody</p>
@@ -49,7 +50,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetCanTrySasResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8BAA57***B7073A5C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetCanTrySasResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCanTrySasResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCanTrySasResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanTry")
         private Integer canTry;
@@ -121,11 +131,14 @@ public class GetCanTrySasResponseBody extends TeaModel {
             private Integer tryType; 
 
             /**
-             * Indicates whether the user is qualified for the trial use. Valid values:
-             * <p>
+             * <p>Indicates whether the user is qualified for the trial use. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canTry(Integer canTry) {
                 this.canTry = canTry;
@@ -133,7 +146,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
             }
 
             /**
-             * The editions that are allowed for the trial use.
+             * <p>The editions that are allowed for the trial use.</p>
              */
             public Builder canTryVersions(java.util.List < Integer > canTryVersions) {
                 this.canTryVersions = canTryVersions;
@@ -141,12 +154,15 @@ public class GetCanTrySasResponseBody extends TeaModel {
             }
 
             /**
-             * The trial type. Valid values:
-             * <p>
+             * <p>The trial type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: trial prohibited</li>
+             * <li><strong>1</strong>: first trial</li>
+             * <li><strong>2</strong>: second trial</li>
+             * </ul>
              * 
-             * *   **0**: trial prohibited
-             * *   **1**: first trial
-             * *   **2**: second trial
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tryType(Integer tryType) {
                 this.tryType = tryType;

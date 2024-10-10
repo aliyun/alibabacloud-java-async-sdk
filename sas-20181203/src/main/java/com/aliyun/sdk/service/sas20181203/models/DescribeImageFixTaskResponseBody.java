@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageFixTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageFixTaskResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The tasks returned.
+         * <p>The tasks returned.</p>
          */
         public Builder buildTasks(java.util.List < BuildTasks> buildTasks) {
             this.buildTasks = buildTasks;
@@ -69,7 +70,7 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AC52BBA-85D3-5F64-9B48-D08437CAF916</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageFixTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageFixTaskResponseBody</p>
+     */
     public static class BuildTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildTaskId")
         private String buildTaskId;
@@ -261,7 +271,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             private String vulAlias; 
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ivf-939536b5-c3ca-427b-8183-91007756</p>
              */
             public Builder buildTaskId(String buildTaskId) {
                 this.buildTaskId = buildTaskId;
@@ -269,7 +282,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the task starts. Unit: milliseconds.
+             * <p>The timestamp when the task starts. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-14 20:34:07</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -277,7 +293,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the task ends. Unit: milliseconds.
+             * <p>The timestamp when the task ends. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-14 20:32:05</p>
              */
             public Builder fixTime(String fixTime) {
                 this.fixTime = fixTime;
@@ -285,7 +304,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image after image risks are fixed.
+             * <p>The version of the image after image risks are fixed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redhat8-vault</p>
              */
             public Builder newTag(String newTag) {
                 this.newTag = newTag;
@@ -293,7 +315,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image after image risks are fixed.
+             * <p>The UUID of the image after image risks are fixed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fa731681911ae8d1b5f11893ace****</p>
              */
             public Builder newUuid(String newUuid) {
                 this.newUuid = newUuid;
@@ -301,7 +326,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image.
+             * <p>The version of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>centos8.1-ja</p>
              */
             public Builder oldTag(String oldTag) {
                 this.oldTag = oldTag;
@@ -309,7 +337,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image.
+             * <p>The UUID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fa731681911ae8d1b5f11893ace****</p>
              */
             public Builder oldUuid(String oldUuid) {
                 this.oldUuid = oldUuid;
@@ -317,7 +348,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the image.
+             * <p>The region of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -325,7 +359,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-redhat</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -333,7 +370,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace of the image.
+             * <p>The namespace of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name-002</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -341,12 +381,15 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: The task is running.</li>
+             * <li><strong>2</strong>: The task is successful.</li>
+             * <li><strong>3</strong>: The task failed.</li>
+             * </ul>
              * 
-             * *   **1**: The task is running.
-             * *   **2**: The task is successful.
-             * *   **3**: The task failed.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -354,7 +397,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. The value is fixed as IMAGE_REPAIR. The value indicates a task that fixes image risks.
+             * <p>The type of the task. The value is fixed as IMAGE_REPAIR. The value indicates a task that fixes image risks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE_REPAIR</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -362,7 +408,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the fixed vulnerability.
+             * <p>The alias of the fixed vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2007-5686:rpath_linux Information Disclosure</p>
              */
             public Builder vulAlias(String vulAlias) {
                 this.vulAlias = vulAlias;
@@ -376,6 +425,12 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageFixTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageFixTaskResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -439,7 +494,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of tasks returned on the current page.
+             * <p>The number of tasks returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -447,7 +505,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. Default value: **1**
+             * <p>The page number of the returned page. Default value: <strong>1</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -455,7 +516,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **20**
+             * <p>The number of entries returned per page. Default value: <strong>20</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -463,7 +527,10 @@ public class DescribeImageFixTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tasks returned.
+             * <p>The total number of tasks returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

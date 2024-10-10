@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNsasSuspEventTypeRequest} extends {@link RequestModel}
  *
  * <p>DescribeNsasSuspEventTypeRequest</p>
@@ -165,10 +166,13 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         } 
 
         /**
-         * The name of the container field. Valid values:
-         * <p>
+         * <p>The name of the container field. Valid values:</p>
+         * <ul>
+         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * </ul>
          * 
-         * *   **clusterId**: the ID of the cluster
+         * <strong>example:</strong>
+         * <p>clusterId</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -177,7 +181,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The value of the container field.
+         * <p>The value of the container field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca3108551c83c4d949106e1ab9e1e****</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -186,7 +193,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The ID of the request source. Set the value to **sas**, which indicates that the request is sent from Security Center.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>, which indicates that the request is sent from Security Center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -195,11 +205,14 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -217,7 +230,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The name of the alert type.
+         * <p>The name of the alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unusual Logon</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -226,7 +242,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The name of the server.
+         * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testECS</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -235,7 +254,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180.212.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -244,10 +266,13 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         }
 
         /**
-         * The UUIDs of servers. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The UUIDs of servers. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>f56406cb-916d-42db-b6f7-2ff79e34****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

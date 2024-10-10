@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUniBackupDatabaseResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUniBackupDatabaseResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about the databases.
+         * <p>An array that consists of the information about the databases.</p>
          */
         public Builder databaseList(java.util.List < DatabaseList> databaseList) {
             this.databaseList = databaseList;
@@ -69,7 +70,7 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUniBackupDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUniBackupDatabaseResponseBody</p>
+     */
     public static class DatabaseList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentStatus")
         private String agentStatus;
@@ -225,13 +235,16 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The status of the anti-ransomware agent. Valid values:
-             * <p>
+             * <p>The status of the anti-ransomware agent. Valid values:</p>
+             * <ul>
+             * <li><strong>UNKNOWN</strong>: unknown</li>
+             * <li><strong>INSTALLED</strong>: installed</li>
+             * <li><strong>INSTALL_FAILED</strong>: installation failed</li>
+             * <li><strong>UNINSTALL_FAILED</strong>: uninstallation failed</li>
+             * </ul>
              * 
-             * *   **UNKNOWN**: unknown
-             * *   **INSTALLED**: installed
-             * *   **INSTALL_FAILED**: installation failed
-             * *   **UNINSTALL_FAILED**: uninstallation failed
+             * <strong>example:</strong>
+             * <p>INSTALLED</p>
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -239,11 +252,14 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The service from which the database is created. Valid values:
-             * <p>
+             * <p>The service from which the database is created. Valid values:</p>
+             * <ul>
+             * <li><strong>HBR</strong>: HBR</li>
+             * <li><strong>AEGIS</strong>: Security Center</li>
+             * </ul>
              * 
-             * *   **HBR**: HBR
-             * *   **AEGIS**: Security Center
+             * <strong>example:</strong>
+             * <p>AEGIS</p>
              */
             public Builder createdByProduct(String createdByProduct) {
                 this.createdByProduct = createdByProduct;
@@ -251,7 +267,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apns_tt180</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -259,12 +278,15 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database. Valid values:
-             * <p>
+             * <p>The type of the database. Valid values:</p>
+             * <ul>
+             * <li><strong>MYSQL</strong></li>
+             * <li><strong>MSSQL</strong></li>
+             * <li><strong>Oracle</strong></li>
+             * </ul>
              * 
-             * *   **MYSQL**
-             * *   **MSSQL**
-             * *   **Oracle**
+             * <strong>example:</strong>
+             * <p>MYSQL</p>
              */
             public Builder databaseType(String databaseType) {
                 this.databaseType = databaseType;
@@ -272,7 +294,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * <p>The version of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12.0.4100.1</p>
              */
             public Builder databaseVersion(String databaseVersion) {
                 this.databaseVersion = databaseVersion;
@@ -280,7 +305,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp15aho9hhftvmhw****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -288,7 +316,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance to which the database belongs.
+             * <p>The name of the instance to which the database belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sql-test-001</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -296,7 +327,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the Hybrid Backup Recovery (HBR) agent that is used to back up the data of the database.
+             * <p>The UUID of the Hybrid Backup Recovery (HBR) agent that is used to back up the data of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85878b284df911ec800000163e19****</p>
              */
             public Builder instanceUuid(String instanceUuid) {
                 this.instanceUuid = instanceUuid;
@@ -304,7 +338,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the anti-ransomware policy.
+             * <p>The ID of the anti-ransomware policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
@@ -312,11 +349,14 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance. Valid values:
-             * <p>
+             * <p>The status of the ECS instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Stopped</strong></li>
+             * <li><strong>Running</strong></li>
+             * </ul>
              * 
-             * *   **Stopped**
-             * *   **Running**
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,6 +370,12 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUniBackupDatabaseResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUniBackupDatabaseResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -393,7 +439,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -401,7 +450,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -409,7 +461,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -417,7 +472,10 @@ public class DescribeUniBackupDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

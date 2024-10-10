@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetRegistryScanDayNumRequest} extends {@link RequestModel}
  *
  * <p>SetRegistryScanDayNumRequest</p>
@@ -54,7 +55,11 @@ public class SetRegistryScanDayNumRequest extends Request {
         } 
 
         /**
-         * The cycle at which you want to scan your images. Unit: days.
+         * <p>The cycle at which you want to scan your images. Unit: days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scanDayNum(Integer scanDayNum) {
             this.putQueryParameter("ScanDayNum", scanDayNum);

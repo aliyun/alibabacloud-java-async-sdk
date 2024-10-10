@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateServiceLinkedRoleRequest} extends {@link RequestModel}
  *
  * <p>CreateServiceLinkedRoleRequest</p>
@@ -53,11 +54,14 @@ public class CreateServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * The service-linked role. Default value: **AliyunServiceRoleForSas**. Valid values:
-         * <p>
+         * <p>The service-linked role. Default value: <strong>AliyunServiceRoleForSas</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>AliyunServiceRoleForSas</strong>: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.</li>
+         * <li><strong>AliyunServiceRoleForSasCspm</strong>: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.</li>
+         * </ul>
          * 
-         * *   **AliyunServiceRoleForSas**: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.
-         * *   **AliyunServiceRoleForSasCspm**: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForSas</p>
          */
         public Builder serviceLinkedRole(String serviceLinkedRole) {
             this.putQueryParameter("ServiceLinkedRole", serviceLinkedRole);

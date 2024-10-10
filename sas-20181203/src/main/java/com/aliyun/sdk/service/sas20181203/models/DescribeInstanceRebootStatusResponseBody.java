@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceRebootStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstanceRebootStatusResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the status information about the servers that you restart.
+         * <p>An array that consists of the status information about the servers that you restart.</p>
          */
         public Builder rebootStatuses(java.util.List < RebootStatuses> rebootStatuses) {
             this.rebootStatuses = rebootStatuses;
@@ -69,7 +70,10 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BD95679-D63A-4151-97D0-188432F4A57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeInstanceRebootStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceRebootStatusResponseBody</p>
+     */
     public static class RebootStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -153,12 +166,15 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The error code that is returned when the server failed to be restarted. Valid values:
-             * <p>
+             * <p>The error code that is returned when the server failed to be restarted. Valid values:</p>
+             * <ul>
+             * <li><strong>10001</strong>: The restart command failed to be sent.</li>
+             * <li><strong>10002</strong>: The restart operation failed.</li>
+             * <li><strong>10003</strong>: A timeout error occurs.</li>
+             * </ul>
              * 
-             * *   **10001**: The restart command failed to be sent.
-             * *   **10002**: The restart operation failed.
-             * *   **10003**: A timeout error occurs.
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -166,7 +182,10 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The message that is returned when the server failed to be restarted.
+             * <p>The message that is returned when the server failed to be restarted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>push failed</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -174,12 +193,15 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the server. Valid values:
-             * <p>
+             * <p>The status of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The server is being restarted.</li>
+             * <li><strong>1</strong>: The server is restarted.</li>
+             * <li><strong>2</strong>: The server failed to be restarted.</li>
+             * </ul>
              * 
-             * *   **0**: The server is being restarted.
-             * *   **1**: The server is restarted.
-             * *   **2**: The server failed to be restarted.
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder rebootStatus(Integer rebootStatus) {
                 this.rebootStatus = rebootStatus;
@@ -187,7 +209,10 @@ public class DescribeInstanceRebootStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9b59c2d6-0967-46e3-ad7b-152227c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

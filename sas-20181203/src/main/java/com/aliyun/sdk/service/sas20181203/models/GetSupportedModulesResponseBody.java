@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSupportedModulesResponseBody} extends {@link TeaModel}
  *
  * <p>GetSupportedModulesResponseBody</p>
@@ -49,7 +50,10 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         private java.util.List < SupportedModuleResponse> supportedModuleResponse; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C699E4E4-F2F4-58FC-A949-457FFE59****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         }
 
         /**
-         * The supported modules. The module information is classified by cloud service provider.
+         * <p>The supported modules. The module information is classified by cloud service provider.</p>
          */
         public Builder supportedModuleResponse(java.util.List < SupportedModuleResponse> supportedModuleResponse) {
             this.supportedModuleResponse = supportedModuleResponse;
@@ -70,6 +74,12 @@ public class GetSupportedModulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetSupportedModulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSupportedModulesResponseBody</p>
+     */
     public static class SupportedModules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Module")
         private String module;
@@ -109,13 +119,16 @@ public class GetSupportedModulesResponseBody extends TeaModel {
             private String moduleDisp; 
 
             /**
-             * The code of the module. Valid values:
-             * <p>
+             * <p>The code of the module. Valid values:</p>
+             * <ul>
+             * <li><strong>HOST</strong>: host</li>
+             * <li><strong>CSPM</strong>: configuration assessment</li>
+             * <li><strong>SIEM</strong>: CloudSiem</li>
+             * <li><strong>TRIAL</strong>: log audit</li>
+             * </ul>
              * 
-             * *   **HOST**: host
-             * *   **CSPM**: configuration assessment
-             * *   **SIEM**: CloudSiem
-             * *   **TRIAL**: log audit
+             * <strong>example:</strong>
+             * <p>HOST</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -123,7 +136,10 @@ public class GetSupportedModulesResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the module.
+             * <p>The display name of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Configuration assessment</p>
              */
             public Builder moduleDisp(String moduleDisp) {
                 this.moduleDisp = moduleDisp;
@@ -137,6 +153,12 @@ public class GetSupportedModulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetSupportedModulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSupportedModulesResponseBody</p>
+     */
     public static class SupportedModuleResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedModules")
         private java.util.List < SupportedModules> supportedModules;
@@ -176,7 +198,7 @@ public class GetSupportedModulesResponseBody extends TeaModel {
             private String vendor; 
 
             /**
-             * The modules supported by the cloud service provider.
+             * <p>The modules supported by the cloud service provider.</p>
              */
             public Builder supportedModules(java.util.List < SupportedModules> supportedModules) {
                 this.supportedModules = supportedModules;
@@ -184,13 +206,16 @@ public class GetSupportedModulesResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service provider. Valid values:
-             * <p>
+             * <p>The cloud service provider. Valid values:</p>
+             * <ul>
+             * <li><strong>Tencent</strong>: Tencent Cloud</li>
+             * <li><strong>HUAWEICLOUD</strong>:Huawei Cloud</li>
+             * <li><strong>Azure</strong>: Microsoft Azure</li>
+             * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+             * </ul>
              * 
-             * *   **Tencent**: Tencent Cloud
-             * *   **HUAWEICLOUD**:Huawei Cloud
-             * *   **Azure**: Microsoft Azure
-             * *   **AWS**: Amazon Web Services (AWS)
+             * <strong>example:</strong>
+             * <p>Tencent</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;

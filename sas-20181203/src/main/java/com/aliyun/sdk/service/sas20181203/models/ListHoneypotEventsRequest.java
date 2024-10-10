@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotEventsRequest} extends {@link RequestModel}
  *
  * <p>ListHoneypotEventsRequest</p>
@@ -193,7 +194,7 @@ public class ListHoneypotEventsRequest extends Request {
         } 
 
         /**
-         * The probe IDs.
+         * <p>The probe IDs.</p>
          */
         public Builder agentIdList(java.util.List < String > agentIdList) {
             this.putBodyParameter("AgentIdList", agentIdList);
@@ -202,7 +203,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The ID of the alert.
+         * <p>The ID of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1259925</p>
          */
         public Builder alarmEventId(Long alarmEventId) {
             this.putBodyParameter("AlarmEventId", alarmEventId);
@@ -211,7 +215,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -220,12 +227,15 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The status of the event. Valid values:
-         * <p>
+         * <p>The status of the event. Valid values:</p>
+         * <ul>
+         * <li><strong>y</strong>: handled</li>
+         * <li><strong>n</strong>: unhandled</li>
+         * <li><strong>a</strong>: all statuses</li>
+         * </ul>
          * 
-         * *   **y**: handled
-         * *   **n**: unhandled
-         * *   **a**: all statuses
+         * <strong>example:</strong>
+         * <p>y</p>
          */
         public Builder dealed(String dealed) {
             this.putBodyParameter("Dealed", dealed);
@@ -234,7 +244,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The honeypot IDs.
+         * <p>The honeypot IDs.</p>
          */
         public Builder honeypotIdList(java.util.List < String > honeypotIdList) {
             this.putBodyParameter("HoneypotIdList", honeypotIdList);
@@ -243,11 +253,14 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);
@@ -256,7 +269,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -265,7 +281,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The ID of the attacker profile.
+         * <p>The ID of the attacker profile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd48604a-1694-4f03-ade0-ec6994c3*****</p>
          */
         public Builder portraitId(String portraitId) {
             this.putQueryParameter("PortraitId", portraitId);
@@ -274,7 +293,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F9CE167-58D5-5DA6-AA3B-923EED02****</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("RequestId", requestId);
@@ -283,7 +305,7 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The risk levels.
+         * <p>The risk levels.</p>
          */
         public Builder riskLevelList(java.util.List < String > riskLevelList) {
             this.putBodyParameter("RiskLevelList", riskLevelList);
@@ -292,7 +314,10 @@ public class ListHoneypotEventsRequest extends Request {
         }
 
         /**
-         * The source IP address of the attack.
+         * <p>The source IP address of the attack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185.237.96.***</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);

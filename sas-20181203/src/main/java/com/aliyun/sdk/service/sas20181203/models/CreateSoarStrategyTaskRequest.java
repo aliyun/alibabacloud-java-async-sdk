@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSoarStrategyTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateSoarStrategyTaskRequest</p>
@@ -113,10 +114,14 @@ public class CreateSoarStrategyTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the policy.
-         * <p>
+         * <p>The ID of the policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeSoarSubscribedStrategy~~">DescribeSoarSubscribedStrategy</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeSoarSubscribedStrategy](~~DescribeSoarSubscribedStrategy~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>13840</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -125,7 +130,8 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * The name of the policy. Set the value to Automated Batch Vulnerability Fixing Policy for Multiple Servers.
+         * <p>The name of the policy. Set the value to Automated Batch Vulnerability Fixing Policy for Multiple Servers.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder strategyName(String strategyName) {
             this.putQueryParameter("StrategyName", strategyName);
@@ -134,7 +140,11 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * The name of.the policy task.
+         * <p>The name of.the policy task.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task1</p>
          */
         public Builder strategyTaskName(String strategyTaskName) {
             this.putQueryParameter("StrategyTaskName", strategyTaskName);
@@ -143,26 +153,67 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * The parameters of the policy task. The value is a JSON array.
-         * <p>
+         * <p>The parameters of the policy task. The value is a JSON array.</p>
+         * <p>Vulnerability-related parameters:</p>
+         * <ul>
+         * <li>name: vluList</li>
+         * <li>associationProperty: sasAllVul</li>
+         * <li>value: basic vulnerability information</li>
+         * </ul>
+         * <p>Snapshot-related parameters:</p>
+         * <ul>
+         * <li>name: snapshotConfig</li>
+         * <li>associationProperty: snapshotConfig</li>
+         * <li>value: retention period</li>
+         * </ul>
+         * <p>Notification-related parameters:</p>
+         * <ul>
+         * <li>name: notifyConfig</li>
+         * <li>associationProperty: notifyConfig</li>
+         * <li>value: email or DingTalk configuration information</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Vulnerability-related parameters:
-         * 
-         * *   name: vluList
-         * *   associationProperty: sasAllVul
-         * *   value: basic vulnerability information
-         * 
-         * Snapshot-related parameters:
-         * 
-         * *   name: snapshotConfig
-         * *   associationProperty: snapshotConfig
-         * *   value: retention period
-         * 
-         * Notification-related parameters:
-         * 
-         * *   name: notifyConfig
-         * *   associationProperty: notifyConfig
-         * *   value: email or DingTalk configuration information
+         * <strong>example:</strong>
+         * <p>[
+         *     {
+         *         &quot;name&quot;: &quot;vulList&quot;,
+         *         &quot;associationProperty&quot;: &quot;sasAllVul&quot;,
+         *         &quot;value&quot;: [
+         *             {
+         *                 &quot;regionId&quot;: &quot;cn-hangzhou&quot;,
+         *                 &quot;instanceId&quot;: &quot;i-bp10i<strong><strong><strong>68lo5e&quot;,
+         *                 &quot;instanceName&quot;: &quot;instance</strong></strong>&quot;,
+         *                 &quot;vulId&quot;: 3974347681,
+         *                 &quot;vulName&quot;: &quot;centos:7:cesa-2024:1249&quot;,
+         *                 &quot;vulAliasName&quot;: &quot;CESA-2024:1249&quot;,
+         *                 &quot;vulTag&quot;: &quot;oval&quot;,
+         *                 &quot;vulUuid&quot;: &quot;3c5eb76a-</strong>****-85ef-67562cdc2344&quot;,
+         *                 &quot;vulType&quot;: &quot;cve&quot;,
+         *                 &quot;vulModifyTs&quot;: 1721324258000
+         *             }
+         *         ]
+         *     },
+         *     {
+         *         &quot;name&quot;: &quot;snapshotConfig&quot;,
+         *         &quot;associationProperty&quot;: &quot;snapshotConfig&quot;,
+         *         &quot;value&quot;: {
+         *             &quot;ttl&quot;: 1
+         *         }
+         *     },
+         *     {
+         *         &quot;name&quot;: &quot;notifyConfig&quot;,
+         *         &quot;associationProperty&quot;: &quot;notifyConfig&quot;,
+         *         &quot;value&quot;: {
+         *             &quot;ding&quot;: [
+         *                 {
+         *                     &quot;value&quot;: 2195,
+         *                     &quot;label&quot;: &quot;test&quot;
+         *                 }
+         *             ]
+         *         }
+         *     }
+         * ]</p>
          */
         public Builder strategyTaskParams(String strategyTaskParams) {
             this.putQueryParameter("StrategyTaskParams", strategyTaskParams);
@@ -171,7 +222,10 @@ public class CreateSoarStrategyTaskRequest extends Request {
         }
 
         /**
-         * The timestamp when the task is scheduled to start. Unit: milliseconds.
+         * <p>The timestamp when the task is scheduled to start. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1586739841000</p>
          */
         public Builder strategyTaskPlanExeTime(Long strategyTaskPlanExeTime) {
             this.putQueryParameter("StrategyTaskPlanExeTime", strategyTaskPlanExeTime);

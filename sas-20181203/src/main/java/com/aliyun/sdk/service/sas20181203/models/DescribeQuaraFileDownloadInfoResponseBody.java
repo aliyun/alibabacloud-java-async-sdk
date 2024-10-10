@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeQuaraFileDownloadInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeQuaraFileDownloadInfoResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         private String uuid; 
 
         /**
-         * The URL that is used to download the file. The URL is valid for five minutes.
+         * <p>The URL that is used to download the file. The URL is valid for five minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -117,7 +121,10 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The MD5 hash value of the quarantined file.
+         * <p>The MD5 hash value of the quarantined file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bb62ef1311bc564377a0378d3axxxxxx</p>
          */
         public Builder md5(String md5) {
             this.md5 = md5;
@@ -125,7 +132,10 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The file path.
+         * <p>The file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/test</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -133,7 +143,10 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the quarantined file.
+         * <p>The ID of the quarantined file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder quaraFileId(Integer quaraFileId) {
             this.quaraFileId = quaraFileId;
@@ -141,7 +154,10 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29874225-EAAC-5415-8501-32DD20FXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +165,10 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The tag that is added to the related alert.
+         * <p>The tag that is added to the related alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6d4ff40a22b15c86adecf2aa48xxxxx</p>
          */
         public Builder tag(String tag) {
             this.tag = tag;
@@ -157,7 +176,10 @@ public class DescribeQuaraFileDownloadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;

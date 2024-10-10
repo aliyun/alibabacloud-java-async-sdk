@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertySoftwareDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertySoftwareDetailRequest</p>
@@ -179,7 +180,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -188,7 +192,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * Specifies whether fuzzy search by software name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.
+         * <p>Specifies whether fuzzy search by software name is supported. If you want to use fuzzy search, set the parameter to 1. If you set the parameter to a different value or leave the parameter empty, fuzzy search is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -197,7 +204,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The timestamp generated when the software update ends. Unit: milliseconds.
+         * <p>The timestamp generated when the software update ends. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1650012695000</p>
          */
         public Builder installTimeEnd(Long installTimeEnd) {
             this.putQueryParameter("InstallTimeEnd", installTimeEnd);
@@ -206,7 +216,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The timestamp generated when the software update starts. Unit: milliseconds.
+         * <p>The timestamp generated when the software update starts. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649321495000</p>
          */
         public Builder installTimeStart(Long installTimeStart) {
             this.putQueryParameter("InstallTimeStart", installTimeStart);
@@ -215,7 +228,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The name of the software.
+         * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kernel</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -224,7 +240,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **10**.
+         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -233,7 +252,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The installation path of the software.
+         * <p>The installation path of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/etc/test</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -242,7 +264,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The name or IP address of the server.
+         * <p>The name or IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -251,7 +276,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The version of the software.
+         * <p>The version of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.10.0</p>
          */
         public Builder softwareVersion(String softwareVersion) {
             this.putQueryParameter("SoftwareVersion", softwareVersion);
@@ -260,7 +288,10 @@ public class DescribePropertySoftwareDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
+         * <p>The UUID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50d213b4-3a35-427a-b8a5-****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

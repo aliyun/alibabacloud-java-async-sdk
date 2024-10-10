@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageInfoListRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageInfoListRequest</p>
@@ -54,10 +55,15 @@ public class DescribeImageInfoListRequest extends Request {
         } 
 
         /**
-         * The UUID of the server. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The UUID of the server. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>391abd09184cbd3743d7f5ec125d****,
+         * e6aeb2a5b6004479398b0bcd1160****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

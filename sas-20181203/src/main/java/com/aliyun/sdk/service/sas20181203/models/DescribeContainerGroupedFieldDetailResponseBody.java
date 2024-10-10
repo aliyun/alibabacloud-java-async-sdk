@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupedFieldDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerGroupedFieldDetailResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7532B7EE-7CE7-5F4D-BF04-B12447DD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerGroupedFieldDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupedFieldDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmCount")
         private Integer alarmCount;
@@ -289,7 +299,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             private Integer vulCount; 
 
             /**
-             * The number of alerts.
+             * <p>The number of alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -297,7 +310,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node-local-dns</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -305,7 +321,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the current online server in the cluster.
+             * <p>The version of the current online server in the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.14.8-aliyun.1</p>
              */
             public Builder clusterCurrentVersion(String clusterCurrentVersion) {
                 this.clusterCurrentVersion = clusterCurrentVersion;
@@ -313,7 +332,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -321,7 +343,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhhtest</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -329,17 +354,20 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>STARTING: The cluster is being started.</li>
+             * <li>START_FAILED: The cluster fails to be started.</li>
+             * <li>BOOTSTRAPPING: The bootstrap action is being performed for the cluster.</li>
+             * <li>RUNNING: The cluster is running.</li>
+             * <li>TERMINATING: The cluster is being terminated.</li>
+             * <li>TERMINATED: The cluster is terminated.</li>
+             * <li>TERMINATED_WITH_ERRORS: The cluster is terminated due to an exception.</li>
+             * <li>TERMINATE_FAILED: The cluster fails to be terminated.</li>
+             * </ul>
              * 
-             * *   STARTING: The cluster is being started.
-             * *   START_FAILED: The cluster fails to be started.
-             * *   BOOTSTRAPPING: The bootstrap action is being performed for the cluster.
-             * *   RUNNING: The cluster is running.
-             * *   TERMINATING: The cluster is being terminated.
-             * *   TERMINATED: The cluster is terminated.
-             * *   TERMINATED_WITH_ERRORS: The cluster is terminated due to an exception.
-             * *   TERMINATE_FAILED: The cluster fails to be terminated.
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder clusterState(String clusterState) {
                 this.clusterState = clusterState;
@@ -347,12 +375,15 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cluster. Valid values:
-             * <p>
+             * <p>The type of the cluster. Valid values:</p>
+             * <ul>
+             * <li><strong>Kubernetes</strong>: dedicated Kubernetes cluster.</li>
+             * <li><strong>ManagedKubernetes</strong>: standard managed cluster (edge cluster).</li>
+             * <li><strong>Ask</strong>: serverless Kubernetes (ASK) cluster.</li>
+             * </ul>
              * 
-             * *   **Kubernetes**: dedicated Kubernetes cluster.
-             * *   **ManagedKubernetes**: standard managed cluster (edge cluster).
-             * *   **Ask**: serverless Kubernetes (ASK) cluster.
+             * <strong>example:</strong>
+             * <p>ManagedKubernetes</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -360,7 +391,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of containers.
+             * <p>The number of containers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder containerCount(Integer containerCount) {
                 this.containerCount = containerCount;
@@ -368,7 +402,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702433618301</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -376,7 +413,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -384,7 +424,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -392,7 +435,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shangliang-test</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -400,7 +446,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the pod.
+             * <p>The name of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node-local-dns-zwsxl</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -408,7 +457,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of pods.
+             * <p>The number of pods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder podCount(Integer podCount) {
                 this.podCount = podCount;
@@ -416,7 +468,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the pod.
+             * <p>The IP address of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder podIp(String podIp) {
                 this.podIp = podIp;
@@ -424,7 +479,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -432,7 +490,10 @@ public class DescribeContainerGroupedFieldDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities.
+             * <p>The number of vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;

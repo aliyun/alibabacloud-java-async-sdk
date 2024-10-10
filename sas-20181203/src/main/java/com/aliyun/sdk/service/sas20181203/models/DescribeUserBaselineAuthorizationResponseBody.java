@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserBaselineAuthorizationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserBaselineAuthorizationResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
         private UserBaselineAuthorization userBaselineAuthorization; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AF20EB0-EBBC-4B94-9B84-F3BAFAC53EDE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
         }
 
         /**
-         * The information about whether Security Center is authorized to run configuration checks on cloud services.
+         * <p>The information about whether Security Center is authorized to run configuration checks on cloud services.</p>
          */
         public Builder userBaselineAuthorization(UserBaselineAuthorization userBaselineAuthorization) {
             this.userBaselineAuthorization = userBaselineAuthorization;
@@ -70,6 +74,12 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserBaselineAuthorizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserBaselineAuthorizationResponseBody</p>
+     */
     public static class UserBaselineAuthorization extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -97,11 +107,14 @@ public class DescribeUserBaselineAuthorizationResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Indicates whether Security Center is authorized to run configuration checks on cloud services.
-             * <p>
+             * <p>Indicates whether Security Center is authorized to run configuration checks on cloud services.</p>
+             * <ul>
+             * <li><strong>0</strong>: no. Security Center is not authorized to run configuration checks on cloud services.</li>
+             * <li><strong>1</strong>: yes. Security Center is authorized to run configuration checks on cloud services.</li>
+             * </ul>
              * 
-             * *   **0**: no. Security Center is not authorized to run configuration checks on cloud services.
-             * *   **1**: yes. Security Center is authorized to run configuration checks on cloud services.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

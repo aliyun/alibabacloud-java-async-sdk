@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageBuildRiskByKeyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageBuildRiskByKeyResponseBody</p>
@@ -130,6 +131,12 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageBuildRiskByKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBuildRiskByKeyResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Advice")
         private String advice;
@@ -351,6 +358,12 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageBuildRiskByKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBuildRiskByKeyResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -432,6 +445,12 @@ public class DescribeImageBuildRiskByKeyResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageBuildRiskByKeyResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageBuildRiskByKeyResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;

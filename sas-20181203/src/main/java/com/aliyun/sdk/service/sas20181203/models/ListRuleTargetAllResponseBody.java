@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRuleTargetAllResponseBody} extends {@link TeaModel}
  *
  * <p>ListRuleTargetAllResponseBody</p>
@@ -49,7 +50,10 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
         private java.util.List < RuleTargetList> ruleTargetList; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30CBF632-109F-596F-97F2-451C8B2A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the network objects.
+         * <p>An array that consists of the network objects.</p>
          */
         public Builder ruleTargetList(java.util.List < RuleTargetList> ruleTargetList) {
             this.ruleTargetList = ruleTargetList;
@@ -70,6 +74,12 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRuleTargetAllResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRuleTargetAllResponseBody</p>
+     */
     public static class RuleTargetList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetId")
         private Long targetId;
@@ -121,7 +131,10 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The ID of the network object.
+             * <p>The ID of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>301944</p>
              */
             public Builder targetId(Long targetId) {
                 this.targetId = targetId;
@@ -129,7 +142,10 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the network object.
+             * <p>The name of the network object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source-test-obj-xFKcx</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -137,10 +153,13 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
+             * <p>The type of the object. Valid values:</p>
+             * <ul>
+             * <li>IMAGE</li>
+             * </ul>
              * 
-             * *   IMAGE
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

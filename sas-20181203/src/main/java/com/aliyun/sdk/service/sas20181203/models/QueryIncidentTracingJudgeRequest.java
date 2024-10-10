@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryIncidentTracingJudgeRequest} extends {@link RequestModel}
  *
  * <p>QueryIncidentTracingJudgeRequest</p>
@@ -54,10 +55,14 @@ public class QueryIncidentTracingJudgeRequest extends Request {
         } 
 
         /**
-         * The ID of the event that you want to query.
-         * <p>
+         * <p>The ID of the event that you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2621307.html">DescribeCloudSiemEvents</a> operation to query the event ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCloudSiemEvents](~~2621307~~) operation to query the event ID.
+         * <strong>example:</strong>
+         * <p>d1d7a612-0dc2-413a-aa8e-9c7c88d8d12a</p>
          */
         public Builder incidentId(String incidentId) {
             this.putBodyParameter("IncidentId", incidentId);

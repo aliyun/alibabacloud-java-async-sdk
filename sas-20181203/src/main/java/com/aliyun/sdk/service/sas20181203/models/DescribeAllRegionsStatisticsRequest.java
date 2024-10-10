@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllRegionsStatisticsRequest} extends {@link RequestModel}
  *
  * <p>DescribeAllRegionsStatisticsRequest</p>
@@ -95,11 +96,14 @@ public class DescribeAllRegionsStatisticsRequest extends Request {
         } 
 
         /**
-         * The source of the request. Default value: **aqs**. Valid values:
-         * <p>
+         * <p>The source of the request. Default value: <strong>aqs</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>sas</strong>: Security Center.</li>
+         * <li><strong>aqs</strong>: Server Guard.</li>
+         * </ul>
          * 
-         * *   **sas**: Security Center.
-         * *   **aqs**: Server Guard.
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -108,10 +112,13 @@ public class DescribeAllRegionsStatisticsRequest extends Request {
         }
 
         /**
-         * The ID of the asset group that you want to query.
-         * <p>
+         * <p>The ID of the asset group that you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeAllGroups](~~130972~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>1161****</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -120,7 +127,10 @@ public class DescribeAllRegionsStatisticsRequest extends Request {
         }
 
         /**
-         * The name or public IP address of the asset.
+         * <p>The name or public IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -129,7 +139,10 @@ public class DescribeAllRegionsStatisticsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33.80.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

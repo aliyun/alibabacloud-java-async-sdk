@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLogMetaRequest} extends {@link RequestModel}
  *
  * <p>GetLogMetaRequest</p>
@@ -68,10 +69,14 @@ public class GetLogMetaRequest extends Request {
         } 
 
         /**
-         * The name of the dedicated Logstore in which logs are stored.
-         * <p>
+         * <p>The name of the dedicated Logstore in which logs are stored.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the name of the Logstore.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeLogMeta](~~DescribeLogMeta~~) operation to query the name of the Logstore.
+         * <strong>example:</strong>
+         * <p>aegis-log-login</p>
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -80,10 +85,13 @@ public class GetLogMetaRequest extends Request {
         }
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
-         * <p>
+         * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

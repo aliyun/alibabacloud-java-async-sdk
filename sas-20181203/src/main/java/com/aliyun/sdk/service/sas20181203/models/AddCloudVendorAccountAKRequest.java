@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCloudVendorAccountAKRequest} extends {@link RequestModel}
  *
  * <p>AddCloudVendorAccountAKRequest</p>
@@ -169,11 +170,15 @@ public class AddCloudVendorAccountAKRequest extends Request {
         } 
 
         /**
-         * The type of the account to which the AccessKey pair belongs. Valid values:
-         * <p>
+         * <p>The type of the account to which the AccessKey pair belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>primary</strong>: a primary account</li>
+         * <li><strong>sub</strong>: a sub-account</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **primary**: a primary account
-         * *   **sub**: a sub-account
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         public Builder akType(String akType) {
             this.putQueryParameter("AkType", akType);
@@ -182,7 +187,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * The modules that are associated with the AccessKey pair.
+         * <p>The modules that are associated with the AccessKey pair.</p>
          */
         public Builder authModules(java.util.List < String > authModules) {
             this.putQueryParameter("AuthModules", authModules);
@@ -191,11 +196,14 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * The Active Directory (AD) domain. This parameter takes effect only when Vendor is set to Azure. Valid values:
-         * <p>
+         * <p>The Active Directory (AD) domain. This parameter takes effect only when Vendor is set to Azure. Valid values:</p>
+         * <ul>
+         * <li><strong>china</strong></li>
+         * <li><strong>global</strong></li>
+         * </ul>
          * 
-         * *   **china**
-         * *   **global**
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -204,7 +212,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * The regions that are examined during AccessKey pair authentication. This parameter takes effect only when Vendor is set to AWS.
+         * <p>The regions that are examined during AccessKey pair authentication. This parameter takes effect only when Vendor is set to AWS.</p>
          */
         public Builder regions(java.util.List < String > regions) {
             this.putQueryParameter("Regions", regions);
@@ -213,22 +221,25 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * The AccessKey ID. Valid values:
-         * <p>
+         * <p>The AccessKey ID. Valid values:</p>
+         * <p>1. If AkType is set to primary, specify this parameter based on the following description:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Enter the AccessKey ID of a primary account on Tencent Cloud.</li>
+         * <li><strong>HUAWEICLOUD</strong>: Enter the AccessKey ID of a primary account on Huawei Cloud.</li>
+         * <li><strong>Azure</strong>: Enter the AccessKey ID of a primary account on Microsoft Azure.</li>
+         * <li><strong>AWS</strong>: Enter the AccessKey ID of a primary account on AWS.</li>
+         * </ul>
+         * <p>2. If AkType is set to sub, specify this parameter based on the following description:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Enter the AccessKey ID of a sub-account on Tencent Cloud.</li>
+         * <li><strong>HUAWEICLOUD</strong>: Enter the AccessKey ID of a sub-account on Huawei Cloud.</li>
+         * <li><strong>Azure</strong>: Enter the AccessKey ID of a sub-account on Microsoft Azure.</li>
+         * <li><strong>AWS</strong>: Enter the AccessKey ID of a sub-account on AWS.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * 1\. If AkType is set to primary, specify this parameter based on the following description:
-         * 
-         * *   **Tencent**: Enter the AccessKey ID of a primary account on Tencent Cloud.
-         * *   **HUAWEICLOUD**: Enter the AccessKey ID of a primary account on Huawei Cloud.
-         * *   **Azure**: Enter the AccessKey ID of a primary account on Microsoft Azure.
-         * *   **AWS**: Enter the AccessKey ID of a primary account on AWS.
-         * 
-         * 2\. If AkType is set to sub, specify this parameter based on the following description:
-         * 
-         * *   **Tencent**: Enter the AccessKey ID of a sub-account on Tencent Cloud.
-         * *   **HUAWEICLOUD**: Enter the AccessKey ID of a sub-account on Huawei Cloud.
-         * *   **Azure**: Enter the AccessKey ID of a sub-account on Microsoft Azure.
-         * *   **AWS**: Enter the AccessKey ID of a sub-account on AWS.
+         * <strong>example:</strong>
+         * <p>45GLRV4SOT0YFB****</p>
          */
         public Builder secretId(String secretId) {
             this.putQueryParameter("SecretId", secretId);
@@ -237,22 +248,25 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * The AccessKey secret. Valid values:
-         * <p>
+         * <p>The AccessKey secret. Valid values:</p>
+         * <p>1. If AkType is set to primary, specify this parameter based on the following description:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Enter the AccessKey secret of a primary account on Tencent Cloud.</li>
+         * <li><strong>HUAWEICLOUD</strong>: Enter the AccessKey secret of a primary account on Huawei Cloud.</li>
+         * <li><strong>Azure</strong>: Enter the AccessKey secret of a primary account on Microsoft Azure.</li>
+         * <li><strong>AWS</strong>: Enter the AccessKey secret of a primary account on AWS.</li>
+         * </ul>
+         * <p>2. If AkType is set to sub, specify this parameter based on the following description:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Enter the AccessKey secret of a sub-account on Tencent Cloud.</li>
+         * <li><strong>HUAWEICLOUD</strong>: Enter the AccessKey secret of a sub-account on Huawei Cloud.</li>
+         * <li><strong>Azure</strong>: Enter the AccessKey secret of a sub-account on Microsoft Azure.</li>
+         * <li><strong>AWS</strong>: Enter the AccessKey secret of a sub-account on AWS.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * 1\. If AkType is set to primary, specify this parameter based on the following description:
-         * 
-         * *   **Tencent**: Enter the AccessKey secret of a primary account on Tencent Cloud.
-         * *   **HUAWEICLOUD**: Enter the AccessKey secret of a primary account on Huawei Cloud.
-         * *   **Azure**: Enter the AccessKey secret of a primary account on Microsoft Azure.
-         * *   **AWS**: Enter the AccessKey secret of a primary account on AWS.
-         * 
-         * 2\. If AkType is set to sub, specify this parameter based on the following description:
-         * 
-         * *   **Tencent**: Enter the AccessKey secret of a sub-account on Tencent Cloud.
-         * *   **HUAWEICLOUD**: Enter the AccessKey secret of a sub-account on Huawei Cloud.
-         * *   **Azure**: Enter the AccessKey secret of a sub-account on Microsoft Azure.
-         * *   **AWS**: Enter the AccessKey secret of a sub-account on AWS.
+         * <strong>example:</strong>
+         * <p>AE6SLd****</p>
          */
         public Builder secretKey(String secretKey) {
             this.putQueryParameter("SecretKey", secretKey);
@@ -261,7 +275,7 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * The subscription IDs. This parameter takes effect only when Vendor is set to Azure.
+         * <p>The subscription IDs. This parameter takes effect only when Vendor is set to Azure.</p>
          */
         public Builder subscriptionIds(java.util.List < String > subscriptionIds) {
             this.putQueryParameter("SubscriptionIds", subscriptionIds);
@@ -270,7 +284,10 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * The tenant ID. This parameter takes effect only when Vendor is set to Azure.
+         * <p>The tenant ID. This parameter takes effect only when Vendor is set to Azure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95304a97-339b-4de5-9a7d-cdbffaf****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);
@@ -279,13 +296,17 @@ public class AddCloudVendorAccountAKRequest extends Request {
         }
 
         /**
-         * The cloud service provider. Valid values:
-         * <p>
+         * <p>The cloud service provider. Valid values:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Tencent Cloud</li>
+         * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
+         * <li><strong>Azure</strong>: Microsoft Azure</li>
+         * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **Tencent**: Tencent Cloud
-         * *   **HUAWEICLOUD**: Huawei Cloud
-         * *   **Azure**: Microsoft Azure
-         * *   **AWS**: Amazon Web Services (AWS)
+         * <strong>example:</strong>
+         * <p>AWS</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

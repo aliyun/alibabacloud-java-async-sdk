@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserSettingRequest} extends {@link RequestModel}
  *
  * <p>CreateUserSettingRequest</p>
@@ -81,7 +82,10 @@ public class CreateUserSettingRequest extends Request {
         } 
 
         /**
-         * The severities of alerts.
+         * <p>The severities of alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high,low</p>
          */
         public Builder alertLevels(String alertLevels) {
             this.putQueryParameter("AlertLevels", alertLevels);
@@ -90,7 +94,10 @@ public class CreateUserSettingRequest extends Request {
         }
 
         /**
-         * The number of days during which you want to retain invalid alerts.
+         * <p>The number of days during which you want to retain invalid alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder invalidWarningKeepDays(Integer invalidWarningKeepDays) {
             this.putQueryParameter("InvalidWarningKeepDays", invalidWarningKeepDays);
@@ -99,7 +106,10 @@ public class CreateUserSettingRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112.48.16.***</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateHoneypotRequest} extends {@link RequestModel}
  *
  * <p>UpdateHoneypotRequest</p>
@@ -96,10 +97,14 @@ public class UpdateHoneypotRequest extends Request {
         } 
 
         /**
-         * The ID of the honeypot.
-         * <p>
+         * <p>The ID of the honeypot.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to query the IDs of honeypots.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
+         * <strong>example:</strong>
+         * <p>945607c2ae2a1a737c04599d6608065688bfc6048d9b9d306ce8dc8191c278b4</p>
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -108,7 +113,10 @@ public class UpdateHoneypotRequest extends Request {
         }
 
         /**
-         * The custom name of the honeypot.
+         * <p>The custom name of the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExtMail</p>
          */
         public Builder honeypotName(String honeypotName) {
             this.putQueryParameter("HoneypotName", honeypotName);
@@ -117,11 +125,14 @@ public class UpdateHoneypotRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -130,10 +141,13 @@ public class UpdateHoneypotRequest extends Request {
         }
 
         /**
-         * The custom configuration of the honeypot.
-         * <p>
+         * <p>The custom configuration of the honeypot.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the configurations of honeypots from the <strong>Template</strong> response parameter.</p>
+         * </blockquote>
          * 
-         * > You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the configurations of honeypots from the **Template** response parameter.
+         * <strong>example:</strong>
+         * <p>{&quot;burp&quot;:&quot;open&quot;,&quot;webshell&quot;:&quot;open&quot;,&quot;trojan_git&quot;:&quot;close&quot;,&quot;portrait_option&quot;:&quot;true&quot;}</p>
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);

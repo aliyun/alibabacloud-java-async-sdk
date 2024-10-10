@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateOssScanConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateOssScanConfigRequest</p>
@@ -235,7 +236,10 @@ public class UpdateOssScanConfigRequest extends Request {
         } 
 
         /**
-         * Whether to match all file prefixes.
+         * <p>Whether to match all file prefixes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allKeyPrefix(Boolean allKeyPrefix) {
             this.putQueryParameter("AllKeyPrefix", allKeyPrefix);
@@ -244,7 +248,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The names of the buckets.
+         * <p>The names of the buckets.</p>
          */
         public Builder bucketNameList(java.util.List < String > bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
@@ -253,7 +257,10 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+         * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
             this.putQueryParameter("DecompressMaxFileCount", decompressMaxFileCount);
@@ -262,7 +269,10 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+         * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder decompressMaxLayer(Integer decompressMaxLayer) {
             this.putQueryParameter("DecompressMaxLayer", decompressMaxLayer);
@@ -280,11 +290,14 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the bucket check policy. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the bucket check policy. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enables the bucket check policy.</li>
+         * <li><strong>0</strong>: disables the bucket check policy.</li>
+         * </ul>
          * 
-         * *   **1**: enables the bucket check policy.
-         * *   **0**: disables the bucket check policy.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -293,7 +306,10 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The end time of the check. Specify the time in the HH:mm:ss format.
+         * <p>The end time of the check. Specify the time in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:01</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -302,7 +318,10 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65778</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -311,7 +330,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The prefixes of the object that you want to check.
+         * <p>The prefixes of the object that you want to check.</p>
          */
         public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
             this.putQueryParameter("KeyPrefixList", keyPrefixList);
@@ -320,7 +339,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The suffixes of the objects that you want to check.
+         * <p>The suffixes of the objects that you want to check.</p>
          */
         public Builder keySuffixList(java.util.List < String > keySuffixList) {
             this.putQueryParameter("KeySuffixList", keySuffixList);
@@ -338,7 +357,10 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacos****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -347,7 +369,7 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The time when the check is performed. The value specifies the days of the week.
+         * <p>The time when the check is performed. The value specifies the days of the week.</p>
          */
         public Builder scanDayList(java.util.List < Integer > scanDayList) {
             this.putQueryParameter("ScanDayList", scanDayList);
@@ -356,7 +378,10 @@ public class UpdateOssScanConfigRequest extends Request {
         }
 
         /**
-         * The start time of the check. Specify the time in the HH:mm:ss format.
+         * <p>The start time of the check. Specify the time in the HH:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

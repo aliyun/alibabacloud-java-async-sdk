@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHcExportInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHcExportInfoResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of exported entries.
+         * <p>The number of exported entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>148</p>
          */
         public Builder currentCount(Integer currentCount) {
             this.currentCount = currentCount;
@@ -141,7 +145,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the exported file.
+         * <p>The name of the exported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>health_check_export_2022****</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -149,7 +156,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the export task was created.
+         * <p>The time when the export task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-03T15:15Z</p>
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -157,7 +167,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the export task.
+         * <p>The ID of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1082278</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -165,7 +178,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The download URL for the exported file.
+         * <p>The download URL for the exported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://hc-export.oss-cn-shanghai.aliyuncs.com/export_hc/health_check_export_20221222_1671699255808.zip?Expires=1672304056&OSSAccessKeyId=****&Signature=">https://hc-export.oss-cn-shanghai.aliyuncs.com/export_hc/health_check_export_20221222_1671699255808.zip?Expires=1672304056&amp;OSSAccessKeyId=****&amp;Signature=</a>****</p>
          */
         public Builder link(String link) {
             this.link = link;
@@ -173,7 +189,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The progress percentage of the export task.
+         * <p>The progress percentage of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -181,7 +200,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C2C94CF-ED08-50C0-BC72-C5029251****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,11 +211,14 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the export task. Valid values:
-         * <p>
+         * <p>The status of the export task. Valid values:</p>
+         * <ul>
+         * <li><strong>exporting</strong>: The task is in progress.</li>
+         * <li><strong>success</strong>: The task is complete.</li>
+         * </ul>
          * 
-         * *   **exporting**: The task is in progress.
-         * *   **success**: The task is complete.
+         * <strong>example:</strong>
+         * <p>exporting</p>
          */
         public Builder resultStatus(String resultStatus) {
             this.resultStatus = resultStatus;
@@ -201,7 +226,10 @@ public class DescribeHcExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of exported entries.
+         * <p>The total number of exported entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>624</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

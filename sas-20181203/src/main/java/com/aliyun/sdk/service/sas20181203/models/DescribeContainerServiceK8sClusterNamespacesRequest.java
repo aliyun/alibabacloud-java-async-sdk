@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerServiceK8sClusterNamespacesRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerServiceK8sClusterNamespacesRequest</p>
@@ -81,7 +82,10 @@ public class DescribeContainerServiceK8sClusterNamespacesRequest extends Request
         } 
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf4435fefd45d4b1b8643f3a0bea3****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -99,7 +103,10 @@ public class DescribeContainerServiceK8sClusterNamespacesRequest extends Request
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140.205.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

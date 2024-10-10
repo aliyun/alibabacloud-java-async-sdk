@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOssBucketScanInfoRequest} extends {@link RequestModel}
  *
  * <p>ListOssBucketScanInfoRequest</p>
@@ -139,7 +140,10 @@ public class ListOssBucketScanInfoRequest extends Request {
         } 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iboxpublic****</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -148,7 +152,11 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -157,7 +165,10 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * The name of the bucket that is used for fuzzy match.
+         * <p>The name of the bucket that is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder fuzzBucketName(String fuzzBucketName) {
             this.putQueryParameter("FuzzBucketName", fuzzBucketName);
@@ -166,11 +177,14 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * Specifies whether at-risk objects are detected. Valid values:
-         * <p>
+         * <p>Specifies whether at-risk objects are detected. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: No at-risk objects are detected.</li>
+         * <li><strong>1</strong>: At-risk objects are detected.</li>
+         * </ul>
          * 
-         * *   **0**: No at-risk objects are detected.
-         * *   **1**: At-risk objects are detected.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hasRisk(Integer hasRisk) {
             this.putQueryParameter("HasRisk", hasRisk);
@@ -179,11 +193,14 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * The language of the content in the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -192,7 +209,11 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,13 +222,16 @@ public class ListOssBucketScanInfoRequest extends Request {
         }
 
         /**
-         * The check status of the bucket. Valid values:
-         * <p>
+         * <p>The check status of the bucket. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: The bucket is not checked.</li>
+         * <li><strong>2</strong>: All objects in the bucket are being checked.</li>
+         * <li><strong>3</strong>: Only new objects in the bucket are being checked.</li>
+         * <li><strong>4</strong>: The bucket is checked.</li>
+         * </ul>
          * 
-         * *   **1**: The bucket is not checked.
-         * *   **2**: All objects in the bucket are being checked.
-         * *   **3**: Only new objects in the bucket are being checked.
-         * *   **4**: The bucket is checked.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

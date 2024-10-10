@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetContainerDefenseRuleDetailRequest} extends {@link RequestModel}
  *
  * <p>GetContainerDefenseRuleDetailRequest</p>
@@ -53,10 +54,13 @@ public class GetContainerDefenseRuleDetailRequest extends Request {
         } 
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the rule ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule ID.
+         * <strong>example:</strong>
+         * <p>156</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

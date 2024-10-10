@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportRecordResponseBody} extends {@link TeaModel}
  *
  * <p>ExportRecordResponseBody</p>
@@ -61,7 +62,10 @@ public class ExportRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the exported file.
+         * <p>The name of the exported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cms_20171101.xlsx</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -69,7 +73,10 @@ public class ExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the exported file.
+         * <p>The ID of the exported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131231</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -77,7 +84,10 @@ public class ExportRecordResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6673D49C-A9AB-40DD-B4A2-B92306701AE7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateFileProtectRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateFileProtectRuleRequest</p>
@@ -155,13 +156,16 @@ public class UpdateFileProtectRuleRequest extends Request {
         } 
 
         /**
-         * The severity of alerts. Valid values:
-         * <p>
+         * <p>The severity of alerts. Valid values:</p>
+         * <ul>
+         * <li>0: does not generate alerts</li>
+         * <li>1: sends notifications</li>
+         * <li>2: suspicious</li>
+         * <li>3: high-risk</li>
+         * </ul>
          * 
-         * *   0: does not generate alerts
-         * *   1: sends notifications
-         * *   2: suspicious
-         * *   3: high-risk
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder alertLevel(Integer alertLevel) {
             this.putQueryParameter("AlertLevel", alertLevel);
@@ -170,7 +174,8 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The operations that you want to perform on the files.
+         * <p>The operations that you want to perform on the files.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder fileOps(java.util.List < String > fileOps) {
             this.putQueryParameter("FileOps", fileOps);
@@ -179,7 +184,8 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The paths to the monitored files. Wildcard characters are supported.
+         * <p>The paths to the monitored files. Wildcard characters are supported.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder filePaths(java.util.List < String > filePaths) {
             this.putQueryParameter("FilePaths", filePaths);
@@ -188,7 +194,10 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1062</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -197,7 +206,8 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The paths to the monitored processes.
+         * <p>The paths to the monitored processes.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder procPaths(java.util.List < String > procPaths) {
             this.putQueryParameter("ProcPaths", procPaths);
@@ -206,11 +216,14 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The handling method of the rule. Valid values:
-         * <p>
+         * <p>The handling method of the rule. Valid values:</p>
+         * <ul>
+         * <li>pass: allow</li>
+         * <li>alert</li>
+         * </ul>
          * 
-         * *   pass: allow
-         * *   alert
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -219,7 +232,11 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-1</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -228,11 +245,14 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The status of the rule. Valid values:
-         * <p>
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
          * 
-         * *   **0**: disabled
-         * *   **1**: enabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

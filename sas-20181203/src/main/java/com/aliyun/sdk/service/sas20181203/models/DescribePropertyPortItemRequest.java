@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyPortItemRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertyPortItemRequest</p>
@@ -95,7 +96,10 @@ public class DescribePropertyPortItemRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -104,7 +108,10 @@ public class DescribePropertyPortItemRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully refresh the data that you want to query.
+         * <p>Specifies whether to forcefully refresh the data that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forceFlush(Boolean forceFlush) {
             this.putQueryParameter("ForceFlush", forceFlush);
@@ -113,7 +120,10 @@ public class DescribePropertyPortItemRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -122,7 +132,10 @@ public class DescribePropertyPortItemRequest extends Request {
         }
 
         /**
-         * The port number.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

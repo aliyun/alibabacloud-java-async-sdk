@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUnfinishedOnceTaskResponseBody} extends {@link TeaModel}
  *
  * <p>ListUnfinishedOnceTaskResponseBody</p>
@@ -49,7 +50,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the tasks.
+         * <p>The details of the tasks.</p>
          */
         public Builder onceTasks(java.util.List < OnceTasks> onceTasks) {
             this.onceTasks = onceTasks;
@@ -57,7 +58,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F5CF78A7-30AA-59DB-847F-13EE3AE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUnfinishedOnceTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUnfinishedOnceTaskResponseBody</p>
+     */
     public static class TaskImageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
@@ -265,7 +275,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The name of the application.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ack-jenkins-****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -273,7 +286,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a765ba1435e7f9446065370e9a41****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -281,7 +297,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACK-test-****</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -289,7 +308,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The image digest.
+             * <p>The image digest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default_digest</p>
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -297,7 +319,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The container image.
+             * <p>The container image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>s.com/sas_test/baseli</strong></em></p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -305,7 +330,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the node.
+             * <p>The instance ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-0xi5mxvtmfw9****</p>
              */
             public Builder nodeInstanceId(String nodeInstanceId) {
                 this.nodeInstanceId = nodeInstanceId;
@@ -313,7 +341,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.18.XXX.XXX</p>
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -321,7 +352,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pztest****</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -329,7 +363,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The pod of the image.
+             * <p>The pod of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>expoit-law-****</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -337,7 +374,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the server image.
+             * <p>The region ID of the server image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -345,7 +385,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-r88w2vryp8m****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -353,7 +396,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image repository.
+             * <p>The name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testyyy</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -361,7 +407,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * <p>The namespace to which the image repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bitn***</p>
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;
@@ -369,7 +418,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image repository.
+             * <p>The region ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder repoRegionId(String repoRegionId) {
                 this.repoRegionId = repoRegionId;
@@ -377,7 +429,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The image tag.
+             * <p>The image tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.20-002-a2*****</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -391,6 +446,12 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUnfinishedOnceTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUnfinishedOnceTaskResponseBody</p>
+     */
     public static class OnceTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -598,7 +659,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The time when the task ends.
+             * <p>The time when the task ends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1670307567000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -606,11 +670,14 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is complete. Valid values:
-             * <p>
+             * <p>Indicates whether the task is complete. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder finish(Integer finish) {
                 this.finish = finish;
@@ -618,7 +685,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets on which the task is complete.
+             * <p>The number of assets on which the task is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67</p>
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -626,7 +696,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The progress percentage of the task.
+             * <p>The progress percentage of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75</p>
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -634,7 +707,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The execution duration of the task.
+             * <p>The execution duration of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1670307567000</p>
              */
             public Builder realRunTime(Long realRunTime) {
                 this.realRunTime = realRunTime;
@@ -642,7 +718,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The execution result of the task.
+             * <p>The execution result of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TASK_NOT_SUPPORT_REGION</p>
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -650,7 +729,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task is started.
+             * <p>The time when the task is started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640102400000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -658,7 +740,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -666,13 +751,16 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task. Valid values:
-             * <p>
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is not started.</li>
+             * <li><strong>START</strong>: The task is started.</li>
+             * <li><strong>SUCCESS</strong>: The task is complete.</li>
+             * <li><strong>TIMEOUT</strong>: The task timed out.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is not started.
-             * *   **START**: The task is started.
-             * *   **SUCCESS**: The task is complete.
-             * *   **TIMEOUT**: The task timed out.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder statusText(String statusText) {
                 this.statusText = statusText;
@@ -680,7 +768,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The objective of the task.
+             * <p>The objective of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>238cf050a7270dd6940602e70f1e5a11eeaf4e02035f445b7f613ff5e064****</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -688,11 +779,14 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the assets that are scanned. Valid values:
-             * <p>
+             * <p>The type of the assets that are scanned. Valid values:</p>
+             * <ul>
+             * <li><strong>IMAGE_REPO</strong>: image repository</li>
+             * <li><strong>IMAGE</strong>: image</li>
+             * </ul>
              * 
-             * *   **IMAGE_REPO**: image repository
-             * *   **IMAGE**: image
+             * <strong>example:</strong>
+             * <p>IMAGE</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -700,7 +794,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9fb50f2af8bb67c9fdb684194c83****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -708,7 +805,7 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image scan task.
+             * <p>The information about the image scan task.</p>
              */
             public Builder taskImageInfo(TaskImageInfo taskImageInfo) {
                 this.taskImageInfo = taskImageInfo;
@@ -716,7 +813,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE_SCAN</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -724,7 +824,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task.
+             * <p>The type of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IMAGE_SCAN</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -732,7 +835,10 @@ public class ListUnfinishedOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

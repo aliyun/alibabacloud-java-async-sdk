@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCloudVendorAccountAKResponseBody} extends {@link TeaModel}
  *
  * <p>AddCloudVendorAccountAKResponseBody</p>
@@ -49,7 +50,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the AccessKey pair that is added.
+         * <p>The information about the AccessKey pair that is added.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A60DA4EC-7CD8-577D-AD73-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddCloudVendorAccountAKResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddCloudVendorAccountAKResponseBody</p>
+     */
     public static class AuthModules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -157,7 +167,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             private String moduleStatement; 
 
             /**
-             * The error message of the module.
+             * <p>The error message of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak_domain_error</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -165,13 +178,16 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the module. Valid values:
-             * <p>
+             * <p>The code of the module. Valid values:</p>
+             * <ul>
+             * <li><strong>HOST</strong>: host</li>
+             * <li><strong>CSPM</strong>: configuration assessment</li>
+             * <li><strong>SIEM</strong>: CloudSiem</li>
+             * <li><strong>TRIAL</strong>: log audit</li>
+             * </ul>
              * 
-             * *   **HOST**: host
-             * *   **CSPM**: configuration assessment
-             * *   **SIEM**: CloudSiem
-             * *   **TRIAL**: log audit
+             * <strong>example:</strong>
+             * <p>HOST</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -179,7 +195,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud asset that is associated with the module.
+             * <p>The cloud asset that is associated with the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud server or virtual machine</p>
              */
             public Builder moduleAssetType(String moduleAssetType) {
                 this.moduleAssetType = moduleAssetType;
@@ -187,7 +206,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the module.
+             * <p>The display name of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Host Assets</p>
              */
             public Builder moduleDisp(String moduleDisp) {
                 this.moduleDisp = moduleDisp;
@@ -195,13 +217,16 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The service status of the module. Valid values:
-             * <p>
+             * <p>The service status of the module. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: being used</li>
+             * <li><strong>1</strong>: exception occurred</li>
+             * <li><strong>2</strong>: being validated</li>
+             * <li><strong>3</strong>: validation timed out</li>
+             * </ul>
              * 
-             * *   **0**: being used
-             * *   **1**: exception occurred
-             * *   **2**: being validated
-             * *   **3**: validation timed out
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder moduleServiceStatus(Integer moduleServiceStatus) {
                 this.moduleServiceStatus = moduleServiceStatus;
@@ -209,7 +234,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The permission description of the module.
+             * <p>The permission description of the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Read permission of the cloud server or virtual machine</p>
              */
             public Builder moduleStatement(String moduleStatement) {
                 this.moduleStatement = moduleStatement;
@@ -223,6 +251,12 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddCloudVendorAccountAKResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddCloudVendorAccountAKResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AkType")
         private String akType;
@@ -334,11 +368,14 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             private String vendor; 
 
             /**
-             * The type of the account to which the AccessKey pair belongs. Valid values:
-             * <p>
+             * <p>The type of the account to which the AccessKey pair belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>primary</strong>: a primary account</li>
+             * <li><strong>sub</strong>: a sub-account</li>
+             * </ul>
              * 
-             * *   **primary**: a primary account
-             * *   **sub**: a sub-account
+             * <strong>example:</strong>
+             * <p>sub</p>
              */
             public Builder akType(String akType) {
                 this.akType = akType;
@@ -346,7 +383,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the AccessKey pair.
+             * <p>The unique ID of the AccessKey pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2158</p>
              */
             public Builder authId(Long authId) {
                 this.authId = authId;
@@ -354,7 +394,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The modules that are associated with the AccessKey pair.
+             * <p>The modules that are associated with the AccessKey pair.</p>
              */
             public Builder authModules(java.util.List < AuthModules> authModules) {
                 this.authModules = authModules;
@@ -362,7 +402,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The error message of the AccessKey pair.
+             * <p>The error message of the AccessKey pair.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The IAM user is forbidden in the currently selected region</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -370,7 +413,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The AccessKey ID.
+             * <p>The AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AE6SLd****</p>
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;
@@ -378,13 +424,16 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The service status of the AccessKey pair. Valid values:
-             * <p>
+             * <p>The service status of the AccessKey pair. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: being used</li>
+             * <li><strong>1</strong>: exception occurred</li>
+             * <li><strong>2</strong>: being validated</li>
+             * <li><strong>3</strong>: validation timed out</li>
+             * </ul>
              * 
-             * *   **0**: being used
-             * *   **1**: exception occurred
-             * *   **2**: being validated
-             * *   **3**: validation timed out
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder serviceStatus(Integer serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -392,11 +441,14 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the AccessKey pair. Valid values:
-             * <p>
+             * <p>The status of the AccessKey pair. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: enabled</li>
+             * <li><strong>1</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **0**: enabled
-             * *   **1**: disabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -404,13 +456,16 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud service provider. Valid values:
-             * <p>
+             * <p>The cloud service provider. Valid values:</p>
+             * <ul>
+             * <li><strong>Tencent</strong>: Tencent Cloud</li>
+             * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
+             * <li><strong>Azure</strong>: Microsoft Azure</li>
+             * <li><strong>AWS</strong>: AWS</li>
+             * </ul>
              * 
-             * *   **Tencent**: Tencent Cloud
-             * *   **HUAWEICLOUD**: Huawei Cloud
-             * *   **Azure**: Microsoft Azure
-             * *   **AWS**: AWS
+             * <strong>example:</strong>
+             * <p>Tencent</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;

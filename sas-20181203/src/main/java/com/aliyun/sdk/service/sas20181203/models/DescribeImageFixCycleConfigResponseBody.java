@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageFixCycleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageFixCycleConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageFixCycleConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageFixCycleConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageFixCycle")
         private Integer imageFixCycle;
@@ -133,7 +143,10 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             private Integer imageTimeRange; 
 
             /**
-             * The cycle of the scheduled fix. Unit: day.
+             * <p>The cycle of the scheduled fix. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder imageFixCycle(Integer imageFixCycle) {
                 this.imageFixCycle = imageFixCycle;
@@ -141,11 +154,14 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the scheduled fix of image risks is enabled.
-             * <p>
+             * <p>Indicates whether the scheduled fix of image risks is enabled.</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled</li>
+             * <li><strong>off</strong>: disabled</li>
+             * </ul>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder imageFixSwitch(String imageFixSwitch) {
                 this.imageFixSwitch = imageFixSwitch;
@@ -153,11 +169,14 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:
-             * <p>
+             * <p>The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:</p>
+             * <ul>
+             * <li><strong>type</strong>: The type of the image risk. The value is fixed to repo.</li>
+             * <li><strong>target</strong>: The content of the image risk. The value is in the format of Namespace/Image repository.</li>
+             * </ul>
              * 
-             * *   **type**: The type of the image risk. The value is fixed to repo.
-             * *   **target**: The content of the image risk. The value is in the format of Namespace/Image repository.
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;repo&quot;,&quot;target&quot;:[&quot;qa-dac/yyuan9&quot;,&quot;cdp-uat/zentao&quot;,&quot;cafdms-qa/xxl-job-admin&quot;,&quot;cafdms-qa/utils/jdk&quot;,&quot;cafmfbi/ui&quot;,&quot;cdp-uat/tradingdesk-webapp&quot;]}</p>
              */
             public Builder imageFixTarget(String imageFixTarget) {
                 this.imageFixTarget = imageFixTarget;
@@ -165,7 +184,10 @@ public class DescribeImageFixCycleConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time range during which the image was modified. Unit: day.
+             * <p>The time range during which the image was modified. Unit: day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder imageTimeRange(Integer imageTimeRange) {
                 this.imageTimeRange = imageTimeRange;

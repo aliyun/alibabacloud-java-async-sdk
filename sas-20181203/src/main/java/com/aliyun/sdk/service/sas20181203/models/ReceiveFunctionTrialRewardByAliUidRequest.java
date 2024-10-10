@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReceiveFunctionTrialRewardByAliUidRequest} extends {@link RequestModel}
  *
  * <p>ReceiveFunctionTrialRewardByAliUidRequest</p>
@@ -67,11 +68,14 @@ public class ReceiveFunctionTrialRewardByAliUidRequest extends Request {
         } 
 
         /**
-         * The name of the feature for which you want to apply for a free trial. Valid values:
-         * <p>
+         * <p>The name of the feature for which you want to apply for a free trial. Valid values:</p>
+         * <ul>
+         * <li><strong>trail_honeypot_reward</strong>: cloud honeypot</li>
+         * <li><strong>trail_file_detect_api_reward</strong>: SDK for malicious file detection</li>
+         * </ul>
          * 
-         * *   **trail_honeypot_reward**: cloud honeypot
-         * *   **trail_file_detect_api_reward**: SDK for malicious file detection
+         * <strong>example:</strong>
+         * <p>trail_honeypot_reward</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);
@@ -80,11 +84,14 @@ public class ReceiveFunctionTrialRewardByAliUidRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

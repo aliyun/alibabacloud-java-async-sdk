@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyContainerDefenseRuleSwitchRequest} extends {@link RequestModel}
  *
  * <p>ModifyContainerDefenseRuleSwitchRequest</p>
@@ -67,7 +68,7 @@ public class ModifyContainerDefenseRuleSwitchRequest extends Request {
         } 
 
         /**
-         * The IDs of the rules.
+         * <p>The IDs of the rules.</p>
          */
         public Builder ruleIds(java.util.List < Long > ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -76,11 +77,14 @@ public class ModifyContainerDefenseRuleSwitchRequest extends Request {
         }
 
         /**
-         * The status of the rule. Valid values:
-         * <p>
+         * <p>The status of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **1**: enabled
-         * *   **0**: disabled
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ruleSwitch(Integer ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);

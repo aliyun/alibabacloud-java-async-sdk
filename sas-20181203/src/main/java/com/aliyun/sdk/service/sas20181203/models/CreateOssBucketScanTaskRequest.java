@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOssBucketScanTaskRequest} extends {@link RequestModel}
  *
  * <p>CreateOssBucketScanTaskRequest</p>
@@ -181,7 +182,10 @@ public class CreateOssBucketScanTaskRequest extends Request {
         } 
 
         /**
-         * Whether to match all prefixes.
+         * <p>Whether to match all prefixes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allKeyPrefix(Boolean allKeyPrefix) {
             this.putQueryParameter("AllKeyPrefix", allKeyPrefix);
@@ -190,7 +194,8 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * The names of the buckets.
+         * <p>The names of the buckets.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder bucketNameList(java.util.List < String > bucketNameList) {
             this.putQueryParameter("BucketNameList", bucketNameList);
@@ -199,7 +204,10 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+         * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
             this.putQueryParameter("DecompressMaxFileCount", decompressMaxFileCount);
@@ -208,7 +216,10 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+         * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder decompressMaxLayer(Integer decompressMaxLayer) {
             this.putQueryParameter("DecompressMaxLayer", decompressMaxLayer);
@@ -226,7 +237,7 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * The suffixes of the objects that you do not want to check.
+         * <p>The suffixes of the objects that you do not want to check.</p>
          */
         public Builder excludeKeySuffixList(java.util.List < String > excludeKeySuffixList) {
             this.putQueryParameter("ExcludeKeySuffixList", excludeKeySuffixList);
@@ -235,7 +246,7 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * The prefixes of the objects that you want to check.
+         * <p>The prefixes of the objects that you want to check.</p>
          */
         public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
             this.putQueryParameter("KeyPrefixList", keyPrefixList);
@@ -244,7 +255,7 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * The suffixes of the objects that you want to check.
+         * <p>The suffixes of the objects that you want to check.</p>
          */
         public Builder keySuffixList(java.util.List < String > keySuffixList) {
             this.putQueryParameter("KeySuffixList", keySuffixList);
@@ -262,11 +273,15 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
-         * The check mode. Valid values:
-         * <p>
+         * <p>The check mode. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: checks all objects in the bucket.</li>
+         * <li><strong>2</strong>: checks only new objects in the bucket.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: checks all objects in the bucket.
-         * *   **2**: checks only new objects in the bucket.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scanMode(Integer scanMode) {
             this.putQueryParameter("ScanMode", scanMode);

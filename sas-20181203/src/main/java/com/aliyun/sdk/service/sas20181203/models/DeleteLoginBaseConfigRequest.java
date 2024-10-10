@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLoginBaseConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteLoginBaseConfigRequest</p>
@@ -83,24 +84,27 @@ public class DeleteLoginBaseConfigRequest extends Request {
         } 
 
         /**
-         * The content of the logon security settings to delete. The content varies based on the type of the logon security settings. Valid values:
-         * <p>
+         * <p>The content of the logon security settings to delete. The content varies based on the type of the logon security settings. Valid values:</p>
+         * <ul>
+         * <li><strong>login_common_ip</strong>: approved logon IP addresses</li>
+         * </ul>
+         * <p>Example: {&quot;ip&quot;:&quot;10.23.23.23&quot;}.</p>
+         * <ul>
+         * <li><strong>login_common_time</strong>: approved logon time ranges</li>
+         * </ul>
+         * <p>Example: {&quot;startTime&quot;:&quot;06:00:00&quot;,&quot;endTime&quot;:&quot;16:00:00&quot;}.</p>
+         * <ul>
+         * <li><strong>login_common_account</strong>: approved logon accounts</li>
+         * </ul>
+         * <p>Example: {&quot;account&quot;:&quot;test_account_001&quot;}.</p>
+         * <ul>
+         * <li><strong>login_common_location</strong>: approved logon locations</li>
+         * </ul>
+         * <p>Example: {&quot;location&quot;:&quot;Shanghai&quot;}.</p>
+         * <p>This parameter is required.</p>
          * 
-         * *   **login\_common_ip**: approved logon IP addresses
-         * 
-         * Example: {"ip":"10.23.23.23"}.
-         * 
-         * *   **login\_common_time**: approved logon time ranges
-         * 
-         * Example: {"startTime":"06:00:00","endTime":"16:00:00"}.
-         * 
-         * *   **login\_common_account**: approved logon accounts
-         * 
-         * Example: {"account":"test_account\_001"}.
-         * 
-         * *   **login\_common_location**: approved logon locations
-         * 
-         * Example: {"location":"Shanghai"}.
+         * <strong>example:</strong>
+         * <p>{&quot;startTime&quot;:&quot;06:00:00&quot;,&quot;endTime&quot;:&quot;16:00:00&quot;}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -109,10 +113,13 @@ public class DeleteLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * The UUID of the server whose logon security settings you want to delete.
-         * <p>
+         * <p>The UUID of the server whose logon security settings you want to delete.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
          */
         public Builder target(String target) {
             this.putQueryParameter("Target", target);
@@ -121,13 +128,17 @@ public class DeleteLoginBaseConfigRequest extends Request {
         }
 
         /**
-         * The type of the logon security settings to delete. Valid values:
-         * <p>
+         * <p>The type of the logon security settings to delete. Valid values:</p>
+         * <ul>
+         * <li><strong>login_common_ip</strong>: approved logon IP addresses</li>
+         * <li><strong>login_common_time</strong>: approved logon time ranges</li>
+         * <li><strong>login_common_account</strong>: approved logon accounts</li>
+         * <li><strong>login_common_location</strong>: approved logon locations</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **login\_common_ip**: approved logon IP addresses
-         * *   **login\_common_time**: approved logon time ranges
-         * *   **login\_common_account**: approved logon accounts
-         * *   **login\_common_location**: approved logon locations
+         * <strong>example:</strong>
+         * <p>login_common_time</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

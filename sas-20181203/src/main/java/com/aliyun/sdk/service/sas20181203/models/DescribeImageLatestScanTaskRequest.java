@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageLatestScanTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageLatestScanTaskRequest</p>
@@ -54,7 +55,11 @@ public class DescribeImageLatestScanTaskRequest extends Request {
         } 
 
         /**
-         * The digest value of the image.
+         * <p>The digest value of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d50****</p>
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);

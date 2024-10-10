@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSasContainerWebDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteSasContainerWebDefenseRuleRequest</p>
@@ -54,10 +55,14 @@ public class DeleteSasContainerWebDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The rule ID.
-         * <p>
+         * <p>The rule ID.</p>
+         * <blockquote>
+         * <p> You can call the ListContainerWebDefenseRule operation to query the rule ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the ListContainerWebDefenseRule operation to query the rule ID.
+         * <strong>example:</strong>
+         * <p>400597</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

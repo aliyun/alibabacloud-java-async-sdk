@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateDynamicDictResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateDynamicDictResponseBody</p>
@@ -49,7 +50,7 @@ public class GenerateDynamicDictResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The custom weak passwords.
+         * <p>The custom weak passwords.</p>
          */
         public Builder keywordList(java.util.List < String > keywordList) {
             this.keywordList = keywordList;
@@ -57,7 +58,10 @@ public class GenerateDynamicDictResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00E9B912-6066-5E4E-9F24-35EA09F2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

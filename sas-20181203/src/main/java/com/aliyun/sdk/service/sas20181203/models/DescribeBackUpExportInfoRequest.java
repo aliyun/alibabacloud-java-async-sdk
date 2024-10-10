@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBackUpExportInfoRequest} extends {@link RequestModel}
  *
  * <p>DescribeBackUpExportInfoRequest</p>
@@ -96,7 +97,10 @@ public class DescribeBackUpExportInfoRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,10 +109,14 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * The type of archived information. Valid values:
-         * <p>
+         * <p>The type of archived information. Valid values:</p>
+         * <ul>
+         * <li><strong>suspiciousExport</strong>: alert event</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **suspiciousExport**: alert event
+         * <strong>example:</strong>
+         * <p>suspiciousExport</p>
          */
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);
@@ -117,11 +125,14 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -130,7 +141,10 @@ public class DescribeBackUpExportInfoRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

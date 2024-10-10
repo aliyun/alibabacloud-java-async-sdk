@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainSecureVulListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainSecureVulListResponseBody</p>
@@ -90,6 +91,12 @@ public class DescribeDomainSecureVulListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainSecureVulListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainSecureVulListResponseBody</p>
+     */
     public static class VulList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRdDefaultSyncListResponseBody} extends {@link TeaModel}
  *
  * <p>ListRdDefaultSyncListResponseBody</p>
@@ -49,7 +50,7 @@ public class ListRdDefaultSyncListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned if the call is successful.
+         * <p>The data returned if the call is successful.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class ListRdDefaultSyncListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListRdDefaultSyncListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRdDefaultSyncListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRdDefaultSyncListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FolderIds")
         private String folderIds;
@@ -97,7 +107,10 @@ public class ListRdDefaultSyncListResponseBody extends TeaModel {
             private String folderIds; 
 
             /**
-             * The IDs of the folders in the resource directory.
+             * <p>The IDs of the folders in the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-BwoXuf****,fd-CFamY7****</p>
              */
             public Builder folderIds(String folderIds) {
                 this.folderIds = folderIds;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GenerateK8sAccessInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GenerateK8sAccessInfoResponseBody</p>
@@ -49,7 +50,7 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>061955B2-BC40-589F-AF63-C40A901EE279</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GenerateK8sAccessInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GenerateK8sAccessInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -193,7 +203,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             private String installKey; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1766185894104***</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -201,7 +214,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Log Service Logstore that is used to store the audit logs.
+             * <p>The Simple Log Service Logstore that is used to store the audit logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit-cf6baf6afa106eca665296fdf68b65bf</p>
              */
             public Builder auditLogStore(String auditLogStore) {
                 this.auditLogStore = auditLogStore;
@@ -209,7 +225,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The Simple Log Service project that is used to store the audit logs.
+             * <p>The Simple Log Service project that is used to store the audit logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-log-custom-your-project-sd89ehaaa</p>
              */
             public Builder auditProject(String auditProject) {
                 this.auditProject = auditProject;
@@ -217,7 +236,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the server is deployed.
+             * <p>The ID of the region in which the server is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder auditRegionId(String auditRegionId) {
                 this.auditRegionId = auditRegionId;
@@ -225,7 +247,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c8ca91e0907d94efaba7fb0827eb9****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -233,7 +258,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -241,7 +269,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time. Unit: milliseconds.
+             * <p>The expiration time. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1804230578566</p>
              */
             public Builder expireDate(Long expireDate) {
                 this.expireDate = expireDate;
@@ -249,7 +280,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The server group ID.
+             * <p>The server group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11618788</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -257,7 +291,10 @@ public class GenerateK8sAccessInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The installation key of the server.
+             * <p>The installation key of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BC66185***</p>
              */
             public Builder installKey(String installKey) {
                 this.installKey = installKey;

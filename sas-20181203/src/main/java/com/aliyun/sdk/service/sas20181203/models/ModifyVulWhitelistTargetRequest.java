@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyVulWhitelistTargetRequest} extends {@link RequestModel}
  *
  * <p>ModifyVulWhitelistTargetRequest</p>
@@ -96,10 +97,14 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         } 
 
         /**
-         * The ID of the whitelist.
-         * <p>
+         * <p>The ID of the whitelist.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeVulWhitelist~~">DescribeVulWhitelist</a> operation to query the IDs of whitelists.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeVulWhitelist](~~DescribeVulWhitelist~~) operation to query the IDs of whitelists.
+         * <strong>example:</strong>
+         * <p>2533681</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -108,7 +113,10 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * The reason why you add the server to the whitelist.
+         * <p>The reason why you add the server to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1221</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -117,7 +125,10 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.120.75.150</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -126,19 +137,31 @@ public class ModifyVulWhitelistTargetRequest extends Request {
         }
 
         /**
-         * The applicable scope of the whitelist. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The applicable scope of the whitelist. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>type</strong>: the type of the applicable scope. Valid values:</p>
+         * <ul>
+         * <li><strong>GroupId</strong>: the ID of a server group</li>
+         * <li><strong>Uuid</strong>: the UUID of a server</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>uuids</strong>: the UUIDs of servers</p>
+         * </li>
+         * <li><p><strong>groupIds</strong>: the IDs of server groups</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> If you leave this parameter empty, all servers are added to the whitelist. If you set the <strong>type</strong> field to <strong>GroupId</strong>, you must also specify the <strong>groupIds</strong> field. If you set the <strong>type</strong> field to <strong>Uuid</strong>, you must also specify the <strong>uuids</strong> field.</p>
+         * </blockquote>
          * 
-         * *   **type**: the type of the applicable scope. Valid values:
-         * 
-         *     *   **GroupId**: the ID of a server group
-         *     *   **Uuid**: the UUID of a server
-         * 
-         * *   **uuids**: the UUIDs of servers
-         * 
-         * *   **groupIds**: the IDs of server groups
-         * 
-         * >  If you leave this parameter empty, all servers are added to the whitelist. If you set the **type** field to **GroupId**, you must also specify the **groupIds** field. If you set the **type** field to **Uuid**, you must also specify the **uuids** field.
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;type&quot;: &quot;GroupId&quot;,
+         *       &quot;uuids&quot;: [],
+         *       &quot;groupIds&quot;: [
+         *             10782678
+         *       ]
+         * }</p>
          */
         public Builder targetInfo(String targetInfo) {
             this.putQueryParameter("TargetInfo", targetInfo);

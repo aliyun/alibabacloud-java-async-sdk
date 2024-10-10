@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperateSuspiciousTargetConfigResponseBody} extends {@link TeaModel}
  *
  * <p>OperateSuspiciousTargetConfigResponseBody</p>
@@ -37,7 +38,10 @@ public class OperateSuspiciousTargetConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCD-PSD2-5256-1DSA-4222-JHBN</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

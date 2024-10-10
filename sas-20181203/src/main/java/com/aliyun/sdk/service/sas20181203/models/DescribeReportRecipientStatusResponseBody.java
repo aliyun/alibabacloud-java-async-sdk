@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeReportRecipientStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeReportRecipientStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The report recipients.
+         * <p>The report recipients.</p>
          */
         public Builder reportRecipientList(java.util.List < ReportRecipientList> reportRecipientList) {
             this.reportRecipientList = reportRecipientList;
@@ -57,7 +58,10 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D65AADFC-1D20-5A6A-8F6A-9FA53C0DC1F8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeReportRecipientStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeReportRecipientStatusResponseBody</p>
+     */
     public static class ReportRecipientList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsVerify")
         private Integer isVerify;
@@ -109,13 +119,17 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
             private String recipient; 
 
             /**
-             * Indicates whether the email address is verified. Valid values:
-             * <p>
+             * <p>Indicates whether the email address is verified. Valid values:</p>
+             * <ul>
+             * <li>0: no</li>
+             * <li>1: yes</li>
+             * </ul>
+             * <blockquote>
+             * <p> If no email is specified when you create a report, the value of this parameter is empty.</p>
+             * </blockquote>
              * 
-             * *   0: no
-             * *   1: yes
-             * 
-             * >  If no email is specified when you create a report, the value of this parameter is empty.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isVerify(Integer isVerify) {
                 this.isVerify = isVerify;
@@ -123,10 +137,13 @@ public class DescribeReportRecipientStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the report recipient.
-             * <p>
+             * <p>The email address of the report recipient.</p>
+             * <blockquote>
+             * <p> If no email is specified when you create a report, the value of this parameter is empty.</p>
+             * </blockquote>
              * 
-             * >  If no email is specified when you create a report, the value of this parameter is empty.
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder recipient(String recipient) {
                 this.recipient = recipient;

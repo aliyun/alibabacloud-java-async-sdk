@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetSensitiveDefineRuleConfigRequest} extends {@link RequestModel}
  *
  * <p>SetSensitiveDefineRuleConfigRequest</p>
@@ -53,11 +54,14 @@ public class SetSensitiveDefineRuleConfigRequest extends Request {
         } 
 
         /**
-         * The configurations of the custom check rule. The value is in the JSON format. Valid values of keys:
-         * <p>
+         * <p>The configurations of the custom check rule. The value is in the JSON format. Valid values of keys:</p>
+         * <ul>
+         * <li><strong>classKey</strong>: the category keyword of the check rule.</li>
+         * <li><strong>ruleList</strong>: the keyword of the check rule.</li>
+         * </ul>
          * 
-         * *   **classKey**: the category keyword of the check rule.
-         * *   **ruleList**: the keyword of the check rule.
+         * <strong>example:</strong>
+         * <p>[{&quot;classKey&quot;: &quot;password&quot;, &quot;ruleList&quot;: [&quot;huaweicloud_ak&quot;, &quot;ak_leak&quot;]}]</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);

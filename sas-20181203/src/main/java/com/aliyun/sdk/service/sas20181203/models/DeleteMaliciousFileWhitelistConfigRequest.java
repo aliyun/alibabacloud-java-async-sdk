@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteMaliciousFileWhitelistConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteMaliciousFileWhitelistConfigRequest</p>
@@ -53,7 +54,10 @@ public class DeleteMaliciousFileWhitelistConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the alert whitelist rule of sensitive files that are detected by using the agentless detection feature. You can call the [ListMaliciousFileWhitelistConfigs](~~ListMaliciousFileWhitelistConfigs~~) operation to query the IDs of alert whitelist rules.
+         * <p>The ID of the alert whitelist rule of sensitive files that are detected by using the agentless detection feature. You can call the <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> operation to query the IDs of alert whitelist rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);

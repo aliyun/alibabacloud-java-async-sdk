@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyScheduleConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyScheduleConfigResponseBody</p>
@@ -49,10 +50,13 @@ public class DescribePropertyScheduleConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The configuration time. Unit: hours.
-         * <p>
+         * <p>The configuration time. Unit: hours.</p>
+         * <blockquote>
+         * <p> A value <strong>0</strong> indicates that asset fingerprint collection is disabled for this type of asset.</p>
+         * </blockquote>
          * 
-         * >  A value **0** indicates that asset fingerprint collection is disabled for this type of asset.
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -60,7 +64,10 @@ public class DescribePropertyScheduleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

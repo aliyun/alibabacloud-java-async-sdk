@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageGroupedVulListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageGroupedVulListResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +97,7 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the image vulnerabilities.
+         * <p>An array that consists of the image vulnerabilities.</p>
          */
         public Builder groupedVulItems(java.util.List < GroupedVulItems> groupedVulItems) {
             this.groupedVulItems = groupedVulItems;
@@ -101,7 +105,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: **20**.
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +116,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E244439-UJND-8BF7-26F36E21B9AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of image system vulnerabilities.
+         * <p>The total number of image system vulnerabilities.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageGroupedVulListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageGroupedVulListResponseBody</p>
+     */
     public static class GroupedVulItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -277,7 +296,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The alias of the vulnerability.
+             * <p>The alias of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RHSA-2017:3075-Important: wget security update</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -285,7 +307,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that have the high priority.
+             * <p>The number of vulnerabilities that have the high priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder asapCount(Integer asapCount) {
                 this.asapCount = asapCount;
@@ -293,11 +318,14 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:
-             * <p>
+             * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder canFix(String canFix) {
                 this.canFix = canFix;
@@ -305,7 +333,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the first scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611201274000</p>
              */
             public Builder gmtLast(Long gmtLast) {
                 this.gmtLast = gmtLast;
@@ -313,7 +344,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last scan was performed. Unit: milliseconds.
+             * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611201274000</p>
              */
             public Builder lastScanTime(Long lastScanTime) {
                 this.lastScanTime = lastScanTime;
@@ -321,7 +355,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that have the medium priority.
+             * <p>The number of vulnerabilities that have the medium priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26</p>
              */
             public Builder laterCount(Integer laterCount) {
                 this.laterCount = laterCount;
@@ -329,7 +366,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>debian:9:CVE-2019-3858</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -337,7 +377,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that have the low priority.
+             * <p>The number of vulnerabilities that have the low priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder nntfCount(Integer nntfCount) {
                 this.nntfCount = nntfCount;
@@ -345,13 +388,16 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the vulnerability. Valid values:
-             * <p>
+             * <p>The status of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: unhandled</li>
+             * <li><strong>1</strong>: handled</li>
+             * <li><strong>2</strong>: verifying</li>
+             * <li><strong>3</strong>: added to the whitelist</li>
+             * </ul>
              * 
-             * *   **0**: unhandled
-             * *   **1**: handled
-             * *   **2**: verifying
-             * *   **3**: added to the whitelist
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -359,15 +405,18 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the vulnerability. Valid values:
-             * <p>
+             * <p>The tag of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li>Restart required</li>
+             * <li>Remote exploitation</li>
+             * <li>Exploit exists</li>
+             * <li>Exploitable</li>
+             * <li>Privilege escalation</li>
+             * <li>Code execution</li>
+             * </ul>
              * 
-             * *   Restart required
-             * *   Remote exploitation
-             * *   Exploit exists
-             * *   Exploitable
-             * *   Privilege escalation
-             * *   Code execution
+             * <strong>example:</strong>
+             * <p>EXP exists</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -375,11 +424,14 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: image system vulnerability</li>
+             * <li><strong>sca</strong>: image application vulnerability</li>
+             * </ul>
              * 
-             * *   **cve**: image system vulnerability
-             * *   **sca**: image application vulnerability
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder type(String type) {
                 this.type = type;

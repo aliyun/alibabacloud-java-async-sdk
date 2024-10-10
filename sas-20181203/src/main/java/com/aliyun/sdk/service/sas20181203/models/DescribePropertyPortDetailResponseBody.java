@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyPortDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyPortDetailResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The fingerprints of the ports.
+         * <p>The fingerprints of the ports.</p>
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -77,7 +78,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FA7F1F4-488D-52CA-9BFC-3E47793B49D1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyPortDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyPortDetailResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyPortDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyPortDetailResponseBody</p>
+     */
     public static class Propertys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindIp")
         private String bindIp;
@@ -350,7 +378,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The IP address bound to the port.
+             * <p>The IP address bound to the port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.X.X</p>
              */
             public Builder bindIp(String bindIp) {
                 this.bindIp = bindIp;
@@ -358,7 +389,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last fingerprint collection. Unit: milliseconds.
+             * <p>The timestamp of the last fingerprint collection. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649149566000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -366,7 +400,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the server.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp35tftuh52wbp1g****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -374,7 +411,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the server.
+             * <p>The instance name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc-host-****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -382,7 +422,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -390,7 +433,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -398,7 +444,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the network interface controller (NIC) that is bound to the listening port.
+             * <p>The IP address of the network interface controller (NIC) that is bound to the listening port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -406,7 +455,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server process that listens on the port.
+             * <p>The ID of the server process that listens on the port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>522</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -414,7 +466,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The listener port.
+             * <p>The listener port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -422,7 +477,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server process.
+             * <p>The name of the server process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sshd</p>
              */
             public Builder procName(String procName) {
                 this.procName = procName;
@@ -430,7 +488,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The network protocol that is used by the listening port.
+             * <p>The network protocol that is used by the listening port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -438,7 +499,10 @@ public class DescribePropertyPortDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

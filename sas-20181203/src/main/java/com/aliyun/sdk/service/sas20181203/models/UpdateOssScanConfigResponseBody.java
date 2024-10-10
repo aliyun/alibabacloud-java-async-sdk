@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateOssScanConfigResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateOssScanConfigResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateOssScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFA14F61-4E2F-54C7-9276-81C60BAC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

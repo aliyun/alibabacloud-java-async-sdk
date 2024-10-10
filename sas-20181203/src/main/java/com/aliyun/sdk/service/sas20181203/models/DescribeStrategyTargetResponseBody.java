@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStrategyTargetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStrategyTargetResponseBody</p>
@@ -49,7 +50,10 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
         private java.util.List < StrategyTargets> strategyTargets; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001BAB34-D70A-54B0-B1D7-91B76DCDD8E8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the assets to which the baseline check policy is applied.
+         * <p>The information about the assets to which the baseline check policy is applied.</p>
          */
         public Builder strategyTargets(java.util.List < StrategyTargets> strategyTargets) {
             this.strategyTargets = strategyTargets;
@@ -70,6 +74,12 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStrategyTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStrategyTargetResponseBody</p>
+     */
     public static class StrategyTargets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindUuidCount")
         private Integer bindUuidCount;
@@ -133,7 +143,10 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The number of the assets that belong to the asset group.
+             * <p>The number of the assets that belong to the asset group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85</p>
              */
             public Builder bindUuidCount(Integer bindUuidCount) {
                 this.bindUuidCount = bindUuidCount;
@@ -141,11 +154,14 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the baseline check policy is applied to the asset group. Valid values:
-             * <p>
+             * <p>Indicates whether the baseline check policy is applied to the asset group. Valid values:</p>
+             * <ul>
+             * <li><strong>add</strong>: The baseline check policy is applied to the asset group.</li>
+             * <li><strong>del</strong>: the baseline check policy is not applied to the asset group.</li>
+             * </ul>
              * 
-             * *   **add**: The baseline check policy is applied to the asset group.
-             * *   **del**: the baseline check policy is not applied to the asset group.
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -153,7 +169,10 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset group to which the assets belong or the UUID of the asset.
+             * <p>The ID of the asset group to which the assets belong or the UUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9165712</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -161,11 +180,14 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to add the assets to the baseline check policy. Valid values:
-             * <p>
+             * <p>The method that is used to add the assets to the baseline check policy. Valid values:</p>
+             * <ul>
+             * <li><strong>groupId</strong>: the ID of the asset group</li>
+             * <li><strong>uuid</strong>: the UUID of the asset</li>
+             * </ul>
              * 
-             * *   **groupId**: the ID of the asset group
-             * *   **uuid**: the UUID of the asset
+             * <strong>example:</strong>
+             * <p>groupId</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

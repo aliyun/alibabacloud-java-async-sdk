@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHoneypotNodeResponseBody} extends {@link TeaModel}
  *
  * <p>CreateHoneypotNodeResponseBody</p>
@@ -97,7 +98,10 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,7 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder honeypotNode(HoneypotNode honeypotNode) {
             this.honeypotNode = honeypotNode;
@@ -113,7 +117,10 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +128,10 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>028CF634-5268-5660-9575-48C9ED6BF880</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateHoneypotNodeResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateHoneypotNodeResponseBody</p>
+     */
     public static class HoneypotNode extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
@@ -181,7 +203,10 @@ public class CreateHoneypotNodeResponseBody extends TeaModel {
             private String nodeId; 
 
             /**
-             * The ID of the management node.
+             * <p>The ID of the management node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37a15ff1-3475-4897-aa6c-f7fd9122****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

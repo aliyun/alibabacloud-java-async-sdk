@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSuspEventUserSettingRequest} extends {@link RequestModel}
  *
  * <p>DescribeSuspEventUserSettingRequest</p>
@@ -81,7 +82,10 @@ public class DescribeSuspEventUserSettingRequest extends Request {
         } 
 
         /**
-         * The ID of the request source. Set the value to **sas**.
+         * <p>The ID of the request source. Set the value to <strong>sas</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder from(String from) {
             this.putQueryParameter("From", from);
@@ -90,7 +94,10 @@ public class DescribeSuspEventUserSettingRequest extends Request {
         }
 
         /**
-         * The ID. You do not need to specify this parameter.
+         * <p>The ID. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder id(Integer id) {
             this.putQueryParameter("Id", id);
@@ -99,7 +106,10 @@ public class DescribeSuspEventUserSettingRequest extends Request {
         }
 
         /**
-         * The IP address of the request. You do not need to specify this parameter.
+         * <p>The IP address of the request. You do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

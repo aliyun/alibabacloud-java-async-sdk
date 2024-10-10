@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommonOverallConfigListRequest} extends {@link RequestModel}
  *
  * <p>DescribeCommonOverallConfigListRequest</p>
@@ -68,7 +69,10 @@ public class DescribeCommonOverallConfigListRequest extends Request {
         } 
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>119.136.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -77,10 +81,11 @@ public class DescribeCommonOverallConfigListRequest extends Request {
         }
 
         /**
-         * The types of the configuration items.
-         * <p>
-         * 
-         * >  You can query up to 50 types at a time.
+         * <p>The types of the configuration items.</p>
+         * <blockquote>
+         * <p> You can query up to 50 types at a time.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          */
         public Builder typeList(java.util.List < String > typeList) {
             this.putQueryParameter("TypeList", typeList);

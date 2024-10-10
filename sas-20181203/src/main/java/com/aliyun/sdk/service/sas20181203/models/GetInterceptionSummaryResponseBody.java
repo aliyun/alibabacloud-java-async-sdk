@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInterceptionSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetInterceptionSummaryResponseBody</p>
@@ -49,7 +50,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics.
+         * <p>The statistics.</p>
          */
         public Builder interceptionSummary(InterceptionSummary interceptionSummary) {
             this.interceptionSummary = interceptionSummary;
@@ -57,7 +58,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62D0760E840</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInterceptionSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInterceptionSummaryResponseBody</p>
+     */
     public static class InterceptionSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloseClusterCount")
         private Integer closeClusterCount;
@@ -205,7 +215,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             private Integer ruleCount; 
 
             /**
-             * The number of clusters that are not protected.
+             * <p>The number of clusters that are not protected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder closeClusterCount(Integer closeClusterCount) {
                 this.closeClusterCount = closeClusterCount;
@@ -213,7 +226,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of disabled cluster defense rules.
+             * <p>The number of disabled cluster defense rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder closeRuleCount(Integer closeRuleCount) {
                 this.closeRuleCount = closeRuleCount;
@@ -221,7 +237,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of clusters.
+             * <p>The total number of clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
@@ -229,7 +248,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of interception records for the specified cluster.
+             * <p>The total number of interception records for the specified cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder interceptionCountInDays(Integer interceptionCountInDays) {
                 this.interceptionCountInDays = interceptionCountInDays;
@@ -237,7 +259,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of clusters that are protected.
+             * <p>The number of clusters that are protected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder openClusterCount(Integer openClusterCount) {
                 this.openClusterCount = openClusterCount;
@@ -245,7 +270,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of enabled cluster defense rules.
+             * <p>The number of enabled cluster defense rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder openRuleCount(Integer openRuleCount) {
                 this.openRuleCount = openRuleCount;
@@ -253,7 +281,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of security risks that are detected in the last 180 days.
+             * <p>The number of security risks that are detected in the last 180 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskCount180Day(Long riskCount180Day) {
                 this.riskCount180Day = riskCount180Day;
@@ -261,7 +292,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of security risks that are detected in the last 30 days.
+             * <p>The number of security risks that are detected in the last 30 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskCount30Day(Long riskCount30Day) {
                 this.riskCount30Day = riskCount30Day;
@@ -269,7 +303,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of security risks that are detected in the last 24 hours.
+             * <p>The number of security risks that are detected in the last 24 hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder riskCountToday(Long riskCountToday) {
                 this.riskCountToday = riskCountToday;
@@ -277,7 +314,10 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cluster defense rules.
+             * <p>The total number of cluster defense rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;

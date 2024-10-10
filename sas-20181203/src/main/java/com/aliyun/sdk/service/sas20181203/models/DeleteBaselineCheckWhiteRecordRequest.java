@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBaselineCheckWhiteRecordRequest} extends {@link RequestModel}
  *
  * <p>DeleteBaselineCheckWhiteRecordRequest</p>
@@ -95,7 +96,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         } 
 
         /**
-         * The IDs of check items.
+         * <p>The IDs of check items.</p>
          */
         public Builder checkIds(java.util.List < Long > checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -104,11 +105,14 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -117,7 +121,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The IDs of the whitelist records.
+         * <p>The IDs of the whitelist records.</p>
          */
         public Builder recordIds(java.util.List < Long > recordIds) {
             this.putQueryParameter("RecordIds", recordIds);
@@ -126,11 +130,14 @@ public class DeleteBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The data source. Valid values:
-         * <p>
+         * <p>The data source. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: host baseline</li>
+         * <li><strong>agentless</strong>: agentless detection</li>
+         * </ul>
          * 
-         * *   **default**: host baseline
-         * *   **agentless**: agentless detection
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

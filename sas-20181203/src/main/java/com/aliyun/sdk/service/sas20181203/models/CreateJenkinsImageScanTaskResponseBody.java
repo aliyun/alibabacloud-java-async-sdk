@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJenkinsImageScanTaskResponseBody} extends {@link TeaModel}
  *
  * <p>CreateJenkinsImageScanTaskResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52870893-48A7-5A9E-9E05-6253E5B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateJenkinsImageScanTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateJenkinsImageScanTaskResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageScanCapacity")
         private Long imageScanCapacity;
@@ -157,7 +167,10 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The quota for image scan.
+             * <p>The quota for image scan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder imageScanCapacity(Long imageScanCapacity) {
                 this.imageScanCapacity = imageScanCapacity;
@@ -165,7 +178,10 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-upze3gcopm9c****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -173,7 +189,10 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the image repository.
+             * <p>The instance ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-0gkaatghnmnt****</p>
              */
             public Builder repoInstanceId(String repoInstanceId) {
                 this.repoInstanceId = repoInstanceId;
@@ -181,7 +200,10 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder repoRegionId(String repoRegionId) {
                 this.repoRegionId = repoRegionId;
@@ -189,7 +211,10 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scan task.
+             * <p>The ID of the scan task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fc98d58eb56f699d49bf7ebbd6d7****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -197,7 +222,10 @@ public class CreateJenkinsImageScanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the image asset.
+             * <p>The UUID of the image asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6690a46c-0edb-4663-a641-3629d1a9****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

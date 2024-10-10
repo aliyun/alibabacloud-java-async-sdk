@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockFileTypeSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeWebLockFileTypeSummaryRequest</p>

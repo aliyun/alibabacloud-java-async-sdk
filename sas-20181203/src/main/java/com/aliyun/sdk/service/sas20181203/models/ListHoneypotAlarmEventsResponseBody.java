@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotAlarmEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ListHoneypotAlarmEventsResponseBody</p>
@@ -61,7 +62,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The alert events.
+         * <p>The alert events.</p>
          */
         public Builder honeypotAlarmEvents(java.util.List < HoneypotAlarmEvents> honeypotAlarmEvents) {
             this.honeypotAlarmEvents = honeypotAlarmEvents;
@@ -69,7 +70,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>513C9554-55A4-5504-B7C4-6E17EB4FC7A3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListHoneypotAlarmEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotAlarmEventsResponseBody</p>
+     */
     public static class MergeFieldList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldExtInfo")
         private String fieldExtInfo;
@@ -153,7 +163,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             private String fieldValue; 
 
             /**
-             * The extended value that corresponds to the field key.
+             * <p>The extended value that corresponds to the field key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dest_ip_ext</p>
              */
             public Builder fieldExtInfo(String fieldExtInfo) {
                 this.fieldExtInfo = fieldExtInfo;
@@ -161,7 +174,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the field.
+             * <p>The key of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dest_ip_count</p>
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -169,7 +185,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the field. You can ignore this internal parameter.
+             * <p>The type of the field. You can ignore this internal parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>level1_item3</p>
              */
             public Builder fieldType(String fieldType) {
                 this.fieldType = fieldType;
@@ -177,7 +196,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The value that corresponds to the field key.
+             * <p>The value that corresponds to the field key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;
@@ -191,6 +213,12 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotAlarmEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotAlarmEventsResponseBody</p>
+     */
     public static class HoneypotAlarmEvents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmEventId")
         private Long alarmEventId;
@@ -326,7 +354,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The event ID.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>940272</p>
              */
             public Builder alarmEventId(Long alarmEventId) {
                 this.alarmEventId = alarmEventId;
@@ -334,7 +365,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert event.
+             * <p>The name of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Attack Honeypot</p>
              */
             public Builder alarmEventName(String alarmEventName) {
                 this.alarmEventName = alarmEventName;
@@ -342,7 +376,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert event.
+             * <p>The type of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Initial Access</p>
              */
             public Builder alarmEventType(String alarmEventType) {
                 this.alarmEventType = alarmEventType;
@@ -350,7 +387,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the alert event.
+             * <p>The unique identifier of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>167e6fc0d931917d2059efcd1d00f6ab</p>
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -358,7 +398,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of times that the alert event was generated.
+             * <p>The total number of times that the alert event was generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder eventCount(Integer eventCount) {
                 this.eventCount = eventCount;
@@ -366,7 +409,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the time when the alert event was first detected. Unit: milliseconds.
+             * <p>The timestamp that indicates the time when the alert event was first detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1658193602000</p>
              */
             public Builder firstTime(Long firstTime) {
                 this.firstTime = firstTime;
@@ -374,7 +420,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the time when the alert event was last detected. Unit: milliseconds.
+             * <p>The timestamp that indicates the time when the alert event was last detected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1660610772000</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -382,7 +431,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The risk information.
+             * <p>The risk information.</p>
              */
             public Builder mergeFieldList(java.util.List < MergeFieldList> mergeFieldList) {
                 this.mergeFieldList = mergeFieldList;
@@ -390,12 +439,15 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The handling status of the alert event. Valid values:
-             * <p>
+             * <p>The handling status of the alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: pending</li>
+             * <li><strong>2</strong>: ignored</li>
+             * <li><strong>4</strong>: confirmed</li>
+             * </ul>
              * 
-             * *   **1**: pending
-             * *   **2**: ignored
-             * *   **4**: confirmed
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder operateStatus(Integer operateStatus) {
                 this.operateStatus = operateStatus;
@@ -403,12 +455,15 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>2</strong>: low</li>
+             * <li><strong>3</strong>: medium</li>
+             * <li><strong>4</strong>: high</li>
+             * </ul>
              * 
-             * *   **2**: low
-             * *   **3**: medium
-             * *   **4**: high
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -422,6 +477,12 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListHoneypotAlarmEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListHoneypotAlarmEventsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -485,7 +546,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -493,7 +557,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -501,7 +568,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 100.
+             * <p>The number of entries returned per page. Default value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -509,7 +579,10 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>69</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

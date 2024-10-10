@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyUsageTopRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertyUsageTopRequest</p>
@@ -54,14 +55,18 @@ public class DescribePropertyUsageTopRequest extends Request {
         } 
 
         /**
-         * The type of the asset fingerprint. Valid value:
-         * <p>
+         * <p>The type of the asset fingerprint. Valid value:</p>
+         * <ul>
+         * <li><strong>port</strong>: port</li>
+         * <li><strong>process</strong>: process</li>
+         * <li><strong>software</strong>: software</li>
+         * <li><strong>user</strong>: account</li>
+         * <li><strong>sca</strong>: middleware</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **port**: port
-         * *   **process**: process
-         * *   **software**: software
-         * *   **user**: account
-         * *   **sca**: middleware
+         * <strong>example:</strong>
+         * <p>port</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCanTrySasRequest} extends {@link RequestModel}
  *
  * <p>GetCanTrySasRequest</p>
@@ -67,11 +68,14 @@ public class GetCanTrySasRequest extends Request {
         } 
 
         /**
-         * Specifies whether the request is redirected from the Elastic Compute Service (ECS) console. Valid values:
-         * <p>
+         * <p>Specifies whether the request is redirected from the Elastic Compute Service (ECS) console. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fromEcs(Boolean fromEcs) {
             this.putBodyParameter("FromEcs", fromEcs);
@@ -80,11 +84,14 @@ public class GetCanTrySasRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("Lang", lang);

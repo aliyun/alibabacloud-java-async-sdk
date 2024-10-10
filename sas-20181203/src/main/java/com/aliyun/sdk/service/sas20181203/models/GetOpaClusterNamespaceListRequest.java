@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaClusterNamespaceListRequest} extends {@link RequestModel}
  *
  * <p>GetOpaClusterNamespaceListRequest</p>
@@ -95,10 +96,13 @@ public class GetOpaClusterNamespaceListRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster that you want to query.
-         * <p>
+         * <p>The ID of the cluster that you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>ca0faf43e33904ecbb6c695df7906****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -107,7 +111,10 @@ public class GetOpaClusterNamespaceListRequest extends Request {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -116,7 +123,10 @@ public class GetOpaClusterNamespaceListRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sit</p>
          */
         public Builder nameSpaceName(String nameSpaceName) {
             this.putQueryParameter("NameSpaceName", nameSpaceName);
@@ -125,7 +135,10 @@ public class GetOpaClusterNamespaceListRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

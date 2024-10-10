@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClusterHostSecuritySummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeClusterHostSecuritySummaryRequest</p>
@@ -123,7 +124,10 @@ public class DescribeClusterHostSecuritySummaryRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
+         * <p>The ID of the container cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c3aaf6c8085f84791882eef200cd2****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -132,21 +136,24 @@ public class DescribeClusterHostSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The key of the condition that is used to query containers. Valid values:
-         * <p>
+         * <p>The key of the condition that is used to query containers. Valid values:</p>
+         * <ul>
+         * <li><strong>instanceId</strong>: the instance ID</li>
+         * <li><strong>appName</strong>: the name of the application</li>
+         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * <li><strong>regionId</strong>: the region ID</li>
+         * <li><strong>nodeName</strong>: the name of the node</li>
+         * <li><strong>namespace</strong>: the namespace</li>
+         * <li><strong>clusterName</strong>: the name of the cluster</li>
+         * <li><strong>image</strong>: the name of the image</li>
+         * <li><strong>imageRepoName</strong>: the name of the image repository</li>
+         * <li><strong>imageRepoNamespace</strong>: the namespace to which the image repository belongs</li>
+         * <li><strong>imageRepoTag</strong>: the tag that is added to the image repository</li>
+         * <li><strong>imageDigest</strong>: the digest of the image</li>
+         * </ul>
          * 
-         * *   **instanceId**: the instance ID
-         * *   **appName**: the name of the application
-         * *   **clusterId**: the ID of the cluster
-         * *   **regionId**: the region ID
-         * *   **nodeName**: the name of the node
-         * *   **namespace**: the namespace
-         * *   **clusterName**: the name of the cluster
-         * *   **image**: the name of the image
-         * *   **imageRepoName**: the name of the image repository
-         * *   **imageRepoNamespace**: the namespace to which the image repository belongs
-         * *   **imageRepoTag**: the tag that is added to the image repository
-         * *   **imageDigest**: the digest of the image
+         * <strong>example:</strong>
+         * <p>clusterId</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -155,7 +162,10 @@ public class DescribeClusterHostSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The value of the condition that is used to query containers.
+         * <p>The value of the condition that is used to query containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1fdb5fd8d42e425d88fd73eec7be****</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -173,7 +183,10 @@ public class DescribeClusterHostSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222.71.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -182,11 +195,14 @@ public class DescribeClusterHostSecuritySummaryRequest extends Request {
         }
 
         /**
-         * The type of the query. Valid values:
-         * <p>
+         * <p>The type of the query. Valid values:</p>
+         * <ul>
+         * <li><strong>containerId</strong></li>
+         * <li><strong>uuid</strong></li>
+         * </ul>
          * 
-         * *   **containerId**
-         * *   **uuid**
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAssetsSecurityEventSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAssetsSecurityEventSummaryResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of risk information about containers.
+         * <p>An array that consists of risk information about containers.</p>
          */
         public Builder assets(java.util.List < Assets> assets) {
             this.assets = assets;
@@ -57,7 +58,10 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D03DD0FD-6041-5107-AC00-383E28F1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAssetsSecurityEventSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAssetsSecurityEventSummaryResponseBody</p>
+     */
     public static class Assets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetType")
         private String assetType;
@@ -121,16 +131,19 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The type of the asset. Valid values:
-             * <p>
+             * <p>The type of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>namespace</strong></li>
+             * <li><strong>clusters</strong></li>
+             * <li><strong>applications</strong></li>
+             * <li><strong>pods</strong></li>
+             * <li><strong>containers</strong></li>
+             * <li><strong>images</strong></li>
+             * <li><strong>hosts</strong></li>
+             * </ul>
              * 
-             * *   **namespace**
-             * *   **clusters**
-             * *   **applications**
-             * *   **pods**
-             * *   **containers**
-             * *   **images**
-             * *   **hosts**
+             * <strong>example:</strong>
+             * <p>namespace</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -138,7 +151,10 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of potential risky assets.
+             * <p>The number of potential risky assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;
@@ -146,7 +162,10 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of assets.
+             * <p>The total number of assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

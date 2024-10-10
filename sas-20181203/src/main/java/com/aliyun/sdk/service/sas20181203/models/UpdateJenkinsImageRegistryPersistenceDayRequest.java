@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateJenkinsImageRegistryPersistenceDayRequest} extends {@link RequestModel}
  *
  * <p>UpdateJenkinsImageRegistryPersistenceDayRequest</p>
@@ -81,7 +82,10 @@ public class UpdateJenkinsImageRegistryPersistenceDayRequest extends Request {
         } 
 
         /**
-         * The retention period. Unit: days.
+         * <p>The retention period. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder persistenceDay(Integer persistenceDay) {
             this.putBodyParameter("PersistenceDay", persistenceDay);
@@ -90,10 +94,13 @@ public class UpdateJenkinsImageRegistryPersistenceDayRequest extends Request {
         }
 
         /**
-         * The ID of the image repository.
-         * <p>
+         * <p>The ID of the image repository.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to query the IDs of image repositories.</p>
+         * </blockquote>
          * 
-         * > You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.
+         * <strong>example:</strong>
+         * <p>25363</p>
          */
         public Builder registryId(Long registryId) {
             this.putBodyParameter("RegistryId", registryId);
@@ -102,7 +109,10 @@ public class UpdateJenkinsImageRegistryPersistenceDayRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106.11.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

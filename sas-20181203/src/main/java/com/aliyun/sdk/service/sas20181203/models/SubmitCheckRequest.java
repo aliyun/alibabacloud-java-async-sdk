@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitCheckRequest} extends {@link RequestModel}
  *
  * <p>SubmitCheckRequest</p>
@@ -53,11 +54,14 @@ public class SubmitCheckRequest extends Request {
         } 
 
         /**
-         * The check items that are scanned. Valid values:
-         * <p>
+         * <p>The check items that are scanned. Valid values:</p>
+         * <ul>
+         * <li><strong>FULL</strong>: All check items are scanned.</li>
+         * <li><strong>FULL</strong>: Only the check items that are configured are scanned.</li>
+         * </ul>
          * 
-         * *   **FULL**: All check items are scanned.
-         * *   **FULL**: Only the check items that are configured are scanned.
+         * <strong>example:</strong>
+         * <p>POLICY</p>
          */
         public Builder scanRange(String scanRange) {
             this.putQueryParameter("ScanRange", scanRange);

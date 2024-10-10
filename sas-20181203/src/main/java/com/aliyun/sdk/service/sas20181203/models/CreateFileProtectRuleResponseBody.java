@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateFileProtectRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateFileProtectRuleResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateFileProtectRuleResponseBody extends TeaModel {
         private Long ruleId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC7C8984-D108-516F-9D36-3DF1D1228CCA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateFileProtectRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder ruleId(Long ruleId) {
             this.ruleId = ruleId;

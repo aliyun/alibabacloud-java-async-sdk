@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageEventOperationPageRequest} extends {@link RequestModel}
  *
  * <p>DescribeImageEventOperationPageRequest</p>
@@ -137,7 +138,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -146,7 +150,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The keyword of the alert item.
+         * <p>The keyword of the alert item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM</p>
          */
         public Builder eventKey(String eventKey) {
             this.putQueryParameter("EventKey", eventKey);
@@ -155,7 +162,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The name of the alert item.
+         * <p>The name of the alert item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PEM</p>
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -164,10 +174,13 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The alert type.
-         * <p>
+         * <p>The alert type.</p>
+         * <ul>
+         * <li>Set the value to <strong>sensitiveFile</strong>.</li>
+         * </ul>
          * 
-         * *   Set the value to **sensitiveFile**.
+         * <strong>example:</strong>
+         * <p>sensitiveFile</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -176,7 +189,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The ID of the alert handling rule.
+         * <p>The ID of the alert handling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49616</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -185,11 +201,14 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -198,7 +217,10 @@ public class DescribeImageEventOperationPageRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeExportInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeExportInfoResponseBody</p>
@@ -133,7 +134,10 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of exported entries.
+         * <p>The number of exported entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder currentCount(Integer currentCount) {
             this.currentCount = currentCount;
@@ -141,14 +145,16 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the export task.
-         * <p>
+         * <p>The status of the export task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>init</strong>: The task is being initialized.</li>
+         * <li><strong>exporting</strong>: The task is in progress.</li>
+         * <li><strong>success</strong>: The task is complete.</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **init**: The task is being initialized.
-         * *   **exporting**: The task is in progress.
-         * *   **success**: The task is complete.
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder exportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
@@ -156,7 +162,10 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the exported Excel file.
+         * <p>The name of the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>health_check_export_20171123</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -164,7 +173,10 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the export task.
+         * <p>The ID of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131231</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -172,7 +184,10 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The URL at which you can download the exported Excel file.
+         * <p>The URL at which you can download the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">http://www.aliyun.com</a></p>
          */
         public Builder link(String link) {
             this.link = link;
@@ -180,7 +195,10 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The message that shows the task result. The value is fixed as **success**, which indicates that the task is complete.
+         * <p>The message that shows the task result. The value is fixed as <strong>success</strong>, which indicates that the task is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -188,7 +206,10 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The progress percentage of the export task.
+         * <p>The progress percentage of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -196,7 +217,10 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +228,10 @@ public class DescribeExportInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries in the exported Excel file.
+         * <p>The total number of entries in the exported Excel file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

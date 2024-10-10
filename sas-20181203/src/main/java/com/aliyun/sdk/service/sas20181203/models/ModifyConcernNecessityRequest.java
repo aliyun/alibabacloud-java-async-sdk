@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyConcernNecessityRequest} extends {@link RequestModel}
  *
  * <p>ModifyConcernNecessityRequest</p>
@@ -53,12 +54,15 @@ public class ModifyConcernNecessityRequest extends Request {
         } 
 
         /**
-         * The priorities to fix the vulnerabilities. Valid values:
-         * <p>
+         * <p>The priorities to fix the vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li>asap: high</li>
+         * <li>later: medium</li>
+         * <li>nntf: low</li>
+         * </ul>
          * 
-         * *   asap: high
-         * *   later: medium
-         * *   nntf: low
+         * <strong>example:</strong>
+         * <p>asap,nntf</p>
          */
         public Builder concernNecessity(String concernNecessity) {
             this.putQueryParameter("ConcernNecessity", concernNecessity);

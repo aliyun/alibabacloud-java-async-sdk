@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyLoginSwitchConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyLoginSwitchConfigRequest</p>
@@ -69,12 +70,16 @@ public class ModifyLoginSwitchConfigRequest extends Request {
         } 
 
         /**
-         * The type of the logon security settings that you want to enable or disable. Valid values:
-         * <p>
+         * <p>The type of the logon security settings that you want to enable or disable. Valid values:</p>
+         * <ul>
+         * <li><strong>login_common_ip</strong>: unapproved logon IP addresses</li>
+         * <li><strong>login_common_time</strong>: unapproved logon time ranges</li>
+         * <li><strong>login_common_account</strong>: unapproved logon accounts</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **login\_common_ip**: unapproved logon IP addresses
-         * *   **login\_common_time**: unapproved logon time ranges
-         * *   **login\_common_account**: unapproved logon accounts
+         * <strong>example:</strong>
+         * <p>login_common_account</p>
          */
         public Builder item(String item) {
             this.putQueryParameter("Item", item);
@@ -83,11 +88,15 @@ public class ModifyLoginSwitchConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the logon security settings. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the logon security settings. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

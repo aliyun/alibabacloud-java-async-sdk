@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetBackupAutoConfigStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetBackupAutoConfigStatusResponseBody</p>
@@ -49,7 +50,7 @@ public class GetBackupAutoConfigStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetBackupAutoConfigStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>898F7AA7-CECD-5EC7-AF4D-664C601B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetBackupAutoConfigStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetBackupAutoConfigStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBackupAutoConfigStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanConfigAuto")
         private Boolean canConfigAuto;
@@ -97,11 +107,14 @@ public class GetBackupAutoConfigStatusResponseBody extends TeaModel {
             private Boolean canConfigAuto; 
 
             /**
-             * Indicates whether the anti-ransomware policy for servers can be automatically configured by the managed anti-ransomware feature. Valid values:
-             * <p>
+             * <p>Indicates whether the anti-ransomware policy for servers can be automatically configured by the managed anti-ransomware feature. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
              * 
-             * *   **false**
-             * *   **true**
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder canConfigAuto(Boolean canConfigAuto) {
                 this.canConfigAuto = canConfigAuto;

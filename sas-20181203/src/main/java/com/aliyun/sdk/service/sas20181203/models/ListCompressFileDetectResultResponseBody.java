@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCompressFileDetectResultResponseBody} extends {@link TeaModel}
  *
  * <p>ListCompressFileDetectResultResponseBody</p>
@@ -90,6 +91,12 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCompressFileDetectResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCompressFileDetectResultResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -171,6 +178,12 @@ public class ListCompressFileDetectResultResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCompressFileDetectResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCompressFileDetectResultResponseBody</p>
+     */
     public static class ResultList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ext")
         private String ext;

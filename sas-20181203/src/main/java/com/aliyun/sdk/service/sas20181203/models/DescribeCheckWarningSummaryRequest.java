@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckWarningSummaryRequest} extends {@link RequestModel}
  *
  * <p>DescribeCheckWarningSummaryRequest</p>
@@ -249,10 +250,13 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>c80dae73bd1be442699766b14ffd0****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -261,13 +265,16 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The name of the container field. Valid values:
-         * <p>
+         * <p>The name of the container field. Valid values:</p>
+         * <ul>
+         * <li><strong>clusterId</strong>: the ID of the cluster</li>
+         * <li><strong>image</strong>: the name of the image</li>
+         * <li><strong>imageId</strong>: the ID of the image</li>
+         * <li><strong>namespace</strong>: the namespace</li>
+         * </ul>
          * 
-         * *   **clusterId**: the ID of the cluster
-         * *   **image**: the name of the image
-         * *   **imageId**: the ID of the image
-         * *   **namespace**: the namespace
+         * <strong>example:</strong>
+         * <p>namespace</p>
          */
         public Builder containerFieldName(String containerFieldName) {
             this.putQueryParameter("ContainerFieldName", containerFieldName);
@@ -276,7 +283,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The value of the container field.
+         * <p>The value of the container field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c819391d2d520485fa3e81e2dc2ea****</p>
          */
         public Builder containerFieldValue(String containerFieldValue) {
             this.putQueryParameter("ContainerFieldValue", containerFieldValue);
@@ -285,7 +295,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -294,10 +307,13 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The ID of the asset group.
-         * <p>
+         * <p>The ID of the asset group.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -306,11 +322,14 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and the response. Valid values:
-         * <p>
+         * <p>The language of the content within the request and the response. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -319,7 +338,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -328,7 +350,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The name of the risk item.
+         * <p>The name of the risk item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Redis</p>
          */
         public Builder riskName(String riskName) {
             this.putQueryParameter("RiskName", riskName);
@@ -337,11 +362,14 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The status of the baseline check. Valid values:
-         * <p>
+         * <p>The status of the baseline check. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: failed</li>
+         * <li><strong>3</strong>: passed</li>
+         * </ul>
          * 
-         * *   **1**: failed
-         * *   **3**: passed
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder riskStatus(Integer riskStatus) {
             this.putQueryParameter("RiskStatus", riskStatus);
@@ -350,7 +378,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219.133.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -359,14 +390,17 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The status of the check item. Valid values:
-         * <p>
+         * <p>The status of the check item. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: failed</li>
+         * <li><strong>2</strong>: verifying</li>
+         * <li><strong>3</strong>: passed</li>
+         * <li><strong>5</strong>: expired</li>
+         * <li><strong>6</strong>: ignored</li>
+         * </ul>
          * 
-         * *   **1**: failed
-         * *   **2**: verifying
-         * *   **3**: passed
-         * *   **5**: expired
-         * *   **6**: ignored
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -375,7 +409,10 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The ID of the baseline check policy.
+         * <p>The ID of the baseline check policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -384,10 +421,13 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The type of the query condition. Valid values:
-         * <p>
+         * <p>The type of the query condition. Valid values:</p>
+         * <ul>
+         * <li><strong>uuid</strong>: the ID of an asset</li>
+         * </ul>
          * 
-         * *   **uuid**: the ID of an asset
+         * <strong>example:</strong>
+         * <p>uuid</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -396,10 +436,13 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The level-1 type of check items.
-         * <p>
+         * <p>The level-1 type of check items.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the level-1 types of check items.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeRiskType](~~DescribeRiskType~~) operation to query the level-1 types of check items.
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -408,10 +451,13 @@ public class DescribeCheckWarningSummaryRequest extends Request {
         }
 
         /**
-         * The UUID of the asset.
-         * <p>
+         * <p>The UUID of the asset.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of assets.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of assets.
+         * <strong>example:</strong>
+         * <p>f03259d8-1e81-4fae-bcbb-275fb5****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

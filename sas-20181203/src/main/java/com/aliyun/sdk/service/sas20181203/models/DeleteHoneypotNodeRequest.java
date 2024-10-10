@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteHoneypotNodeRequest} extends {@link RequestModel}
  *
  * <p>DeleteHoneypotNodeRequest</p>
@@ -68,11 +69,14 @@ public class DeleteHoneypotNodeRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -81,10 +85,14 @@ public class DeleteHoneypotNodeRequest extends Request {
         }
 
         /**
-         * The ID of the management node.
-         * <p>
+         * <p>The ID of the management node.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+         * <strong>example:</strong>
+         * <p>670baeee-86c4-46b9-8200-a2c38141a453</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

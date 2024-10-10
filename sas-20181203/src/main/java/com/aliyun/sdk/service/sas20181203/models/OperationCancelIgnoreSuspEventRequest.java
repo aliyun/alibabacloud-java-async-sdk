@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperationCancelIgnoreSuspEventRequest} extends {@link RequestModel}
  *
  * <p>OperationCancelIgnoreSuspEventRequest</p>
@@ -68,7 +69,10 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         } 
 
         /**
-         * The remarks.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark text</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -77,7 +81,8 @@ public class OperationCancelIgnoreSuspEventRequest extends Request {
         }
 
         /**
-         * The IDs of alert events.
+         * <p>The IDs of alert events.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder securityEventIds(java.util.List < Long > securityEventIds) {
             this.putQueryParameter("SecurityEventIds", securityEventIds);

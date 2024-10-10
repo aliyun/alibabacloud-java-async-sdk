@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyUsageTopResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyUsageTopResponseBody</p>
@@ -73,7 +74,10 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * The number of fingerprints.
+         * <p>The number of fingerprints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder itemCount(Integer itemCount) {
             this.itemCount = itemCount;
@@ -81,7 +85,10 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16AA5B62-A3C1-520B-B289-4BD971CC17AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,7 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
         }
 
         /**
-         * The statistical results.
+         * <p>The statistical results.</p>
          */
         public Builder topStatisticItems(java.util.List < TopStatisticItems> topStatisticItems) {
             this.topStatisticItems = topStatisticItems;
@@ -97,14 +104,17 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the asset fingerprint. Valid value:
-         * <p>
+         * <p>The type of the asset fingerprint. Valid value:</p>
+         * <ul>
+         * <li><strong>port</strong>: port</li>
+         * <li><strong>process</strong>: process</li>
+         * <li><strong>software</strong>: software</li>
+         * <li><strong>user</strong>: account</li>
+         * <li><strong>sca</strong>: middleware</li>
+         * </ul>
          * 
-         * *   **port**: port
-         * *   **process**: process
-         * *   **software**: software
-         * *   **user**: account
-         * *   **sca**: middleware
+         * <strong>example:</strong>
+         * <p>sca</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -117,6 +127,12 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyUsageTopResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyUsageTopResponseBody</p>
+     */
     public static class TopStatisticItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -156,7 +172,10 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The quantity.
+             * <p>The quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -164,7 +183,10 @@ public class DescribePropertyUsageTopResponseBody extends TeaModel {
             }
 
             /**
-             * The statistical item.
+             * <p>The statistical item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openssl</p>
              */
             public Builder name(String name) {
                 this.name = name;

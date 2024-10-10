@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAegisContainerPluginRuleResponseBody} extends {@link TeaModel}
  *
  * <p>GetAegisContainerPluginRuleResponseBody</p>
@@ -49,7 +50,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09969D2C-***0DEF8BF6F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAegisContainerPluginRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAegisContainerPluginRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -217,7 +227,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             private java.util.List < String > whiteImages; 
 
             /**
-             * The timestamp when the rule was created. Unit: milliseconds.
+             * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671607025000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -225,7 +238,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the rule was modified. Unit: milliseconds.
+             * <p>The timestamp when the rule was modified. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1671607025000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -233,12 +249,15 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The action mode of the rule. Valid values:
-             * <p>
+             * <p>The action mode of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: allows escape behavior.</li>
+             * <li><strong>1</strong>: triggers alerts.</li>
+             * <li><strong>2</strong>: blocks escape behavior.</li>
+             * </ul>
              * 
-             * *   **0**: allows escape behavior.
-             * *   **1**: triggers alerts.
-             * *   **2**: blocks escape behavior.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -246,7 +265,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>autoTest</p>
              */
             public Builder ruleDescription(String ruleDescription) {
                 this.ruleDescription = ruleDescription;
@@ -254,7 +276,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21**</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -262,7 +287,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto_test_rule-EmzIXZ</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -270,7 +298,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The template ID of the rule.
+             * <p>The template ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100**</p>
              */
             public Builder ruleTemplateId(String ruleTemplateId) {
                 this.ruleTemplateId = ruleTemplateId;
@@ -278,7 +309,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The template name of the rule.
+             * <p>The template name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template01</p>
              */
             public Builder ruleTemplateName(String ruleTemplateName) {
                 this.ruleTemplateName = ruleTemplateName;
@@ -286,7 +320,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The rule items.
+             * <p>The rule items.</p>
              */
             public Builder selectedPolicy(java.util.List < String > selectedPolicy) {
                 this.selectedPolicy = selectedPolicy;
@@ -294,7 +328,10 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the switch.
+             * <p>The ID of the switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER-CONTAINER-RULE-SWITCH-TYPE_***</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -302,7 +339,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The images that are added to the whitelist.
+             * <p>The images that are added to the whitelist.</p>
              */
             public Builder whiteImages(java.util.List < String > whiteImages) {
                 this.whiteImages = whiteImages;

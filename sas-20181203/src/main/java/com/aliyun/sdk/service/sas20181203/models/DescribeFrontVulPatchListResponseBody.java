@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFrontVulPatchListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFrontVulPatchListResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of the information about the pre-patches that are required to fix the specified Windows system vulnerability.
+         * <p>An array consisting of the information about the pre-patches that are required to fix the specified Windows system vulnerability.</p>
          */
         public Builder frontPatchList(java.util.List < FrontPatchList> frontPatchList) {
             this.frontPatchList = frontPatchList;
@@ -57,7 +58,10 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F929E952-EBFC-56C3-BD35-BF8B59024C68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFrontVulPatchListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFrontVulPatchListResponseBody</p>
+     */
     public static class PatchList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
@@ -109,7 +119,10 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the vulnerability.
+             * <p>The name of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RHBA-2019:2599: krb5 bug fix update</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -117,7 +130,10 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             }
 
             /**
-             * The version number of the pre-patch that is required to fix the Windows system vulnerability.
+             * <p>The version number of the pre-patch that is required to fix the Windows system vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4523204</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -131,6 +147,12 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFrontVulPatchListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFrontVulPatchListResponseBody</p>
+     */
     public static class FrontPatchList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PatchList")
         private java.util.List < PatchList> patchList;
@@ -170,7 +192,7 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * An array consisting of the pre-patches that are required to fix the specified Windows system vulnerability on the server.
+             * <p>An array consisting of the pre-patches that are required to fix the specified Windows system vulnerability on the server.</p>
              */
             public Builder patchList(java.util.List < PatchList> patchList) {
                 this.patchList = patchList;
@@ -178,7 +200,10 @@ public class DescribeFrontVulPatchListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1587bedb-fdb4-48c4-9330-4545****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

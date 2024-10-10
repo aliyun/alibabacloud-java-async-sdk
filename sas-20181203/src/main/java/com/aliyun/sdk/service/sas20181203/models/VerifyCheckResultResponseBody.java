@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyCheckResultResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyCheckResultResponseBody</p>
@@ -49,7 +50,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C0A3FA0-AA32-5660-8989-85A5582F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,12 +74,22 @@ public class VerifyCheckResultResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link VerifyCheckResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VerifyCheckResultResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperateCode")
         private String operateCode;
 
+        @com.aliyun.core.annotation.NameInMap("ThrottlingTimeSecond")
+        private Integer throttlingTimeSecond;
+
         private Data(Builder builder) {
             this.operateCode = builder.operateCode;
+            this.throttlingTimeSecond = builder.throttlingTimeSecond;
         }
 
         public static Builder builder() {
@@ -93,18 +107,37 @@ public class VerifyCheckResultResponseBody extends TeaModel {
             return this.operateCode;
         }
 
+        /**
+         * @return throttlingTimeSecond
+         */
+        public Integer getThrottlingTimeSecond() {
+            return this.throttlingTimeSecond;
+        }
+
         public static final class Builder {
             private String operateCode; 
+            private Integer throttlingTimeSecond; 
 
             /**
-             * The operation code of the cloud service configuration task. Valid values:
-             * <p>
+             * <p>The operation code of the cloud service configuration task. Valid values:</p>
+             * <ul>
+             * <li><strong>Throttling</strong>: frequency limit</li>
+             * <li><strong>ActionTrialUnauthorized</strong>: an error that is related to unauthorized operations</li>
+             * </ul>
              * 
-             * *   **Throttling**: frequency limit
-             * *   **ActionTrialUnauthorized**: an error that is related to unauthorized operations
+             * <strong>example:</strong>
+             * <p>Throttling</p>
              */
             public Builder operateCode(String operateCode) {
                 this.operateCode = operateCode;
+                return this;
+            }
+
+            /**
+             * ThrottlingTimeSecond.
+             */
+            public Builder throttlingTimeSecond(Integer throttlingTimeSecond) {
+                this.throttlingTimeSecond = throttlingTimeSecond;
                 return this;
             }
 

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveCheckResultWhiteListRequest} extends {@link RequestModel}
  *
  * <p>RemoveCheckResultWhiteListRequest</p>
@@ -95,7 +96,10 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         } 
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deprecated</p>
          */
         public Builder checkGroupId(String checkGroupId) {
             this.putQueryParameter("CheckGroupId", checkGroupId);
@@ -104,7 +108,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * The IDs of check items.
+         * <p>The IDs of check items.</p>
          */
         public Builder checkIds(java.util.List < Long > checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -122,7 +126,10 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deprecated</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

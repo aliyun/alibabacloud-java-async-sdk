@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLogShipperRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListLogShipperRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class ListLogShipperRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The regions supported by the log delivery feature.
+         * <p>The regions supported by the log delivery feature.</p>
          */
         public Builder logShipperRegionList(java.util.List < LogShipperRegionList> logShipperRegionList) {
             this.logShipperRegionList = logShipperRegionList;
@@ -57,7 +58,10 @@ public class ListLogShipperRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F9C4DE22-D242-5ABA-87EC-325ECBDC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListLogShipperRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLogShipperRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLogShipperRegionsResponseBody</p>
+     */
     public static class LogShipperRegionList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -97,7 +107,10 @@ public class ListLogShipperRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The ID of the region.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

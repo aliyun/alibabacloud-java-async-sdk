@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImageEventOperationPageResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImageEventOperationPageResponseBody</p>
@@ -85,7 +86,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +97,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +105,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +116,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +127,14 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +147,12 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImageEventOperationPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageEventOperationPageResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private String conditions;
@@ -233,12 +252,15 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             private String scenarios; 
 
             /**
-             * The rule conditions. The value is in the JSON format. Valid values of keys:
-             * <p>
+             * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
+             * <ul>
+             * <li><strong>condition</strong>: the matching condition.</li>
+             * <li><strong>type</strong>: the matching type.</li>
+             * <li><strong>value</strong>: the matching value.</li>
+             * </ul>
              * 
-             * *   **condition**: the matching condition.
-             * *   **type**: the matching type.
-             * *   **value**: the matching value.
+             * <strong>example:</strong>
+             * <p>[{&quot;condition&quot;: &quot;MD5&quot;, &quot;type&quot;: &quot;equals&quot;, &quot;value&quot;: &quot;0083a31cc0083a31ccf7c10367a6e783e&quot;}]</p>
              */
             public Builder conditions(String conditions) {
                 this.conditions = conditions;
@@ -246,7 +268,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword of the alert item.
+             * <p>The keyword of the alert item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PEM</p>
              */
             public Builder eventKey(String eventKey) {
                 this.eventKey = eventKey;
@@ -254,7 +279,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert item.
+             * <p>The name of the alert item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PEM</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -262,10 +290,13 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type.
-             * <p>
+             * <p>The alert type.</p>
+             * <ul>
+             * <li>Only <strong>sensitiveFile</strong> may be returned.</li>
+             * </ul>
              * 
-             * *   Only **sensitiveFile** may be returned.
+             * <strong>example:</strong>
+             * <p>sensitiveFile</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -273,7 +304,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key of the alert handling rule.
+             * <p>The primary key of the alert handling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2646624</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -281,10 +315,13 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The operation code.
-             * <p>
+             * <p>The operation code.</p>
+             * <ul>
+             * <li>Only <strong>whitelist</strong> may be returned, which means that the alert item is added to the whitelist.</li>
+             * </ul>
              * 
-             * *   Only **whitelist** may be returned, which means that the alert item is added to the whitelist.
+             * <strong>example:</strong>
+             * <p>whitelist</p>
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -292,11 +329,14 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The application scope of the rule. The value is in the JSON format. Valid values of keys:
-             * <p>
+             * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
+             * <ul>
+             * <li><strong>type</strong></li>
+             * <li><strong>value</strong></li>
+             * </ul>
              * 
-             * *   **type**
-             * *   **value**
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;: &quot;repo&quot;, &quot;value&quot;: &quot;test-aaa/shenzhen-repo-01&quot;}</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;
@@ -310,6 +350,12 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageEventOperationPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageEventOperationPageResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -361,7 +407,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -369,7 +418,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -377,7 +429,10 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>109</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -391,6 +446,12 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeImageEventOperationPageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImageEventOperationPageResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
@@ -430,7 +491,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             private PageInfo pageInfo; 
 
             /**
-             * The alert handling rules.
+             * <p>The alert handling rules.</p>
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -438,7 +499,7 @@ public class DescribeImageEventOperationPageResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination information.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

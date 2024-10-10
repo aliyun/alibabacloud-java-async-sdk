@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyCronItemResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyCronItemResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of scheduled tasks.
+         * <p>An array that consists of scheduled tasks.</p>
          */
         public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -77,7 +78,10 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291B49F9-1685-4005-9D34-606B6F78****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyCronItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyCronItemResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyCronItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyCronItemResponseBody</p>
+     */
     public static class PropertyItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -230,7 +258,10 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * The number of servers on which the scheduled task is run.
+             * <p>The number of servers on which the scheduled task is run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -238,7 +269,10 @@ public class DescribePropertyCronItemResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the scheduled task.
+             * <p>The path to the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data</p>
              */
             public Builder source(String source) {
                 this.source = source;

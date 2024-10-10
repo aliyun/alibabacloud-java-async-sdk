@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAntiBruteForceRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateAntiBruteForceRuleResponseBody</p>
@@ -49,7 +50,7 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the defense rule.
+         * <p>The information about the defense rule.</p>
          */
         public Builder createAntiBruteForceRule(CreateAntiBruteForceRule createAntiBruteForceRule) {
             this.createAntiBruteForceRule = createAntiBruteForceRule;
@@ -57,7 +58,10 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62D0760E840</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAntiBruteForceRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateAntiBruteForceRuleResponseBody</p>
+     */
     public static class CreateAntiBruteForceRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
@@ -97,7 +107,10 @@ public class CreateAntiBruteForceRuleResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The ID of the defense rule.
+             * <p>The ID of the defense rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65778</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDynamicDictUploadInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDynamicDictUploadInfoResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
         private String signature; 
 
         /**
-         * The AccessKey ID that is used to access OSS.
+         * <p>The AccessKey ID that is used to access OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4G1mgPbjvG********</p>
          */
         public Builder accessid(String accessid) {
             this.accessid = accessid;
@@ -117,7 +121,10 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The validity period of the signature. The value is a UNIX timestamp.
+         * <p>The validity period of the signature. The value is a UNIX timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719919893</p>
          */
         public Builder expire(String expire) {
             this.expire = expire;
@@ -125,7 +132,10 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The OSS endpoint.
+         * <p>The OSS endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com">https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com</a></p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -133,7 +143,10 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the OSS object.
+         * <p>The name of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DegradePool_Offset_****</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -141,7 +154,10 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The OSS security policy.
+         * <p>The OSS security policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyNC0wNy0wMlQxMTozMTozMy40MjlaIiwiY29uZGl0aW9********</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -149,7 +165,10 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +176,10 @@ public class DescribeDynamicDictUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The signature that is calculated based on **AccessKeySecret** and **Policy**. When you call an OSS API operation, OSS uses the signature information to check the validity of the POST request.
+         * <p>The signature that is calculated based on <strong>AccessKeySecret</strong> and <strong>Policy</strong>. When you call an OSS API operation, OSS uses the signature information to check the validity of the POST request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wBiwkhd5LGcLzijtc3FhI****</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;

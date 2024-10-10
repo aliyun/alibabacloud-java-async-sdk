@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListContainerDefenseRuleClustersResponseBody} extends {@link TeaModel}
  *
  * <p>ListContainerDefenseRuleClustersResponseBody</p>
@@ -109,7 +110,7 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The clusters.
+         * <p>The clusters.</p>
          */
         public Builder clusterList(java.util.List < ClusterList> clusterList) {
             this.clusterList = clusterList;
@@ -117,7 +118,10 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -125,7 +129,10 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -133,7 +140,10 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -141,7 +151,10 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +162,10 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F995515-CAF3-5F84-8D82-C9F706AD5070</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +173,14 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -174,6 +193,12 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListContainerDefenseRuleClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListContainerDefenseRuleClustersResponseBody</p>
+     */
     public static class ClusterList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllNamespace")
         private Integer allNamespace;
@@ -237,11 +262,14 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * Indicates whether all namespaces are included. Valid values:
-             * <p>
+             * <p>Indicates whether all namespaces are included. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;
@@ -249,7 +277,10 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfeb7a9f99ce740e98c5595d0fe37****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -257,7 +288,7 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The namespaces.
+             * <p>The namespaces.</p>
              */
             public Builder namespaces(java.util.List < String > namespaces) {
                 this.namespaces = namespaces;
@@ -265,10 +296,13 @@ public class ListContainerDefenseRuleClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
-             * <p>
+             * <p>The ID of the rule.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListInterceptionRulePage</a> operation to query the IDs of rules.</p>
+             * </blockquote>
              * 
-             * >  You can call the [ListInterceptionRulePage](~~2590599~~) operation to query the IDs of rules.
+             * <strong>example:</strong>
+             * <p>403178</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

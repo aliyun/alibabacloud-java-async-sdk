@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterCheckItemWarningStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterCheckItemWarningStatisticsResponseBody</p>
@@ -49,7 +50,7 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics on risk items by risk level.
+         * <p>The statistics on risk items by risk level.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C2B285A3-3493-5C5F-A224-4CCE4BFC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterCheckItemWarningStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterCheckItemWarningStatisticsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HighWarningCount")
         private Integer highWarningCount;
@@ -121,7 +131,10 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             private Integer mediumWarningCount; 
 
             /**
-             * The number of high-risk items.
+             * <p>The number of high-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder highWarningCount(Integer highWarningCount) {
                 this.highWarningCount = highWarningCount;
@@ -129,7 +142,10 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk items.
+             * <p>The number of low-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder lowWarningCount(Integer lowWarningCount) {
                 this.lowWarningCount = lowWarningCount;
@@ -137,7 +153,10 @@ public class GetClusterCheckItemWarningStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk items.
+             * <p>The number of medium-risk items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder mediumWarningCount(Integer mediumWarningCount) {
                 this.mediumWarningCount = mediumWarningCount;

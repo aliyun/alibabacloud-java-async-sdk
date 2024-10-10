@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLastOnceTaskInfoRequest} extends {@link RequestModel}
  *
  * <p>GetLastOnceTaskInfoRequest</p>
@@ -83,7 +84,10 @@ public class GetLastOnceTaskInfoRequest extends Request {
         } 
 
         /**
-         * The source of the task.
+         * <p>The source of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console_batch</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -92,12 +96,16 @@ public class GetLastOnceTaskInfoRequest extends Request {
         }
 
         /**
-         * The name of the task. Valid values:
-         * <p>
+         * <p>The name of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client diagnosis task</li>
+         * <li><strong>CLIENT_DEV_OPS</strong>: O&amp;M task of Cloud Assistant</li>
+         * <li><strong>ASSETS_COLLECTION</strong>: asset collection task</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CLIENT\_PROBLEM_CHECK**: client diagnosis task
-         * *   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant
-         * *   **ASSETS_COLLECTION**: asset collection task
+         * <strong>example:</strong>
+         * <p>ASSETS_COLLECTION</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -106,12 +114,16 @@ public class GetLastOnceTaskInfoRequest extends Request {
         }
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>CLIENT_PROBLEM_CHECK</strong>: client diagnosis task</li>
+         * <li><strong>CLIENT_DEV_OPS</strong>: O&amp;M task of Cloud Assistant</li>
+         * <li><strong>ASSETS_COLLECTION</strong>: asset collection task</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **CLIENT\_PROBLEM_CHECK**: client diagnosis task
-         * *   **CLIENT\_DEV_OPS**: O\&M task of Cloud Assistant
-         * *   **ASSETS\_COLLECTION**: asset collection task
+         * <strong>example:</strong>
+         * <p>ASSETS_COLLECTION</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

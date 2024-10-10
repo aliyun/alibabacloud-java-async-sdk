@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClientInstallationStatisticRequest} extends {@link RequestModel}
  *
  * <p>GetClientInstallationStatisticRequest</p>
@@ -69,7 +70,11 @@ public class GetClientInstallationStatisticRequest extends Request {
         } 
 
         /**
-         * The timestamp that specifies the end of the time range to collect statistics. Unit: millisecond.
+         * <p>The timestamp that specifies the end of the time range to collect statistics. Unit: millisecond.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687708800000</p>
          */
         public Builder timeEnd(Long timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -78,7 +83,11 @@ public class GetClientInstallationStatisticRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the beginning of the time range to collect statistics. Unit: millisecond.
+         * <p>The timestamp that specifies the beginning of the time range to collect statistics. Unit: millisecond.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687104000000</p>
          */
         public Builder timeStart(Long timeStart) {
             this.putQueryParameter("TimeStart", timeStart);

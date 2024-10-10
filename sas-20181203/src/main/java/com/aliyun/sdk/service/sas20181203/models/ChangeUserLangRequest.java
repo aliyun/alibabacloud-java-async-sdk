@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChangeUserLangRequest} extends {@link RequestModel}
  *
  * <p>ChangeUserLangRequest</p>
@@ -53,11 +54,14 @@ public class ChangeUserLangRequest extends Request {
         } 
 
         /**
-         * The new language. Valid values:
-         * <p>
+         * <p>The new language. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder userLang(String userLang) {
             this.putQueryParameter("UserLang", userLang);

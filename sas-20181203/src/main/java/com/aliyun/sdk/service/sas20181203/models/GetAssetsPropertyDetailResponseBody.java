@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAssetsPropertyDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetAssetsPropertyDetailResponseBody</p>
@@ -61,7 +62,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details about the asset fingerprints.
+         * <p>An array that consists of the details about the asset fingerprints.</p>
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -77,7 +78,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C1AE3F3-18FA-4108-BBB9-AFA1A032****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAssetsPropertyDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAssetsPropertyDetailResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAssetsPropertyDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAssetsPropertyDetailResponseBody</p>
+     */
     public static class Propertys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
@@ -494,7 +522,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             private String webPath; 
 
             /**
-             * The name of the container.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5-rce_web_1</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -502,7 +533,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last fingerprint collection. Unit: milliseconds.
+             * <p>The timestamp of the last fingerprint collection. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649149566000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -510,10 +544,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the website.
-             * <p>
+             * <p>The domain name of the website.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **web_server**.
+             * <strong>example:</strong>
+             * <p>localhost</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -521,10 +558,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the kernel module file.
-             * <p>
+             * <p>The path to the kernel module file.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **lkm**.
+             * <strong>example:</strong>
+             * <p>/lib/modules/4****</p>
              */
             public Builder filepath(String filepath) {
                 this.filepath = filepath;
@@ -532,7 +572,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image.
+             * <p>The name of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-beijing.aliyuncs.com/acs/aliyun-ingress-controller****</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -540,7 +583,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp35tftuh52wbp1g****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -548,7 +594,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc-host-****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -556,7 +605,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.42.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -564,7 +616,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -572,7 +627,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the server.
+             * <p>The IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.42.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -580,10 +638,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The listening protocol that the website uses.
-             * <p>
+             * <p>The listening protocol that the website uses.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **web_server**.
+             * <strong>example:</strong>
+             * <p>tcp</p>
              */
             public Builder listenProtocol(String listenProtocol) {
                 this.listenProtocol = listenProtocol;
@@ -591,10 +652,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the module.
-             * <p>
+             * <p>The name of the module.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **lkm**.
+             * <strong>example:</strong>
+             * <p>alihids</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -602,11 +666,14 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path. The value of this parameter varies based on the value of **Biz**.
-             * <p>
+             * <p>The path. The value of this parameter varies based on the value of <strong>Biz</strong>.</p>
+             * <ul>
+             * <li>If <strong>Biz</strong> is set to <strong>web_server</strong>, the value of this parameter indicates the path to the website root directory.</li>
+             * <li>If <strong>Biz</strong> is set to <strong>autorun</strong>, the value of this parameter indicates the path to the startup item.</li>
+             * </ul>
              * 
-             * *   If **Biz** is set to **web_server**, the value of this parameter indicates the path to the website root directory.
-             * *   If **Biz** is set to **autorun**, the value of this parameter indicates the path to the startup item.
+             * <strong>example:</strong>
+             * <p>/lib/systemd/system****</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -614,10 +681,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions on the root directory of the website.
-             * <p>
+             * <p>The permissions on the root directory of the website.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **web_server**.
+             * <strong>example:</strong>
+             * <p>755</p>
              */
             public Builder pathMode(String pathMode) {
                 this.pathMode = pathMode;
@@ -625,10 +695,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID (PID) of the process that runs the website service.
-             * <p>
+             * <p>The process ID (PID) of the process that runs the website service.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **web_server**.
+             * <strong>example:</strong>
+             * <p>813</p>
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -636,10 +709,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port of the website.
-             * <p>
+             * <p>The port of the website.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **web_server**.
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -647,10 +723,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the process was started. Unit: milliseconds.
-             * <p>
+             * <p>The timestamp generated when the process was started. Unit: milliseconds.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **web_server**.
+             * <strong>example:</strong>
+             * <p>1671186801000</p>
              */
             public Builder processStarted(Long processStarted) {
                 this.processStarted = processStarted;
@@ -658,7 +737,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the server resides.
+             * <p>The ID of the region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -666,10 +748,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the website.
-             * <p>
+             * <p>The type of the website.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **web_server**.
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -677,10 +762,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the kernel module.
-             * <p>
+             * <p>The size of the kernel module.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **lkm**.
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -688,10 +776,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the kernel module is referenced.
-             * <p>
+             * <p>The number of times that the kernel module is referenced.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>lkm</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **lkm**.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder usedByCount(Integer usedByCount) {
                 this.usedByCount = usedByCount;
@@ -699,10 +790,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The user who started the process of the website.
-             * <p>
+             * <p>The user who started the process of the website.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **web_server**.
+             * <strong>example:</strong>
+             * <p>root</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -710,7 +804,10 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -718,10 +815,13 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the root directory of the website.
-             * <p>
+             * <p>The path to the root directory of the website.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>Biz</strong> is set to <strong>web_server</strong>.</p>
+             * </blockquote>
              * 
-             * > This parameter is returned only when **Biz** is set to **web_server**.
+             * <strong>example:</strong>
+             * <p>/usr/share/nginx/html</p>
              */
             public Builder webPath(String webPath) {
                 this.webPath = webPath;

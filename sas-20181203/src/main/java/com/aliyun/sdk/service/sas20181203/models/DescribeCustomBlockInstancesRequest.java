@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomBlockInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeCustomBlockInstancesRequest</p>
@@ -123,10 +124,13 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         } 
 
         /**
-         * The IP address that you want to specify in the rule.
-         * <p>
+         * <p>The IP address that you want to specify in the rule.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> operation to obtain the IP address.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to obtain the IP address.
+         * <strong>example:</strong>
+         * <p>47.92.33.1xx</p>
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -135,11 +139,14 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         }
 
         /**
-         * The traffic direction that you want to specify in the custom rule. Valid values:
-         * <p>
+         * <p>The traffic direction that you want to specify in the custom rule. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound</li>
+         * <li><strong>out</strong>: outbound</li>
+         * </ul>
          * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);
@@ -148,7 +155,10 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -157,7 +167,10 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: **20**.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,12 +188,15 @@ public class DescribeCustomBlockInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether the rule is enabled for the server.
-         * <p>
+         * <p>Specifies whether the rule is enabled for the server.</p>
+         * <ul>
+         * <li><strong>2</strong>: enabling failed</li>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>0</strong>: disabled</li>
+         * </ul>
          * 
-         * *   **2**: enabling failed
-         * *   **1**: enabled
-         * *   **0**: disabled
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

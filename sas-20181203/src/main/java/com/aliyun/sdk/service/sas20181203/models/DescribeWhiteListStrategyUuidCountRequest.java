@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListStrategyUuidCountRequest} extends {@link RequestModel}
  *
  * <p>DescribeWhiteListStrategyUuidCountRequest</p>
@@ -97,11 +98,14 @@ public class DescribeWhiteListStrategyUuidCountRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -110,7 +114,10 @@ public class DescribeWhiteListStrategyUuidCountRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.120.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -119,10 +126,14 @@ public class DescribeWhiteListStrategyUuidCountRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
-         * <p>
+         * <p>The ID of the policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeWhiteListStrategyStatistics~~">DescribeWhiteListStrategyStatistics</a> operation to obtain the ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeWhiteListStrategyStatistics](~~DescribeWhiteListStrategyStatistics~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>8516</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -131,11 +142,15 @@ public class DescribeWhiteListStrategyUuidCountRequest extends Request {
         }
 
         /**
-         * The type of the policy. Valid values:
-         * <p>
+         * <p>The type of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: learning policy</li>
+         * <li><strong>2</strong>: application policy</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: learning policy
-         * *   **2**: application policy
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

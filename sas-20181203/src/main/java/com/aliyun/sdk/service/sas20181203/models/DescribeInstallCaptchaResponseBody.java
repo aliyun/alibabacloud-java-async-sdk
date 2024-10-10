@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstallCaptchaResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeInstallCaptchaResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The installation verification code for you to manually install the Security Center agent.
+         * <p>The installation verification code for you to manually install the Security Center agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>M1HH**</p>
          */
         public Builder captchaCode(String captchaCode) {
             this.captchaCode = captchaCode;
@@ -69,10 +73,13 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         }
 
         /**
-         * The validity period of the installation verification code.
-         * <p>
+         * <p>The validity period of the installation verification code.</p>
+         * <blockquote>
+         * <p> The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.</p>
+         * </blockquote>
          * 
-         * >  The installation verification code is valid only within the validity period. An expired installation verification code cannot be used to install the agent.
+         * <strong>example:</strong>
+         * <p>2020-10-10 16:06:38</p>
          */
         public Builder deadline(String deadline) {
             this.deadline = deadline;
@@ -80,7 +87,10 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

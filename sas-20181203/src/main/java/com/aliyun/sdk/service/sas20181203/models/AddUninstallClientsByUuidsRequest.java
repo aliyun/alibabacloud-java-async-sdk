@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUninstallClientsByUuidsRequest} extends {@link RequestModel}
  *
  * <p>AddUninstallClientsByUuidsRequest</p>
@@ -110,7 +111,10 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         } 
 
         /**
-         * The method name. Default value: init.
+         * <p>The method name. Default value: init.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>init</p>
          */
         public Builder callMethod(String callMethod) {
             this.putQueryParameter("CallMethod", callMethod);
@@ -119,7 +123,10 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         }
 
         /**
-         * The feedback.
+         * <p>The feedback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reinstall</p>
          */
         public Builder feedback(String feedback) {
             this.putQueryParameter("Feedback", feedback);
@@ -128,7 +135,10 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         }
 
         /**
-         * The region in which the server resides.
+         * <p>The region in which the server resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -137,7 +147,10 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -146,10 +159,14 @@ public class AddUninstallClientsByUuidsRequest extends Request {
         }
 
         /**
-         * The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,).
-         * <p>
+         * <p>The UUID of the server that you want to unbind. Separate multiple UUIDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>inet-183707ae-3bdf-4db0-b771-3e9962bf****,inet-49dceccc-4f01-469b-8411-2416ea12****</p>
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

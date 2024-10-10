@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOssScanConfigRequest} extends {@link RequestModel}
  *
  * <p>GetOssScanConfigRequest</p>
@@ -67,7 +68,10 @@ public class GetOssScanConfigRequest extends Request {
         } 
 
         /**
-         * The name of the bucket.
+         * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iboxpublic****</p>
          */
         public Builder bucketName(String bucketName) {
             this.putQueryParameter("BucketName", bucketName);
@@ -76,7 +80,10 @@ public class GetOssScanConfigRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
+         * <p>The ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

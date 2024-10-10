@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAgentlessSensitiveFileByKeyRequest} extends {@link RequestModel}
  *
  * <p>DescribeAgentlessSensitiveFileByKeyRequest</p>
@@ -151,7 +152,10 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -160,7 +164,10 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * The UUID of the asset that is scanned. You can query the UUID on the Host or Cloud Product page. If you scan a host, set this parameter to the UUID of the scanned host. If you scan a snapshot or a custom image, set this parameter to the ID of the scanned snapshot or image.
+         * <p>The UUID of the asset that is scanned. You can query the UUID on the Host or Cloud Product page. If you scan a host, set this parameter to the UUID of the scanned host. If you scan a snapshot or a custom image, set this parameter to the ID of the scanned snapshot or image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06293273b67d19516cfcc712194f****</p>
          */
         public Builder imageUuid(String imageUuid) {
             this.putQueryParameter("ImageUuid", imageUuid);
@@ -169,7 +176,10 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * The instance ID of the asset that is scanned. To query the instance ID, go to the Task Management page, click Details of a task, and then view the value of Check On.
+         * <p>The instance ID of the asset that is scanned. To query the instance ID, go to the Task Management page, click Details of a task, and then view the value of Check On.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1fu4aqltf1huhc****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -178,10 +188,13 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.
-         * <p>
+         * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,7 +203,10 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * The name or IP address of the asset.
+         * <p>The name or IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -199,7 +215,7 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * The types of the assets that are scanned.
+         * <p>The types of the assets that are scanned.</p>
          */
         public Builder scanRange(java.util.List < String > scanRange) {
             String scanRangeShrink = shrink(scanRange, "ScanRange", "json");
@@ -209,7 +225,10 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * The type of the sensitive file.
+         * <p>The type of the sensitive file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sshpasswd</p>
          */
         public Builder sensitiveFileKey(String sensitiveFileKey) {
             this.putQueryParameter("SensitiveFileKey", sensitiveFileKey);
@@ -218,11 +237,14 @@ public class DescribeAgentlessSensitiveFileByKeyRequest extends Request {
         }
 
         /**
-         * The status of the baseline risk. Valid values:
-         * <p>
+         * <p>The status of the baseline risk. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: unfixed.</li>
+         * <li><strong>1</strong>: fixed.</li>
+         * </ul>
          * 
-         * *   **0**: unfixed.
-         * *   **1**: fixed.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

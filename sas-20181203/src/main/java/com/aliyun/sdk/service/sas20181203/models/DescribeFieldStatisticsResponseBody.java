@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFieldStatisticsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFieldStatisticsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about servers that are returned.
+         * <p>The information about servers that are returned.</p>
          */
         public Builder groupedFields(GroupedFields groupedFields) {
             this.groupedFields = groupedFields;
@@ -57,7 +58,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFieldStatisticsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFieldStatisticsResponseBody</p>
+     */
     public static class GroupedFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliYunInstanceCount")
         private Integer aliYunInstanceCount;
@@ -469,7 +479,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Integer vpcCount; 
 
             /**
-             * The number of assets that are deployed on Alibaba Cloud.
+             * <p>The number of assets that are deployed on Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder aliYunInstanceCount(Integer aliYunInstanceCount) {
                 this.aliYunInstanceCount = aliYunInstanceCount;
@@ -477,7 +490,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers.
+             * <p>The number of servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder awsInstanceCount(Integer awsInstanceCount) {
                 this.awsInstanceCount = awsInstanceCount;
@@ -485,7 +501,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of third-party cloud servers.
+             * <p>The number of third-party cloud servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder azureInstanceCount(Integer azureInstanceCount) {
                 this.azureInstanceCount = azureInstanceCount;
@@ -493,7 +512,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores of exposed assets.
+             * <p>The number of cores of exposed assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder exposedInstanceCoreCount(Long exposedInstanceCoreCount) {
                 this.exposedInstanceCoreCount = exposedInstanceCoreCount;
@@ -501,7 +523,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of exposed servers.
+             * <p>The number of exposed servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder exposedInstanceCount(Integer exposedInstanceCount) {
                 this.exposedInstanceCount = exposedInstanceCount;
@@ -509,7 +534,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets whose importance is common.
+             * <p>The number of assets whose importance is common.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder generalAssetCount(Integer generalAssetCount) {
                 this.generalAssetCount = generalAssetCount;
@@ -517,7 +545,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of server groups.
+             * <p>The number of server groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder groupCount(Integer groupCount) {
                 this.groupCount = groupCount;
@@ -525,7 +556,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are provisioned by third-party providers.
+             * <p>The number of instances that are provisioned by third-party providers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder huaweiInstanceCount(Integer huaweiInstanceCount) {
                 this.huaweiInstanceCount = huaweiInstanceCount;
@@ -533,7 +567,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that can be protected by Security Center.
+             * <p>The number of assets that can be protected by Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder idcInstanceCount(Integer idcInstanceCount) {
                 this.idcInstanceCount = idcInstanceCount;
@@ -541,7 +578,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets whose importance is important.
+             * <p>The number of assets whose importance is important.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder importantAssetCount(Integer importantAssetCount) {
                 this.importantAssetCount = importantAssetCount;
@@ -549,7 +589,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores of assets in the specified asset type. If the asset type is not specified, the value of this parameter indicates the total number of cores of servers and Alibaba Cloud services within your account.
+             * <p>The number of cores of assets in the specified asset type. If the asset type is not specified, the value of this parameter indicates the total number of cores of servers and Alibaba Cloud services within your account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>301</p>
              */
             public Builder instanceCoreCount(Long instanceCoreCount) {
                 this.instanceCoreCount = instanceCoreCount;
@@ -557,7 +600,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
+             * <p>The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -565,7 +611,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of tasks for the specified type of assets. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
+             * <p>The total number of tasks for the specified type of assets. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder instanceSyncTaskCount(Integer instanceSyncTaskCount) {
                 this.instanceSyncTaskCount = instanceSyncTaskCount;
@@ -573,7 +622,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores of new servers.
+             * <p>The number of cores of new servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder newInstanceCoreCount(Long newInstanceCoreCount) {
                 this.newInstanceCoreCount = newInstanceCoreCount;
@@ -581,7 +633,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of newly added servers.
+             * <p>The number of newly added servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder newInstanceCount(Integer newInstanceCount) {
                 this.newInstanceCount = newInstanceCount;
@@ -589,7 +644,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers on which no risks are detected.
+             * <p>The number of servers on which no risks are detected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder noRiskInstanceCount(Integer noRiskInstanceCount) {
                 this.noRiskInstanceCount = noRiskInstanceCount;
@@ -605,7 +663,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores of servers that are not started.
+             * <p>The number of cores of servers that are not started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder notRunningStatusCoreCount(Long notRunningStatusCoreCount) {
                 this.notRunningStatusCoreCount = notRunningStatusCoreCount;
@@ -613,7 +674,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers that are shut down.
+             * <p>The number of servers that are shut down.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder notRunningStatusCount(Integer notRunningStatusCount) {
                 this.notRunningStatusCount = notRunningStatusCount;
@@ -621,7 +685,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers whose Security Center agent status is Offline.
+             * <p>The number of servers whose Security Center agent status is Offline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder offlineInstanceCount(Integer offlineInstanceCount) {
                 this.offlineInstanceCount = offlineInstanceCount;
@@ -629,7 +696,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers outside the cloud.
+             * <p>The number of servers outside the cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder outMachineInstanceCount(Integer outMachineInstanceCount) {
                 this.outMachineInstanceCount = outMachineInstanceCount;
@@ -637,7 +707,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers for which the Security Center agent suspends protection.
+             * <p>The number of servers for which the Security Center agent suspends protection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pauseInstanceCount(Integer pauseInstanceCount) {
                 this.pauseInstanceCount = pauseInstanceCount;
@@ -645,7 +718,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of regions to which the servers belong.
+             * <p>The number of regions to which the servers belong.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder regionCount(Integer regionCount) {
                 this.regionCount = regionCount;
@@ -653,7 +729,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores of vulnerable assets.
+             * <p>The number of cores of vulnerable assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>201</p>
              */
             public Builder riskInstanceCoreCount(Long riskInstanceCoreCount) {
                 this.riskInstanceCoreCount = riskInstanceCoreCount;
@@ -661,7 +740,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are at risk.
+             * <p>The number of assets that are at risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder riskInstanceCount(Integer riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -669,7 +751,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of cloud services that are protected by Security Center.
+             * <p>The total number of cloud services that are protected by Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder tencentInstanceCount(Integer tencentInstanceCount) {
                 this.tencentInstanceCount = tencentInstanceCount;
@@ -677,7 +762,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets whose importance is test.
+             * <p>The number of assets whose importance is test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder testAssetCount(Integer testAssetCount) {
                 this.testAssetCount = testAssetCount;
@@ -685,7 +773,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of simple application servers.
+             * <p>The number of simple application servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder tripartiteInstanceCount(Integer tripartiteInstanceCount) {
                 this.tripartiteInstanceCount = tripartiteInstanceCount;
@@ -693,7 +784,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers that are in the Unknown state.
+             * <p>The number of servers that are in the Unknown state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder unKnowStatusInstanceCount(Integer unKnowStatusInstanceCount) {
                 this.unKnowStatusInstanceCount = unKnowStatusInstanceCount;
@@ -701,7 +795,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores of unprotected assets.
+             * <p>The number of cores of unprotected assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder unprotectedInstanceCoreCount(Long unprotectedInstanceCoreCount) {
                 this.unprotectedInstanceCoreCount = unprotectedInstanceCoreCount;
@@ -709,7 +806,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unprotected assets.
+             * <p>The number of unprotected assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder unprotectedInstanceCount(Integer unprotectedInstanceCount) {
                 this.unprotectedInstanceCount = unprotectedInstanceCount;
@@ -717,7 +817,10 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of virtual private clouds (VPCs).
+             * <p>The number of virtual private clouds (VPCs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder vpcCount(Integer vpcCount) {
                 this.vpcCount = vpcCount;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeBinarySecurityPoliciesRequest} extends {@link RequestModel}
  *
  * <p>DescribeBinarySecurityPoliciesRequest</p>
@@ -123,7 +124,10 @@ public class DescribeBinarySecurityPoliciesRequest extends Request {
         } 
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -132,7 +136,10 @@ public class DescribeBinarySecurityPoliciesRequest extends Request {
         }
 
         /**
-         * The name of the policy.
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-auto-5patxz</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -141,7 +148,10 @@ public class DescribeBinarySecurityPoliciesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -159,7 +169,10 @@ public class DescribeBinarySecurityPoliciesRequest extends Request {
         }
 
         /**
-         * The source IP address.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59.82.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -168,11 +181,14 @@ public class DescribeBinarySecurityPoliciesRequest extends Request {
         }
 
         /**
-         * The status of the policy. Valid values:
-         * <p>
+         * <p>The status of the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong></li>
+         * </ul>
          * 
-         * *   **enabled**
-         * *   **disabled**
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

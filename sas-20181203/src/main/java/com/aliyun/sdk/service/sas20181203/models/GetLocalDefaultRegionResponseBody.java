@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetLocalDefaultRegionResponseBody} extends {@link TeaModel}
  *
  * <p>GetLocalDefaultRegionResponseBody</p>
@@ -49,7 +50,10 @@ public class GetLocalDefaultRegionResponseBody extends TeaModel {
         private Integer status; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6D23860-55C2-55AA-B484-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,12 +61,15 @@ public class GetLocalDefaultRegionResponseBody extends TeaModel {
         }
 
         /**
-         * The access type of the multi-cloud site. Valid values:
-         * <p>
+         * <p>The access type of the multi-cloud site. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The current site is not the default site of the multi-cloud site. You can specify a site as the default site of the multi-cloud site.</li>
+         * <li><strong>1</strong>: The current site is the default site of the multi-cloud site.</li>
+         * <li><strong>2</strong>: Another site is set as the default site of the multi-cloud site.</li>
+         * </ul>
          * 
-         * *   **0**: The current site is not the default site of the multi-cloud site. You can specify a site as the default site of the multi-cloud site.
-         * *   **1**: The current site is the default site of the multi-cloud site.
-         * *   **2**: Another site is set as the default site of the multi-cloud site.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;

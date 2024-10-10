@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryIncidentVertexExtendInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryIncidentVertexExtendInfoRequest</p>
@@ -112,7 +113,10 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         } 
 
         /**
-         * The page number. Valid values start from 1.
+         * <p>The page number. Valid values start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offset(Long offset) {
             this.putBodyParameter("Offset", offset);
@@ -121,12 +125,16 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         }
 
         /**
-         * The type of the edge that you want to query. Valid values include but are not limited to:
-         * <p>
+         * <p>The type of the edge that you want to query. Valid values include but are not limited to:</p>
+         * <ul>
+         * <li><strong>process_exec_file:</strong> A process executes a file.</li>
+         * <li><strong>process_connect_ip:</strong> A process connects to an IP address.</li>
+         * <li><strong>domain_trgger_alert:</strong> A domain name triggers an alert.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **process_exec_file:** A process executes a file.
-         * *   **process_connect_ip:** A process connects to an IP address.
-         * *   **domain_trgger_alert:** A domain name triggers an alert.
+         * <strong>example:</strong>
+         * <p>process_connect_ip</p>
          */
         public Builder relationType(String relationType) {
             this.putBodyParameter("RelationType", relationType);
@@ -135,7 +143,10 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values start from 1.
+         * <p>The number of entries per page. Valid values start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putBodyParameter("Size", size);
@@ -144,10 +155,14 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         }
 
         /**
-         * The ID of the node that you want to query.
-         * <p>
+         * <p>The ID of the node that you want to query.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~QueryIncidentTracingDetail~~">QueryIncidentTracingDetail</a> operation to query the node ID.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [QueryIncidentTracingDetail](~~QueryIncidentTracingDetail~~) operation to query the node ID.
+         * <strong>example:</strong>
+         * <p>29872354f741b1b044b8a9b4e2ab0535</p>
          */
         public Builder vertexId(String vertexId) {
             this.putBodyParameter("VertexId", vertexId);
@@ -156,14 +171,18 @@ public class QueryIncidentVertexExtendInfoRequest extends Request {
         }
 
         /**
-         * The node label. Valid values include but are not limited to:
-         * <p>
+         * <p>The node label. Valid values include but are not limited to:</p>
+         * <ul>
+         * <li><strong>process</strong></li>
+         * <li><strong>file</strong></li>
+         * <li><strong>alert</strong></li>
+         * <li><strong>ip</strong></li>
+         * <li><strong>domain</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **process**
-         * *   **file**
-         * *   **alert**
-         * *   **ip**
-         * *   **domain**
+         * <strong>example:</strong>
+         * <p>process</p>
          */
         public Builder vertexLabel(String vertexLabel) {
             this.putBodyParameter("VertexLabel", vertexLabel);

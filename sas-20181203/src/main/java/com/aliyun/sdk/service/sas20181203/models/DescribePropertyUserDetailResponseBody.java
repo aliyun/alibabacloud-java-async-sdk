@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyUserDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyUserDetailResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of asset fingerprints for the account.
+         * <p>The details of asset fingerprints for the account.</p>
          */
         public Builder propertys(java.util.List < Propertys> propertys) {
             this.propertys = propertys;
@@ -77,7 +78,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33A71BE3-2CC2-14CB-B460-33A1DD82953A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyUserDetailResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: **10**.
+             * <p>The number of entries returned per page. Default value: <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyUserDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyUserDetailResponseBody</p>
+     */
     public static class Propertys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountsExpirationDate")
         private String accountsExpirationDate;
@@ -470,7 +498,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The date on which the account expires.
+             * <p>The date on which the account expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>never</p>
              */
             public Builder accountsExpirationDate(String accountsExpirationDate) {
                 this.accountsExpirationDate = accountsExpirationDate;
@@ -478,7 +509,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.
+             * <p>The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649149566000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -486,7 +520,7 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the user groups to which the account belongs.
+             * <p>The details of the user groups to which the account belongs.</p>
              */
             public Builder groupNames(java.util.List < String > groupNames) {
                 this.groupNames = groupNames;
@@ -494,7 +528,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-hp35tftuh52wbp1g****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -502,7 +539,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc-host-****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -510,7 +550,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -518,7 +561,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -526,7 +572,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the server.
+             * <p>The IP addresses of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -534,11 +583,14 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account is an interactive logon account. Valid values:
-             * <p>
+             * <p>Indicates whether the account is an interactive logon account. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isCouldLogin(Integer isCouldLogin) {
                 this.isCouldLogin = isCouldLogin;
@@ -546,11 +598,14 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password expires. Valid values:
-             * <p>
+             * <p>Indicates whether the password expires. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: yes</li>
+             * <li><strong>1</strong>: no</li>
+             * </ul>
              * 
-             * *   **0**: yes
-             * *   **1**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isPasswdExpired(Integer isPasswdExpired) {
                 this.isPasswdExpired = isPasswdExpired;
@@ -558,11 +613,14 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the password is locked. Valid values:
-             * <p>
+             * <p>Indicates whether the password is locked. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: yes</li>
+             * <li><strong>1</strong>: no</li>
+             * </ul>
              * 
-             * *   **0**: yes
-             * *   **1**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isPasswdLocked(Integer isPasswdLocked) {
                 this.isPasswdLocked = isPasswdLocked;
@@ -570,11 +628,14 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account has root permissions. Valid values:
-             * <p>
+             * <p>Indicates whether the account has root permissions. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isRoot(String isRoot) {
                 this.isRoot = isRoot;
@@ -582,11 +643,14 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account is a sudo account. Valid values:
-             * <p>
+             * <p>Indicates whether the account is a sudo account. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isSudoer(Integer isSudoer) {
                 this.isSudoer = isSudoer;
@@ -594,11 +658,14 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account expires. Valid values:
-             * <p>
+             * <p>Indicates whether the account expires. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: yes</li>
+             * <li><strong>1</strong>: no</li>
+             * </ul>
              * 
-             * *   **0**: yes
-             * *   **1**: no
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isUserExpired(Integer isUserExpired) {
                 this.isUserExpired = isUserExpired;
@@ -606,7 +673,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The source IP address of the last logon to the account.
+             * <p>The source IP address of the last logon to the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder lastLoginIp(String lastLoginIp) {
                 this.lastLoginIp = lastLoginIp;
@@ -614,7 +684,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The last logon time of the account.
+             * <p>The last logon time of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-04 18:07:06</p>
              */
             public Builder lastLoginTime(String lastLoginTime) {
                 this.lastLoginTime = lastLoginTime;
@@ -622,7 +695,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last logon to the account. Unit: milliseconds.
+             * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649066826000</p>
              */
             public Builder lastLoginTimeDt(Long lastLoginTimeDt) {
                 this.lastLoginTimeDt = lastLoginTimeDt;
@@ -630,7 +706,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the last logon to the account. Unit: milliseconds.
+             * <p>The timestamp of the last logon to the account. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649066826000</p>
              */
             public Builder lastLoginTimestamp(Long lastLoginTimestamp) {
                 this.lastLoginTimestamp = lastLoginTimestamp;
@@ -638,7 +717,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The date on which the password of the account expires.
+             * <p>The date on which the password of the account expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>never</p>
              */
             public Builder passwordExpirationDate(String passwordExpirationDate) {
                 this.passwordExpirationDate = passwordExpirationDate;
@@ -646,7 +728,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated. You can ignore it.
+             * <p>This parameter is deprecated. You can ignore it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -654,7 +739,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bin</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -662,7 +750,10 @@ public class DescribePropertyUserDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162eb349-c2d9-4f8b-805c-75b43d4c****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

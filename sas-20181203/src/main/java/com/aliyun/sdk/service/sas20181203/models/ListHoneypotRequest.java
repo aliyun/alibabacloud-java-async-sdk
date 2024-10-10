@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListHoneypotRequest} extends {@link RequestModel}
  *
  * <p>ListHoneypotRequest</p>
@@ -123,7 +124,10 @@ public class ListHoneypotRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -132,7 +136,7 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * The IDs of the honeypots.
+         * <p>The IDs of the honeypots.</p>
          */
         public Builder honeypotIds(java.util.List < String > honeypotIds) {
             this.putQueryParameter("HoneypotIds", honeypotIds);
@@ -141,7 +145,10 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * The name of the honeypot.
+         * <p>The name of the honeypot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mx-rouyi</p>
          */
         public Builder honeypotName(String honeypotName) {
             this.putQueryParameter("HoneypotName", honeypotName);
@@ -150,7 +157,10 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * The ID of the management node.
+         * <p>The ID of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -159,7 +169,10 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * The name of the management node.
+         * <p>The name of the management node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>honeypot_master</p>
          */
         public Builder nodeName(String nodeName) {
             this.putQueryParameter("NodeName", nodeName);
@@ -168,7 +181,10 @@ public class ListHoneypotRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

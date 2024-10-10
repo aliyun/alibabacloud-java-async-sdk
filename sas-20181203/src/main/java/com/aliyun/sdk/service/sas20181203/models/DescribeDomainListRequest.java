@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainListRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainListRequest</p>
@@ -109,7 +110,10 @@ public class DescribeDomainListRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,11 +122,14 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * The type of the domain name that you want to query. Valid values:
-         * <p>
+         * <p>The type of the domain name that you want to query. Valid values:</p>
+         * <ul>
+         * <li><strong>root</strong>: root domain name</li>
+         * <li><strong>sub</strong>: subdomain name</li>
+         * </ul>
          * 
-         * *   **root**: root domain name
-         * *   **sub**: subdomain name
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -131,7 +138,10 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * The keyword that is used to query domain names. Fuzzy match is supported.
+         * <p>The keyword that is used to query domain names. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder fuzzyDomain(String fuzzyDomain) {
             this.putQueryParameter("FuzzyDomain", fuzzyDomain);
@@ -140,7 +150,10 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **10**.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +162,10 @@ public class DescribeDomainListRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.122.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

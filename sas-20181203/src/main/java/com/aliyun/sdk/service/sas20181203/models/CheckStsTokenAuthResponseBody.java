@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckStsTokenAuthResponseBody} extends {@link TeaModel}
  *
  * <p>CheckStsTokenAuthResponseBody</p>
@@ -49,7 +50,10 @@ public class CheckStsTokenAuthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185685871307****</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -57,7 +61,10 @@ public class CheckStsTokenAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>898F7AA7-CECD-5EC7-AF4D-664C601B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

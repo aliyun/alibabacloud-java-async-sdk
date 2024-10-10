@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFileProtectEventResponseBody} extends {@link TeaModel}
  *
  * <p>ListFileProtectEventResponseBody</p>
@@ -61,7 +62,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The events.
+         * <p>The events.</p>
          */
         public Builder eventList(java.util.List < EventList> eventList) {
             this.eventList = eventList;
@@ -69,7 +70,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -77,7 +78,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23AD0BD2-8771-5647-819E-6BA51E212F80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class ListFileProtectEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFileProtectEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileProtectEventResponseBody</p>
+     */
     public static class EventList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private Integer alertLevel;
@@ -321,13 +331,16 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The severity of the alert. Valid values:
-             * <p>
+             * <p>The severity of the alert. Valid values:</p>
+             * <ul>
+             * <li>0: no alerts</li>
+             * <li>1: reminder</li>
+             * <li>2: suspicious</li>
+             * <li>3: high-risk</li>
+             * </ul>
              * 
-             * *   0: no alerts
-             * *   1: reminder
-             * *   2: suspicious
-             * *   3: high-risk
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder alertLevel(Integer alertLevel) {
                 this.alertLevel = alertLevel;
@@ -335,7 +348,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The command line of the event.
+             * <p>The command line of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;touch&quot;,&quot;/test/aaaa&quot;]</p>
              */
             public Builder cmdLine(String cmdLine) {
                 this.cmdLine = cmdLine;
@@ -343,7 +359,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the file that is managed by the process.
+             * <p>The path to the file that is managed by the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/etc/pam.d/su</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -351,7 +370,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event was handled.
+             * <p>The time when the event was handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder handleTime(Long handleTime) {
                 this.handleTime = handleTime;
@@ -359,7 +381,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * <p>The ID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>161757</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -367,7 +392,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the server.
+             * <p>The instance name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kyy-admin-01</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -375,7 +403,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.40.211.194</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -383,7 +414,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.22.5.36</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -391,7 +425,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event last occurred.
+             * <p>The time when the event last occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694576692000</p>
              */
             public Builder latestTime(Long latestTime) {
                 this.latestTime = latestTime;
@@ -399,7 +436,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The operation performed by the process on the file.
+             * <p>The operation performed by the process on the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DELETE</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -407,11 +447,14 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the operating system. Valid values:
-             * <p>
+             * <p>The type of the operating system. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows</li>
+             * <li><strong>linux</strong>: Linux</li>
+             * </ul>
              * 
-             * *   **windows**: Windows
-             * *   **linux**: Linux
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -419,7 +462,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the process.
+             * <p>The path to the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/bin/sshpass</p>
              */
             public Builder procPath(String procPath) {
                 this.procPath = procPath;
@@ -427,7 +473,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The permissions required to start the process.
+             * <p>The permissions required to start the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rwxr-xr-x</p>
              */
             public Builder procPermission(String procPermission) {
                 this.procPermission = procPermission;
@@ -435,7 +484,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the process.
+             * <p>The ID of the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52636</p>
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -443,7 +495,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -451,7 +506,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-rule-1</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -459,13 +517,16 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. Valid values:
-             * <p>
+             * <p>The status of the event. Valid values:</p>
+             * <ul>
+             * <li>0: unhandled</li>
+             * <li>1: handled</li>
+             * <li>2: added to the whitelist</li>
+             * <li>3: ignored</li>
+             * </ul>
              * 
-             * *   0: unhandled
-             * *   1: handled
-             * *   2: added to the whitelist
-             * *   3: ignored
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -473,7 +534,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server that is associated with the process.
+             * <p>The UUID of the server that is associated with the process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>94b44720-d982-4d20-a4e1-80a1a57b5a8e</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -487,6 +551,12 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFileProtectEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFileProtectEventResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -538,7 +608,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -546,7 +619,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -554,7 +630,10 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

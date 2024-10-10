@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInterceptionTargetResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyInterceptionTargetResponseBody</p>
@@ -49,7 +50,10 @@ public class ModifyInterceptionTargetResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16CB4467-56AE-546C-BF19-AD4584C0DD03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +61,14 @@ public class ModifyInterceptionTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

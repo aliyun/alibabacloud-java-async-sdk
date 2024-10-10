@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInterceptionRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateInterceptionRuleRequest</p>
@@ -171,10 +172,14 @@ public class CreateInterceptionRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>c35xxxa416</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -183,7 +188,11 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * <p>The name of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-test-cnnf</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -192,11 +201,21 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The information about the destination network object. The value of this parameter contains the following fields:
-         * <p>
+         * <p>The information about the destination network object. The value of this parameter contains the following fields:</p>
+         * <ul>
+         * <li>targetId: the ID of the destination network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</li>
+         * <li>ports: the destination port ranges.</li>
+         * </ul>
          * 
-         * *   targetId: the ID of the destination network object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
-         * *   ports: the destination port ranges.
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;targetId&quot;: 600036,
+         *             &quot;ports&quot;: [
+         *                   &quot;1/65535&quot;
+         *             ]
+         *       }
+         * ]</p>
          */
         public Builder dstTargetList(java.util.Map < String, ? > dstTargetList) {
             String dstTargetListShrink = shrink(dstTargetList, "DstTargetList", "json");
@@ -206,12 +225,16 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The action on traffic. Valid values:
-         * <p>
+         * <p>The action on traffic. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: blocks traffic.</li>
+         * <li><strong>2</strong>: allows traffic and generates alerts.</li>
+         * <li><strong>3</strong>: allows traffic and does not generate alerts.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: blocks traffic.
-         * *   **2**: allows traffic and generates alerts.
-         * *   **3**: allows traffic and does not generate alerts.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder interceptType(Long interceptType) {
             this.putQueryParameter("InterceptType", interceptType);
@@ -220,7 +243,11 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.
+         * <p>The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder orderIndex(Long orderIndex) {
             this.putQueryParameter("OrderIndex", orderIndex);
@@ -229,7 +256,11 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The name of the defense rule.
+         * <p>The name of the defense rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-rule-1</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -238,11 +269,15 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * Specifies the status of the defense rule. Valid values:
-         * <p>
+         * <p>Specifies the status of the defense rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: disables the rule.</li>
+         * <li><strong>1</strong>: enables the rule.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **0**: disables the rule.
-         * *   **1**: enables the rule.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ruleSwitch(Integer ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);
@@ -251,10 +286,13 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The type of the defense rule. Valid values:
-         * <p>
+         * <p>The type of the defense rule. Valid values:</p>
+         * <ul>
+         * <li>customize: custom rule</li>
+         * </ul>
          * 
-         * *   customize: custom rule
+         * <strong>example:</strong>
+         * <p>customize</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -263,10 +301,13 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * The source network object. The value of this parameter contains the following field:
-         * <p>
+         * <p>The source network object. The value of this parameter contains the following field:</p>
+         * <ul>
+         * <li>targetId: the ID of the source network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</li>
+         * </ul>
          * 
-         * *   targetId: the ID of the source network object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.
+         * <strong>example:</strong>
+         * <p>{&quot;targetId&quot;:301940}</p>
          */
         public Builder srcTarget(java.util.Map < String, ? > srcTarget) {
             String srcTargetShrink = shrink(srcTarget, "SrcTarget", "json");

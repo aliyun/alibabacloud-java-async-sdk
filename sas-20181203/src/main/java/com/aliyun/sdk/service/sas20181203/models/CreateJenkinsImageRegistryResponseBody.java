@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateJenkinsImageRegistryResponseBody} extends {@link TeaModel}
  *
  * <p>CreateJenkinsImageRegistryResponseBody</p>
@@ -73,7 +74,7 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * The result of creating the image repository.
+         * <p>The result of creating the image repository.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +82,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +93,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1AF1E723-53F1-55BF-A4B2-15CB7A32****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed. Unit: seconds.
+         * <p>The time consumed. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;
@@ -110,6 +120,12 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateJenkinsImageRegistryResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateJenkinsImageRegistryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BlackList")
         private String blackList;
@@ -341,7 +357,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * The blacklist.
+             * <p>The blacklist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61.9.XXX.XXX</p>
              */
             public Builder blackList(String blackList) {
                 this.blackList = blackList;
@@ -349,7 +368,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The domain name of the image repository.
+             * <p>The domain name of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -357,7 +379,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-16 18:17:16</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -365,7 +390,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The update time. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * <p>The update time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-21 10:40:01</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -373,7 +401,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image repository.
+             * <p>The ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443496</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -381,11 +412,14 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. Valid values:
-             * <p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Internet</li>
+             * <li><strong>2</strong>: VPC</li>
+             * </ul>
              * 
-             * *   **1**: Internet
-             * *   **2**: VPC
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder netType(Integer netType) {
                 this.netType = netType;
@@ -393,7 +427,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Harbor******</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -401,7 +438,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days during which assets can be retained.
+             * <p>The number of days during which assets can be retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder persistenceDay(Integer persistenceDay) {
                 this.persistenceDay = persistenceDay;
@@ -409,11 +449,14 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: HTTP</li>
+             * <li><strong>2</strong>: HTTPS</li>
+             * </ul>
              * 
-             * *   **1**: HTTP
-             * *   **2**: HTTPS
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder protocolType(Integer protocolType) {
                 this.protocolType = protocolType;
@@ -421,7 +464,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the image repository.
+             * <p>The region ID of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -429,7 +475,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the image repository.
+             * <p>The IP address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.13.XXX.XXX</p>
              */
             public Builder registryHostIp(String registryHostIp) {
                 this.registryHostIp = registryHostIp;
@@ -437,7 +486,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The alias of the image repository.
+             * <p>The alias of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fanyi</p>
              */
             public Builder registryName(String registryName) {
                 this.registryName = registryName;
@@ -445,10 +497,13 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image repository. Valid values:
-             * <p>
+             * <p>The type of the image repository. Valid values:</p>
+             * <ul>
+             * <li><strong>CI/CD</strong>: Jenkins</li>
+             * </ul>
              * 
-             * *   **CI/CD**: Jenkins
+             * <strong>example:</strong>
+             * <p>CI/CD</p>
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -456,7 +511,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication token of the user.
+             * <p>The authentication token of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3c3c602c-fa1f-4bc0-992f-b4b2cac7****</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -464,7 +522,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of images that can be scanned per hour.
+             * <p>The number of images that can be scanned per hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder transPerHour(Integer transPerHour) {
                 this.transPerHour = transPerHour;
@@ -472,7 +533,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegistryUser</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -480,7 +544,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2vchkxmf2j9yjt3x2****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -488,7 +555,10 @@ public class CreateJenkinsImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist.
+             * <p>The whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XXX.XXX</p>
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;

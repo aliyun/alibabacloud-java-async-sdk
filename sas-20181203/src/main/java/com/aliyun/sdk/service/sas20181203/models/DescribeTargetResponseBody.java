@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTargetResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeTargetResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeTargetResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79CFF74D-E967-5407-8A78-EE03B925FDAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the server.
+         * <p>The information about the server.</p>
          */
         public Builder targets(java.util.List < Targets> targets) {
             this.targets = targets;
@@ -77,7 +81,10 @@ public class DescribeTargetResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeTargetResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeTargetResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeTargetResponseBody</p>
+     */
     public static class Targets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Flag")
         private String flag;
@@ -141,7 +154,10 @@ public class DescribeTargetResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The flag that is added to the server. This parameter can be empty.
+             * <p>The flag that is added to the server. This parameter can be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>del</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -149,7 +165,10 @@ public class DescribeTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server or the ID of the server group.
+             * <p>The UUID of the server or the ID of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5c5f0169-3527-40a2-b5ff-0bc1db8f****</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -157,11 +176,14 @@ public class DescribeTargetResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the object. Valid values:
-             * <p>
+             * <p>The type of the object. Valid values:</p>
+             * <ul>
+             * <li><strong>uuid</strong>: a server</li>
+             * <li><strong>groupId</strong>: a server group</li>
+             * </ul>
              * 
-             * *   **uuid**: a server
-             * *   **groupId**: a server group
+             * <strong>example:</strong>
+             * <p>uuid</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

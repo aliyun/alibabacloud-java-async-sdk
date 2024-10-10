@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOpaClusterNamespaceListResponseBody} extends {@link TeaModel}
  *
  * <p>GetOpaClusterNamespaceListResponseBody</p>
@@ -97,7 +98,10 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.
+         * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -113,7 +120,7 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The namespaces.
+         * <p>The namespaces.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -121,7 +128,10 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +139,10 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>384BFAF1-FC41-58DD-97DD-9D361ADF377D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +150,14 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -154,6 +170,12 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOpaClusterNamespaceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOpaClusterNamespaceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameSpaceName")
         private String nameSpaceName;
@@ -181,7 +203,10 @@ public class GetOpaClusterNamespaceListResponseBody extends TeaModel {
             private String nameSpaceName; 
 
             /**
-             * The name of the namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testNameSpace</p>
              */
             public Builder nameSpaceName(String nameSpaceName) {
                 this.nameSpaceName = nameSpaceName;

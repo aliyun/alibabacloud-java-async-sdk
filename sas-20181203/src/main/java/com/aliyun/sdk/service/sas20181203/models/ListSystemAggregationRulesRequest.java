@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSystemAggregationRulesRequest} extends {@link RequestModel}
  *
  * <p>ListSystemAggregationRulesRequest</p>
@@ -139,7 +140,7 @@ public class ListSystemAggregationRulesRequest extends Request {
         } 
 
         /**
-         * The IDs of the aggregation types.
+         * <p>The IDs of the aggregation types.</p>
          */
         public Builder aggregationIds(java.util.List < Integer > aggregationIds) {
             this.putQueryParameter("AggregationIds", aggregationIds);
@@ -148,7 +149,11 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -157,11 +162,14 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -170,7 +178,11 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +191,10 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule****</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -188,7 +203,7 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The types of the rules.
+         * <p>The types of the rules.</p>
          */
         public Builder ruleTypes(java.util.List < Integer > ruleTypes) {
             this.putQueryParameter("RuleTypes", ruleTypes);
@@ -197,12 +212,15 @@ public class ListSystemAggregationRulesRequest extends Request {
         }
 
         /**
-         * The type of the operating system. Valid values:
-         * <p>
+         * <p>The type of the operating system. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: Windows</li>
+         * <li><strong>1</strong>: Linux</li>
+         * <li><strong>0</strong>: all</li>
+         * </ul>
          * 
-         * *   **2**: Windows
-         * *   **1**: Linux
-         * *   **0**: all
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder systemType(Integer systemType) {
             this.putQueryParameter("SystemType", systemType);

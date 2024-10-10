@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateHoneypotRequest} extends {@link RequestModel}
  *
  * <p>CreateHoneypotRequest</p>
@@ -113,10 +114,14 @@ public class CreateHoneypotRequest extends Request {
         } 
 
         /**
-         * The ID of the honeypot image.
-         * <p>
+         * <p>The ID of the honeypot image.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the IDs of images from the <strong>HoneypotImageId</strong> response parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the IDs of images from the **HoneypotImageId** response parameter.
+         * <strong>example:</strong>
+         * <p>sha256:ebc4c102ac407d53733c2373e8888a733ddce86f163ccbe7492ae1cbf26****</p>
          */
         public Builder honeypotImageId(String honeypotImageId) {
             this.putQueryParameter("HoneypotImageId", honeypotImageId);
@@ -125,10 +130,14 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * The name of the honeypot image.
-         * <p>
+         * <p>The name of the honeypot image.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListAvailableHoneypot~~">ListAvailableHoneypot</a> operation to query the names of images from the <strong>HoneypotImageName</strong> response parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListAvailableHoneypot](~~ListAvailableHoneypot~~) operation to query the names of images from the **HoneypotImageName** response parameter.
+         * <strong>example:</strong>
+         * <p>HoneyPotImageName</p>
          */
         public Builder honeypotImageName(String honeypotImageName) {
             this.putQueryParameter("HoneypotImageName", honeypotImageName);
@@ -137,7 +146,11 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * The custom name of the honeypot.
+         * <p>The custom name of the honeypot.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ruoyi</p>
          */
         public Builder honeypotName(String honeypotName) {
             this.putQueryParameter("HoneypotName", honeypotName);
@@ -146,28 +159,35 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * The custom configuration of the honeypot in the JSON format. The value contains the following fields:
-         * <p>
+         * <p>The custom configuration of the honeypot in the JSON format. The value contains the following fields:</p>
+         * <ul>
+         * <li><p><strong>trojan_git</strong>: Git-specific Defense. Valid values:</p>
+         * <ul>
+         * <li><strong>zip</strong>: Git Source Code Package</li>
+         * <li><strong>web</strong>: Git Directory Leak</li>
+         * <li><strong>close</strong>: Disabled</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>trojan_git_addr</strong>: Git Trojan Address.</p>
+         * </li>
+         * <li><p><strong>trojan_git.zip</strong>: Git Trojan.</p>
+         * </li>
+         * <li><p><strong>burp</strong>: Burp-specific Defense. Valid values:</p>
+         * <ul>
+         * <li><strong>open</strong>: Enable</li>
+         * <li><strong>close</strong>: Disable</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>portrait_option</strong>: Source Tracing Configuration. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: Disable</li>
+         * <li><strong>true</strong>: Enable</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   **trojan_git**: Git-specific Defense. Valid values:
-         * 
-         *     *   **zip**: Git Source Code Package
-         *     *   **web**: Git Directory Leak
-         *     *   **close**: Disabled
-         * 
-         * *   **trojan_git_addr**: Git Trojan Address.
-         * 
-         * *   **trojan_git.zip**: Git Trojan.
-         * 
-         * *   **burp**: Burp-specific Defense. Valid values:
-         * 
-         *     *   **open**: Enable
-         *     *   **close**: Disable
-         * 
-         * *   **portrait_option**: Source Tracing Configuration. Valid values:
-         * 
-         *     *   **false**: Disable
-         *     *   **true**: Enable
+         * <strong>example:</strong>
+         * <p>{&quot;trojan_git&quot;:&quot;close&quot;,&quot;burp&quot;:&quot;close&quot;,&quot;portrait_option&quot;:&quot;false&quot;}</p>
          */
         public Builder meta(String meta) {
             this.putQueryParameter("Meta", meta);
@@ -176,10 +196,14 @@ public class CreateHoneypotRequest extends Request {
         }
 
         /**
-         * The ID of the management node.
-         * <p>
+         * <p>The ID of the management node.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListHoneypotNode](~~ListHoneypotNode~~) operation to query the IDs of management nodes.
+         * <strong>example:</strong>
+         * <p>a882e590-b87b-45a6-87b9-d0a3e5a0****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

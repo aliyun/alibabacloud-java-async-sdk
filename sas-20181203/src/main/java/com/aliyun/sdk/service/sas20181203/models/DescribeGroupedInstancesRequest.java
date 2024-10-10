@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeGroupedInstancesRequest} extends {@link RequestModel}
  *
  * <p>DescribeGroupedInstancesRequest</p>
@@ -180,7 +181,10 @@ public class DescribeGroupedInstancesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -189,7 +193,10 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The name of the group to which the assets belong. Fuzzy search is supported.
+         * <p>The name of the group to which the assets belong. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-01</p>
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -198,12 +205,16 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The filter condition that you want to use to query the assets. Valid values:
-         * <p>
+         * <p>The filter condition that you want to use to query the assets. Valid values:</p>
+         * <ul>
+         * <li><strong>groupId</strong>: the group to which the assets belong</li>
+         * <li><strong>regionId</strong>: the region in which the assets reside</li>
+         * <li><strong>vpcInstanceId</strong>: the virtual private cloud (VPC) in which the assets reside</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **groupId**: the group to which the assets belong
-         * *   **regionId**: the region in which the assets reside
-         * *   **vpcInstanceId**: the virtual private cloud (VPC) in which the assets reside
+         * <strong>example:</strong>
+         * <p>groupId</p>
          */
         public Builder groupField(String groupField) {
             this.putQueryParameter("GroupField", groupField);
@@ -212,11 +223,14 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -225,7 +239,10 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The type of the assets that you want to query. Set the value to **ecs**, which indicates Elastic Compute Service (ECS) instances.
+         * <p>The type of the assets that you want to query. Set the value to <strong>ecs</strong>, which indicates Elastic Compute Service (ECS) instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder machineTypes(String machineTypes) {
             this.putQueryParameter("MachineTypes", machineTypes);
@@ -234,11 +251,14 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable paged query. Default value: **true**. Valid values:
-         * <p>
+         * <p>Specifies whether to enable paged query. Default value: <strong>true</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder noPage(Boolean noPage) {
             this.putQueryParameter("NoPage", noPage);
@@ -247,7 +267,10 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -256,14 +279,17 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The edition of Security Center that protects the asset. Valid values:
-         * <p>
+         * <p>The edition of Security Center that protects the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>sas_gte_advanced</strong>: the Advanced edition or higher</li>
+         * <li><strong>sas_gte_enterprise</strong>: the Enterprise edition or higher</li>
+         * <li><strong>sas_gt_basic:</strong> a paid edition</li>
+         * <li><strong>sas_eq_advanced:</strong> the Advanced edition</li>
+         * <li><strong>sas_gt_anti_virus:</strong> an edition higher than the Anti-virus edition</li>
+         * </ul>
          * 
-         * * **sas_gte_advanced**: the Advanced edition or higher
-         * * **sas_gte_enterprise**: the Enterprise edition or higher
-         * * **sas_gt_basic:** a paid edition
-         * * **sas_eq_advanced:** the Advanced edition
-         * * **sas_gt_anti_virus:** an edition higher than the Anti-virus edition
+         * <strong>example:</strong>
+         * <p>sas_gt_basic</p>
          */
         public Builder saleVersionCheckCode(String saleVersionCheckCode) {
             this.putQueryParameter("SaleVersionCheckCode", saleVersionCheckCode);
@@ -272,14 +298,17 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The source of the server. Valid values:
-         * <p>
+         * <p>The source of the server. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
+         * <li><strong>1</strong>: a third-party cloud server</li>
+         * <li><strong>2</strong>: a server in a data center</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+         * <li><strong>8</strong>: a lightweight asset</li>
+         * </ul>
          * 
-         * *   **0**: an asset provided by Alibaba Cloud.
-         * *   **1**: a third-party cloud server
-         * *   **2**: a server in a data center
-         * *   **3**, **4**, **5**, and **7**: other cloud asset
-         * *   **8**: a lightweight asset
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder vendor(Integer vendor) {
             this.putQueryParameter("Vendor", vendor);
@@ -288,14 +317,17 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * The source of the server. Separate multiple sources with commas (,).Valid values:
-         * <p>
+         * <p>The source of the server. Separate multiple sources with commas (,).Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: an asset provided by Alibaba Cloud.</li>
+         * <li><strong>1</strong>: a third-party cloud server</li>
+         * <li><strong>2</strong>: a server in a data center</li>
+         * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+         * <li><strong>8</strong>: a lightweight asset</li>
+         * </ul>
          * 
-         * *   **0**: an asset provided by Alibaba Cloud.
-         * *   **1**: a third-party cloud server
-         * *   **2**: a server in a data center
-         * *   **3**, **4**, **5**, and **7**: other cloud asset
-         * *   **8**: a lightweight asset
+         * <strong>example:</strong>
+         * <p>0,8</p>
          */
         public Builder vendors(String vendors) {
             this.putQueryParameter("Vendors", vendors);

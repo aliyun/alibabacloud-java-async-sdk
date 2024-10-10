@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAccesskeyLeakListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAccesskeyLeakListResponseBody</p>
@@ -109,7 +110,7 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the details about AccessKey pair leaks.
+         * <p>An array that consists of the details about AccessKey pair leaks.</p>
          */
         public Builder accessKeyLeakList(java.util.List < AccessKeyLeakList> accessKeyLeakList) {
             this.accessKeyLeakList = accessKeyLeakList;
@@ -117,7 +118,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of AccessKey pair leaks that are unhandled.
+         * <p>The number of AccessKey pair leaks that are unhandled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder akLeakCount(Integer akLeakCount) {
             this.akLeakCount = akLeakCount;
@@ -125,7 +129,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -133,7 +140,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612357897000</p>
          */
         public Builder gmtLast(Long gmtLast) {
             this.gmtLast = gmtLast;
@@ -141,7 +151,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -149,7 +162,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B37C9052-A73E-4707-A024-9247702852BE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +173,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of AccessKey pair leaks.
+         * <p>The total number of AccessKey pair leaks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,6 +189,12 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAccesskeyLeakListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAccesskeyLeakListResponseBody</p>
+     */
     public static class AccessKeyLeakList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccesskeyId")
         private String accesskeyId;
@@ -317,7 +342,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * The ID of the AccessKey pair that is leaked.
+             * <p>The ID of the AccessKey pair that is leaked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTAI4Fytv7ALKzkNVBV6****</p>
              */
             public Builder accesskeyId(String accesskeyId) {
                 this.accesskeyId = accesskeyId;
@@ -325,7 +353,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account that is affected.
+             * <p>The name of the Alibaba Cloud account that is affected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testAccountName</p>
              */
             public Builder aliUserName(String aliUserName) {
                 this.aliUserName = aliUserName;
@@ -333,7 +364,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * The platform to which the asset belongs. The value is fixed as **Cloud platform**.
+             * <p>The platform to which the asset belongs. The value is fixed as <strong>Cloud platform</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud platform</p>
              */
             public Builder asset(String asset) {
                 this.asset = asset;
@@ -341,7 +375,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the AccessKey pair leak is handled.
+             * <p>The time when the AccessKey pair leak is handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-12-03 21:23:38</p>
              */
             public Builder dealTime(String dealTime) {
                 this.dealTime = dealTime;
@@ -349,13 +386,16 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * The method to handle the AccessKey pair leak. Valid values:
-             * <p>
+             * <p>The method to handle the AccessKey pair leak. Valid values:</p>
+             * <ul>
+             * <li><strong>pending</strong>: The AccessKey pair leak is unhandled.</li>
+             * <li><strong>manual</strong>: The AccessKey pair leak is manually handled.</li>
+             * <li><strong>disable</strong>: The AccessKey pair leak is disabled.</li>
+             * <li><strong>add-whitelist</strong>: The AccessKey pair leak is added to the whitelist.</li>
+             * </ul>
              * 
-             * *   **pending**: The AccessKey pair leak is unhandled.
-             * *   **manual**: The AccessKey pair leak is manually handled.
-             * *   **disable**: The AccessKey pair leak is disabled.
-             * *   **add-whitelist**: The AccessKey pair leak is added to the whitelist.
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder dealType(String dealType) {
                 this.dealType = dealType;
@@ -363,7 +403,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the AccessKey pair leak is first detected. The value of this parameter is a UNIX timestamp. Unit: milliseconds.
+             * <p>The time when the AccessKey pair leak is first detected. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1612357897000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -371,7 +414,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key ID of the database.
+             * <p>The primary key ID of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>389357</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -379,11 +425,14 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the AccessKey pair leak is handled. Valid values:
-             * <p>
+             * <p>Indicates whether the AccessKey pair leak is handled. Valid values:</p>
+             * <ul>
+             * <li><strong>pending</strong>: unhandled</li>
+             * <li><strong>dealed</strong>: handled</li>
+             * </ul>
              * 
-             * *   **pending**: unhandled
-             * *   **dealed**: handled
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -391,7 +440,10 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the leak. The value is fixed as **AccessKey**.
+             * <p>The type of the leak. The value is fixed as <strong>AccessKey</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AccessKey</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -399,7 +451,7 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the platform on which the AccessKey pair leak is detected.
+             * <p>The URL of the platform on which the AccessKey pair leak is detected.</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -407,11 +459,14 @@ public class DescribeAccesskeyLeakListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account to which the leaked AccessKey pair belongs. Valid values:
-             * <p>
+             * <p>The type of the account to which the leaked AccessKey pair belongs. Valid values:</p>
+             * <ul>
+             * <li><strong>master</strong>: Alibaba Cloud account</li>
+             * <li><strong>ram</strong>: RAM user</li>
+             * </ul>
              * 
-             * *   **master**: Alibaba Cloud account
-             * *   **ram**: RAM user
+             * <strong>example:</strong>
+             * <p>master</p>
              */
             public Builder userType(String userType) {
                 this.userType = userType;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyPostPayModuleSwitchRequest} extends {@link RequestModel}
  *
  * <p>ModifyPostPayModuleSwitchRequest</p>
@@ -67,10 +68,13 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         } 
 
         /**
-         * The ID of the pay-as-you-go instance. This parameter is required.
-         * <p>
+         * <p>The ID of the pay-as-you-go instance. This parameter is required.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~DescribeVersionConfig~">DescribeVersionConfig</a> operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeVersionConfig](~DescribeVersionConfig~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>postpay-sas-**</p>
          */
         public Builder postPayInstanceId(String postPayInstanceId) {
             this.putQueryParameter("PostPayInstanceId", postPayInstanceId);
@@ -79,19 +83,25 @@ public class ModifyPostPayModuleSwitchRequest extends Request {
         }
 
         /**
-         * The switch status of the pay-as-you-go module. The value is a JSON string. Valid values:
-         * <p>
+         * <p>The switch status of the pay-as-you-go module. The value is a JSON string. Valid values:</p>
+         * <ul>
+         * <li><p>Key:</p>
+         * <ul>
+         * <li><strong>VUL</strong>: vulnerability fixing module</li>
+         * <li><strong>CSPM</strong>: cloud service configuration check module</li>
+         * <li><strong>AGENTLESS</strong>: agentless detection module</li>
+         * <li><strong>SERVERLESS</strong>: serverless asset module</li>
+         * </ul>
+         * </li>
+         * <li><p>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not specify a value for a module, the original value of the module is retained.</p>
+         * </blockquote>
          * 
-         * *   Key:
-         * 
-         *     *   **VUL**: vulnerability fixing module
-         *     *   **CSPM**: cloud service configuration check module
-         *     *   **AGENTLESS**: agentless detection module
-         *     *   **SERVERLESS**: serverless asset module
-         * 
-         * *   Value: A value of 0 specifies disabled. A value of 1 specifies enabled.
-         * 
-         * >  If you do not specify a value for a module, the original value of the module is retained.
+         * <strong>example:</strong>
+         * <p>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</p>
          */
         public Builder postPayModuleSwitch(String postPayModuleSwitch) {
             this.putQueryParameter("PostPayModuleSwitch", postPayModuleSwitch);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IgnoreIdcProbeScanResultResponseBody} extends {@link TeaModel}
  *
  * <p>IgnoreIdcProbeScanResultResponseBody</p>
@@ -37,7 +38,10 @@ public class IgnoreIdcProbeScanResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E30282D8-AB2D-5EB1-998B-2DDFA948D49D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

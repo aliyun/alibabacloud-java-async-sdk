@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScreenScoreThreadRequest} extends {@link RequestModel}
  *
  * <p>DescribeScreenScoreThreadRequest</p>
@@ -69,7 +70,11 @@ public class DescribeScreenScoreThreadRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1668064495000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -78,7 +83,11 @@ public class DescribeScreenScoreThreadRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651290987000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

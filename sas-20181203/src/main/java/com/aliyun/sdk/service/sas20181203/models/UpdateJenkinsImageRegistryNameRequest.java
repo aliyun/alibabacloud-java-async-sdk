@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateJenkinsImageRegistryNameRequest} extends {@link RequestModel}
  *
  * <p>UpdateJenkinsImageRegistryNameRequest</p>
@@ -81,10 +82,13 @@ public class UpdateJenkinsImageRegistryNameRequest extends Request {
         } 
 
         /**
-         * The ID of the image repository.
-         * <p>
+         * <p>The ID of the image repository.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to query the IDs of image repositories.</p>
+         * </blockquote>
          * 
-         * > You can call the [PageImageRegistry](~~PageImageRegistry~~) operation to query the IDs of image repositories.
+         * <strong>example:</strong>
+         * <p>25090</p>
          */
         public Builder registryId(Long registryId) {
             this.putBodyParameter("RegistryId", registryId);
@@ -93,7 +97,10 @@ public class UpdateJenkinsImageRegistryNameRequest extends Request {
         }
 
         /**
-         * The name of the image repository.
+         * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a0603tk1</p>
          */
         public Builder registryName(String registryName) {
             this.putBodyParameter("RegistryName", registryName);
@@ -102,7 +109,10 @@ public class UpdateJenkinsImageRegistryNameRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.33.XXX.XXX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link IgnoreHcCheckWarningsRequest} extends {@link RequestModel}
  *
  * <p>IgnoreHcCheckWarningsRequest</p>
@@ -138,10 +139,13 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
-         * <p>
+         * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/116182.html">DescribeCheckWarnings</a> operation to query the IDs of check items.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCheckWarnings](~~116182~~) operation to query the IDs of check items.
+         * <strong>example:</strong>
+         * <p>21313</p>
          */
         public Builder checkIds(String checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -150,10 +154,13 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The ID of the alert that is triggered by the check item. Separate multiple IDs with commas (,).
-         * <p>
+         * <p>The ID of the alert that is triggered by the check item. Separate multiple IDs with commas (,).</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/116182.html">DescribeCheckWarnings</a> operation to query the IDs of alerts that are triggered by check items.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCheckWarnings](~~116182~~) operation to query the IDs of alerts that are triggered by check items.
+         * <strong>example:</strong>
+         * <p>98146905,98146907</p>
          */
         public Builder checkWarningIds(String checkWarningIds) {
             this.putQueryParameter("CheckWarningIds", checkWarningIds);
@@ -162,7 +169,10 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The reason for the current operation.
+         * <p>The reason for the current operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -171,10 +181,13 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The ID of the risk item that you want to ignore or cancel ignoring.
-         * <p>
+         * <p>The ID of the risk item that you want to ignore or cancel ignoring.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/116179.html">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of risk items.
+         * <strong>example:</strong>
+         * <p>51</p>
          */
         public Builder riskId(String riskId) {
             this.putQueryParameter("RiskId", riskId);
@@ -183,10 +196,14 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The data source. If this parameter is left empty, the server baseline results are queried by default. Valid values:
-         * <p>
-         * * **default**: server
-         * * **agentless**
+         * <p>The data source. If this parameter is left empty, the server baseline results are queried by default. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: server</li>
+         * <li><strong>agentless</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -195,7 +212,10 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -204,11 +224,15 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         }
 
         /**
-         * The type of the operation that you want to perform. Valid values:
-         * <p>
+         * <p>The type of the operation that you want to perform. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: ignores a risk item</li>
+         * <li><strong>2</strong>: cancels ignoring a risk item</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: ignores a risk item
-         * *   **2**: cancels ignoring a risk item
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder type(Long type) {
             this.putQueryParameter("Type", type);

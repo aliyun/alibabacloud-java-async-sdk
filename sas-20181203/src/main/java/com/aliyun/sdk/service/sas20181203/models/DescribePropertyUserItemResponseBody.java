@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyUserItemResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePropertyUserItemResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the account information returned.
+         * <p>An array that consists of the account information returned.</p>
          */
         public Builder propertyItems(java.util.List < PropertyItems> propertyItems) {
             this.propertyItems = propertyItems;
@@ -77,7 +78,10 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76068BE2-F9C4-4EDD-967B-F503B8CCDD3D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +94,12 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribePropertyUserItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyUserItemResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned on the current page.
+             * <p>The number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribePropertyUserItemResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribePropertyUserItemResponseBody</p>
+     */
     public static class PropertyItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -230,7 +258,10 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * The number of servers that belong to the account.
+             * <p>The number of servers that belong to the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>384</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -238,7 +269,10 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adm</p>
              */
             public Builder user(String user) {
                 this.user = user;

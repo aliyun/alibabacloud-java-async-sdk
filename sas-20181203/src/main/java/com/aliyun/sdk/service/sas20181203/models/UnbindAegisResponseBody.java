@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnbindAegisResponseBody} extends {@link TeaModel}
  *
  * <p>UnbindAegisResponseBody</p>
@@ -37,7 +38,10 @@ public class UnbindAegisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>825F5526-2A17-4279-857F-F790E9590171</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

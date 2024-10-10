@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddContainerDefenseRuleRequest} extends {@link RequestModel}
  *
  * <p>AddContainerDefenseRuleRequest</p>
@@ -151,7 +152,10 @@ public class AddContainerDefenseRuleRequest extends Request {
         } 
 
         /**
-         * The description of the rule.
+         * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-proc-defense</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -160,11 +164,14 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The action that is performed when the rule is hit. Valid values:
-         * <p>
+         * <p>The action that is performed when the rule is hit. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: alert</li>
+         * <li><strong>2</strong>: block</li>
+         * </ul>
          * 
-         * *   **1**: alert
-         * *   **2**: block
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleAction(Integer ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -173,7 +180,10 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule. You do not need to manually specify the ID.
+         * <p>The ID of the rule. You do not need to manually specify the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500018</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -182,7 +192,10 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto-test-rule-lt9umq</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -191,11 +204,14 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The switch of the rule. Valid values:
-         * <p>
+         * <p>The switch of the rule. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: off</li>
+         * <li><strong>1</strong>: on</li>
+         * </ul>
          * 
-         * *   **0**: off
-         * *   **1**: on
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleSwitch(Integer ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);
@@ -204,12 +220,16 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The rule type. Valid values:
-         * <p>
+         * <p>The rule type. Valid values:</p>
+         * <ul>
+         * <li>2: user-defined rules</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only the value 2 is supported.</p>
+         * </blockquote>
          * 
-         * *   2: user-defined rules
-         * 
-         * > Only the value 2 is supported.
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -218,7 +238,7 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The scope.
+         * <p>The scope.</p>
          */
         public Builder scope(java.util.List < Scope> scope) {
             this.putQueryParameter("Scope", scope);
@@ -227,7 +247,7 @@ public class AddContainerDefenseRuleRequest extends Request {
         }
 
         /**
-         * The whitelist.
+         * <p>The whitelist.</p>
          */
         public Builder whitelist(Whitelist whitelist) {
             String whitelistShrink = shrink(whitelist, "Whitelist", "json");
@@ -243,6 +263,12 @@ public class AddContainerDefenseRuleRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddContainerDefenseRuleRequest} extends {@link TeaModel}
+     *
+     * <p>AddContainerDefenseRuleRequest</p>
+     */
     public static class Scope extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllNamespace")
         private Integer allNamespace;
@@ -294,11 +320,14 @@ public class AddContainerDefenseRuleRequest extends Request {
             private java.util.List < String > namespaces; 
 
             /**
-             * Specifies whether to include all namespaces. Valid values:
-             * <p>
+             * <p>Specifies whether to include all namespaces. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: You can use the Namespaces parameter to specify the namespaces to include.</li>
+             * <li><strong>1</strong>: All namespaces are included.</li>
+             * </ul>
              * 
-             * *   **0**: You can use the Namespaces parameter to specify the namespaces to include.
-             * *   **1**: All namespaces are included.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;
@@ -306,10 +335,13 @@ public class AddContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * The ID of the cluster.
-             * <p>
+             * <p>The ID of the cluster.</p>
+             * <blockquote>
+             * <p> You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+             * </blockquote>
              * 
-             * >  You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of clusters.
+             * <strong>example:</strong>
+             * <p>8e2***75b</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -317,7 +349,7 @@ public class AddContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * The namespaces to include.
+             * <p>The namespaces to include.</p>
              */
             public Builder namespaces(java.util.List < String > namespaces) {
                 this.namespaces = namespaces;
@@ -331,6 +363,12 @@ public class AddContainerDefenseRuleRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddContainerDefenseRuleRequest} extends {@link TeaModel}
+     *
+     * <p>AddContainerDefenseRuleRequest</p>
+     */
     public static class Whitelist extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hash")
         private java.util.List < String > hash;
@@ -382,10 +420,10 @@ public class AddContainerDefenseRuleRequest extends Request {
             private java.util.List < String > path; 
 
             /**
-             * The hash values of the files that need to be added to the whitelist.
-             * <p>
-             * 
-             * > This parameter is not supported.
+             * <p>The hash values of the files that need to be added to the whitelist.</p>
+             * <blockquote>
+             * <p>This parameter is not supported.</p>
+             * </blockquote>
              */
             public Builder hash(java.util.List < String > hash) {
                 this.hash = hash;
@@ -393,7 +431,7 @@ public class AddContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * The images that need to be added to the whitelist.
+             * <p>The images that need to be added to the whitelist.</p>
              */
             public Builder image(java.util.List < String > image) {
                 this.image = image;
@@ -401,7 +439,7 @@ public class AddContainerDefenseRuleRequest extends Request {
             }
 
             /**
-             * The paths to the files that need to be added to the whitelist.
+             * <p>The paths to the files that need to be added to the whitelist.</p>
              */
             public Builder path(java.util.List < String > path) {
                 this.path = path;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetVirusScanConfigRequest} extends {@link RequestModel}
  *
  * <p>GetVirusScanConfigRequest</p>
@@ -53,10 +54,13 @@ public class GetVirusScanConfigRequest extends Request {
         } 
 
         /**
-         * The type of the task. Valid values:
-         * <p>
+         * <p>The type of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>VIRUS_VUL_SCHEDULE_SCAN</strong>: a virus scan task.</li>
+         * </ul>
          * 
-         * *   **VIRUS_VUL_SCHEDULE_SCAN**: a virus scan task.
+         * <strong>example:</strong>
+         * <p>VIRUS_VUL_SCHEDULE_SCAN</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateOrUpdateAutoTagRuleResponseBody} extends {@link TeaModel}
  *
  * <p>CreateOrUpdateAutoTagRuleResponseBody</p>
@@ -37,7 +38,10 @@ public class CreateOrUpdateAutoTagRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33DCC98C-824D-55D6-8DC5-47F3A71AD867</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

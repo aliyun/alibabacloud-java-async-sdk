@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyStrategyResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyStrategyResponseBody</p>
@@ -73,7 +74,10 @@ public class ModifyStrategyResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -81,7 +85,10 @@ public class ModifyStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8EFA2BD9-00CD-5D69-B6B0-4EE83EAF072E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +96,7 @@ public class ModifyStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned.
+         * <p>The result returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -97,11 +104,14 @@ public class ModifyStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
          * 
-         * *   **true**: The request was successful.
-         * *   **false**: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -114,6 +124,12 @@ public class ModifyStrategyResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyStrategyResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyStrategyResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StrategyId")
         private Integer strategyId;
@@ -141,7 +157,10 @@ public class ModifyStrategyResponseBody extends TeaModel {
             private Integer strategyId; 
 
             /**
-             * The ID of the baseline check policy.
+             * <p>The ID of the baseline check policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8164239</p>
              */
             public Builder strategyId(Integer strategyId) {
                 this.strategyId = strategyId;

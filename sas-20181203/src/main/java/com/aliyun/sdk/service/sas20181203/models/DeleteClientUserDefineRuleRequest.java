@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteClientUserDefineRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteClientUserDefineRuleRequest</p>
@@ -54,7 +55,8 @@ public class DeleteClientUserDefineRuleRequest extends Request {
         } 
 
         /**
-         * The IDs of the custom defense rules.
+         * <p>The IDs of the custom defense rules.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder idList(java.util.List < Long > idList) {
             this.putQueryParameter("IdList", idList);

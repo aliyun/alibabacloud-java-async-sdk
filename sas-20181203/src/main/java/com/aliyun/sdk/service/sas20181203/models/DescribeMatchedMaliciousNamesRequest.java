@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeMatchedMaliciousNamesRequest} extends {@link RequestModel}
  *
  * <p>DescribeMatchedMaliciousNamesRequest</p>
@@ -67,11 +68,14 @@ public class DescribeMatchedMaliciousNamesRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -80,12 +84,15 @@ public class DescribeMatchedMaliciousNamesRequest extends Request {
         }
 
         /**
-         * The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:
-         * <p>
+         * <p>The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>serious</strong></li>
+         * <li><strong>suspicious</strong></li>
+         * <li><strong>remind</strong></li>
+         * </ul>
          * 
-         * *   **serious**
-         * *   **suspicious**
-         * *   **remind**
+         * <strong>example:</strong>
+         * <p>serious</p>
          */
         public Builder levels(String levels) {
             this.putQueryParameter("Levels", levels);

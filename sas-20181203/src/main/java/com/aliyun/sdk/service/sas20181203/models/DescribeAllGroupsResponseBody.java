@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAllGroupsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAllGroupsResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The total number of server groups.
+         * <p>The total number of server groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -69,7 +73,7 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The grouping information about the servers.
+         * <p>The grouping information about the servers.</p>
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -77,7 +81,10 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E0618A9-D5EF-4220-9471-C42B5E92719F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,6 +97,12 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAllGroupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAllGroupsResponseBody</p>
+     */
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupFlag")
         private Integer groupFlag;
@@ -141,11 +154,14 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
             private String groupName; 
 
             /**
-             * The type of the server group. Valid values:
-             * <p>
+             * <p>The type of the server group. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: default group</li>
+             * <li><strong>1</strong>: other groups</li>
+             * </ul>
              * 
-             * *   **0**: default group
-             * *   **1**: other groups
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
@@ -153,7 +169,10 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server group.
+             * <p>The ID of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8834224</p>
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -161,7 +180,10 @@ public class DescribeAllGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group.
+             * <p>The name of the server group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeTaskErrorLogRequest} extends {@link RequestModel}
  *
  * <p>DescribeTaskErrorLogRequest</p>
@@ -54,10 +55,14 @@ public class DescribeTaskErrorLogRequest extends Request {
         } 
 
         /**
-         * The ID of the task.
-         * <p>
+         * <p>The ID of the task.</p>
+         * <blockquote>
+         * <p> You can call the DescribeImageFixTask operation to query the IDs of tasks.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the DescribeImageFixTask operation to query the IDs of tasks.
+         * <strong>example:</strong>
+         * <p>ivf-6e520160-205d-4801-b8e9-9e7e****</p>
          */
         public Builder buildTaskId(String buildTaskId) {
             this.putQueryParameter("BuildTaskId", buildTaskId);

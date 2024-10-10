@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPluginForUuidRequest} extends {@link RequestModel}
  *
  * <p>ListPluginForUuidRequest</p>
@@ -68,7 +69,7 @@ public class ListPluginForUuidRequest extends Request {
         } 
 
         /**
-         * The plug-in types.
+         * <p>The plug-in types.</p>
          */
         public Builder types(java.util.List < String > types) {
             String typesShrink = shrink(types, "Types", "simple");
@@ -78,10 +79,14 @@ public class ListPluginForUuidRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * <strong>example:</strong>
+         * <p>bdb7071f-129d-4ceb-af80-4cf70c4571c6</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

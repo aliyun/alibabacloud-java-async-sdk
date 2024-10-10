@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulTargetConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulTargetConfigResponseBody</p>
@@ -61,7 +62,10 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9FBC6E47-7508-58C9-9E76-528E118CB1CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the configurations.
+         * <p>An array that consists of the configurations.</p>
          */
         public Builder targetConfigs(java.util.List < TargetConfigs> targetConfigs) {
             this.targetConfigs = targetConfigs;
@@ -77,7 +81,10 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVulTargetConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulTargetConfigResponseBody</p>
+     */
     public static class TargetConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -141,11 +154,14 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Indicates whether the vulnerability scan feature is enabled for the server.
-             * <p>
+             * <p>Indicates whether the vulnerability scan feature is enabled for the server.</p>
+             * <ul>
+             * <li><strong>off</strong>: disabled</li>
+             * <li><strong>on</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **off**: disabled
-             * *   **on**: enabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -153,11 +169,14 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the vulnerability scan feature is enabled for all servers. Valid values:
-             * <p>
+             * <p>Indicates whether the vulnerability scan feature is enabled for all servers. Valid values:</p>
+             * <ul>
+             * <li><strong>off</strong>: disabled</li>
+             * <li><strong>on</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **off**: disabled
-             * *   **on**: enabled
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder overAllConfig(String overAllConfig) {
                 this.overAllConfig = overAllConfig;
@@ -165,13 +184,16 @@ public class DescribeVulTargetConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the vulnerability. Valid values:
-             * <p>
+             * <p>The type of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>cve</strong>: Linux software vulnerability</li>
+             * <li><strong>sys</strong>: Windows system vulnerability</li>
+             * <li><strong>cms</strong>: Web-CMS vulnerability</li>
+             * <li><strong>emg</strong>: urgent vulnerability</li>
+             * </ul>
              * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
-             * *   **cms**: Web-CMS vulnerability
-             * *   **emg**: urgent vulnerability
+             * <strong>example:</strong>
+             * <p>cve</p>
              */
             public Builder type(String type) {
                 this.type = type;

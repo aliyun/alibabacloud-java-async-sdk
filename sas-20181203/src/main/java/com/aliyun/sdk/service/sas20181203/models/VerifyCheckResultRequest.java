@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyCheckResultRequest} extends {@link RequestModel}
  *
  * <p>VerifyCheckResultRequest</p>
@@ -53,7 +54,7 @@ public class VerifyCheckResultRequest extends Request {
         } 
 
         /**
-         * An array that consists of the IDs of risk items.
+         * <p>An array that consists of the IDs of risk items.</p>
          */
         public Builder checkIds(java.util.List < Long > checkIds) {
             this.putQueryParameter("CheckIds", checkIds);

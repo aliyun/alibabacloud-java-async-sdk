@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserSettingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserSettingResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeUserSettingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The severities of alerts. If this parameter is empty, no custom alerts are generated.
+         * <p>The severities of alerts. If this parameter is empty, no custom alerts are generated.</p>
          */
         public Builder alertLevels(java.util.List < String > alertLevels) {
             this.alertLevels = alertLevels;
@@ -69,7 +70,10 @@ public class DescribeUserSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The number of days during which you want to retain invalid alerts.
+         * <p>The number of days during which you want to retain invalid alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder invalidWarningKeepDays(Integer invalidWarningKeepDays) {
             this.invalidWarningKeepDays = invalidWarningKeepDays;
@@ -77,7 +81,10 @@ public class DescribeUserSettingResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09969D2C-4FAD-429E-BFBF-9A60DEF8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

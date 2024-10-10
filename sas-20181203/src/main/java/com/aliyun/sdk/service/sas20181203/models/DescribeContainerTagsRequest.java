@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerTagsRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerTagsRequest</p>
@@ -140,7 +141,10 @@ public class DescribeContainerTagsRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>node-exporter</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -149,10 +153,13 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The ID of the cluster to which the container belongs.
-         * <p>
+         * <p>The ID of the cluster to which the container belongs.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
+         * <strong>example:</strong>
+         * <p>c22143730ab6e40b09ec7c1c51d4d****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -161,7 +168,11 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -170,13 +181,17 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The name of the attribute that is used for the query. Valid values:
-         * <p>
+         * <p>The name of the attribute that is used for the query. Valid values:</p>
+         * <ul>
+         * <li><strong>namespace</strong>: the namespace</li>
+         * <li><strong>appName</strong>: the application name</li>
+         * <li><strong>image</strong>: the image</li>
+         * <li><strong>tag</strong>: the tag</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **namespace**: the namespace
-         * *   **appName**: the application name
-         * *   **image**: the image
-         * *   **tag**: the tag
+         * <strong>example:</strong>
+         * <p>namespace</p>
          */
         public Builder fieldName(String fieldName) {
             this.putQueryParameter("FieldName", fieldName);
@@ -185,7 +200,10 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The value of the attribute that is used for the query.
+         * <p>The value of the attribute that is used for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo4</p>
          */
         public Builder fieldValue(String fieldValue) {
             this.putQueryParameter("FieldValue", fieldValue);
@@ -194,7 +212,10 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-name-01</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -203,7 +224,11 @@ public class DescribeContainerTagsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 200.
+         * <p>The number of entries to return on each page. Default value: 200.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

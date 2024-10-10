@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSwitchRegionDetailRequest} extends {@link RequestModel}
  *
  * <p>GetSwitchRegionDetailRequest</p>
@@ -67,11 +68,14 @@ public class GetSwitchRegionDetailRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -80,11 +84,14 @@ public class GetSwitchRegionDetailRequest extends Request {
         }
 
         /**
-         * The type of the migration operation. Valid values:
-         * <p>
+         * <p>The type of the migration operation. Valid values:</p>
+         * <ul>
+         * <li><strong>sg_switch</strong>: the migration of a server from a region in the Chinese mainland to the Singapore region.</li>
+         * <li><strong>sls_meta_version_switch_stage_1</strong>: the upgrade of log dictionaries.</li>
+         * </ul>
          * 
-         * *   **sg_switch**: the migration of a server from a region in the Chinese mainland to the Singapore region.
-         * *   **sls_meta_version_switch_stage\_1**: the upgrade of log dictionaries.
+         * <strong>example:</strong>
+         * <p>sg_switch</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

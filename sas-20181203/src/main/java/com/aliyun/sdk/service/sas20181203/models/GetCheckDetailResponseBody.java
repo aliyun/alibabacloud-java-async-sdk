@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCheckDetailResponseBody} extends {@link TeaModel}
  *
  * <p>GetCheckDetailResponseBody</p>
@@ -123,7 +124,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         private Solution solution; 
 
         /**
-         * The help information about the check item.
+         * <p>The help information about the check item.</p>
          */
         public Builder assistInfo(AssistInfo assistInfo) {
             this.assistInfo = assistInfo;
@@ -131,7 +132,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The custom configuration items of the check item.
+         * <p>The custom configuration items of the check item.</p>
          */
         public Builder customConfigs(java.util.List < CustomConfigs> customConfigs) {
             this.customConfigs = customConfigs;
@@ -139,7 +140,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the check item.
+         * <p>The description of the check item.</p>
          */
         public Builder description(Description description) {
             this.description = description;
@@ -171,7 +172,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15A6ED6A-DBFE-5255-A248-289907809BEC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -179,7 +183,7 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The solution to handle the risk item.
+         * <p>The solution to handle the risk item.</p>
          */
         public Builder solution(Solution solution) {
             this.solution = solution;
@@ -192,6 +196,12 @@ public class GetCheckDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckDetailResponseBody</p>
+     */
     public static class AssistInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Link")
         private String link;
@@ -243,7 +253,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The link to the help information about the risk item when the Type parameter is set to link.
+             * <p>The link to the help information about the risk item when the Type parameter is set to link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.alibabacloud.com/help/en/resource-access-management/latest/faq-about-ram-users">https://www.alibabacloud.com/help/en/resource-access-management/latest/faq-about-ram-users</a></p>
              */
             public Builder link(String link) {
                 this.link = link;
@@ -251,11 +264,14 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the help information about the risk item. Valid values:
-             * <p>
+             * <p>The type of the help information about the risk item. Valid values:</p>
+             * <ul>
+             * <li><strong>text</strong></li>
+             * <li><strong>link</strong></li>
+             * </ul>
              * 
-             * *   **text**
-             * *   **link**
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -263,7 +279,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The content in the help information about the risk item when the Type parameter is set to text.
+             * <p>The content in the help information about the risk item when the Type parameter is set to text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Configure an IP address whitelist</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -277,6 +296,12 @@ public class GetCheckDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckDetailResponseBody</p>
+     */
     public static class CustomConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
@@ -352,7 +377,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The default value of the custom configuration item. The value is a string.
+             * <p>The default value of the custom configuration item. The value is a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -360,7 +388,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+             * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SessionTimeMax</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -368,7 +399,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword that identifies the custom configuration item for internationalization.
+             * <p>The keyword that identifies the custom configuration item for internationalization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Maximum session time</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -376,7 +410,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the custom configuration item. The value is a JSON string.
+             * <p>The type of the custom configuration item. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;NUMBER&quot;,&quot;range&quot;:[1,24]}</p>
              */
             public Builder typeDefine(String typeDefine) {
                 this.typeDefine = typeDefine;
@@ -384,7 +421,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the custom configuration item. The value is a string.
+             * <p>The value of the custom configuration item. The value is a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -398,6 +438,12 @@ public class GetCheckDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckDetailResponseBody</p>
+     */
     public static class Description extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Link")
         private String link;
@@ -449,7 +495,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The link to the description of the check item.
+             * <p>The link to the description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies">https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies</a></p>
              */
             public Builder link(String link) {
                 this.link = link;
@@ -457,7 +506,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the description of the check item. The value is fixed as text.
+             * <p>The type of the description of the check item. The value is fixed as text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -465,7 +517,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The content in the description of the check item.
+             * <p>The content in the description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The MSE instance does not enable authentication by default. If public network access is enabled at the same time, the data in the configuration center may be dragged and there is a security risk.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -479,6 +534,12 @@ public class GetCheckDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckDetailResponseBody</p>
+     */
     public static class FlowStep extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ShowText")
         private String showText;
@@ -540,6 +601,12 @@ public class GetCheckDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckDetailResponseBody</p>
+     */
     public static class RepairConfigs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConsoleParamType")
         private String consoleParamType;
@@ -723,7 +790,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the custom configuration item. The value is a string.
+             * <p>The default value of the custom configuration item. The value is a string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -755,7 +825,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+             * <p>The name of the custom configuration item. The name of a custom configuration item is unique in a check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SessionTimeMax</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -763,7 +836,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The keyword that identifies the custom configuration item for internationalization.
+             * <p>The keyword that identifies the custom configuration item for internationalization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Maximum session time</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -771,7 +847,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the custom configuration item. The value is a JSON string.
+             * <p>The type of the custom configuration item. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;NUMBER&quot;,&quot;range&quot;:[1,24]}</p>
              */
             public Builder typeDefine(String typeDefine) {
                 this.typeDefine = typeDefine;
@@ -787,7 +866,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The content in the description of the check item.
+             * <p>The content in the description of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The MSE instance does not enable authentication by default. If public network access is enabled at the same time, the data in the configuration center may be dragged and there is a security risk.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -801,6 +883,12 @@ public class GetCheckDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckDetailResponseBody</p>
+     */
     public static class RepairSetting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowStep")
         private java.util.List < FlowStep> flowStep;
@@ -922,6 +1010,12 @@ public class GetCheckDetailResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetCheckDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCheckDetailResponseBody</p>
+     */
     public static class Solution extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Link")
         private String link;
@@ -973,7 +1067,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The link to the solution to handle the risk item when the Type parameter is set to link.
+             * <p>The link to the solution to handle the risk item when the Type parameter is set to link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies">https://www.alibabacloud.com/help/en/object-storage-service/latest/tutorial-implement-data-sharing-across-departments-based-on-bucket-policies</a></p>
              */
             public Builder link(String link) {
                 this.link = link;
@@ -981,11 +1078,14 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the solution to handle the risk item. Valid values:
-             * <p>
+             * <p>The type of the solution to handle the risk item. Valid values:</p>
+             * <ul>
+             * <li><strong>text</strong></li>
+             * <li><strong>link</strong></li>
+             * </ul>
              * 
-             * *   **text**
-             * *   **link**
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -993,7 +1093,10 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the solution to handle the risk item when the Type parameter is set to text.
+             * <p>The content of the solution to handle the risk item when the Type parameter is set to text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enter the MSE product console - registration and configuration center - instance list, click the corresponding instance name to enter the instance details, find the public network whitelist setting option in the basic information, and configure the whitelist according to business needs. It is forbidden to configure 0.0.0.0 or the whitelist as null.</p>
              */
             public Builder value(String value) {
                 this.value = value;

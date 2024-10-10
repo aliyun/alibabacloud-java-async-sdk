@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPodRiskRequest} extends {@link RequestModel}
  *
  * <p>ListPodRiskRequest</p>
@@ -123,7 +124,10 @@ public class ListPodRiskRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx1</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -132,10 +136,13 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~182997~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>c314aa5b2f208461dad821cdfed82****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -144,7 +151,10 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -153,7 +163,10 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * The namespace of the Kubernetes cluster.
+         * <p>The namespace of the Kubernetes cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>taas</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -162,7 +175,10 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 20.
+         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +187,10 @@ public class ListPodRiskRequest extends Request {
         }
 
         /**
-         * The name of the pod.
+         * <p>The name of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd-84898334227-p****</p>
          */
         public Builder podName(String podName) {
             this.putQueryParameter("PodName", podName);

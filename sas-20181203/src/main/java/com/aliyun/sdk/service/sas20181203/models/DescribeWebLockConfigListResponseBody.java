@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockConfigListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebLockConfigListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the configurations of web tamper proofing.
+         * <p>An array that consists of the configurations of web tamper proofing.</p>
          */
         public Builder configList(java.util.List < ConfigList> configList) {
             this.configList = configList;
@@ -69,7 +70,10 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9354C1A-D709-4873-9AAE-41513327B247</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of directories that have web tamper proofing enabled on the server.
+         * <p>The total number of directories that have web tamper proofing enabled on the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeWebLockConfigListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeWebLockConfigListResponseBody</p>
+     */
     public static class ConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenceMode")
         private String defenceMode;
@@ -237,11 +250,14 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The prevention mode. Valid values:
-             * <p>
+             * <p>The prevention mode. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong>: Interception Mode</li>
+             * <li><strong>audit</strong>: Alert Mode</li>
+             * </ul>
              * 
-             * *   **block**: Interception Mode
-             * *   **audit**: Alert Mode
+             * <strong>example:</strong>
+             * <p>audit</p>
              */
             public Builder defenceMode(String defenceMode) {
                 this.defenceMode = defenceMode;
@@ -249,7 +265,10 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The directory that has web tamper proofing enabled.
+             * <p>The directory that has web tamper proofing enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/www/tmp/</p>
              */
             public Builder dir(String dir) {
                 this.dir = dir;
@@ -257,10 +276,13 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The directory that has web tamper proofing disabled.
-             * <p>
+             * <p>The directory that has web tamper proofing disabled.</p>
+             * <blockquote>
+             * <p>If the value of <strong>Mode</strong> is <strong>blacklist</strong>, this parameter is returned.</p>
+             * </blockquote>
              * 
-             * > If the value of **Mode** is **blacklist**, this parameter is returned.
+             * <strong>example:</strong>
+             * <p>/home/admin/tomcat</p>
              */
             public Builder exclusiveDir(String exclusiveDir) {
                 this.exclusiveDir = exclusiveDir;
@@ -268,10 +290,13 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The file that has web tamper proofing disabled.
-             * <p>
+             * <p>The file that has web tamper proofing disabled.</p>
+             * <blockquote>
+             * <p>If the value of <strong>Mode</strong> is <strong>blacklist</strong>, this parameter is returned.</p>
+             * </blockquote>
              * 
-             * > If the value of **Mode** is **blacklist**, this parameter is returned.
+             * <strong>example:</strong>
+             * <p>/home/admin/tomcat/localhost.log</p>
              */
             public Builder exclusiveFile(String exclusiveFile) {
                 this.exclusiveFile = exclusiveFile;
@@ -279,10 +304,13 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file that has web tamper proofing disabled.
-             * <p>
+             * <p>The type of the file that has web tamper proofing disabled.</p>
+             * <blockquote>
+             * <p>If the value of <strong>Mode</strong> is <strong>blacklist</strong>, this parameter is returned.</p>
+             * </blockquote>
              * 
-             * > If the value of **Mode** is **blacklist**, this parameter is returned.
+             * <strong>example:</strong>
+             * <p>*.jpg</p>
              */
             public Builder exclusiveFileType(String exclusiveFileType) {
                 this.exclusiveFileType = exclusiveFileType;
@@ -290,7 +318,10 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the directory that has web tamper proofing enabled.
+             * <p>The ID of the directory that has web tamper proofing enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -298,10 +329,13 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The file that has web tamper proofing enabled.
-             * <p>
+             * <p>The file that has web tamper proofing enabled.</p>
+             * <blockquote>
+             * <p>If the value of <strong>Mode</strong> is <strong>whitelist</strong>, this parameter is returned.</p>
+             * </blockquote>
              * 
-             * > If the value of **Mode** is **whitelist**, this parameter is returned.
+             * <strong>example:</strong>
+             * <p>/home/admin/tomcat/aaa.log</p>
              */
             public Builder inclusiveFile(String inclusiveFile) {
                 this.inclusiveFile = inclusiveFile;
@@ -309,10 +343,13 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the file that has web tamper proofing enabled.
-             * <p>
+             * <p>The type of the file that has web tamper proofing enabled.</p>
+             * <blockquote>
+             * <p>If the value of <strong>Mode</strong> is <strong>whitelist</strong>, this parameter is returned.</p>
+             * </blockquote>
              * 
-             * > If the value of **Mode** is **whitelist**, this parameter is returned.
+             * <strong>example:</strong>
+             * <p>jpg</p>
              */
             public Builder inclusiveFileType(String inclusiveFileType) {
                 this.inclusiveFileType = inclusiveFileType;
@@ -320,7 +357,10 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The local path to the backup files of the protected directory.
+             * <p>The local path to the backup files of the protected directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/backup</p>
              */
             public Builder localBackupDir(String localBackupDir) {
                 this.localBackupDir = localBackupDir;
@@ -328,11 +368,14 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The protection mode of web tamper proofing. Valid values:
-             * <p>
+             * <p>The protection mode of web tamper proofing. Valid values:</p>
+             * <ul>
+             * <li><strong>whitelist</strong>: In this mode, web tamper proofing is enabled for the specified directories and file types.</li>
+             * <li><strong>blacklist</strong>: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.</li>
+             * </ul>
              * 
-             * *   **whitelist**: In this mode, web tamper proofing is enabled for the specified directories and file types.
-             * *   **blacklist**: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.
+             * <strong>example:</strong>
+             * <p>blacklist</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -340,7 +383,10 @@ public class DescribeWebLockConfigListResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server that has web tamper proofing enabled.
+             * <p>The UUID of the server that has web tamper proofing enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80d2f7d6-31a9-4d7f-8ff4-7ecc42f8****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

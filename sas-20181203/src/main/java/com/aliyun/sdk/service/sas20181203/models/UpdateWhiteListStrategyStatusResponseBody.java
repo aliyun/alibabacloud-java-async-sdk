@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWhiteListStrategyStatusResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateWhiteListStrategyStatusResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateWhiteListStrategyStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>379a9b8f-107b-4630-9e95-2299a1ea****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

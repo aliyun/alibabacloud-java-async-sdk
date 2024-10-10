@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DisableCustomBlockRecordRequest} extends {@link RequestModel}
  *
  * <p>DisableCustomBlockRecordRequest</p>
@@ -83,10 +84,14 @@ public class DisableCustomBlockRecordRequest extends Request {
         } 
 
         /**
-         * The IP address that is specified in the policy.
-         * <p>
+         * <p>The IP address that is specified in the policy.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> operation to query the IP address.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeCustomBlockRecords](~~DescribeCustomBlockRecords~~) operation to query the IP address.
+         * <strong>example:</strong>
+         * <p>62.233.XX.XX</p>
          */
         public Builder blockIp(String blockIp) {
             this.putQueryParameter("BlockIp", blockIp);
@@ -95,11 +100,15 @@ public class DisableCustomBlockRecordRequest extends Request {
         }
 
         /**
-         * The traffic direction that is specified in the policy. Valid values:
-         * <p>
+         * <p>The traffic direction that is specified in the policy. Valid values:</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound</li>
+         * <li><strong>out</strong>: outbound</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **in**: inbound
-         * *   **out**: outbound
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         public Builder bound(String bound) {
             this.putQueryParameter("Bound", bound);

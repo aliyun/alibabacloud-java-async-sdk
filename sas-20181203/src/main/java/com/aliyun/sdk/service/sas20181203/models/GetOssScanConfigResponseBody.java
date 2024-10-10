@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetOssScanConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetOssScanConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E10BAF1C-A6C5-51E2-866C-76D5922E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetOssScanConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetOssScanConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetOssScanConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllKeyPrefix")
         private Boolean allKeyPrefix;
@@ -289,7 +299,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * Whether to match all file prefixes.
+             * <p>Whether to match all file prefixes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allKeyPrefix(Boolean allKeyPrefix) {
                 this.allKeyPrefix = allKeyPrefix;
@@ -297,7 +310,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the buckets.
+             * <p>The number of the buckets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bucketCount(Integer bucketCount) {
                 this.bucketCount = bucketCount;
@@ -305,7 +321,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the bucket.
+             * <p>The name of the bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hz-new01****</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -313,7 +332,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The names of the buckets.
+             * <p>The names of the buckets.</p>
              */
             public Builder bucketNameList(java.util.List < String > bucketNameList) {
                 this.bucketNameList = bucketNameList;
@@ -321,7 +340,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+             * <p>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
                 this.decompressMaxFileCount = decompressMaxFileCount;
@@ -329,7 +351,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
+             * <p>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder decompressMaxLayer(Integer decompressMaxLayer) {
                 this.decompressMaxLayer = decompressMaxLayer;
@@ -345,11 +370,14 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the check policy is enabled. Valid values:
-             * <p>
+             * <p>Indicates whether the check policy is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: enabled.</li>
+             * <li><strong>0</strong>: disabled.</li>
+             * </ul>
              * 
-             * *   **1**: enabled.
-             * *   **0**: disabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -357,7 +385,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the check. The time is in the HH:mm:ss format.
+             * <p>The end time of the check. The time is in the HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -365,7 +396,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * <p>The ID of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1274****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -373,7 +407,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The prefixes of the object that you want to check.
+             * <p>The prefixes of the object that you want to check.</p>
              */
             public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
                 this.keyPrefixList = keyPrefixList;
@@ -381,7 +415,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The suffixes of the objects that are checked.
+             * <p>The suffixes of the objects that are checked.</p>
              */
             public Builder keySuffixList(java.util.List < String > keySuffixList) {
                 this.keySuffixList = keySuffixList;
@@ -397,7 +431,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the policy last update.
+             * <p>The time when the policy last update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1702025633079</p>
              */
             public Builder lastUpdateTime(Long lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -405,7 +442,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * <p>The name of the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test0104</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -413,7 +453,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The days when the check is performed. The value indicates the days of the week.
+             * <p>The days when the check is performed. The value indicates the days of the week.</p>
              */
             public Builder scanDayList(java.util.List < Integer > scanDayList) {
                 this.scanDayList = scanDayList;
@@ -421,7 +461,10 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the check. The time is in the HH:mm:ss format.
+             * <p>The start time of the check. The time is in the HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

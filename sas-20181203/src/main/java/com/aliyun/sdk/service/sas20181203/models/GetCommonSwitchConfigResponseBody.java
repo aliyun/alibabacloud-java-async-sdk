@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCommonSwitchConfigResponseBody} extends {@link TeaModel}
  *
  * <p>GetCommonSwitchConfigResponseBody</p>
@@ -49,7 +50,7 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +58,10 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCommonSwitchConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCommonSwitchConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetDefault")
         private String targetDefault;
@@ -109,11 +119,14 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
             private String targetSyncStatus; 
 
             /**
-             * Specifies whether to turn on the switch for newly added servers. Valid values:
-             * <p>
+             * <p>Specifies whether to turn on the switch for newly added servers. Valid values:</p>
+             * <ul>
+             * <li><strong>add</strong>: By default, the switch is turned on for newly added servers.</li>
+             * <li><strong>del</strong>: By default, the switch is turned off for newly added servers.</li>
+             * </ul>
              * 
-             * *   **add**: By default, the switch is turned on for newly added servers.
-             * *   **del**: By default, the switch is turned off for newly added servers.
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder targetDefault(String targetDefault) {
                 this.targetDefault = targetDefault;
@@ -121,11 +134,14 @@ public class GetCommonSwitchConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the synchronization. Valid values:
-             * <p>
+             * <p>The status of the synchronization. Valid values:</p>
+             * <ul>
+             * <li><strong>sync</strong>: The modifications are being synchronized.</li>
+             * <li><strong>valid</strong>: The modifications has taken effect.</li>
+             * </ul>
              * 
-             * *   **sync**: The modifications are being synchronized.
-             * *   **valid**: The modifications has taken effect.
+             * <strong>example:</strong>
+             * <p>valid</p>
              */
             public Builder targetSyncStatus(String targetSyncStatus) {
                 this.targetSyncStatus = targetSyncStatus;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWhiteListEffectiveAssetsRequest} extends {@link RequestModel}
  *
  * <p>DescribeWhiteListEffectiveAssetsRequest</p>
@@ -137,7 +138,10 @@ public class DescribeWhiteListEffectiveAssetsRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**. Pages start from page 1.
+         * <p>The page number. Default value: <strong>1</strong>. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -146,11 +150,14 @@ public class DescribeWhiteListEffectiveAssetsRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -159,11 +166,14 @@ public class DescribeWhiteListEffectiveAssetsRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the number of **untrusted programs**. Valid values:
-         * <p>
+         * <p>Specifies whether to return the number of <strong>untrusted programs</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
          * 
-         * *   **0**: no
-         * *   **1**: yes
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder needStatistics(Integer needStatistics) {
             this.putQueryParameter("NeedStatistics", needStatistics);
@@ -172,10 +182,13 @@ public class DescribeWhiteListEffectiveAssetsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: **1000**. Default value: 20. If you leave this parameter empty, 20 data entries are returned per page.
-         * <p>
+         * <p>The number of entries per page. Maximum value: <strong>1000</strong>. Default value: 20. If you leave this parameter empty, 20 data entries are returned per page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +197,10 @@ public class DescribeWhiteListEffectiveAssetsRequest extends Request {
         }
 
         /**
-         * The condition that is used to query assets. You can enter an IP address, a public IP address, an private IP address, or an asset name for fuzzy match.
+         * <p>The condition that is used to query assets. You can enter an IP address, a public IP address, an private IP address, or an asset name for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222.185.XX.XX</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -193,7 +209,10 @@ public class DescribeWhiteListEffectiveAssetsRequest extends Request {
         }
 
         /**
-         * The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.
+         * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27.212.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -202,10 +221,13 @@ public class DescribeWhiteListEffectiveAssetsRequest extends Request {
         }
 
         /**
-         * The ID of the policy.
-         * <p>
+         * <p>The ID of the policy.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the ID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeWhiteListStrategyList](~~DescribeWhiteListStrategyList~~) operation to obtain the ID.
+         * <strong>example:</strong>
+         * <p>8437592</p>
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);

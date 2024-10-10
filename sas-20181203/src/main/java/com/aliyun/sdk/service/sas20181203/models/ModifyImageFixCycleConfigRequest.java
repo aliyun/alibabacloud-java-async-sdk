@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyImageFixCycleConfigRequest} extends {@link RequestModel}
  *
  * <p>ModifyImageFixCycleConfigRequest</p>
@@ -95,7 +96,10 @@ public class ModifyImageFixCycleConfigRequest extends Request {
         } 
 
         /**
-         * The cycle of the scheduled fix. Unit: day.
+         * <p>The cycle of the scheduled fix. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder imageFixCycle(Integer imageFixCycle) {
             this.putBodyParameter("ImageFixCycle", imageFixCycle);
@@ -104,11 +108,14 @@ public class ModifyImageFixCycleConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the schedule image fix.
-         * <p>
+         * <p>Specifies whether to enable the schedule image fix.</p>
+         * <ul>
+         * <li><strong>on</strong>: enable</li>
+         * <li><strong>off</strong>: disable</li>
+         * </ul>
          * 
-         * *   **on**: enable
-         * *   **off**: disable
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder imageFixSwitch(String imageFixSwitch) {
             this.putBodyParameter("ImageFixSwitch", imageFixSwitch);
@@ -117,11 +124,14 @@ public class ModifyImageFixCycleConfigRequest extends Request {
         }
 
         /**
-         * The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:
-         * <p>
+         * <p>The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <ul>
+         * <li><strong>type</strong>: The type of the image. The value is fixed to repo.</li>
+         * <li><strong>target</strong>: The content of the image. The value is in the format of Namespace/Image repository.</li>
+         * </ul>
          * 
-         * *   **type**: The type of the image. The value is fixed to repo.
-         * *   **target**: The content of the image. The value is in the format of Namespace/Image repository.
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;repo&quot;,&quot;target&quot;:[&quot;cdp-uat/zentao&quot;,&quot;qa-dac/yyuan9&quot;,&quot;cafdms-qa/xxl-job-admin&quot;]}</p>
          */
         public Builder imageFixTarget(String imageFixTarget) {
             this.putBodyParameter("ImageFixTarget", imageFixTarget);
@@ -130,7 +140,10 @@ public class ModifyImageFixCycleConfigRequest extends Request {
         }
 
         /**
-         * The time range during which the image was modified. Unit: day.
+         * <p>The time range during which the image was modified. Unit: day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder imageTimeRange(Integer imageTimeRange) {
             this.putBodyParameter("ImageTimeRange", imageTimeRange);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAssetDetailByUuidResponseBody} extends {@link TeaModel}
  *
  * <p>GetAssetDetailByUuidResponseBody</p>
@@ -49,7 +50,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the server.
+         * <p>The details of the server.</p>
          */
         public Builder assetDetail(AssetDetail assetDetail) {
             this.assetDetail = assetDetail;
@@ -57,7 +58,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4892B68B-47BC-5E56-B327-9C2ACC6C1C09</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAssetDetailByUuidResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAssetDetailByUuidResponseBody</p>
+     */
     public static class DiskInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
@@ -145,7 +155,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             private Long useSizeByte; 
 
             /**
-             * The name of the disk.
+             * <p>The name of the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/vda1</p>
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -153,7 +166,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The total disk space. Unit: GB.
+             * <p>The total disk space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -161,7 +177,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The total disk space. Unit: bytes.
+             * <p>The total disk space. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42140479488</p>
              */
             public Builder totalSizeByte(Long totalSizeByte) {
                 this.totalSizeByte = totalSizeByte;
@@ -169,7 +188,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of the used disk space. Unit: GB.
+             * <p>The amount of the used disk space. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder useSize(Long useSize) {
                 this.useSize = useSize;
@@ -177,7 +199,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of the used disk space. Unit: bytes.
+             * <p>The amount of the used disk space. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2998996992</p>
              */
             public Builder useSizeByte(Long useSizeByte) {
                 this.useSizeByte = useSizeByte;
@@ -191,6 +216,12 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetAssetDetailByUuidResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAssetDetailByUuidResponseBody</p>
+     */
     public static class AssetDetail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetType")
         private String assetType;
@@ -602,17 +633,20 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * The type of the server. Valid values:
-             * <p>
+             * <p>The type of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: ECS instance</li>
+             * <li><strong>1</strong>: Server Load Balancer (SLB) instance</li>
+             * <li><strong>2</strong>: NAT gateway</li>
+             * <li><strong>3</strong>: ApsaraDB RDS instance</li>
+             * <li><strong>4</strong>: ApsaraDB for MongoDB instance</li>
+             * <li><strong>5</strong>: ApsaraDB for Redis instance</li>
+             * <li><strong>6</strong>: image</li>
+             * <li><strong>7</strong>: container</li>
+             * </ul>
              * 
-             * *   **0**: ECS instance
-             * *   **1**: Server Load Balancer (SLB) instance
-             * *   **2**: NAT gateway
-             * *   **3**: ApsaraDB RDS instance
-             * *   **4**: ApsaraDB for MongoDB instance
-             * *   **5**: ApsaraDB for Redis instance
-             * *   **6**: image
-             * *   **7**: container
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -620,7 +654,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when Security Center is authorized to protect the asset. Unit: milliseconds.
+             * <p>The timestamp when Security Center is authorized to protect the asset. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1627974044000</p>
              */
             public Builder authModifyTime(Long authModifyTime) {
                 this.authModifyTime = authModifyTime;
@@ -628,15 +665,18 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Security Center that is authorized to protect the asset. Valid values:
-             * <p>
+             * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Basic edition</li>
+             * <li><strong>6</strong>: Anti-virus edition</li>
+             * <li><strong>5</strong>: Advanced edition</li>
+             * <li><strong>3</strong>: Enterprise edition</li>
+             * <li><strong>7</strong>: Ultimate edition</li>
+             * <li><strong>10</strong>: Value-added Plan edition</li>
+             * </ul>
              * 
-             * *   **1**: Basic edition
-             * *   **6**: Anti-virus edition
-             * *   **5**: Advanced edition
-             * *   **3**: Enterprise edition
-             * *   **7**: Ultimate edition
-             * *   **10**: Value-added Plan edition
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -644,11 +684,14 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Security Center is authorized to protect the asset. Valid values:
-             * <p>
+             * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Security Center is authorized to protect the asset.</li>
+             * <li><strong>false</strong>: Security Center is not authorized to protect the asset.</li>
+             * </ul>
              * 
-             * *   **true**: Security Center is authorized to protect the asset.
-             * *   **false**: Security Center is not authorized to protect the asset.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -656,12 +699,15 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Security Center agent. Valid values:
-             * <p>
+             * <p>The status of the Security Center agent. Valid values:</p>
+             * <ul>
+             * <li><strong>pause</strong>: The Security Center agent stops protecting your server.</li>
+             * <li><strong>online</strong>: The Security Center agent is protecting your server.</li>
+             * <li><strong>offline</strong>: The Security Center agent does not protect your server.</li>
+             * </ul>
              * 
-             * *   **pause**: The Security Center agent stops protecting your server.
-             * *   **online**: The Security Center agent is protecting your server.
-             * *   **offline**: The Security Center agent does not protect your server.
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -669,7 +715,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the Security Center agent.
+             * <p>The version of the Security Center agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.0</p>
              */
             public Builder clientVersion(String clientVersion) {
                 this.clientVersion = clientVersion;
@@ -677,7 +726,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -685,7 +737,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the CPU.
+             * <p>The details of the CPU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intel(R) Xeon(R) Platinum 8163 CPU @ 2.50GHz</p>
              */
             public Builder cpuInfo(String cpuInfo) {
                 this.cpuInfo = cpuInfo;
@@ -693,7 +748,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when Security Center records the details of the server. Unit: milliseconds.
+             * <p>The timestamp when Security Center records the details of the server. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1603863599000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -701,7 +759,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The list of information about the disk.
+             * <p>The list of information about the disk.</p>
              */
             public Builder diskInfoList(java.util.List < DiskInfoList> diskInfoList) {
                 this.diskInfoList = diskInfoList;
@@ -709,11 +767,14 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the asset is provided by Alibaba Cloud. Valid values:
-             * <p>
+             * <p>Indicates whether the asset is provided by Alibaba Cloud. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: The server is provided by Alibaba Cloud.</li>
+             * <li><strong>1</strong>: The server is not provided by Alibaba Cloud.</li>
+             * </ul>
              * 
-             * *   **0**: The server is provided by Alibaba Cloud.
-             * *   **1**: The server is not provided by Alibaba Cloud.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder flag(Integer flag) {
                 this.flag = flag;
@@ -721,7 +782,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The group to which the server belongs. By default, the servers that are not grouped belong to the **Default** group.
+             * <p>The group to which the server belongs. By default, the servers that are not grouped belong to the <strong>Default</strong> group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupTrace(String groupTrace) {
                 this.groupTrace = groupTrace;
@@ -729,7 +793,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the host.
+             * <p>The name of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qewrqwerqs****</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -737,7 +804,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * <p>The ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6h7p2fgk6rkk0g****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -745,7 +815,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * <p>The name of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-fasdfasdfadfafa****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -753,7 +826,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * <p>The public IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.47.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -761,7 +837,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
+             * <p>The private IP address of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -769,7 +848,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address that is assigned to the Elastic Compute Service (ECS) instance.
+             * <p>The IP address that is assigned to the Elastic Compute Service (ECS) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.47.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -777,7 +859,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the IP addresses of the server.
+             * <p>An array that consists of the IP addresses of the server.</p>
              */
             public Builder ipList(java.util.List < String > ipList) {
                 this.ipList = ipList;
@@ -785,7 +867,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The kernel version of the operating system.
+             * <p>The kernel version of the operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.18.0-80.11.2.el8_0.x86_64</p>
              */
             public Builder kernel(String kernel) {
                 this.kernel = kernel;
@@ -793,7 +878,7 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the media access control (MAC) addresses of the server.
+             * <p>An array that consists of the media access control (MAC) addresses of the server.</p>
              */
             public Builder macList(java.util.List < String > macList) {
                 this.macList = macList;
@@ -801,7 +886,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the server. Unit: GB.
+             * <p>The memory size of the server. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -809,7 +897,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the server. Unit: MB.
+             * <p>The memory size of the server. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16384</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -817,7 +908,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system type of the server.
+             * <p>The operating system type of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -825,7 +919,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system version of the server.
+             * <p>The operating system version of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux 64bit</p>
              */
             public Builder osDetail(String osDetail) {
                 this.osDetail = osDetail;
@@ -833,7 +930,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operating system that the server runs.
+             * <p>The name of the operating system that the server runs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS  7.4 64bit</p>
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -841,7 +941,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the server resides.
+             * <p>The region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -849,7 +952,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the asset resides.
+             * <p>The ID of the region in which the asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hanghzou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -857,7 +963,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region in which the server resides.
+             * <p>The name of the region in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hohhot)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -865,7 +974,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The operating system information about the server.
+             * <p>The operating system information about the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CentOS Linux 8.0.1905</p>
              */
             public Builder sysInfo(String sysInfo) {
                 this.sysInfo = sysInfo;
@@ -873,7 +985,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The tag that is added to the server.
+             * <p>The tag that is added to the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InternetIp</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -881,7 +996,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9e6cad93-a379-46fd-a701-9bbf02f4****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -889,7 +1007,10 @@ public class GetAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the server resides.
+             * <p>The ID of the virtual private cloud (VPC) in which the server resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1fs3bwonlfq503w****</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

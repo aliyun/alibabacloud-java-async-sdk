@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
  *
  * <p>GetClientRatioStatisticResponseBody</p>
@@ -73,7 +74,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics on the client installation rate.
+         * <p>The statistics on the client installation rate.</p>
          */
         public Builder clientInstallRatio(ClientInstallRatio clientInstallRatio) {
             this.clientInstallRatio = clientInstallRatio;
@@ -81,7 +82,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics on the client online rate.
+         * <p>The statistics on the client online rate.</p>
          */
         public Builder clientOnlineRatio(ClientOnlineRatio clientOnlineRatio) {
             this.clientOnlineRatio = clientOnlineRatio;
@@ -89,7 +90,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The list of time when statistics were collected.
+         * <p>The list of time when statistics were collected.</p>
          */
         public Builder dates(java.util.List < Long > dates) {
             this.dates = dates;
@@ -97,7 +98,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetTotalCount")
         private Integer assetTotalCount;
@@ -173,7 +183,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Integer installedAssetCount; 
 
             /**
-             * The total number of assets.
+             * <p>The total number of assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder assetTotalCount(Integer assetTotalCount) {
                 this.assetTotalCount = assetTotalCount;
@@ -181,7 +194,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the calculation. Unit: milliseconds.
+             * <p>The timestamp of the calculation. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687759630045</p>
              */
             public Builder calculateTime(Long calculateTime) {
                 this.calculateTime = calculateTime;
@@ -189,7 +205,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The installation rate. Unit: %.
+             * <p>The installation rate. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70.00</p>
              */
             public Builder installRatio(Double installRatio) {
                 this.installRatio = installRatio;
@@ -197,7 +216,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets on which the client is installed.
+             * <p>The number of assets on which the client is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder installedAssetCount(Integer installedAssetCount) {
                 this.installedAssetCount = installedAssetCount;
@@ -211,6 +233,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class CurrentItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
@@ -250,7 +278,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Long vendor; 
 
             /**
-             * The list of the statistics on the installation rate of the client by vendor.
+             * <p>The list of the statistics on the installation rate of the client by vendor.</p>
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -258,14 +286,17 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the server. Valid values:
-             * <p>
+             * <p>The type of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+             * <li><strong>1</strong>: a third-party cloud asset</li>
+             * <li><strong>2</strong>: an asset in a data center</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+             * <li><strong>8</strong>: a lightweight asset</li>
+             * </ul>
              * 
-             * *   **0**: an asset provided by Alibaba Cloud
-             * *   **1**: a third-party cloud asset
-             * *   **2**: an asset in a data center
-             * *   **3**, **4**, **5**, and **7**: other cloud asset
-             * *   **8**: a lightweight asset
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vendor(Long vendor) {
                 this.vendor = vendor;
@@ -279,6 +310,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class HistoryItemsItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetTotalCount")
         private Integer assetTotalCount;
@@ -342,7 +379,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Integer installedAssetCount; 
 
             /**
-             * The total number of assets.
+             * <p>The total number of assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder assetTotalCount(Integer assetTotalCount) {
                 this.assetTotalCount = assetTotalCount;
@@ -350,7 +390,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the calculation. Unit: milliseconds.
+             * <p>The timestamp of the calculation. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687759630045</p>
              */
             public Builder calculateTime(Long calculateTime) {
                 this.calculateTime = calculateTime;
@@ -358,7 +401,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The installation rate. Unit: %.
+             * <p>The installation rate. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80.00</p>
              */
             public Builder installRatio(Double installRatio) {
                 this.installRatio = installRatio;
@@ -366,7 +412,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets on which the client is installed.
+             * <p>The number of assets on which the client is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder installedAssetCount(Integer installedAssetCount) {
                 this.installedAssetCount = installedAssetCount;
@@ -380,6 +429,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class HistoryItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < HistoryItemsItems> items;
@@ -419,7 +474,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Long vendor; 
 
             /**
-             * The list of statistics on the client installation rate.
+             * <p>The list of statistics on the client installation rate.</p>
              */
             public Builder items(java.util.List < HistoryItemsItems> items) {
                 this.items = items;
@@ -427,14 +482,17 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud asset. Valid values:
-             * <p>
+             * <p>The type of the cloud asset. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+             * <li><strong>1</strong>: a third-party cloud asset</li>
+             * <li><strong>2</strong>: an asset in a data center</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+             * <li><strong>8</strong>: a simple application server</li>
+             * </ul>
              * 
-             * *   **0**: an asset provided by Alibaba Cloud
-             * *   **1**: a third-party cloud asset
-             * *   **2**: an asset in a data center
-             * *   **3**, **4**, **5**, and **7**: other cloud asset
-             * *   **8**: a simple application server
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder vendor(Long vendor) {
                 this.vendor = vendor;
@@ -448,6 +506,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class ClientInstallRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentItems")
         private java.util.List < CurrentItems> currentItems;
@@ -487,7 +551,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private java.util.List < HistoryItems> historyItems; 
 
             /**
-             * The list of current statistics on the installation rate of the client.
+             * <p>The list of current statistics on the installation rate of the client.</p>
              */
             public Builder currentItems(java.util.List < CurrentItems> currentItems) {
                 this.currentItems = currentItems;
@@ -495,7 +559,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The list of historical statistics on the installation rate of the client.
+             * <p>The list of historical statistics on the installation rate of the client.</p>
              */
             public Builder historyItems(java.util.List < HistoryItems> historyItems) {
                 this.historyItems = historyItems;
@@ -509,6 +573,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class CurrentItemsItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetInstallCount")
         private Integer assetInstallCount;
@@ -572,7 +642,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Double onlineRatio; 
 
             /**
-             * The number of assets on which the client is installed.
+             * <p>The number of assets on which the client is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder assetInstallCount(Integer assetInstallCount) {
                 this.assetInstallCount = assetInstallCount;
@@ -580,7 +653,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the calculation. Unit: milliseconds.
+             * <p>The timestamp of the calculation. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687759630045</p>
              */
             public Builder calculateTime(Long calculateTime) {
                 this.calculateTime = calculateTime;
@@ -588,7 +664,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of online assets.
+             * <p>The number of online assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder onlineAssetCount(Integer onlineAssetCount) {
                 this.onlineAssetCount = onlineAssetCount;
@@ -596,7 +675,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The online rate. Unit: %.
+             * <p>The online rate. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.00</p>
              */
             public Builder onlineRatio(Double onlineRatio) {
                 this.onlineRatio = onlineRatio;
@@ -610,6 +692,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class ClientOnlineRatioCurrentItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < CurrentItemsItems> items;
@@ -649,7 +737,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Long vendor; 
 
             /**
-             * The list of current statistics on the online rate of the client by vendor.
+             * <p>The list of current statistics on the online rate of the client by vendor.</p>
              */
             public Builder items(java.util.List < CurrentItemsItems> items) {
                 this.items = items;
@@ -657,14 +745,17 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud asset. Valid values:
-             * <p>
+             * <p>The type of the cloud asset. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+             * <li><strong>1</strong>: a third-party cloud asset</li>
+             * <li><strong>2</strong>: an asset in a data center</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+             * <li><strong>8</strong>: a simple application server</li>
+             * </ul>
              * 
-             * *   **0**: an asset provided by Alibaba Cloud
-             * *   **1**: a third-party cloud asset
-             * *   **2**: an asset in a data center
-             * *   **3**, **4**, **5**, and **7**: other cloud asset
-             * *   **8**: a simple application server
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder vendor(Long vendor) {
                 this.vendor = vendor;
@@ -678,6 +769,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class ClientOnlineRatioHistoryItemsItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetInstallCount")
         private Integer assetInstallCount;
@@ -741,7 +838,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Double onlineRatio; 
 
             /**
-             * The number of assets on which the client is installed.
+             * <p>The number of assets on which the client is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder assetInstallCount(Integer assetInstallCount) {
                 this.assetInstallCount = assetInstallCount;
@@ -749,7 +849,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the calculation. Unit: milliseconds.
+             * <p>The timestamp of the calculation. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1687759630045</p>
              */
             public Builder calculateTime(Long calculateTime) {
                 this.calculateTime = calculateTime;
@@ -757,7 +860,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The number of online assets.
+             * <p>The number of online assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder onlineAssetCount(Integer onlineAssetCount) {
                 this.onlineAssetCount = onlineAssetCount;
@@ -765,7 +871,10 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The online rate. Unit: %.
+             * <p>The online rate. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40.00</p>
              */
             public Builder onlineRatio(Double onlineRatio) {
                 this.onlineRatio = onlineRatio;
@@ -779,6 +888,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class ClientOnlineRatioHistoryItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < ClientOnlineRatioHistoryItemsItems> items;
@@ -818,7 +933,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private Long vendor; 
 
             /**
-             * The list of historical statistics on the online rate of the client by vendor.
+             * <p>The list of historical statistics on the online rate of the client by vendor.</p>
              */
             public Builder items(java.util.List < ClientOnlineRatioHistoryItemsItems> items) {
                 this.items = items;
@@ -826,14 +941,17 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the server. Valid values:
-             * <p>
+             * <p>The type of the server. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: an asset provided by Alibaba Cloud</li>
+             * <li><strong>1</strong>: a third-party cloud asset</li>
+             * <li><strong>2</strong>: an asset in a data center</li>
+             * <li><strong>3</strong>, <strong>4</strong>, <strong>5</strong>, and <strong>7</strong>: other cloud asset</li>
+             * <li><strong>8</strong>: a lightweight asset</li>
+             * </ul>
              * 
-             * *   **0**: an asset provided by Alibaba Cloud
-             * *   **1**: a third-party cloud asset
-             * *   **2**: an asset in a data center
-             * *   **3**, **4**, **5**, and **7**: other cloud asset
-             * *   **8**: a lightweight asset
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder vendor(Long vendor) {
                 this.vendor = vendor;
@@ -847,6 +965,12 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetClientRatioStatisticResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClientRatioStatisticResponseBody</p>
+     */
     public static class ClientOnlineRatio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentItems")
         private java.util.List < ClientOnlineRatioCurrentItems> currentItems;
@@ -886,7 +1010,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             private java.util.List < ClientOnlineRatioHistoryItems> historyItems; 
 
             /**
-             * The list of current statistics on the online rate of the client.
+             * <p>The list of current statistics on the online rate of the client.</p>
              */
             public Builder currentItems(java.util.List < ClientOnlineRatioCurrentItems> currentItems) {
                 this.currentItems = currentItems;
@@ -894,7 +1018,7 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The list of historical statistics on the online rate of the client.
+             * <p>The list of historical statistics on the online rate of the client.</p>
              */
             public Builder historyItems(java.util.List < ClientOnlineRatioHistoryItems> historyItems) {
                 this.historyItems = historyItems;

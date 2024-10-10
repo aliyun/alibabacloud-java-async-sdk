@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRdTreeResponseBody} extends {@link TeaModel}
  *
  * <p>GetRdTreeResponseBody</p>
@@ -70,6 +71,12 @@ public class GetRdTreeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetRdTreeResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetRdTreeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Children")
         private java.util.List < ? > children;

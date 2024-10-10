@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFrontVulPatchListRequest} extends {@link RequestModel}
  *
  * <p>DescribeFrontVulPatchListRequest</p>
@@ -98,12 +99,16 @@ public class DescribeFrontVulPatchListRequest extends Request {
         } 
 
         /**
-         * The information about the Windows system vulnerability. The value is a JSON string that contains the following fields:
-         * <p>
+         * <p>The information about the Windows system vulnerability. The value is a JSON string that contains the following fields:</p>
+         * <ul>
+         * <li><strong>name</strong>: the name of the vulnerability.</li>
+         * <li><strong>uuid</strong>: the UUID of the server on which the vulnerability is detected.</li>
+         * <li><strong>tag</strong>: the tag that is added to the vulnerability. Set this field to <strong>system</strong>, which indicates Windows system vulnerabilities.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **name**: the name of the vulnerability.
-         * *   **uuid**: the UUID of the server on which the vulnerability is detected.
-         * *   **tag**: the tag that is added to the vulnerability. Set this field to **system**, which indicates Windows system vulnerabilities.
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;5000803&quot;,&quot;uuid&quot;:&quot;026c9296-1234-5678-b937-a7d81f05****&quot;,&quot;tag&quot;:&quot;system&quot;}]</p>
          */
         public Builder info(String info) {
             this.putQueryParameter("Info", info);
@@ -112,11 +117,14 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -125,7 +133,11 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform on the vulnerability. Set the value to **vul_fix**, which indicates vulnerability fixing.
+         * <p>The operation that you want to perform on the vulnerability. Set the value to <strong>vul_fix</strong>, which indicates vulnerability fixing.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vul_fix</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -134,7 +146,11 @@ public class DescribeFrontVulPatchListRequest extends Request {
         }
 
         /**
-         * The type of the vulnerability. Set the value to **sys**, which indicates Windows system vulnerabilities.
+         * <p>The type of the vulnerability. Set the value to <strong>sys</strong>, which indicates Windows system vulnerabilities.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sys</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

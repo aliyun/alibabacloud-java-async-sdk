@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeClientProblemTypeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeClientProblemTypeResponseBody</p>
@@ -150,6 +151,12 @@ public class DescribeClientProblemTypeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClientProblemTypeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClientProblemTypeResponseBody</p>
+     */
     public static class ProblemTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("problemDetail")
         private String problemDetail;

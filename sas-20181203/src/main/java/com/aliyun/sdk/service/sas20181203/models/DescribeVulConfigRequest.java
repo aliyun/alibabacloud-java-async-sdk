@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeVulConfigRequest</p>
@@ -67,7 +68,10 @@ public class DescribeVulConfigRequest extends Request {
         } 
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113.110.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -76,17 +80,20 @@ public class DescribeVulConfigRequest extends Request {
         }
 
         /**
-         * The type of configuration. By default, all types of configurations are queried. Valid values:
-         * <p>
+         * <p>The type of configuration. By default, all types of configurations are queried. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability.</li>
+         * <li><strong>sys</strong>: Windows system vulnerability.</li>
+         * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
+         * <li><strong>app</strong>: application vulnerability that is detected by using web scanner.</li>
+         * <li><strong>emg</strong>: urgent vulnerability.</li>
+         * <li><strong>scanMode</strong>: displays easily exploitable vulnerability.</li>
+         * <li><strong>imageVulClean</strong>: vulnerability retention duration.</li>
+         * <li><strong>yum</strong>: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.</li>
+         * </ul>
          * 
-         * *   **cve**: Linux software vulnerability.
-         * *   **sys**: Windows system vulnerability.
-         * *   **cms**: Web-CMS vulnerability.
-         * *   **app**: application vulnerability that is detected by using web scanner.
-         * *   **emg**: urgent vulnerability.
-         * *   **scanMode**: displays easily exploitable vulnerability.
-         * *   **imageVulClean**: vulnerability retention duration.
-         * *   **yum**: preferentially uses YUM or APT sources of Alibaba Cloud to fix vulnerabilities.
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccountsInResourceDirectoryResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccountsInResourceDirectoryResponseBody</p>
@@ -49,7 +50,7 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The members in the resource directory.
+         * <p>The members in the resource directory.</p>
          */
         public Builder accounts(java.util.List < Accounts> accounts) {
             this.accounts = accounts;
@@ -57,7 +58,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B7A839E8-70AE-591D-8D9E-C5419A2240DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccountsInResourceDirectoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsInResourceDirectoryResponseBody</p>
+     */
     public static class Accounts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -193,7 +203,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             private String sasVersion; 
 
             /**
-             * The Alibaba Cloud account ID of the member.
+             * <p>The Alibaba Cloud account ID of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180803538814****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -201,7 +214,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member.
+             * <p>The name of the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc**</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -209,7 +225,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder in the resource directory.
+             * <p>The ID of the folder in the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fd-cE2SQP****</p>
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -217,11 +236,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the member is an administrator account of the resource directory. Valid values:
-             * <p>
+             * <p>Indicates whether the member is an administrator account of the resource directory. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>no</p>
              */
             public Builder isMaAccount(String isMaAccount) {
                 this.isMaAccount = isMaAccount;
@@ -229,7 +251,10 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the member is marked as followed.
+             * <p>Indicates whether the member is marked as followed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no</p>
              */
             public Builder isMarked(String isMarked) {
                 this.isMarked = isMarked;
@@ -237,11 +262,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the member is a delegated administrator account of Security Center. Valid values:
-             * <p>
+             * <p>Indicates whether the member is a delegated administrator account of Security Center. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>no</p>
              */
             public Builder isSasDaAccount(String isSasDaAccount) {
                 this.isSasDaAccount = isSasDaAccount;
@@ -249,11 +277,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the member is an account of the threat analysis and response feature. Valid values:
-             * <p>
+             * <p>Indicates whether the member is an account of the threat analysis and response feature. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>no</p>
              */
             public Builder isSiemControlAccount(String isSiemControlAccount) {
                 this.isSiemControlAccount = isSiemControlAccount;
@@ -261,11 +292,14 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the member is a delegated administrator account of the threat analysis and response feature. Valid values:
-             * <p>
+             * <p>Indicates whether the member is a delegated administrator account of the threat analysis and response feature. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
              * 
-             * *   **yes**
-             * *   **no**
+             * <strong>example:</strong>
+             * <p>no</p>
              */
             public Builder isSiemDaAccount(String isSiemDaAccount) {
                 this.isSiemDaAccount = isSiemDaAccount;
@@ -273,14 +307,17 @@ public class ListAccountsInResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Security Center that you use. Valid value:
-             * <p>
+             * <p>The edition of Security Center that you use. Valid value:</p>
+             * <ul>
+             * <li><strong>0</strong> or <strong>1</strong>: Basic</li>
+             * <li><strong>2</strong> or <strong>3</strong>: Enterprise</li>
+             * <li><strong>5</strong>: Advanced</li>
+             * <li><strong>6</strong>: Anti-virus</li>
+             * <li><strong>7</strong>: Ultimate</li>
+             * </ul>
              * 
-             * *   **0** or **1**: Basic
-             * *   **2** or **3**: Enterprise
-             * *   **5**: Advanced
-             * *   **6**: Anti-virus
-             * *   **7**: Ultimate
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder sasVersion(String sasVersion) {
                 this.sasVersion = sasVersion;

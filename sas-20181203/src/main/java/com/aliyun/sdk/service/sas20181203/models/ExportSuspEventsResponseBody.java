@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportSuspEventsResponseBody} extends {@link TeaModel}
  *
  * <p>ExportSuspEventsResponseBody</p>
@@ -61,7 +62,10 @@ public class ExportSuspEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the exported file.
+         * <p>The name of the exported file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>suspicious_event_20221209</p>
          */
         public Builder fileName(String fileName) {
             this.fileName = fileName;
@@ -69,7 +73,10 @@ public class ExportSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the export record of the anomalous event.
+         * <p>The ID of the export record of the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -77,7 +84,10 @@ public class ExportSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF145C20-6A19-529A-8BDD-0671DXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

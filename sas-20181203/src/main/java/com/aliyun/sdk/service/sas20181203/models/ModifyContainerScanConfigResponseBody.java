@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyContainerScanConfigResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyContainerScanConfigResponseBody</p>
@@ -61,11 +62,14 @@ public class ModifyContainerScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
-         * *   **true**
-         * *   **false**
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -73,7 +77,10 @@ public class ModifyContainerScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -81,7 +88,10 @@ public class ModifyContainerScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BFF355BC-8A40-55F3-8CBC-CC3E9DAC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

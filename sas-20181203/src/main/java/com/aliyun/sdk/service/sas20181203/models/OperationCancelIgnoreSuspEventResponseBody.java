@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link OperationCancelIgnoreSuspEventResponseBody} extends {@link TeaModel}
  *
  * <p>OperationCancelIgnoreSuspEventResponseBody</p>
@@ -97,7 +98,10 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         private Long timeCost; 
 
         /**
-         * The status code returned. The status code **200** indicates that the request was is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.
+         * <p>The status code returned. The status code <strong>200</strong> indicates that the request was is successful. Other status codes indicate that the request fails. You can identify the cause of the failure based on the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +109,10 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -113,7 +120,10 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +131,10 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE500770-42D3-442E-9DDD-156E0F9F3B45</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +142,14 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The handling result of an exception. Valid values:
-         * <p>
+         * <p>The handling result of an exception. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: successful</li>
+         * <li><strong>false</strong>: failed</li>
+         * </ul>
          * 
-         * *   **true**: successful
-         * *   **false**: failed
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +157,10 @@ public class OperationCancelIgnoreSuspEventResponseBody extends TeaModel {
         }
 
         /**
-         * The time consumed for the request. Unit: seconds.
+         * <p>The time consumed for the request. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timeCost(Long timeCost) {
             this.timeCost = timeCost;

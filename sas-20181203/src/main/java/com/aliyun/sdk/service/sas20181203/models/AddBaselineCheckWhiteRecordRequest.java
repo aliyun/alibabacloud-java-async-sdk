@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddBaselineCheckWhiteRecordRequest} extends {@link RequestModel}
  *
  * <p>AddBaselineCheckWhiteRecordRequest</p>
@@ -109,10 +110,13 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         } 
 
         /**
-         * The ID of the check item.
-         * <p>
+         * <p>The ID of the check item.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</p>
+         * </blockquote>
          * 
-         * >  You can call the [ListCheckItemWarningSummary](~~ListCheckItemWarningSummary~~) operation to query the IDs of check items.
+         * <strong>example:</strong>
+         * <p>76</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -121,11 +125,14 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
          * 
-         * *   **zh**: Chinese
-         * *   **en**: English
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -134,7 +141,10 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The reason why the check item is added to the whitelist.
+         * <p>The reason why the check item is added to the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoRun</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -143,11 +153,14 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The data source. If you leave this parameter empty, the default value is used. Valid values:
-         * <p>
+         * <p>The data source. If you leave this parameter empty, the default value is used. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong>: server</li>
+         * <li><strong>agentless</strong>: agentless detection</li>
+         * </ul>
          * 
-         * *   **default**: server
-         * *   **agentless**: agentless detection
+         * <strong>example:</strong>
+         * <p>agentless</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -156,11 +169,14 @@ public class AddBaselineCheckWhiteRecordRequest extends Request {
         }
 
         /**
-         * The type of the assets on which the whitelist rule takes effect. Valid values:
-         * <p>
+         * <p>The type of the assets on which the whitelist rule takes effect. Valid values:</p>
+         * <ul>
+         * <li><strong>all_instance</strong>: all servers</li>
+         * <li><strong>instance</strong>: specific servers</li>
+         * </ul>
          * 
-         * *   **all_instance**: all servers
-         * *   **instance**: specific servers
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

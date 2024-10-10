@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddPrivateRegistryRequest} extends {@link RequestModel}
  *
  * <p>AddPrivateRegistryRequest</p>
@@ -230,7 +231,11 @@ public class AddPrivateRegistryRequest extends Request {
         } 
 
         /**
-         * The domain name of the image repository.
+         * <p>The domain name of the image repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -239,11 +244,14 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The additional parameter of the image repository. This parameter is required when you set the RegistryType parameter to **quay**. Valid values:
-         * <p>
+         * <p>The additional parameter of the image repository. This parameter is required when you set the RegistryType parameter to <strong>quay</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>namespace</strong></li>
+         * <li><strong>authToken</strong></li>
+         * </ul>
          * 
-         * *   **namespace**
-         * *   **authToken**
+         * <strong>example:</strong>
+         * <p>[{&quot;namespace&quot;:&quot;aa&quot;,&quot;authToken&quot;:&quot;aa&quot;}]</p>
          */
         public Builder extraParam(String extraParam) {
             this.putQueryParameter("ExtraParam", extraParam);
@@ -252,11 +260,15 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The network type. Valid values:
-         * <p>
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Internet</li>
+         * <li><strong>2</strong>: virtual private cloud (VPC)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: Internet
-         * *   **2**: virtual private cloud (VPC)
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder netType(Long netType) {
             this.putQueryParameter("NetType", netType);
@@ -265,7 +277,11 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The password that is used to log on to the image repository.
+         * <p>The password that is used to log on to the image repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -274,7 +290,10 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The port number.
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -283,11 +302,15 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The type of the protocol. Valid values:
-         * <p>
+         * <p>The type of the protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: HTTP</li>
+         * <li><strong>2</strong>: HTTPS</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **1**: HTTP
-         * *   **2**: HTTPS
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder protocolType(Long protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
@@ -296,7 +319,11 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The IP address of the image repository.
+         * <p>The IP address of the image repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>114.55.**.**</code></p>
          */
         public Builder registryHostIp(String registryHostIp) {
             this.putQueryParameter("RegistryHostIp", registryHostIp);
@@ -305,10 +332,14 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~ListImageRegistryRegion~~">ListImageRegistryRegion</a> operation to query the IDs of supported regions.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListImageRegistryRegion](~~ListImageRegistryRegion~~) operation to query the IDs of supported regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder registryRegionId(String registryRegionId) {
             this.putQueryParameter("RegistryRegionId", registryRegionId);
@@ -317,11 +348,15 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The type of the private image repository. Valid values:
-         * <p>
+         * <p>The type of the private image repository. Valid values:</p>
+         * <ul>
+         * <li><strong>harbor</strong></li>
+         * <li><strong>quay</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **harbor**
-         * *   **quay**
+         * <strong>example:</strong>
+         * <p>harbor</p>
          */
         public Builder registryType(String registryType) {
             this.putQueryParameter("RegistryType", registryType);
@@ -330,11 +365,15 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The version of the image repository. Valid values:
-         * <p>
+         * <p>The version of the image repository. Valid values:</p>
+         * <ul>
+         * <li><strong>V1</strong></li>
+         * <li><strong>V2</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **V1**
-         * *   **V2**
+         * <strong>example:</strong>
+         * <p>V2</p>
          */
         public Builder registryVersion(String registryVersion) {
             this.putQueryParameter("RegistryVersion", registryVersion);
@@ -343,7 +382,10 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The number of images that are scanned per hour.
+         * <p>The number of images that are scanned per hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder transPerHour(Integer transPerHour) {
             this.putQueryParameter("TransPerHour", transPerHour);
@@ -352,7 +394,11 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The username that is used to log on to the image repository.
+         * <p>The username that is used to log on to the image repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -361,7 +407,10 @@ public class AddPrivateRegistryRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9hs3e5*******908kd</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

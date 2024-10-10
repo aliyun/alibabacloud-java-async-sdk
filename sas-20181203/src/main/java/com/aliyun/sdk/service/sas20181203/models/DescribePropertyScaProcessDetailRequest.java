@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePropertyScaProcessDetailRequest} extends {@link RequestModel}
  *
  * <p>DescribePropertyScaProcessDetailRequest</p>
@@ -109,7 +110,10 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
         } 
 
         /**
-         * The page number. Default value: **1**.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,10 +122,13 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.
-         * <p>
+         * <p>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</p>
+         * <blockquote>
+         * <p> We recommend that you do not leave this parameter empty.</p>
+         * </blockquote>
          * 
-         * >  We recommend that you do not leave this parameter empty.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -130,7 +137,10 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
         }
 
         /**
-         * The ID of the process.
+         * <p>The ID of the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>756</p>
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -148,10 +158,13 @@ public class DescribePropertyScaProcessDetailRequest extends Request {
         }
 
         /**
-         * The UUID of the server.
-         * <p>
+         * <p>The UUID of the server.</p>
+         * <blockquote>
+         * <p> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUID.</p>
+         * </blockquote>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUID.
+         * <strong>example:</strong>
+         * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

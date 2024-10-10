@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeSyncAssetTaskListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeSyncAssetTaskListResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
         private java.util.List < TaskRecords> taskRecords; 
 
         /**
-         * The pagination information.
+         * <p>The pagination information.</p>
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -69,7 +70,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,7 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * The IDC scan tasks.
+         * <p>The IDC scan tasks.</p>
          */
         public Builder taskRecords(java.util.List < TaskRecords> taskRecords) {
             this.taskRecords = taskRecords;
@@ -90,6 +94,12 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeSyncAssetTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyncAssetTaskListResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -153,7 +163,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of IDC scan tasks on the current page.
+             * <p>The number of IDC scan tasks on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -161,7 +174,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -169,7 +185,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of IDC scan tasks per page. Default value: 20. If you leave this parameter empty, 20 IDC scan tasks are returned on each page.
+             * <p>The number of IDC scan tasks per page. Default value: 20. If you leave this parameter empty, 20 IDC scan tasks are returned on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -177,7 +196,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of IDC scan tasks returned.
+             * <p>The total number of IDC scan tasks returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -191,6 +213,12 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeSyncAssetTaskListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeSyncAssetTaskListResponseBody</p>
+     */
     public static class TaskRecords extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssetCount")
         private Integer assetCount;
@@ -314,7 +342,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The number of assets that are detected by the task.
+             * <p>The number of assets that are detected by the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder assetCount(Integer assetCount) {
                 this.assetCount = assetCount;
@@ -322,7 +353,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR blocks that are used for scanning. Multiple CIDR blocks are separated by commas (,).
+             * <p>The CIDR blocks that are used for scanning. Multiple CIDR blocks are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1/24,1.1.1.1/24</p>
              */
             public Builder ipSegments(String ipSegments) {
                 this.ipSegments = ipSegments;
@@ -330,7 +364,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task, in percentage.
+             * <p>The progress of the task, in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder processRate(Integer processRate) {
                 this.processRate = processRate;
@@ -338,7 +375,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the root task.
+             * <p>The ID of the root task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73c392f9c505129a257472a3f911d65d</p>
              */
             public Builder rootTaskId(String rootTaskId) {
                 this.rootTaskId = rootTaskId;
@@ -346,7 +386,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the task ended.
+             * <p>The timestamp when the task ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1653965680000</p>
              */
             public Builder taskEndTime(Long taskEndTime) {
                 this.taskEndTime = taskEndTime;
@@ -354,7 +397,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * <p>The name of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDC_PROBE_SCAN-1.1.1..124-lse_ubuntu_test1</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -362,7 +408,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the task started. Unit: milliseconds.
+             * <p>The timestamp when the task started. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1633746651715</p>
              */
             public Builder taskStartTime(Long taskStartTime) {
                 this.taskStartTime = taskStartTime;
@@ -370,15 +419,18 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the IDC scan task. Valid Values:
-             * <p>
+             * <p>The status of the IDC scan task. Valid Values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: The task is not started.</li>
+             * <li><strong>START</strong>: The task is started.</li>
+             * <li><strong>MESSAGE_SEND</strong>: The command is sent.</li>
+             * <li><strong>SUCCESS</strong>: The task is complete.</li>
+             * <li><strong>FAIL</strong>: The task failed.</li>
+             * <li><strong>TIMEOUT</strong>: The task timed out.</li>
+             * </ul>
              * 
-             * *   **INIT**: The task is not started.
-             * *   **START**: The task is started.
-             * *   **MESSAGE_SEND**: The command is sent.
-             * *   **SUCCESS**: The task is complete.
-             * *   **FAIL**: The task failed.
-             * *   **TIMEOUT**: The task timed out.
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -386,7 +438,10 @@ public class DescribeSyncAssetTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. The value is fixed as **IDC_PROBE_SCAN**, which indicates an IDC scan task.
+             * <p>The type of the task. The value is fixed as <strong>IDC_PROBE_SCAN</strong>, which indicates an IDC scan task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDC_PROBE_SCAN</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

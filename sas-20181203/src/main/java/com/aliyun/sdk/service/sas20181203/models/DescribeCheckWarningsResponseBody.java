@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCheckWarningsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCheckWarningsResponseBody</p>
@@ -97,7 +98,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the check item.
+         * <p>The information about the check item.</p>
          */
         public Builder checkWarnings(java.util.List < CheckWarnings> checkWarnings) {
             this.checkWarnings = checkWarnings;
@@ -105,7 +106,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -113,7 +117,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -121,7 +128,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: **20**.
+         * <p>The number of entries returned per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -129,7 +139,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DFCADBA-7065-42DA-AF17-6868B9C2A8CF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +150,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,6 +166,12 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCheckWarningsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCheckWarningsResponseBody</p>
+     */
     public static class CheckWarnings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
@@ -321,7 +343,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the check item.
+             * <p>The ID of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2546</p>
              */
             public Builder checkId(Long checkId) {
                 this.checkId = checkId;
@@ -329,7 +354,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert that is generated for the baseline check result.
+             * <p>The ID of the alert that is generated for the baseline check result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>212251441</p>
              */
             public Builder checkWarningId(Long checkWarningId) {
                 this.checkWarningId = checkWarningId;
@@ -337,7 +365,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container.
+             * <p>The ID of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8de456b00ff0a2009ee8ef7fc59fd0457fa44f20b8282af3e79c2a0e2492****</p>
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -345,7 +376,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/svn-host</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -353,7 +387,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message in the check result.
+             * <p>The error message in the check result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ScriptKilledOfCpuHigh</p>
              */
             public Builder execErrorMessage(String execErrorMessage) {
                 this.execErrorMessage = execErrorMessage;
@@ -361,11 +398,14 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether fixing is supported. Valid values:
-             * <p>
+             * <p>Indicates whether fixing is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Fixing is not supported.</li>
+             * <li><strong>1</strong>: Fixing is supported.</li>
+             * </ul>
              * 
-             * *   **0**: Fixing is not supported.
-             * *   **1**: Fixing is supported.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder fixStatus(Integer fixStatus) {
                 this.fixStatus = fixStatus;
@@ -373,7 +413,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the check item.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>passwordExpire</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -381,7 +424,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.
+             * <p>The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1694692471000</p>
              */
             public Builder lastHandleTime(Long lastHandleTime) {
                 this.lastHandleTime = lastHandleTime;
@@ -389,12 +435,15 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the risk item. Valid values:
-             * <p>
+             * <p>The risk level of the risk item. Valid values:</p>
+             * <ul>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -402,7 +451,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -410,14 +462,17 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the check item. Valid values:
-             * <p>
+             * <p>The status of the check item. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: failed.</li>
+             * <li><strong>2</strong>: verifying.</li>
+             * <li><strong>3</strong>: passed.</li>
+             * <li><strong>5</strong>: expired.</li>
+             * <li><strong>6</strong>: ignored.</li>
+             * </ul>
              * 
-             * *   **1**: failed.
-             * *   **2**: verifying.
-             * *   **3**: passed.
-             * *   **5**: expired.
-             * *   **6**: ignored.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -425,7 +480,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the check item.
+             * <p>The type of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hc.check.type.identity_auth</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -433,7 +491,10 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server on which the baseline check is performed.
+             * <p>The ID of the server on which the baseline check is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d42f938c-d962-48a0-90f9-****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulDetailsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeVulDetailsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the vulnerability.
+         * <p>The details of the vulnerability.</p>
          */
         public Builder cves(java.util.List < Cves> cves) {
             this.cves = cves;
@@ -57,7 +58,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDA40EA3-6265-5900-AD99-C83E4F109CA8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVulDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulDetailsResponseBody</p>
+     */
     public static class Classifys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
@@ -121,7 +131,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * The type of the vulnerability.
+             * <p>The type of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remote_code_execution</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -129,7 +142,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the demo video for the vulnerability.
+             * <p>The URL of the demo video for the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com">https://example.com</a></p>
              */
             public Builder demoVideoUrl(String demoVideoUrl) {
                 this.demoVideoUrl = demoVideoUrl;
@@ -137,7 +153,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the vulnerability type.
+             * <p>The description of the vulnerability type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Remote code execution</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -151,6 +170,12 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeVulDetailsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeVulDetailsResponseBody</p>
+     */
     public static class Cves extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Classify")
         private String classify;
@@ -478,7 +503,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String vulLevel; 
 
             /**
-             * The type of the vulnerability.
+             * <p>The type of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remote_code_execution</p>
              */
             public Builder classify(String classify) {
                 this.classify = classify;
@@ -486,7 +514,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The vulnerability types.
+             * <p>The vulnerability types.</p>
              */
             public Builder classifys(java.util.List < Classifys> classifys) {
                 this.classifys = classifys;
@@ -494,7 +522,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The China National Vulnerability Database (CNVD) ID.
+             * <p>The China National Vulnerability Database (CNVD) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNVD-2019-9167</p>
              */
             public Builder cnvdId(String cnvdId) {
                 this.cnvdId = cnvdId;
@@ -502,12 +533,15 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The difficulty level of exploiting the vulnerability. Valid values:
-             * <p>
+             * <p>The difficulty level of exploiting the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>LOW</strong></li>
+             * <li><strong>MEDIUM</strong></li>
+             * <li><strong>HIGH</strong></li>
+             * </ul>
              * 
-             * *   **LOW**
-             * *   **MEDIUM**
-             * *   **HIGH**
+             * <strong>example:</strong>
+             * <p>LOW</p>
              */
             public Builder complexity(String complexity) {
                 this.complexity = complexity;
@@ -515,7 +549,11 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The CVE content.
+             * <p>The CVE content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apache Shiro is a user authentication and authorization framework for a wide range of rights management applications.↵Recently, Apache Shiro released version 1.7.0, which fixes the Apache Shiro authentication bypass vulnerability (CVE-2020-17510).↵Attackers can bypass Shiro&quot;s authentication using malicious requests containing payloads.↵↵Related bugs:↵CVE-2020-17510 Shiro &lt; 1.7.0 Validation Bypass Vulnerability↵CVE-2020-13933 Shiro &lt; 1.6.0 Validation Bypass Vulnerability↵CVE-2020-11989 Shiro &lt; 1.5.3 Validation Bypass Vulnerability↵CVE-2020-1957 Shiro &lt; 1.5.2 Validation Bypass Vulnerability↵CVE-2016-6802 Shiro &lt; 1.3.2 Validation Bypass Vulnerability
+             * Check whether the fastjson version currently running on the system is in the affected version and whether safeMode is configured to disable autoType. If it is in the affected version and safeMode is not configured to disable autoType, the vulnerability is considered to exist.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -523,7 +561,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Common Vulnerabilities and Exposures (CVE) ID.
+             * <p>The Common Vulnerabilities and Exposures (CVE) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2019-9167</p>
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
@@ -531,7 +572,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The link to the CVE details.
+             * <p>The link to the CVE details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://avd.aliyun.com/detail/CVE-2022-1184">https://avd.aliyun.com/detail/CVE-2022-1184</a></p>
              */
             public Builder cveLink(String cveLink) {
                 this.cveLink = cveLink;
@@ -539,7 +583,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The Common Vulnerability Scoring System (CVSS) score of the vulnerability in the Alibaba Cloud vulnerability library.
+             * <p>The Common Vulnerability Scoring System (CVSS) score of the vulnerability in the Alibaba Cloud vulnerability library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder cvssScore(String cvssScore) {
                 this.cvssScore = cvssScore;
@@ -547,7 +594,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The vector that is used to calculate the CVSS score.
+             * <p>The vector that is used to calculate the CVSS score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AV:N/AC:L/Au:N/C:C/I:C/A:C</p>
              */
             public Builder cvssVector(String cvssVector) {
                 this.cvssVector = cvssVector;
@@ -555,10 +605,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
-             * <p>
+             * <p>The name of the instance.</p>
+             * <blockquote>
+             * <p> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</p>
+             * </blockquote>
              * 
-             * >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instance that is affected by the vulnerability.
+             * <strong>example:</strong>
+             * <p>sql-test-001</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -566,10 +619,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
-             * <p>
+             * <p>The public IP address of the server.</p>
+             * <blockquote>
+             * <p> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</p>
+             * </blockquote>
              * 
-             * >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instance that is affected by the vulnerability.
+             * <strong>example:</strong>
+             * <p>47.114.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -577,10 +633,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the server.
-             * <p>
+             * <p>The private IP address of the server.</p>
+             * <blockquote>
+             * <p> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</p>
+             * </blockquote>
              * 
-             * >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instance that is affected by the vulnerability.
+             * <strong>example:</strong>
+             * <p>172.19.XX.XX</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -588,7 +647,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vulnerability.
+             * <p>The ID of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2020-8597</p>
              */
             public Builder otherId(String otherId) {
                 this.otherId = otherId;
@@ -596,7 +658,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The POC content.
+             * <p>The POC content.</p>
              */
             public Builder poc(String poc) {
                 this.poc = poc;
@@ -604,7 +666,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp when the proof of concept (POC) was created. Unit: milliseconds.
+             * <p>The UNIX timestamp when the proof of concept (POC) was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554189334000</p>
              */
             public Builder pocCreateTime(Long pocCreateTime) {
                 this.pocCreateTime = pocCreateTime;
@@ -612,7 +677,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp when the POC was disclosed. Unit: milliseconds.
+             * <p>The UNIX timestamp when the POC was disclosed. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554189334000</p>
              */
             public Builder pocDisclosureTime(Long pocDisclosureTime) {
                 this.pocDisclosureTime = pocDisclosureTime;
@@ -620,7 +688,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The service that is affected by the vulnerability.
+             * <p>The service that is affected by the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Log4j2</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -628,7 +699,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The reference of the vulnerability in the Alibaba Cloud vulnerability library. The value is a URL.
+             * <p>The reference of the vulnerability in the Alibaba Cloud vulnerability library. The value is a URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com">https://example.com</a></p>
              */
             public Builder reference(String reference) {
                 this.reference = reference;
@@ -636,7 +710,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The disclosure time that is displayed for the vulnerability in the Alibaba Cloud vulnerability library. The value is a UNIX timestamp. Unit: milliseconds.
+             * <p>The disclosure time that is displayed for the vulnerability in the Alibaba Cloud vulnerability library. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1554189334000</p>
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -644,7 +721,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The fixing suggestions of the vulnerability.
+             * <p>The fixing suggestions of the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>At present, Chanjet has urgently released a vulnerability patch to fix the vulnerability. CNVD recommends affected units and users to upgrade to the latest version immediately:</p>↵<p>https://www.chanjetvip.com/product/goods/goods-detail?id=53aaa40295d458e44f5d3ce5</p>↵<p>At the same time, organizations and users affected by the vulnerability are requested to immediately follow the steps below to conduct self-inspection and repair work:</p>↵<ol>↵<li><p>User self-check steps:↵<br  />Check whether website/bin/load.aspx.cdcab7d2.compiled, website/bin/App_Web_load.aspx.cdcab7d2.dll, and tplus/Load.aspx files exist locally. If they exist, it means that they have been poisoned, and you must reinstall the system and install the product. patch.</p>↵</li>↵<li><p>Non-poisoned users please:↵<br  />1) Update the latest product patch.↵<br  />2) Install anti-virus software and update the virus database in time.↵<br  />3) Upgrade the lower version of IIS and Nginx to IIS10.0 and Windows 2016.↵<br  />4) Local installation customers need to confirm whether the backup file is complete as soon as possible, and do off-site backup. Customers on the cloud should enable the mirroring function in time.↵<br  />5) Users who fail to update the patch in time can contact Chanjet technical support and take temporary preventive measures such as deleting files.</p>↵</li>↵<li><p>Poisoned users please:↵<br  />1) Check whether the server has taken regular snapshots or backups. If so, you can restore data through snapshots or backups.↵<br  />2) Contact Chanjet technical support to confirm whether it has the conditions and operation methods to restore data from backup files.</p>↵</li>↵</ol>↵<p>If you have any technical problems, please contact Chanjet technical support: 4006600566-9</p>
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -652,7 +732,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The introduction to the vulnerability.
+             * <p>The introduction to the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chanjet T-Plus is an Internet business management software. There is an unauthorized access vulnerability in one of its interfaces disclosed on the Internet. Attackers can construct malicious requests to upload malicious files to execute arbitrary code and control the server.</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -660,10 +743,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset that is scanned.
-             * <p>
+             * <p>The ID of the asset that is scanned.</p>
+             * <blockquote>
+             * <p> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</p>
+             * </blockquote>
              * 
-             * >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instance that is affected by the vulnerability.
+             * <strong>example:</strong>
+             * <p>m-bp17m0pc0xprzbwo****</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -671,10 +757,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset that is scanned.
-             * <p>
+             * <p>The name of the asset that is scanned.</p>
+             * <blockquote>
+             * <p> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</p>
+             * </blockquote>
              * 
-             * >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instance that is affected by the vulnerability.
+             * <strong>example:</strong>
+             * <p>frontend</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -682,7 +771,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the vulnerability announcement.
+             * <p>The title of the vulnerability announcement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chanjet T-Plus SetupAccount/Upload. Aspx file upload vulnerability(CNVD-2022-60632)</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -690,7 +782,10 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The vendor that disclosed the vulnerability.
+             * <p>The vendor that disclosed the vulnerability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Apache</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -698,13 +793,16 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the vulnerability. Valid values:
-             * <p>
+             * <p>The severity of the vulnerability. Valid values:</p>
+             * <ul>
+             * <li><strong>serious</strong></li>
+             * <li><strong>high</strong></li>
+             * <li><strong>medium</strong></li>
+             * <li><strong>low</strong></li>
+             * </ul>
              * 
-             * *   **serious**
-             * *   **high**
-             * *   **medium**
-             * *   **low**
+             * <strong>example:</strong>
+             * <p>serious</p>
              */
             public Builder vulLevel(String vulLevel) {
                 this.vulLevel = vulLevel;

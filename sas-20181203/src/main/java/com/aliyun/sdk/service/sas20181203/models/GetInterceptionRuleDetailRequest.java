@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInterceptionRuleDetailRequest} extends {@link RequestModel}
  *
  * <p>GetInterceptionRuleDetailRequest</p>
@@ -69,10 +70,14 @@ public class GetInterceptionRuleDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
-         * <p>
+         * <p>The ID of the container cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * <strong>example:</strong>
+         * <p>c7f60fdabc84xxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -81,10 +86,14 @@ public class GetInterceptionRuleDetailRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
-         * <p>
+         * <p>The ID of the rule.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~ListInterceptionRulePage~~">ListInterceptionRulePage</a> operation to query the IDs of rules.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can call the [ListInterceptionRulePage](~~ListInterceptionRulePage~~) operation to query the IDs of rules.
+         * <strong>example:</strong>
+         * <p>500002</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

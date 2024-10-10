@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ReceiveFunctionTrialRewardByAliUidResponseBody} extends {@link TeaModel}
  *
  * <p>ReceiveFunctionTrialRewardByAliUidResponseBody</p>
@@ -37,7 +38,10 @@ public class ReceiveFunctionTrialRewardByAliUidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>94004FDB-27EC-5666-83D4-D0C5C624****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

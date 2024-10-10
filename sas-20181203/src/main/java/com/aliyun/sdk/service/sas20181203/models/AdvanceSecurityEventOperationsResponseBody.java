@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AdvanceSecurityEventOperationsResponseBody} extends {@link TeaModel}
  *
  * <p>AdvanceSecurityEventOperationsResponseBody</p>
@@ -49,7 +50,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         private java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A4EB8B1C-1DEC-5E18-BCD0-XXXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * The operation performed on the alert event.
+         * <p>The operation performed on the alert event.</p>
          */
         public Builder securityEventOperationsResponse(java.util.List < SecurityEventOperationsResponse> securityEventOperationsResponse) {
             this.securityEventOperationsResponse = securityEventOperationsResponse;
@@ -70,6 +74,12 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AdvanceSecurityEventOperationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>AdvanceSecurityEventOperationsResponseBody</p>
+     */
     public static class MarkField extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FiledAliasName")
         private String filedAliasName;
@@ -145,7 +155,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             private java.util.List < String > supportedMisType; 
 
             /**
-             * The alias of the field that is used in the whitelist rule.
+             * <p>The alias of the field that is used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file path</p>
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
@@ -153,7 +166,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used in the whitelist rule.
+             * <p>The field that is used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filePath</p>
              */
             public Builder filedName(String filedName) {
                 this.filedName = filedName;
@@ -161,14 +177,17 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that is used in the whitelist rule. Valid values:
-             * <p>
+             * <p>The operation that is used in the whitelist rule. Valid values:</p>
+             * <ul>
+             * <li><strong>contains</strong>: contains</li>
+             * <li><strong>notContains</strong>: does not contain</li>
+             * <li><strong>regex</strong>: regular expression</li>
+             * <li><strong>strEqual</strong>: equals</li>
+             * <li><strong>strNotEqual</strong>: does not equal</li>
+             * </ul>
              * 
-             * *   **contains**: contains
-             * *   **notContains**: does not contain
-             * *   **regex**: regular expression
-             * *   **strEqual**: equals
-             * *   **strNotEqual**: does not equal
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder markMisType(String markMisType) {
                 this.markMisType = markMisType;
@@ -176,7 +195,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the field that is used in the whitelist rule.
+             * <p>The value of the field that is used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-25 10:11:04</p>
              */
             public Builder markMisValue(String markMisValue) {
                 this.markMisValue = markMisValue;
@@ -184,14 +206,14 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that is used and can be modified in the whitelist rule. Valid values:
-             * <p>
-             * 
-             * *   **contains**: contains
-             * *   **notContains**: does not contain
-             * *   **regex**: regular expression
-             * *   **strEqual**: equals
-             * *   **strNotEqual**: does not equal
+             * <p>The operation that is used and can be modified in the whitelist rule. Valid values:</p>
+             * <ul>
+             * <li><strong>contains</strong>: contains</li>
+             * <li><strong>notContains</strong>: does not contain</li>
+             * <li><strong>regex</strong>: regular expression</li>
+             * <li><strong>strEqual</strong>: equals</li>
+             * <li><strong>strNotEqual</strong>: does not equal</li>
+             * </ul>
              */
             public Builder supportedMisType(java.util.List < String > supportedMisType) {
                 this.supportedMisType = supportedMisType;
@@ -205,6 +227,12 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AdvanceSecurityEventOperationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>AdvanceSecurityEventOperationsResponseBody</p>
+     */
     public static class MarkFieldsSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FiledAliasName")
         private String filedAliasName;
@@ -268,7 +296,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             private java.util.List < String > supportedMisType; 
 
             /**
-             * The alias of the field that can be used in the whitelist rule.
+             * <p>The alias of the field that can be used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file path</p>
              */
             public Builder filedAliasName(String filedAliasName) {
                 this.filedAliasName = filedAliasName;
@@ -276,7 +307,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The field that can be used in the whitelist rule.
+             * <p>The field that can be used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filePath</p>
              */
             public Builder filedName(String filedName) {
                 this.filedName = filedName;
@@ -284,7 +318,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the field that can be used in the whitelist rule.
+             * <p>The value of the field that can be used in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder markMisValue(String markMisValue) {
                 this.markMisValue = markMisValue;
@@ -292,14 +329,14 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation that is supported in the whitelist rule. Valid values:
-             * <p>
-             * 
-             * *   **contains**: contains
-             * *   **notContains**: does not contain
-             * *   **regex**: regular expression
-             * *   **strEqual**: equals
-             * *   **strNotEqual**: does not equal
+             * <p>The operation that is supported in the whitelist rule. Valid values:</p>
+             * <ul>
+             * <li><strong>contains</strong>: contains</li>
+             * <li><strong>notContains</strong>: does not contain</li>
+             * <li><strong>regex</strong>: regular expression</li>
+             * <li><strong>strEqual</strong>: equals</li>
+             * <li><strong>strNotEqual</strong>: does not equal</li>
+             * </ul>
              */
             public Builder supportedMisType(java.util.List < String > supportedMisType) {
                 this.supportedMisType = supportedMisType;
@@ -313,6 +350,12 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AdvanceSecurityEventOperationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>AdvanceSecurityEventOperationsResponseBody</p>
+     */
     public static class SecurityEventOperationsResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MarkField")
         private java.util.List < MarkField> markField;
@@ -388,7 +431,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             private Boolean userCanOperate; 
 
             /**
-             * The object on which the operation is performed. This parameter is required when you set the OperationCode parameter to **advance_mark_mis_info**.
+             * <p>The object on which the operation is performed. This parameter is required when you set the OperationCode parameter to <strong>advance_mark_mis_info</strong>.</p>
              */
             public Builder markField(java.util.List < MarkField> markField) {
                 this.markField = markField;
@@ -396,7 +439,7 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata configuration returned by the advanced whitelist rule.
+             * <p>The metadata configuration returned by the advanced whitelist rule.</p>
              */
             public Builder markFieldsSource(java.util.List < MarkFieldsSource> markFieldsSource) {
                 this.markFieldsSource = markFieldsSource;
@@ -404,19 +447,22 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The operation performed to handle the alert. Valid values:
-             * <p>
+             * <p>The operation performed to handle the alert. Valid values:</p>
+             * <ul>
+             * <li><strong>block_ip</strong>: blocks the alert.</li>
+             * <li><strong>advance_mark_mis_info</strong>: adds the alert to the whitelist.</li>
+             * <li><strong>ignore</strong>: ignores the alert.</li>
+             * <li><strong>manual_handled</strong>: marks the alert as manually handled.</li>
+             * <li><strong>kill_process</strong>: terminates the malicious process.</li>
+             * <li><strong>cleanup</strong>: performs in-depth virus detection and removal.</li>
+             * <li><strong>kill_and_quara</strong>: performs virus detection and removal.</li>
+             * <li><strong>disable_malicious_defense</strong>: turns off malicious defense behavior.</li>
+             * <li><strong>client_problem_check</strong>: performs troubleshooting.</li>
+             * <li><strong>quara</strong>: performs quarantine operations.</li>
+             * </ul>
              * 
-             * *   **block_ip**: blocks the alert.
-             * *   **advance_mark_mis_info**: adds the alert to the whitelist.
-             * *   **ignore**: ignores the alert.
-             * *   **manual_handled**: marks the alert as manually handled.
-             * *   **kill_process**: terminates the malicious process.
-             * *   **cleanup**: performs in-depth virus detection and removal.
-             * *   **kill_and_quara**: performs virus detection and removal.
-             * *   **disable_malicious_defense**: turns off malicious defense behavior.
-             * *   **client_problem_check**: performs troubleshooting.
-             * *   **quara**: performs quarantine operations.
+             * <strong>example:</strong>
+             * <p>advance_mark_mis_info</p>
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -424,7 +470,10 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of the operation performed to handle the alert event.
+             * <p>The configuration of the operation performed to handle the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;subOperation&quot;:&quot;killByMd5andPath&quot;}</p>
              */
             public Builder operationParams(String operationParams) {
                 this.operationParams = operationParams;
@@ -432,11 +481,14 @@ public class AdvanceSecurityEventOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation can be performed.
-             * <p>
+             * <p>Indicates whether the operation can be performed.</p>
+             * <ul>
+             * <li><strong>true</strong>: The operation can be performed.</li>
+             * <li><strong>false</strong>: The operation cannot be performed.</li>
+             * </ul>
              * 
-             * *   **true**: The operation can be performed.
-             * *   **false**: The operation cannot be performed.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder userCanOperate(Boolean userCanOperate) {
                 this.userCanOperate = userCanOperate;

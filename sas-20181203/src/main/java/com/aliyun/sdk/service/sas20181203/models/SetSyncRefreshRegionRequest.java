@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetSyncRefreshRegionRequest} extends {@link RequestModel}
  *
  * <p>SetSyncRefreshRegionRequest</p>
@@ -81,11 +82,14 @@ public class SetSyncRefreshRegionRequest extends Request {
         } 
 
         /**
-         * The access type of the multi-cloud site. Valid values:
-         * <p>
+         * <p>The access type of the multi-cloud site. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The current site is not the default site of multi-cloud site. You can specify the current site as the default site of the multi-cloud site.</li>
+         * <li><strong>1</strong>: The current site is the default site of multi-cloud site.</li>
+         * </ul>
          * 
-         * *   **0**: The current site is not the default site of multi-cloud site. You can specify the current site as the default site of the multi-cloud site.
-         * *   **1**: The current site is the default site of multi-cloud site.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder defaultRegion(Integer defaultRegion) {
             this.putQueryParameter("DefaultRegion", defaultRegion);
@@ -94,7 +98,7 @@ public class SetSyncRefreshRegionRequest extends Request {
         }
 
         /**
-         * The regions from which you want to synchronize assets at the current site.
+         * <p>The regions from which you want to synchronize assets at the current site.</p>
          */
         public Builder regionIds(java.util.List < String > regionIds) {
             this.putQueryParameter("RegionIds", regionIds);
@@ -103,13 +107,16 @@ public class SetSyncRefreshRegionRequest extends Request {
         }
 
         /**
-         * The cloud service provider. Valid values:
-         * <p>
+         * <p>The cloud service provider. Valid values:</p>
+         * <ul>
+         * <li><strong>Tencent</strong>: Tencent Cloud</li>
+         * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud</li>
+         * <li><strong>Azure</strong>: Microsoft Azure</li>
+         * <li><strong>AWS</strong>: Amazon Web Services (AWS)</li>
+         * </ul>
          * 
-         * *   **Tencent**: Tencent Cloud
-         * *   **HUAWEICLOUD**: Huawei Cloud
-         * *   **Azure**: Microsoft Azure
-         * *   **AWS**: Amazon Web Services (AWS)
+         * <strong>example:</strong>
+         * <p>Tencent</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

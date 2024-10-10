@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClusterRuleSummaryResponseBody} extends {@link TeaModel}
  *
  * <p>GetClusterRuleSummaryResponseBody</p>
@@ -49,7 +50,7 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The overall information about the cluster defense rules.
+         * <p>The overall information about the cluster defense rules.</p>
          */
         public Builder clusterRuleSummary(ClusterRuleSummary clusterRuleSummary) {
             this.clusterRuleSummary = clusterRuleSummary;
@@ -57,7 +58,10 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>291B49F9-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetClusterRuleSummaryResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetClusterRuleSummaryResponseBody</p>
+     */
     public static class ClusterRuleSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloseRuleCount")
         private Integer closeRuleCount;
@@ -169,7 +179,10 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             private Integer suggestRuleCount; 
 
             /**
-             * The number of disabled cluster defense rules.
+             * <p>The number of disabled cluster defense rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder closeRuleCount(Integer closeRuleCount) {
                 this.closeRuleCount = closeRuleCount;
@@ -177,7 +190,10 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of alerts that are triggered by the cluster defense rules in the last seven days.
+             * <p>The number of alerts that are triggered by the cluster defense rules in the last seven days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interceptionCount7Day(Long interceptionCount7Day) {
                 this.interceptionCount7Day = interceptionCount7Day;
@@ -185,11 +201,14 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the container firewall feature. Valid values:
-             * <p>
+             * <p>The status of the container firewall feature. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * </ul>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder interceptionSwitch(Integer interceptionSwitch) {
                 this.interceptionSwitch = interceptionSwitch;
@@ -197,7 +216,10 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The interception mode.
+             * <p>The interception mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder interceptionType(Integer interceptionType) {
                 this.interceptionType = interceptionType;
@@ -205,7 +227,10 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of enabled cluster defense rules.
+             * <p>The number of enabled cluster defense rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder openRuleCount(Integer openRuleCount) {
                 this.openRuleCount = openRuleCount;
@@ -213,7 +238,10 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of configured cluster defense rules.
+             * <p>The total number of configured cluster defense rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;
@@ -221,7 +249,10 @@ public class GetClusterRuleSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of recommended cluster defense rules.
+             * <p>The number of recommended cluster defense rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder suggestRuleCount(Integer suggestRuleCount) {
                 this.suggestRuleCount = suggestRuleCount;

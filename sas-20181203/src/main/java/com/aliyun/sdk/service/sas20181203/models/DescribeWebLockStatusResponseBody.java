@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeWebLockStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeWebLockStatusResponseBody</p>
@@ -109,7 +110,10 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         private Integer whiteCount; 
 
         /**
-         * The total quota that you purchase for web tamper proofing.
+         * <p>The total quota that you purchase for web tamper proofing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder authCount(Integer authCount) {
             this.authCount = authCount;
@@ -117,7 +121,10 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The associated tamper proofing quota.
+         * <p>The associated tamper proofing quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bindCount(Integer bindCount) {
             this.bindCount = bindCount;
@@ -125,7 +132,10 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of blocked processes.
+         * <p>The number of blocked processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48</p>
          */
         public Builder blockCount(Integer blockCount) {
             this.blockCount = blockCount;
@@ -133,7 +143,10 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of protected directories.
+         * <p>The number of protected directories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder dirCount(Integer dirCount) {
             this.dirCount = dirCount;
@@ -141,7 +154,10 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp generated when the quota for tamper proofing expires. Unit: millisecond.
+         * <p>The timestamp generated when the quota for tamper proofing expires. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1688090851000</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -149,7 +165,10 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B48AB3C-84FC-424D-A01D-B9270EF46038</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +176,10 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of processes in the whitelist.
+         * <p>The number of processes in the whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder whiteCount(Integer whiteCount) {
             this.whiteCount = whiteCount;

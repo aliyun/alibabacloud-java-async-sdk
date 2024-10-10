@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitOperationTaskRequest} extends {@link RequestModel}
  *
  * <p>SubmitOperationTaskRequest</p>
@@ -25,6 +26,10 @@ public class SubmitOperationTaskRequest extends Request {
     private java.util.List < OperationTaskInstances> operationTaskInstances;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationKey")
+    private String relationKey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RepairTempParam")
     private java.util.List < RepairTempParam> repairTempParam;
 
@@ -38,6 +43,7 @@ public class SubmitOperationTaskRequest extends Request {
         this.checkId = builder.checkId;
         this.dimensionType = builder.dimensionType;
         this.operationTaskInstances = builder.operationTaskInstances;
+        this.relationKey = builder.relationKey;
         this.repairTempParam = builder.repairTempParam;
         this.type = builder.type;
     }
@@ -77,6 +83,13 @@ public class SubmitOperationTaskRequest extends Request {
     }
 
     /**
+     * @return relationKey
+     */
+    public String getRelationKey() {
+        return this.relationKey;
+    }
+
+    /**
      * @return repairTempParam
      */
     public java.util.List < RepairTempParam> getRepairTempParam() {
@@ -94,6 +107,7 @@ public class SubmitOperationTaskRequest extends Request {
         private Long checkId; 
         private String dimensionType; 
         private java.util.List < OperationTaskInstances> operationTaskInstances; 
+        private String relationKey; 
         private java.util.List < RepairTempParam> repairTempParam; 
         private String type; 
 
@@ -106,12 +120,16 @@ public class SubmitOperationTaskRequest extends Request {
             this.checkId = request.checkId;
             this.dimensionType = request.dimensionType;
             this.operationTaskInstances = request.operationTaskInstances;
+            this.relationKey = request.relationKey;
             this.repairTempParam = request.repairTempParam;
             this.type = request.type;
         } 
 
         /**
-         * CheckId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         public Builder checkId(Long checkId) {
             this.putQueryParameter("CheckId", checkId);
@@ -138,6 +156,15 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
+         * RelationKey.
+         */
+        public Builder relationKey(String relationKey) {
+            this.putQueryParameter("RelationKey", relationKey);
+            this.relationKey = relationKey;
+            return this;
+        }
+
+        /**
          * RepairTempParam.
          */
         public Builder repairTempParam(java.util.List < RepairTempParam> repairTempParam) {
@@ -147,7 +174,10 @@ public class SubmitOperationTaskRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REPAIR</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -162,6 +192,12 @@ public class SubmitOperationTaskRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitOperationTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitOperationTaskRequest</p>
+     */
     public static class OperationTaskInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -263,6 +299,12 @@ public class SubmitOperationTaskRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link SubmitOperationTaskRequest} extends {@link TeaModel}
+     *
+     * <p>SubmitOperationTaskRequest</p>
+     */
     public static class RepairTempParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;

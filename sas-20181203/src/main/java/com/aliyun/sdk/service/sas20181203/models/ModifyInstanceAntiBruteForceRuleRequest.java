@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyInstanceAntiBruteForceRuleRequest} extends {@link RequestModel}
  *
  * <p>ModifyInstanceAntiBruteForceRuleRequest</p>
@@ -97,7 +98,11 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the defense rule.
+         * <p>The ID of the defense rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65767</p>
          */
         public Builder newRuleId(Long newRuleId) {
             this.putQueryParameter("NewRuleId", newRuleId);
@@ -115,7 +120,10 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The source IP address of the request.
+         * <p>The source IP address of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.XX.XX</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);
@@ -124,7 +132,11 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends Request {
         }
 
         /**
-         * The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
+         * <p>The UUID of the server for which you want to modify the defense rule. You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7cc91747-2845-40d4-bb69-c077597f****</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

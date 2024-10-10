@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateInterceptionTargetRequest} extends {@link RequestModel}
  *
  * <p>CreateInterceptionTargetRequest</p>
@@ -154,7 +155,10 @@ public class CreateInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * The name of the application to which the network object belongs.
+         * <p>The name of the application to which the network object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>frontend</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -163,7 +167,10 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc20a1024011c44b6a8710d6f8b****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -172,7 +179,10 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The cluster name.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas-test-cnnf</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -181,7 +191,7 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * An array that consists of the images of the network object.
+         * <p>An array that consists of the images of the network object.</p>
          */
         public Builder imageList(java.util.List < String > imageList) {
             this.putQueryParameter("ImageList", imageList);
@@ -190,7 +200,11 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The namespace to which the network object belongs.
+         * <p>The namespace to which the network object belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -199,7 +213,7 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * An array that consists of the labels specified for the network object.
+         * <p>An array that consists of the labels specified for the network object.</p>
          */
         public Builder tagList(java.util.List < String > tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -208,7 +222,11 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The name of the object to be blocked.
+         * <p>The name of the object to be blocked.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -217,10 +235,14 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * The object type. Valid value:
-         * <p>
+         * <p>The object type. Valid value:</p>
+         * <ul>
+         * <li><strong>IMAGE</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   **IMAGE**
+         * <strong>example:</strong>
+         * <p>IMAGE</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

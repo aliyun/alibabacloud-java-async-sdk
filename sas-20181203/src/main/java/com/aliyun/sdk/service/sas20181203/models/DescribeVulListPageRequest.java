@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVulListPageRequest} extends {@link RequestModel}
  *
  * <p>DescribeVulListPageRequest</p>
@@ -123,7 +124,10 @@ public class DescribeVulListPageRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -132,7 +136,10 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.
+         * <p>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2022-44702</p>
          */
         public Builder cveId(String cveId) {
             this.putQueryParameter("CveId", cveId);
@@ -141,7 +148,10 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,12 +160,16 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * Indicates whether the application protection feature is supported. Valid values:
-         * <p>
+         * <p>Indicates whether the application protection feature is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: no.</p>
+         * </li>
+         * <li><p><strong>1</strong>: yes.</p>
+         * </li>
+         * </ul>
          * 
-         * - **0**: no.
-         * 
-         * - **1**: yes.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder raspDefend(Integer raspDefend) {
             this.putQueryParameter("RaspDefend", raspDefend);
@@ -164,7 +178,10 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * The name of the vulnerability.
+         * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RCE vulnerability</p>
          */
         public Builder vulNameLike(String vulNameLike) {
             this.putQueryParameter("VulNameLike", vulNameLike);
@@ -173,12 +190,15 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * The type of the vulnerabilities. Valid values:
-         * <p>
+         * <p>The type of the vulnerabilities. Valid values:</p>
+         * <ul>
+         * <li><strong>cve</strong>: Linux software vulnerability.</li>
+         * <li><strong>sys</strong>: Windows system vulnerability.</li>
+         * <li><strong>app</strong>: Application vulnerability that is detected by using web scanner.</li>
+         * </ul>
          * 
-         * *   **cve**: Linux software vulnerability.
-         * *   **sys**: Windows system vulnerability.
-         * *   **app**: Application vulnerability that is detected by using web scanner.
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         public Builder vulType(String vulType) {
             this.putQueryParameter("VulType", vulType);
