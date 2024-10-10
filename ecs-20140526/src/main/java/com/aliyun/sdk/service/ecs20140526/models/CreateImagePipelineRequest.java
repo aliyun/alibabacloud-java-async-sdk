@@ -47,6 +47,10 @@ public class CreateImagePipelineRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageFamily")
+    private String imageFamily;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
@@ -76,6 +80,10 @@ public class CreateImagePipelineRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepairMode")
+    private String repairMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -96,6 +104,10 @@ public class CreateImagePipelineRequest extends Request {
     private java.util.List < Tag> tag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TestContent")
+    private String testContent;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ToRegionId")
     private java.util.List < String > toRegionId;
 
@@ -113,6 +125,7 @@ public class CreateImagePipelineRequest extends Request {
         this.clientToken = builder.clientToken;
         this.deleteInstanceOnFailure = builder.deleteInstanceOnFailure;
         this.description = builder.description;
+        this.imageFamily = builder.imageFamily;
         this.imageName = builder.imageName;
         this.instanceType = builder.instanceType;
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
@@ -120,11 +133,13 @@ public class CreateImagePipelineRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.repairMode = builder.repairMode;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.systemDiskSize = builder.systemDiskSize;
         this.tag = builder.tag;
+        this.testContent = builder.testContent;
         this.toRegionId = builder.toRegionId;
         this.vSwitchId = builder.vSwitchId;
     }
@@ -199,6 +214,13 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     /**
+     * @return imageFamily
+     */
+    public String getImageFamily() {
+        return this.imageFamily;
+    }
+
+    /**
      * @return imageName
      */
     public String getImageName() {
@@ -248,6 +270,13 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     /**
+     * @return repairMode
+     */
+    public String getRepairMode() {
+        return this.repairMode;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -283,6 +312,13 @@ public class CreateImagePipelineRequest extends Request {
     }
 
     /**
+     * @return testContent
+     */
+    public String getTestContent() {
+        return this.testContent;
+    }
+
+    /**
      * @return toRegionId
      */
     public java.util.List < String > getToRegionId() {
@@ -305,6 +341,7 @@ public class CreateImagePipelineRequest extends Request {
         private String clientToken; 
         private Boolean deleteInstanceOnFailure; 
         private String description; 
+        private String imageFamily; 
         private String imageName; 
         private String instanceType; 
         private Integer internetMaxBandwidthOut; 
@@ -312,11 +349,13 @@ public class CreateImagePipelineRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
+        private String repairMode; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer systemDiskSize; 
         private java.util.List < Tag> tag; 
+        private String testContent; 
         private java.util.List < String > toRegionId; 
         private String vSwitchId; 
 
@@ -334,6 +373,7 @@ public class CreateImagePipelineRequest extends Request {
             this.clientToken = request.clientToken;
             this.deleteInstanceOnFailure = request.deleteInstanceOnFailure;
             this.description = request.description;
+            this.imageFamily = request.imageFamily;
             this.imageName = request.imageName;
             this.instanceType = request.instanceType;
             this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
@@ -341,11 +381,13 @@ public class CreateImagePipelineRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.repairMode = request.repairMode;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.systemDiskSize = request.systemDiskSize;
             this.tag = request.tag;
+            this.testContent = request.testContent;
             this.toRegionId = request.toRegionId;
             this.vSwitchId = request.vSwitchId;
         } 
@@ -462,6 +504,15 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
+         * ImageFamily.
+         */
+        public Builder imageFamily(String imageFamily) {
+            this.putQueryParameter("ImageFamily", imageFamily);
+            this.imageFamily = imageFamily;
+            return this;
+        }
+
+        /**
          * <p>The prefix of the image name. The prefix must be 2 to 64 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * <p>The system generates the final complete image name that consists of the specified prefix and the ID of the build task (<code>ExecutionId</code>) in the format of <code>{ImageName}_{ExecutionId}</code>.</p>
          * 
@@ -547,6 +598,15 @@ public class CreateImagePipelineRequest extends Request {
         }
 
         /**
+         * RepairMode.
+         */
+        public Builder repairMode(String repairMode) {
+            this.putQueryParameter("RepairMode", repairMode);
+            this.repairMode = repairMode;
+            return this;
+        }
+
+        /**
          * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
@@ -595,6 +655,15 @@ public class CreateImagePipelineRequest extends Request {
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * TestContent.
+         */
+        public Builder testContent(String testContent) {
+            this.putQueryParameter("TestContent", testContent);
+            this.testContent = testContent;
             return this;
         }
 

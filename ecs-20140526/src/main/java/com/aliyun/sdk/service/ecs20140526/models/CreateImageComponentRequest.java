@@ -25,6 +25,10 @@ public class CreateImageComponentRequest extends Request {
     private String componentType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentVersion")
+    private String componentVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
@@ -74,6 +78,7 @@ public class CreateImageComponentRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.clientToken = builder.clientToken;
         this.componentType = builder.componentType;
+        this.componentVersion = builder.componentVersion;
         this.content = builder.content;
         this.description = builder.description;
         this.name = builder.name;
@@ -119,6 +124,13 @@ public class CreateImageComponentRequest extends Request {
      */
     public String getComponentType() {
         return this.componentType;
+    }
+
+    /**
+     * @return componentVersion
+     */
+    public String getComponentVersion() {
+        return this.componentVersion;
     }
 
     /**
@@ -202,6 +214,7 @@ public class CreateImageComponentRequest extends Request {
         private String sourceRegionId; 
         private String clientToken; 
         private String componentType; 
+        private String componentVersion; 
         private String content; 
         private String description; 
         private String name; 
@@ -223,6 +236,7 @@ public class CreateImageComponentRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.clientToken = request.clientToken;
             this.componentType = request.componentType;
+            this.componentVersion = request.componentVersion;
             this.content = request.content;
             this.description = request.description;
             this.name = request.name;
@@ -267,6 +281,15 @@ public class CreateImageComponentRequest extends Request {
         public Builder componentType(String componentType) {
             this.putQueryParameter("ComponentType", componentType);
             this.componentType = componentType;
+            return this;
+        }
+
+        /**
+         * ComponentVersion.
+         */
+        public Builder componentVersion(String componentVersion) {
+            this.putQueryParameter("ComponentVersion", componentVersion);
+            this.componentVersion = componentVersion;
             return this;
         }
 

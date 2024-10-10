@@ -17,6 +17,14 @@ public class DescribeImageComponentsRequest extends Request {
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentType")
+    private String componentType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentVersion")
+    private String componentVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageComponentId")
     private java.util.List < String > imageComponentId;
 
@@ -63,12 +71,18 @@ public class DescribeImageComponentsRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemType")
+    private String systemType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeImageComponentsRequest(Builder builder) {
         super(builder);
         this.sourceRegionId = builder.sourceRegionId;
+        this.componentType = builder.componentType;
+        this.componentVersion = builder.componentVersion;
         this.imageComponentId = builder.imageComponentId;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
@@ -80,6 +94,7 @@ public class DescribeImageComponentsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.systemType = builder.systemType;
         this.tag = builder.tag;
     }
 
@@ -101,6 +116,20 @@ public class DescribeImageComponentsRequest extends Request {
      */
     public String getSourceRegionId() {
         return this.sourceRegionId;
+    }
+
+    /**
+     * @return componentType
+     */
+    public String getComponentType() {
+        return this.componentType;
+    }
+
+    /**
+     * @return componentVersion
+     */
+    public String getComponentVersion() {
+        return this.componentVersion;
     }
 
     /**
@@ -181,6 +210,13 @@ public class DescribeImageComponentsRequest extends Request {
     }
 
     /**
+     * @return systemType
+     */
+    public String getSystemType() {
+        return this.systemType;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -189,6 +225,8 @@ public class DescribeImageComponentsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeImageComponentsRequest, Builder> {
         private String sourceRegionId; 
+        private String componentType; 
+        private String componentVersion; 
         private java.util.List < String > imageComponentId; 
         private Integer maxResults; 
         private String name; 
@@ -200,6 +238,7 @@ public class DescribeImageComponentsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String systemType; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -209,6 +248,8 @@ public class DescribeImageComponentsRequest extends Request {
         private Builder(DescribeImageComponentsRequest request) {
             super(request);
             this.sourceRegionId = request.sourceRegionId;
+            this.componentType = request.componentType;
+            this.componentVersion = request.componentVersion;
             this.imageComponentId = request.imageComponentId;
             this.maxResults = request.maxResults;
             this.name = request.name;
@@ -220,6 +261,7 @@ public class DescribeImageComponentsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.systemType = request.systemType;
             this.tag = request.tag;
         } 
 
@@ -229,6 +271,24 @@ public class DescribeImageComponentsRequest extends Request {
         public Builder sourceRegionId(String sourceRegionId) {
             this.putHostParameter("SourceRegionId", sourceRegionId);
             this.sourceRegionId = sourceRegionId;
+            return this;
+        }
+
+        /**
+         * ComponentType.
+         */
+        public Builder componentType(String componentType) {
+            this.putQueryParameter("ComponentType", componentType);
+            this.componentType = componentType;
+            return this;
+        }
+
+        /**
+         * ComponentVersion.
+         */
+        public Builder componentVersion(String componentVersion) {
+            this.putQueryParameter("ComponentVersion", componentVersion);
+            this.componentVersion = componentVersion;
             return this;
         }
 
@@ -358,6 +418,15 @@ public class DescribeImageComponentsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SystemType.
+         */
+        public Builder systemType(String systemType) {
+            this.putQueryParameter("SystemType", systemType);
+            this.systemType = systemType;
             return this;
         }
 

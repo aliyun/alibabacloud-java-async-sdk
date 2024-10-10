@@ -385,6 +385,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("ImageFamily")
+        private String imageFamily;
+
         @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
@@ -400,6 +403,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("RepairMode")
+        private String repairMode;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -408,6 +414,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
+
+        @com.aliyun.core.annotation.NameInMap("TestContent")
+        private String testContent;
 
         @com.aliyun.core.annotation.NameInMap("ToRegionIds")
         private ToRegionIds toRegionIds;
@@ -423,14 +432,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.deleteInstanceOnFailure = builder.deleteInstanceOnFailure;
             this.description = builder.description;
+            this.imageFamily = builder.imageFamily;
             this.imageName = builder.imageName;
             this.imagePipelineId = builder.imagePipelineId;
             this.instanceType = builder.instanceType;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
             this.name = builder.name;
+            this.repairMode = builder.repairMode;
             this.resourceGroupId = builder.resourceGroupId;
             this.systemDiskSize = builder.systemDiskSize;
             this.tags = builder.tags;
+            this.testContent = builder.testContent;
             this.toRegionIds = builder.toRegionIds;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -493,6 +505,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageFamily
+         */
+        public String getImageFamily() {
+            return this.imageFamily;
+        }
+
+        /**
          * @return imageName
          */
         public String getImageName() {
@@ -528,6 +547,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return repairMode
+         */
+        public String getRepairMode() {
+            return this.repairMode;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -546,6 +572,13 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
          */
         public Tags getTags() {
             return this.tags;
+        }
+
+        /**
+         * @return testContent
+         */
+        public String getTestContent() {
+            return this.testContent;
         }
 
         /**
@@ -570,14 +603,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             private String creationTime; 
             private Boolean deleteInstanceOnFailure; 
             private String description; 
+            private String imageFamily; 
             private String imageName; 
             private String imagePipelineId; 
             private String instanceType; 
             private Integer internetMaxBandwidthOut; 
             private String name; 
+            private String repairMode; 
             private String resourceGroupId; 
             private Integer systemDiskSize; 
             private Tags tags; 
+            private String testContent; 
             private ToRegionIds toRegionIds; 
             private String vSwitchId; 
 
@@ -664,6 +700,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
+             * ImageFamily.
+             */
+            public Builder imageFamily(String imageFamily) {
+                this.imageFamily = imageFamily;
+                return this;
+            }
+
+            /**
              * <p>The name prefix of the image to be created based on the image template.</p>
              * 
              * <strong>example:</strong>
@@ -719,6 +763,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             }
 
             /**
+             * RepairMode.
+             */
+            public Builder repairMode(String repairMode) {
+                this.repairMode = repairMode;
+                return this;
+            }
+
+            /**
              * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
@@ -745,6 +797,14 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * TestContent.
+             */
+            public Builder testContent(String testContent) {
+                this.testContent = testContent;
                 return this;
             }
 
