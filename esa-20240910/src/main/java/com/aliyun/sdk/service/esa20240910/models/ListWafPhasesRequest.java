@@ -69,7 +69,10 @@ public class ListWafPhasesRequest extends Request {
         } 
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

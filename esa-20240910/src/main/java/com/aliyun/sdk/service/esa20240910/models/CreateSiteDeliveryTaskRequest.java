@@ -213,7 +213,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("BusinessType", businessType);
@@ -222,7 +225,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * DataCenter.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder dataCenter(String dataCenter) {
             this.putBodyParameter("DataCenter", dataCenter);
@@ -231,7 +237,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * DeliveryType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls</p>
          */
         public Builder deliveryType(String deliveryType) {
             this.putBodyParameter("DeliveryType", deliveryType);
@@ -249,7 +258,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * FieldName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_agent,ip_adress,ip_port</p>
          */
         public Builder fieldName(String fieldName) {
             this.putBodyParameter("FieldName", fieldName);
@@ -317,7 +329,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn-test-task</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);

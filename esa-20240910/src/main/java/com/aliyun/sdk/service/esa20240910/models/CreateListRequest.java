@@ -125,7 +125,10 @@ public class CreateListRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

@@ -113,7 +113,10 @@ public class CreateScheduledPreloadJobRequest extends Request {
         } 
 
         /**
-         * InsertWay.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         public Builder insertWay(String insertWay) {
             this.putBodyParameter("InsertWay", insertWay);
@@ -122,7 +125,7 @@ public class CreateScheduledPreloadJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -140,7 +143,7 @@ public class CreateScheduledPreloadJobRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);

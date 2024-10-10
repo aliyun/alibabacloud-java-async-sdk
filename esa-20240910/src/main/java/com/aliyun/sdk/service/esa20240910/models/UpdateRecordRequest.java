@@ -196,7 +196,7 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * Data.
+         * <p>This parameter is required.</p>
          */
         public Builder data(Data data) {
             String dataShrink = shrink(data, "Data", "json");
@@ -224,7 +224,7 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * <p>This parameter is required.</p>
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);

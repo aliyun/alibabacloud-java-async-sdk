@@ -269,7 +269,10 @@ public class SetCertificateRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);
@@ -278,7 +281,10 @@ public class SetCertificateRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

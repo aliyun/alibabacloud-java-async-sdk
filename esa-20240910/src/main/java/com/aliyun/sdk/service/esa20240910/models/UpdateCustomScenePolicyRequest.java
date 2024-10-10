@@ -129,7 +129,10 @@ public class UpdateCustomScenePolicyRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-03T19:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -138,7 +141,10 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -156,7 +162,10 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -165,7 +174,10 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-03T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -174,7 +186,10 @@ public class UpdateCustomScenePolicyRequest extends Request {
         }
 
         /**
-         * Template.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>promotion</p>
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);

@@ -69,7 +69,7 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
         } 
 
         /**
-         * Executions.
+         * <p>This parameter is required.</p>
          */
         public Builder executions(java.util.List < Executions> executions) {
             String executionsShrink = shrink(executions, "Executions", "json");
@@ -173,7 +173,7 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
             }
 
             /**
-             * Interval.
+             * <p>This parameter is required.</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -181,7 +181,7 @@ public class CreateScheduledPreloadExecutionsRequest extends Request {
             }
 
             /**
-             * SliceLen.
+             * <p>This parameter is required.</p>
              */
             public Builder sliceLen(Integer sliceLen) {
                 this.sliceLen = sliceLen;

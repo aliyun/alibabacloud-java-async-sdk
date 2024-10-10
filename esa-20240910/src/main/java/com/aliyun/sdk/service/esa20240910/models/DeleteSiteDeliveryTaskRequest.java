@@ -70,7 +70,10 @@ public class DeleteSiteDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456******</p>
          */
         public Builder siteId(Long siteId) {
             this.putBodyParameter("SiteId", siteId);
@@ -79,7 +82,10 @@ public class DeleteSiteDeliveryTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdn-test-task</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);

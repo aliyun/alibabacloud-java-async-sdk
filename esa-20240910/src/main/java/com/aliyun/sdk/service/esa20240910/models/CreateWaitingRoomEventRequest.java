@@ -358,7 +358,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -367,7 +370,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719849600</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -394,7 +400,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waitingroom_example</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -403,7 +412,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * NewUsersPerMinute.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder newUsersPerMinute(String newUsersPerMinute) {
             this.putQueryParameter("NewUsersPerMinute", newUsersPerMinute);
@@ -430,7 +442,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * QueuingMethod.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>random</p>
          */
         public Builder queuingMethod(String queuingMethod) {
             this.putQueryParameter("QueuingMethod", queuingMethod);
@@ -439,7 +454,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * QueuingStatusCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202</p>
          */
         public Builder queuingStatusCode(String queuingStatusCode) {
             this.putQueryParameter("QueuingStatusCode", queuingStatusCode);
@@ -457,7 +475,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * SessionDuration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder sessionDuration(String sessionDuration) {
             this.putQueryParameter("SessionDuration", sessionDuration);
@@ -466,7 +487,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -475,7 +499,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719763200</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -484,7 +511,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * TotalActiveUsers.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalActiveUsers(String totalActiveUsers) {
             this.putQueryParameter("TotalActiveUsers", totalActiveUsers);
@@ -502,7 +532,10 @@ public class CreateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * WaitingRoomType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder waitingRoomType(String waitingRoomType) {
             this.putQueryParameter("WaitingRoomType", waitingRoomType);

@@ -55,7 +55,10 @@ public class GetUserLogDeliveryQuotaRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);

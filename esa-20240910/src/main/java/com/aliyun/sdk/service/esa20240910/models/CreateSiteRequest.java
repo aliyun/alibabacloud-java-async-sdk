@@ -114,7 +114,10 @@ public class CreateSiteRequest extends Request {
         } 
 
         /**
-         * AccessType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NS</p>
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -123,7 +126,10 @@ public class CreateSiteRequest extends Request {
         }
 
         /**
-         * Coverage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -132,7 +138,10 @@ public class CreateSiteRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbaudit-cn-nwy349jdb03</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,6 +160,7 @@ public class CreateSiteRequest extends Request {
 
         /**
          * <p>记录名称</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateSite</p>

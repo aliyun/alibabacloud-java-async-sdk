@@ -106,7 +106,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-axxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

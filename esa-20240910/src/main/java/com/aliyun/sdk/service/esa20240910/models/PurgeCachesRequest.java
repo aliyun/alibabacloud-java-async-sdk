@@ -148,7 +148,10 @@ public class PurgeCachesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

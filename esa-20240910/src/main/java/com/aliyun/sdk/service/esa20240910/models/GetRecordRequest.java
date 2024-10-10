@@ -55,7 +55,10 @@ public class GetRecordRequest extends Request {
         } 
 
         /**
-         * RecordId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);

@@ -83,7 +83,10 @@ public class DescribeCustomScenePoliciesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);

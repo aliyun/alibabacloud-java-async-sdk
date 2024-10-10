@@ -136,6 +136,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
 
         /**
          * <p>自定义响应页面名称</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -147,6 +148,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
 
         /**
          * <p>自定义响应页面内容类型</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>http_bot</p>

@@ -154,7 +154,10 @@ public class PutKvRequest extends Request {
         }
 
         /**
-         * Key.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_key</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -163,7 +166,10 @@ public class PutKvRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -172,7 +178,10 @@ public class PutKvRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_value</p>
          */
         public Builder value(String value) {
             this.putBodyParameter("Value", value);

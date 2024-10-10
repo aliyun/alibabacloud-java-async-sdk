@@ -107,7 +107,10 @@ public class CreatePageRequest extends Request {
         }
 
         /**
-         * ContentType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/html</p>
          */
         public Builder contentType(String contentType) {
             this.putBodyParameter("ContentType", contentType);
@@ -125,7 +128,10 @@ public class CreatePageRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

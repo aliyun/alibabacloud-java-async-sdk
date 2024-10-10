@@ -199,7 +199,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("BusinessType", businessType);
@@ -208,7 +211,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * DataCenter.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         public Builder dataCenter(String dataCenter) {
             this.putBodyParameter("DataCenter", dataCenter);
@@ -217,7 +223,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * DeliveryType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls</p>
          */
         public Builder deliveryType(String deliveryType) {
             this.putBodyParameter("DeliveryType", deliveryType);
@@ -235,7 +244,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * FieldName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_agent,ip_address,ip_port</p>
          */
         public Builder fieldName(String fieldName) {
             this.putBodyParameter("FieldName", fieldName);
@@ -294,7 +306,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);

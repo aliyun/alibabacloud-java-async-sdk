@@ -114,7 +114,10 @@ public class UpdatePageRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PGh0bWw+aGVsbG8gcGFnZTwvaHRtbD4=</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -123,7 +126,10 @@ public class UpdatePageRequest extends Request {
         }
 
         /**
-         * ContentType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/html</p>
          */
         public Builder contentType(String contentType) {
             this.putBodyParameter("ContentType", contentType);
@@ -141,7 +147,10 @@ public class UpdatePageRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000001</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -150,7 +159,10 @@ public class UpdatePageRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

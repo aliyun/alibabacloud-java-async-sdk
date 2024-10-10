@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PutKvAccountResponse} extends {@link TeaModel}
+ * {@link ListInstanceQuotasResponse} extends {@link TeaModel}
  *
- * <p>PutKvAccountResponse</p>
+ * <p>ListInstanceQuotasResponse</p>
  */
-public class PutKvAccountResponse extends Response {
+public class ListInstanceQuotasResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class PutKvAccountResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private PutKvAccountResponseBody body;
+    private ListInstanceQuotasResponseBody body;
 
-    private PutKvAccountResponse(BuilderImpl builder) {
+    private ListInstanceQuotasResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static PutKvAccountResponse create() {
+    public static ListInstanceQuotasResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class PutKvAccountResponse extends Response {
     /**
      * @return body
      */
-    public PutKvAccountResponseBody getBody() {
+    public ListInstanceQuotasResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<PutKvAccountResponse, Builder> {
+    public interface Builder extends Response.Builder<ListInstanceQuotasResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(PutKvAccountResponseBody body);
+        Builder body(ListInstanceQuotasResponseBody body);
 
         @Override
-        PutKvAccountResponse build();
+        ListInstanceQuotasResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<PutKvAccountResponse, Builder>
+            extends Response.BuilderImpl<ListInstanceQuotasResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private PutKvAccountResponseBody body; 
+        private ListInstanceQuotasResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(PutKvAccountResponse response) {
+        private BuilderImpl(ListInstanceQuotasResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class PutKvAccountResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(PutKvAccountResponseBody body) {
+        public Builder body(ListInstanceQuotasResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public PutKvAccountResponse build() {
-            return new PutKvAccountResponse(this);
+        public ListInstanceQuotasResponse build() {
+            return new ListInstanceQuotasResponse(this);
         } 
 
     } 

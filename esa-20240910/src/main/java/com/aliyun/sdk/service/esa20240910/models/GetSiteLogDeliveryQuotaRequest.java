@@ -70,7 +70,10 @@ public class GetSiteLogDeliveryQuotaRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dcdn_log_access_l1</p>
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -79,7 +82,10 @@ public class GetSiteLogDeliveryQuotaRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

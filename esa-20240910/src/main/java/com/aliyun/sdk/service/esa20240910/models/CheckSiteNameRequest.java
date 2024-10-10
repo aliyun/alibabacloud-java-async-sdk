@@ -55,7 +55,10 @@ public class CheckSiteNameRequest extends Request {
         } 
 
         /**
-         * SiteName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.putQueryParameter("SiteName", siteName);

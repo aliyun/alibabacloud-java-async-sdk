@@ -55,7 +55,10 @@ public class DeleteScheduledPreloadExecutionRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DeleteScheduledPreloadExecution</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

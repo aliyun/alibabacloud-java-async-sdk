@@ -114,7 +114,10 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         } 
 
         /**
-         * Rule.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -123,7 +126,10 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -132,7 +138,10 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -141,7 +150,10 @@ public class UpdateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

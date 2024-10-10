@@ -55,7 +55,10 @@ public class GetScheduledPreloadJobRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GetScheduledPreloadJob</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

@@ -70,7 +70,10 @@ public class UpdateSiteCoverageRequest extends Request {
         } 
 
         /**
-         * Coverage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -79,7 +82,10 @@ public class UpdateSiteCoverageRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

@@ -108,7 +108,10 @@ public class CreateWafRuleRequest extends Request {
         }
 
         /**
-         * Phase.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_custom</p>
          */
         public Builder phase(String phase) {
             this.putBodyParameter("Phase", phase);
@@ -117,7 +120,10 @@ public class CreateWafRuleRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

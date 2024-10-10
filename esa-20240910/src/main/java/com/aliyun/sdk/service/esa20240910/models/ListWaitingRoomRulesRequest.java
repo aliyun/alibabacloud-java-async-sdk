@@ -107,7 +107,10 @@ public class ListWaitingRoomRulesRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -116,7 +119,10 @@ public class ListWaitingRoomRulesRequest extends Request {
         }
 
         /**
-         * WaitingRoomId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a51d5bc6460887abd129****</p>
          */
         public Builder waitingRoomId(String waitingRoomId) {
             this.putQueryParameter("WaitingRoomId", waitingRoomId);

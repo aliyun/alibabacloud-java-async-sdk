@@ -70,7 +70,7 @@ public class BatchCreateRecordsRequest extends Request {
         } 
 
         /**
-         * RecordList.
+         * <p>This parameter is required.</p>
          */
         public Builder recordList(java.util.List < RecordList> recordList) {
             String recordListShrink = shrink(recordList, "RecordList", "json");
@@ -80,7 +80,10 @@ public class BatchCreateRecordsRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -520,7 +523,12 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Data.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;value&quot;:&quot;2.2.2.2&quot;
+             * }</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -528,7 +536,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Proxied.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder proxied(Boolean proxied) {
                 this.proxied = proxied;
@@ -536,7 +547,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * RecordName.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -552,7 +566,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Ttl.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder ttl(Integer ttl) {
                 this.ttl = ttl;
@@ -560,7 +577,10 @@ public class BatchCreateRecordsRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A/AAAA</p>
              */
             public Builder type(String type) {
                 this.type = type;

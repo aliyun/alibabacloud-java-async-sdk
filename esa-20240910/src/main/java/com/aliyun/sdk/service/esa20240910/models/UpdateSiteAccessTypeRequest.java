@@ -70,7 +70,10 @@ public class UpdateSiteAccessTypeRequest extends Request {
         } 
 
         /**
-         * AccessType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NS</p>
          */
         public Builder accessType(String accessType) {
             this.putQueryParameter("AccessType", accessType);
@@ -79,7 +82,10 @@ public class UpdateSiteAccessTypeRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

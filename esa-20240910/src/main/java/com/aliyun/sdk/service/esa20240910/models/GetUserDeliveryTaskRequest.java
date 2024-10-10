@@ -55,7 +55,10 @@ public class GetUserDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

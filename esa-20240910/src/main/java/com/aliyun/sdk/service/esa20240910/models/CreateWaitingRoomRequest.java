@@ -289,7 +289,10 @@ public class CreateWaitingRoomRequest extends Request {
         } 
 
         /**
-         * CookieName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>__aliwaitingroom_example</p>
          */
         public Builder cookieName(String cookieName) {
             this.putQueryParameter("CookieName", cookieName);
@@ -325,7 +328,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -334,7 +340,7 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * HostNameAndPath.
+         * <p>This parameter is required.</p>
          */
         public Builder hostNameAndPath(java.util.List < HostNameAndPath> hostNameAndPath) {
             String hostNameAndPathShrink = shrink(hostNameAndPath, "HostNameAndPath", "json");
@@ -362,7 +368,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waitingroom_example</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -371,7 +380,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * NewUsersPerMinute.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder newUsersPerMinute(String newUsersPerMinute) {
             this.putQueryParameter("NewUsersPerMinute", newUsersPerMinute);
@@ -389,7 +401,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * QueuingMethod.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fifo</p>
          */
         public Builder queuingMethod(String queuingMethod) {
             this.putQueryParameter("QueuingMethod", queuingMethod);
@@ -398,7 +413,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * QueuingStatusCode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder queuingStatusCode(String queuingStatusCode) {
             this.putQueryParameter("QueuingStatusCode", queuingStatusCode);
@@ -407,7 +425,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * SessionDuration.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder sessionDuration(String sessionDuration) {
             this.putQueryParameter("SessionDuration", sessionDuration);
@@ -416,7 +437,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -425,7 +449,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * TotalActiveUsers.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder totalActiveUsers(String totalActiveUsers) {
             this.putQueryParameter("TotalActiveUsers", totalActiveUsers);
@@ -434,7 +461,10 @@ public class CreateWaitingRoomRequest extends Request {
         }
 
         /**
-         * WaitingRoomType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder waitingRoomType(String waitingRoomType) {
             this.putQueryParameter("WaitingRoomType", waitingRoomType);
@@ -509,7 +539,10 @@ public class CreateWaitingRoomRequest extends Request {
             private String subdomain; 
 
             /**
-             * Domain.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -517,7 +550,10 @@ public class CreateWaitingRoomRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -525,7 +561,10 @@ public class CreateWaitingRoomRequest extends Request {
             }
 
             /**
-             * Subdomain.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.</p>
              */
             public Builder subdomain(String subdomain) {
                 this.subdomain = subdomain;

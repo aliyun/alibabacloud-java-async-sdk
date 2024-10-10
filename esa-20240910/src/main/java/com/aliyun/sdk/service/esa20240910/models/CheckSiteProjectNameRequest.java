@@ -69,7 +69,10 @@ public class CheckSiteProjectNameRequest extends Request {
         } 
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_log</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

@@ -85,7 +85,10 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends Request {
         } 
 
         /**
-         * AiMode.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defense</p>
          */
         public Builder aiMode(String aiMode) {
             this.putQueryParameter("AiMode", aiMode);
@@ -94,7 +97,10 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends Request {
         }
 
         /**
-         * AiTemplate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>level60</p>
          */
         public Builder aiTemplate(String aiTemplate) {
             this.putQueryParameter("AiTemplate", aiTemplate);
@@ -103,7 +109,10 @@ public class SetHttpDDoSAttackIntelligentProtectionRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

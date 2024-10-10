@@ -55,7 +55,7 @@ public class DeleteRecordRequest extends Request {
         } 
 
         /**
-         * RecordId.
+         * <p>This parameter is required.</p>
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);

@@ -125,7 +125,10 @@ public class ListEdgeContainerAppRecordsRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-88068867578379****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AdvancePurgeObjectCacheResponse} extends {@link TeaModel}
+ * {@link ListUserRatePlanInstancesResponse} extends {@link TeaModel}
  *
- * <p>AdvancePurgeObjectCacheResponse</p>
+ * <p>ListUserRatePlanInstancesResponse</p>
  */
-public class AdvancePurgeObjectCacheResponse extends Response {
+public class ListUserRatePlanInstancesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class AdvancePurgeObjectCacheResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private AdvancePurgeObjectCacheResponseBody body;
+    private ListUserRatePlanInstancesResponseBody body;
 
-    private AdvancePurgeObjectCacheResponse(BuilderImpl builder) {
+    private ListUserRatePlanInstancesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AdvancePurgeObjectCacheResponse create() {
+    public static ListUserRatePlanInstancesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class AdvancePurgeObjectCacheResponse extends Response {
     /**
      * @return body
      */
-    public AdvancePurgeObjectCacheResponseBody getBody() {
+    public ListUserRatePlanInstancesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AdvancePurgeObjectCacheResponse, Builder> {
+    public interface Builder extends Response.Builder<ListUserRatePlanInstancesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AdvancePurgeObjectCacheResponseBody body);
+        Builder body(ListUserRatePlanInstancesResponseBody body);
 
         @Override
-        AdvancePurgeObjectCacheResponse build();
+        ListUserRatePlanInstancesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AdvancePurgeObjectCacheResponse, Builder>
+            extends Response.BuilderImpl<ListUserRatePlanInstancesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private AdvancePurgeObjectCacheResponseBody body; 
+        private ListUserRatePlanInstancesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AdvancePurgeObjectCacheResponse response) {
+        private BuilderImpl(ListUserRatePlanInstancesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class AdvancePurgeObjectCacheResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AdvancePurgeObjectCacheResponseBody body) {
+        public Builder body(ListUserRatePlanInstancesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AdvancePurgeObjectCacheResponse build() {
-            return new AdvancePurgeObjectCacheResponse(this);
+        public ListUserRatePlanInstancesResponse build() {
+            return new ListUserRatePlanInstancesResponse(this);
         } 
 
     } 

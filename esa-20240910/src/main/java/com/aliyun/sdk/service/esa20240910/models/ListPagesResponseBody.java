@@ -263,6 +263,7 @@ public class ListPagesResponseBody extends TeaModel {
 
             /**
              * <p>自定义响应页面内容BASE64编码</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>PGh0bWw+aGVsbG8gcGFnZTwvaHRtbD4=</p>
@@ -274,6 +275,7 @@ public class ListPagesResponseBody extends TeaModel {
 
             /**
              * <p>自定义响应页面内容类型</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>text/html</p>

@@ -70,7 +70,10 @@ public class UpdateUserDeliveryTaskStatusRequest extends Request {
         } 
 
         /**
-         * Method.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -79,7 +82,10 @@ public class UpdateUserDeliveryTaskStatusRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

@@ -55,7 +55,10 @@ public class DeleteUserDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);

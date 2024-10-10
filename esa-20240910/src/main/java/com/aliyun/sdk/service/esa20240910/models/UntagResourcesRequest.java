@@ -163,6 +163,7 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>要创建并绑定标签的资源所在的地域ID。</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -175,6 +176,7 @@ public class UntagResourcesRequest extends Request {
 
         /**
          * <p>资源ID,最多 50个子项</p>
+         * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -183,7 +185,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>site</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

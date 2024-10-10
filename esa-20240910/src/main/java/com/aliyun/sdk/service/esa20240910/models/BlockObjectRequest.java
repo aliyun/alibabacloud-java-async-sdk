@@ -114,7 +114,7 @@ public class BlockObjectRequest extends Request {
         } 
 
         /**
-         * Content.
+         * <p>This parameter is required.</p>
          */
         public Builder content(java.util.List < String > content) {
             String contentShrink = shrink(content, "Content", "json");
@@ -142,7 +142,10 @@ public class BlockObjectRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BlockObject</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -151,7 +154,7 @@ public class BlockObjectRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

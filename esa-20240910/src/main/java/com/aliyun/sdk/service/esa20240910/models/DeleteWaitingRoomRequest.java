@@ -70,7 +70,10 @@ public class DeleteWaitingRoomRequest extends Request {
         } 
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -79,7 +82,10 @@ public class DeleteWaitingRoomRequest extends Request {
         }
 
         /**
-         * WaitingRoomId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25133f536f1b1f6b6091f6a92c614dd4</p>
          */
         public Builder waitingRoomId(String waitingRoomId) {
             this.putQueryParameter("WaitingRoomId", waitingRoomId);

@@ -55,7 +55,10 @@ public class DisableCustomScenePolicyRequest extends Request {
         } 
 
         /**
-         * PolicyId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);

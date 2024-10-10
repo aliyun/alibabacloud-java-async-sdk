@@ -70,7 +70,7 @@ public class BatchPutKvRequest extends Request {
         } 
 
         /**
-         * KvList.
+         * <p>This parameter is required.</p>
          */
         public Builder kvList(java.util.List < KvList> kvList) {
             String kvListShrink = shrink(kvList, "KvList", "json");
@@ -80,7 +80,10 @@ public class BatchPutKvRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -182,7 +185,10 @@ public class BatchPutKvRequest extends Request {
             }
 
             /**
-             * Key.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -190,7 +196,10 @@ public class BatchPutKvRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_value</p>
              */
             public Builder value(String value) {
                 this.value = value;

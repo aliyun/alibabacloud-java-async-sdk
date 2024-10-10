@@ -7,11 +7,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AddUserBusinessFormResponse} extends {@link TeaModel}
+ * {@link ListWafManagedRulesResponse} extends {@link TeaModel}
  *
- * <p>AddUserBusinessFormResponse</p>
+ * <p>ListWafManagedRulesResponse</p>
  */
-public class AddUserBusinessFormResponse extends Response {
+public class ListWafManagedRulesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -19,16 +19,16 @@ public class AddUserBusinessFormResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private AddUserBusinessFormResponseBody body;
+    private ListWafManagedRulesResponseBody body;
 
-    private AddUserBusinessFormResponse(BuilderImpl builder) {
+    private ListWafManagedRulesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AddUserBusinessFormResponse create() {
+    public static ListWafManagedRulesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +54,35 @@ public class AddUserBusinessFormResponse extends Response {
     /**
      * @return body
      */
-    public AddUserBusinessFormResponseBody getBody() {
+    public ListWafManagedRulesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AddUserBusinessFormResponse, Builder> {
+    public interface Builder extends Response.Builder<ListWafManagedRulesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AddUserBusinessFormResponseBody body);
+        Builder body(ListWafManagedRulesResponseBody body);
 
         @Override
-        AddUserBusinessFormResponse build();
+        ListWafManagedRulesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AddUserBusinessFormResponse, Builder>
+            extends Response.BuilderImpl<ListWafManagedRulesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private AddUserBusinessFormResponseBody body; 
+        private ListWafManagedRulesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AddUserBusinessFormResponse response) {
+        private BuilderImpl(ListWafManagedRulesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +111,14 @@ public class AddUserBusinessFormResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AddUserBusinessFormResponseBody body) {
+        public Builder body(ListWafManagedRulesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AddUserBusinessFormResponse build() {
-            return new AddUserBusinessFormResponse(this);
+        public ListWafManagedRulesResponse build() {
+            return new ListWafManagedRulesResponse(this);
         } 
 
     } 

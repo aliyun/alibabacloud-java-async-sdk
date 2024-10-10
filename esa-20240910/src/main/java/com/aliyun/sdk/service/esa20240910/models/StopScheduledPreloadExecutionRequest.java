@@ -55,7 +55,10 @@ public class StopScheduledPreloadExecutionRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StopScheduledPreloadExecution</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

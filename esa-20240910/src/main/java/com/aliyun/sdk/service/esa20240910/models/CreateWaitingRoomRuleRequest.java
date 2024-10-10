@@ -115,7 +115,10 @@ public class CreateWaitingRoomRuleRequest extends Request {
         } 
 
         /**
-         * Rule.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -124,7 +127,10 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * RuleEnable.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.putQueryParameter("RuleEnable", ruleEnable);
@@ -133,7 +139,10 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waitingroom_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -142,7 +151,10 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -151,7 +163,10 @@ public class CreateWaitingRoomRuleRequest extends Request {
         }
 
         /**
-         * WaitingRoomId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25133f536f1b1f6b6091f6a92c614dd4</p>
          */
         public Builder waitingRoomId(String waitingRoomId) {
             this.putQueryParameter("WaitingRoomId", waitingRoomId);

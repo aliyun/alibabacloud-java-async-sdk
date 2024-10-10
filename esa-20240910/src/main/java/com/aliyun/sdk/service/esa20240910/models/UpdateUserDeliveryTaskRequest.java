@@ -116,7 +116,10 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * FieldName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClientRequestID,ClientRequestHost</p>
          */
         public Builder fieldName(String fieldName) {
             this.putBodyParameter("FieldName", fieldName);
@@ -125,7 +128,10 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_project</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("TaskName", taskName);

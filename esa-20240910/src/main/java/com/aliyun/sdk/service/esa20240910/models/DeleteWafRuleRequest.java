@@ -84,7 +84,10 @@ public class DeleteWafRuleRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000001</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -93,7 +96,10 @@ public class DeleteWafRuleRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

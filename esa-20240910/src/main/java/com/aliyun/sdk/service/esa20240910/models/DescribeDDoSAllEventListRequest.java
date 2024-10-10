@@ -145,7 +145,10 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -163,7 +166,10 @@ public class DescribeDDoSAllEventListRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7096621098****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -173,6 +179,7 @@ public class DescribeDDoSAllEventListRequest extends Request {
 
         /**
          * <p>A short description of struct</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-12T15:00:00Z</p>

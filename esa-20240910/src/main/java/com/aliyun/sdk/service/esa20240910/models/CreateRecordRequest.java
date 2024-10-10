@@ -229,7 +229,12 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * Data.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;value&quot;:&quot;2.2.2.2&quot;
+         * }</p>
          */
         public Builder data(Data data) {
             String dataShrink = shrink(data, "Data", "json");
@@ -261,6 +266,7 @@ public class CreateRecordRequest extends Request {
 
         /**
          * <p>记录名称</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -272,7 +278,10 @@ public class CreateRecordRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -300,6 +309,7 @@ public class CreateRecordRequest extends Request {
 
         /**
          * <p>记录类型</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>A/AAAA</p>
@@ -714,6 +724,7 @@ public class CreateRecordRequest extends Request {
 
             /**
              * <p>记录类型</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>A/AAAA</p>

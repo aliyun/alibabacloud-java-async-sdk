@@ -70,7 +70,10 @@ public class UpdateKvNamespaceRequest extends Request {
         } 
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -79,7 +82,10 @@ public class UpdateKvNamespaceRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_ns</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

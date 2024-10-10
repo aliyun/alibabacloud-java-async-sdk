@@ -55,7 +55,10 @@ public class GetKvNamespaceRequest extends Request {
         } 
 
         /**
-         * Namespace.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_namespace</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

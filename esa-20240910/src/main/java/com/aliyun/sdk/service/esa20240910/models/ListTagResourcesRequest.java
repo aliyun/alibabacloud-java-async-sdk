@@ -182,6 +182,7 @@ public class ListTagResourcesRequest extends Request {
 
         /**
          * <p>要创建并绑定标签的资源所在的地域ID。</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -202,7 +203,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>site</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

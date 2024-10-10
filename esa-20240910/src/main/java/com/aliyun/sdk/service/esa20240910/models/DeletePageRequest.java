@@ -55,7 +55,10 @@ public class DeletePageRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000001</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);

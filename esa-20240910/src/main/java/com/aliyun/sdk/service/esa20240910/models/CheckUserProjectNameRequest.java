@@ -55,7 +55,10 @@ public class CheckUserProjectNameRequest extends Request {
         } 
 
         /**
-         * ProjectName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-dcdn-log-56</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

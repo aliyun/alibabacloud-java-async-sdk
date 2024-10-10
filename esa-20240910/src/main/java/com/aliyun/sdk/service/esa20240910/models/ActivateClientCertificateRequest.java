@@ -70,7 +70,10 @@ public class ActivateClientCertificateRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaded901474b9693acf530e0fb****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -79,7 +82,10 @@ public class ActivateClientCertificateRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
