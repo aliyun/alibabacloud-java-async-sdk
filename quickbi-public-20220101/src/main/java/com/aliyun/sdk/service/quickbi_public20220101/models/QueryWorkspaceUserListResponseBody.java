@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWorkspaceUserListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryWorkspaceUserListResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryWorkspaceUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorkspaceUserListResponseBody</p>
+     */
     public static class Role extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;
@@ -171,6 +178,12 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryWorkspaceUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorkspaceUserListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -292,6 +305,12 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryWorkspaceUserListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorkspaceUserListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;

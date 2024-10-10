@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWorksByOrganizationRequest} extends {@link RequestModel}
  *
  * <p>QueryWorksByOrganizationRequest</p>
@@ -111,7 +112,10 @@ public class QueryWorksByOrganizationRequest extends Request {
         } 
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -120,7 +124,10 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * The number of rows per page set when the interface is requested.
+         * <p>The number of rows per page set when the interface is requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,7 +136,10 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * Returns a list of all works in the organization that meet the requested criteria.
+         * <p>Returns a list of all works in the organization that meet the requested criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -138,7 +148,10 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder thirdPartAuthFlag(Integer thirdPartAuthFlag) {
             this.putQueryParameter("ThirdPartAuthFlag", thirdPartAuthFlag);
@@ -147,7 +160,10 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAGE</p>
          */
         public Builder worksType(String worksType) {
             this.putQueryParameter("WorksType", worksType);

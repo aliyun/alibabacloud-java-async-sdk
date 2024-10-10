@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAuditLogRequest} extends {@link RequestModel}
  *
  * <p>QueryAuditLogRequest</p>
@@ -140,7 +141,10 @@ public class QueryAuditLogRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715856218001</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -149,7 +153,10 @@ public class QueryAuditLogRequest extends Request {
         }
 
         /**
-         * LogType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function</p>
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
@@ -185,7 +192,10 @@ public class QueryAuditLogRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715856218001</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryAuditLogResponseBody} extends {@link TeaModel}
  *
  * <p>QueryAuditLogResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryAuditLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryAuditLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryAuditLogResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;

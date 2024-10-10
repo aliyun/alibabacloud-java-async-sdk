@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCubeOptimizationResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCubeOptimizationResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCubeOptimizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCubeOptimizationResponseBody</p>
+     */
     public static class CubePerformanceDiagnoseModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CacheCostTimeAvg")
         private Double cacheCostTimeAvg;
@@ -531,6 +538,12 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCubeOptimizationResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCubeOptimizationResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AdviceType")
         private String adviceType;

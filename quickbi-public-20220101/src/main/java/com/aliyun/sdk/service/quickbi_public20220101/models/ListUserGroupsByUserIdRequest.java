@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGroupsByUserIdRequest} extends {@link RequestModel}
  *
  * <p>ListUserGroupsByUserIdRequest</p>
@@ -54,7 +55,11 @@ public class ListUserGroupsByUserIdRequest extends Request {
         } 
 
         /**
-         * The ID of the user group.
+         * <p>The ID of the user group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e5374665ba4b679ee22e2a2927****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

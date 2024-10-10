@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDatasetSwitchInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryDatasetSwitchInfoRequest</p>
@@ -54,7 +55,10 @@ public class QueryDatasetSwitchInfoRequest extends Request {
         } 
 
         /**
-         * CubeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c7223ae-****-3c744528014b</p>
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCubePerformanceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCubePerformanceResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCubePerformanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCubePerformanceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CacheCostTimeAvg")
         private Double cacheCostTimeAvg;

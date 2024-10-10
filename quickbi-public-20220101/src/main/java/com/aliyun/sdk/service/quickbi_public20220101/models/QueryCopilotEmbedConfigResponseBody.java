@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCopilotEmbedConfigResponseBody} extends {@link TeaModel}
  *
  * <p>QueryCopilotEmbedConfigResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryCopilotEmbedConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCopilotEmbedConfigResponseBody</p>
+     */
     public static class DataRange extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllCube")
         private Boolean allCube;
@@ -191,6 +198,12 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryCopilotEmbedConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryCopilotEmbedConfigResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentName")
         private String agentName;

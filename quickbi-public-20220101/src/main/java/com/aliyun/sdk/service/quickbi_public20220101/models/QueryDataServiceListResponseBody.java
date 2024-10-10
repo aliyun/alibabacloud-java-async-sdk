@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDataServiceListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDataServiceListResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryDataServiceListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDataServiceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataServiceListResponseBody</p>
+     */
     public static class Filter extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filters")
         private java.util.List < java.util.Map<String, ?>> filters;
@@ -171,6 +178,12 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDataServiceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataServiceListResponseBody</p>
+     */
     public static class Field extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
@@ -332,6 +345,12 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDataServiceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataServiceListResponseBody</p>
+     */
     public static class ReturnFields extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Aggregator")
         private String aggregator;
@@ -453,6 +472,12 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDataServiceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataServiceListResponseBody</p>
+     */
     public static class Content extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CubeId")
         private String cubeId;
@@ -574,6 +599,12 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDataServiceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataServiceListResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
@@ -915,6 +946,12 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDataServiceListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataServiceListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;

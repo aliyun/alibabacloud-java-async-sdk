@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateTicketNumRequest} extends {@link RequestModel}
  *
  * <p>UpdateTicketNumRequest</p>
@@ -69,7 +70,10 @@ public class UpdateTicketNumRequest extends Request {
         } 
 
         /**
-         * Ticket.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>040e6f79d33444838***83c7206c070</p>
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);
@@ -78,7 +82,10 @@ public class UpdateTicketNumRequest extends Request {
         }
 
         /**
-         * TicketNum.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ticketNum(Integer ticketNum) {
             this.putQueryParameter("TicketNum", ticketNum);

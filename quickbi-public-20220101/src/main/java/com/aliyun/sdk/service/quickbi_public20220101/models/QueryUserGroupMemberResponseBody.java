@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserGroupMemberResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserGroupMemberResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserGroupMemberResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserGroupMemberResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserGroupMemberRequest} extends {@link RequestModel}
  *
  * <p>AddUserGroupMemberRequest</p>
@@ -69,11 +70,15 @@ public class AddUserGroupMemberRequest extends Request {
         } 
 
         /**
-         * The result of adding members to a user group is returned. Valid values:
-         * <p>
+         * <p>The result of adding members to a user group is returned. Valid values:</p>
+         * <ul>
+         * <li>true: The task is added.</li>
+         * <li>false: The tag failed to be added.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The task is added.
-         * *   false: The tag failed to be added.
+         * <strong>example:</strong>
+         * <p>555c4cd****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -82,11 +87,15 @@ public class AddUserGroupMemberRequest extends Request {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>46e537a5****,3dadsu****</p>
          */
         public Builder userIdList(String userIdList) {
             this.putQueryParameter("UserIdList", userIdList);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DelayTicketExpireTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DelayTicketExpireTimeResponseBody</p>
@@ -61,7 +62,10 @@ public class DelayTicketExpireTimeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,11 +73,14 @@ public class DelayTicketExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Whether the extension is successful. Valid values:
-         * <p>
+         * <p>Whether the extension is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -81,11 +88,14 @@ public class DelayTicketExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

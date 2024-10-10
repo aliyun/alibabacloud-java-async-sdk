@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserTagMetaRequest} extends {@link RequestModel}
  *
  * <p>AddUserTagMetaRequest</p>
@@ -77,7 +78,7 @@ public class AddUserTagMetaRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>This parameter is required.</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

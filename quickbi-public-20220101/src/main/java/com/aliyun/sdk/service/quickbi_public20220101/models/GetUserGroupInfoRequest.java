@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetUserGroupInfoRequest} extends {@link RequestModel}
  *
  * <p>GetUserGroupInfoRequest</p>
@@ -54,7 +55,11 @@ public class GetUserGroupInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the user group.
+         * <p>The ID of the user group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

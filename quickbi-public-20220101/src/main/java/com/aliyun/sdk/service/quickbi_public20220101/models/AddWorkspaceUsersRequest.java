@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddWorkspaceUsersRequest} extends {@link RequestModel}
  *
  * <p>AddWorkspaceUsersRequest</p>
@@ -84,7 +85,10 @@ public class AddWorkspaceUsersRequest extends Request {
         } 
 
         /**
-         * RoleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder roleId(Long roleId) {
             this.putQueryParameter("RoleId", roleId);
@@ -93,7 +97,10 @@ public class AddWorkspaceUsersRequest extends Request {
         }
 
         /**
-         * UserIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de4bc5f9429141cc8091cdd1c15b****</p>
          */
         public Builder userIds(String userIds) {
             this.putQueryParameter("UserIds", userIds);
@@ -102,7 +109,10 @@ public class AddWorkspaceUsersRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

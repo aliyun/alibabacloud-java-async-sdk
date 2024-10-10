@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWorksBloodRelationshipResponseBody} extends {@link TeaModel}
  *
  * <p>QueryWorksBloodRelationshipResponseBody</p>
@@ -61,11 +62,14 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -73,7 +77,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -81,7 +85,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * The response.
+         * <p>The response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryWorksBloodRelationshipResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksBloodRelationshipResponseBody</p>
+     */
     public static class QueryParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
@@ -193,10 +206,11 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * Indices whether the metric. Valid values:
-             * <p>
+             * <p>Indices whether the metric. Valid values:</p>
+             * <p>true false</p>
              * 
-             * true false
+             * <strong>example:</strong>
+             * <p>area_column</p>
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -204,7 +218,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the owning location.
+             * <p>The ID of the owning location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the owning location.</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -212,7 +229,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * The globally unique PathId.
+             * <p>The globally unique PathId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order_number</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -220,7 +240,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the field.
+             * <p>The display name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>number</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -228,19 +251,22 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the field. Valid values:
-             * <p>
+             * <p>The type of the field. Valid values:</p>
+             * <ul>
+             * <li>string: string type</li>
+             * <li>date: a date type that contains only the year, month, and day parts</li>
+             * <li>datetime: a common date type</li>
+             * <li>time: a date type that contains only hours, minutes, and seconds.</li>
+             * <li>number: numeric</li>
+             * <li>boolean: Boolean type</li>
+             * <li>geographical: geographical location</li>
+             * <li>url: string type</li>
+             * <li>imageUrl: the type of the image link.</li>
+             * <li>multivalue: a multi-value column</li>
+             * </ul>
              * 
-             * *   string: string type
-             * *   date: a date type that contains only the year, month, and day parts
-             * *   datetime: a common date type
-             * *   time: a date type that contains only hours, minutes, and seconds.
-             * *   number: numeric
-             * *   boolean: Boolean type
-             * *   geographical: geographical location
-             * *   url: string type
-             * *   imageUrl: the type of the image link.
-             * *   multivalue: a multi-value column
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isMeasure(Boolean isMeasure) {
                 this.isMeasure = isMeasure;
@@ -248,7 +274,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the field.
+             * <p>The unique ID of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>schema7d1944eb-443e-48c6-8123-bf45a99e7e74.dc78a4ed-880d-452e-b017-90cfc10c83e5_company_sales_record.[Ndc78a4_order_level].[Ndc78a4_order_level].[Ndc78a4_order_level]</p>
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -256,7 +285,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * A list of query parameter reference columns.
+             * <p>A list of query parameter reference columns.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ndc78a4_order_number</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -270,6 +302,12 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryWorksBloodRelationshipResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksBloodRelationshipResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ComponentId")
         private String componentId;
@@ -357,7 +395,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             private java.util.List < QueryParams> queryParams; 
 
             /**
-             * List of work blood information.
+             * <p>List of work blood information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0696083a-ca72-4d89-8e7a-c017910e0***</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -365,7 +406,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the component that you want to modify.
+             * <p>The ID of the component that you want to modify.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the component.</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -373,7 +417,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * Line
+             * <p>Line</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder componentType(Integer componentType) {
                 this.componentType = componentType;
@@ -381,7 +428,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the image component.
+             * <p>The type of the image component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LINE</p>
              */
             public Builder componentTypeName(String componentTypeName) {
                 this.componentTypeName = componentTypeName;
@@ -389,7 +439,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * Column (Measure)
+             * <p>Column (Measure)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc78a4ed-880d-452e-b017-90cfc10c83e5_company_sales_record</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -397,7 +450,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the component type.
+             * <p>The name of the component type.</p>
              */
             public Builder queryParams(java.util.List < QueryParams> queryParams) {
                 this.queryParams = queryParams;

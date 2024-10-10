@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateUserGroupResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateUserGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36829379-0C38-5BC0-830A-92665BF77D4F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class CreateUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the added user group is returned. An empty string \"\" is returned if the add fails.
+         * <p>The ID of the added user group is returned. An empty string &quot;&quot; is returned if the add fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f5eeb52e-d9c2-4a8b-80e3-47ab55c2****</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -77,11 +84,14 @@ public class CreateUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

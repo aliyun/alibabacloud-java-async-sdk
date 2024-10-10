@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDatasetListRequest} extends {@link RequestModel}
  *
  * <p>QueryDatasetListRequest</p>
@@ -124,7 +125,10 @@ public class QueryDatasetListRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -133,7 +137,10 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * Information about the directory where the dataset is located
+         * <p>Information about the directory where the dataset is located</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -142,7 +149,10 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -151,10 +161,13 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * Specifies the directory ID.
-         * <p>
+         * <p>Specifies the directory ID.</p>
+         * <ul>
+         * <li>If this field is not empty, all datasets in the directory are obtained.</li>
+         * </ul>
          * 
-         * *   If this field is not empty, all datasets in the directory are obtained.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -163,7 +176,10 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * The total number of pages returned.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withChildren(Boolean withChildren) {
             this.putQueryParameter("WithChildren", withChildren);
@@ -172,7 +188,11 @@ public class QueryDatasetListRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserTagValueListRequest} extends {@link RequestModel}
  *
  * <p>QueryUserTagValueListRequest</p>
@@ -54,7 +55,10 @@ public class QueryUserTagValueListRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe67f61a35a94b7da1a34ba174a7****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

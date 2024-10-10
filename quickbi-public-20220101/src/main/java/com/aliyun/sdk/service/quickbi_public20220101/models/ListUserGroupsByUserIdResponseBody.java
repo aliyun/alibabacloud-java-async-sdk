@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserGroupsByUserIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserGroupsByUserIdResponseBody</p>
@@ -77,7 +78,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
+         * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -90,6 +94,12 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserGroupsByUserIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserGroupsByUserIdResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;

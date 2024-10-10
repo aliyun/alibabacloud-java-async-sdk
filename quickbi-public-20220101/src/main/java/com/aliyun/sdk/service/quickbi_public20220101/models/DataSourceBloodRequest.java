@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSourceBloodRequest} extends {@link RequestModel}
  *
  * <p>DataSourceBloodRequest</p>
@@ -54,7 +55,10 @@ public class DataSourceBloodRequest extends Request {
         } 
 
         /**
-         * DataSourceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44051300991327000048</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);

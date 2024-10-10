@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryShareListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryShareListResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryShareListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryShareListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryShareListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthPoint")
         private Integer authPoint;

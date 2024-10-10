@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTicket4CopilotResponseBody} extends {@link TeaModel}
  *
  * <p>CreateTicket4CopilotResponseBody</p>

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserTagMetaRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserTagMetaRequest</p>
@@ -92,7 +93,10 @@ public class UpdateUserTagMetaRequest extends Request {
         }
 
         /**
-         * TagId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e82f6c6c0333431bad0225b2f85e****</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);
@@ -101,7 +105,7 @@ public class UpdateUserTagMetaRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>This parameter is required.</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

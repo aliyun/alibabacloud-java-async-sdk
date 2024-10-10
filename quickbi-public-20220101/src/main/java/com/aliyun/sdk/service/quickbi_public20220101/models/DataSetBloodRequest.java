@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSetBloodRequest} extends {@link RequestModel}
  *
  * <p>DataSetBloodRequest</p>
@@ -82,7 +83,10 @@ public class DataSetBloodRequest extends Request {
         } 
 
         /**
-         * DataSetIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234235234,234235235,234235235</p>
          */
         public Builder dataSetIds(String dataSetIds) {
             this.putQueryParameter("DataSetIds", dataSetIds);

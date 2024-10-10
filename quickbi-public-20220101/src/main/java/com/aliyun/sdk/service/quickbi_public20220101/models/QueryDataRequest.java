@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDataRequest} extends {@link RequestModel}
  *
  * <p>QueryDataRequest</p>
@@ -96,7 +97,10 @@ public class QueryDataRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f4cc43bc3***</p>
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFavoriteReportsRequest} extends {@link RequestModel}
  *
  * <p>ListFavoriteReportsRequest</p>
@@ -123,7 +124,10 @@ public class ListFavoriteReportsRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b5d8fd9348cc4327****afb604</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

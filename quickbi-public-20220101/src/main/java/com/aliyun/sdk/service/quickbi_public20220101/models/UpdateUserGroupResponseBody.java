@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserGroupResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateUserGroupResponseBody</p>
@@ -61,7 +62,10 @@ public class UpdateUserGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4AEF8C5C-D5D2-55D3-BB2F-9D3AA1B6F4FA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,11 +73,14 @@ public class UpdateUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Whether the interface is successfully executed. Valid values:
-         * <p>
+         * <p>Whether the interface is successfully executed. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -81,11 +88,14 @@ public class UpdateUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

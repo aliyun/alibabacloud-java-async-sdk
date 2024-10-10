@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserRoleInfoInWorkspaceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserRoleInfoInWorkspaceResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserRoleInfoInWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserRoleInfoInWorkspaceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoleCode")
         private String roleCode;

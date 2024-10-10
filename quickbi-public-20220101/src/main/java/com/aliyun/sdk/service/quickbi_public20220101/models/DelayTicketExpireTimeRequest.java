@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DelayTicketExpireTimeRequest} extends {@link RequestModel}
  *
  * <p>DelayTicketExpireTimeRequest</p>
@@ -69,11 +70,15 @@ public class DelayTicketExpireTimeRequest extends Request {
         } 
 
         /**
-         * The time to postpone.
-         * <p>
+         * <p>The time to postpone.</p>
+         * <ul>
+         * <li>Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.</li>
+         * <li>Expired bills cannot be extended.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.
-         * *   Expired bills cannot be extended.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder expireTime(Integer expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -82,7 +87,11 @@ public class DelayTicketExpireTimeRequest extends Request {
         }
 
         /**
-         * The value of the third-party embedded ticket, that is, the accessTicket value in the URL.
+         * <p>The value of the third-party embedded ticket, that is, the accessTicket value in the URL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>040e6f79d33444838e*****c7206c070</p>
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);

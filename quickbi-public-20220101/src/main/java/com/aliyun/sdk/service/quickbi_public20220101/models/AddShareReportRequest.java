@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddShareReportRequest} extends {@link RequestModel}
  *
  * <p>AddShareReportRequest</p>
@@ -113,11 +114,15 @@ public class AddShareReportRequest extends Request {
         } 
 
         /**
-         * The scope of authorization. Valid values:
-         * <p>
+         * <p>The scope of authorization. Valid values:</p>
+         * <ul>
+         * <li>1: view only</li>
+         * <li>3: View and export</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   1: view only
-         * *   3: View and export
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder authPoint(Integer authPoint) {
             this.putQueryParameter("AuthPoint", authPoint);
@@ -126,7 +131,11 @@ public class AddShareReportRequest extends Request {
         }
 
         /**
-         * The validity period of the share. The value is a timestamp in milliseconds.
+         * <p>The validity period of the share. The value is a timestamp in milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608202110838</p>
          */
         public Builder expireDate(Long expireDate) {
             this.putQueryParameter("ExpireDate", expireDate);
@@ -135,12 +144,15 @@ public class AddShareReportRequest extends Request {
         }
 
         /**
-         * The ID of the person to be shared, which may be the user ID of the Quick BI or the user group ID.
-         * <p>
+         * <p>The ID of the person to be shared, which may be the user ID of the Quick BI or the user group ID.</p>
+         * <ul>
+         * <li>If ShareToType is 0 (user), ShareTo is the user ID.</li>
+         * <li>When ShareToType is set to 1 (user group), ShareTo is the user group ID.</li>
+         * <li>When ShareToType=2 (organization), ShareTo is the ID of the organization.</li>
+         * </ul>
          * 
-         * *   If ShareToType is 0 (user), ShareTo is the user ID.
-         * *   When ShareToType is set to 1 (user group), ShareTo is the user group ID.
-         * *   When ShareToType=2 (organization), ShareTo is the ID of the organization.
+         * <strong>example:</strong>
+         * <p>de4bc5f9429141cc8091cdd1c15b****</p>
          */
         public Builder shareToId(String shareToId) {
             this.putQueryParameter("ShareToId", shareToId);
@@ -149,12 +161,16 @@ public class AddShareReportRequest extends Request {
         }
 
         /**
-         * The share type of the template. Valid values:
-         * <p>
+         * <p>The share type of the template. Valid values:</p>
+         * <ul>
+         * <li>0: user</li>
+         * <li>1: user group</li>
+         * <li>2: organization</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   0: user
-         * *   1: user group
-         * *   2: organization
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder shareToType(Integer shareToType) {
             this.putQueryParameter("ShareToType", shareToType);
@@ -163,7 +179,11 @@ public class AddShareReportRequest extends Request {
         }
 
         /**
-         * The ID of the shared work. The works here include BI portal, dashboards, spreadsheets, and self-service access.
+         * <p>The ID of the shared work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6b407e50-e774-406b-9956-da2425c2****</p>
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);

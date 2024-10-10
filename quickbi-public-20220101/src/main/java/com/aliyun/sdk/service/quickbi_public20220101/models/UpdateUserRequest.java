@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateUserRequest} extends {@link RequestModel}
  *
  * <p>UpdateUserRequest</p>
@@ -139,11 +140,14 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * Indicates whether the organization administrator. Valid values:
-         * <p>
+         * <p>Indicates whether the organization administrator. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder adminUser(Boolean adminUser) {
             this.putQueryParameter("AdminUser", adminUser);
@@ -152,11 +156,14 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * Indicate whether the RAM user is a permission administrator. Valid values:
-         * <p>
+         * <p>Indicate whether the RAM user is a permission administrator. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder authAdminUser(Boolean authAdminUser) {
             this.putQueryParameter("AuthAdminUser", authAdminUser);
@@ -174,11 +181,14 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The nickname of the account.
-         * <p>
+         * <p>The nickname of the account.</p>
+         * <ul>
+         * <li>Format check: The value can be up to 50 characters in length.</li>
+         * <li>Special format verification: Chinese and English digits_ \ / | () ] [</li>
+         * </ul>
          * 
-         * *   Format check: The value can be up to 50 characters in length.
-         * *   Special format verification: Chinese and English digits\_ \ / | () ] \[
+         * <strong>example:</strong>
+         * <p>Xiao Zhang</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -196,7 +206,11 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
+         * <p>The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe67f61a35a94b7da1a34ba174a7****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -205,12 +219,15 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * The role type of the organization member. Valid values:
-         * <p>
+         * <p>The role type of the organization member. Valid values:</p>
+         * <ul>
+         * <li>1 : developer</li>
+         * <li>2 : visitors</li>
+         * <li>3 : Analyst</li>
+         * </ul>
          * 
-         * *   1 : developer
-         * *   2 : visitors
-         * *   3 : Analyst
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userType(Integer userType) {
             this.putQueryParameter("UserType", userType);

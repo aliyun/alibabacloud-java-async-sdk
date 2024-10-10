@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelAuthorizationMenuRequest} extends {@link RequestModel}
  *
  * <p>CancelAuthorizationMenuRequest</p>
@@ -97,7 +98,10 @@ public class CancelAuthorizationMenuRequest extends Request {
         } 
 
         /**
-         * DataPortalId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d173abb53e84c8ca7495429163b****</p>
          */
         public Builder dataPortalId(String dataPortalId) {
             this.putQueryParameter("DataPortalId", dataPortalId);
@@ -106,7 +110,10 @@ public class CancelAuthorizationMenuRequest extends Request {
         }
 
         /**
-         * MenuIds.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54kqgoa****,pg1n135****</p>
          */
         public Builder menuIds(String menuIds) {
             this.putQueryParameter("MenuIds", menuIds);

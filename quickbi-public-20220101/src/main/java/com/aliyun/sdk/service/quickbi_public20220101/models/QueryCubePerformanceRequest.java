@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryCubePerformanceRequest} extends {@link RequestModel}
  *
  * <p>QueryCubePerformanceRequest</p>
@@ -161,7 +162,10 @@ public class QueryCubePerformanceRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sevenDays</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -170,7 +174,10 @@ public class QueryCubePerformanceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserGroupMemberRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserGroupMemberRequest</p>
@@ -69,7 +70,11 @@ public class DeleteUserGroupMemberRequest extends Request {
         } 
 
         /**
-         * The ID of the user group.
+         * <p>The ID of the user group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e537****</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putQueryParameter("UserGroupId", userGroupId);
@@ -78,7 +83,11 @@ public class DeleteUserGroupMemberRequest extends Request {
         }
 
         /**
-         * The user ID of the Quick BI.
+         * <p>The user ID of the Quick BI.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2fe4fbd8****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

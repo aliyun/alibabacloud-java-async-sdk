@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddWorkspaceUsersResponseBody} extends {@link TeaModel}
  *
  * <p>AddWorkspaceUsersResponseBody</p>
@@ -90,6 +91,12 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddWorkspaceUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddWorkspaceUsersResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Failure")
         private Integer failure;

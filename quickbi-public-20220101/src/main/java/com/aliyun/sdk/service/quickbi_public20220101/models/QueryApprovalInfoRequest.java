@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryApprovalInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryApprovalInfoRequest</p>
@@ -115,7 +116,10 @@ public class QueryApprovalInfoRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -124,7 +128,10 @@ public class QueryApprovalInfoRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12352fasdavsa</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

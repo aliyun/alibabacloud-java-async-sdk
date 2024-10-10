@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWorksByWorkspaceResponseBody} extends {@link TeaModel}
  *
  * <p>QueryWorksByWorkspaceResponseBody</p>
@@ -61,7 +62,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Returns a list of all works in the organization workspace that meet the requested criteria.
+         * <p>Returns a list of all works in the organization workspace that meet the requested criteria.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -77,11 +81,14 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryWorksByWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksByWorkspaceResponseBody</p>
+     */
     public static class Directory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -173,7 +186,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.
+             * <p>The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -181,7 +197,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).
+             * <p>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test directory</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -195,6 +214,12 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryWorksByWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksByWorkspaceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Auth3rdFlag")
         private Integer auth3rdFlag;
@@ -414,11 +439,14 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             private String workspaceName; 
 
             /**
-             * Third-party embedding status. Valid values:
-             * <p>
+             * <p>Third-party embedding status. Valid values:</p>
+             * <ul>
+             * <li>0: The embed service is not enabled.</li>
+             * <li>1: Embed is enabled.</li>
+             * </ul>
              * 
-             * *   0: The embed service is not enabled.
-             * *   1: Embed is enabled.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder auth3rdFlag(Integer auth3rdFlag) {
                 this.auth3rdFlag = auth3rdFlag;
@@ -426,7 +454,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Remarks on the work.
+             * <p>Remarks on the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -434,7 +465,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The directory to which the work belongs.
+             * <p>The directory to which the work belongs.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -442,7 +473,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the creation of the work in milliseconds.
+             * <p>The timestamp of the creation of the work in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1496651577000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -450,7 +484,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the modification of the work in milliseconds.
+             * <p>The timestamp of the modification of the work in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572334870000</p>
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -458,7 +495,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Nickname of the work modifier.
+             * <p>Nickname of the work modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tom</p>
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -466,7 +506,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID of the work owner in the Quick BI.
+             * <p>The user ID of the work owner in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the workspace to which the work belongs.</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -474,7 +517,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the work owner.
+             * <p>The nickname of the work owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Li Si</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -498,18 +544,23 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Security policies for collaborative authorization of works. Valid values:
-             * <p>
+             * <p>Security policies for collaborative authorization of works. Valid values:</p>
+             * <ul>
+             * <li>0: private</li>
+             * <li>12: Authorize specified members</li>
+             * <li>1 or 11: Authorize all workspace members</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If you use legacy permissions, the return value is 1.</p>
+             * </li>
+             * <li><p>If you use the new permissions, the return value is 11.</p>
+             * </li>
+             * </ul>
              * 
-             * *   0: private
-             * *   12: Authorize specified members
-             * *   1 or 11: Authorize all workspace members
-             * 
-             * > 
-             * 
-             * *   If you use legacy permissions, the return value is 1.
-             * 
-             * *   If you use the new permissions, the return value is 11.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -517,13 +568,16 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Status of dashboards, full-screen dashboards, spreadsheets. The default value of other work types is 1. Valid values:
-             * <p>
+             * <p>Status of dashboards, full-screen dashboards, spreadsheets. The default value of other work types is 1. Valid values:</p>
+             * <ul>
+             * <li>0: unpublished</li>
+             * <li>1: published</li>
+             * <li>2: modified but not published</li>
+             * <li>3: unpublished</li>
+             * </ul>
              * 
-             * *   0: unpublished
-             * *   1: published
-             * *   2: modified but not published
-             * *   3: unpublished
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -531,7 +585,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the work.
+             * <p>The name of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test report</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -539,16 +596,19 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the work. Valid values:
-             * <p>
+             * <p>The type of the work. Valid values:</p>
+             * <ul>
+             * <li>DATAPRODUCT: BI portal</li>
+             * <li>PAGE: Dashboard</li>
+             * <li>FULLPAGE: full-screen dashboards</li>
+             * <li>REPORT: workbook</li>
+             * <li>dashboardOfflineQuery: self-service data retrieval</li>
+             * <li>Analysis: Ad hoc analysis</li>
+             * <li>DATAFORM: form filling</li>
+             * </ul>
              * 
-             * *   DATAPRODUCT: BI portal
-             * *   PAGE: Dashboard
-             * *   FULLPAGE: full-screen dashboards
-             * *   REPORT: workbook
-             * *   dashboardOfflineQuery: self-service data retrieval
-             * *   Analysis: Ad hoc analysis
-             * *   DATAFORM: form filling
+             * <strong>example:</strong>
+             * <p>PAGE</p>
              */
             public Builder workType(String workType) {
                 this.workType = workType;
@@ -556,7 +616,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the work.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>897ce25e-f993-4abd-af84-d13c5610****</p>
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -564,7 +627,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the work belongs.
+             * <p>The ID of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -572,7 +638,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace to which the work belongs.
+             * <p>The name of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -586,6 +655,12 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryWorksByWorkspaceResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksByWorkspaceResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;
@@ -661,7 +736,7 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             private Integer totalPages; 
 
             /**
-             * The details of the list of works.
+             * <p>The details of the list of works.</p>
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -669,7 +744,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -677,7 +755,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows per page set when the interface is requested.
+             * <p>The number of rows per page set when the interface is requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -685,7 +766,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rows in the table.
+             * <p>The total number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -693,7 +777,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of pages returned.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

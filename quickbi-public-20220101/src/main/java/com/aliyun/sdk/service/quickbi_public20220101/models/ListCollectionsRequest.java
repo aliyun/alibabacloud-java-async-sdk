@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCollectionsRequest} extends {@link RequestModel}
  *
  * <p>ListCollectionsRequest</p>
@@ -54,7 +55,11 @@ public class ListCollectionsRequest extends Request {
         } 
 
         /**
-         * The ID of the user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
+         * <p>The ID of the user. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe67f61a35a94b7da1a34ba174a7****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

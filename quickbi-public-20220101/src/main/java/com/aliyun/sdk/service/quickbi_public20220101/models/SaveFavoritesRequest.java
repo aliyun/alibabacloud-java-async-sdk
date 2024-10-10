@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SaveFavoritesRequest} extends {@link RequestModel}
  *
  * <p>SaveFavoritesRequest</p>
@@ -69,7 +70,11 @@ public class SaveFavoritesRequest extends Request {
         } 
 
         /**
-         * The user ID of the collection. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.
+         * <p>The user ID of the collection. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121344444790****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -78,7 +83,11 @@ public class SaveFavoritesRequest extends Request {
         }
 
         /**
-         * The ID of the collection.
+         * <p>The ID of the collection.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d23e84a1-82a0-4292-bfdb-521306c3****</p>
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);

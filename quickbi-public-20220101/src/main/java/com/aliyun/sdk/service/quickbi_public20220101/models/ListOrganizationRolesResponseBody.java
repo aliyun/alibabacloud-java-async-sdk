@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListOrganizationRolesResponseBody} extends {@link TeaModel}
  *
  * <p>ListOrganizationRolesResponseBody</p>
@@ -90,6 +91,12 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListOrganizationRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationRolesResponseBody</p>
+     */
     public static class AuthConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
@@ -131,6 +138,12 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListOrganizationRolesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListOrganizationRolesResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthConfigList")
         private java.util.List < AuthConfigList> authConfigList;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserInfoByAccountResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserInfoByAccountResponseBody</p>
@@ -61,7 +62,10 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The returned organization user information.
+         * <p>The returned organization user information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -77,11 +81,14 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserInfoByAccountResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserInfoByAccountResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -229,7 +242,10 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             private Integer userType; 
 
             /**
-             * The ID of the Alibaba Cloud account.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>135****5848</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -237,7 +253,10 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Alibaba Cloud account that corresponds to the member. (If you use a RAM user, the domain name information that follows @ is removed. For example, if you use a <test@test.com>, test is returned.)
+             * <p>The name of the Alibaba Cloud account that corresponds to the member. (If you use a RAM user, the domain name information that follows @ is removed. For example, if you use a <a href="mailto:test@test.com">test@test.com</a>, test is returned.)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1386587****@163.com</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -245,11 +264,14 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Whether you are an administrator of the organization. Valid values:
-             * <p>
+             * <p>Whether you are an administrator of the organization. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder adminUser(Boolean adminUser) {
                 this.adminUser = adminUser;
@@ -257,11 +279,14 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Whether you are a permission administrator. Valid values:
-             * <p>
+             * <p>Whether you are a permission administrator. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
@@ -269,7 +294,10 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1386587****@163.com</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -277,7 +305,10 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the account.
+             * <p>The nickname of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test user</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -285,7 +316,10 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number of the alert contact.
+             * <p>The phone number of the alert contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1386587****</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -301,7 +335,10 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The UserID in the Quick BI.
+             * <p>The UserID in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe67f61a35a94b7da1a34ba174a7****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -309,12 +346,15 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The role type of the organization member. Valid values:
-             * <p>
+             * <p>The role type of the organization member. Valid values:</p>
+             * <ul>
+             * <li>1 : developer</li>
+             * <li>2 : visitors</li>
+             * <li>3 : Analyst</li>
+             * </ul>
              * 
-             * *   1 : developer
-             * *   2 : visitors
-             * *   3 : Analyst
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;

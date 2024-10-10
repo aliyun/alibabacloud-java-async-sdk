@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link WithdrawAllUserGroupsRequest} extends {@link RequestModel}
  *
  * <p>WithdrawAllUserGroupsRequest</p>
@@ -54,7 +55,11 @@ public class WithdrawAllUserGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the user. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
+         * <p>The ID of the user. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e5374665ba4b679ee22e2a2927****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

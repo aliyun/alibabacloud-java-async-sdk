@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWorksRequest} extends {@link RequestModel}
  *
  * <p>QueryWorksRequest</p>
@@ -54,7 +55,10 @@ public class QueryWorksRequest extends Request {
         } 
 
         /**
-         * WorksId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd****</p>
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);

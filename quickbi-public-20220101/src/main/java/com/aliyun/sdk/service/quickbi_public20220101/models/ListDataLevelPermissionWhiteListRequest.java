@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataLevelPermissionWhiteListRequest} extends {@link RequestModel}
  *
  * <p>ListDataLevelPermissionWhiteListRequest</p>
@@ -69,7 +70,10 @@ public class ListDataLevelPermissionWhiteListRequest extends Request {
         } 
 
         /**
-         * CubeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d5db23c-e4f2-49dd-a883-92285b48e14a</p>
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);
@@ -78,7 +82,10 @@ public class ListDataLevelPermissionWhiteListRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROW_LEVEL</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);

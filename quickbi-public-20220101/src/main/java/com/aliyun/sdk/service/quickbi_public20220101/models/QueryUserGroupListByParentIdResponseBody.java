@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserGroupListByParentIdResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserGroupListByParentIdResponseBody</p>
@@ -61,7 +62,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72B19D61-B37A-5C7A-9389-0856CD7935B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the sub-user group.
+         * <p>The information about the sub-user group.</p>
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -77,11 +81,14 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +101,12 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserGroupListByParentIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserGroupListByParentIdResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -217,7 +230,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             private String userGroupName; 
 
             /**
-             * The time when the sub-user group was created.
+             * <p>The time when the sub-user group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-30 10:03:09</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -225,7 +241,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the sub-user group. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
+             * <p>The creator of the sub-user group. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>136516262323****</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -233,7 +252,7 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * Directory level of the sub-user group.
+             * <p>Directory level of the sub-user group.</p>
              */
             public Builder identifiedPath(String identifiedPath) {
                 this.identifiedPath = identifiedPath;
@@ -241,7 +260,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the sub-user group was last modified.
+             * <p>The time when the sub-user group was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-16 15:49:08</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -249,7 +271,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * The user who modified the subgroup. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.
+             * <p>The user who modified the subgroup. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>136516262323****</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -257,7 +282,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent user group.
+             * <p>The ID of the parent user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
              */
             public Builder parentUserGroupId(String parentUserGroupId) {
                 this.parentUserGroupId = parentUserGroupId;
@@ -265,7 +293,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the sub-user group.
+             * <p>The description of the sub-user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User Group for Testing</p>
              */
             public Builder userGroupDescription(String userGroupDescription) {
                 this.userGroupDescription = userGroupDescription;
@@ -273,7 +304,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sub-user group.
+             * <p>The ID of the sub-user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f5eeb52e-d9c2-4a8b-80e3-47ab55c2****</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -281,7 +315,10 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sub-user group.
+             * <p>The name of the sub-user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>popapi test group</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;

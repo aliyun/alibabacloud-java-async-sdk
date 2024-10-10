@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryEmbeddedInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryEmbeddedInfoResponseBody</p>
@@ -77,11 +78,14 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -94,6 +98,12 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryEmbeddedInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEmbeddedInfoResponseBody</p>
+     */
     public static class Detail extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DashboardOfflineQuery")
         private Integer dashboardOfflineQuery;
@@ -175,6 +185,12 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryEmbeddedInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryEmbeddedInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Detail")
         private Detail detail;

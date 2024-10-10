@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListFavoriteReportsResponseBody} extends {@link TeaModel}
  *
  * <p>ListFavoriteReportsResponseBody</p>
@@ -90,6 +91,12 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListFavoriteReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFavoriteReportsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Favorite")
         private Boolean favorite;
@@ -391,6 +398,12 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListFavoriteReportsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListFavoriteReportsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;

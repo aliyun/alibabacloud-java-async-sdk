@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AuthorizeMenuResponseBody} extends {@link TeaModel}
  *
  * <p>AuthorizeMenuResponseBody</p>
@@ -61,7 +62,10 @@ public class AuthorizeMenuResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>188F0B12-00EF-41B3-944A-FB7EF06C9F43</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +73,10 @@ public class AuthorizeMenuResponseBody extends TeaModel {
         }
 
         /**
-         * The number of authorized menus.
+         * <p>The number of authorized menus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder result(Integer result) {
             this.result = result;
@@ -77,11 +84,14 @@ public class AuthorizeMenuResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

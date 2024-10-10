@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryReadableResourcesListByUserIdRequest} extends {@link RequestModel}
  *
  * <p>QueryReadableResourcesListByUserIdRequest</p>
@@ -54,7 +55,11 @@ public class QueryReadableResourcesListByUserIdRequest extends Request {
         } 
 
         /**
-         * Quick BI the user ID.
+         * <p>Quick BI the user ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de4bc5f9429141cc8091cdd1c15b****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

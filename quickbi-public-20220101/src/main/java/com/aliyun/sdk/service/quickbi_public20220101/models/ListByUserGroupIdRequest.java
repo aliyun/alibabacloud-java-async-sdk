@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListByUserGroupIdRequest} extends {@link RequestModel}
  *
  * <p>ListByUserGroupIdRequest</p>
@@ -54,7 +55,11 @@ public class ListByUserGroupIdRequest extends Request {
         } 
 
         /**
-         * The ID of the user group that you want to query. Separate multiple user groups with commas (,).
+         * <p>The ID of the user group that you want to query. Separate multiple user groups with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34fe-<em><strong>-6dcb,84q9-</strong></em>*-4a274</p>
          */
         public Builder userGroupIds(String userGroupIds) {
             this.putQueryParameter("UserGroupIds", userGroupIds);

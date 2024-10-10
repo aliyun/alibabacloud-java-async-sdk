@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserTagMetaRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserTagMetaRequest</p>
@@ -54,7 +55,10 @@ public class DeleteUserTagMetaRequest extends Request {
         } 
 
         /**
-         * TagId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pop_001</p>
          */
         public Builder tagId(String tagId) {
             this.putQueryParameter("TagId", tagId);

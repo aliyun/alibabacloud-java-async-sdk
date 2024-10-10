@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CheckReadableRequest} extends {@link RequestModel}
  *
  * <p>CheckReadableRequest</p>
@@ -69,7 +70,11 @@ public class CheckReadableRequest extends Request {
         } 
 
         /**
-         * The user ID of the Quick BI to be checked.
+         * <p>The user ID of the Quick BI to be checked.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de4bc5f9429141cc8091cdd1c15b****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -78,7 +83,11 @@ public class CheckReadableRequest extends Request {
         }
 
         /**
-         * The ID of the work. Resources here include BI portal, dashboards, spreadsheets, and self-service access.
+         * <p>The ID of the work. Resources here include BI portal, dashboards, spreadsheets, and self-service access.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
          */
         public Builder worksId(String worksId) {
             this.putQueryParameter("WorksId", worksId);

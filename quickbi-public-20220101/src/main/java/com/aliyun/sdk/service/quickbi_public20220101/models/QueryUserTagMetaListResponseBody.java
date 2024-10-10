@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserTagMetaListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserTagMetaListResponseBody</p>
@@ -77,7 +78,10 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * Queries the metadata list of member tags in an organization.
+         * <p>Queries the metadata list of member tags in an organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -90,6 +94,12 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserTagMetaListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserTagMetaListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagDescription")
         private String tagDescription;

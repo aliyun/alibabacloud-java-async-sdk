@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteUserRequest} extends {@link RequestModel}
  *
  * <p>DeleteUserRequest</p>
@@ -77,7 +78,11 @@ public class DeleteUserRequest extends Request {
         }
 
         /**
-         * Deletes a user from a specified organization.
+         * <p>Deletes a user from a specified organization.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe67f61a35a94b7da1a34ba174a7****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

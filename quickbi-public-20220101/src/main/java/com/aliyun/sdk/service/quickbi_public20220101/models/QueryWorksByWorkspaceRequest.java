@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWorksByWorkspaceRequest} extends {@link RequestModel}
  *
  * <p>QueryWorksByWorkspaceRequest</p>
@@ -126,10 +127,13 @@ public class QueryWorksByWorkspaceRequest extends Request {
         } 
 
         /**
-         * The page number of the returned page.
-         * <p>
+         * <p>The page number of the returned page.</p>
+         * <ul>
+         * <li>Default value: 1.</li>
+         * </ul>
          * 
-         * *   Default value: 1.
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -138,10 +142,13 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
-         * <p>
+         * <p>The number of entries returned per page.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * </ul>
          * 
-         * *   Default value: 10.
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -150,13 +157,16 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * The status of the work. Valid values:
-         * <p>
+         * <p>The status of the work. Valid values:</p>
+         * <ul>
+         * <li>0: unpublished</li>
+         * <li>1: published</li>
+         * <li>2: modified but not published</li>
+         * <li>3: unpublished</li>
+         * </ul>
          * 
-         * *   0: unpublished
-         * *   1: published
-         * *   2: modified but not published
-         * *   3: unpublished
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -165,11 +175,14 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * Third-party embedding status. Valid values:
-         * <p>
+         * <p>Third-party embedding status. Valid values:</p>
+         * <ul>
+         * <li>0: The embed service is not enabled.</li>
+         * <li>1: Embed is enabled.</li>
+         * </ul>
          * 
-         * *   0: The embed service is not enabled.
-         * *   1: Embed is enabled.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder thirdPartAuthFlag(Integer thirdPartAuthFlag) {
             this.putQueryParameter("ThirdPartAuthFlag", thirdPartAuthFlag);
@@ -178,13 +191,16 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * The type of the work. Valid values:
-         * <p>
+         * <p>The type of the work. Valid values:</p>
+         * <ul>
+         * <li>DATAPRODUCT: BI portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>FULLPAGE: full-screen dashboards</li>
+         * <li>REPORT: workbook</li>
+         * </ul>
          * 
-         * *   DATAPRODUCT: BI portal
-         * *   PAGE: Dashboard
-         * *   FULLPAGE: full-screen dashboards
-         * *   REPORT: workbook
+         * <strong>example:</strong>
+         * <p>PAGE</p>
          */
         public Builder worksType(String worksType) {
             this.putQueryParameter("WorksType", worksType);
@@ -193,7 +209,11 @@ public class QueryWorksByWorkspaceRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * <p>The ID of the workspace.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89713491-cb4f-4579-b889-e82c35f1****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDataResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDataResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataResponseBody</p>
+     */
     public static class Headers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Aggregator")
         private String aggregator;
@@ -231,6 +238,12 @@ public class QueryDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Headers")
         private java.util.List < Headers> headers;

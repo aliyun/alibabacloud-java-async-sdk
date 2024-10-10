@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryWorksResponseBody} extends {@link TeaModel}
  *
  * <p>QueryWorksResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryWorksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryWorksResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksResponseBody</p>
+     */
     public static class Directory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -191,6 +198,12 @@ public class QueryWorksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryWorksResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryWorksResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Auth3rdFlag")
         private Integer auth3rdFlag;

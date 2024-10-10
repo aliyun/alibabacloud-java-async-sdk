@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteTicketRequest} extends {@link RequestModel}
  *
  * <p>DeleteTicketRequest</p>
@@ -54,7 +55,11 @@ public class DeleteTicketRequest extends Request {
         } 
 
         /**
-         * Deletes a specified ticket from an embedded report.
+         * <p>Deletes a specified ticket from an embedded report.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>040e6f79d****7d283c7206c070</p>
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);

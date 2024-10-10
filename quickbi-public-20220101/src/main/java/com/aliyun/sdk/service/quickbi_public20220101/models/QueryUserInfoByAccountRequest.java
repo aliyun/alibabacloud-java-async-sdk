@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserInfoByAccountRequest} extends {@link RequestModel}
  *
  * <p>QueryUserInfoByAccountRequest</p>
@@ -68,17 +69,24 @@ public class QueryUserInfoByAccountRequest extends Request {
         } 
 
         /**
-         * Enter the name or ID of the Alibaba Cloud account that you want to query.
-         * <p>
+         * <p>Enter the name or ID of the Alibaba Cloud account that you want to query.</p>
+         * <ul>
+         * <li><p>When you enter an account name:</p>
+         * <ul>
+         * <li>If the organization user is a master account, such as main_account, the query account format is master account. That is, the main account main_account to be entered.</li>
+         * <li>If the organization user is a RAM user, such as a <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>, the query account format is the head of the RAM user, that is, the RAM user to be entered is zhangsan.</li>
+         * </ul>
+         * </li>
+         * <li><p>ID：</p>
+         * <ul>
+         * <li>Enter the UID of the account to query the account information.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   When you enter an account name:
-         * 
-         *     *   If the organization user is a master account, such as main_account, the query account format is master account. That is, the main account main_account to be entered.
-         *     *   If the organization user is a RAM user, such as a <zhangsan@test.onaliyun.com>, the query account format is the head of the RAM user, that is, the RAM user to be entered is zhangsan.
-         * 
-         * *   ID：
-         * 
-         *     *   Enter the UID of the account to query the account information.
+         * <strong>example:</strong>
+         * <p>1386587****@163.com</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);

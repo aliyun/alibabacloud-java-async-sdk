@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDataRangeRequest} extends {@link RequestModel}
  *
  * <p>QueryDataRangeRequest</p>
@@ -77,7 +78,10 @@ public class QueryDataRangeRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llmCube</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

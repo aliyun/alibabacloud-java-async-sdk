@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserRequest} extends {@link RequestModel}
  *
  * <p>AddUserRequest</p>
@@ -126,7 +127,10 @@ public class AddUserRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -135,7 +139,10 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * Add organization members.
+         * <p>Add organization members.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder adminUser(Boolean adminUser) {
             this.putQueryParameter("AdminUser", adminUser);
@@ -153,7 +160,7 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * NickName.
+         * <p>This parameter is required.</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -171,7 +178,10 @@ public class AddUserRequest extends Request {
         }
 
         /**
-         * UserType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder userType(Integer userType) {
             this.putQueryParameter("UserType", userType);

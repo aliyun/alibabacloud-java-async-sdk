@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDataLevelRuleConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteDataLevelRuleConfigRequest</p>
@@ -69,7 +70,10 @@ public class DeleteDataLevelRuleConfigRequest extends Request {
         } 
 
         /**
-         * CubeId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c7223ae-****-3c744528014b</p>
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);
@@ -78,7 +82,10 @@ public class DeleteDataLevelRuleConfigRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5bb24da-****-a891683e14da</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

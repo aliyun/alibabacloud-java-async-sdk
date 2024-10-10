@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDataRangeResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDataRangeResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryDataRangeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDataRangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataRangeResponseBody</p>
+     */
     public static class ApiCopilotLlmCubeModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -171,6 +178,12 @@ public class QueryDataRangeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDataRangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataRangeResponseBody</p>
+     */
     public static class ApiCopilotThemeModelsApiCopilotLlmCubeModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
@@ -252,6 +265,12 @@ public class QueryDataRangeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDataRangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataRangeResponseBody</p>
+     */
     public static class ApiCopilotThemeModels extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiCopilotLlmCubeModels")
         private java.util.List < ApiCopilotThemeModelsApiCopilotLlmCubeModels> apiCopilotLlmCubeModels;
@@ -353,6 +372,12 @@ public class QueryDataRangeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link QueryDataRangeResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDataRangeResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiCopilotLlmCubeModels")
         private java.util.List < ApiCopilotLlmCubeModels> apiCopilotLlmCubeModels;

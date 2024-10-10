@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTicketInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryTicketInfoResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryTicketInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryTicketInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryTicketInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessTicket")
         private String accessTicket;

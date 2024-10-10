@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryTicketInfoRequest} extends {@link RequestModel}
  *
  * <p>QueryTicketInfoRequest</p>
@@ -54,7 +55,11 @@ public class QueryTicketInfoRequest extends Request {
         } 
 
         /**
-         * Obtains the details of a specified ticket for a report that is not embedded in the report.
+         * <p>Obtains the details of a specified ticket for a report that is not embedded in the report.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a27a9aec-<strong><strong>-</strong></strong>-bd40-1a21ea41d7c5</p>
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);

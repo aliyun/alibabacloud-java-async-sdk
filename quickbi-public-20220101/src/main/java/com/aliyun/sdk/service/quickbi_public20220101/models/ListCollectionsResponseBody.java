@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCollectionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListCollectionsResponseBody</p>
@@ -61,7 +62,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162A632E-0A88-51CF-98F8-94FDEE82DB7D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class ListCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The primary key ID of the favorite record.
+         * <p>The primary key ID of the favorite record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -90,6 +97,12 @@ public class ListCollectionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCollectionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCollectionsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FavoriteId")
         private Integer favoriteId;

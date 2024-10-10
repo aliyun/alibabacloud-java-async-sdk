@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateTicket4CopilotRequest} extends {@link RequestModel}
  *
  * <p>CreateTicket4CopilotRequest</p>
@@ -142,7 +143,10 @@ public class CreateTicket4CopilotRequest extends Request {
         }
 
         /**
-         * CopilotId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccd3428c-dd23-460c-a608-26bae29dffee</p>
          */
         public Builder copilotId(String copilotId) {
             this.putQueryParameter("CopilotId", copilotId);

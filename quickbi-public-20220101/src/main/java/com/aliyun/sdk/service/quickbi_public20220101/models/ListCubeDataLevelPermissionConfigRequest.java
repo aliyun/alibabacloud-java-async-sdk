@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCubeDataLevelPermissionConfigRequest} extends {@link RequestModel}
  *
  * <p>ListCubeDataLevelPermissionConfigRequest</p>
@@ -69,7 +70,11 @@ public class ListCubeDataLevelPermissionConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the training dataset that you want to remove from the specified custom linguistic model.
+         * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c7223ae-****-3c744528014b</p>
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);
@@ -78,11 +83,15 @@ public class ListCubeDataLevelPermissionConfigRequest extends Request {
         }
 
         /**
-         * The type of the dataset row and column permission. Valid values:
-         * <p>
+         * <p>The type of the dataset row and column permission. Valid values:</p>
+         * <ul>
+         * <li>ROW_LEVEL: row-level permissions</li>
+         * <li>COLUMN_LEVEL: column-level permissions</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ROW_LEVEL: row-level permissions
-         * *   COLUMN_LEVEL: column-level permissions
+         * <strong>example:</strong>
+         * <p>ROW_LEVEL</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);

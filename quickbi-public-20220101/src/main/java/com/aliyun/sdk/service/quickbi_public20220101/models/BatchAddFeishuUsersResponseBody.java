@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchAddFeishuUsersResponseBody} extends {@link TeaModel}
  *
  * <p>BatchAddFeishuUsersResponseBody</p>
@@ -90,6 +91,12 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link BatchAddFeishuUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchAddFeishuUsersResponseBody</p>
+     */
     public static class FailInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -171,6 +178,12 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchAddFeishuUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchAddFeishuUsersResponseBody</p>
+     */
     public static class FailResults extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailInfos")
         private java.util.List < FailInfos> failInfos;
@@ -212,6 +225,12 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link BatchAddFeishuUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>BatchAddFeishuUsersResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FailCount")
         private Integer failCount;

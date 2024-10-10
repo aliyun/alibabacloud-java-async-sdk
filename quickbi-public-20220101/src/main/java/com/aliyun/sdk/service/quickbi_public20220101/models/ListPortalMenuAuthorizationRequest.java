@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPortalMenuAuthorizationRequest} extends {@link RequestModel}
  *
  * <p>ListPortalMenuAuthorizationRequest</p>
@@ -54,7 +55,11 @@ public class ListPortalMenuAuthorizationRequest extends Request {
         } 
 
         /**
-         * The ID of the BI portal.
+         * <p>The ID of the BI portal.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0d173abb53e84c8ca7495429163b****</p>
          */
         public Builder dataPortalId(String dataPortalId) {
             this.putQueryParameter("DataPortalId", dataPortalId);

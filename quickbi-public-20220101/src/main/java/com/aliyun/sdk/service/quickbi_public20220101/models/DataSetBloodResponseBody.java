@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataSetBloodResponseBody} extends {@link TeaModel}
  *
  * <p>DataSetBloodResponseBody</p>
@@ -90,6 +91,12 @@ public class DataSetBloodResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DataSetBloodResponseBody} extends {@link TeaModel}
+     *
+     * <p>DataSetBloodResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorksId")
         private String worksId;

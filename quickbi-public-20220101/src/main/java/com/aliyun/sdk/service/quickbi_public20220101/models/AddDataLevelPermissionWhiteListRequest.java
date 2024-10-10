@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDataLevelPermissionWhiteListRequest} extends {@link RequestModel}
  *
  * <p>AddDataLevelPermissionWhiteListRequest</p>
@@ -110,7 +111,11 @@ public class AddDataLevelPermissionWhiteListRequest extends Request {
         } 
 
         /**
-         * The ID of the training dataset that you want to remove from the specified custom linguistic model.
+         * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c7223ae-***-3c744528014b</p>
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);
@@ -119,11 +124,14 @@ public class AddDataLevelPermissionWhiteListRequest extends Request {
         }
 
         /**
-         * Operation Type: You can set this parameter to one of the following values.
-         * <p>
+         * <p>Operation Type: You can set this parameter to one of the following values.</p>
+         * <ul>
+         * <li>ADD: Add a whitelist</li>
+         * <li>DELETE: deletes a whitelist.</li>
+         * </ul>
          * 
-         * *   ADD: Add a whitelist
-         * *   DELETE: deletes a whitelist.
+         * <strong>example:</strong>
+         * <p>ADD</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -132,11 +140,14 @@ public class AddDataLevelPermissionWhiteListRequest extends Request {
         }
 
         /**
-         * The type of row-level permissions.
-         * <p>
+         * <p>The type of row-level permissions.</p>
+         * <ul>
+         * <li>ROW_LEVEL: row-level permissions,</li>
+         * <li>COLUMN_LEVEL: column-level permissions</li>
+         * </ul>
          * 
-         * *   ROW_LEVEL: row-level permissions,
-         * *   COLUMN_LEVEL: column-level permissions
+         * <strong>example:</strong>
+         * <p>ROW_LEVEL</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -154,11 +165,14 @@ public class AddDataLevelPermissionWhiteListRequest extends Request {
         }
 
         /**
-         * Modify the type of the whitelist:
-         * <p>
+         * <p>Modify the type of the whitelist:</p>
+         * <ul>
+         * <li>1: user</li>
+         * <li>2: user group</li>
+         * </ul>
          * 
-         * *   1: user
-         * *   2: user group
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

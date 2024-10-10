@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryDatasetSwitchInfoResponseBody} extends {@link TeaModel}
  *
  * <p>QueryDatasetSwitchInfoResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryDatasetSwitchInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryDatasetSwitchInfoResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CubeId")
         private String cubeId;

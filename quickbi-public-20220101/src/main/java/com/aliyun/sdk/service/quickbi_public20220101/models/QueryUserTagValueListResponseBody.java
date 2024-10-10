@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryUserTagValueListResponseBody} extends {@link TeaModel}
  *
  * <p>QueryUserTagValueListResponseBody</p>
@@ -90,6 +91,12 @@ public class QueryUserTagValueListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link QueryUserTagValueListResponseBody} extends {@link TeaModel}
+     *
+     * <p>QueryUserTagValueListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagId")
         private String tagId;

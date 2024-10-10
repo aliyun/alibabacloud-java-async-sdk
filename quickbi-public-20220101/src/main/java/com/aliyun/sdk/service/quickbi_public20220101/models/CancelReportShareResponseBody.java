@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CancelReportShareResponseBody} extends {@link TeaModel}
  *
  * <p>CancelReportShareResponseBody</p>
@@ -61,7 +62,10 @@ public class CancelReportShareResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,11 +73,14 @@ public class CancelReportShareResponseBody extends TeaModel {
         }
 
         /**
-         * The execution result of the interface is returned. Valid values:
-         * <p>
+         * <p>The execution result of the interface is returned. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request fails.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -81,11 +88,14 @@ public class CancelReportShareResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

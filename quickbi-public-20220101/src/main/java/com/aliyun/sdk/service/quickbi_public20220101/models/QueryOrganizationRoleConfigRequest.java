@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryOrganizationRoleConfigRequest} extends {@link RequestModel}
  *
  * <p>QueryOrganizationRoleConfigRequest</p>
@@ -54,7 +55,10 @@ public class QueryOrganizationRoleConfigRequest extends Request {
         } 
 
         /**
-         * RoleId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111</p>
          */
         public Builder roleId(Long roleId) {
             this.putQueryParameter("RoleId", roleId);

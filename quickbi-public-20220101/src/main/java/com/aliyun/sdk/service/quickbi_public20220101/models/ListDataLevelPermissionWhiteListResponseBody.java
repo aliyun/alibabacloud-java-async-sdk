@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataLevelPermissionWhiteListResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataLevelPermissionWhiteListResponseBody</p>
@@ -90,6 +91,12 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataLevelPermissionWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataLevelPermissionWhiteListResponseBody</p>
+     */
     public static class UsersModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserGroups")
         private java.util.List < String > userGroups;
@@ -151,6 +158,12 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDataLevelPermissionWhiteListResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataLevelPermissionWhiteListResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CubeId")
         private String cubeId;
